@@ -308,5 +308,37 @@ Tắt checkbox → làm đề bình thường, không đồng hồ, phù hợp k
 | `n2vocab_editpatches` | Toàn bộ sửa tạm qua nút ✎ Sửa |
 | `n2vocab_sound_enabled` | Trạng thái bật/tắt âm thanh phản hồi |
 | `n2vocab_weakness_stats` | Thống kê số lần đúng/sai từng từ/câu, dùng cho mục Điểm yếu |
+| `n2vocab_starred` | Danh sách các từ/cấu trúc đã đánh dấu ★, theo từng bộ |
 
 Xóa toàn bộ các key này (qua DevTools hoặc xóa cache trình duyệt) sẽ reset app về trạng thái ban đầu, không ảnh hưởng file JSON gốc.
+
+---
+
+## 17. Flashcard kiểu Quizlet — khác gì với SRS (Anki)
+
+**Đây là 2 khái niệm khác nhau, không phải trùng lặp:**
+
+- **Flashcard** = học nhanh trong 1 phiên ngắn ngay lúc đó. Khi bấm "Chưa nhớ" hoặc "Khó", từ đó **vẫn nằm trong hàng đợi của phiên học hiện tại** và sẽ quay lại sau vài thẻ nữa để lặp lại liên tục cho tới khi bạn bấm "Đã nhớ" — đúng kiểu chế độ "Learn" của Quizlet. Bấm "Chưa nhớ" → quay lại sớm (cách 3 thẻ). Bấm "Khó" → quay lại muộn hơn một chút (cách 7 thẻ, hoặc cuối hàng đợi nếu hàng đợi ngắn hơn 7). Bấm "Đã nhớ" → ra khỏi hàng đợi hẳn, không gặp lại trong phiên này nữa. Học hết toàn bộ hàng đợi → hiện màn hình hoàn thành, gợi ý học lại toàn bộ hoặc chỉ học riêng các từ đã ★ đánh dấu.
+- **SRS (mục "Ôn tập")** = lịch ôn trải dài theo thời gian thật (phút/giờ/ngày), không có khái niệm "hàng đợi trong phiên". Bấm "Khó" → 6 phút sau quay lại (có thể đã rời app, quay lại app sau mới thấy). Bấm "Dễ" → có khi ngày mai mới quay lại. Đây là cơ chế chống quên dài hạn kiểu Anki thật, xem chi tiết công thức ở mục 8.
+
+Nói ngắn: Flashcard = luyện tập trong lúc ngồi học (vài chục giây tới vài chục phút), SRS = lịch trình ôn tập trải dài nhiều ngày/tuần.
+
+**Phím tắt khi học Flashcard** (không cần click chuột, dùng được khi đặt tay trên phím mũi tên):
+- **←** Chưa nhớ
+- **↑** Khó
+- **↓** Lật thẻ
+- **→** Đã nhớ
+
+Phím tắt tự động bị tắt khi đang mở popup "✎ Sửa" hoặc đang gõ trong 1 ô input/textarea bất kỳ, để không xung đột.
+
+---
+
+## 18. Đánh dấu sao (★) — kiểu Quizlet
+
+Nút ★ xuất hiện ở góc trên-phải của thẻ Flashcard (cả 2 mặt trước/sau), và 1 cột riêng ở đầu mỗi dòng trong Bảng. Bấm để đánh dấu/bỏ đánh dấu 1 từ — không ảnh hưởng gì đến tiến độ SRS hay trạng thái Chưa học/Đang học/Đã thuộc.
+
+**Cách dùng:**
+- Trong **Bảng**: chọn filter "★ Đã đánh dấu" ở dropdown để chỉ xem các từ đã đánh dấu.
+- Trong **Flashcard**: sau khi học hết 1 phiên (màn hình hoàn thành), có nút "Chỉ học các từ đã ★" để bắt đầu phiên mới chỉ gồm các từ đó — tiện khi muốn tập trung ôn lại đúng những từ mình thấy khó/quan trọng mà không phải lọc tay.
+
+Dữ liệu đánh dấu lưu `localStorage` (`n2vocab_starred`, theo từng bộ riêng biệt), và được gồm trong file "Xuất tiến độ" để giữ lại khi chuyển máy khác.
