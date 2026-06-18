@@ -23,8 +23,10 @@ const App = {
     NGUPHAP: [],
   },
 
-  flashOrder: [],
-  flashIndex: 0,
+  flashQueue: [],            // hàng đợi itemId xoay vòng trong phiên học hiện tại
+  flashRememberedCount: 0,   // số từ đã bấm "Đã nhớ" trong phiên này
+  flashTotalCount: 0,        // tổng số từ ban đầu của phiên (để tính % progress)
+  flashRestrictToIds: null,  // nếu học giới hạn theo 1 danh sách _id cụ thể (ví dụ "chỉ học từ yếu")
 
   srsQueue: [],
   srsIndex: 0,
@@ -72,6 +74,9 @@ const App = {
   editPatches: {},
 
   soundEnabled: true,
+
+  // Đánh dấu sao (kiểu Quizlet): { [deckId]: [itemId, itemId, ...] }
+  starredItems: {},
 };
 
 /* ---------- Field metadata (nhãn hiển thị + cách render) ---------- */
@@ -466,6 +471,41 @@ function saveWordEdit(deckId, wordId_, changedFields) {
 function clearAllEditPatches() {
   App.editPatches = {};
   localStorage.removeItem("n2vocab_editpatches");
+}
+
+/* ---------- Đánh dấu sao (kiểu Quizlet): { [deckId]: [itemId, ...] } ---------- */
+
+function loadStarredItems() {
+  try {
+    const raw = localStorage.getItem("n2vocab_starred");
+    App.starredItems = raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    App.starredItems = {};
+  }
+}
+
+function saveStarredItems() {
+  localStorage.setItem("n2vocab_starred", JSON.stringify(App.starredItems));
+}
+
+function isStarred(deckId, itemId) {
+  return !!(App.starredItems[deckId] && App.starredItems[deckId].includes(itemId));
+}
+
+function toggleStar(deckId, itemId) {
+  if (!App.starredItems[deckId]) App.starredItems[deckId] = [];
+  const list = App.starredItems[deckId];
+  const idx = list.indexOf(itemId);
+  if (idx === -1) {
+    list.push(itemId);
+  } else {
+    list.splice(idx, 1);
+  }
+  saveStarredItems();
+}
+
+function getStarredIdsForDeck(deckId) {
+  return App.starredItems[deckId] || [];
 }
 
 
@@ -952,76 +992,123 @@ function saveEditModal() {
 }
 
 /* ===================================================================
-   FLASHCARD MODE
+   FLASHCARD MODE — kiểu Quizlet: hàng đợi xoay vòng trong 1 phiên học.
+   3 nút: Chưa nhớ (quay lại sớm, ~3 thẻ sau) / Khó (quay lại muộn hơn,
+   ~7 thẻ sau) / Đã nhớ (ra khỏi hàng đợi). Học hết hàng đợi -> màn hình
+   hoàn thành, gợi ý học lại toàn bộ hoặc chỉ học các từ đã ★.
+   Đây KHÔNG đụng đến lịch SRS theo phút/giờ (đó là việc của mode SRS).
 =================================================================== */
 
+const FLASHCARD_REINSERT_NOT_REMEMBERED = 3; // "Chưa nhớ" -> chèn lại sau ~3 thẻ
+const FLASHCARD_REINSERT_HARD = 7;            // "Khó" -> chèn lại sau ~7 thẻ (muộn hơn)
+
 function initFlashMode(restrictToIds) {
+  let pool;
   if (restrictToIds && restrictToIds.length) {
-    // Chỉ học các từ có _id nằm trong danh sách chỉ định (dùng khi "Ôn riêng từ yếu")
-    App.flashOrder = App.currentWords
-      .map((w, i) => (restrictToIds.includes(w._id) ? i : -1))
-      .filter((i) => i !== -1);
+    pool = App.currentWords.filter((w) => restrictToIds.includes(w._id));
   } else {
-    App.flashOrder = App.currentWords.map((_, i) => i);
+    pool = App.currentWords;
   }
-  App.flashIndex = 0;
-  updateRateTimePreviews("Flash");
+  App.flashQueue = shuffle(pool.map((w) => w._id));
+  App.flashRememberedCount = 0;
+  App.flashTotalCount = App.flashQueue.length;
+  App.flashRestrictToIds = restrictToIds || null;
+
+  document.getElementById("flashResultScreen").classList.add("hidden");
+  document.getElementById("flashLearnArea").classList.remove("hidden");
+
   renderFlashCard();
+}
+
+function getCurrentFlashWord() {
+  if (!App.flashQueue.length) return null;
+  const itemId = App.flashQueue[0];
+  return App.currentWords.find((w) => w._id === itemId) || null;
 }
 
 function renderFlashCard() {
   const card = document.getElementById("flashCard");
   card.classList.remove("flipped");
-  if (App.flashOrder.length === 0) return;
 
-  const w = App.currentWords[App.flashOrder[App.flashIndex]];
+  if (App.flashQueue.length === 0) {
+    showFlashCompletionScreen();
+    return;
+  }
+
+  const w = getCurrentFlashWord();
+  if (!w) {
+    // Trường hợp hiếm: itemId không tìm thấy (ví dụ đã bị xóa khỏi bộ) -> bỏ qua
+    App.flashQueue.shift();
+    renderFlashCard();
+    return;
+  }
   const type = App.currentDeckType;
 
   renderCardFace(document.getElementById("flashFront"), w, App.fieldConfig[type].front);
   renderCardFace(document.getElementById("flashBack"), w, App.fieldConfig[type].back);
+  renderFlashStarButtons(w);
 
-  document.getElementById("flashPos").textContent = App.flashIndex + 1;
-  document.getElementById("flashTotal").textContent = App.flashOrder.length;
-  const pct = ((App.flashIndex + 1) / App.flashOrder.length) * 100;
+  document.getElementById("flashPos").textContent = App.flashRememberedCount + 1;
+  document.getElementById("flashTotal").textContent = App.flashTotalCount;
+  const pct = (App.flashRememberedCount / App.flashTotalCount) * 100;
   document.getElementById("flashBar").style.width = `${pct}%`;
-
-  updateRateTimePreviews("Flash");
 }
 
-function updateRateTimePreviews(suffix) {
-  let w;
-  if (suffix === "Flash") {
-    if (!App.flashOrder.length) return;
-    w = App.currentWords[App.flashOrder[App.flashIndex]];
-  } else {
-    if (!App.srsQueue.length) return;
-    w = App.srsQueue[App.srsIndex];
-  }
-  if (!w) return;
-  document.getElementById(`rtAgain${suffix}`).textContent = SRS.previewLabel(App.progress, w._id, "again");
-  document.getElementById(`rtHard${suffix}`).textContent = SRS.previewLabel(App.progress, w._id, "hard");
-  document.getElementById(`rtEasy${suffix}`).textContent = SRS.previewLabel(App.progress, w._id, "easy");
+function renderFlashStarButtons(w) {
+  const starred = isStarred(App.currentDeckId, w._id);
+  document.querySelectorAll(".flash-star-btn").forEach((btn) => {
+    btn.classList.toggle("is-starred", starred);
+    btn.textContent = starred ? "★" : "☆";
+  });
 }
 
-function flashAdvance() {
-  App.flashIndex++;
-  if (App.flashIndex >= App.flashOrder.length) {
-    const autoLoop = document.getElementById("autoLoop").checked;
-    if (autoLoop) {
-      App.flashOrder = shuffle(App.flashOrder);
-      App.flashIndex = 0;
-    } else {
-      App.flashIndex = App.flashOrder.length - 1;
-    }
+// Chèn lại 1 itemId vào hàng đợi, cách vị trí đầu (đã shift ra) khoảng `offset` thẻ.
+// Nếu hàng đợi còn lại ngắn hơn offset, chèn xuống cuối.
+function reinsertIntoFlashQueue(itemId, offset) {
+  const insertPos = Math.min(offset, App.flashQueue.length);
+  App.flashQueue.splice(insertPos, 0, itemId);
+}
+
+function flashMarkResult(result) {
+  // result: "not_remembered" | "hard" | "remembered"
+  if (!App.flashQueue.length) return;
+  const itemId = App.flashQueue.shift();
+
+  if (result === "remembered") {
+    App.flashRememberedCount++;
+  } else if (result === "not_remembered") {
+    reinsertIntoFlashQueue(itemId, FLASHCARD_REINSERT_NOT_REMEMBERED);
+  } else if (result === "hard") {
+    reinsertIntoFlashQueue(itemId, FLASHCARD_REINSERT_HARD);
   }
+
   renderFlashCard();
 }
 
-function rateCurrentFlashWord(rating) {
-  const w = App.currentWords[App.flashOrder[App.flashIndex]];
-  SRS.rate(App.progress, w._id, rating);
-  SRS.saveProgress(App.currentDeckId, App.progress);
-  flashAdvance();
+function showFlashCompletionScreen() {
+  document.getElementById("flashLearnArea").classList.add("hidden");
+  const screen = document.getElementById("flashResultScreen");
+  screen.classList.remove("hidden");
+
+  document.getElementById("flashCompletionCount").textContent = App.flashTotalCount;
+
+  const starredCount = getStarredIdsForDeck(App.currentDeckId).length;
+  const btnStarredOnly = document.getElementById("btnFlashRestartStarredOnly");
+  if (starredCount > 0) {
+    btnStarredOnly.classList.remove("hidden");
+    btnStarredOnly.textContent = `Chỉ học các từ đã ★ đánh dấu (${starredCount})`;
+  } else {
+    btnStarredOnly.classList.add("hidden");
+  }
+}
+
+function flashRestartFull() {
+  initFlashMode(App.flashRestrictToIds);
+}
+
+function flashRestartStarredOnly() {
+  const starredIds = getStarredIdsForDeck(App.currentDeckId);
+  initFlashMode(starredIds);
 }
 
 /* ===================================================================
@@ -1034,18 +1121,25 @@ function renderTable() {
   const cols = App.visibleCols[type].filter((c) => meta[c]);
 
   const thead = document.getElementById("tableHead");
-  thead.innerHTML = `<tr>${cols.map((c) => `<th>${meta[c].label}</th>`).join("")}<th class="col-edit-head"></th></tr>`;
+  thead.innerHTML = `<tr><th class="col-star-head"></th>${cols.map((c) => `<th>${meta[c].label}</th>`).join("")}<th class="col-edit-head"></th></tr>`;
 
   const tbody = document.getElementById("tableBody");
   const search = (document.getElementById("tableSearch").value || "").toLowerCase();
   const filter = document.getElementById("tableFilter").value;
+  const starredIds = getStarredIdsForDeck(App.currentDeckId);
 
   tbody.innerHTML = "";
 
   App.currentWords.forEach((w) => {
     const entry = SRS.getEntry(App.progress, w._id);
     const st = SRS.status(entry);
-    if (filter !== "all" && st !== filter) return;
+    const starred = starredIds.includes(w._id);
+
+    if (filter === "starred") {
+      if (!starred) return;
+    } else if (filter !== "all" && st !== filter) {
+      return;
+    }
 
     const searchKeys = type === "NGUPHAP"
       ? [w.cautruc, w.nghia, w.muc_do]
@@ -1054,6 +1148,7 @@ function renderTable() {
     if (search && !haystack.includes(search)) return;
 
     const tr = document.createElement("tr");
+    const starCell = `<td class="col-star-cell"><button class="table-star-btn ${starred ? "is-starred" : ""}" data-star-word-id="${w._id}" title="Đánh dấu sao">${starred ? "★" : "☆"}</button></td>`;
     const cells = cols.map((col) => {
       if (col === "status") {
         const statusLabel = { new: "Chưa học", learning: "Đang học", known: "Đã thuộc" }[st];
@@ -1076,6 +1171,7 @@ function renderTable() {
       }
       return `<td class="${cssClass}">${raw}</td>`;
     });
+    cells.unshift(starCell);
     cells.push(`<td class="col-edit-cell"><button class="table-edit-btn" data-edit-word-id="${w._id}" title="Sửa">✎</button></td>`);
     tr.innerHTML = cells.join("");
     tbody.appendChild(tr);
@@ -1083,6 +1179,12 @@ function renderTable() {
 
   document.querySelectorAll(".table-edit-btn").forEach((btn) => {
     btn.addEventListener("click", () => openEditModal(btn.dataset.editWordId));
+  });
+  document.querySelectorAll(".table-star-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      toggleStar(App.currentDeckId, btn.dataset.starWordId);
+      renderTable();
+    });
   });
 
   SRS.saveProgress(App.currentDeckId, App.progress);
@@ -1144,7 +1246,14 @@ function renderSrsCard() {
   renderCardFace(document.getElementById("srsFront"), w, App.fieldConfig[type].front);
   renderCardFace(document.getElementById("srsBack"), w, App.fieldConfig[type].back);
 
-  updateRateTimePreviews("Srs");
+  updateSrsRateTimePreviews(w);
+}
+
+function updateSrsRateTimePreviews(w) {
+  if (!w) return;
+  document.getElementById("rtAgainSrs").textContent = SRS.previewLabel(App.progress, w._id, "again");
+  document.getElementById("rtHardSrs").textContent = SRS.previewLabel(App.progress, w._id, "hard");
+  document.getElementById("rtEasySrs").textContent = SRS.previewLabel(App.progress, w._id, "easy");
 }
 
 function rateCurrentSrsWord(rating) {
@@ -1751,6 +1860,7 @@ function restartCurrentExam() {
 document.addEventListener("DOMContentLoaded", async () => {
   loadFieldConfig();
   loadEditPatches();
+  loadStarredItems();
 
   App.decks = await loadDecks();
   App.exams = await loadExams();
@@ -1782,15 +1892,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     e.stopPropagation();
     document.getElementById("flashCard").classList.toggle("flipped");
   });
-  document.querySelectorAll("#flashRateRow [data-rate]").forEach((btn) => {
+  document.querySelectorAll("#flashRateRow [data-flash-result]").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
-      rateCurrentFlashWord(btn.dataset.rate);
+      flashMarkResult(btn.dataset.flashResult);
     });
   });
   document.getElementById("btnShuffle").addEventListener("click", () => {
-    App.flashOrder = shuffle(App.flashOrder);
-    App.flashIndex = 0;
+    App.flashQueue = shuffle(App.flashQueue);
     renderFlashCard();
   });
   document.getElementById("btnFieldConfig").addEventListener("click", () => {
@@ -1798,9 +1907,46 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
   document.getElementById("btnEditCurrentFlash").addEventListener("click", (e) => {
     e.stopPropagation();
-    if (!App.flashOrder.length) return;
-    const w = App.currentWords[App.flashOrder[App.flashIndex]];
-    openEditModal(w._id);
+    const w = getCurrentFlashWord();
+    if (w) openEditModal(w._id);
+  });
+  document.querySelectorAll(".flash-star-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const w = getCurrentFlashWord();
+      if (!w) return;
+      toggleStar(App.currentDeckId, w._id);
+      renderFlashStarButtons(w);
+      renderTable();
+    });
+  });
+  document.getElementById("btnFlashRestartFull").addEventListener("click", flashRestartFull);
+  document.getElementById("btnFlashRestartStarredOnly").addEventListener("click", flashRestartStarredOnly);
+
+  // Phím tắt cho Flashcard: ← Chưa nhớ, ↑ Khó, ↓ Lật thẻ, → Đã nhớ
+  document.addEventListener("keydown", (e) => {
+    const flashView = document.getElementById("view-flash");
+    const isFlashVisible = flashView && !flashView.classList.contains("hidden");
+    const learnAreaVisible = !document.getElementById("flashLearnArea").classList.contains("hidden");
+    const isEditModalOpen = !document.getElementById("editModalOverlay").classList.contains("hidden");
+    if (!isFlashVisible || !learnAreaVisible || isEditModalOpen) return;
+    // Bỏ qua nếu người dùng đang gõ trong 1 ô input/textarea nào đó
+    const tag = document.activeElement.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA") return;
+
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      flashMarkResult("not_remembered");
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      flashMarkResult("hard");
+    } else if (e.key === "ArrowDown") {
+      e.preventDefault();
+      document.getElementById("flashCard").classList.toggle("flipped");
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      flashMarkResult("remembered");
+    }
   });
 
   // ----- Edit modal (dùng chung cho flashcard + bảng) -----
@@ -1877,12 +2023,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("btnExport").addEventListener("click", () => {
     const exportPayload = {
       exportedAt: new Date().toISOString(),
-      version: 3,
+      version: 4,
       srsProgress: SRS.exportAll(),
       fieldConfig: App.fieldConfig,
       visibleCols: App.visibleCols,
       peekCols: App.peekCols,
       editPatches: App.editPatches,
+      starredItems: App.starredItems,
     };
     const blob = new Blob([JSON.stringify(exportPayload, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -1928,6 +2075,14 @@ document.addEventListener("DOMContentLoaded", async () => {
           });
           const curDeck = App.decks.find((d) => d.id === App.currentDeckId);
           if (curDeck) App.currentWords = curDeck.words;
+        }
+        if (data.starredItems) {
+          // Gộp danh sách ★ đã đánh dấu (không trùng lặp) theo từng bộ
+          Object.keys(data.starredItems).forEach((deckId) => {
+            const merged = new Set([...(App.starredItems[deckId] || []), ...data.starredItems[deckId]]);
+            App.starredItems[deckId] = Array.from(merged);
+          });
+          saveStarredItems();
         }
 
         App.progress = SRS.loadProgress(App.currentDeckId);
