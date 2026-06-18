@@ -62,10 +62,6 @@
           <button id="btnFieldConfig" class="icon-btn" title="Chọn hiển thị mặt thẻ">⚙ Mặt thẻ</button>
           <button id="btnEditCurrentFlash" class="icon-btn" title="Sửa thông tin từ này">✎ Sửa</button>
           <button id="btnShuffle" class="icon-btn" title="Trộn thẻ">⤮ Trộn</button>
-          <label class="toggle">
-            <input type="checkbox" id="autoLoop" checked>
-            <span>Tự lặp khi hết thẻ</span>
-          </label>
           <button class="icon-btn focus-toggle-btn" data-focus-target="flash" title="Phóng to toàn màn hình">⛶</button>
         </div>
       </div>
@@ -82,18 +78,34 @@
         </div>
       </div>
 
-      <div class="card-stage">
-        <div class="card" id="flashCard">
-          <div class="card-face card-front" id="flashFront"></div>
-          <div class="card-face card-back" id="flashBack"></div>
+      <div id="flashLearnArea">
+        <div class="card-stage">
+          <div class="card" id="flashCard">
+            <div class="card-face card-front" id="flashFront">
+              <button class="flash-star-btn" title="Đánh dấu sao">☆</button>
+            </div>
+            <div class="card-face card-back" id="flashBack">
+              <button class="flash-star-btn" title="Đánh dấu sao">☆</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="rate-row" id="flashRateRow">
+          <button class="rate-btn rate-forget" data-flash-result="not_remembered">✕ Chưa nhớ<span class="rate-key-hint">←</span></button>
+          <button class="rate-btn rate-flip" id="btnFlip">⟲ Lật thẻ<span class="rate-key-hint">↓</span></button>
+          <button class="rate-btn rate-hard" data-flash-result="hard">△ Khó<span class="rate-key-hint">↑</span></button>
+          <button class="rate-btn rate-remember" data-flash-result="remembered">✓ Đã nhớ<span class="rate-key-hint">→</span></button>
         </div>
       </div>
 
-      <div class="rate-row" id="flashRateRow">
-        <button class="rate-btn rate-forget" data-rate="again">✕ Quên<span class="rate-time" id="rtAgainFlash"></span></button>
-        <button class="rate-btn rate-flip" id="btnFlip">⟲ Lật thẻ</button>
-        <button class="rate-btn rate-hard" data-rate="hard">△ Khó<span class="rate-time" id="rtHardFlash"></span></button>
-        <button class="rate-btn rate-remember" data-rate="easy">✓ Dễ<span class="rate-time" id="rtEasyFlash"></span></button>
+      <!-- Màn hình hoàn thành -->
+      <div id="flashResultScreen" class="quiz-result hidden">
+        <div class="quiz-result-title">🎉 Hoàn thành!</div>
+        <div class="quiz-result-score">Bạn đã học xong <span id="flashCompletionCount">0</span> từ trong bộ này.</div>
+        <div class="flash-completion-actions">
+          <button class="primary-btn" id="btnFlashRestartFull">Học lại toàn bộ</button>
+          <button class="ghost-btn hidden" id="btnFlashRestartStarredOnly">Chỉ học các từ đã ★</button>
+        </div>
       </div>
     </section>
 
@@ -106,6 +118,7 @@
           <option value="new">Chưa học</option>
           <option value="learning">Đang học</option>
           <option value="known">Đã thuộc</option>
+          <option value="starred">★ Đã đánh dấu</option>
         </select>
         <button id="btnColConfig" class="icon-btn" title="Ẩn/hiện cột">☷ Cột</button>
         <button class="icon-btn focus-toggle-btn" data-focus-target="table" title="Phóng to toàn màn hình">⛶</button>
