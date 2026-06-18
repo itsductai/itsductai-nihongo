@@ -470,7 +470,7 @@ tbody tr:last-child td { border-bottom: none; }
 
 @media (max-width: 860px) {
   .sidebar { width: 76px; padding: 12px 8px; }
-  .brand-text, .nav-item span:last-child, .sidebar-bottom, .nav-section-label { display: none; }
+  .brand-text, .nav-item span:last-child, .nav-section-label { display: none; }
   .nav-item { justify-content: center; }
   .main { padding: 20px 16px; }
   .quiz-options { grid-template-columns: 1fr; }
