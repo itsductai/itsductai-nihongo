@@ -193,6 +193,18 @@ rt {
 }
 .card-back { transform: rotateY(180deg); }
 
+.flash-star-btn {
+  position: absolute; top: 14px; right: 14px;
+  background: none; border: none; font-size: 22px; cursor: pointer;
+  color: var(--text-2); line-height: 1; width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center; border-radius: 8px;
+  transition: color 0.15s, transform 0.15s;
+}
+.flash-star-btn:hover { color: var(--warn); transform: scale(1.15); }
+.flash-star-btn.is-starred { color: var(--warn); }
+
+.flash-completion-actions { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+
 .cf-kanji { font-size: 52px; font-weight: 700; color: var(--text-0); margin-bottom: 12px; line-height: 1.25; }
 .cf-doc { font-size: 18px; color: var(--accent); margin-bottom: 4px; }
 .cf-hanviet { font-size: 12.5px; letter-spacing: 0.06em; color: var(--warn); font-weight: 700; text-transform: uppercase; margin-bottom: 10px; }
@@ -217,7 +229,10 @@ rt {
   transition: transform 0.1s, background 0.15s; display: flex; flex-direction: column; align-items: center; gap: 2px;
 }
 .rate-btn:active { transform: scale(0.96); }
-.rate-time { font-size: 10px; font-weight: 400; opacity: 0.75; }
+.rate-key-hint {
+  font-size: 10px; font-weight: 400; opacity: 0.6; margin-left: 4px;
+  background: var(--bg-3); padding: 1px 6px; border-radius: 4px;
+}
 
 .rate-forget { color: var(--bad); border-color: var(--bad-soft); }
 .rate-forget:hover { background: var(--bad-soft); }
@@ -514,8 +529,19 @@ tbody tr:last-child td { border-bottom: none; }
 }
 .table-edit-btn:hover { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
 
+.col-star-head { width: 32px; }
+.col-star-cell { text-align: center; }
+.table-star-btn {
+  background: none; border: none; color: var(--text-2); font-size: 17px; cursor: pointer;
+  width: 28px; height: 28px; border-radius: 6px; transition: color 0.15s, transform 0.15s;
+}
+.table-star-btn:hover { color: var(--warn); transform: scale(1.15); }
+.table-star-btn.is-starred { color: var(--warn); }
+
 #app.focus-mode .col-edit-head,
 #app.focus-mode .col-edit-cell,
+#app.focus-mode .col-star-head,
+#app.focus-mode .col-star-cell,
 #app.focus-mode #btnEditCurrentFlash {
   display: none;
 }
