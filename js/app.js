@@ -74,6 +74,10 @@ const App = {
   editPatches: {},
 
   soundEnabled: true,
+  speechEnabled: true, // phát âm tự động khi lật thẻ sang mặt sau
+
+  // Bật/tắt học theo thứ tự ngẫu nhiên, riêng cho Flashcard và SRS (mặc định bật cả 2)
+  shuffleEnabled: { flash: true, srs: true },
 
   // Đánh dấu sao (kiểu Quizlet): { [deckId]: [itemId, itemId, ...] }
   starredItems: {},
@@ -91,12 +95,12 @@ const FIELD_META = {
     dong_nghia: {
       label: "Từ đồng nghĩa",
       render: (w) => (w.dong_nghia && w.dong_nghia.length
-        ? `<div class="cf-block-label">Đồng nghĩa</div><div class="cf-synonyms">${w.dong_nghia.join("、")}</div>` : ""),
+        ? `<div class="cf-block-label">Đồng nghĩa</div><div class="cf-synonyms">${renderSynonymList(w.dong_nghia)}</div>` : ""),
     },
     trai_nghia: {
       label: "Từ trái nghĩa",
       render: (w) => (w.trai_nghia && w.trai_nghia.length
-        ? `<div class="cf-block-label">Trái nghĩa</div><div class="cf-antonyms">${w.trai_nghia.join("、")}</div>` : ""),
+        ? `<div class="cf-block-label">Trái nghĩa</div><div class="cf-antonyms">${renderSynonymList(w.trai_nghia)}</div>` : ""),
     },
   },
   NGUPHAP: {
@@ -118,12 +122,12 @@ const FIELD_META = {
     dong_nghia: {
       label: "Cấu trúc đồng nghĩa",
       render: (w) => (w.dong_nghia && w.dong_nghia.length
-        ? `<div class="cf-block-label">Đồng nghĩa</div><div class="cf-synonyms">${w.dong_nghia.join("、")}</div>` : ""),
+        ? `<div class="cf-block-label">Đồng nghĩa</div><div class="cf-synonyms">${renderSynonymList(w.dong_nghia)}</div>` : ""),
     },
     trai_nghia: {
       label: "Cấu trúc trái nghĩa",
       render: (w) => (w.trai_nghia && w.trai_nghia.length
-        ? `<div class="cf-block-label">Trái nghĩa</div><div class="cf-antonyms">${w.trai_nghia.join("、")}</div>` : ""),
+        ? `<div class="cf-block-label">Trái nghĩa</div><div class="cf-antonyms">${renderSynonymList(w.trai_nghia)}</div>` : ""),
     },
   },
 };
@@ -138,7 +142,7 @@ const EDIT_FIELD_META = {
     { key: "han_viet", label: "Hán Việt", type: "text" },
     { key: "nghia", label: "Nghĩa tiếng Việt", type: "text" },
     { key: "vi_du", label: "Ví dụ (tiếng Nhật + dịch)", type: "textarea" },
-    { key: "vi_du_ruby", label: "Ví dụ có furigana (dùng <ruby>kanji<rt>đọc</rt></ruby>)", type: "textarea" },
+    { key: "vi_du_ruby", label: "Ví dụ có furigana (dùng <ruby>kanji<rt>đọc</rt></ruby>)", type: "ruby-editor" },
     { key: "dong_nghia", label: "Từ đồng nghĩa (cách nhau bằng dấu phẩy)", type: "list" },
     { key: "trai_nghia", label: "Từ trái nghĩa (cách nhau bằng dấu phẩy)", type: "list" },
   ],
@@ -147,7 +151,7 @@ const EDIT_FIELD_META = {
     { key: "nghia", label: "Ý nghĩa", type: "text" },
     { key: "muc_do", label: "Mức độ trang trọng", type: "text" },
     { key: "cau_truc_ngu_phap", label: "Công thức ngữ pháp", type: "text" },
-    { key: "vi_du", label: "Ví dụ", type: "textarea" },
+    { key: "vi_du", label: "Ví dụ (dùng <ruby>kanji<rt>đọc</rt></ruby> để thêm furigana)", type: "ruby-editor" },
     { key: "dong_nghia", label: "Cấu trúc đồng nghĩa (cách nhau bằng dấu phẩy)", type: "list" },
     { key: "trai_nghia", label: "Cấu trúc trái nghĩa (cách nhau bằng dấu phẩy)", type: "list" },
   ],
@@ -181,6 +185,29 @@ function renderChoon(text) {
 function stripChoonMarks(text) {
   if (!text) return "";
   return text.replace(/\*\*/g, "");
+}
+
+// Render 1 mục đồng/trái nghĩa, hỗ trợ cả 2 format dữ liệu:
+// - Format cũ (chuỗi thuần): "低下"  -> chỉ hiện kanji, không furigana/nghĩa
+// - Format mới (object): {kanji, doc, nghia} -> hiện furigana nhỏ trên kanji + nghĩa kèm theo
+// Giữ cả 2 để không phải sửa toàn bộ dữ liệu JSON cũ ngay lập tức.
+function renderSynonymItem(item) {
+  if (typeof item === "string") {
+    return `<span class="syn-item">${item}</span>`;
+  }
+  if (item && typeof item === "object") {
+    const kanjiWithFurigana = item.doc
+      ? `<ruby>${item.kanji}<rt>${item.doc}</rt></ruby>`
+      : item.kanji;
+    const nghiaPart = item.nghia ? `<span class="syn-nghia">（${item.nghia}）</span>` : "";
+    return `<span class="syn-item">${kanjiWithFurigana}${nghiaPart}</span>`;
+  }
+  return "";
+}
+
+function renderSynonymList(list) {
+  if (!list || !list.length) return "";
+  return list.map(renderSynonymItem).join("、");
 }
 
 /* ---------- Utilities ---------- */
@@ -249,6 +276,28 @@ function playWrongSound() {
   playTone(220, 180, "sine", 0.12);
 }
 
+/* ---------- Phát âm tiếng Nhật bằng Web Speech API (miễn phí, có sẵn trong trình duyệt) ---------- */
+
+function speakJapanese(text) {
+  if (!App.speechEnabled) return;
+  if (!text) return;
+  if (!("speechSynthesis" in window)) return; // trình duyệt không hỗ trợ -> bỏ qua êm, không lỗi
+  try {
+    window.speechSynthesis.cancel(); // hủy câu đang đọc trước đó (nếu có) tránh xếp hàng dồn lại
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = "ja-JP";
+    utter.rate = 0.95;
+    window.speechSynthesis.speak(utter);
+  } catch (e) { /* ignore lỗi phát âm, không làm ảnh hưởng trải nghiệm học */ }
+}
+
+// Đọc đúng cách đọc thật (doc, không phải doc_marked có dấu **) hoặc cautruc cho ngữ pháp
+function speakWord(w) {
+  if (!w) return;
+  const text = w.doc || w.cautruc || w.kanji;
+  speakJapanese(text);
+}
+
 /* ===================================================================
    THỐNG KÊ ĐIỂM YẾU — tự động ghi nhận số lần đúng/sai cho mỗi từ/câu,
    áp dụng cho cả 3 mảng: từ vựng, ngữ pháp (theo deckId thật), và đề thi
@@ -288,17 +337,19 @@ function recordWeaknessResult(deckId, itemId, correct, label) {
   saveWeaknessStats(stats);
 }
 
-// "Điểm yếu" = số lần sai chiếm từ 40% tổng số lần làm trở lên (và có ít nhất 2 lần sai),
-// để tránh việc 1 lần lỡ tay bấm sai đã bị coi là "điểm yếu", nhưng cũng không bỏ sót
-// trường hợp đã làm đúng nhiều lần về sau nhưng tỷ lệ sai ban đầu vẫn đáng kể.
+// "Điểm yếu" = đã sai ít nhất 1 lần, VÀ (nếu đã làm ≥3 lần thì tỷ lệ sai phải ≥40%
+// để tránh báo nhầm các từ đã từng sai nhưng sau đó học tốt hẳn lên). Với số lần làm
+// ít (1-2 lần), chỉ cần có sai là đủ để hiện ra ngay — để người mới dùng tính năng
+// này thấy kết quả ngay, không phải làm rất nhiều lần mới thấy gì.
 function getWeaknessListForDeck(deckId) {
   const stats = loadWeaknessStats();
   const deckStats = stats[deckId] || {};
   const list = Object.keys(deckStats).map((itemId) => ({ itemId, ...deckStats[itemId] }));
   return list
     .filter((e) => {
+      if (e.wrongCount < 1) return false;
       const total = e.wrongCount + e.correctCount;
-      if (e.wrongCount < 2) return false;
+      if (total < 3) return true; // chưa đủ dữ liệu để xét tỷ lệ -> cứ hiện nếu có sai
       return e.wrongCount / total >= 0.4;
     })
     .sort((a, b) => {
@@ -415,10 +466,29 @@ function loadFieldConfig() {
     const raw4 = localStorage.getItem("n2vocab_sound_enabled");
     if (raw4 !== null) App.soundEnabled = raw4 === "true";
   } catch (e) { /* ignore */ }
+  try {
+    const raw5 = localStorage.getItem("n2vocab_speech_enabled");
+    if (raw5 !== null) App.speechEnabled = raw5 === "true";
+  } catch (e) { /* ignore */ }
 }
 
 function saveSoundConfig() {
   localStorage.setItem("n2vocab_sound_enabled", String(App.soundEnabled));
+}
+
+function saveSpeechConfig() {
+  localStorage.setItem("n2vocab_speech_enabled", String(App.speechEnabled));
+}
+
+function loadShuffleConfig() {
+  try {
+    const raw = localStorage.getItem("n2vocab_shuffle_enabled");
+    if (raw) Object.assign(App.shuffleEnabled, JSON.parse(raw));
+  } catch (e) { /* ignore */ }
+}
+
+function saveShuffleConfig() {
+  localStorage.setItem("n2vocab_shuffle_enabled", JSON.stringify(App.shuffleEnabled));
 }
 
 function saveFieldConfig() {
@@ -668,6 +738,7 @@ function switchDeck(deckId) {
   App.currentWords = deck.words;
   App.progress = SRS.loadProgress(deckId);
   document.getElementById("deckName").textContent = deck.title;
+  document.getElementById("mobileTopbarTitle").textContent = deck.title;
 
   if (App.quizTimerHandle) clearInterval(App.quizTimerHandle);
   if (App.matchTimerHandle) clearInterval(App.matchTimerHandle);
@@ -932,12 +1003,54 @@ function openEditModal(wordId_) {
       };
       input.addEventListener("input", updatePreview);
       updatePreview();
+    } else if (f.type === "ruby-editor") {
+      const textarea = document.createElement("textarea");
+      textarea.className = "edit-field-input edit-field-textarea";
+      textarea.dataset.fieldKey = f.key;
+      textarea.value = w[f.key] || "";
+      wrap.appendChild(textarea);
+
+      const rubyBtnRow = document.createElement("div");
+      rubyBtnRow.className = "choon-btn-row";
+
+      const rubyBtn = document.createElement("button");
+      rubyBtn.type = "button";
+      rubyBtn.className = "ghost-btn choon-mark-btn";
+      rubyBtn.textContent = "Thêm furigana cho đoạn bôi đen";
+      rubyBtn.addEventListener("click", () => applyRubyTag(textarea));
+      rubyBtnRow.appendChild(rubyBtn);
+
+      wrap.appendChild(rubyBtnRow);
+
+      const hint = document.createElement("div");
+      hint.className = "ruby-hint";
+      hint.textContent = "Bôi đen 1 kanji hoặc cụm kanji trong câu, bấm nút trên, nhập cách đọc khi được hỏi.";
+      wrap.appendChild(hint);
     }
 
     body.appendChild(wrap);
   });
 
   document.getElementById("editModalOverlay").classList.remove("hidden");
+}
+
+// Bọc đoạn text đang bôi đen (selection) trong <ruby>...<rt>...</rt></ruby>,
+// dùng để thêm furigana cho TỪNG kanji riêng lẻ trong câu ví dụ (không chỉ từ
+// chính đang học) — vì cách đọc của 1 kanji phụ thuộc ngữ cảnh nên không thể
+// tự động đoán đúng 100%, cần người học tự xác nhận cách đọc khi thêm.
+function applyRubyTag(textarea) {
+  const start = textarea.selectionStart;
+  const end = textarea.selectionEnd;
+  if (start === end) {
+    alert("Hãy bôi đen (chọn) đoạn kanji cần thêm furigana trước.");
+    return;
+  }
+  const value = textarea.value;
+  const selected = value.slice(start, end);
+  const reading = prompt(`Nhập cách đọc (hiragana) cho "${selected}":`, "");
+  if (!reading) return;
+  const newValue = value.slice(0, start) + `<ruby>${selected}<rt>${reading}</rt></ruby>` + value.slice(end);
+  textarea.value = newValue;
 }
 
 // Bọc phần text đang được bôi đen (selection) trong ô input bằng **...** để đánh dấu trường âm
@@ -1009,7 +1122,8 @@ function initFlashMode(restrictToIds) {
   } else {
     pool = App.currentWords;
   }
-  App.flashQueue = shuffle(pool.map((w) => w._id));
+  const ids = pool.map((w) => w._id);
+  App.flashQueue = App.shuffleEnabled.flash ? shuffle(ids) : ids;
   App.flashRememberedCount = 0;
   App.flashTotalCount = App.flashQueue.length;
   App.flashRestrictToIds = restrictToIds || null;
@@ -1024,6 +1138,17 @@ function getCurrentFlashWord() {
   if (!App.flashQueue.length) return null;
   const itemId = App.flashQueue[0];
   return App.currentWords.find((w) => w._id === itemId) || null;
+}
+
+// Lật thẻ Flashcard. Khi lật SANG mặt sau (xem đáp án), tự phát âm cách đọc
+// thật của từ đang học (nếu bật phát âm) — đây là thời điểm hợp lý nhất để
+// đọc, vì người học vừa xem đáp án và muốn nghe cách đọc đúng ngay lúc đó.
+function flipFlashCard() {
+  const card = document.getElementById("flashCard");
+  card.classList.toggle("flipped");
+  if (card.classList.contains("flipped")) {
+    speakWord(getCurrentFlashWord());
+  }
 }
 
 function renderFlashCard() {
@@ -1044,8 +1169,8 @@ function renderFlashCard() {
   }
   const type = App.currentDeckType;
 
-  renderCardFace(document.getElementById("flashFront"), w, App.fieldConfig[type].front);
-  renderCardFace(document.getElementById("flashBack"), w, App.fieldConfig[type].back);
+  renderCardFace(document.getElementById("flashFrontContent"), w, App.fieldConfig[type].front);
+  renderCardFace(document.getElementById("flashBackContent"), w, App.fieldConfig[type].back);
   renderFlashStarButtons(w);
 
   document.getElementById("flashPos").textContent = App.flashRememberedCount + 1;
@@ -1075,10 +1200,18 @@ function flashMarkResult(result) {
   const itemId = App.flashQueue.shift();
 
   if (result === "remembered") {
+    // Chỉ cập nhật SRS khi từ thực sự "tốt nghiệp" khỏi hàng đợi phiên này, để
+    // tránh gọi SRS.rate() nhiều lần liên tiếp trong vài giây (do hàng đợi xoay
+    // vòng) làm nhiễu ease factor — SRS chỉ nên phản ánh đánh giá sau cùng.
+    SRS.rate(App.progress, itemId, "easy");
+    SRS.saveProgress(App.currentDeckId, App.progress);
+    recordWeaknessResult(App.currentDeckId, itemId, true);
     App.flashRememberedCount++;
   } else if (result === "not_remembered") {
+    recordWeaknessResult(App.currentDeckId, itemId, false);
     reinsertIntoFlashQueue(itemId, FLASHCARD_REINSERT_NOT_REMEMBERED);
   } else if (result === "hard") {
+    recordWeaknessResult(App.currentDeckId, itemId, false);
     reinsertIntoFlashQueue(itemId, FLASHCARD_REINSERT_HARD);
   }
 
@@ -1214,8 +1347,11 @@ function initSrsMode() {
   document.getElementById("srsNewCount").textContent = newWords.length;
   document.getElementById("srsMasteredCount").textContent = mastered;
 
-  const newSlice = shuffle(newWords).slice(0, 10);
-  App.srsQueue = shuffle(due).concat(newSlice);
+  const shuffleOn = App.shuffleEnabled.srs;
+  const orderedNew = shuffleOn ? shuffle(newWords) : newWords;
+  const orderedDue = shuffleOn ? shuffle(due) : due;
+  const newSlice = orderedNew.slice(0, 10);
+  App.srsQueue = orderedDue.concat(newSlice);
   App.srsIndex = 0;
 
   SRS.saveProgress(App.currentDeckId, App.progress);
@@ -1249,6 +1385,14 @@ function renderSrsCard() {
   updateSrsRateTimePreviews(w);
 }
 
+function flipSrsCard() {
+  const card = document.getElementById("srsCard");
+  card.classList.toggle("flipped");
+  if (card.classList.contains("flipped")) {
+    speakWord(App.srsQueue[App.srsIndex]);
+  }
+}
+
 function updateSrsRateTimePreviews(w) {
   if (!w) return;
   document.getElementById("rtAgainSrs").textContent = SRS.previewLabel(App.progress, w._id, "again");
@@ -1261,6 +1405,10 @@ function rateCurrentSrsWord(rating) {
   if (!w) return;
   SRS.rate(App.progress, w._id, rating);
   SRS.saveProgress(App.currentDeckId, App.progress);
+
+  // Ghi nhận vào thống kê điểm yếu chung: "Quên" = sai, "Khó"/"Dễ" = đúng
+  // (đã nhớ được, chỉ khác mức độ dễ/khó khi nhớ lại).
+  recordWeaknessResult(App.currentDeckId, w._id, rating !== "again");
 
   App.srsIndex++;
   if (App.srsIndex >= App.srsQueue.length) {
@@ -1861,6 +2009,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   loadFieldConfig();
   loadEditPatches();
   loadStarredItems();
+  loadShuffleConfig();
 
   App.decks = await loadDecks();
   App.exams = await loadExams();
@@ -1884,23 +2033,36 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
+  // ----- Sidebar dạng drawer trên mobile (≤860px) -----
+  function openMobileSidebar() {
+    document.querySelector(".sidebar").classList.add("is-open");
+    document.getElementById("sidebarBackdrop").classList.add("is-visible");
+  }
+  function closeMobileSidebar() {
+    document.querySelector(".sidebar").classList.remove("is-open");
+    document.getElementById("sidebarBackdrop").classList.remove("is-visible");
+  }
+  document.getElementById("btnMobileMenu").addEventListener("click", openMobileSidebar);
+  document.getElementById("sidebarBackdrop").addEventListener("click", closeMobileSidebar);
+  // Tự đóng sidebar sau khi chọn 1 mục trong nav, để vào ngay nội dung học (chỉ có
+  // tác dụng trên mobile vì trên desktop sidebar luôn cố định hiện, không có class is-open)
+  document.getElementById("navList").addEventListener("click", (e) => {
+    if (e.target.closest(".nav-item")) closeMobileSidebar();
+  });
+
   // ----- Flashcard mode -----
   document.getElementById("flashCard").addEventListener("click", () => {
-    document.getElementById("flashCard").classList.toggle("flipped");
+    flipFlashCard();
   });
   document.getElementById("btnFlip").addEventListener("click", (e) => {
     e.stopPropagation();
-    document.getElementById("flashCard").classList.toggle("flipped");
+    flipFlashCard();
   });
   document.querySelectorAll("#flashRateRow [data-flash-result]").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       flashMarkResult(btn.dataset.flashResult);
     });
-  });
-  document.getElementById("btnShuffle").addEventListener("click", () => {
-    App.flashQueue = shuffle(App.flashQueue);
-    renderFlashCard();
   });
   document.getElementById("btnFieldConfig").addEventListener("click", () => {
     document.getElementById("fieldConfigPanel").classList.toggle("hidden");
@@ -1923,29 +2085,33 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("btnFlashRestartFull").addEventListener("click", flashRestartFull);
   document.getElementById("btnFlashRestartStarredOnly").addEventListener("click", flashRestartStarredOnly);
 
-  // Phím tắt cho Flashcard: ← Chưa nhớ, ↑ Khó, ↓ Lật thẻ, → Đã nhớ
+  // Phím tắt ← ↑ ↓ → dùng chung cho Flashcard và SRS (Ôn tập):
+  // Flashcard: ← Chưa nhớ, ↑ Khó, ↓ Lật thẻ, → Đã nhớ
+  // SRS:       ← Quên,    ↑ Khó, ↓ Lật thẻ, → Dễ
   document.addEventListener("keydown", (e) => {
-    const flashView = document.getElementById("view-flash");
-    const isFlashVisible = flashView && !flashView.classList.contains("hidden");
-    const learnAreaVisible = !document.getElementById("flashLearnArea").classList.contains("hidden");
     const isEditModalOpen = !document.getElementById("editModalOverlay").classList.contains("hidden");
-    if (!isFlashVisible || !learnAreaVisible || isEditModalOpen) return;
-    // Bỏ qua nếu người dùng đang gõ trong 1 ô input/textarea nào đó
+    if (isEditModalOpen) return;
     const tag = document.activeElement.tagName;
     if (tag === "INPUT" || tag === "TEXTAREA") return;
 
-    if (e.key === "ArrowLeft") {
-      e.preventDefault();
-      flashMarkResult("not_remembered");
-    } else if (e.key === "ArrowUp") {
-      e.preventDefault();
-      flashMarkResult("hard");
-    } else if (e.key === "ArrowDown") {
-      e.preventDefault();
-      document.getElementById("flashCard").classList.toggle("flipped");
-    } else if (e.key === "ArrowRight") {
-      e.preventDefault();
-      flashMarkResult("remembered");
+    const flashView = document.getElementById("view-flash");
+    const isFlashVisible = flashView && !flashView.classList.contains("hidden");
+    const learnAreaVisible = !document.getElementById("flashLearnArea").classList.contains("hidden");
+
+    const srsView = document.getElementById("view-srs");
+    const isSrsVisible = srsView && !srsView.classList.contains("hidden");
+    const srsStageVisible = !document.getElementById("srsStage").classList.contains("hidden");
+
+    if (isFlashVisible && learnAreaVisible) {
+      if (e.key === "ArrowLeft") { e.preventDefault(); flashMarkResult("not_remembered"); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); flashMarkResult("hard"); }
+      else if (e.key === "ArrowDown") { e.preventDefault(); flipFlashCard(); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); flashMarkResult("remembered"); }
+    } else if (isSrsVisible && srsStageVisible) {
+      if (e.key === "ArrowLeft") { e.preventDefault(); rateCurrentSrsWord("again"); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); rateCurrentSrsWord("hard"); }
+      else if (e.key === "ArrowDown") { e.preventDefault(); flipSrsCard(); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); rateCurrentSrsWord("easy"); }
     }
   });
 
@@ -1974,6 +2140,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (App.soundEnabled) playCorrectSound();
   });
 
+  // ----- Speech (phát âm) toggle -----
+  const speechBtn = document.getElementById("btnToggleSpeech");
+  function refreshSpeechBtnUI() {
+    speechBtn.classList.toggle("is-muted", !App.speechEnabled);
+  }
+  refreshSpeechBtnUI();
+  speechBtn.addEventListener("click", () => {
+    App.speechEnabled = !App.speechEnabled;
+    saveSpeechConfig();
+    refreshSpeechBtnUI();
+    if (App.speechEnabled) speakJapanese("発音オン");
+  });
+
   // ----- Table mode -----
   document.getElementById("tableSearch").addEventListener("input", renderTable);
   document.getElementById("tableFilter").addEventListener("change", renderTable);
@@ -1983,17 +2162,33 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // ----- SRS mode -----
   document.getElementById("srsCard").addEventListener("click", () => {
-    document.getElementById("srsCard").classList.toggle("flipped");
+    flipSrsCard();
   });
   document.getElementById("btnSrsFlip").addEventListener("click", (e) => {
     e.stopPropagation();
-    document.getElementById("srsCard").classList.toggle("flipped");
+    flipSrsCard();
   });
   document.querySelectorAll("#srsRateRow [data-srs-rate]").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       rateCurrentSrsWord(btn.dataset.srsRate);
     });
+  });
+
+  // ----- Toggle "Học ngẫu nhiên" (dùng chung pattern cho Flashcard + SRS) -----
+  document.getElementById("flashShuffleToggle").checked = App.shuffleEnabled.flash;
+  document.getElementById("srsShuffleToggle").checked = App.shuffleEnabled.srs;
+
+  document.getElementById("flashShuffleToggle").addEventListener("change", (e) => {
+    App.shuffleEnabled.flash = e.target.checked;
+    saveShuffleConfig();
+    // Chỉ lưu lựa chọn cho LẦN HỌC TIẾP THEO (đổi bộ / restart / ôn lại) —
+    // không reset phiên đang học hiện tại để không làm mất tiến độ đang làm.
+  });
+  document.getElementById("srsShuffleToggle").addEventListener("change", (e) => {
+    App.shuffleEnabled.srs = e.target.checked;
+    saveShuffleConfig();
+    // Tương tự: chỉ áp dụng từ lần initSrsMode() tiếp theo.
   });
 
   // ----- Typing mode -----
@@ -2017,6 +2212,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // ----- Deck picker -----
   document.getElementById("deckPicker").addEventListener("change", (e) => {
     switchDeck(e.target.value);
+    closeMobileSidebar();
   });
 
   // ----- Export / Import progress (toàn bộ lịch sử học + cấu hình + sửa tạm) -----
