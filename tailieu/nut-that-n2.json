@@ -1,0 +1,1403 @@
+{
+  "type": "TUVUNG",
+  "title": "121 Từ Nút Thắt N2 (đề thi thật)",
+  "words": [
+    {
+      "kanji": "一転する",
+      "doc": "いってんする",
+      "han_viet": "NHẤT CHUYỂN",
+      "nghia": "thay đổi hoàn toàn, đảo ngược",
+      "vi_du": "留学の話が一転した。(Câu chuyện du học đã thay đổi hoàn toàn.)",
+      "doc_marked": "いってんする",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "留学の話が<ruby>一転<rt>いってん</rt></ruby>した。(Câu chuyện du học đã thay đổi hoàn toàn.)"
+    },
+    {
+      "kanji": "下旬",
+      "doc": "げじゅん",
+      "han_viet": "HẠ TUẦN",
+      "nghia": "hạ tuần (10 ngày cuối tháng)",
+      "vi_du": "来月の下旬に旅行に行く予定だ。(Dự định cuối tháng sau sẽ đi du lịch.)",
+      "doc_marked": "げじゅん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "来月の<ruby>下旬<rt>げじゅん</rt></ruby>に旅行に行く予定だ。(Dự định cuối tháng sau sẽ đi du lịch.)"
+    },
+    {
+      "kanji": "下降",
+      "doc": "かこう",
+      "han_viet": "HẠ GIÁNG",
+      "nghia": "hạ xuống, giảm xuống",
+      "vi_du": "飛行機は下降を始めた。(Máy bay bắt đầu hạ độ cao.)",
+      "doc_marked": "か**こう**",
+      "dong_nghia": [
+        "低下"
+      ],
+      "trai_nghia": [
+        "上昇"
+      ],
+      "vi_du_ruby": "飛行機は<ruby>下降<rt>かこう</rt></ruby>を始めた。(Máy bay bắt đầu hạ độ cao.)"
+    },
+    {
+      "kanji": "乱暴",
+      "doc": "らんぼう",
+      "han_viet": "LOẠN BẠO",
+      "nghia": "thô bạo, bạo lực, ẩu",
+      "vi_du": "道具を乱暴に使ってはいけません。(Không được dùng dụng cụ một cách thô bạo.)",
+      "doc_marked": "らん**ぼう**",
+      "dong_nghia": [
+        "荒っぽい"
+      ],
+      "trai_nghia": [
+        "丁寧"
+      ],
+      "vi_du_ruby": "道具を<ruby>乱暴<rt>らんぼう</rt></ruby>に使ってはいけません。(Không được dùng dụng cụ một cách thô bạo.)"
+    },
+    {
+      "kanji": "仕草",
+      "doc": "しぐさ",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "cử chỉ, điệu bộ, hành động nhỏ",
+      "vi_du": "彼女のあの仕草は印象的だった。(Cử chỉ đó của cô ấy rất đáng nhớ.)",
+      "doc_marked": "しぐさ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "彼女のあの<ruby>仕草<rt>しぐさ</rt></ruby>は印象的だった。(Cử chỉ đó của cô ấy rất đáng nhớ.)"
+    },
+    {
+      "kanji": "依然",
+      "doc": "いぜん",
+      "han_viet": "Y NHIÊN",
+      "nghia": "vẫn như cũ, vẫn vậy",
+      "vi_du": "雨は依然強かった。(Mưa vẫn mạnh như trước.)",
+      "doc_marked": "いぜん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "雨は<ruby>依然<rt>いぜん</rt></ruby>強かった。(Mưa vẫn mạnh như trước.)"
+    },
+    {
+      "kanji": "倒す",
+      "doc": "たおす",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "làm đổ, đánh ngã, lật đổ",
+      "vi_du": "倒さないように気をつけてください。(Hãy cẩn thận để không làm đổ.)",
+      "doc_marked": "たおす",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "<ruby>倒<rt>たお</rt></ruby>さないように気をつけてください。(Hãy cẩn thận để không làm đổ.)"
+    },
+    {
+      "kanji": "催し",
+      "doc": "もよおし",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "sự kiện, buổi tổ chức",
+      "vi_du": "この企業では、さまざまな催しを行っている。(Công ty này tổ chức nhiều sự kiện khác nhau.)",
+      "doc_marked": "もよおし",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "この企業では、さまざまな<ruby>催し<rt>もよおし</rt></ruby>を行っている。(Công ty này tổ chức nhiều sự kiện khác nhau.)"
+    },
+    {
+      "kanji": "典型的",
+      "doc": "てんけいてき",
+      "han_viet": "ĐIỂN HÌNH ĐÍCH",
+      "nghia": "điển hình, mang tính tiêu biểu",
+      "vi_du": "これは典型的な失敗例だ。(Đây là một ví dụ thất bại điển hình.)",
+      "doc_marked": "てん**けい**てき",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "これは<ruby>典型的<rt>てんけいてき</rt></ruby>な失敗例だ。(Đây là một ví dụ thất bại điển hình.)"
+    },
+    {
+      "kanji": "再三",
+      "doc": "さいさん",
+      "han_viet": "TÁI TAM",
+      "nghia": "nhiều lần, lặp đi lặp lại",
+      "vi_du": "再三注意したのに、まだ遅刻する。(Đã nhắc nhở nhiều lần rồi mà vẫn còn đi muộn.)",
+      "doc_marked": "さいさん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "<ruby>再三<rt>さいさん</rt></ruby>注意したのに、まだ遅刻する。(Đã nhắc nhở nhiều lần rồi mà vẫn còn đi muộn.)"
+    },
+    {
+      "kanji": "再度",
+      "doc": "さいど",
+      "han_viet": "TÁI ĐỘ",
+      "nghia": "lại một lần nữa",
+      "vi_du": "再度確認をお願いします。(Xin hãy xác nhận lại một lần nữa.)",
+      "doc_marked": "さいど",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "<ruby>再度<rt>さいど</rt></ruby>確認をお願いします。(Xin hãy xác nhận lại một lần nữa.)"
+    },
+    {
+      "kanji": "利口",
+      "doc": "りこう",
+      "han_viet": "LỢI KHẨU",
+      "nghia": "khôn, lanh lợi, thông minh",
+      "vi_du": "この犬は、本当に利口な犬ですね。(Con chó này thật sự rất khôn.)",
+      "doc_marked": "り**こう**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "この犬は、本当に<ruby>利口<rt>りこう</rt></ruby>な犬ですね。(Con chó này thật sự rất khôn.)"
+    },
+    {
+      "kanji": "削除",
+      "doc": "さくじょ",
+      "han_viet": "TƯỚC TRỪ",
+      "nghia": "xóa bỏ, loại bỏ",
+      "vi_du": "古いデータを削除した。(Đã xóa dữ liệu cũ.)",
+      "doc_marked": "さくじょ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "古いデータを<ruby>削除<rt>さくじょ</rt></ruby>した。(Đã xóa dữ liệu cũ.)"
+    },
+    {
+      "kanji": "剥げる",
+      "doc": "はげる",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "bị tróc, bị bong (sơn, màu)",
+      "vi_du": "青いペンキが剥げている。(Sơn xanh đang bị tróc.)",
+      "doc_marked": "はげる",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "青いペンキが<ruby>剥<rt>は</rt></ruby>げている。(Sơn xanh đang bị tróc.)"
+    },
+    {
+      "kanji": "勇ましい",
+      "doc": "いさましい",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "dũng cảm, hùng dũng",
+      "vi_du": "勇ましい姿で戦いに挑んだ。(Lao vào trận chiến với tư thế dũng cảm.)",
+      "doc_marked": "いさましい",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "<ruby>勇ましい<rt>いさましい</rt></ruby>姿で戦いに挑んだ。(Lao vào trận chiến với tư thế dũng cảm.)"
+    },
+    {
+      "kanji": "動揺する",
+      "doc": "どうようする",
+      "han_viet": "ĐỘNG DAO",
+      "nghia": "lung lay, dao động (tâm lý)",
+      "vi_du": "その知らせを聞いて、彼は動揺した。(Nghe tin đó, anh ấy đã dao động.)",
+      "doc_marked": "**どう****よう**する",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "その知らせを聞いて、彼は<ruby>動揺<rt>どうよう</rt></ruby>した。(Nghe tin đó, anh ấy đã dao động.)"
+    },
+    {
+      "kanji": "勧誘",
+      "doc": "かんゆう",
+      "han_viet": "KHUYẾN DỤ",
+      "nghia": "rủ rê, mời, dụ dỗ",
+      "vi_du": "新入生をテニスサークルに勧誘した。(Đã rủ sinh viên mới vào hội tennis.)",
+      "doc_marked": "かんゆう",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "新入生をテニスサークルに<ruby>勧誘<rt>かんゆう</rt></ruby>した。(Đã rủ sinh viên mới vào hội tennis.)"
+    },
+    {
+      "kanji": "包む",
+      "doc": "くるむ",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "bọc, gói lại",
+      "vi_du": "ごみを包んで捨てた。(Đã bọc rác lại rồi vứt đi.)",
+      "doc_marked": "くるむ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "ごみを<ruby>包<rt>くる</rt></ruby>んで捨てた。(Đã bọc rác lại rồi vứt đi.)"
+    },
+    {
+      "kanji": "卑怯",
+      "doc": "ひきょう",
+      "han_viet": "TI KHIẾP",
+      "nghia": "hèn hạ, ti tiện, gian xảo",
+      "vi_du": "高橋さんは、そんな卑怯なやり方はしませんよ。(Anh Takahashi không làm theo cách hèn hạ như vậy đâu.)",
+      "doc_marked": "ひき**ょう**",
+      "dong_nghia": [],
+      "trai_nghia": [
+        "勇敢"
+      ],
+      "vi_du_ruby": "高橋さんは、そんな<ruby>卑怯<rt>ひきょう</rt></ruby>なやり方はしませんよ。(Anh Takahashi không làm theo cách hèn hạ như vậy đâu.)"
+    },
+    {
+      "kanji": "厚かましい",
+      "doc": "あつかましい",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "trơ trẽn, vô liêm sỉ, mặt dày",
+      "vi_du": "あの人は本当に厚かましい人だ。(Người đó thật sự là người trơ trẽn.)",
+      "doc_marked": "あつかましい",
+      "dong_nghia": [
+        "生意気"
+      ],
+      "trai_nghia": [
+        "謙虚"
+      ],
+      "vi_du_ruby": "あの人は本当に<ruby>厚かましい<rt>あつかましい</rt></ruby>人だ。(Người đó thật sự là người trơ trẽn.)"
+    },
+    {
+      "kanji": "参照",
+      "doc": "さんしょう",
+      "han_viet": "THAM CHIẾU",
+      "nghia": "tham khảo, xem thêm",
+      "vi_du": "具体的な内容については、本日お配りした資料をご参照ください。(Về nội dung cụ thể, xin tham khảo tài liệu đã phát hôm nay.)",
+      "doc_marked": "さんし**ょう**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "具体的な内容については、本日お配りした資料をご<ruby>参照<rt>さんしょう</rt></ruby>ください。(Về nội dung cụ thể, xin tham khảo tài liệu đã phát hôm nay.)"
+    },
+    {
+      "kanji": "収納する",
+      "doc": "しゅうのうする",
+      "han_viet": "THU NẠP",
+      "nghia": "cất, sắp xếp đồ vào nơi chứa",
+      "vi_du": "使わない物は、ここに収納してください。(Những vật không dùng, hãy cất vào đây.)",
+      "doc_marked": "**しゅう****のう**する",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "使わない物は、ここに<ruby>収納<rt>しゅうのう</rt></ruby>してください。(Những vật không dùng, hãy cất vào đây.)"
+    },
+    {
+      "kanji": "受講",
+      "doc": "じゅこう",
+      "han_viet": "THỤ GIẢNG",
+      "nghia": "đăng ký học (một khóa học)",
+      "vi_du": "パソコン教室の受講の申し込みをした。(Đã đăng ký học lớp tin học.)",
+      "doc_marked": "じゅ**こう**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "パソコン教室の<ruby>受講<rt>じゅこう</rt></ruby>の申し込みをした。(Đã đăng ký học lớp tin học.)"
+    },
+    {
+      "kanji": "含める",
+      "doc": "ふくめる",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "bao gồm, tính cả vào",
+      "vi_du": "研修内容は、日程も含めて、今日中にお知らせします。(Nội dung tập huấn, bao gồm cả lịch trình, sẽ thông báo trong hôm nay.)",
+      "doc_marked": "ふくめる",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "研修内容は、日程も<ruby>含<rt>ふく</rt></ruby>めて、今日中にお知らせします。(Nội dung tập huấn, bao gồm cả lịch trình, sẽ thông báo trong hôm nay.)"
+    },
+    {
+      "kanji": "和やか",
+      "doc": "なごやか",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "hòa nhã, ôn hòa, ấm áp (không khí)",
+      "vi_du": "とても和やかなパーティーだった。(Đó là một buổi tiệc rất hòa nhã, ấm áp.)",
+      "doc_marked": "なごやか",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "とても<ruby>和やか<rt>なごやか</rt></ruby>なパーティーだった。(Đó là một buổi tiệc rất hòa nhã, ấm áp.)"
+    },
+    {
+      "kanji": "哀れ",
+      "doc": "あわれ",
+      "han_viet": "AI",
+      "nghia": "đáng thương, tội nghiệp",
+      "vi_du": "その作家は哀れな人生を送った。(Nhà văn đó đã trải qua một cuộc đời đáng thương.)",
+      "doc_marked": "あわれ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "その作家は<ruby>哀れ<rt>あわれ</rt></ruby>な人生を送った。(Nhà văn đó đã trải qua một cuộc đời đáng thương.)"
+    },
+    {
+      "kanji": "善良",
+      "doc": "ぜんりょう",
+      "han_viet": "THIỆN LƯƠNG",
+      "nghia": "hiền lành, tốt bụng",
+      "vi_du": "青木さんは善良な人です。(Anh Aoki là người hiền lành, tốt bụng.)",
+      "doc_marked": "ぜんり**ょう**",
+      "dong_nghia": [],
+      "trai_nghia": [
+        "悪質"
+      ],
+      "vi_du_ruby": "青木さんは<ruby>善良<rt>ぜんりょう</rt></ruby>な人です。(Anh Aoki là người hiền lành, tốt bụng.)"
+    },
+    {
+      "kanji": "喧しい",
+      "doc": "やかましい",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "ồn ào, ầm ĩ",
+      "vi_du": "教室が喧しくて、勉強に集中できない。(Lớp học ồn ào quá, không thể tập trung học được.)",
+      "doc_marked": "やかましい",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "教室が<ruby>喧<rt>やかま</rt></ruby>しくて、勉強に集中できない。(Lớp học ồn ào quá, không thể tập trung học được.)"
+    },
+    {
+      "kanji": "囲む",
+      "doc": "かこむ",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "bao quanh, vây quanh",
+      "vi_du": "鈴木選手は試合の後、多くの記者に囲まれて質問を受けていた。(Sau trận đấu, vận động viên Suzuki bị nhiều nhà báo vây quanh hỏi.)",
+      "doc_marked": "かこむ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "鈴木選手は試合の後、多くの記者に<ruby>囲<rt>かこ</rt></ruby>まれて質問を受けていた。(Sau trận đấu, vận động viên Suzuki bị nhiều nhà báo vây quanh hỏi.)"
+    },
+    {
+      "kanji": "在籍",
+      "doc": "ざいせき",
+      "han_viet": "TẠI TỊCH",
+      "nghia": "có tên trong danh sách (trường, tổ chức)",
+      "vi_du": "私は大学院に在籍している。(Tôi đang có tên trong danh sách học cao học.)",
+      "doc_marked": "ざいせき",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "私は大学院に<ruby>在籍<rt>ざいせき</rt></ruby>している。(Tôi đang có tên trong danh sách học cao học.)"
+    },
+    {
+      "kanji": "垂直",
+      "doc": "すいちょく",
+      "han_viet": "THÙY TRỰC",
+      "nghia": "thẳng đứng, vuông góc",
+      "vi_du": "このビルの壁は地面に垂直に建てられている。(Tường của tòa nhà này được xây thẳng đứng với mặt đất.)",
+      "doc_marked": "すいちょく",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "このビルの壁は地面に<ruby>垂直<rt>すいちょく</rt></ruby>に建てられている。(Tường của tòa nhà này được xây thẳng đứng với mặt đất.)"
+    },
+    {
+      "kanji": "声援",
+      "doc": "せいえん",
+      "han_viet": "THANH VIỆN",
+      "nghia": "sự cổ vũ, tiếng hò reo ủng hộ",
+      "vi_du": "みなさんの声援に力づけられました。(Tôi đã được tiếp thêm sức mạnh từ sự cổ vũ của mọi người.)",
+      "doc_marked": "**せい**えん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "みなさんの<ruby>声援<rt>せいえん</rt></ruby>に力づけられました。(Tôi đã được tiếp thêm sức mạnh từ sự cổ vũ của mọi người.)"
+    },
+    {
+      "kanji": "失望する",
+      "doc": "しつぼうする",
+      "han_viet": "THẤT VỌNG",
+      "nghia": "thất vọng",
+      "vi_du": "あの人の冷たい態度には失望した。(Tôi đã thất vọng với thái độ lạnh lùng của người đó.)",
+      "doc_marked": "しつ**ぼう**する",
+      "dong_nghia": [
+        "落胆する"
+      ],
+      "trai_nghia": [
+        "満足する"
+      ],
+      "vi_du_ruby": "あの人の冷たい態度には<ruby>失望<rt>しつぼう</rt></ruby>した。(Tôi đã thất vọng với thái độ lạnh lùng của người đó.)"
+    },
+    {
+      "kanji": "好調",
+      "doc": "こうちょう",
+      "han_viet": "HẢO ĐIỆU",
+      "nghia": "tình trạng tốt, suôn sẻ",
+      "vi_du": "CDの売れ行きは好調だ。(Doanh số bán CD đang rất tốt.)",
+      "doc_marked": "**こう**ち**ょう**",
+      "dong_nghia": [
+        "順調"
+      ],
+      "trai_nghia": [
+        "不調"
+      ],
+      "vi_du_ruby": "CDの売れ行きは<ruby>好調<rt>こうちょう</rt></ruby>だ。(Doanh số bán CD đang rất tốt.)"
+    },
+    {
+      "kanji": "威張る",
+      "doc": "いばる",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "hống hách, ra vẻ ta đây",
+      "vi_du": "中西さんはいつも威張っている。(Anh Nakanishi lúc nào cũng hống hách.)",
+      "doc_marked": "いばる",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "中西さんはいつも<ruby>威張<rt>いば</rt></ruby>っている。(Anh Nakanishi lúc nào cũng hống hách.)"
+    },
+    {
+      "kanji": "実践",
+      "doc": "じっせん",
+      "han_viet": "THỰC TIỄN",
+      "nghia": "thực hành, áp dụng vào thực tế",
+      "vi_du": "これからさまざまなことを実践していきたい。(Từ giờ tôi muốn áp dụng nhiều điều vào thực tế.)",
+      "doc_marked": "じっせん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "これからさまざまなことを<ruby>実践<rt>じっせん</rt></ruby>していきたい。(Từ giờ tôi muốn áp dụng nhiều điều vào thực tế.)"
+    },
+    {
+      "kanji": "小声",
+      "doc": "こごえ",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "giọng nhỏ, thầm",
+      "vi_du": "高橋さんは、小声で話した。(Anh Takahashi đã nói bằng giọng nhỏ, thì thầm.)",
+      "doc_marked": "こごえ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "高橋さんは、<ruby>小声<rt>こごえ</rt></ruby>で話した。(Anh Takahashi đã nói bằng giọng nhỏ, thì thầm.)"
+    },
+    {
+      "kanji": "尖る",
+      "doc": "とがる",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "nhọn, sắc (đầu vật gì)",
+      "vi_du": "この道具は先が尖っている。(Đầu của dụng cụ này rất nhọn.)",
+      "doc_marked": "とがる",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "この道具は先が<ruby>尖<rt>とが</rt></ruby>っている。(Đầu của dụng cụ này rất nhọn.)"
+    },
+    {
+      "kanji": "弱点",
+      "doc": "じゃくてん",
+      "han_viet": "NHƯỢC ĐIỂM",
+      "nghia": "điểm yếu, nhược điểm",
+      "vi_du": "特に目立った弱点はない。(Không có điểm yếu nào đặc biệt nổi bật.)",
+      "doc_marked": "じゃくてん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "特に目立った<ruby>弱点<rt>じゃくてん</rt></ruby>はない。(Không có điểm yếu nào đặc biệt nổi bật.)"
+    },
+    {
+      "kanji": "強火",
+      "doc": "つよび",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "lửa to (khi nấu ăn)",
+      "vi_du": "表面を強火で焼いてください。(Hãy nướng mặt ngoài với lửa to.)",
+      "doc_marked": "つよび",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "表面を<ruby>強火<rt>つよび</rt></ruby>で焼いてください。(Hãy nướng mặt ngoài với lửa to.)"
+    },
+    {
+      "kanji": "当分",
+      "doc": "とうぶん",
+      "han_viet": "ĐƯƠNG PHẦN",
+      "nghia": "trong thời gian tới, tạm thời",
+      "vi_du": "当分は使わない予定です。(Dự định tạm thời sẽ không sử dụng.)",
+      "doc_marked": "**とう**ぶん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "<ruby>当分<rt>とうぶん</rt></ruby>は使わない予定です。(Dự định tạm thời sẽ không sử dụng.)"
+    },
+    {
+      "kanji": "志望",
+      "doc": "しぼう",
+      "han_viet": "CHÍ VỌNG",
+      "nghia": "nguyện vọng, mong muốn (về nghề nghiệp/trường)",
+      "vi_du": "この会社を志望した理由を教えてください。(Hãy cho biết lý do bạn mong muốn vào công ty này.)",
+      "doc_marked": "し**ぼう**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "この会社を<ruby>志望<rt>しぼう</rt></ruby>した理由を教えてください。(Hãy cho biết lý do bạn mong muốn vào công ty này.)"
+    },
+    {
+      "kanji": "息抜きする",
+      "doc": "いきぬきする",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "giải lao, nghỉ ngơi cho thoải mái",
+      "vi_du": "少し息抜きしたほうがいいよ。(Bạn nên giải lao một chút thì tốt hơn.)",
+      "doc_marked": "いきぬきする",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "少し<ruby>息抜き<rt>いきぬき</rt></ruby>したほうがいいよ。(Bạn nên giải lao một chút thì tốt hơn.)"
+    },
+    {
+      "kanji": "情景",
+      "doc": "じょうけい",
+      "han_viet": "TÌNH CẢNH",
+      "nghia": "khung cảnh, cảnh tượng (gợi cảm xúc)",
+      "vi_du": "美しい情景が目に浮かんだ。(Một khung cảnh đẹp hiện lên trong tâm trí.)",
+      "doc_marked": "じ**ょう****けい**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "美しい<ruby>情景<rt>じょうけい</rt></ruby>が目に浮かんだ。(Một khung cảnh đẹp hiện lên trong tâm trí.)"
+    },
+    {
+      "kanji": "愉快",
+      "doc": "ゆかい",
+      "han_viet": "DU KHOÁI",
+      "nghia": "vui vẻ, thú vị",
+      "vi_du": "高橋さんはとても愉快な人だ。(Anh Takahashi là người rất vui vẻ.)",
+      "doc_marked": "ゆかい",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "高橋さんはとても<ruby>愉快<rt>ゆかい</rt></ruby>な人だ。(Anh Takahashi là người rất vui vẻ.)"
+    },
+    {
+      "kanji": "拒否",
+      "doc": "きょひ",
+      "han_viet": "CỰ PHỦ",
+      "nghia": "từ chối, cự tuyệt",
+      "vi_du": "迷惑なメールの受信を拒否したい。(Tôi muốn từ chối nhận thư rác.)",
+      "doc_marked": "きょひ",
+      "dong_nghia": [
+        "拒絶"
+      ],
+      "trai_nghia": [
+        "承諾"
+      ],
+      "vi_du_ruby": "迷惑なメールの受信を<ruby>拒否<rt>きょひ</rt></ruby>したい。(Tôi muốn từ chối nhận thư rác.)"
+    },
+    {
+      "kanji": "拡充",
+      "doc": "かくじゅう",
+      "han_viet": "KHOÁCH SUNG",
+      "nghia": "mở rộng và bổ sung",
+      "vi_du": "来年からサービスを拡充することになった。(Từ năm sau sẽ mở rộng và bổ sung dịch vụ.)",
+      "doc_marked": "かく**じゅう**",
+      "dong_nghia": [
+        "拡張"
+      ],
+      "trai_nghia": [
+        "縮小"
+      ],
+      "vi_du_ruby": "来年からサービスを<ruby>拡充<rt>かくじゅう</rt></ruby>することになった。(Từ năm sau sẽ mở rộng và bổ sung dịch vụ.)"
+    },
+    {
+      "kanji": "拡張",
+      "doc": "かくちょう",
+      "han_viet": "KHOÁCH TRƯƠNG",
+      "nghia": "mở rộng (quy mô, không gian)",
+      "vi_du": "道路を拡張する工事が行われている。(Đang tiến hành công trình mở rộng đường.)",
+      "doc_marked": "かくち**ょう**",
+      "dong_nghia": [
+        "拡充"
+      ],
+      "trai_nghia": [
+        "縮小"
+      ],
+      "vi_du_ruby": "道路を<ruby>拡張<rt>かくちょう</rt></ruby>する工事が行われている。(Đang tiến hành công trình mở rộng đường.)"
+    },
+    {
+      "kanji": "指図される",
+      "doc": "さしずされる",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "bị chỉ thị, bị ra lệnh",
+      "vi_du": "村上さんはほかの人に指図されるのが嫌いだそうだ。(Nghe nói anh Murakami ghét bị người khác chỉ thị.)",
+      "doc_marked": "さしずされる",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "村上さんはほかの人に<ruby>指図される<rt>さしずされる</rt></ruby>のが嫌いだそうだ。(Nghe nói anh Murakami ghét bị người khác chỉ thị.)"
+    },
+    {
+      "kanji": "握手",
+      "doc": "あくしゅ",
+      "han_viet": "ÁC THỦ",
+      "nghia": "bắt tay",
+      "vi_du": "さっき握手していた人は誰ですか。(Người vừa bắt tay lúc nãy là ai vậy?)",
+      "doc_marked": "あくしゅ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "さっき<ruby>握手<rt>あくしゅ</rt></ruby>していた人は誰ですか。(Người vừa bắt tay lúc nãy là ai vậy?)"
+    },
+    {
+      "kanji": "損失",
+      "doc": "そんしつ",
+      "han_viet": "TỔN THẤT",
+      "nghia": "tổn thất, thiệt hại",
+      "vi_du": "これは、会社にとって大きな損失だ。(Đây là một tổn thất lớn đối với công ty.)",
+      "doc_marked": "そんしつ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "これは、会社にとって大きな<ruby>損失<rt>そんしつ</rt></ruby>だ。(Đây là một tổn thất lớn đối với công ty.)"
+    },
+    {
+      "kanji": "書籍",
+      "doc": "しょせき",
+      "han_viet": "THƯ TỊCH",
+      "nghia": "sách, thư tịch",
+      "vi_du": "ここには大量の書籍が収められている。(Ở đây chứa một lượng lớn sách.)",
+      "doc_marked": "しょせき",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "ここには大量の<ruby>書籍<rt>しょせき</rt></ruby>が収められている。(Ở đây chứa một lượng lớn sách.)"
+    },
+    {
+      "kanji": "最寄り",
+      "doc": "もより",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "gần nhất (ga, cửa hàng...)",
+      "vi_du": "私の会社は最寄りの駅から歩いて15分です。(Công ty tôi đi bộ 15 phút từ nhà ga gần nhất.)",
+      "doc_marked": "もより",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "私の会社は<ruby>最寄り<rt>もより</rt></ruby>の駅から歩いて15分です。(Công ty tôi đi bộ 15 phút từ nhà ga gần nhất.)"
+    },
+    {
+      "kanji": "束ねる",
+      "doc": "たばねる",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "bó lại, buộc thành bó",
+      "vi_du": "古い新聞や本をひもで束ねた。(Đã dùng dây buộc báo và sách cũ thành bó.)",
+      "doc_marked": "たばねる",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "古い新聞や本をひもで<ruby>束<rt>たば</rt></ruby>ねた。(Đã dùng dây buộc báo và sách cũ thành bó.)"
+    },
+    {
+      "kanji": "柔軟",
+      "doc": "じゅうなん",
+      "han_viet": "NHU NHUYỄN",
+      "nghia": "linh hoạt, mềm mỏng, dẻo dai",
+      "vi_du": "係員は柔軟に対応してくれた。(Nhân viên đã ứng xử rất linh hoạt.)",
+      "doc_marked": "**じゅう**なん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "係員は<ruby>柔軟<rt>じゅうなん</rt></ruby>に対応してくれた。(Nhân viên đã ứng xử rất linh hoạt.)"
+    },
+    {
+      "kanji": "概要",
+      "doc": "がいよう",
+      "han_viet": "KHÁI YẾU",
+      "nghia": "tóm tắt, khái quát, đại cương",
+      "vi_du": "研究の概要を述べる。(Trình bày tóm tắt nghiên cứu.)",
+      "doc_marked": "がい**よう**",
+      "dong_nghia": [
+        "要約",
+        "あらすじ"
+      ],
+      "trai_nghia": [
+        "詳細"
+      ],
+      "vi_du_ruby": "研究の<ruby>概要<rt>がいよう</rt></ruby>を述べる。(Trình bày tóm tắt nghiên cứu.)"
+    },
+    {
+      "kanji": "模範",
+      "doc": "もはん",
+      "han_viet": "MÔ PHẠM",
+      "nghia": "mẫu mực, gương mẫu",
+      "vi_du": "前田さんは子供たちに正しい泳ぎ方の模範を示した。(Anh Maeda đã làm mẫu cách bơi đúng cho các em nhỏ.)",
+      "doc_marked": "もはん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "前田さんは子供たちに正しい泳ぎ方の<ruby>模範<rt>もはん</rt></ruby>を示した。(Anh Maeda đã làm mẫu cách bơi đúng cho các em nhỏ.)"
+    },
+    {
+      "kanji": "比較的",
+      "doc": "ひかくてき",
+      "han_viet": "TỶ GIÁO ĐÍCH",
+      "nghia": "tương đối, khá",
+      "vi_du": "この辺りは比較的人通りが少ない。(Khu vực này tương đối ít người qua lại.)",
+      "doc_marked": "ひかくてき",
+      "dong_nghia": [
+        "割合"
+      ],
+      "trai_nghia": [],
+      "vi_du_ruby": "この辺りは<ruby>比較的<rt>ひかくてき</rt></ruby>人通りが少ない。(Khu vực này tương đối ít người qua lại.)"
+    },
+    {
+      "kanji": "永久",
+      "doc": "えいきゅう",
+      "han_viet": "VĨNH CỬU",
+      "nghia": "vĩnh viễn, mãi mãi",
+      "vi_du": "この状態が永久に続くわけではない。(Tình trạng này không phải sẽ tiếp diễn vĩnh viễn.)",
+      "doc_marked": "**えい****きゅう**",
+      "dong_nghia": [
+        "永遠"
+      ],
+      "trai_nghia": [
+        "一時"
+      ],
+      "vi_du_ruby": "この状態が<ruby>永久<rt>えいきゅう</rt></ruby>に続くわけではない。(Tình trạng này không phải sẽ tiếp diễn vĩnh viễn.)"
+    },
+    {
+      "kanji": "油断",
+      "doc": "ゆだん",
+      "han_viet": "DU ĐOẠN",
+      "nghia": "lơ là, mất cảnh giác",
+      "vi_du": "慣れるとつい油断して失敗してしまう。(Khi đã quen rồi thì dễ lơ là mà thất bại.)",
+      "doc_marked": "ゆだん",
+      "dong_nghia": [],
+      "trai_nghia": [
+        "用心"
+      ],
+      "vi_du_ruby": "慣れるとつい<ruby>油断<rt>ゆだん</rt></ruby>して失敗してしまう。(Khi đã quen rồi thì dễ lơ là mà thất bại.)"
+    },
+    {
+      "kanji": "治療",
+      "doc": "ちりょう",
+      "han_viet": "TRỊ LIỆU",
+      "nghia": "điều trị, chữa bệnh",
+      "vi_du": "歯医者に行って虫歯の治療を受けた。(Đã đi nha sĩ để điều trị sâu răng.)",
+      "doc_marked": "ちり**ょう**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "歯医者に行って虫歯の<ruby>治療<rt>ちりょう</rt></ruby>を受けた。(Đã đi nha sĩ để điều trị sâu răng.)"
+    },
+    {
+      "kanji": "注目する",
+      "doc": "ちゅうもくする",
+      "han_viet": "CHÚ MỤC",
+      "nghia": "chú ý, để mắt tới",
+      "vi_du": "今日の林氏の発言に皆が注目した。(Mọi người đã chú ý đến phát ngôn của ông Hayashi hôm nay.)",
+      "doc_marked": "**ちゅう**もくする",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "今日の林氏の発言に皆が<ruby>注目<rt>ちゅうもく</rt></ruby>した。(Mọi người đã chú ý đến phát ngôn của ông Hayashi hôm nay.)"
+    },
+    {
+      "kanji": "涼む",
+      "doc": "すずむ",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "hóng gió, làm mát người",
+      "vi_du": "暑いので、日陰で涼んだ。(Vì nóng nên đã hóng gió trong bóng cây.)",
+      "doc_marked": "すずむ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "暑いので、日陰で<ruby>涼<rt>すず</rt></ruby>んだ。(Vì nóng nên đã hóng gió trong bóng cây.)"
+    },
+    {
+      "kanji": "濃厚",
+      "doc": "のうこう",
+      "han_viet": "NỒNG HẬU",
+      "nghia": "đậm đặc, rõ ràng (khả năng cao)",
+      "vi_du": "犯人はすでに国外に逃亡した可能性が濃厚だ。(Khả năng cao là kẻ phạm tội đã trốn ra nước ngoài.)",
+      "doc_marked": "**のう****こう**",
+      "dong_nghia": [],
+      "trai_nghia": [
+        "淡い",
+        "薄い"
+      ],
+      "vi_du_ruby": "犯人はすでに国外に逃亡した可能性が<ruby>濃厚<rt>のうこう</rt></ruby>だ。(Khả năng cao là kẻ phạm tội đã trốn ra nước ngoài.)"
+    },
+    {
+      "kanji": "無口",
+      "doc": "むくち",
+      "han_viet": "VÔ KHẨU",
+      "nghia": "ít nói, kín tiếng",
+      "vi_du": "鈴木さんは無口だ。(Anh Suzuki là người ít nói.)",
+      "doc_marked": "むくち",
+      "dong_nghia": [
+        "寡黙"
+      ],
+      "trai_nghia": [
+        "おしゃべり"
+      ],
+      "vi_du_ruby": "鈴木さんは<ruby>無口<rt>むくち</rt></ruby>だ。(Anh Suzuki là người ít nói.)"
+    },
+    {
+      "kanji": "焦る",
+      "doc": "あせる",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "vội vàng, sốt ruột, hấp tấp",
+      "vi_du": "今ごろになって焦ってもしかたない。(Đến giờ này mà sốt ruột thì cũng chẳng giải quyết được gì.)",
+      "doc_marked": "あせる",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "今ごろになって<ruby>焦<rt>あせ</rt></ruby>ってもしかたない。(Đến giờ này mà sốt ruột thì cũng chẳng giải quyết được gì.)"
+    },
+    {
+      "kanji": "用心する",
+      "doc": "ようじんする",
+      "han_viet": "DỤNG TÂM",
+      "nghia": "cẩn thận, đề phòng",
+      "vi_du": "もう少し用心したほうがいいんじゃないですか。(Bạn nên cẩn thận hơn một chút thì tốt hơn không?)",
+      "doc_marked": "**よう**じんする",
+      "dong_nghia": [
+        "注意する",
+        "気をつける"
+      ],
+      "trai_nghia": [
+        "油断する"
+      ],
+      "vi_du_ruby": "もう少し<ruby>用心<rt>ようじん</rt></ruby>したほうがいいんじゃないですか。(Bạn nên cẩn thận hơn một chút thì tốt hơn không?)"
+    },
+    {
+      "kanji": "異色",
+      "doc": "いしょく",
+      "han_viet": "DỊ SẮC",
+      "nghia": "khác biệt, lạ, độc đáo",
+      "vi_du": "西村氏の作品の中ではこの小説は、かなり異色だ。(Trong các tác phẩm của ông Nishimura, tiểu thuyết này khá khác biệt.)",
+      "doc_marked": "いしょく",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "西村氏の作品の中ではこの小説は、かなり<ruby>異色<rt>いしょく</rt></ruby>だ。(Trong các tác phẩm của ông Nishimura, tiểu thuyết này khá khác biệt.)"
+    },
+    {
+      "kanji": "症状",
+      "doc": "しょうじょう",
+      "han_viet": "CHỨNG TRẠNG",
+      "nghia": "triệu chứng (bệnh)",
+      "vi_du": "診察室で医者に症状を伝えた。(Đã nói triệu chứng cho bác sĩ trong phòng khám.)",
+      "doc_marked": "し**ょう**じ**ょう**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "診察室で医者に<ruby>症状<rt>しょうじょう</rt></ruby>を伝えた。(Đã nói triệu chứng cho bác sĩ trong phòng khám.)"
+    },
+    {
+      "kanji": "省略",
+      "doc": "しょうりゃく",
+      "han_viet": "TỈNH LƯỢC",
+      "nghia": "lược bỏ, bỏ qua",
+      "vi_du": "ここは省略してもかまわない。(Ở đây có thể lược bỏ cũng không vấn đề gì.)",
+      "doc_marked": "し**ょう**りゃく",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "ここは<ruby>省略<rt>しょうりゃく</rt></ruby>してもかまわない。(Ở đây có thể lược bỏ cũng không vấn đề gì.)"
+    },
+    {
+      "kanji": "短編",
+      "doc": "たんぺん",
+      "han_viet": "ĐOẢN THIÊN",
+      "nghia": "truyện ngắn",
+      "vi_du": "あの作家の短編小説は、とても面白い。(Truyện ngắn của nhà văn đó rất thú vị.)",
+      "doc_marked": "たんぺん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "あの作家の<ruby>短編<rt>たんぺん</rt></ruby>小説は、とても面白い。(Truyện ngắn của nhà văn đó rất thú vị.)"
+    },
+    {
+      "kanji": "研修",
+      "doc": "けんしゅう",
+      "han_viet": "NGHIÊN TU",
+      "nghia": "tập huấn, đào tạo",
+      "vi_du": "今日から2週間の研修を行います。(Từ hôm nay sẽ tiến hành tập huấn trong 2 tuần.)",
+      "doc_marked": "けん**しゅう**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "今日から2週間の<ruby>研修<rt>けんしゅう</rt></ruby>を行います。(Từ hôm nay sẽ tiến hành tập huấn trong 2 tuần.)"
+    },
+    {
+      "kanji": "破片",
+      "doc": "はへん",
+      "han_viet": "PHÁ PHIẾN",
+      "nghia": "mảnh vỡ",
+      "vi_du": "ガラスの破片を踏まないように気をつけてください。(Hãy cẩn thận để không đạp vào mảnh kính vỡ.)",
+      "doc_marked": "はへん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "ガラスの<ruby>破片<rt>はへん</rt></ruby>を踏まないように気をつけてください。(Hãy cẩn thận để không đạp vào mảnh kính vỡ.)"
+    },
+    {
+      "kanji": "硬貨",
+      "doc": "こうか",
+      "han_viet": "NGẠNH HÓA",
+      "nghia": "tiền xu",
+      "vi_du": "銀行に行って、お札を硬貨に替えた。(Đã đến ngân hàng đổi tiền giấy thành tiền xu.)",
+      "doc_marked": "**こう**か",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "銀行に行って、お札を<ruby>硬貨<rt>こうか</rt></ruby>に替えた。(Đã đến ngân hàng đổi tiền giấy thành tiền xu.)"
+    },
+    {
+      "kanji": "稀",
+      "doc": "まれ",
+      "han_viet": "HY",
+      "nghia": "hiếm, hiếm có",
+      "vi_du": "彼女のような歌手は稀だと思う。(Tôi nghĩ ca sĩ như cô ấy là hiếm có.)",
+      "doc_marked": "まれ",
+      "dong_nghia": [
+        "珍しい"
+      ],
+      "trai_nghia": [
+        "ありふれた"
+      ],
+      "vi_du_ruby": "彼女のような歌手は<ruby>稀<rt>まれ</rt></ruby>だと思う。(Tôi nghĩ ca sĩ như cô ấy là hiếm có.)"
+    },
+    {
+      "kanji": "積もる",
+      "doc": "つもる",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "chất chồng, tích tụ (lá, tuyết...)",
+      "vi_du": "落ち葉が積もった道を歩いた。(Đã đi trên con đường lá rụng chất đầy.)",
+      "doc_marked": "つもる",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "落ち葉が<ruby>積<rt>つ</rt></ruby>もった道を歩いた。(Đã đi trên con đường lá rụng chất đầy.)"
+    },
+    {
+      "kanji": "競う",
+      "doc": "きそう",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "thi đua, cạnh tranh",
+      "vi_du": "この二人はライバルとして常に競ってきた。(Hai người này luôn cạnh tranh với nhau như đối thủ.)",
+      "doc_marked": "き**そう**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "この二人はライバルとして常に<ruby>競<rt>きそ</rt></ruby>ってきた。(Hai người này luôn cạnh tranh với nhau như đối thủ.)"
+    },
+    {
+      "kanji": "簡潔",
+      "doc": "かんけつ",
+      "han_viet": "GIẢN KIẾT",
+      "nghia": "đơn giản, ngắn gọn",
+      "vi_du": "文章は簡潔に書いてください。(Hãy viết câu văn ngắn gọn.)",
+      "doc_marked": "かんけつ",
+      "dong_nghia": [],
+      "trai_nghia": [
+        "冗長"
+      ],
+      "vi_du_ruby": "文章は<ruby>簡潔<rt>かんけつ</rt></ruby>に書いてください。(Hãy viết câu văn ngắn gọn.)"
+    },
+    {
+      "kanji": "精算",
+      "doc": "せいさん",
+      "han_viet": "TINH TOÁN",
+      "nghia": "thanh toán, tính toán chi tiết (chi phí)",
+      "vi_du": "出張後、費用の精算をした。(Sau chuyến công tác đã thanh toán chi phí.)",
+      "doc_marked": "**せい**さん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "出張後、費用の<ruby>精算<rt>せいさん</rt></ruby>をした。(Sau chuyến công tác đã thanh toán chi phí.)"
+    },
+    {
+      "kanji": "系統",
+      "doc": "けいとう",
+      "han_viet": "HỆ THỐNG",
+      "nghia": "hệ thống, dòng, hệ",
+      "vi_du": "カップや皿を同じ系統の色でそろえた。(Đã chọn cốc và đĩa cùng tông màu hệ thống.)",
+      "doc_marked": "**けい****とう**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "カップや皿を同じ<ruby>系統<rt>けいとう</rt></ruby>の色でそろえた。(Đã chọn cốc và đĩa cùng tông màu hệ thống.)"
+    },
+    {
+      "kanji": "素材",
+      "doc": "そざい",
+      "han_viet": "TỐ TÀI",
+      "nghia": "vật liệu, chất liệu",
+      "vi_du": "このシャツは天然の素材で作られている。(Áo này được làm từ chất liệu tự nhiên.)",
+      "doc_marked": "そざい",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "このシャツは天然の<ruby>素材<rt>そざい</rt></ruby>で作られている。(Áo này được làm từ chất liệu tự nhiên.)"
+    },
+    {
+      "kanji": "終日",
+      "doc": "しゅうじつ",
+      "han_viet": "CHUNG NHẬT",
+      "nghia": "suốt cả ngày",
+      "vi_du": "この道は終日通行止めです。(Con đường này bị cấm đi suốt cả ngày.)",
+      "doc_marked": "**しゅう**じつ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "この道は<ruby>終日<rt>しゅうじつ</rt></ruby>通行止めです。(Con đường này bị cấm đi suốt cả ngày.)"
+    },
+    {
+      "kanji": "総額",
+      "doc": "そうがく",
+      "han_viet": "TỔNG NGẠCH",
+      "nghia": "tổng số tiền",
+      "vi_du": "今年の支出は総額で約5,300万円だった。(Tổng chi tiêu năm nay khoảng 53 triệu yên.)",
+      "doc_marked": "**そう**がく",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "今年の支出は<ruby>総額<rt>そうがく</rt></ruby>で約5,300万円だった。(Tổng chi tiêu năm nay khoảng 53 triệu yên.)"
+    },
+    {
+      "kanji": "背骨",
+      "doc": "せぼね",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "xương sống",
+      "vi_du": "今から行うのは背骨を伸ばす体操です。(Bài tập thực hiện bây giờ là kéo giãn xương sống.)",
+      "doc_marked": "せぼね",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "今から行うのは<ruby>背骨<rt>せぼね</rt></ruby>を伸ばす体操です。(Bài tập thực hiện bây giờ là kéo giãn xương sống.)"
+    },
+    {
+      "kanji": "臆病",
+      "doc": "おくびょう",
+      "han_viet": "ỨC BỆNH",
+      "nghia": "nhút nhát, hèn nhát, dễ sợ",
+      "vi_du": "うちの子は臆病だ。(Con tôi rất nhút nhát.)",
+      "doc_marked": "おくび**ょう**",
+      "dong_nghia": [
+        "怖がり"
+      ],
+      "trai_nghia": [
+        "勇敢"
+      ],
+      "vi_du_ruby": "うちの子は<ruby>臆病<rt>おくびょう</rt></ruby>だ。(Con tôi rất nhút nhát.)"
+    },
+    {
+      "kanji": "行儀がいい",
+      "doc": "ぎょうぎがいい",
+      "han_viet": "HÀNH NGHI",
+      "nghia": "có cử chỉ, phép tắc tốt, ngoan",
+      "vi_du": "彼女はとても行儀がいい。(Cô ấy rất ngoan, có phép tắc.)",
+      "doc_marked": "ぎ**ょう**ぎがいい",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "彼女はとても<ruby>行儀がいい<rt>ぎょうぎがいい</rt></ruby>。(Cô ấy rất ngoan, có phép tắc.)"
+    },
+    {
+      "kanji": "衝突する",
+      "doc": "しょうとつする",
+      "han_viet": "XUNG ĐỘT",
+      "nghia": "va chạm, đụng độ, xung đột",
+      "vi_du": "二台の車が衝突しそうになった。(Hai chiếc xe suýt va chạm vào nhau.)",
+      "doc_marked": "し**ょう**とつする",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "二台の車が<ruby>衝突<rt>しょうとつ</rt></ruby>しそうになった。(Hai chiếc xe suýt va chạm vào nhau.)"
+    },
+    {
+      "kanji": "見逃す",
+      "doc": "みのがす",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "bỏ lỡ, bỏ qua không để ý thấy",
+      "vi_du": "大事な場面を見逃してしまった。(Đã bỏ lỡ cảnh quan trọng.)",
+      "doc_marked": "みのがす",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "大事な場面を<ruby>見逃<rt>みのが</rt></ruby>してしまった。(Đã bỏ lỡ cảnh quan trọng.)"
+    },
+    {
+      "kanji": "視察",
+      "doc": "しさつ",
+      "han_viet": "THỊ SÁT",
+      "nghia": "thị sát, đi khảo sát thực tế",
+      "vi_du": "大勢の人が視察に訪れた。(Rất nhiều người đã đến thị sát.)",
+      "doc_marked": "しさつ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "大勢の人が<ruby>視察<rt>しさつ</rt></ruby>に訪れた。(Rất nhiều người đã đến thị sát.)"
+    },
+    {
+      "kanji": "討論",
+      "doc": "とうろん",
+      "han_viet": "THẢO LUẬN",
+      "nghia": "thảo luận, tranh luận",
+      "vi_du": "エネルギー問題についての討論が行われた。(Đã diễn ra cuộc thảo luận về vấn đề năng lượng.)",
+      "doc_marked": "**とう**ろん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "エネルギー問題についての<ruby>討論<rt>とうろん</rt></ruby>が行われた。(Đã diễn ra cuộc thảo luận về vấn đề năng lượng.)"
+    },
+    {
+      "kanji": "診断",
+      "doc": "しんだん",
+      "han_viet": "CHẨN ĐOÁN",
+      "nghia": "chẩn đoán (bệnh)",
+      "vi_du": "病院で医師の診断を受けた。(Đã được bác sĩ chẩn đoán ở bệnh viện.)",
+      "doc_marked": "しんだん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "病院で医師の<ruby>診断<rt>しんだん</rt></ruby>を受けた。(Đã được bác sĩ chẩn đoán ở bệnh viện.)"
+    },
+    {
+      "kanji": "詳細",
+      "doc": "しょうさい",
+      "han_viet": "TƯỜNG TẾ",
+      "nghia": "chi tiết, tường tận",
+      "vi_du": "状況を詳細に書いてください。(Hãy viết chi tiết tình huống.)",
+      "doc_marked": "し**ょう**さい",
+      "dong_nghia": [],
+      "trai_nghia": [
+        "概要"
+      ],
+      "vi_du_ruby": "状況を<ruby>詳細<rt>しょうさい</rt></ruby>に書いてください。(Hãy viết chi tiết tình huống.)"
+    },
+    {
+      "kanji": "読み方",
+      "doc": "よみかた",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "cách đọc",
+      "vi_du": "この漢字の読み方を教えてください。(Hãy cho tôi biết cách đọc chữ kanji này.)",
+      "doc_marked": "よみかた",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "この漢字の<ruby>読み方<rt>よみかた</rt></ruby>を教えてください。(Hãy cho tôi biết cách đọc chữ kanji này.)"
+    },
+    {
+      "kanji": "講師",
+      "doc": "こうし",
+      "han_viet": "GIẢNG SƯ",
+      "nghia": "giảng viên, người dạy",
+      "vi_du": "森さんは塾の講師をしています。(Anh Mori đang làm giảng viên ở trung tâm luyện thi.)",
+      "doc_marked": "**こう**し",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "森さんは塾の<ruby>講師<rt>こうし</rt></ruby>をしています。(Anh Mori đang làm giảng viên ở trung tâm luyện thi.)"
+    },
+    {
+      "kanji": "譲る",
+      "doc": "ゆずる",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "nhường, chuyển nhượng",
+      "vi_du": "あの自転車は弟に譲りました。(Đã nhường chiếc xe đạp đó cho em trai.)",
+      "doc_marked": "ゆずる",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "あの自転車は弟に<ruby>譲<rt>ゆず</rt></ruby>りました。(Đã nhường chiếc xe đạp đó cho em trai.)"
+    },
+    {
+      "kanji": "賛否",
+      "doc": "さんぴ",
+      "han_viet": "TÁN PHỦ",
+      "nghia": "tán thành hoặc phản đối",
+      "vi_du": "高速道路の建設については、賛否が分かれた。(Về việc xây dựng đường cao tốc, ý kiến tán thành và phản đối đã bị chia rẽ.)",
+      "doc_marked": "さんぴ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "高速道路の建設については、<ruby>賛否<rt>さんぴ</rt></ruby>が分かれた。(Về việc xây dựng đường cao tốc, ý kiến tán thành và phản đối đã bị chia rẽ.)"
+    },
+    {
+      "kanji": "起床",
+      "doc": "きしょう",
+      "han_viet": "KHỞI SÀNG",
+      "nghia": "thức dậy, dậy khỏi giường",
+      "vi_du": "毎朝6時に起床して、少し運動をしている。(Mỗi sáng dậy lúc 6 giờ và tập thể dục một chút.)",
+      "doc_marked": "きし**ょう**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "毎朝6時に<ruby>起床<rt>きしょう</rt></ruby>して、少し運動をしている。(Mỗi sáng dậy lúc 6 giờ và tập thể dục một chút.)"
+    },
+    {
+      "kanji": "軽傷",
+      "doc": "けいしょう",
+      "han_viet": "KHINH THƯƠNG",
+      "nghia": "vết thương nhẹ",
+      "vi_du": "事故にあったが、軽傷で済んだ。(Tuy gặp tai nạn nhưng chỉ bị thương nhẹ.)",
+      "doc_marked": "**けい**し**ょう**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "事故にあったが、<ruby>軽傷<rt>けいしょう</rt></ruby>で済んだ。(Tuy gặp tai nạn nhưng chỉ bị thương nhẹ.)"
+    },
+    {
+      "kanji": "返品",
+      "doc": "へんぴん",
+      "han_viet": "PHẢN PHẨM",
+      "nghia": "trả lại hàng",
+      "vi_du": "この店の商品は、買ってから一週間以内なら返品できます。(Sản phẩm của cửa hàng này có thể trả lại trong vòng 1 tuần kể từ khi mua.)",
+      "doc_marked": "へんぴん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "この店の商品は、買ってから一週間以内なら<ruby>返品<rt>へんぴん</rt></ruby>できます。(Sản phẩm của cửa hàng này có thể trả lại trong vòng 1 tuần kể từ khi mua.)"
+    },
+    {
+      "kanji": "途端",
+      "doc": "とたん",
+      "han_viet": "ĐỒ ĐOAN",
+      "nghia": "ngay khi, vừa lúc",
+      "vi_du": "家を出た途端、雨が降り出した。(Vừa ra khỏi nhà thì trời bắt đầu mưa.)",
+      "doc_marked": "とたん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "家を出た<ruby>途端<rt>とたん</rt></ruby>、雨が降り出した。(Vừa ra khỏi nhà thì trời bắt đầu mưa.)"
+    },
+    {
+      "kanji": "運賃",
+      "doc": "うんちん",
+      "han_viet": "VẬN NHẪM",
+      "nghia": "tiền vé, cước phí vận chuyển",
+      "vi_du": "バスの運賃を払う。(Trả tiền vé xe buýt.)",
+      "doc_marked": "うんちん",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "バスの<ruby>運賃<rt>うんちん</rt></ruby>を払う。(Trả tiền vé xe buýt.)"
+    },
+    {
+      "kanji": "過剰",
+      "doc": "かじょう",
+      "han_viet": "QUÁ THẶNG",
+      "nghia": "quá mức, dư thừa",
+      "vi_du": "最近は生産が過剰であることが問題になっている。(Gần đây việc sản xuất dư thừa đang trở thành vấn đề.)",
+      "doc_marked": "かじ**ょう**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "最近は生産が<ruby>過剰<rt>かじょう</rt></ruby>であることが問題になっている。(Gần đây việc sản xuất dư thừa đang trở thành vấn đề.)"
+    },
+    {
+      "kanji": "険しい",
+      "doc": "けわしい",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "hiểm trở, gập ghềnh (núi, đường)",
+      "vi_du": "思った以上に険しかった。(Hiểm trở hơn cả những gì tôi nghĩ.)",
+      "doc_marked": "けわしい",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "思った以上に<ruby>険<rt>けわ</rt></ruby>しかった。(Hiểm trở hơn cả những gì tôi nghĩ.)"
+    },
+    {
+      "kanji": "陽気",
+      "doc": "ようき",
+      "han_viet": "DƯƠNG KHÍ",
+      "nghia": "vui vẻ, hoạt bát, tươi vui",
+      "vi_du": "彼女はいつも陽気な性格だ。(Cô ấy luôn có tính cách vui vẻ, hoạt bát.)",
+      "doc_marked": "**よう**き",
+      "dong_nghia": [
+        "明るい"
+      ],
+      "trai_nghia": [
+        "陰気"
+      ],
+      "vi_du_ruby": "彼女はいつも<ruby>陽気<rt>ようき</rt></ruby>な性格だ。(Cô ấy luôn có tính cách vui vẻ, hoạt bát.)"
+    },
+    {
+      "kanji": "領収書",
+      "doc": "りょうしゅうしょ",
+      "han_viet": "LÃNH THU THƯ",
+      "nghia": "hóa đơn, biên nhận",
+      "vi_du": "領収書を発行してもらった。(Đã được cấp hóa đơn.)",
+      "doc_marked": "り**ょう****しゅう**しょ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "<ruby>領収書<rt>りょうしゅうしょ</rt></ruby>を発行してもらった。(Đã được cấp hóa đơn.)"
+    },
+    {
+      "kanji": "願望",
+      "doc": "がんぼう",
+      "han_viet": "NGUYỆN VỌNG",
+      "nghia": "nguyện vọng, mong muốn",
+      "vi_du": "以前は、海外で暮らしたいという願望が強かった。(Trước đây tôi có nguyện vọng rất mạnh muốn sống ở nước ngoài.)",
+      "doc_marked": "がん**ぼう**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "以前は、海外で暮らしたいという<ruby>願望<rt>がんぼう</rt></ruby>が強かった。(Trước đây tôi có nguyện vọng rất mạnh muốn sống ở nước ngoài.)"
+    },
+    {
+      "kanji": "養う",
+      "doc": "やしなう",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "nuôi dưỡng, rèn luyện (khả năng)",
+      "vi_du": "このセミナーの目標は、「自分で考える力」を養うことです。(Mục tiêu của buổi seminar này là rèn luyện khả năng tự suy nghĩ.)",
+      "doc_marked": "やしなう",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "このセミナーの目標は、「自分で考える力」を<ruby>養う<rt>やしなう</rt></ruby>ことです。(Mục tiêu của buổi seminar này là rèn luyện khả năng tự suy nghĩ.)"
+    },
+    {
+      "kanji": "驚かせる",
+      "doc": "おどろかせる",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "làm cho ai đó giật mình, kinh ngạc",
+      "vi_du": "驚かせてしまって、すみません。(Xin lỗi vì đã làm bạn giật mình.)",
+      "doc_marked": "おどろかせる",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "<ruby>驚<rt>おどろ</rt></ruby>かせてしまって、すみません。(Xin lỗi vì đã làm bạn giật mình.)"
+    },
+    {
+      "kanji": "鮮やか",
+      "doc": "あざやか",
+      "han_viet": "TIÊN",
+      "nghia": "tươi sáng, rực rỡ (màu sắc)",
+      "vi_du": "鈴木さんは鮮やかな色のシャツを着ていた。(Anh Suzuki đã mặc áo có màu sắc tươi sáng.)",
+      "doc_marked": "あざやか",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "鈴木さんは<ruby>鮮やか<rt>あざやか</rt></ruby>な色のシャツを着ていた。(Anh Suzuki đã mặc áo có màu sắc tươi sáng.)"
+    },
+    {
+      "kanji": "荒い",
+      "doc": "あらい",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "thô, dữ dội, hổn hển (hơi thở)",
+      "vi_du": "全力で走ったので、息が荒くなった。(Vì chạy hết sức nên hơi thở trở nên hổn hển.)",
+      "doc_marked": "あらい",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "全力で走ったので、息が<ruby>荒<rt>あら</rt></ruby>くなった。(Vì chạy hết sức nên hơi thở trở nên hổn hển.)"
+    },
+    {
+      "kanji": "むかつく",
+      "doc": "むかつく",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "bực mình, tức giận",
+      "vi_du": "あんなことを言われたら、誰だってむかつくよ。(Bị nói như vậy thì ai cũng tức mà.)",
+      "doc_marked": "むかつく",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "あんなことを言われたら、誰だって<ruby>むかつく<rt>むかつく</rt></ruby>よ。(Bị nói như vậy thì ai cũng tức mà.)"
+    },
+    {
+      "kanji": "ぶかぶか",
+      "doc": "ぶかぶか",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "rộng lùng thùng, không vừa (quần áo)",
+      "vi_du": "このシャツは私にはぶかぶかだ。(Cái áo này quá rộng đối với tôi.)",
+      "doc_marked": "ぶかぶか",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "このシャツは私には<ruby>ぶかぶか<rt>ぶかぶか</rt></ruby>だ。(Cái áo này quá rộng đối với tôi.)"
+    },
+    {
+      "kanji": "やや",
+      "doc": "やや",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "một chút, hơi",
+      "vi_du": "明日は今日よりやや涼しくなると思います。(Tôi nghĩ ngày mai sẽ hơi mát hơn hôm nay.)",
+      "doc_marked": "やや",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "明日は今日より<ruby>やや<rt>やや</rt></ruby>涼しくなると思います。(Tôi nghĩ ngày mai sẽ hơi mát hơn hôm nay.)"
+    },
+    {
+      "kanji": "テンポ",
+      "doc": "テンポ",
+      "han_viet": "(từ ngoại lai)",
+      "nghia": "tốc độ, nhịp điệu",
+      "vi_du": "きちんとテンポを合わせてください。(Hãy khớp đúng nhịp điệu.)",
+      "doc_marked": "テンポ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "きちんと<ruby>テンポ<rt>テンポ</rt></ruby>を合わせてください。(Hãy khớp đúng nhịp điệu.)"
+    },
+    {
+      "kanji": "ハード",
+      "doc": "ハード",
+      "han_viet": "(từ ngoại lai)",
+      "nghia": "khắc nghiệt, vất vả, cứng",
+      "vi_du": "このスケジュールはかなりハードだ。(Lịch trình này khá là khắc nghiệt.)",
+      "doc_marked": "**ハー**ド",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "このスケジュールはかなり<ruby>ハード<rt>ハード</rt></ruby>だ。(Lịch trình này khá là khắc nghiệt.)"
+    },
+    {
+      "kanji": "レンタルする",
+      "doc": "レンタルする",
+      "han_viet": "(từ ngoại lai)",
+      "nghia": "thuê, cho thuê",
+      "vi_du": "演奏会で着るドレスは、いつも近所の店でレンタルしています。(Váy mặc trong buổi hòa nhạc tôi luôn thuê ở cửa hàng gần nhà.)",
+      "doc_marked": "レンタルする",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "演奏会で着るドレスは、いつも近所の店で<ruby>レンタル<rt>レンタル</rt></ruby>しています。(Váy mặc trong buổi hòa nhạc tôi luôn thuê ở cửa hàng gần nhà.)"
+    },
+    {
+      "kanji": "お勘定",
+      "doc": "おかんじょう",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "tính tiền (ở nhà hàng, quán ăn)",
+      "vi_du": "お勘定をお願いします。(Cho tôi tính tiền.)",
+      "doc_marked": "おかんじ**ょう**",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "<ruby>お勘定<rt>おかんじょう</rt></ruby>をお願いします。(Cho tôi tính tiền.)"
+    },
+    {
+      "kanji": "かかりつけ",
+      "doc": "かかりつけ",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "(bác sĩ) quen thuộc, thường khám",
+      "vi_du": "かかりつけの病院で診てもらった。(Đã được khám tại bệnh viện quen.)",
+      "doc_marked": "かかりつけ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "<ruby>かかりつけ<rt>かかりつけ</rt></ruby>の病院で診てもらった。(Đã được khám tại bệnh viện quen.)"
+    },
+    {
+      "kanji": "おおよそ",
+      "doc": "おおよそ",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "đại khái, khoảng chừng",
+      "vi_du": "出張の日程はおおよそ決まりました。(Lịch trình công tác đã được quyết định gần như xong.)",
+      "doc_marked": "おおよそ",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "出張の日程は<ruby>おおよそ<rt>おおよそ</rt></ruby>決まりました。(Lịch trình công tác đã được quyết định gần như xong.)"
+    },
+    {
+      "kanji": "じたばたする",
+      "doc": "じたばたする",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "vùng vẫy, cố gắng vô ích, hấp tấp lo lắng",
+      "vi_du": "テストの前日になってじたばたしてもしかたない。(Đến trước ngày thi mà còn vùng vẫy lo lắng thì cũng vô ích.)",
+      "doc_marked": "じたばたする",
+      "dong_nghia": [],
+      "trai_nghia": [],
+      "vi_du_ruby": "テストの前日になって<ruby>じたばた<rt>じたばた</rt></ruby>してもしかたない。(Đến trước ngày thi mà còn vùng vẫy lo lắng thì cũng vô ích.)"
+    }
+  ]
+}
