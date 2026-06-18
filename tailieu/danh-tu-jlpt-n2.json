@@ -130,7 +130,7 @@
       "han_viet": "TÍN LẠI",
       "nghia": "tin tưởng, tin cậy",
       "vi_du": "信頼関係を築くには時間がかかる。(Việc xây dựng quan hệ tin tưởng cần có thời gian.) 彼は上司から厚く信頼されている。(Anh ấy được cấp trên hết sức tin cậy.)",
-      "vi_du_ruby": "<ruby>信頼関係<rt>しんらいかんけい</rt></ruby>を<ruby>築<rt>きず</rt></ruby>くには時間がかかる。(Việc xây dựng quan hệ tin tưởng cần có thời gian.) 彼は<ruby>上司<rt>じょうし</rt></ruby>から<ruby>厚<rt>あつ</rt></ruby>く<ruby>信頼<rt>しんらい</rt></ruby>されている。(Anh ấy được cấp trên hết sức tin cậy.)",
+      "vi_du_ruby": "<ruby>信頼関係<rt>しんらいかんけい</rt></ruby>を<ruby>築<rt>きず</rt></ruby>くには時間がかかる。(Việc xây dựng quan hệ tin tưởng cần có thời gian.) は<ruby>上司<rt>じょうし</rt></ruby>から<ruby>厚<rt>あつ</rt></ruby>く<ruby>信頼<rt>しんらい</rt></ruby>されている。(Anh ấy được cấp trên hết sức tin cậy.)",
       "dong_nghia": ["信用", "頼り"],
       "trai_nghia": ["疑う", "不信"]
     },
@@ -294,8 +294,8 @@
       "doc_marked": "き**ょう**み",
       "han_viet": "HỨNG VỊ",
       "nghia": "hứng thú, quan tâm",
-      "vi_du": "新しいことへの興味が大切だ。(Hứng thú với những điều mới mẻ là rất quan trọng.) 彼は日本の歴史に深い興味を持っている。(Anh ấy có hứng thú sâu sắc với lịch sử Nhật Bản.)",
-      "vi_du_ruby": "新しいことへの<ruby>興味<rt>きょうみ</rt></ruby>が大切だ。(Hứng thú với những điều mới mẻ là rất quan trọng.) 彼は日本の<ruby>歴史<rt>れきし</rt></ruby>に深い<ruby>興味<rt>きょうみ</rt></ruby>を持っている。(Anh ấy có hứng thú sâu sắc với lịch sử Nhật Bản.)",
+      "vi_du": "新しいことへの興味が大切だ。(Hứng thú với những điều mới mẻ là rất quan trọng.) は日本の歴史に深い興味を持っている。(Anh ấy có hứng thú sâu sắc với lịch sử Nhật Bản.)",
+      "vi_du_ruby": "新しいことへの<ruby>興味<rt>きょうみ</rt></ruby>が大切だ。(Hứng thú với những điều mới mẻ là rất quan trọng.) は日本の<ruby>歴史<rt>れきし</rt></ruby>に深い<ruby>興味<rt>きょうみ</rt></ruby>を持っている。(Anh ấy có hứng thú sâu sắc với lịch sử Nhật Bản.)",
       "dong_nghia": ["関心", "好奇心"],
       "trai_nghia": ["無関心"]
     },
@@ -426,8 +426,8 @@
       "doc_marked": "かん**けい**",
       "han_viet": "QUAN HỆ",
       "nghia": "mối quan hệ, liên quan",
-      "vi_du": "人間関係を大切にすることが大切だ。(Việc trân trọng mối quan hệ giữa người với người là quan trọng.) この事件と彼は全く関係がない。(Anh ta hoàn toàn không có liên quan gì tới vụ án này.)",
-      "vi_du_ruby": "<ruby>人間関係<rt>にんげんかんけい</rt></ruby>を大切にすることが大切だ。(Việc trân trọng mối quan hệ giữa người với người là quan trọng.) この<ruby>事件<rt>じけん</rt></ruby>と彼は全く<ruby>関係<rt>かんけい</rt></ruby>がない。(Anh ta hoàn toàn không có liên quan gì tới vụ án này.)",
+      "vi_du": "人間関係を大切にすることが大切だ。(Việc trân trọng mối quan hệ giữa người với người là quan trọng.) この事件とは全く関係がない。(Anh ta hoàn toàn không có liên quan gì tới vụ án này.)",
+      "vi_du_ruby": "<ruby>人間関係<rt>にんげんかんけい</rt></ruby>を大切にすることが大切だ。(Việc trân trọng mối quan hệ giữa người với người là quan trọng.) この<ruby>事件<rt>じけん</rt></ruby>とは全く<ruby>関係<rt>かんけい</rt></ruby>がない。(Anh ta hoàn toàn không có liên quan gì tới vụ án này.)",
       "dong_nghia": ["繋がり", "関連"],
       "trai_nghia": ["無関係"]
     },
@@ -569,8 +569,8 @@
       "doc_marked": "かん**じょう**",
       "han_viet": "CẢM TÌNH",
       "nghia": "cảm xúc, tình cảm",
-      "vi_du": "感情をうまくコントロールする。(Kiểm soát cảm xúc một cách khéo léo.) 彼は感情を顔に出さないタイプだ。(Anh ấy là kiểu người không bộc lộ cảm xúc ra nét mặt.)",
-      "vi_du_ruby": "<ruby>感情<rt>かんじょう</rt></ruby>をうまくコントロールする。(Kiểm soát cảm xúc một cách khéo léo.) 彼は<ruby>感情<rt>かんじょう</rt></ruby>を顔に出さないタイプだ。(Anh ấy là kiểu người không bộc lộ cảm xúc ra nét mặt.)",
+      "vi_du": "感情をうまくコントロールする。(Kiểm soát cảm xúc một cách khéo léo.) は感情を顔に出さないタイプだ。(Anh ấy là kiểu người không bộc lộ cảm xúc ra nét mặt.)",
+      "vi_du_ruby": "<ruby>感情<rt>かんじょう</rt></ruby>をうまくコントロールする。(Kiểm soát cảm xúc một cách khéo léo.) は<ruby>感情<rt>かんじょう</rt></ruby>を顔に出さないタイプだ。(Anh ấy là kiểu người không bộc lộ cảm xúc ra nét mặt.)",
       "dong_nghia": ["気持ち", "思い"],
       "trai_nghia": ["理性"]
     },
@@ -585,14 +585,14 @@
       "dong_nghia": ["イメージ"],
       "trai_nghia": []
     },
-    {
+{
       "kanji": "存在",
       "doc": "そんざい",
       "doc_marked": "そんざい",
       "han_viet": "TỒN TẠI",
       "nghia": "tồn tại, sự hiện diện",
       "vi_du": "彼はチームにとって重要な存在だ。(Anh ấy là một sự hiện diện quan trọng đối với đội bóng.) 宇宙人の存在を信じますか。(Bạn có tin vào sự tồn tại của người ngoài hành tinh không?)",
-      "vi_du_ruby": 彼はチームにとって重要な<ruby>存在<rt>そんざい</rt></ruby>だ。(Anh ấy là một sự hiện diện quan trọng đối với đội bóng.) <ruby>宇宙人<rt>うちゅうじん</rt></ruby>の<ruby>存在<rt>そんざい</rt></ruby>を信じますか。(Bạn có tin vào sự tồn tại của người ngoài hành tinh không?)",
+      "vi_du_ruby": "彼はチームにとって重要な<ruby>存在<rt>そんざい</rt></ruby>だ。(Anh ấy là một sự hiện diện quan trọng đối với đội bóng.) <ruby>宇宙人<rt>うちゅうじん</rt></ruby>の<ruby>存在<rt>そんざい</rt></ruby>を信じますか。(Bạn có tin vào sự tồn tại của người ngoài hành tinh không?)",
       "dong_nghia": ["あること"],
       "trai_nghia": []
     },
@@ -602,7 +602,7 @@
       "doc_marked": "じん**せい**",
       "han_viet": "NHÂN SINH",
       "nghia": "cuộc đời, cuộc sống",
-      "vi_du": "人生で大切なことは何かを考える。(Suy nghĩ xem điều gì là quan trọng nhất trong cuộc đời.) 彼女との出会いが私の人生を変えた。(Việc gặp gỡ cô ấy đã làm thay đổi cuộc đời tôi.)",
+      "vi_du": "人生で大切なことは何かを考える。(Suy nghĩ xem điều gì là quan trọng nhất trong cuộc đời.) 女との出会いが私の人生を変えた。(Việc gặp gỡ cô ấy đã làm thay đổi cuộc đời tôi.)",
       "vi_du_ruby": "<ruby>人生<rt>じんせい</rt></ruby>で大切なことは何かを考える。(Suy nghĩ xem điều gì là quan trọng nhất trong cuộc đời.) 彼女との<ruby>出会<rt>であ</rt></ruby>いが私の<ruby>人生<rt>じんせい</rt></ruby>を変えた。(Việc gặp gỡ cô ấy đã làm thay đổi cuộc đời tôi.)",
       "dong_nghia": ["一生", "生涯"],
       "trai_nghia": []
