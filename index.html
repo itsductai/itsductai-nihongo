@@ -22,6 +22,7 @@
         <div class="brand-sub" id="deckName">đang tải...</div>
       </div>
       <button id="btnToggleSound" class="sound-toggle-btn" title="Bật/tắt âm thanh phản hồi">🔊</button>
+      <button id="btnToggleSpeech" class="sound-toggle-btn" title="Bật/tắt phát âm khi lật thẻ">🗣</button>
     </div>
 
     <nav class="nav" id="navList">
@@ -48,8 +49,19 @@
     </div>
   </aside>
 
-  <!-- ===== MAIN ===== -->
-  <main class="main">
+  <!-- Lớp phủ tối phía sau sidebar khi mở trên mobile, bấm vào để đóng -->
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- ===== MAIN WRAP (chỉ có ý nghĩa bố cục trên mobile) ===== -->
+  <div class="main-wrap">
+    <!-- Thanh trên cùng chỉ hiện trên mobile: nút mở sidebar + tên bộ đang học -->
+    <div class="mobile-topbar">
+      <button class="mobile-menu-btn" id="btnMobileMenu" title="Mở menu">☰</button>
+      <div class="mobile-topbar-title" id="mobileTopbarTitle">đang tải...</div>
+    </div>
+
+    <!-- ===== MAIN ===== -->
+    <main class="main">
 
     <!-- ---- FLASHCARD MODE ---- -->
     <section class="view" id="view-flash">
@@ -61,7 +73,10 @@
         <div class="head-actions">
           <button id="btnFieldConfig" class="icon-btn" title="Chọn hiển thị mặt thẻ">⚙ Mặt thẻ</button>
           <button id="btnEditCurrentFlash" class="icon-btn" title="Sửa thông tin từ này">✎ Sửa</button>
-          <button id="btnShuffle" class="icon-btn" title="Trộn thẻ">⤮ Trộn</button>
+          <label class="toggle shuffle-toggle">
+            <input type="checkbox" id="flashShuffleToggle" checked>
+            <span>⤮ Học ngẫu nhiên</span>
+          </label>
           <button class="icon-btn focus-toggle-btn" data-focus-target="flash" title="Phóng to toàn màn hình">⛶</button>
         </div>
       </div>
@@ -83,9 +98,11 @@
           <div class="card" id="flashCard">
             <div class="card-face card-front" id="flashFront">
               <button class="flash-star-btn" title="Đánh dấu sao">☆</button>
+              <div class="card-face-content" id="flashFrontContent"></div>
             </div>
             <div class="card-face card-back" id="flashBack">
               <button class="flash-star-btn" title="Đánh dấu sao">☆</button>
+              <div class="card-face-content" id="flashBackContent"></div>
             </div>
           </div>
         </div>
@@ -141,7 +158,13 @@
     <section class="view hidden" id="view-srs">
       <div class="view-head">
         <div></div>
-        <button class="icon-btn focus-toggle-btn" data-focus-target="srs" title="Phóng to toàn màn hình">⛶</button>
+        <div class="head-actions">
+          <label class="toggle shuffle-toggle">
+            <input type="checkbox" id="srsShuffleToggle" checked>
+            <span>⤮ Học ngẫu nhiên</span>
+          </label>
+          <button class="icon-btn focus-toggle-btn" data-focus-target="srs" title="Phóng to toàn màn hình">⛶</button>
+        </div>
       </div>
       <div class="srs-summary">
         <div class="srs-stat"><div class="srs-num" id="srsDueCount">0</div><div class="srs-label">cần ôn ngay</div></div>
@@ -276,7 +299,8 @@
       </div>
     </section>
 
-  </main>
+    </main>
+  </div>
 
   <!-- ===== EDIT MODAL — sửa tạm 1 từ/cấu trúc, áp dụng ngay + xuất kèm tiến độ ===== -->
   <div class="modal-overlay hidden" id="editModalOverlay">
