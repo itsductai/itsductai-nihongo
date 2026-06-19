@@ -144,6 +144,10 @@ rt {
   padding: 8px 14px; border-radius: 8px; font-size: 12.5px; cursor: pointer;
 }
 .icon-btn:hover { background: var(--bg-hover); color: var(--text-0); }
+.icon-btn.is-active {
+  background: var(--warn-soft); border-color: var(--warn); color: var(--warn); font-weight: 600;
+}
+.icon-btn.is-active:hover { background: var(--warn-soft); }
 .toggle { display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--text-1); cursor: pointer; }
 
 /* ===== Field config popover (chọn mặt thẻ / cột bảng) ===== */
