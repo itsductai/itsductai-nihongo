@@ -1,0 +1,1324 @@
+{
+  "type": "TUVUNG",
+  "title": "Mimi UNIT 3 - Tính từ I & Tính từ Na",
+  "words": [
+    {
+      "kanji": "有難い",
+      "doc": "ありがたい",
+      "doc_marked": "ありがたい",
+      "han_viet": "HỮU NAN",
+      "nghia": "biết ơn, cảm kích, đáng quý",
+      "vi_du": "病気の私の元へ来てくれたあなたの気持ちがありがたい。(Tôi rất cảm kích tấm lòng của bạn khi đã đến thăm lúc tôi ốm đau.) 給料が上がったのはありがたいことだ。(Việc lương tăng thật là một điều đáng mừng/đáng biết ơn.) 「あの人達はコーヒーだけで5時間も大声で話し続けている。有り難くない客だ」(Những người kia chỉ gọi một tách cà phê mà nói chuyện lớn tiếng suốt 5 giờ đồng hồ. Thật là những vị khách không ai hoan nghênh.)",
+      "vi_du_ruby": "<ruby>病気<rt>びょうき</rt></ruby>の私の<ruby>元<rt>もと</rt></ruby>へ<ruby>来<rt>き</rt></ruby>てくれたあなたの気持ちがありがたい。(Tôi rất cảm kích tấm lòng của bạn khi đã đến thăm lúc tôi ốm đau.) <ruby>給料<rt>きゅうりょう</rt></ruby>が上がったのはありがたいことだ。(Việc lương tăng thật là một điều đáng mừng/đáng biết ơn.) 「あの人達はコーヒーだけで5時間も大声で話し続けている。有り難くない客だ」(Những người kia chỉ gọi một tách cà phê mà nói chuyện lớn tiếng suốt 5 giờ đồng hồ. Thật là những vị khách không ai hoan nghênh.)",
+      "dong_nghia": [
+        {
+          "kanji": "感謝する",
+          "doc": "かんしゃする",
+          "nghia": "cảm tạ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "迷惑な",
+          "doc": "めいわくな",
+          "nghia": "phiền phức"
+        }
+      ]
+    },
+    {
+      "kanji": "申し訳ない",
+      "doc": "もうしわけない",
+      "doc_marked": "**もう**しわけない",
+      "han_viet": "THÂN DỊCH",
+      "nghia": "xin lỗi, áy náy",
+      "vi_du": "ご迷惑をおかけして、申し訳ありませんでした。(Thành thật xin lỗi vì đã làm phiền quý vị.)",
+      "vi_du_ruby": "ご<ruby>迷惑<rt>めいわく</rt></ruby>をおかけして、<ruby>申<rt>もう</rt></ruby>し<ruby>訳<rt>わけ</rt></ruby>ありませんでした。(Thành thật xin lỗi vì đã làm phiền quý vị.)",
+      "dong_nghia": [
+        {
+          "kanji": "すまない",
+          "doc": "すまない",
+          "nghia": "xin lỗi"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "目出度い",
+      "doc": "めでたい",
+      "doc_marked": "めでたい",
+      "han_viet": "MỤC XUẤT ĐỘ",
+      "nghia": "đáng mừng, tốt lành, chuyện vui",
+      "vi_du": "子供たちの大学の合格や結婚など、今年はめでたいことが多かった。(Bọn trẻ đứa thì đỗ đại học, đứa thì kết hôn, năm nay thật nhiều chuyện đáng mừng.)",
+      "vi_du_ruby": "子供たちの大学の<ruby>合格<rt>ごうかく</rt></ruby>や<ruby>結婚<rt>けっこん</rt></ruby>など、今年はめでたいことが多かった。(Bọn trẻ đứa thì đỗ đại học, đứa thì kết hôn, năm nay thật nhiều chuyện đáng mừng.)",
+      "dong_nghia": [
+        {
+          "kanji": "喜ばしい",
+          "doc": "よろこばしい",
+          "nghia": "đáng vui mừng"
+        },
+        {
+          "kanji": "お祝い",
+          "doc": "おいわい",
+          "nghia": "chúc mừng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "幸いな",
+      "doc": "さいわいな",
+      "doc_marked": "さいわいな",
+      "han_viet": "HẠNH",
+      "nghia": "hạnh phúc, may mắn, hân hạnh",
+      "vi_du": "いい友人に恵まれて幸いだ。(Được ban cho những người bạn tốt thật là niềm hạnh phúc.) 皆さまのご意見をいただければ幸いです。(Nếu nhận được ý kiến đóng góp của mọi người thì tôi rất lấy làm vinh hạnh.) 交通事故にあったが、幸いなことにけがはなかった。(Mặc dù gặp tai nạn giao thông nhưng may mắn là không bị thương.)",
+      "vi_du_ruby": "いい<ruby>友人<rt>ゆうじん</rt></ruby>に<ruby>恵<rt>めぐ</rt></ruby>まれて<ruby>幸<rt>さいわ</rt></ruby>いだ。(Được ban cho những người bạn tốt thật là niềm hạnh phúc.) 皆さまのご意見をいただければ<ruby>幸<rt>さいわ</rt></ruby>いです。(Nếu nhận được ý kiến đóng góp của mọi người thì tôi rất lấy làm vinh hạnh.) <ruby>交通事故<rt>こうつうじこ</rt></ruby>にあったが、<ruby>幸<rt>さいわ</rt></ruby>いなことにけがはなかった。(Mặc dù gặp tai nạn giao thông nhưng may mắn là không bị thương.)",
+      "dong_nghia": [
+        {
+          "kanji": "運がいい",
+          "doc": "うんがいい",
+          "nghia": "may mắn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "不幸な",
+          "doc": "ふこうな",
+          "nghia": "bất hạnh"
+        }
+      ]
+    },
+    {
+      "kanji": "恋しい",
+      "doc": "こいしい",
+      "doc_marked": "こいしい",
+      "han_viet": "LUYẾN",
+      "nghia": "nhớ nhung, thèm (cảm giác thân thuộc)",
+      "vi_du": "国の両親が恋しい。(Nhớ bố mẹ ở quê nhà.) ビールが恋しい季節になった。(Đã sang cái mùa thèm uống bia rồi.)",
+      "vi_du_ruby": "国の<ruby>両親<rt>りょうしん</rt></ruby>が<ruby>恋<rt>こい</rt></ruby>しい。(Nhớ bố mẹ ở quê nhà.) ビールが<ruby>恋<rt>こい</rt></ruby>しい季節になった。(Đã sang cái mùa thèm uống bia rồi.)",
+      "dong_nghia": [
+        {
+          "kanji": "慕う",
+          "doc": "したう",
+          "nghia": "tưởng nhớ"
+        },
+        {
+          "kanji": "懐かしい",
+          "doc": "なつかしい",
+          "nghia": "nhớ tiếc"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "懐かしい",
+      "doc": "なつかしい",
+      "doc_marked": "なつかしい",
+      "han_viet": "HOÀI",
+      "nghia": "nhớ tiếc, hoài niệm",
+      "vi_du": "子供のころが懐かしい。(Nhớ hoài niệm về thời thơ ấu.) 電話から懐かしい声が聞こえてきた。(Từ điện thoại vang lên một giọng nói quen thuộc đáng nhớ.)",
+      "vi_du_ruby": "子供のころが<ruby>懐<rt>なつ</rt></ruby>かしい。(Nhớ hoài niệm về thời thơ ấu.) 電話から<ruby>懐<rt>なつ</rt></ruby>かしい声が聞こえてきた。(Từ điện thoại vang lên một giọng nói quen thuộc đáng nhớ.)",
+      "dong_nghia": [
+        {
+          "kanji": "恋しい",
+          "doc": "こいしい",
+          "nghia": "nhớ nhung"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "幼い",
+      "doc": "おさない",
+      "doc_marked": "おさない",
+      "han_viet": "ẤU",
+      "nghia": "non nớt, bé bỏng, ấu trĩ",
+      "vi_du": "幼い子供が遊んでいる。(Những đứa trẻ bé bỏng đang chơi đùa.) 彼は体は大人だが、考え方は幼い。(Anh ấy tuy thân xác là người lớn nhưng cách suy nghĩ lại rất ấu trĩ non nớt.)",
+      "vi_du_ruby": "<ruby>幼<rt>おさな</rt></ruby>い子供が遊んでいる。(Những đứa trẻ bé bỏng đang chơi đùa.) 彼は体は大人だが、考え方は<ruby>幼<rt>おさな</rt></ruby>い。(Anh ấy tuy thân xác là người lớn nhưng cách suy nghĩ lại rất ấu trĩ non nớt.)",
+      "dong_nghia": [
+        {
+          "kanji": "未熟な",
+          "doc": "みじゅくな",
+          "nghia": "chưa chín chắn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "大人びた",
+          "doc": "おとなびた",
+          "nghia": "chững chạc"
+        }
+      ]
+    },
+    {
+      "kanji": "心細い",
+      "doc": "こころぼそい",
+      "doc_marked": "こころぼそい",
+      "han_viet": "TÂM TẾ",
+      "nghia": "cô đơn, bất an",
+      "vi_du": "始めて来日した時は、言葉もわからず知り合いもなく、とても心細かった。(Lúc mới sang Nhật, vừa không hiểu tiếng vừa không có người quen nên tôi đã cảm thấy rất cô đơn và bất an.)",
+      "vi_du_ruby": "始めて来日した時は、言葉もわからず<ruby>知<rt>し</rt></ruby>り<ruby>合<rt>あ</rt></ruby>いもなく、とても<ruby>心細<rt>こころぼそ</rt></ruby>かった。(Lúc mới sang Nhật, vừa không hiểu tiếng vừa không có người quen nên tôi đã cảm thấy rất cô đơn và bất an.)",
+      "dong_nghia": [
+        {
+          "kanji": "不安な",
+          "doc": "ふあんな",
+          "nghia": "bất an"
+        },
+        {
+          "kanji": "孤独な",
+          "doc": "こどくな",
+          "nghia": "cô độc"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "心強い",
+          "doc": "こころづよい",
+          "nghia": "vững tâm"
+        }
+      ]
+    },
+    {
+      "kanji": "可哀想な",
+      "doc": "かわいそうな",
+      "doc_marked": "かわい**そう**な",
+      "han_viet": "KHẢ AI TƯỞNG",
+      "nghia": "tội nghiệp, đáng thương",
+      "vi_du": "子供を叱ったが、泣いているのを見てかわいそうになった。(Mặc dù mắng con, nhưng thấy nó khóc lại thấy tội nghiệp.) 「犬がひかれて死んでるよ」「かわいそうに...」(\"Con chó bị cán chết mất rồi kìa\" \"Thật là tội nghiệp...\")",
+      "vi_du_ruby": "子供を<ruby>叱<rt>しか</rt></ruby>ったが、泣いているのを見てかわいそうになった。(Mặc dù mắng con, nhưng thấy nó khóc lại thấy tội nghiệp.) 「犬がひかれて死んでるよ」「かわいそうに...」(\"Con chó bị cán chết mất rồi kìa\" \"Thật là tội nghiệp...\")",
+      "dong_nghia": [
+        {
+          "kanji": "気の毒な",
+          "doc": "きのどくな",
+          "nghia": "đáng thương"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "気の毒な",
+      "doc": "きのどくな",
+      "doc_marked": "きのどくな",
+      "han_viet": "KHÍ ĐỘC",
+      "nghia": "đáng tiếc, đáng thương",
+      "vi_du": "「彼女、先日お父さんを事故で亡くされたそうだよ」「お気の毒に...」(\"Nghe nói bố cô ấy bị tai nạn qua đời hôm trước rồi đấy\" \"Thật đáng thương/chia buồn...\") 彼は確かに失敗したが、あんなに非難されては気の毒だ。(Anh ấy quả thực đã thất bại, nhưng bị chỉ trích đến mức độ đó thì thật đáng thương.)",
+      "vi_du_ruby": "「彼女、先日お父さんを事故で<ruby>亡<rt>な</rt></ruby>くされたそうだよ」「お気の毒に...」(\"Nghe nói bố cô ấy bị tai nạn qua đời hôm trước rồi đấy\" \"Thật đáng thương/chia buồn...\") 彼は<ruby>確<rt>たし</rt></ruby>かに失敗したが、あんなに<ruby>非難<rt>ひなん</rt></ruby>されては気の毒だ。(Anh ấy quả thực đã thất bại, nhưng bị chỉ trích đến mức độ đó thì thật đáng thương.)",
+      "dong_nghia": [
+        {
+          "kanji": "可哀想な",
+          "doc": "かわいそうな",
+          "nghia": "tội nghiệp"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "貧しい",
+      "doc": "まずしい",
+      "doc_marked": "まずしい",
+      "han_viet": "BẦN",
+      "nghia": "nghèo khó, nghèo nàn",
+      "vi_du": "私は貧しい家に育った。(Tôi lớn lên trong một gia đình nghèo khó.)",
+      "vi_du_ruby": "私は<ruby>貧<rt>まず</rt></ruby>しい家に育った。(Tôi lớn lên trong một gia đình nghèo khó.)",
+      "dong_nghia": [
+        {
+          "kanji": "貧困な",
+          "doc": "ひんこんな",
+          "nghia": "nghèo túng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "豊かな",
+          "doc": "ゆたかな",
+          "nghia": "giàu có / phong phú"
+        },
+        {
+          "kanji": "裕福な",
+          "doc": "ゆうふくな",
+          "nghia": "dư dả"
+        }
+      ]
+    },
+    {
+      "kanji": "惜しい",
+      "doc": "おしい",
+      "doc_marked": "おしい",
+      "han_viet": "TÍCH",
+      "nghia": "đáng tiếc, uổng phí",
+      "vi_du": "後一つ問題ができていれば合格だったのに。惜しかった。(Chỉ cần làm được thêm một câu nữa là thi đỗ rồi. Tiếc quá đi mất.) まだ使える物を捨てるのは惜しい。(Những thứ còn có thể dùng được mà vứt đi thì thật uổng phí.) 時間が惜しい。(Quý trọng thời gian / Tiếc thời gian.)",
+      "vi_du_ruby": "後一つ問題ができていれば<ruby>合格<rt>ごうかく</rt></ruby>だったのに。<ruby>惜<rt>お</rt></ruby>しかった。(Chỉ cần làm được thêm một câu nữa là thi đỗ rồi. Tiếc quá đi mất.) まだ使える物を<ruby>捨<rt>す</rt></ruby>てるのは<ruby>惜<rt>お</rt></ruby>しい。(Những thứ còn có thể dùng được mà vứt đi thì thật uổng phí.) 時間が<ruby>惜<rt>お</rt></ruby>しい。(Quý trọng thời gian / Tiếc thời gian.)",
+      "dong_nghia": [
+        {
+          "kanji": "残念な",
+          "doc": "ざんねんな",
+          "nghia": "đáng tiếc"
+        },
+        {
+          "kanji": "もったいない",
+          "doc": "もったいない",
+          "nghia": "lãng phí"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "仕方(が)ない",
+      "doc": "しかた(が)ない",
+      "doc_marked": "しかた(が)ない",
+      "han_viet": "SĨ PHƯƠNG",
+      "nghia": "vô phương, bó tay, đành chịu",
+      "vi_du": "借金を返すには、休日も働くよりほかに仕方ない。(Để trả tiền nợ, không còn cách nào khác là phải đi làm cả ngày nghỉ.) 仕事に間に合わず、仕方なく後輩に手伝ってもらった。(Không kịp tiến độ công việc, bất đắc dĩ tôi đành nhờ đàn em giúp đỡ.)",
+      "vi_du_ruby": "<ruby>借金<rt>しゃっきん</rt></ruby>を返すには、休日も働くよりほかに<ruby>仕方<rt>しかた</rt></ruby>ない。(Để trả tiền nợ, không còn cách nào khác là phải đi làm cả ngày nghỉ.) 仕事に間に合わず、<ruby>仕方<rt>しかた</rt></ruby>なく<ruby>後輩<rt>こうはい</rt></ruby>に手伝ってもらった。(Không kịp tiến độ công việc, bất đắc dĩ tôi đành nhờ đàn em giúp đỡ.)",
+      "dong_nghia": [
+        {
+          "kanji": "やむを得ない",
+          "doc": "やむをえない",
+          "nghia": "không thể tránh khỏi"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "止むを得ない",
+      "doc": "やむをえない",
+      "doc_marked": "やむをえない",
+      "han_viet": "CHỈ ĐẮC",
+      "nghia": "không tránh khỏi, bất đắc dĩ",
+      "vi_du": "この嵐では休校もやむを得ない。(Cơn bão thế này thì việc nghỉ học cũng là điều không thể tránh khỏi.)",
+      "vi_du_ruby": "この<ruby>嵐<rt>あらし</rt></ruby>では<ruby>休校<rt>きゅうこう</rt></ruby>もやむを<ruby>得<rt>え</rt></ruby>ない。(Cơn bão thế này thì việc nghỉ học cũng là điều không thể tránh khỏi.)",
+      "dong_nghia": [
+        {
+          "kanji": "仕方ない",
+          "doc": "しかたない",
+          "nghia": "đành chịu"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "面倒臭い",
+      "doc": "めんどうくさい",
+      "doc_marked": "めん**どう**くさい",
+      "han_viet": "DIỆN ĐẢO XÚ",
+      "nghia": "phiền toái, rắc rối",
+      "vi_du": "ゴミの分別は面倒くさいが、環境のためには仕方ない。(Việc phân loại rác thật rắc rối nhưng vì môi trường nên cũng đành chịu.) 「彼女は、いろいろ文句ばかり言う。本当に面倒くさい人だなあ」(Cô ta toàn nói mấy lời phàn nàn. Thật là một người phiền phức quá đi.)",
+      "vi_du_ruby": "ゴミの<ruby>分別<rt>ぶんべつ</rt></ruby>は<ruby>面倒臭<rt>めんどうくさ</rt></ruby>いが、環境のためには仕方ない。(Việc phân loại rác thật rắc rối nhưng vì môi trường nên cũng đành chịu.) 「彼女は、いろいろ文句ばかり言う。本当に<ruby>面倒臭<rt>めんどうくさ</rt></ruby>い人だなあ」(Cô ta toàn nói mấy lời phàn nàn. Thật là một người phiền phức quá đi.)",
+      "dong_nghia": [
+        {
+          "kanji": "煩わしい",
+          "doc": "わずらわしい",
+          "nghia": "phiền hà"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "しつこい",
+      "doc": "しつこい",
+      "doc_marked": "しつこい",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "lằng nhằng, dai dẳng, đậm/ngấy (vị)",
+      "vi_du": "店で店員にしつこく勧められて困った。(Ở cửa hàng bị nhân viên giới thiệu chèo kéo lằng nhằng thật là rắc rối.) この料理は油っこくてしつこい。(Món ăn này nhiều dầu mỡ nên vị rất ngấy.)",
+      "vi_du_ruby": "店で<ruby>店員<rt>てんいん</rt></ruby>にしつこく<ruby>勧<rt>すす</rt></ruby>められて困った。(Ở cửa hàng bị nhân viên giới thiệu chèo kéo lằng nhằng thật là rắc rối.) この料理は油っこくてしつこい。(Món ăn này nhiều dầu mỡ nên vị rất ngấy.)",
+      "dong_nghia": [
+        {
+          "kanji": "くどい",
+          "doc": "くどい",
+          "nghia": "dài dòng / ngấy"
+        },
+        {
+          "kanji": "執拗な",
+          "doc": "しつような",
+          "nghia": "dai dẳng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "さっぱりした",
+          "doc": "さっぱりした",
+          "nghia": "thanh đạm / sảng khoái"
+        }
+      ]
+    },
+    {
+      "kanji": "諄い",
+      "doc": "くどい",
+      "doc_marked": "くどい",
+      "han_viet": "TRUÂN",
+      "nghia": "dài dòng, lắm lời, nặng mùi/ngấy",
+      "vi_du": "あの先生の注意はいつもくどくてうんざりする。(Lời nhắc nhở của giáo viên đó lúc nào cũng dài dòng làm tôi chán ngấy.) この料理はくどくて好きではない。(Món ăn này vị ngấy quá nên tôi không thích.) 「その洋服、リボンがくどいよ」(Bộ đồ đó cái ruy băng nhìn màu mè diêm dúa quá đấy.)",
+      "vi_du_ruby": "あの先生の注意はいつもくどくてうんざりする。(Lời nhắc nhở của giáo viên đó lúc nào cũng dài dòng làm tôi chán ngấy.) この料理はくどくて好きではない。(Món ăn này vị ngấy quá nên tôi không thích.) 「その<ruby>洋服<rt>ようふく</rt></ruby>、リボンがくどいよ」(Bộ đồ đó cái ruy băng nhìn màu mè diêm dúa quá đấy.)",
+      "dong_nghia": [
+        {
+          "kanji": "しつこい",
+          "doc": "しつこい",
+          "nghia": "lằng nhằng / ngấy"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "あっさりした",
+          "doc": "あっさりした",
+          "nghia": "thanh đạm"
+        }
+      ]
+    },
+    {
+      "kanji": "煙い",
+      "doc": "けむい",
+      "doc_marked": "けむい",
+      "han_viet": "YÊN",
+      "nghia": "nhiều khói, ngạt khói",
+      "vi_du": "部屋中タバコの煙で煙い。(Cả căn phòng ngạt khói vì khói thuốc lá.)",
+      "vi_du_ruby": "部屋中タバコの<ruby>煙<rt>けむり</rt></ruby>で<ruby>煙<rt>けむ</rt></ruby>い。(Cả căn phòng ngạt khói vì khói thuốc lá.)",
+      "dong_nghia": [
+        {
+          "kanji": "煙たい",
+          "doc": "けむたい",
+          "nghia": "ngột ngạt vì khói"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "邪魔な",
+      "doc": "じゃまな",
+      "doc_marked": "じゃまな",
+      "han_viet": "TÀ MA",
+      "nghia": "vướng víu, cản trở, phiền",
+      "vi_du": "仕事をするため、まず机の上の邪魔な物を片付けた。(Để làm việc, trước tiên tôi đã dọn dẹp những đồ vật vướng víu trên bàn.) 「どうぞお入りください」「お邪魔します」(\"Xin mời vào\" \"Tôi xin phép làm phiền\")",
+      "vi_du_ruby": "仕事をするため、まず机の上の<ruby>邪魔<rt>じゃま</rt></ruby>な物を片付けた。(Để làm việc, trước tiên tôi đã dọn dẹp những đồ vật vướng víu trên bàn.) 「どうぞお入りください」「お<ruby>邪魔<rt>じゃま</rt></ruby>します」(\"Xin mời vào\" \"Tôi xin phép làm phiền\")",
+      "dong_nghia": [
+        {
+          "kanji": "妨げ",
+          "doc": "さまたげ",
+          "nghia": "sự cản trở"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "煩い",
+      "doc": "うるさい",
+      "doc_marked": "うるさい",
+      "han_viet": "PHIỀN",
+      "nghia": "ồn ào, khó tính/hay cằn nhằn, vướng víu",
+      "vi_du": "「テレビの音がうるさいから、ちょっと小さくして」(Tiếng tivi ồn ào quá nên vặn nhỏ xuống một chút đi.) 私は課長にいつも言葉遣いをうるさく注意されている。(Tôi lúc nào cũng bị trưởng phòng cằn nhằn nhắc nhở gay gắt về cách dùng từ.) 前髪が長くなって、うるさい。(Tóc mái dài ra rồi, thật vướng víu khó chịu.)",
+      "vi_du_ruby": "「テレビの音がうるさいから、ちょっと小さくして」(Tiếng tivi ồn ào quá nên vặn nhỏ xuống một chút đi.) 私は課長にいつも言葉遣いをうるさく注意されている。(Tôi lúc nào cũng bị trưởng phòng cằn nhằn nhắc nhở gay gắt về cách dùng từ.) 前髪が長くなって、うるさい。(Tóc mái dài ra rồi, thật vướng víu khó chịu.)",
+      "dong_nghia": [
+        {
+          "kanji": "騒々しい",
+          "doc": "そうぞうしい",
+          "nghia": "ồn ào / náo động"
+        },
+        {
+          "kanji": "口やかましい",
+          "doc": "くちやかましい",
+          "nghia": "hay cằn nhằn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "静かな",
+          "doc": "しずかな",
+          "nghia": "yên tĩnh"
+        }
+      ]
+    },
+    {
+      "kanji": "騒々しい",
+      "doc": "そうぞうしい",
+      "doc_marked": "**そう****ぞう**しい",
+      "han_viet": "TAO",
+      "nghia": "ồn ào, sôi nổi, náo động",
+      "vi_du": "先生が怒ったら、騒々しかった教室は静かになった。(Sau khi cô giáo tức giận, lớp học đang ồn ào trở nên im bặt.) 世の中が騒々しくなり、犯罪も増えた。(Xã hội trở nên náo động bất ổn, tội phạm cũng tăng lên.)",
+      "vi_du_ruby": "先生が怒ったら、<ruby>騒々<rt>そうぞう</rt></ruby>しかった教室は静かになった。(Sau khi cô giáo tức giận, lớp học đang ồn ào trở nên im bặt.) <ruby>世の中<rt>よのなか</rt></ruby>が<ruby>騒々<rt>そうぞう</rt></ruby>しくなり、<ruby>犯罪<rt>はんざい</rt></ruby>も増えた。(Xã hội trở nên náo động bất ổn, tội phạm cũng tăng lên.)",
+      "dong_nghia": [
+        {
+          "kanji": "騒がしい",
+          "doc": "さわがしい",
+          "nghia": "ồn ào"
+        },
+        {
+          "kanji": "物騒な",
+          "doc": "ぶっそうな",
+          "nghia": "nguy hiểm / loạn lạc"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "平穏な",
+          "doc": "へいおんな",
+          "nghia": "bình yên"
+        },
+        {
+          "kanji": "静かな",
+          "doc": "しずかな",
+          "nghia": "yên tĩnh"
+        }
+      ]
+    },
+    {
+      "kanji": "慌ただしい",
+      "doc": "あわただしい",
+      "doc_marked": "あわただしい",
+      "han_viet": "HOẢNG",
+      "nghia": "bận rộn, vội vã, bận túi bụi",
+      "vi_du": "今日は急な用事や来客が重なって、慌ただしい一日だった。(Hôm nay việc gấp và khách đến thăm trùng nhau, thật là một ngày bận tối mắt tối mũi.) 娘は遅刻しそうになって、慌ただしく出かけて行った。(Con gái có vẻ sắp trễ học nên vội vàng chạy ra khỏi nhà.)",
+      "vi_du_ruby": "今日は急な用事や来客が重なって、<ruby>慌<rt>あわ</rt></ruby>ただしい一日だった。(Hôm nay việc gấp và khách đến thăm trùng nhau, thật là một ngày bận tối mắt tối mũi.) 娘は遅刻しそうになって、<ruby>慌<rt>あわ</rt></ruby>ただしく出かけて行った。(Con gái có vẻ sắp trễ học nên vội vàng chạy ra khỏi nhà.)",
+      "dong_nghia": [
+        {
+          "kanji": "忙しい",
+          "doc": "いそがしい",
+          "nghia": "bận rộn"
+        },
+        {
+          "kanji": "せわしない",
+          "doc": "せわしない",
+          "nghia": "tất bật"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "穏やかな",
+          "doc": "おだやかな",
+          "nghia": "êm đềm / thư thả"
+        }
+      ]
+    },
+    {
+      "kanji": "そそっかしい",
+      "doc": "そそっかしい",
+      "doc_marked": "そそっかしい",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "vô tâm, không để ý, hấp tấp",
+      "vi_du": "片方ずつ違った靴下をはくなんて、そそっかしい人だ。(Mang tất mỗi bên một chiếc khác nhau, thật là một người lơ đễnh/hấp tấp.)",
+      "vi_du_ruby": "<ruby>片方<rt>かたほう</rt></ruby>ずつ違った<ruby>靴下<rt>くつした</rt></ruby>をはくなんて、そそっかしい人だ。(Mang tất mỗi bên một chiếc khác nhau, thật là một người lơ đễnh/hấp tấp.)",
+      "dong_nghia": [
+        {
+          "kanji": "慌て者",
+          "doc": "あわてもの",
+          "nghia": "người hay hấp tấp"
+        },
+        {
+          "kanji": "軽率な",
+          "doc": "けいそつな",
+          "nghia": "khinh suất"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "慎重な",
+          "doc": "しんちょうな",
+          "nghia": "thận trọng"
+        }
+      ]
+    },
+    {
+      "kanji": "思いがけない",
+      "doc": "おもいがけない",
+      "doc_marked": "おもいがけない",
+      "han_viet": "TƯ",
+      "nghia": "không ngờ đến, ngoài dự tính",
+      "vi_du": "道で思いがけない人に会った。(Trên đường tôi đã gặp một người không ngờ tới.) 叔父がなくなって、思いがけない遺産が入った。(Chú mất đi để lại một khoản tài sản thừa kế không ngờ tới.)",
+      "vi_du_ruby": "道で<ruby>思<rt>おも</rt></ruby>いがけない人に会った。(Trên đường tôi đã gặp một người không ngờ tới.) <ruby>叔父<rt>おじ</rt></ruby>がなくなって、<ruby>思<rt>おも</rt></ruby>いがけない<ruby>遺産<rt>いさん</rt></ruby>が入った。(Chú mất đi để lại một khoản tài sản thừa kế không ngờ tới.)",
+      "dong_nghia": [
+        {
+          "kanji": "意外な",
+          "doc": "いがいな",
+          "nghia": "bất ngờ"
+        },
+        {
+          "kanji": "予期せぬ",
+          "doc": "よきせぬ",
+          "nghia": "không lường trước"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "予想通りの",
+          "doc": "よそうどおりの",
+          "nghia": "như dự đoán"
+        }
+      ]
+    },
+    {
+      "kanji": "何気ない",
+      "doc": "なにげない",
+      "doc_marked": "なにげない",
+      "han_viet": "HÀ KHÍ",
+      "nghia": "không cố ý, ngẫu nhiên, vô tình",
+      "vi_du": "何気ない一言が、相手を傷つけることもある。(Chỉ một lời nói vô tình cũng có lúc làm tổn thương đối phương.) 彼は何気なさそうな顔をしていたが、本当にショックだったに違いない。(Anh ấy tỏ vẻ mặt như không có chuyện gì nhưng chắc chắn thực ra đang rất sốc.)",
+      "vi_du_ruby": "<ruby>何気<rt>なにげ</rt></ruby>ない一言が、相手を傷つけることもある。(Chỉ một lời nói vô tình cũng có lúc làm tổn thương đối phương.) 彼は<ruby>何気<rt>なにげ</rt></ruby>なさそうな顔をしていたが、本当にショックだったに違いない。(Anh ấy tỏ vẻ mặt như không có chuyện gì nhưng chắc chắn thực ra đang rất sốc.)",
+      "dong_nghia": [
+        {
+          "kanji": "無意識な",
+          "doc": "むいしきな",
+          "nghia": "vô ý thức"
+        },
+        {
+          "kanji": "意図しない",
+          "doc": "いとしない",
+          "nghia": "không có ý định"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "意図的な",
+          "doc": "いとてきな",
+          "nghia": "có chủ đích"
+        }
+      ]
+    },
+    {
+      "kanji": "とんでもない",
+      "doc": "とんでもない",
+      "doc_marked": "とんでもない",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "không thể tin được, không ngờ, vớ vẩn / đâu có",
+      "vi_du": "「このリンゴは3000円！とんでもない値段だ」(Trái táo này mà 3000 yên á! Thật là cái giá không tưởng.) 息子はとんでもないことをして警察に捕まった。(Con trai đã làm một chuyện động trời không thể ngờ tới và bị cảnh sát bắt.) 「あの人って有名な学者だよね」「とんでもない。ただのタレントだよ」(\"Người đó là học giả nổi tiếng nhỉ\" \"Vớ vẩn/Đâu có. Chỉ là nghệ sĩ giải trí thôi.\")",
+      "vi_du_ruby": "「このリンゴは3000円！とんでもない値段だ」(Trái táo này mà 3000 yên á! Thật là cái giá không tưởng.) 息子はとんでもないことをして警察に捕まった。(Con trai đã làm một chuyện động trời không thể ngờ tới và bị cảnh sát bắt.) 「あの人って有名な学者だよね」「とんでもない。ただのタレントだよ」(\"Người đó là học giả nổi tiếng nhỉ\" \"Vớ vẩn/Đâu có. Chỉ là nghệ sĩ giải trí thôi.\")",
+      "dong_nghia": [
+        {
+          "kanji": "思いがけない",
+          "doc": "おもいがけない",
+          "nghia": "không ngờ tới"
+        },
+        {
+          "kanji": "非常識な",
+          "doc": "ひじょうしきな",
+          "nghia": "thiếu ý thức"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "当たり前の",
+          "doc": "あたりまえの",
+          "nghia": "chuyện hiển nhiên"
+        }
+      ]
+    },
+    {
+      "kanji": "下らない",
+      "doc": "くだらない",
+      "doc_marked": "くだらない",
+      "han_viet": "HẠ",
+      "nghia": "vô giá trị, vô nghĩa, nhàm chán",
+      "vi_du": "「くだらないことばかり言ってないで、早く仕事をしろ」(Đừng có nói mấy điều nhảm nhí vô nghĩa nữa, mau làm việc đi.) この番組は全くくだらない。(Chương trình tivi này hoàn toàn nhàm chán vô vị.)",
+      "vi_du_ruby": "「<ruby>下<rt>くだ</rt></ruby>らないことばかり言ってないで、早く仕事をしろ」(Đừng có nói mấy điều nhảm nhí vô nghĩa nữa, mau làm việc đi.) この番組は全く<ruby>下<rt>くだ</rt></ruby>らない。(Chương trình tivi này hoàn toàn nhàm chán vô vị.)",
+      "dong_nghia": [
+        {
+          "kanji": "つまらない",
+          "doc": "つまらない",
+          "nghia": "nhàm chán"
+        },
+        {
+          "kanji": "無意味な",
+          "doc": "むいみな",
+          "nghia": "vô nghĩa"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "有意義な",
+          "doc": "ゆういぎな",
+          "nghia": "có ý nghĩa"
+        },
+        {
+          "kanji": "価値がある",
+          "doc": "かちがある",
+          "nghia": "có giá trị"
+        }
+      ]
+    },
+    {
+      "kanji": "馬鹿馬鹿しい",
+      "doc": "ばかばかしい",
+      "doc_marked": "ばかばかしい",
+      "han_viet": "MÃ LỘC",
+      "nghia": "buồn cười, ngu ngốc, lố bịch",
+      "vi_du": "この番組はばかばかしいが、面白いのでつい見てしまう。(Chương trình này thật lố bịch ngớ ngẩn nhưng mà thú vị nên tôi lỡ xem mất tiêu.) 安い給料でこんなに働くなんて、ばかばかしい。(Làm việc cật lực như thế này với mức lương bèo bọt thì thật là ngu ngốc.)",
+      "vi_du_ruby": "この番組はばかばかしいが、面白いのでつい見てしまう。(Chương trình này thật lố bịch ngớ ngẩn nhưng mà thú vị nên tôi lỡ xem mất tiêu.) 安い給料でこんなに働くなんて、ばかばかしい。(Làm việc cật lực như thế này với mức lương bèo bọt thì thật là ngu ngốc.)",
+      "dong_nghia": [
+        {
+          "kanji": "くだらない",
+          "doc": "くだらない",
+          "nghia": "nhảm nhí"
+        },
+        {
+          "kanji": "アホらしい",
+          "doc": "あほらしい",
+          "nghia": "ngớ ngẩn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "有意義な",
+          "doc": "ゆういぎな",
+          "nghia": "có ý nghĩa"
+        }
+      ]
+    },
+    {
+      "kanji": "出鱈目な",
+      "doc": "でたらめな",
+      "doc_marked": "でたらめな",
+      "han_viet": "XUẤT TUYẾT MỤC",
+      "nghia": "bừa, linh tinh, vô căn cứ",
+      "vi_du": "テストで答えをでたらめに書いたら、偶然合っていた。(Tôi chọn bừa đáp án trong bài thi ai ngờ lại đúng ngẫu nhiên.) でたらめな話をする。(Nói chuyện linh tinh vô căn cứ.)",
+      "vi_du_ruby": "テストで答えを<ruby>出鱈目<rt>でたらめ</rt></ruby>に書いたら、偶然合っていた。(Tôi chọn bừa đáp án trong bài thi ai ngờ lại đúng ngẫu nhiên.) <ruby>出鱈目<rt>でたらめ</rt></ruby>な話をする。(Nói chuyện linh tinh vô căn cứ.)",
+      "dong_nghia": [
+        {
+          "kanji": "いい加減な",
+          "doc": "いいかげんな",
+          "nghia": "vô trách nhiệm / hời hợt"
+        },
+        {
+          "kanji": "根拠のない",
+          "doc": "こんきょのない",
+          "nghia": "không có căn cứ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "正確な",
+          "doc": "せいかくな",
+          "nghia": "chính xác"
+        }
+      ]
+    },
+    {
+      "kanji": "だらしない",
+      "doc": "だらしない",
+      "doc_marked": "だらしない",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "lôi thôi, luộm thuộm, bừa bãi",
+      "vi_du": "「暑いからと言って、そんなだらしない格好をするな」(Dù là nóng cũng không được ăn mặc phong cách lôi thôi luộm thuộm như thế.) 彼はだらしない。部屋も汚いし、時間に遅れるし、借りた物もすぐなくす。(Anh ta thật bừa bãi. Phòng thì bẩn, hay trễ giờ, đồ mượn thì lại làm mất ngay.)",
+      "vi_du_ruby": "「暑いからと言って、そんなだらしない<ruby>格好<rt>かっこう</rt></ruby>をするな」(Dù là nóng cũng không được ăn mặc phong cách lôi thôi luộm thuộm như thế.) 彼はだらしない。部屋も汚いし、時間に遅れるし、借りた物もすぐなくす。(Anh ta thật bừa bãi. Phòng thì bẩn, hay trễ giờ, đồ mượn thì lại làm mất ngay.)",
+      "dong_nghia": [
+        {
+          "kanji": "ルーズな",
+          "doc": "るーずな",
+          "nghia": "lỏng lẻo / bừa bãi"
+        },
+        {
+          "kanji": "ずぼらな",
+          "doc": "ずぼらな",
+          "nghia": "cẩu thả"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "几帳面な",
+          "doc": "きちょうめんな",
+          "nghia": "ngăn nắp / cẩn thận"
+        },
+        {
+          "kanji": "きちんとした",
+          "doc": "きちんとした",
+          "nghia": "chỉn chu"
+        }
+      ]
+    },
+    {
+      "kanji": "図々しい",
+      "doc": "ずうずうしい",
+      "doc_marked": "**ずう****ずう**しい",
+      "han_viet": "ĐỒ",
+      "nghia": "vô liêm sỉ, trơ trẽn, mặt dày",
+      "vi_du": "レジの列にずうずうしく割り込む人がいる。(Ở quầy tính tiền có người trơ trẽn cắt ngang hàng.) 前に借りた金も返していないのに、また借りに来るなんて、ずうずうしい。(Tiền mượn trước đó chưa trả mà lại tiếp tục đi mượn tiền, thật là mặt dày vô liêm sỉ.)",
+      "vi_du_ruby": "レジの<ruby>列<rt>れつ</rt></ruby>に<ruby>図々<rt>ずうずう</rt></ruby>しく<ruby>割<rt>わ</rt></ruby>り<ruby>込<rt>こ</rt></ruby>む人がいる。(Ở quầy tính tiền có người trơ trẽn cắt ngang hàng.) 前に借りた金も返していないのに、また借りに来るなんて、<ruby>図々<rt>ずうずう</rt></ruby>しい。(Tiền mượn trước đó chưa trả mà lại tiếp tục đi mượn tiền, thật là mặt dày vô liêm sỉ.)",
+      "dong_nghia": [
+        {
+          "kanji": "厚かましい",
+          "doc": "あつかましい",
+          "nghia": "mặt dày"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "遠慮深い",
+          "doc": "えんりょぶかい",
+          "nghia": "biết giữ ý tứ"
+        },
+        {
+          "kanji": "控えめな",
+          "doc": "ひかえめな",
+          "nghia": "khiêm tốn / nhún nhường"
+        }
+      ]
+    },
+    {
+      "kanji": "狡い",
+      "doc": "ずるい",
+      "doc_marked": "ずるい",
+      "han_viet": "GIẢO",
+      "nghia": "không trung thực, láu cá, khôn lỏi",
+      "vi_du": "うちの上司はずるくて、いつも部下の成果を自分の物にしてしまう。(Sếp tôi láu cá lắm, lúc nào cũng lấy thành quả của cấp dưới làm công cho mình.) 他の人が必死に働いているのに、自分だけ楽をしようなんて、ずるい考えだ。(Người khác thì làm việc cật lực còn mình thì chỉ muốn nhàn hạ thoải mái, thật là lối suy nghĩ khôn lỏi.) 「お兄ちゃんだけパパにプレゼントをもらって、ずるい！」(Chỉ anh trai mới nhận được quà của bố, thật không công bằng!)",
+      "vi_du_ruby": "うちの上司は<ruby>狡<rt>ずる</rt></ruby>くて、いつも部下の成果を自分の物にしてしまう。(Sếp tôi láu cá lắm, lúc nào cũng lấy thành quả của cấp dưới làm công cho mình.) 他の人が必死に働いているのに、自分だけ楽をしようなんて、<ruby>狡<rt>ずる</rt></ruby>い考えだ。(Người khác thì làm việc cật lực còn mình thì chỉ muốn nhàn hạ thoải mái, thật là lối suy nghĩ khôn lỏi.) 「お兄ちゃんだけパパにプレゼントをもらって、<ruby>狡<rt>ずる</rt></ruby>い！」(Chỉ anh trai mới nhận được quà của bố, thật không công bằng!)",
+      "dong_nghia": [
+        {
+          "kanji": "卑怯な",
+          "doc": "ひきょうな",
+          "nghia": "chơi bẩn / hèn nhát"
+        },
+        {
+          "kanji": "悪賢い",
+          "doc": "わるがしこい",
+          "nghia": "ranh ma"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "正直な",
+          "doc": "しょうじきな",
+          "nghia": "chính trực"
+        },
+        {
+          "kanji": "フェアな",
+          "doc": "ふぇあな",
+          "nghia": "công bằng"
+        }
+      ]
+    },
+    {
+      "kanji": "憎らしい",
+      "doc": "にくらしい",
+      "doc_marked": "にくらしい",
+      "han_viet": "TĂNG",
+      "nghia": "đáng ghét (nhưng có chút đáng yêu/ganh tị)",
+      "vi_du": "わが子はかわいいが、反抗的な態度をとると憎らしいときもある。(Con nhà tôi dễ thương nhưng nhiều khi lấy thái độ ương bướng ra chống đối thì cũng thấy ghét.) 彼女は憎らしいほど才能がある。(Cô ấy có tài năng đến nỗi phát ghét/phát hờn lên được.)",
+      "vi_du_ruby": "わが子はかわいいが、反抗的な態度をとると<ruby>憎<rt>にく</rt></ruby>らしいときもある。(Con nhà tôi dễ thương nhưng nhiều khi lấy thái độ ương bướng ra chống đối thì cũng thấy ghét.) 彼女は<ruby>憎<rt>にく</rt></ruby>らしいほど才能がある。(Cô ấy có tài năng đến nỗi phát ghét/phát hờn lên được.)",
+      "dong_nghia": [
+        {
+          "kanji": "嫌な",
+          "doc": "いやな",
+          "nghia": "đáng ghét"
+        },
+        {
+          "kanji": "妬ましい",
+          "doc": "ねたましい",
+          "nghia": "đáng ghen tị"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "愛らしい",
+          "doc": "あいらしい",
+          "nghia": "đáng yêu"
+        }
+      ]
+    },
+    {
+      "kanji": "憎い",
+      "doc": "にくい",
+      "doc_marked": "にくい",
+      "han_viet": "TĂNG",
+      "nghia": "căm thù, căm ghét (sự thù hận thực sự)",
+      "vi_du": "父を殺した犯人が憎い。(Tôi căm thù tên hung thủ đã giết bố tôi.)",
+      "vi_du_ruby": "父を殺した犯人が<ruby>憎<rt>にく</rt></ruby>い。(Tôi căm thù tên hung thủ đã giết bố tôi.)",
+      "dong_nghia": [
+        {
+          "kanji": "恨めしい",
+          "doc": "うらめしい",
+          "nghia": "căm hờn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "愛しい",
+          "doc": "いとしい",
+          "nghia": "yêu dấu"
+        }
+      ]
+    },
+    {
+      "kanji": "険しい",
+      "doc": "けわしい",
+      "doc_marked": "けわしい",
+      "han_viet": "HIỂM",
+      "nghia": "dốc (dựng đứng), nghiêm khắc, chông gai",
+      "vi_du": "険しい山道を登る。(Leo lên con đường núi dốc đứng hiểm trở.) 売り上げ減の報告を受けた社長は、険しい表情になった。(Giám đốc sau khi nhận báo cáo giảm doanh thu thì sắc mặt trở nên vô cùng gay gắt.) 不況の中、資格も経験もなければ、前途は険しい。(Trong tình hình kinh tế khó khăn, nếu không có bằng cấp lẫn kinh nghiệm thì tiền đồ phía trước sẽ rất chông gai.)",
+      "vi_du_ruby": "<ruby>険<rt>けわ</rt></ruby>しい山道を登る。(Leo lên con đường núi dốc đứng hiểm trở.) 売り上げ減の報告を受けた社長は、<ruby>険<rt>けわ</rt></ruby>しい表情になった。(Giám đốc sau khi nhận báo cáo giảm doanh thu thì sắc mặt trở nên vô cùng gay gắt.) 不況の中、資格も経験もなければ、前途は<ruby>険<rt>けわ</rt></ruby>しい。(Trong tình hình kinh tế khó khăn, nếu không có bằng cấp lẫn kinh nghiệm thì tiền đồ phía trước sẽ rất chông gai.)",
+      "dong_nghia": [
+        {
+          "kanji": "厳しい",
+          "doc": "きびしい",
+          "nghia": "khắc nghiệt"
+        },
+        {
+          "kanji": "急な",
+          "doc": "きゅうな",
+          "nghia": "dốc đứng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "なだらかな",
+          "doc": "なだらかな",
+          "nghia": "thoai thoải"
+        },
+        {
+          "kanji": "穏やかな",
+          "doc": "おだやかな",
+          "nghia": "êm đềm / ôn hòa"
+        }
+      ]
+    },
+    {
+      "kanji": "辛い",
+      "doc": "つらい",
+      "doc_marked": "つらい",
+      "han_viet": "TÂN",
+      "nghia": "đau đớn, khổ sở, hà khắc",
+      "vi_du": "子供はつらい経験を乗り越えて成長する。(Những đứa trẻ sau khi vượt qua được những kinh nghiệm đau khổ sẽ trưởng thành.) イライラして、つい子供につらく当たってしまった。(Vì nóng ruột bực bội nên tôi vô tình đối xử tồi tệ/hà khắc với con.)",
+      "vi_du_ruby": "子供は<ruby>辛<rt>つら</rt></ruby>い経験を乗り越えて成長する。(Những đứa trẻ sau khi vượt qua được những kinh nghiệm đau khổ sẽ trưởng thành.) イライラして、つい子供に<ruby>辛<rt>つら</rt></ruby>く当たってしまった。(Vì nóng ruột bực bội nên tôi vô tình đối xử tồi tệ/hà khắc với con.)",
+      "dong_nghia": [
+        {
+          "kanji": "苦しい",
+          "doc": "くるしい",
+          "nghia": "đau khổ"
+        },
+        {
+          "kanji": "厳しい",
+          "doc": "きびしい",
+          "nghia": "nghiêm khắc"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "楽な",
+          "doc": "らくな",
+          "nghia": "nhàn hạ / dễ chịu"
+        }
+      ]
+    },
+    {
+      "kanji": "きつい",
+      "doc": "きつい",
+      "doc_marked": "きつい",
+      "han_viet": "(thuần Nhật)",
+      "nghia": "chật, vất vả, gắt/nặng mùi, nghiêm khắc",
+      "vi_du": "太ってしまってズボンがきつくなった。(Mập lên nên quần bị chật ních.) 肉体労働などのきつい仕事は、今人気がない。(Những công việc lao động thể lực vất vả hiện nay không được ưa chuộng.) きついタバコ/酒/匂い。(Thuốc lá/rượu/mùi... nặng gắt.) 彼女は優しそうだが、性格はきつい。(Cô ấy trông có vẻ hiền nhưng tính cách lại rất nghiêm khắc/mạnh mẽ.)",
+      "vi_du_ruby": "太ってしまってズボンがきつくなった。(Mập lên nên quần bị chật ních.) 肉体労働などのきつい仕事は、今人気がない。(Những công việc lao động thể lực vất vả hiện nay không được ưa chuộng.) きついタバコ/酒/匂い。(Thuốc lá/rượu/mùi... nặng gắt.) 彼女は優しそうだが、性格はきつい。(Cô ấy trông có vẻ hiền nhưng tính cách lại rất nghiêm khắc/mạnh mẽ.)",
+      "dong_nghia": [
+        {
+          "kanji": "厳しい",
+          "doc": "きびしい",
+          "nghia": "khắc nghiệt"
+        },
+        {
+          "kanji": "窮屈な",
+          "doc": "きゅうくつな",
+          "nghia": "chật chội"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "緩い",
+          "doc": "ゆるい",
+          "nghia": "lỏng lẻo"
+        },
+        {
+          "kanji": "楽な",
+          "doc": "らくな",
+          "nghia": "thoải mái"
+        }
+      ]
+    },
+    {
+      "kanji": "緩い",
+      "doc": "ゆるい",
+      "doc_marked": "ゆるい",
+      "han_viet": "HOÃN",
+      "nghia": "lỏng, chậm, thoai thoải",
+      "vi_du": "やせてスカートが緩くなった。(Ốm đi nên váy bị lỏng ra.) 「この道を真っすぐ行くと、緩いカーブがあります」(Đi thẳng con đường này sẽ gặp một khúc cua cong thoai thoải.)",
+      "vi_du_ruby": "やせてスカートが<ruby>緩<rt>ゆる</rt></ruby>くなった。(Ốm đi nên váy bị lỏng ra.) 「この道を真っすぐ行くと、<ruby>緩<rt>ゆる</rt></ruby>いカーブがあります」(Đi thẳng con đường này sẽ gặp một khúc cua cong thoai thoải.)",
+      "dong_nghia": [
+        {
+          "kanji": "だぶだぶな",
+          "doc": "だぶだぶな",
+          "nghia": "rộng thùng thình"
+        },
+        {
+          "kanji": "なだらかな",
+          "doc": "なだらかな",
+          "nghia": "thoai thoải"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "きつい",
+          "doc": "きつい",
+          "nghia": "chật chội"
+        },
+        {
+          "kanji": "急な",
+          "doc": "きゅうな",
+          "nghia": "dốc đứng"
+        }
+      ]
+    },
+    {
+      "kanji": "鈍い",
+      "doc": "にぶい",
+      "doc_marked": "にぶい",
+      "han_viet": "ĐỘN",
+      "nghia": "cùn, đần độn, kém, xỉn màu",
+      "vi_du": "このナイフは切れ味が鈍い。(Con dao này bị cùn rồi.) 運動神経が鈍い。(Thần kinh vận động kém.) 古い銀のネックレスが鈍く光っている。(Sợi dây chuyền bạc cũ ánh lên thứ ánh sáng xỉn màu.) 雨の日は客足が鈍い。(Vào ngày mưa thì lượng khách rất thưa thớt/chậm chạp.)",
+      "vi_du_ruby": "このナイフは切れ味が<ruby>鈍<rt>にぶ</rt></ruby>い。(Con dao này bị cùn rồi.) 運動神経が<ruby>鈍<rt>にぶ</rt></ruby>い。(Thần kinh vận động kém.) 古い銀のネックレスが<ruby>鈍<rt>にぶ</rt></ruby>く光っている。(Sợi dây chuyền bạc cũ ánh lên thứ ánh sáng xỉn màu.) 雨の日は客足が<ruby>鈍<rt>にぶ</rt></ruby>い。(Vào ngày mưa thì lượng khách rất thưa thớt/chậm chạp.)",
+      "dong_nghia": [
+        {
+          "kanji": "遅い",
+          "doc": "おそい",
+          "nghia": "chậm chạp"
+        },
+        {
+          "kanji": "鈍感な",
+          "doc": "どんかんな",
+          "nghia": "kém nhạy bén"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "鋭い",
+          "doc": "するどい",
+          "nghia": "sắc bén"
+        },
+        {
+          "kanji": "敏感な",
+          "doc": "びんかんな",
+          "nghia": "nhạy cảm"
+        }
+      ]
+    },
+    {
+      "kanji": "鋭い",
+      "doc": "するどい",
+      "doc_marked": "するどい",
+      "han_viet": "NHUỆ",
+      "nghia": "sắc, sắc sảo",
+      "vi_du": "熊は鋭い爪を持っている。(Con gấu có những móng vuốt rất sắc bén.) 彼は鋭い目で私をにらんだ。(Anh ấy lườm tôi bằng đôi mắt sắc lẹm.) 感受性が鋭い。(Khả năng cảm thụ sắc bén.)",
+      "vi_du_ruby": "熊は<ruby>鋭<rt>するど</rt></ruby>い爪を持っている。(Con gấu có những móng vuốt rất sắc bén.) 彼は<ruby>鋭<rt>するど</rt></ruby>い目で私をにらんだ。(Anh ấy lườm tôi bằng đôi mắt sắc lẹm.) 感受性が<ruby>鋭<rt>するど</rt></ruby>い。(Khả năng cảm thụ sắc bén.)",
+      "dong_nghia": [
+        {
+          "kanji": "敏感な",
+          "doc": "びんかんな",
+          "nghia": "nhạy cảm"
+        },
+        {
+          "kanji": "研ぎ澄まされた",
+          "doc": "とぎすまされた",
+          "nghia": "được mài giũa"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "鈍い",
+          "doc": "にぶい",
+          "nghia": "cùn / kém"
+        }
+      ]
+    },
+    {
+      "kanji": "荒い・粗い",
+      "doc": "あらい",
+      "doc_marked": "あらい",
+      "han_viet": "HOANG/THÔ",
+      "nghia": "cục cằn, thô bạo, thô ráp",
+      "vi_du": "彼は気性が荒い。(Tính khí anh ấy rất thô bạo/cục cằn.) 冬の日本海は波が荒い。(Biển Nhật Bản vào mùa đông sóng đánh rất dữ dội.) きめの粗い肌。(Kết cấu làn da thô ráp.)",
+      "vi_du_ruby": "彼は気性が<ruby>荒<rt>あら</rt></ruby>い。(Tính khí anh ấy rất thô bạo/cục cằn.) 冬の日本海は波が<ruby>荒<rt>あら</rt></ruby>い。(Biển Nhật Bản vào mùa đông sóng đánh rất dữ dội.) きめの<ruby>粗<rt>あら</rt></ruby>い肌。(Kết cấu làn da thô ráp.)",
+      "dong_nghia": [
+        {
+          "kanji": "乱暴な",
+          "doc": "らんぼうな",
+          "nghia": "bạo lực"
+        },
+        {
+          "kanji": "激しい",
+          "doc": "はげしい",
+          "nghia": "mãnh liệt"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "穏やかな",
+          "doc": "おだやかな",
+          "nghia": "êm đềm"
+        },
+        {
+          "kanji": "細かい",
+          "doc": "こまかい",
+          "nghia": "mịn màng / chi tiết"
+        }
+      ]
+    },
+    {
+      "kanji": "強引な",
+      "doc": "ごういんな",
+      "doc_marked": "**ごう**いんな",
+      "han_viet": "CƯỜNG DẪN",
+      "nghia": "cưỡng bức, bắt buộc, gia trưởng",
+      "vi_du": "強引なやり方で物事を進める。(Tiến hành sự việc bằng cách làm mang tính áp đặt/cưỡng ép.)",
+      "vi_du_ruby": "<ruby>強引<rt>ごういん</rt></ruby>なやり方で物事を進める。(Tiến hành sự việc bằng cách làm mang tính áp đặt/cưỡng ép.)",
+      "dong_nghia": [
+        {
+          "kanji": "無理やりな",
+          "doc": "むりやりな",
+          "nghia": "cưỡng chế"
+        },
+        {
+          "kanji": "強硬な",
+          "doc": "きょうこうな",
+          "nghia": "cứng rắn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "控えめな",
+          "doc": "ひかえめな",
+          "nghia": "nhún nhường"
+        }
+      ]
+    },
+    {
+      "kanji": "勝手な",
+      "doc": "かってな",
+      "doc_marked": "かってな",
+      "han_viet": "THẮNG THỦ",
+      "nghia": "độc đoán, tự tiện, tự ý",
+      "vi_du": "勝手な言動はほかの人の迷惑になる。(Lời nói và hành động tự ý sẽ gây phiền toái cho người khác.) 「こんなうち、出て行ってやる！」「勝手にしろ」(\"Cái nhà thế này, tôi sẽ bỏ đi cho xem!\" \"Mày muốn làm gì thì tùy mày / Tự đi mà làm\")",
+      "vi_du_ruby": "<ruby>勝手<rt>かって</rt></ruby>な言動はほかの人の迷惑になる。(Lời nói và hành động tự ý sẽ gây phiền toái cho người khác.) 「こんなうち、出て行ってやる！」「<ruby>勝手<rt>かって</rt></ruby>にしろ」(\"Cái nhà thế này, tôi sẽ bỏ đi cho xem!\" \"Mày muốn làm gì thì tùy mày / Tự đi mà làm\")",
+      "dong_nghia": [
+        {
+          "kanji": "わがままな",
+          "doc": "わがままな",
+          "nghia": "ích kỷ"
+        },
+        {
+          "kanji": "独断的な",
+          "doc": "どくだんてきな",
+          "nghia": "độc đoán"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "従順な",
+          "doc": "じゅうじゅんな",
+          "nghia": "ngoan ngoãn / phục tùng"
+        }
+      ]
+    },
+    {
+      "kanji": "強気な",
+      "doc": "つよきな",
+      "doc_marked": "つよきな",
+      "han_viet": "CƯỜNG KHÍ",
+      "nghia": "kiên định, mạnh mẽ, tự tin",
+      "vi_du": "彼女は強気な性格で、時々周りと衝突する。(Cô ấy tính tình mạnh mẽ kiên định nên thỉnh thoảng lại xung đột với người xung quanh.) 首相は、政策は必ず成功させると強気な発言を繰り返した。(Thủ tướng lặp đi lặp lại phát ngôn tự tin mạnh mẽ về việc nhất định sẽ làm cho chính sách thành công.)",
+      "vi_du_ruby": "彼女は<ruby>強気<rt>つよき</rt></ruby>な性格で、時々周りと衝突する。(Cô ấy tính tình mạnh mẽ kiên định nên thỉnh thoảng lại xung đột với người xung quanh.) 首相は、政策は必ず成功させると<ruby>強気<rt>つよき</rt></ruby>な発言を繰り返した。(Thủ tướng lặp đi lặp lại phát ngôn tự tin mạnh mẽ về việc nhất định sẽ làm cho chính sách thành công.)",
+      "dong_nghia": [
+        {
+          "kanji": "気が強い",
+          "doc": "きがつよい",
+          "nghia": "cá tính mạnh"
+        },
+        {
+          "kanji": "強硬な",
+          "doc": "きょうこうな",
+          "nghia": "cứng rắn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "弱気な",
+          "doc": "よわきな",
+          "nghia": "nhút nhát / rụt rè"
+        }
+      ]
+    },
+    {
+      "kanji": "頑固な",
+      "doc": "がんこな",
+      "doc_marked": "がんこな",
+      "han_viet": "NGOAN CỐ",
+      "nghia": "bảo thủ, cố chấp, cứng đầu",
+      "vi_du": "妹は頑固で、一度言い出したら後へ引かない。(Em gái tôi rất cứng đầu, một khi đã nói ra thì sẽ không rút lại.) 何度洗っても落ちない。全く頑固な汚れだ。(Giặt nhiều lần mà vẫn không sạch. Đúng là vết bẩn cứng đầu.)",
+      "vi_du_ruby": "妹は<ruby>頑固<rt>がんこ</rt></ruby>で、一度言い出したら後へ引かない。(Em gái tôi rất cứng đầu, một khi đã nói ra thì sẽ không rút lại.) 何度洗っても落ちない。全く<ruby>頑固<rt>がんこ</rt></ruby>な汚れだ。(Giặt nhiều lần mà vẫn không sạch. Đúng là vết bẩn cứng đầu.)",
+      "dong_nghia": [
+        {
+          "kanji": "強情な",
+          "doc": "ごうじょうな",
+          "nghia": "bướng bỉnh"
+        },
+        {
+          "kanji": "意地っ張り",
+          "doc": "いじっぱり",
+          "nghia": "cố chấp"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "柔軟な",
+          "doc": "じゅうなんな",
+          "nghia": "linh hoạt"
+        },
+        {
+          "kanji": "素直な",
+          "doc": "すなおな",
+          "nghia": "ngoan ngoãn"
+        }
+      ]
+    },
+    {
+      "kanji": "過剰な",
+      "doc": "かじょうな",
+      "doc_marked": "か**じょう**な",
+      "han_viet": "QUÁ THẶNG",
+      "nghia": "dư thừa, vượt quá, thái quá",
+      "vi_du": "塩分を過剰に取ると体に悪い。(Nếu tiêu thụ vượt quá lượng muối cho phép sẽ ảnh hưởng xấu đến cơ thể.) 過剰な期待はしないほうがいい。(Không nên đặt kì vọng thái quá.)",
+      "vi_du_ruby": "塩分を<ruby>過剰<rt>かじょう</rt></ruby>に取ると体に悪い。(Nếu tiêu thụ vượt quá lượng muối cho phép sẽ ảnh hưởng xấu đến cơ thể.) <ruby>過剰<rt>かじょう</rt></ruby>な期待はしないほうがいい。(Không nên đặt kì vọng thái quá.)",
+      "dong_nghia": [
+        {
+          "kanji": "多すぎる",
+          "doc": "おおすぎる",
+          "nghia": "quá nhiều"
+        },
+        {
+          "kanji": "やりすぎな",
+          "doc": "やりすぎな",
+          "nghia": "làm quá"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "適度な",
+          "doc": "てきどな",
+          "nghia": "vừa phải"
+        },
+        {
+          "kanji": "不足な",
+          "doc": "ふそくな",
+          "nghia": "thiếu thốn"
+        }
+      ]
+    },
+    {
+      "kanji": "重大な",
+      "doc": "じゅうだいな",
+      "doc_marked": "**じゅう**だいな",
+      "han_viet": "TRỌNG ĐẠI",
+      "nghia": "trọng đại, nghiêm trọng (về tầm ảnh hưởng)",
+      "vi_du": "政治の混乱を招いた首相の責任は重大だ。(Trách nhiệm của thủ tướng gây ra hỗn loạn chính trị là rất nghiêm trọng/to lớn.)",
+      "vi_du_ruby": "政治の混乱を招いた首相の責任は<ruby>重大<rt>じゅうだい</rt></ruby>だ。(Trách nhiệm của thủ tướng gây ra hỗn loạn chính trị là rất nghiêm trọng/to lớn.)",
+      "dong_nghia": [
+        {
+          "kanji": "深刻な",
+          "doc": "しんこくな",
+          "nghia": "nghiêm trọng"
+        },
+        {
+          "kanji": "重要な",
+          "doc": "じゅうような",
+          "nghia": "quan trọng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "些細な",
+          "doc": "ささいな",
+          "nghia": "nhỏ nhặt / vụn vặt"
+        }
+      ]
+    },
+    {
+      "kanji": "深刻な",
+      "doc": "しんこくな",
+      "doc_marked": "しんこくな",
+      "han_viet": "THÂM KHẮC",
+      "nghia": "nghiêm trọng (tình trạng tồi tệ)",
+      "vi_du": "猛暑によって深刻な水不足が起きた。(Thời tiết nóng bức khắc nghiệt đã gây ra tình trạng thiếu nước nghiêm trọng.) 若者の活字離れが深刻になってきている。(Vấn đề giới trẻ lười đọc sách in đang trở nên nghiêm trọng.)",
+      "vi_du_ruby": "猛暑によって<ruby>深刻<rt>しんこく</rt></ruby>な水不足が起きた。(Thời tiết nóng bức khắc nghiệt đã gây ra tình trạng thiếu nước nghiêm trọng.) 若者の活字離れが<ruby>深刻<rt>しんこく</rt></ruby>になってきている。(Vấn đề giới trẻ lười đọc sách in đang trở nên nghiêm trọng.)",
+      "dong_nghia": [
+        {
+          "kanji": "重大な",
+          "doc": "じゅうだいな",
+          "nghia": "trọng đại"
+        },
+        {
+          "kanji": "シリアスな",
+          "doc": "しりあすな",
+          "nghia": "nghiêm túc / nghiêm trọng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "軽微な",
+          "doc": "けいびな",
+          "nghia": "nhẹ / không đáng kể"
+        }
+      ]
+    },
+    {
+      "kanji": "気楽な",
+      "doc": "きらくな",
+      "doc_marked": "きらくな",
+      "han_viet": "KHÍ LẠC",
+      "nghia": "thoải mái, nhàn hạ",
+      "vi_du": "寮に住むより一人暮らしの方が、お金はかかるが気楽でいい。(Sống một mình thì tốn tiền hơn ở ký túc xá nhưng lại thoải mái hơn.) 深刻になっても問題は解決しない。もっと気楽に考えよう。(Dù có làm nghiêm trọng lên thì vấn đề cũng không giải quyết được. Hãy suy nghĩ thoải mái/đơn giản hơn nào.)",
+      "vi_du_ruby": "寮に住むより一人暮らしの方が、お金はかかるが<ruby>気楽<rt>きらく</rt></ruby>でいい。(Sống một mình thì tốn tiền hơn ở ký túc xá nhưng lại thoải mái hơn.) 深刻になっても問題は解決しない。もっと<ruby>気楽<rt>きらく</rt></ruby>に考えよう。(Dù có làm nghiêm trọng lên thì vấn đề cũng không giải quyết được. Hãy suy nghĩ thoải mái/đơn giản hơn nào.)",
+      "dong_nghia": [
+        {
+          "kanji": "のんきな",
+          "doc": "のんきな",
+          "nghia": "vô tư lự"
+        },
+        {
+          "kanji": "プレッシャーのない",
+          "doc": "ぷれっしゃーのない",
+          "nghia": "không có áp lực"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "深刻な",
+          "doc": "しんこくな",
+          "nghia": "nghiêm trọng"
+        }
+      ]
+    },
+    {
+      "kanji": "安易な",
+      "doc": "あんいな",
+      "doc_marked": "あんいな",
+      "han_viet": "AN DỊ",
+      "nghia": "dễ dãi, hời hợt, đơn giản",
+      "vi_du": "今だけ楽しければいいというのは安易な考え方だ。(Quan niệm chỉ cần bây giờ vui là được thì đó là lối suy nghĩ quá hời hợt/dễ dãi.) インターネットの情報は安易に信用しないほうがいい。(Không nên dễ dãi tin tưởng vào những thông tin trên mạng.)",
+      "vi_du_ruby": "今だけ楽しければいいというのは<ruby>安易<rt>あんい</rt></ruby>な考え方だ。(Quan niệm chỉ cần bây giờ vui là được thì đó là lối suy nghĩ quá hời hợt/dễ dãi.) インターネットの情報は<ruby>安易<rt>あんい</rt></ruby>に信用しないほうがいい。(Không nên dễ dãi tin tưởng vào những thông tin trên mạng.)",
+      "dong_nghia": [
+        {
+          "kanji": "単純な",
+          "doc": "たんじゅんな",
+          "nghia": "đơn giản"
+        },
+        {
+          "kanji": "軽い",
+          "doc": "かるい",
+          "nghia": "nông cạn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "慎重な",
+          "doc": "しんちょうな",
+          "nghia": "thận trọng"
+        },
+        {
+          "kanji": "厳密な",
+          "doc": "げんみつな",
+          "nghia": "chặt chẽ"
+        }
+      ]
+    }
+  ]
+}
