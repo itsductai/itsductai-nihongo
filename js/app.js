@@ -482,6 +482,9 @@ function renderWeaknessMode() {
 function startWeaknessReview() {
   if (!currentWeaknessIds.length) return;
   setMode("flash");
+  // Ôn từ yếu là giới hạn khác (không phải ★), nên tắt trạng thái toggle ★ để
+  // tránh hiện sai là "đang lọc theo ★" trong khi thực ra đang lọc theo điểm yếu.
+  setFlashStarOnlyState(false);
   initFlashMode(currentWeaknessIds);
 }
 
@@ -807,6 +810,10 @@ function switchDeck(deckId) {
 
   if (App.quizTimerHandle) clearInterval(App.quizTimerHandle);
   if (App.matchTimerHandle) clearInterval(App.matchTimerHandle);
+
+  // Đổi bộ học khác -> luôn bắt đầu lại ở trạng thái học toàn bộ (tắt chế độ chỉ ★)
+  setFlashStarOnlyState(false);
+  setSrsStarOnlyState(false);
 
   renderNav();
   buildFieldConfigPanel();
@@ -1305,12 +1312,30 @@ function showFlashCompletionScreen() {
   }
 }
 
+// Cập nhật trạng thái nút toggle "★ Học/Ôn từ đã sao" — dùng chung cho mọi nơi
+// kích hoạt/tắt chế độ này (không chỉ nút bấm trực tiếp), để class CSS và text
+// trên nút luôn đồng bộ đúng với trạng thái thật.
+function setFlashStarOnlyState(active) {
+  const btn = document.getElementById("btnFlashStarOnly");
+  btn.classList.toggle("is-active", active);
+  btn.textContent = active ? "★ Đang học từ đã sao (bấm để tắt)" : "★ Học từ đã sao";
+}
+
+function setSrsStarOnlyState(active) {
+  const btn = document.getElementById("btnSrsStarOnly");
+  btn.classList.toggle("is-active", active);
+  btn.textContent = active ? "★ Đang ôn từ đã sao (bấm để tắt)" : "★ Ôn từ đã sao";
+}
+
 function flashRestartFull() {
-  initFlashMode(App.flashRestrictToIds);
+  // "Học lại toàn bộ" phải luôn học hết bộ, không giữ giới hạn ★ của phiên trước
+  setFlashStarOnlyState(false);
+  initFlashMode(null);
 }
 
 function flashRestartStarredOnly() {
   const starredIds = getStarredIdsForDeck(App.currentDeckId);
+  setFlashStarOnlyState(true);
   initFlashMode(starredIds);
 }
 
@@ -2442,20 +2467,41 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
   document.getElementById("btnFlashRestartFull").addEventListener("click", flashRestartFull);
   document.getElementById("btnFlashRestartStarredOnly").addEventListener("click", flashRestartStarredOnly);
+
   document.getElementById("btnFlashStarOnly").addEventListener("click", () => {
+    const isCurrentlyStarOnly = document.getElementById("btnFlashStarOnly").classList.contains("is-active");
+
+    if (isCurrentlyStarOnly) {
+      // Đang ở chế độ chỉ học ★ -> bấm lại để TẮT, quay về học toàn bộ bộ
+      setFlashStarOnlyState(false);
+      initFlashMode(null);
+      return;
+    }
+
     const starredIds = getStarredIdsForDeck(App.currentDeckId);
     if (!starredIds.length) {
       alert("Chưa có từ nào được đánh dấu ★ trong bộ này. Bấm ☆ trên góc thẻ để đánh dấu.");
       return;
     }
+    setFlashStarOnlyState(true);
     initFlashMode(starredIds);
   });
   document.getElementById("btnSrsStarOnly").addEventListener("click", () => {
+    const isCurrentlyStarOnly = document.getElementById("btnSrsStarOnly").classList.contains("is-active");
+
+    if (isCurrentlyStarOnly) {
+      // Đang ở chế độ chỉ ôn ★ -> bấm lại để TẮT, quay về ôn toàn bộ bộ
+      setSrsStarOnlyState(false);
+      initSrsMode(null);
+      return;
+    }
+
     const starredIds = getStarredIdsForDeck(App.currentDeckId);
     if (!starredIds.length) {
       alert("Chưa có từ nào được đánh dấu ★ trong bộ này.");
       return;
     }
+    setSrsStarOnlyState(true);
     initSrsMode(starredIds);
   });
 
