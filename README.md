@@ -62,7 +62,9 @@ Nếu quên bước 3, file mới sẽ không lỗi gì cả nhưng cũng **khô
       "nghia": "thay đổi hoàn toàn, đảo ngược",
       "vi_du": "留学の話が一転した。(Câu chuyện du học đã thay đổi hoàn toàn.)",
       "vi_du_ruby": "留学の話が<ruby>一転<rt>いってん</rt></ruby>した。(Câu chuyện du học đã thay đổi hoàn toàn.)",
-      "dong_nghia": [],
+      "dong_nghia": [
+        { "kanji": "逆転する", "doc": "ぎゃくてんする", "nghia": "đảo ngược tình huống" }
+      ],
       "trai_nghia": []
     }
   ]
@@ -77,9 +79,34 @@ Nếu quên bước 3, file mới sẽ không lỗi gì cả nhưng cũng **khô
 | `han_viet` | Có | Âm Hán Việt, viết hoa. Nếu từ thuần Nhật không có âm Hán Việt: ghi `"(thuần Nhật)"`. Nếu từ ngoại lai (katakana mượn tiếng Anh/Pháp...): ghi `"(từ ngoại lai)"`. |
 | `nghia` | Có | Nghĩa tiếng Việt. Không để trống — đây là field bắt buộc cho mọi chế độ học. |
 | `vi_du` | Có | Câu ví dụ tiếng Nhật kèm dịch tiếng Việt trong ngoặc, format: `câu tiếng Nhật。(dịch tiếng Việt.)` |
-| `vi_du_ruby` | Không | Giống `vi_du` nhưng từ vựng chính trong câu được bọc `<ruby>kanji<rt>cách đọc</rt></ruby>` để hiện furigana nhỏ phía trên khi hiển thị. Nếu để trống, app dùng `vi_du` thường (không furigana). Chỉ cần bọc đúng phần kanji của từ đang học, không cần bọc toàn câu. |
-| `dong_nghia` | Không | Mảng chuỗi các từ đồng nghĩa. Để `[]` nếu không có. |
-| `trai_nghia` | Không | Mảng chuỗi các từ trái nghĩa. Để `[]` nếu không có. |
+| `vi_du_ruby` | Không | Giống `vi_du` nhưng **mọi** kanji trong câu (không chỉ từ đang học) nên được bọc `<ruby>kanji<rt>cách đọc</rt></ruby>` để hiện furigana nhỏ phía trên — giúp biết cách đọc của cả các kanji khác xuất hiện trong câu, không chỉ từ chính. Nếu để trống, app dùng `vi_du` thường (không furigana). |
+| `dong_nghia` | Không | Mảng các từ đồng nghĩa. Hỗ trợ 2 cách viết — xem chi tiết dưới đây. |
+| `trai_nghia` | Không | Mảng các từ trái nghĩa. Hỗ trợ 2 cách viết — xem chi tiết dưới đây. |
+
+### Cách viết `dong_nghia` / `trai_nghia` — 2 format được hỗ trợ song song
+
+**Format mới (khuyến khích dùng)** — object đầy đủ, hiện được cả furigana nhỏ phía trên kanji và nghĩa tiếng Việt kèm theo ngay trong Flashcard/Bảng:
+
+```json
+"dong_nghia": [
+  { "kanji": "弱点", "doc": "じゃくてん", "nghia": "điểm yếu" },
+  { "kanji": "短所", "doc": "たんしょ", "nghia": "sở đoản" }
+]
+```
+
+| Field con | Bắt buộc | Giải thích |
+|---|---|---|
+| `kanji` | Có | Từ đồng/trái nghĩa, viết kanji (hoặc hiragana/katakana nếu từ đó không có kanji). |
+| `doc` | Không | Cách đọc — nếu có, app tự hiện furigana nhỏ phía trên kanji bằng `<ruby>`. Nếu để trống, chỉ hiện kanji không furigana. |
+| `nghia` | Không | Nghĩa tiếng Việt ngắn, hiện trong ngoặc đơn `（...）` ngay sau từ. Nếu để trống, chỉ hiện từ không kèm nghĩa. |
+
+**Format cũ (vẫn dùng được, không cần sửa lại dữ liệu cũ)** — chuỗi đơn giản, chỉ hiện kanji, không furigana không nghĩa:
+
+```json
+"dong_nghia": ["弱点", "短所"]
+```
+
+Hai format này **trộn lẫn được trong cùng một mảng** (ví dụ vài từ dùng object đầy đủ, vài từ cũ vẫn để chuỗi) — app tự nhận diện đúng từng phần tử, không cần đồng bộ toàn bộ file cùng lúc. Để trống `[]` nếu từ đó không có đồng/trái nghĩa.
 
 ---
 
@@ -95,11 +122,13 @@ Nếu quên bước 3, file mới sẽ không lỗi gì cả nhưng cũng **khô
       "nghia": "mặc dù..., dù... vẫn",
       "muc_do": "Trang trọng (văn viết, văn bản chính thức)",
       "cau_truc_ngu_phap": "N / Vる・Vた / Aい / Aな + にもかかわらず",
-      "vi_du": "<ruby>悪天候<rt>あくてんこう</rt></ruby>にもかかわらず、試合は行われた。(Mặc dù thời tiết xấu, trận đấu vẫn được diễn ra.)",
+      "vi_du": "<ruby>悪天候<rt>あくてんこう</rt></ruby>にもかかわらず、<ruby>試合<rt>しあい</rt></ruby>は<ruby>行<rt>おこな</rt></ruby>われた。(Mặc dù thời tiết xấu, trận đấu vẫn được diễn ra.)",
       "so_sanh_de_nham": [
         { "cautruc": "～のに", "khac_biet": "のに mang sắc thái cảm xúc cá nhân nhiều hơn, dùng cả văn nói; にもかかわらず khách quan, trang trọng hơn." }
       ],
-      "dong_nghia": ["～ものの"],
+      "dong_nghia": [
+        { "kanji": "～ものの", "doc": "", "nghia": "mặc dù... nhưng" }
+      ],
       "trai_nghia": []
     }
   ]
@@ -112,10 +141,10 @@ Nếu quên bước 3, file mới sẽ không lỗi gì cả nhưng cũng **khô
 | `nghia` | Có | Ý nghĩa, cách dùng bằng tiếng Việt. |
 | `muc_do` | Không | Mức độ trang trọng / văn nói hay văn viết. Chuỗi tự do (ví dụ "Trang trọng", "Thân mật", "Trung lập"). |
 | `cau_truc_ngu_phap` | Không | Công thức ngữ pháp (V/A/N + gì), hiển thị dạng monospace nổi bật trong card. |
-| `vi_du` | Có | Câu ví dụ. Có thể tự bọc `<ruby>kanji<rt>đọc</rt></ruby>` thủ công nếu muốn furigana — không có field `vi_du_ruby` riêng cho NGUPHAP. |
+| `vi_du` | Có | Câu ví dụ. **Mọi** kanji trong câu nên được bọc `<ruby>kanji<rt>đọc</rt></ruby>` để hiện furigana — không chỉ phần liên quan tới cấu trúc đang học. Không có field `vi_du_ruby` riêng cho NGUPHAP, viết trực tiếp ruby trong `vi_du`. |
 | `so_sanh_de_nham` | Không | Mảng object `{cautruc, khac_biet}` liệt kê các cấu trúc dễ nhầm và điểm khác biệt. Để `[]` nếu không có. |
-| `dong_nghia` | Không | Mảng chuỗi các cấu trúc đồng nghĩa. |
-| `trai_nghia` | Không | Mảng chuỗi các cấu trúc trái nghĩa. |
+| `dong_nghia` | Không | Mảng các cấu trúc đồng nghĩa. Cùng 2 format với TUVUNG ở mục 3 — object `{kanji, doc, nghia}` (đọc/nghĩa có thể để `""`/bỏ trống nếu cấu trúc không cần furigana) hoặc chuỗi đơn giản, trộn lẫn được trong cùng mảng. |
+| `trai_nghia` | Không | Mảng các cấu trúc trái nghĩa. Cùng quy tắc format với `dong_nghia`. |
 
 **Lưu ý quan trọng:** mode "Gõ hiragana" và "Ghép thẻ" (Match) chỉ thiết kế cho TUVUNG, không xuất hiện trong nav khi đang học bộ NGUPHAP (vì cấu trúc ngữ pháp thường dài, không phù hợp kiểu chơi ghép đôi ngắn).
 
@@ -261,6 +290,7 @@ Khi nhập vào máy khác (đã có sẵn cùng file JSON gốc trong `tailieu/
 
 - Nút **⚙ Mặt thẻ** (Flashcard mode): popup chọn field nào hiện ở mặt trước (chỉ chọn 1, radio button) và mặt sau (chọn nhiều, checkbox) — riêng theo từng TYPE. Lưu `localStorage` (`n2vocab_fieldconfig`).
 - Nút **☷ Cột** (Bảng mode): mỗi cột có 2 control riêng — checkbox ẩn/hiện hẳn cột khỏi bảng, và 1 switch riêng "ẩn để tự kiểm tra" (chỉ áp dụng các cột không phải định danh chính: đọc, hán việt, nghĩa, ví dụ, mức độ). Khi bật switch peek, nội dung cột đó bị che bởi 1 lớp overlay (không làm lệch chiều cao hàng), hiện ra khi rê chuột vào. Lưu `localStorage` (`n2vocab_colconfig`, `n2vocab_peekcols`).
+- Checkbox **⤮ Ngẫu nhiên** (có ở cả Flashcard và SRS): bật thì học theo thứ tự xáo trộn ngẫu nhiên, tắt thì học đúng theo thứ tự từ xuất hiện trong file JSON gốc. Bật/tắt áp dụng cho **lần học tiếp theo** (đổi bộ, restart, hoặc bắt đầu phiên mới) — không làm xáo trộn lại giữa lúc đang học để tránh mất tiến độ phiên hiện tại. Lưu `localStorage` (`n2vocab_shuffle_enabled`), riêng theo Flashcard/SRS.
 
 ---
 
@@ -366,6 +396,9 @@ Nút ★ xuất hiện ở góc trên-phải của thẻ Flashcard (cả 2 mặt
 
 **Cách dùng:**
 - Trong **Bảng**: chọn filter "★ Đã đánh dấu" ở dropdown để chỉ xem các từ đã đánh dấu.
-- Trong **Flashcard**: sau khi học hết 1 phiên (màn hình hoàn thành), có nút "Chỉ học các từ đã ★" để bắt đầu phiên mới chỉ gồm các từ đó — tiện khi muốn tập trung ôn lại đúng những từ mình thấy khó/quan trọng mà không phải lọc tay.
+- Trong **Flashcard**: có nút toggle "★ Học từ đã sao" ở đầu trang — bấm để **bật** chế độ chỉ học các từ đã ★ (nút chuyển sang màu vàng, đổi text thành "★ Đang học từ đã sao (bấm để tắt)"); bấm lại lần nữa để **tắt**, quay về học toàn bộ bộ. Ngoài ra, sau khi học hết 1 phiên (màn hình hoàn thành), có nút riêng "Chỉ học các từ đã ★" để bắt đầu phiên mới chỉ gồm các từ đó.
+- Trong **SRS (Ôn tập)**: tương tự, có nút toggle "★ Ôn từ đã sao" hoạt động cùng cơ chế bật/tắt.
+
+Nếu đổi sang bộ học khác, hoặc dùng "Ôn riêng từ yếu" (mục điểm yếu), trạng thái toggle ★ sẽ tự động tắt — vì đó là 2 cách giới hạn khác nhau, không nên hiển thị lẫn vào nhau.
 
 Dữ liệu đánh dấu lưu `localStorage` (`n2vocab_starred`, theo từng bộ riêng biệt), và được gồm trong file "Xuất tiến độ" để giữ lại khi chuyển máy khác.
