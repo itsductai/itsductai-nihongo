@@ -49,7 +49,7 @@
     },
     {
       "cautruc": "〜ものの",
-      "nghia": "Mặc dù... (nhượng bộ nhẹ, 1 câu đơn, cùng chủ ngữ)",
+      "nghia": "...nhưng (nhượng bộ nhẹ, vẫn 1 câu, cùng chủ thể)",
       "muc_do": "Trang trọng (văn viết)",
       "cau_truc_ngu_phap": "V-た/Aい/Aな + ものの",
       "vi_du": "<ruby>合格<rt>ごうかく</rt></ruby>したものの、まだ<ruby>実感<rt>じっかん</rt></ruby>がない。(Mặc dù đã đỗ, nhưng tôi vẫn chưa có cảm giác thật.)",
@@ -379,7 +379,7 @@
     },
     {
       "cautruc": "〜ことに",
-      "nghia": "Thật là...! (cảm thán cảm xúc, đầu câu)",
+      "nghia": "Điều đáng... là / Thật đáng... (cảm thán, đứng ĐẦU câu)",
       "muc_do": "Trang trọng (văn viết)",
       "cau_truc_ngu_phap": "Aい/Aな + ことに + câu",
       "vi_du": "<ruby>嬉<rt>うれ</rt></ruby>しいことに、<ruby>試験<rt>しけん</rt></ruby>に<ruby>合格<rt>ごうかく</rt></ruby>した。(Thật vui là tôi đã đỗ kỳ thi.)",
@@ -529,7 +529,7 @@
     },
     {
       "cautruc": "〜といわず〜といわず／〜はともかく",
-      "nghia": "Bất kể... hay...; Khoan nói đến... (khác phạm vi áp dụng)",
+      "nghia": "Cả A và B đều (không phân biệt) ｜ Khoan/tạm không nói đến...",
       "muc_do": "Trang trọng (văn viết)",
       "cau_truc_ngu_phap": "N1といわずN2といわず ｜ N + はともかく",
       "vi_du": "<ruby>平日<rt>へいじつ</rt></ruby>といわず<ruby>休日<rt>きゅうじつ</rt></ruby>といわず、いつも<ruby>忙<rt>いそが</rt></ruby>しい。(Bất kể ngày thường hay ngày nghỉ, lúc nào cũng bận.)",
@@ -901,7 +901,7 @@
     },
     {
       "cautruc": "とはいえ",
-      "nghia": "Dù vậy / Mặc dù vậy (nhượng bộ nhẹ, trang trọng)",
+      "nghia": "Dù vậy / Tuy vậy (đứng đầu câu mới, nối ý)",
       "muc_do": "Trang trọng",
       "cau_truc_ngu_phap": "とはいえ + câu",
       "vi_du": "<ruby>給料<rt>きゅうりょう</rt></ruby>が<ruby>上<rt>あ</rt></ruby>がった。とはいえ、<ruby>物価<rt>ぶっか</rt></ruby>も<ruby>上<rt>あ</rt></ruby>がっている。(Lương đã tăng. Dù vậy, giá cả cũng đang tăng.)",
