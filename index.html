@@ -313,15 +313,15 @@
     <!-- ---- STATS MODE — thống kê tổng quan toàn hệ thống ---- -->
     <section class="view hidden" id="view-stats">
       <div class="view-head">
-        <div class="weakness-title">Thống kê tổng quan</div>
+        <div class="weakness-title">Thống kê tổng quan — nhìn 1 lần biết hết</div>
       </div>
 
       <div class="stats-section">
-        <div class="stats-section-title">📚 Tổng quan tất cả bộ từ vựng / ngữ pháp</div>
+        <div class="stats-section-title">📚 Tổng quan tất cả bộ từ vựng / ngữ pháp <span class="stats-section-hint">(bấm tên bộ để ôn ngay)</span></div>
         <div class="stats-overview-table-wrap">
           <table class="stats-overview-table">
             <thead>
-              <tr><th>Bộ</th><th>Đã thuộc</th><th>Đang học</th><th>Chưa học</th><th>% hoàn thành</th></tr>
+              <tr><th>Bộ</th><th>Tiến độ</th><th>% đã thuộc</th></tr>
             </thead>
             <tbody id="statsOverviewBody"></tbody>
           </table>
@@ -329,17 +329,10 @@
       </div>
 
       <div class="stats-section">
-        <div class="stats-section-title" id="statsCurrentDeckTitle">📖 Chi tiết bộ đang mở</div>
-        <div class="stats-current-deck-grid" id="statsCurrentDeckGrid"></div>
-        <div class="stats-eta" id="statsEta"></div>
-        <div class="stats-weakness-mini" id="statsWeaknessMini"></div>
-      </div>
-
-      <div class="stats-section">
-        <div class="stats-section-title">📝 Lịch sử làm đề thi</div>
+        <div class="stats-section-title">📝 Đề thi <span class="stats-section-hint">(bấm tên đề để làm ngay)</span></div>
         <div id="statsExamEmpty" class="empty-state hidden">
           <div class="empty-icon">▤</div>
-          <div>Chưa làm đề thi nào.</div>
+          <div>Chưa có đề thi nào trong hệ thống.</div>
         </div>
         <div class="stats-exam-list" id="statsExamList"></div>
       </div>
