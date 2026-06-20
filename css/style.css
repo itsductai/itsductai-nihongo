@@ -798,3 +798,50 @@ tbody tr:last-child td { border-bottom: none; }
      không bị nút ★ ở góc che mất chữ đầu dòng. */
   .card-face-content { padding: 40px 20px 24px; }
 }
+
+/* ===== EXAM: chế độ chấm điểm, giải thích đáp án, bảng review ===== */
+.exam-mode-modal-box { max-width: 480px; }
+.exam-mode-choice {
+  display: block; width: 100%; text-align: left; background: var(--bg-3);
+  border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px;
+  cursor: pointer; margin-bottom: 12px; transition: border-color 0.15s, background 0.15s;
+}
+.exam-mode-choice:last-child { margin-bottom: 0; }
+.exam-mode-choice:hover { border-color: var(--accent); background: var(--accent-soft); }
+.exam-mode-choice-title { font-size: 14.5px; font-weight: 700; color: var(--text-0); margin-bottom: 6px; }
+.exam-mode-choice-desc { font-size: 12px; color: var(--text-2); line-height: 1.6; }
+
+.exam-explain-row { display: flex; gap: 10px; justify-content: center; margin-top: 16px; }
+.exam-explain-box { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+.exam-explain-item { border-radius: 10px; padding: 12px 14px; text-align: left; }
+.exam-explain-item.is-correct { background: var(--good-soft); border: 1px solid var(--good); }
+.exam-explain-item.is-wrong { background: var(--bg-3); border: 1px solid var(--border); }
+.exam-explain-item-head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.exam-explain-mark { font-weight: 700; font-size: 14px; }
+.exam-explain-item.is-correct .exam-explain-mark { color: var(--good); }
+.exam-explain-item.is-wrong .exam-explain-mark { color: var(--text-2); }
+.exam-explain-opt-text { font-weight: 600; font-size: 13.5px; color: var(--text-0); }
+.exam-explain-item-body { font-size: 12.5px; color: var(--text-1); line-height: 1.6; }
+
+.was-chosen-neutral { box-shadow: inset 0 0 0 2px var(--accent); }
+
+.exam-review-table-section { margin: 20px 0; text-align: left; }
+.exam-review-table-wrap { display: flex; flex-direction: column; gap: 12px; }
+.exam-review-row {
+  background: var(--bg-3); border-radius: 10px; padding: 14px 16px; border-left: 3px solid var(--border);
+}
+.exam-review-row.is-correct { border-left-color: var(--good); }
+.exam-review-row.is-wrong { border-left-color: var(--bad); }
+.exam-review-row-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
+.exam-review-mark { font-weight: 700; font-size: 14px; }
+.exam-review-row.is-correct .exam-review-mark { color: var(--good); }
+.exam-review-row.is-wrong .exam-review-mark { color: var(--bad); }
+.exam-review-qnum { font-size: 12px; font-weight: 700; color: var(--text-2); flex-shrink: 0; }
+.exam-review-qtext { font-size: 13px; color: var(--text-0); white-space: pre-wrap; }
+.exam-review-answers { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.exam-review-answer-chip { font-size: 11.5px; padding: 4px 10px; border-radius: 10px; font-weight: 600; }
+.exam-review-answer-chip.is-correct { background: var(--good-soft); color: var(--good); }
+.exam-review-answer-chip.is-wrong { background: var(--bad-soft); color: var(--bad); }
+.exam-review-explain { background: var(--bg-2); border-radius: 8px; padding: 10px 12px; font-size: 12px; color: var(--text-1); line-height: 1.7; }
+.exam-review-explain-line { margin-bottom: 4px; }
+.exam-review-explain-line:last-child { margin-bottom: 0; }
