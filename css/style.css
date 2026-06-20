@@ -705,3 +705,60 @@ tbody tr:last-child td { border-bottom: none; }
 #app.focus-mode .speed-toggle { display: none; }
 
 .ruby-hint { font-size: 11px; color: var(--text-2); margin-top: 4px; line-height: 1.5; }
+
+/* ===== STATS MODE (trang thống kê tổng quan) ===== */
+.stats-section {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px 20px; margin-bottom: 18px;
+}
+.stats-section-title { font-size: 14px; font-weight: 700; color: var(--text-0); margin-bottom: 14px; }
+
+.stats-overview-table-wrap { overflow-x: auto; }
+.stats-overview-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.stats-overview-table th {
+  text-align: left; padding: 8px 10px; color: var(--text-2); font-size: 11.5px;
+  text-transform: uppercase; letter-spacing: 0.03em; border-bottom: 1px solid var(--border);
+}
+.stats-overview-table td { padding: 10px; border-bottom: 1px solid var(--border); }
+.stats-deck-name { font-weight: 600; color: var(--text-0); }
+.stats-current-tag { font-size: 10.5px; color: var(--accent); font-weight: 400; }
+.is-current-deck-row { background: var(--accent-soft); }
+
+.stats-pct-bar-wrap { display: flex; align-items: center; gap: 8px; min-width: 140px; }
+.stats-pct-bar { flex: 1; height: 8px; background: var(--bg-3); border-radius: 4px; overflow: hidden; }
+.stats-pct-bar-fill { height: 100%; background: var(--good); border-radius: 4px; transition: width 0.3s; }
+.stats-pct-label { font-size: 12px; font-weight: 600; color: var(--text-1); white-space: nowrap; }
+
+.stats-current-deck-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 14px; }
+.stats-stat-box {
+  background: var(--bg-3); border-radius: 10px; padding: 14px; text-align: center;
+}
+.stats-stat-box.is-good { background: var(--good-soft); }
+.stats-stat-box.is-good .stats-stat-num { color: var(--good); }
+.stats-stat-num { font-size: 24px; font-weight: 700; color: var(--text-0); }
+.stats-stat-label { font-size: 11px; color: var(--text-2); margin-top: 4px; }
+
+.stats-eta { font-size: 13px; color: var(--text-1); padding: 10px 0; line-height: 1.6; }
+
+.stats-weakness-mini-title { font-size: 12px; color: var(--text-2); font-weight: 600; margin-bottom: 8px; }
+.stats-weak-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.stats-weak-chip {
+  background: var(--bad-soft); color: var(--bad); font-size: 12px; font-weight: 600;
+  padding: 5px 10px; border-radius: 14px; display: inline-flex; align-items: center; gap: 5px;
+}
+.stats-weak-chip-count { font-weight: 700; }
+
+.stats-exam-list { display: flex; flex-direction: column; gap: 10px; }
+.stats-exam-row {
+  background: var(--bg-3); border-radius: 10px; padding: 12px 16px;
+}
+.stats-exam-row-title { font-size: 13.5px; font-weight: 600; color: var(--text-0); margin-bottom: 8px; }
+.stats-exam-row-stats { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--text-1); }
+.stats-exam-stat b { color: var(--text-0); }
+.stats-exam-stat-date { color: var(--text-2); margin-left: auto; }
+
+@media (max-width: 860px) {
+  .stats-current-deck-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-exam-row-stats { font-size: 11px; }
+  .stats-exam-stat-date { margin-left: 0; width: 100%; }
+}
