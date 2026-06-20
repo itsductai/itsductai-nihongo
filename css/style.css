@@ -224,6 +224,8 @@ rt {
 .cf-hanviet { font-size: 12.5px; letter-spacing: 0.06em; color: var(--warn); font-weight: 700; text-transform: uppercase; margin-bottom: 10px; }
 .cf-nghia { font-size: 20px; font-weight: 600; color: var(--text-0); margin-bottom: 14px; line-height: 1.4; }
 .cf-vidu { font-size: 13.5px; color: var(--text-1); line-height: 1.7; max-width: 460px; margin-bottom: 8px; }
+.cf-vidu-line { margin-bottom: 6px; }
+.cf-vidu-line:last-child { margin-bottom: 0; }
 .cf-block-label { font-size: 10.5px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.05em; margin: 10px 0 4px; font-weight: 700; }
 .cf-synonyms { font-size: 13px; color: var(--good); }
 .cf-antonyms { font-size: 13px; color: var(--bad); }
