@@ -281,6 +281,11 @@
         <div class="quiz-question exam-question" id="examQuestion"></div>
         <div class="quiz-options" id="examOptions"></div>
         <div class="exam-history-note hidden" id="examHistoryNote"></div>
+        <div class="exam-explain-row hidden" id="examExplainRow">
+          <button class="ghost-btn" id="btnExamShowExplain">💡 Xem giải thích đáp án</button>
+          <button class="primary-btn hidden" id="btnExamContinue">Tiếp tục →</button>
+        </div>
+        <div class="exam-explain-box hidden" id="examExplainBox"></div>
       </div>
       <div id="examResult" class="quiz-result hidden">
         <div class="quiz-result-title">Hoàn thành đề thi!</div>
@@ -289,6 +294,10 @@
         <div class="exam-speed-summary hidden" id="examSpeedSummary"></div>
         <div class="exam-mistakes-section" id="examMistakesSection"></div>
         <div class="exam-weakness-section" id="examWeaknessSection"></div>
+        <div class="exam-review-table-section hidden" id="examReviewTableSection">
+          <div class="exam-mistakes-title">Bảng kết quả chi tiết từng câu</div>
+          <div class="exam-review-table-wrap" id="examReviewTableWrap"></div>
+        </div>
         <button class="primary-btn" id="btnExamRestart">Làm lại đề này</button>
       </div>
     </section>
@@ -358,6 +367,25 @@
       <div class="modal-actions">
         <button class="ghost-btn" id="btnEditCancel">Hủy</button>
         <button class="primary-btn" id="btnEditSave">Lưu thay đổi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODAL chọn chế độ chấm điểm khi bắt đầu 1 đề thi ===== -->
+  <div class="modal-overlay hidden" id="examModeModalOverlay">
+    <div class="modal-box exam-mode-modal-box">
+      <div class="modal-head">
+        <div class="modal-title">Chọn cách chấm điểm</div>
+      </div>
+      <div class="modal-body">
+        <button class="exam-mode-choice" id="btnExamModeInstant">
+          <div class="exam-mode-choice-title">⚡ Chấm ngay tại chỗ</div>
+          <div class="exam-mode-choice-desc">Mỗi câu chấm đúng/sai ngay sau khi chọn, xem giải thích ngay, tự bấm "Tiếp tục" sang câu kế. Câu sai sẽ quay lại làm tiếp tới khi đúng.</div>
+        </button>
+        <button class="exam-mode-choice" id="btnExamModeReview">
+          <div class="exam-mode-choice-title">📝 Chấm sửa cuối bài</div>
+          <div class="exam-mode-choice-desc">Làm hết toàn bộ đề theo thứ tự gốc, không biết đúng/sai lúc đang làm. Cuối bài hiện bảng kết quả đầy đủ kèm giải thích từng câu sai.</div>
+        </button>
       </div>
     </div>
   </div>
