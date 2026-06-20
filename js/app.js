@@ -110,7 +110,7 @@ const FIELD_META = {
     doc: { label: "Hiragana (trường âm đỏ)", render: (w) => `<div class="cf-doc">${renderChoon(w.doc_marked || w.doc)}</div>` },
     han_viet: { label: "Hán Việt", render: (w) => `<div class="cf-hanviet">${w.han_viet}</div>` },
     nghia: { label: "Nghĩa tiếng Việt", render: (w) => `<div class="cf-nghia">${w.nghia}</div>` },
-    vi_du: { label: "Ví dụ (furigana)", render: (w) => `<div class="cf-vidu">${renderChoon(w.vi_du_ruby || w.vi_du)}</div>` },
+    vi_du: { label: "Ví dụ (furigana)", render: (w) => `<div class="cf-vidu">${renderExampleSentences(w.vi_du_ruby || w.vi_du)}</div>` },
     dong_nghia: {
       label: "Từ đồng nghĩa",
       render: (w) => (w.dong_nghia && w.dong_nghia.length
@@ -127,7 +127,7 @@ const FIELD_META = {
     nghia: { label: "Ý nghĩa", render: (w) => `<div class="cf-nghia">${w.nghia}</div>` },
     muc_do: { label: "Mức độ trang trọng", render: (w) => (w.muc_do ? `<div class="cf-mucdo">${w.muc_do}</div>` : "") },
     cau_truc_ngu_phap: { label: "Công thức ngữ pháp", render: (w) => (w.cau_truc_ngu_phap ? `<div class="cf-ngphap-structure">${w.cau_truc_ngu_phap}</div>` : "") },
-    vi_du: { label: "Ví dụ (furigana)", render: (w) => `<div class="cf-vidu">${renderChoon(w.vi_du)}</div>` },
+    vi_du: { label: "Ví dụ (furigana)", render: (w) => `<div class="cf-vidu">${renderExampleSentences(w.vi_du)}</div>` },
     so_sanh_de_nham: {
       label: "So sánh cấu trúc dễ nhầm",
       render: (w) => {
@@ -203,6 +203,17 @@ const TABLE_COL_META = {
 function renderChoon(text) {
   if (!text) return "";
   return text.replace(/\*\*(.+?)\*\*/g, '<span class="choon">$1</span>');
+}
+
+// Tách 1 chuỗi vi_du/vi_du_ruby chứa NHIỀU câu ví dụ viết liền nhau (cách nhau
+// bằng khoảng trắng sau dấu ")") thành từng dòng riêng — chỉ xử lý ở tầng hiển
+// thị, KHÔNG cần sửa lại cấu trúc dữ liệu JSON gốc đã có. An toàn với câu chỉ
+// có 1 ví dụ (không có gì để tách) và với các thẻ <ruby> bên trong.
+function renderExampleSentences(text) {
+  if (!text) return "";
+  const sentences = text.split(/(?<=\)) +(?=\S)/).filter(Boolean);
+  if (sentences.length <= 1) return renderChoon(text);
+  return sentences.map((s) => `<div class="cf-vidu-line">${renderChoon(s)}</div>`).join("");
 }
 
 function stripChoonMarks(text) {
@@ -649,6 +660,7 @@ function renderStatsExamHistory() {
 
   const rows = examIds.map((examId) => {
     const exam = App.exams.find((e) => e.id === examId);
+    if (!exam) return ""; // đề đã bị xóa khỏi dethi/index.json -> bỏ qua an toàn, không crash
     const s = stats[examId];
     const dateLabel = s.lastCompletedAt ? new Date(s.lastCompletedAt).toLocaleString("vi-VN") : "—";
     const timeLabel = s.lastSeconds ? fmtTime(s.lastSeconds) : "—";
@@ -1568,7 +1580,7 @@ function renderTable() {
       const colMeta = meta[col];
       let raw = w[col] || "";
       if (col === "doc") raw = renderChoon(w.doc_marked || w.doc);
-      if (col === "vi_du") raw = renderChoon(w.vi_du_ruby || w.vi_du);
+      if (col === "vi_du") raw = renderExampleSentences(w.vi_du_ruby || w.vi_du);
       if (col === "dong_nghia" || col === "trai_nghia") {
         raw = w[col] && w[col].length ? renderSynonymList(w[col]) : "";
       }
