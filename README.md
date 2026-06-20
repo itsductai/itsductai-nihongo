@@ -174,7 +174,13 @@ Trường âm (âm kéo dài trong tiếng Nhật) được tô đỏ bằng cá
     {
       "de_bai": "次の文の＿＿＿の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n会議の内容を簡潔にまとめてください。",
       "options": ["かんせつ", "かんけつ", "かんきつ", "かんかつ"],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「かんせつ」là cách đọc của 「間接」(gián tiếp), không phải 「簡潔」.",
+        "Đúng. 「簡潔」đọc là 「かんけつ」, nghĩa là ngắn gọn, súc tích.",
+        "Sai. 「かんきつ」là cách đọc của 「柑橘」(họ cam quýt).",
+        "Sai. 「かんかつ」là cách đọc của 「管轄」(quản hạt)."
+      ]
     }
   ]
 }
@@ -187,12 +193,14 @@ Trường âm (âm kéo dài trong tiếng Nhật) được tô đỏ bằng cá
 | `questions[].de_bai` | Có | Đề bài. Dùng `\n` để xuống dòng nếu câu dài (ví dụ phần hướng dẫn + câu cần chọn riêng dòng). |
 | `questions[].options` | Có | Mảng **đúng 4 chuỗi** đáp án. |
 | `questions[].dap_an_dung` | Có | **Index 0-based** của đáp án đúng trong `options` (0 = đáp án thứ 1, 1 = đáp án thứ 2, 2 = thứ 3, 3 = thứ 4). |
+| `questions[].giai_thich` | Không | Mảng **đúng 4 chuỗi**, theo cùng thứ tự index với `options` — giải thích vì sao đáp án đó đúng/sai. Nếu để trống hoặc bỏ field này, nút "Xem giải thích" sẽ không xuất hiện cho câu đó (không bắt buộc viết cho mọi câu, có thể thêm dần). |
 
-**Cơ chế làm bài:**
-- Thứ tự 4 đáp án được xáo trộn ngẫu nhiên mỗi lần hiện câu (tránh học vẹt vị trí đáp án).
-- Trả lời sai → câu đó bị đẩy xuống cuối hàng đợi để làm lại, đến khi đúng mới được tính qua hẳn.
-- Điểm chỉ cộng 1 lần cho mỗi câu khi trả lời đúng **lần đầu tiên** — làm lại sau khi đã từng đúng không cộng thêm điểm.
-- Không có khái niệm "đề thi sai" hay "trượt" — đề chỉ kết thúc khi mọi câu trong hàng đợi đã được trả lời đúng ít nhất 1 lần.
+**Cơ chế làm bài — chọn 1 trong 2 chế độ chấm mỗi khi bắt đầu đề (modal hỏi khi chọn đề từ dropdown):**
+
+- **⚡ Chấm ngay tại chỗ**: trả lời → tô đúng/sai ngay, có nút "Xem giải thích" + nút "Tiếp tục →" để tự qua câu kế (không tự động chuyển). Trả lời sai → câu đó bị đẩy xuống cuối hàng đợi để làm lại, đến khi đúng mới tính qua hẳn. Điểm chỉ cộng 1 lần khi đúng **lần đầu tiên**. Cuối đề hiện đầy đủ 2 mốc thời gian (lượt đầu / sửa lại câu sai) như trước.
+- **📝 Chấm sửa cuối bài**: làm hết toàn bộ đề theo **đúng 1 lượt duy nhất** theo thứ tự gốc, không biết đúng/sai lúc đang làm, không lặp lại câu sai. Cuối đề hiện 1 bảng đầy đủ: mỗi câu kèm đáp án bạn đã chọn, đáp án đúng, và giải thích (nếu có) — chỉ hiện giải thích cho câu sai.
+
+Thứ tự 4 đáp án luôn được xáo trộn ngẫu nhiên mỗi lần hiện câu (tránh học vẹt vị trí đáp án). Không có khái niệm "đề thi sai" hay "trượt" — đề chỉ kết thúc khi đã đi hết hàng đợi (chế độ Chấm ngay) hoặc hết 1 lượt (chế độ Chấm cuối bài).
 
 ---
 
