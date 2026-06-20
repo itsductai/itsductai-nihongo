@@ -545,128 +545,129 @@ function startWeaknessReview() {
    không tạo thêm state riêng nào — luôn tính lại tươi mỗi lần mở trang.
 =================================================================== */
 
-// Tính % đã thuộc/đang học/chưa học cho 1 bộ cụ thể (dùng progress riêng của
-// bộ đó, không phải App.progress hiện tại — vì người dùng có thể đang xem
-// thống kê của bộ khác với bộ đang mở).
+// Tính số liệu đầy đủ cho 1 bộ: known/learning/fresh (để vẽ thanh 3 màu),
+// due (đến hạn ôn ngay) và % đã thuộc — dùng progress riêng của bộ đó
+// (không phải App.progress hiện tại), vì bảng tổng quan hiện MỌI bộ cùng lúc.
 function computeDeckStats(deck) {
   const progress = SRS.loadProgress(deck.id);
-  let known = 0, learning = 0, fresh = 0;
+  let known = 0, learning = 0, fresh = 0, due = 0;
   deck.words.forEach((w) => {
     const entry = SRS.getEntry(progress, w._id);
     const st = SRS.status(entry);
     if (st === "known") known++;
     else if (st === "learning") learning++;
     else fresh++;
+    if (entry.seen && SRS.isDue(entry)) due++;
   });
   const total = deck.words.length || 1;
-  const pct = Math.round((known / total) * 100);
-  return { known, learning, fresh, total: deck.words.length, pct };
+  const pctKnown = Math.round((known / total) * 100);
+  const pctLearning = Math.round((learning / total) * 100);
+  const pctFresh = 100 - pctKnown - pctLearning;
+  return { known, learning, fresh, due, total: deck.words.length, pctKnown, pctLearning, pctFresh };
 }
 
 function renderStatsMode() {
   renderStatsOverviewTable();
-  renderStatsCurrentDeck();
   renderStatsExamHistory();
 }
 
+// Bảng tổng quan: mỗi bộ 1 dòng, có thanh ngang 3 màu (đã thuộc/đang học/chưa
+// học) ngay trong bảng — không cần mở từng bộ ra mới biết. Nhấn tên bộ -> nhảy
+// thẳng sang SRS của bộ đó để ôn ngay những thẻ đến hạn.
 function renderStatsOverviewTable() {
   const tbody = document.getElementById("statsOverviewBody");
   tbody.innerHTML = "";
-  App.decks.forEach((deck) => {
-    const s = computeDeckStats(deck);
+
+  // Sắp theo % đã thuộc tăng dần -> bộ yếu nhất/ít học nhất hiện lên đầu,
+  // giúp nhìn 1 cái biết ngay nên ưu tiên học bộ nào.
+  const decksWithStats = App.decks.map((deck) => ({ deck, s: computeDeckStats(deck) }));
+  decksWithStats.sort((a, b) => a.s.pctKnown - b.s.pctKnown);
+
+  decksWithStats.forEach(({ deck, s }) => {
     const tr = document.createElement("tr");
     if (deck.id === App.currentDeckId) tr.classList.add("is-current-deck-row");
+
+    const dueNote = s.due > 0 ? `<span class="stats-due-badge">${s.due} cần ôn</span>` : "";
+    const typeTag = deck.type === "NGUPHAP" ? "Ngữ pháp" : "Từ vựng";
+
     tr.innerHTML = `
-      <td class="stats-deck-name">${deck.title}${deck.id === App.currentDeckId ? ' <span class="stats-current-tag">(đang mở)</span>' : ""}</td>
-      <td>${s.known}</td>
-      <td>${s.learning}</td>
-      <td>${s.fresh}</td>
-      <td>
-        <div class="stats-pct-bar-wrap">
-          <div class="stats-pct-bar"><div class="stats-pct-bar-fill" style="width:${s.pct}%"></div></div>
-          <span class="stats-pct-label">${s.pct}%</span>
+      <td class="stats-deck-name-cell">
+        <button class="stats-deck-link" data-jump-deck="${deck.id}">${deck.title}</button>
+        <span class="stats-deck-type-tag">${typeTag}</span>
+        ${deck.id === App.currentDeckId ? '<span class="stats-current-tag">(đang mở)</span>' : ""}
+        ${dueNote}
+      </td>
+      <td class="stats-bar-cell">
+        <div class="stats-hbar" title="Đã thuộc: ${s.known} · Đang học: ${s.learning} · Chưa học: ${s.fresh}">
+          <div class="stats-hbar-seg stats-hbar-known" style="width:${s.pctKnown}%"></div>
+          <div class="stats-hbar-seg stats-hbar-learning" style="width:${s.pctLearning}%"></div>
+          <div class="stats-hbar-seg stats-hbar-fresh" style="width:${s.pctFresh}%"></div>
+        </div>
+        <div class="stats-hbar-legend">
+          <span><i class="stats-dot stats-dot-known"></i>${s.known} thuộc</span>
+          <span><i class="stats-dot stats-dot-learning"></i>${s.learning} đang học</span>
+          <span><i class="stats-dot stats-dot-fresh"></i>${s.fresh} chưa học</span>
         </div>
       </td>
+      <td class="stats-pct-cell">${s.pctKnown}%</td>
     `;
     tbody.appendChild(tr);
   });
-}
 
-function renderStatsCurrentDeck() {
-  const deck = App.decks.find((d) => d.id === App.currentDeckId);
-  if (!deck) return;
-
-  document.getElementById("statsCurrentDeckTitle").textContent = `📖 Chi tiết: ${deck.title}`;
-
-  let due = 0, newCount = 0, known = 0, learning = 0;
-  deck.words.forEach((w) => {
-    const entry = SRS.getEntry(App.progress, w._id);
-    const st = SRS.status(entry);
-    if (st === "known") known++;
-    else if (st === "learning") learning++;
-    if (!entry.seen) newCount++;
-    else if (SRS.isDue(entry)) due++;
+  tbody.querySelectorAll("[data-jump-deck]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const deckId = btn.dataset.jumpDeck;
+      if (deckId !== App.currentDeckId) {
+        switchDeck(deckId);
+      }
+      setMode("srs");
+    });
   });
-
-  const grid = document.getElementById("statsCurrentDeckGrid");
-  grid.innerHTML = `
-    <div class="stats-stat-box"><div class="stats-stat-num">${due}</div><div class="stats-stat-label">thẻ đến hạn ôn ngay</div></div>
-    <div class="stats-stat-box"><div class="stats-stat-num">${newCount}</div><div class="stats-stat-label">từ mới chưa học</div></div>
-    <div class="stats-stat-box"><div class="stats-stat-num">${learning}</div><div class="stats-stat-label">đang học</div></div>
-    <div class="stats-stat-box is-good"><div class="stats-stat-num">${known}</div><div class="stats-stat-label">đã thuộc</div></div>
-  `;
-
-  // Ước tính thời gian học hết các từ MỚI còn lại: dựa trên tốc độ SRS thật —
-  // mỗi từ mới lần đầu "Dễ" tốn FIRST_EASY phút trước khi rảnh (ước tính rất
-  // thô, chỉ mang tính tham khảo, không phải cam kết chính xác).
-  const etaDiv = document.getElementById("statsEta");
-  if (newCount === 0 && due === 0) {
-    etaDiv.textContent = "🎉 Không còn gì cần học/ôn ngay trong bộ này — làm tốt lắm!";
-  } else {
-    const parts = [];
-    if (due > 0) parts.push(`${due} thẻ cần ôn ngay`);
-    if (newCount > 0) parts.push(`${newCount} từ mới chưa học`);
-    etaDiv.textContent = `Còn ${parts.join(" và ")}. Học/ôn dần qua SRS hoặc Flashcard để tiến tới 100%.`;
-  }
-
-  // Mini điểm yếu của riêng bộ này
-  const weakList = getWeaknessListForDeck(App.currentDeckId);
-  const miniDiv = document.getElementById("statsWeaknessMini");
-  if (weakList.length === 0) {
-    miniDiv.innerHTML = "";
-  } else {
-    const top3 = weakList.slice(0, 3);
-    const rows = top3.map((e) => {
-      const w = deck.words.find((cw) => cw._id === e.itemId);
-      const title = w ? (w.kanji || w.cautruc) : e.lastLabel || e.itemId;
-      return `<span class="stats-weak-chip">${title} <span class="stats-weak-chip-count">✕${e.wrongCount}</span></span>`;
-    }).join("");
-    miniDiv.innerHTML = `<div class="stats-weakness-mini-title">⚠ Điểm yếu hàng đầu (${weakList.length} từ đang yếu):</div><div class="stats-weak-chips">${rows}</div>`;
-  }
 }
 
+// Bảng đề thi: liệt kê TẤT CẢ đề có trong hệ thống, kể cả CHƯA làm lần nào
+// (để biết rõ đề nào còn thiếu, không chỉ đề đã làm). Nhấn tên đề -> nhảy
+// thẳng sang trang Làm đề thi và tự chọn đúng đề đó.
 function renderStatsExamHistory() {
   const stats = loadExamHistoryStats();
-  const examEmpty = document.getElementById("statsExamEmpty");
   const listDiv = document.getElementById("statsExamList");
+  document.getElementById("statsExamEmpty").classList.add("hidden");
 
-  const examIds = Object.keys(stats).filter((id) => App.exams.find((e) => e.id === id));
-  if (examIds.length === 0) {
-    examEmpty.classList.remove("hidden");
+  if (!App.exams.length) {
+    document.getElementById("statsExamEmpty").classList.remove("hidden");
     listDiv.innerHTML = "";
     return;
   }
-  examEmpty.classList.add("hidden");
 
-  const rows = examIds.map((examId) => {
-    const exam = App.exams.find((e) => e.id === examId);
-    if (!exam) return ""; // đề đã bị xóa khỏi dethi/index.json -> bỏ qua an toàn, không crash
-    const s = stats[examId];
+  // Đề chưa làm lên trước (ưu tiên nhìn thấy ngay), đề đã làm sắp theo điểm thấp nhất trước
+  const examsWithStats = App.exams.map((exam) => ({ exam, s: stats[exam.id] || null }));
+  examsWithStats.sort((a, b) => {
+    if (!a.s && !b.s) return 0;
+    if (!a.s) return -1;
+    if (!b.s) return 1;
+    return (a.s.lastScore / a.s.lastTotal) - (b.s.lastScore / b.s.lastTotal);
+  });
+
+  const rows = examsWithStats.map(({ exam, s }) => {
+    if (!s) {
+      return `
+        <div class="stats-exam-row is-not-done">
+          <button class="stats-deck-link stats-exam-row-title" data-jump-exam="${exam.id}">${exam.title}</button>
+          <div class="stats-exam-row-stats">
+            <span class="stats-exam-not-done-badge">Chưa làm</span>
+          </div>
+        </div>
+      `;
+    }
+    const pct = s.lastTotal ? Math.round((s.lastScore / s.lastTotal) * 100) : 0;
     const dateLabel = s.lastCompletedAt ? new Date(s.lastCompletedAt).toLocaleString("vi-VN") : "—";
     const timeLabel = s.lastSeconds ? fmtTime(s.lastSeconds) : "—";
     return `
       <div class="stats-exam-row">
-        <div class="stats-exam-row-title">${exam.title}</div>
+        <button class="stats-deck-link stats-exam-row-title" data-jump-exam="${exam.id}">${exam.title}</button>
+        <div class="stats-hbar stats-hbar-score" title="${s.lastScore}/${s.lastTotal} điểm">
+          <div class="stats-hbar-seg stats-hbar-known" style="width:${pct}%"></div>
+        </div>
         <div class="stats-exam-row-stats">
           <span class="stats-exam-stat">Đã làm <b>${s.totalCompletions}</b> lần</span>
           <span class="stats-exam-stat">Gần nhất: <b>${s.lastScore}/${s.lastTotal}</b> điểm</span>
@@ -678,6 +679,15 @@ function renderStatsExamHistory() {
     `;
   }).join("");
   listDiv.innerHTML = rows;
+
+  listDiv.querySelectorAll("[data-jump-exam]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const examId = btn.dataset.jumpExam;
+      document.getElementById("examPicker").value = examId;
+      startExam(examId);
+      setMode("exam");
+    });
+  });
 }
 
 /* ---------- Focus mode: phóng to toàn màn hình, ẩn sidebar + điều khiển thừa ---------- */
