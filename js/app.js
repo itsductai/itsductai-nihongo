@@ -436,6 +436,46 @@ function getWeaknessSummaryAcrossAll() {
   return summary;
 }
 
+/* ===================================================================
+   LỊCH SỬ ĐỀ THI — lưu riêng trong localStorage, KHÔNG đụng tới file JSON
+   gốc trong dethi/ (chỉ đọc câu hỏi từ đó, không bao giờ ghi gì lên đó).
+   Cấu trúc: { [examId]: { totalCompletions, lastScore, lastTotal,
+   lastSeconds, lastFirstTryWrongCount, lastCompletedAt } }
+=================================================================== */
+
+const EXAM_HISTORY_STORAGE_KEY = "n2vocab_exam_history";
+
+function loadExamHistoryStats() {
+  try {
+    const raw = localStorage.getItem(EXAM_HISTORY_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveExamHistoryStats(stats) {
+  localStorage.setItem(EXAM_HISTORY_STORAGE_KEY, JSON.stringify(stats));
+}
+
+// Gọi đúng 1 lần khi 1 đề thi hoàn thành hẳn (finishExam). Cộng dồn totalCompletions
+// (vì đây là bộ đếm tích lũy — làm thêm 1 lần thì +1, không phải trạng thái để ghi đè),
+// còn các field "lần gần nhất" luôn lấy giá trị của lần vừa hoàn thành này.
+function recordExamCompletion(examId, { score, total, seconds, firstTryWrongCount }) {
+  const stats = loadExamHistoryStats();
+  if (!stats[examId]) {
+    stats[examId] = { totalCompletions: 0, lastScore: 0, lastTotal: 0, lastSeconds: 0, lastFirstTryWrongCount: 0, lastCompletedAt: 0 };
+  }
+  const entry = stats[examId];
+  entry.totalCompletions += 1;
+  entry.lastScore = score;
+  entry.lastTotal = total;
+  entry.lastSeconds = seconds;
+  entry.lastFirstTryWrongCount = firstTryWrongCount;
+  entry.lastCompletedAt = Date.now();
+  saveExamHistoryStats(stats);
+}
+
 /* ---------- Weakness mode UI (cho từ vựng/ngữ pháp) ---------- */
 
 let currentWeaknessIds = [];
@@ -486,6 +526,146 @@ function startWeaknessReview() {
   // tránh hiện sai là "đang lọc theo ★" trong khi thực ra đang lọc theo điểm yếu.
   setFlashStarOnlyState(false);
   initFlashMode(currentWeaknessIds);
+}
+
+/* ===================================================================
+   STATS MODE — trang thống kê tổng quan toàn hệ thống (từ vựng, ngữ
+   pháp, đề thi). Chỉ ĐỌC dữ liệu đã có (SRS, weakness, exam history),
+   không tạo thêm state riêng nào — luôn tính lại tươi mỗi lần mở trang.
+=================================================================== */
+
+// Tính % đã thuộc/đang học/chưa học cho 1 bộ cụ thể (dùng progress riêng của
+// bộ đó, không phải App.progress hiện tại — vì người dùng có thể đang xem
+// thống kê của bộ khác với bộ đang mở).
+function computeDeckStats(deck) {
+  const progress = SRS.loadProgress(deck.id);
+  let known = 0, learning = 0, fresh = 0;
+  deck.words.forEach((w) => {
+    const entry = SRS.getEntry(progress, w._id);
+    const st = SRS.status(entry);
+    if (st === "known") known++;
+    else if (st === "learning") learning++;
+    else fresh++;
+  });
+  const total = deck.words.length || 1;
+  const pct = Math.round((known / total) * 100);
+  return { known, learning, fresh, total: deck.words.length, pct };
+}
+
+function renderStatsMode() {
+  renderStatsOverviewTable();
+  renderStatsCurrentDeck();
+  renderStatsExamHistory();
+}
+
+function renderStatsOverviewTable() {
+  const tbody = document.getElementById("statsOverviewBody");
+  tbody.innerHTML = "";
+  App.decks.forEach((deck) => {
+    const s = computeDeckStats(deck);
+    const tr = document.createElement("tr");
+    if (deck.id === App.currentDeckId) tr.classList.add("is-current-deck-row");
+    tr.innerHTML = `
+      <td class="stats-deck-name">${deck.title}${deck.id === App.currentDeckId ? ' <span class="stats-current-tag">(đang mở)</span>' : ""}</td>
+      <td>${s.known}</td>
+      <td>${s.learning}</td>
+      <td>${s.fresh}</td>
+      <td>
+        <div class="stats-pct-bar-wrap">
+          <div class="stats-pct-bar"><div class="stats-pct-bar-fill" style="width:${s.pct}%"></div></div>
+          <span class="stats-pct-label">${s.pct}%</span>
+        </div>
+      </td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+function renderStatsCurrentDeck() {
+  const deck = App.decks.find((d) => d.id === App.currentDeckId);
+  if (!deck) return;
+
+  document.getElementById("statsCurrentDeckTitle").textContent = `📖 Chi tiết: ${deck.title}`;
+
+  let due = 0, newCount = 0, known = 0, learning = 0;
+  deck.words.forEach((w) => {
+    const entry = SRS.getEntry(App.progress, w._id);
+    const st = SRS.status(entry);
+    if (st === "known") known++;
+    else if (st === "learning") learning++;
+    if (!entry.seen) newCount++;
+    else if (SRS.isDue(entry)) due++;
+  });
+
+  const grid = document.getElementById("statsCurrentDeckGrid");
+  grid.innerHTML = `
+    <div class="stats-stat-box"><div class="stats-stat-num">${due}</div><div class="stats-stat-label">thẻ đến hạn ôn ngay</div></div>
+    <div class="stats-stat-box"><div class="stats-stat-num">${newCount}</div><div class="stats-stat-label">từ mới chưa học</div></div>
+    <div class="stats-stat-box"><div class="stats-stat-num">${learning}</div><div class="stats-stat-label">đang học</div></div>
+    <div class="stats-stat-box is-good"><div class="stats-stat-num">${known}</div><div class="stats-stat-label">đã thuộc</div></div>
+  `;
+
+  // Ước tính thời gian học hết các từ MỚI còn lại: dựa trên tốc độ SRS thật —
+  // mỗi từ mới lần đầu "Dễ" tốn FIRST_EASY phút trước khi rảnh (ước tính rất
+  // thô, chỉ mang tính tham khảo, không phải cam kết chính xác).
+  const etaDiv = document.getElementById("statsEta");
+  if (newCount === 0 && due === 0) {
+    etaDiv.textContent = "🎉 Không còn gì cần học/ôn ngay trong bộ này — làm tốt lắm!";
+  } else {
+    const parts = [];
+    if (due > 0) parts.push(`${due} thẻ cần ôn ngay`);
+    if (newCount > 0) parts.push(`${newCount} từ mới chưa học`);
+    etaDiv.textContent = `Còn ${parts.join(" và ")}. Học/ôn dần qua SRS hoặc Flashcard để tiến tới 100%.`;
+  }
+
+  // Mini điểm yếu của riêng bộ này
+  const weakList = getWeaknessListForDeck(App.currentDeckId);
+  const miniDiv = document.getElementById("statsWeaknessMini");
+  if (weakList.length === 0) {
+    miniDiv.innerHTML = "";
+  } else {
+    const top3 = weakList.slice(0, 3);
+    const rows = top3.map((e) => {
+      const w = deck.words.find((cw) => cw._id === e.itemId);
+      const title = w ? (w.kanji || w.cautruc) : e.lastLabel || e.itemId;
+      return `<span class="stats-weak-chip">${title} <span class="stats-weak-chip-count">✕${e.wrongCount}</span></span>`;
+    }).join("");
+    miniDiv.innerHTML = `<div class="stats-weakness-mini-title">⚠ Điểm yếu hàng đầu (${weakList.length} từ đang yếu):</div><div class="stats-weak-chips">${rows}</div>`;
+  }
+}
+
+function renderStatsExamHistory() {
+  const stats = loadExamHistoryStats();
+  const examEmpty = document.getElementById("statsExamEmpty");
+  const listDiv = document.getElementById("statsExamList");
+
+  const examIds = Object.keys(stats).filter((id) => App.exams.find((e) => e.id === id));
+  if (examIds.length === 0) {
+    examEmpty.classList.remove("hidden");
+    listDiv.innerHTML = "";
+    return;
+  }
+  examEmpty.classList.add("hidden");
+
+  const rows = examIds.map((examId) => {
+    const exam = App.exams.find((e) => e.id === examId);
+    const s = stats[examId];
+    const dateLabel = s.lastCompletedAt ? new Date(s.lastCompletedAt).toLocaleString("vi-VN") : "—";
+    const timeLabel = s.lastSeconds ? fmtTime(s.lastSeconds) : "—";
+    return `
+      <div class="stats-exam-row">
+        <div class="stats-exam-row-title">${exam.title}</div>
+        <div class="stats-exam-row-stats">
+          <span class="stats-exam-stat">Đã làm <b>${s.totalCompletions}</b> lần</span>
+          <span class="stats-exam-stat">Gần nhất: <b>${s.lastScore}/${s.lastTotal}</b> điểm</span>
+          <span class="stats-exam-stat">Sai lần 1: <b>${s.lastFirstTryWrongCount}</b> câu</span>
+          <span class="stats-exam-stat">Thời gian: <b>${timeLabel}</b></span>
+          <span class="stats-exam-stat-date">${dateLabel}</span>
+        </div>
+      </div>
+    `;
+  }).join("");
+  listDiv.innerHTML = rows;
 }
 
 /* ---------- Focus mode: phóng to toàn màn hình, ẩn sidebar + điều khiển thừa ---------- */
@@ -744,6 +924,7 @@ const NAV_ITEMS_BY_TYPE = {
     { mode: "quiz", icon: "✓", label: "Trắc nghiệm nghĩa" },
     { mode: "match", icon: "▦", label: "Ghép thẻ" },
     { mode: "weakness", icon: "⚠", label: "Điểm yếu" },
+    { mode: "stats", icon: "📊", label: "Thống kê" },
   ],
   NGUPHAP: [
     { mode: "flash", icon: "▤", label: "Flashcard" },
@@ -751,6 +932,7 @@ const NAV_ITEMS_BY_TYPE = {
     { mode: "srs", icon: "◷", label: "Ôn tập (SRS)" },
     { mode: "quiz", icon: "✓", label: "Trắc nghiệm ý nghĩa" },
     { mode: "weakness", icon: "⚠", label: "Điểm yếu" },
+    { mode: "stats", icon: "📊", label: "Thống kê" },
   ],
   EXAM: [
     { mode: "exam", icon: "▤", label: "Làm đề thi" },
@@ -860,6 +1042,7 @@ function setMode(mode) {
   }
   if (mode === "exam") renderExamPickerState();
   if (mode === "weakness") renderWeaknessMode();
+  if (mode === "stats") renderStatsMode();
 }
 
 /* ===================================================================
@@ -2219,6 +2402,16 @@ function finishExam() {
   document.getElementById("examFinalScore").textContent =
     `${App.examScore}/${App.examOriginalTotal} điểm — đã hoàn thành toàn bộ đề (kể cả làm lại câu sai)`;
 
+  // Lưu vào lịch sử lâu dài (riêng biệt khỏi state phiên hiện tại, không mất khi rời trang)
+  const totalSeconds = App.examTotalStartTime ? (Date.now() - App.examTotalStartTime) / 1000 : 0;
+  const firstTryWrongCount = Object.values(App.examHistory).filter((h) => h.firstTryCorrect === false).length;
+  recordExamCompletion(App.currentExamId, {
+    score: App.examScore,
+    total: App.examOriginalTotal,
+    seconds: totalSeconds,
+    firstTryWrongCount,
+  });
+
   renderExamTimeSummary();
   renderExamSpeedSummary();
   renderExamMistakesSection();
@@ -2665,7 +2858,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("btnExport").addEventListener("click", () => {
     const exportPayload = {
       exportedAt: new Date().toISOString(),
-      version: 5,
+      version: 6,
       srsProgress: SRS.exportAll(),
       fieldConfig: App.fieldConfig,
       visibleCols: App.visibleCols,
@@ -2673,6 +2866,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       editPatches: App.editPatches,
       starredItems: App.starredItems,
       weaknessStats: loadWeaknessStats(),
+      examHistory: loadExamHistoryStats(),
       shuffleEnabled: App.shuffleEnabled,
       soundEnabled: App.soundEnabled,
       speechEnabled: App.speechEnabled,
@@ -2752,6 +2946,30 @@ document.addEventListener("DOMContentLoaded", async () => {
             });
           });
           saveWeaknessStats(currentStats);
+        }
+        if (data.examHistory) {
+          // totalCompletions CỘNG DỒN (giống weaknessStats — đếm tích lũy, mỗi máy
+          // có thể đã làm thêm số lần riêng, không máy nào "đúng hơn" máy nào).
+          // Các field "lần gần nhất" lấy theo bản có lastCompletedAt LỚN HƠN (mới hơn),
+          // vì đây là trạng thái snapshot của 1 lần làm cụ thể, không phải số đếm.
+          const currentExamStats = loadExamHistoryStats();
+          Object.keys(data.examHistory).forEach((examId) => {
+            const incoming = data.examHistory[examId];
+            const existing = currentExamStats[examId];
+            if (!existing) {
+              currentExamStats[examId] = { ...incoming };
+            } else {
+              existing.totalCompletions = (existing.totalCompletions || 0) + (incoming.totalCompletions || 0);
+              if ((incoming.lastCompletedAt || 0) > (existing.lastCompletedAt || 0)) {
+                existing.lastScore = incoming.lastScore;
+                existing.lastTotal = incoming.lastTotal;
+                existing.lastSeconds = incoming.lastSeconds;
+                existing.lastFirstTryWrongCount = incoming.lastFirstTryWrongCount;
+                existing.lastCompletedAt = incoming.lastCompletedAt;
+              }
+            }
+          });
+          saveExamHistoryStats(currentExamStats);
         }
         if (data.shuffleEnabled) {
           Object.assign(App.shuffleEnabled, data.shuffleEnabled);
