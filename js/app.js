@@ -1013,6 +1013,10 @@ async function loadDecks() {
       console.error("Lỗi tải bộ", filename, e);
     }
   }
+  // Sắp theo tên hiển thị A-Z (so sánh kiểu tiếng Việt, có dấu đúng thứ tự)
+  // — áp dụng ngay tại đây để MỌI nơi dùng App.decks (dropdown, sửa tạm reload...)
+  // đều tự động theo đúng thứ tự, không cần sort lặp lại ở từng nơi hiển thị.
+  decks.sort((a, b) => a.title.localeCompare(b.title, "vi"));
   return decks;
 }
 
@@ -1031,6 +1035,8 @@ async function loadExams() {
         console.error("Lỗi tải đề thi", filename, e);
       }
     }
+    // Cùng quy tắc với loadDecks(): sắp A-Z theo tên đề ngay tại nguồn.
+    exams.sort((a, b) => a.title.localeCompare(b.title, "vi"));
     return exams;
   } catch (e) {
     console.warn("Không có thư mục đề thi hoặc index.json lỗi", e);
