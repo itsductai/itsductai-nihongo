@@ -187,27 +187,51 @@ rt {
 .mini-switch input:disabled + .mini-switch-track { opacity: 0.4; cursor: not-allowed; }
 .col-config-peek-label { font-size: 10.5px; color: var(--text-2); white-space: nowrap; }
 
-/* ===== FLASHCARD ===== */
+/* ===== FLASHCARD =====
+   Thiết kế cũ dùng .card-face { position:absolute; inset:0 } cho cả 2 mặt cùng lúc,
+   khiến .card (cha) không thể tự co giãn theo nội dung — chiều cao luôn cố định ở
+   min-height, nội dung dài bị cắt và không cuộn được tới hết (mất chữ mặt sau).
+   Thiết kế mới: mặt KHÔNG active dùng position:absolute (ẩn khỏi luồng layout) để
+   không ảnh hưởng chiều cao .card; mặt ĐANG active dùng position:relative để đẩy
+   .card tự giãn cao đúng theo lượng nội dung thật — đảm bảo không bao giờ bị cắt. */
 .card-stage { display: flex; justify-content: center; margin: 30px 0 36px; perspective: 1400px; }
 .card {
-  width: 100%; max-width: 580px; min-height: 320px; position: relative; cursor: pointer;
+  width: 100%; max-width: 580px; position: relative; cursor: pointer;
   transform-style: preserve-3d; transition: transform 0.45s cubic-bezier(.4,.2,.2,1);
 }
-.card.flipped { transform: rotateY(180deg); }
 .card-face {
-  position: absolute; inset: 0; border-radius: 16px; backface-visibility: hidden;
+  border-radius: 16px; backface-visibility: hidden;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
   text-align: center; background: var(--bg-2); border: 1px solid var(--border);
-  box-shadow: var(--shadow); overflow-y: auto;
+  box-shadow: var(--shadow); overflow-y: auto; max-height: 72vh; min-height: 320px;
+  /* Thanh cuộn mỏng, mờ nhạt, vẫn HIỂN THỊ rõ ràng (không ẩn hẳn) để người dùng biết
+     có thể cuộn thêm khi nội dung dài hơn khung hình. */
+  scrollbar-width: thin; scrollbar-color: var(--text-2) transparent;
 }
-.card-back { transform: rotateY(180deg); }
+.card-face::-webkit-scrollbar { width: 6px; }
+.card-face::-webkit-scrollbar-track { background: transparent; }
+.card-face::-webkit-scrollbar-thumb { background: var(--text-2); border-radius: 3px; }
+.card-face::-webkit-scrollbar-thumb:hover { background: var(--text-1); }
+
+/* Mặt trước luôn nằm trong luồng layout (quyết định chiều cao .card khi chưa lật) */
+.card-face.card-front { position: relative; width: 100%; }
+/* Mặt sau mặc định nằm ngoài luồng (không ảnh hưởng chiều cao khi chưa lật) */
+.card-face.card-back {
+  position: absolute; inset: 0; width: 100%; transform: rotateY(180deg);
+}
+
+/* Khi .card đã lật: đảo vai trò — mặt SAU vào luồng layout để quyết định chiều cao
+   (vì giờ đang xem mặt sau, nội dung mặt sau có thể dài/ngắn khác mặt trước),
+   mặt TRƯỚC ra khỏi luồng (không hiện, không ảnh hưởng chiều cao). */
+.card.flipped { transform: rotateY(180deg); }
+.card.flipped .card-face.card-front { position: absolute; inset: 0; }
+.card.flipped .card-face.card-back { position: relative; }
 
 .card-face-content {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  width: 100%; height: 100%; padding: 28px;
-  /* min-height đảm bảo nội dung ngắn vẫn được justify-content:center căn giữa
-     đúng theo chiều cao thật của .card-face (trừ hao padding), không bị dồn
-     lên sát mép trên khi overflow-y:auto kích hoạt. */
+  width: 100%; min-height: 100%; padding: 32px 28px 40px;
+  /* padding-bottom lớn hơn các cạnh khác để dòng cuối cùng không bị dính sát viền
+     dưới của khung cuộn — đây chính là điều Zane phản ánh "viền dưới sát quá". */
   box-sizing: border-box;
 }
 
@@ -382,6 +406,13 @@ tbody tr:last-child td { border-bottom: none; }
   padding: 36px; text-align: center; font-size: 22px; font-weight: 600; margin-bottom: 22px; color: var(--text-0);
 }
 .exam-question { font-size: 16px; font-weight: 500; white-space: pre-wrap; text-align: left; line-height: 1.8; }
+/* Gạch chân từ/kanji đang được hỏi trong câu (Mondai đọc kanji / viết kanji /
+   từ vựng theo văn cảnh) — làm rõ ràng hơn underline mặc định của trình duyệt,
+   để biết chính xác "đường làm" là từ nào, không phải đoán mò trong cả câu. */
+.exam-question u, .exam-detail-question u {
+  text-decoration: underline solid var(--accent) 2.5px; text-decoration-skip-ink: none;
+  text-underline-offset: 3px; color: var(--accent); font-weight: 700;
+}
 .exam-progress-line { font-size: 13px; color: var(--text-1); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .exam-retry-note { color: var(--warn); margin-left: 10px; }
 .exam-progress-text { font-weight: 600; }
@@ -397,12 +428,6 @@ tbody tr:last-child td { border-bottom: none; }
 .exam-time-summary-block { background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
 .exam-time-summary-title { font-size: 12.5px; color: var(--text-2); font-weight: 700; margin-bottom: 10px; }
 .exam-time-stats-row { display: flex; gap: 12px; justify-content: center; }
-
-.exam-mistakes-section { margin: 20px 0; text-align: left; }
-.exam-mistakes-title { font-size: 13px; color: var(--text-2); font-weight: 700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.04em; }
-.exam-mistake-tag { font-size: 10.5px; padding: 3px 8px; border-radius: 10px; font-weight: 600; }
-.tag-first-wrong { background: var(--warn-soft); color: var(--warn); }
-.tag-multi-wrong { background: var(--bad-soft); color: var(--bad); }
 
 .quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .quiz-opt {
@@ -661,6 +686,16 @@ tbody tr:last-child td { border-bottom: none; }
 
 /* ===== WEAKNESS MODE ===== */
 .weakness-title { font-size: 14px; color: var(--text-1); font-weight: 600; }
+/* ===== Tab chuyển giữa "Từ vựng/Ngữ pháp" và "Đề thi" ở trang Điểm yếu ===== */
+.weakness-tabs { display: flex; gap: 8px; margin: 14px 0 18px; flex-wrap: wrap; }
+.weakness-tab {
+  background: var(--bg-2); border: 1px solid var(--border); color: var(--text-1);
+  font-size: 12.5px; font-weight: 600; padding: 8px 14px; border-radius: 20px;
+  cursor: pointer; transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.weakness-tab:hover { border-color: var(--accent); color: var(--text-0); }
+.weakness-tab.is-active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.weakness-exam-hint { font-size: 12px; color: var(--text-2); margin-bottom: 12px; }
 .weakness-action-row { margin-bottom: 18px; }
 .weakness-list { display: flex; flex-direction: column; gap: 10px; }
 .weakness-row {
@@ -668,15 +703,15 @@ tbody tr:last-child td { border-bottom: none; }
   background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px;
   padding: 14px 18px;
 }
+/* Dòng câu sai trong đề thi — bấm vào để xem chi tiết, nên có hover rõ ràng
+   báo hiệu "bấm được" (khác với dòng từ vựng/ngữ pháp thường, không bấm được). */
+.weakness-row-clickable { cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+.weakness-row-clickable:hover { border-color: var(--accent); background: var(--accent-soft); }
 .weakness-row-title { font-size: 16px; font-weight: 700; color: var(--text-0); }
 .weakness-row-sub { font-size: 12.5px; color: var(--text-2); margin-top: 2px; }
 .weakness-row-stats { display: flex; gap: 12px; font-size: 12px; flex-shrink: 0; white-space: nowrap; }
 .weakness-wrong-count { color: var(--bad); font-weight: 600; }
 .weakness-correct-count { color: var(--good); font-weight: 600; }
-
-.exam-weakness-section { margin: 20px 0; text-align: left; }
-.exam-weakness-title { font-size: 13px; color: var(--text-2); font-weight: 700; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.04em; }
-.exam-weakness-section .weakness-row-title { font-size: 13.5px; font-weight: 500; white-space: pre-wrap; }
 
 /* ===== EXAM SPEED MODE (luyện tốc độ 30s/câu) ===== */
 .speed-toggle { font-size: 12px; }
@@ -795,8 +830,10 @@ tbody tr:last-child td { border-bottom: none; }
 
   /* Thẻ Flashcard/SRS trên mobile: tăng padding-top để nội dung (đặc biệt
      phần giải nghĩa dài cần cuộn) không bị dính sát viền trên của thẻ, và
-     không bị nút ★ ở góc che mất chữ đầu dòng. */
-  .card-face-content { padding: 40px 20px 24px; }
+     không bị nút ★ ở góc che mất chữ đầu dòng. padding-bottom cũng tăng để
+     dòng cuối cùng không dính sát mép dưới của vùng cuộn trên màn hình nhỏ. */
+  .card-face-content { padding: 40px 20px 48px; }
+  .card-face { max-height: 68vh; }
 }
 
 /* ===== EXAM: chế độ chấm điểm, giải thích đáp án, bảng review ===== */
@@ -810,6 +847,10 @@ tbody tr:last-child td { border-bottom: none; }
 .exam-mode-choice:hover { border-color: var(--accent); background: var(--accent-soft); }
 .exam-mode-choice-title { font-size: 14.5px; font-weight: 700; color: var(--text-0); margin-bottom: 6px; }
 .exam-mode-choice-desc { font-size: 12px; color: var(--text-2); line-height: 1.6; }
+/* Nút "xem kết quả đã lưu" — không phải hành động làm lại, nên làm nổi bật khác
+   màu để Zane phân biệt rõ với 2 lựa chọn làm lại đề bên dưới. */
+#btnExamViewSavedResult { border-color: var(--accent); background: var(--accent-soft); }
+#btnExamViewSavedResult .exam-mode-choice-title { color: var(--accent); }
 
 .exam-explain-row { display: flex; gap: 10px; justify-content: center; margin-top: 16px; }
 .exam-explain-box { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
@@ -825,23 +866,56 @@ tbody tr:last-child td { border-bottom: none; }
 
 .was-chosen-neutral { box-shadow: inset 0 0 0 2px var(--accent); }
 
-.exam-review-table-section { margin: 20px 0; text-align: left; }
-.exam-review-table-wrap { display: flex; flex-direction: column; gap: 12px; }
-.exam-review-row {
-  background: var(--bg-3); border-radius: 10px; padding: 14px 16px; border-left: 3px solid var(--border);
+/* ===== LƯỚI KẾT QUẢ ĐỀ THI (lưới ô tròn nhỏ, mỗi ô = 1 câu) =====
+   Thay cho UI cũ (.exam-mistakes-section / .exam-review-table-section /
+   .exam-weakness-section) — gọn hơn, bấm vào ô để xem chi tiết qua modal. */
+.exam-result-grid-section { margin: 20px 0; text-align: left; }
+.exam-result-grid-title {
+  font-size: 12.5px; color: var(--text-2); font-weight: 700; margin-bottom: 12px;
+  text-transform: uppercase; letter-spacing: 0.04em; text-align: center;
 }
-.exam-review-row.is-correct { border-left-color: var(--good); }
-.exam-review-row.is-wrong { border-left-color: var(--bad); }
-.exam-review-row-head { display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px; }
-.exam-review-mark { font-weight: 700; font-size: 14px; }
-.exam-review-row.is-correct .exam-review-mark { color: var(--good); }
-.exam-review-row.is-wrong .exam-review-mark { color: var(--bad); }
-.exam-review-qnum { font-size: 12px; font-weight: 700; color: var(--text-2); flex-shrink: 0; }
-.exam-review-qtext { font-size: 13px; color: var(--text-0); white-space: pre-wrap; }
-.exam-review-answers { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
-.exam-review-answer-chip { font-size: 11.5px; padding: 4px 10px; border-radius: 10px; font-weight: 600; }
-.exam-review-answer-chip.is-correct { background: var(--good-soft); color: var(--good); }
-.exam-review-answer-chip.is-wrong { background: var(--bad-soft); color: var(--bad); }
-.exam-review-explain { background: var(--bg-2); border-radius: 8px; padding: 10px 12px; font-size: 12px; color: var(--text-1); line-height: 1.7; }
-.exam-review-explain-line { margin-bottom: 4px; }
-.exam-review-explain-line:last-child { margin-bottom: 0; }
+.exam-result-grid {
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+}
+.exam-result-dot {
+  width: 38px; height: 38px; border-radius: 50%; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; color: var(--text-0);
+  transition: transform 0.12s, box-shadow 0.12s;
+  font-family: inherit;
+}
+.exam-result-dot:hover { transform: scale(1.12); }
+.exam-result-dot:active { transform: scale(0.96); }
+.exam-result-dot.is-correct { background: var(--good-soft); color: var(--good); box-shadow: inset 0 0 0 1.5px var(--good); }
+.exam-result-dot.is-wrong { background: var(--bad-soft); color: var(--bad); box-shadow: inset 0 0 0 1.5px var(--bad); }
+
+/* ===== MODAL chi tiết 1 câu trong kết quả đề thi =====
+   Tái dùng .modal-overlay / .modal-box / .modal-head / .modal-title /
+   .modal-close-btn / .modal-body có sẵn (cùng pattern với modal sửa từ). */
+.exam-detail-modal-box { max-width: 560px; }
+.exam-detail-question {
+  font-size: 15px; font-weight: 500; white-space: pre-wrap; line-height: 1.8;
+  color: var(--text-0); padding-bottom: 4px; border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
+}
+.exam-detail-opts { display: flex; flex-direction: column; gap: 10px; }
+.exam-detail-opt {
+  background: var(--bg-3); border-radius: 10px; padding: 12px 14px;
+  border-left: 3px solid var(--border);
+}
+.exam-detail-opt.is-correct { border-left-color: var(--good); }
+.exam-detail-opt.is-wrong-chosen { border-left-color: var(--bad); }
+.exam-detail-opt-head {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px;
+}
+.exam-detail-opt-text { font-size: 14px; color: var(--text-0); font-weight: 500; }
+.exam-detail-tag {
+  font-size: 10.5px; padding: 3px 9px; border-radius: 10px; font-weight: 700;
+  white-space: nowrap;
+}
+.exam-detail-tag.is-correct-tag { background: var(--good-soft); color: var(--good); }
+.exam-detail-tag.is-chosen-tag { background: var(--accent-soft); color: var(--accent); }
+.exam-detail-opt-explain {
+  background: var(--bg-2); border-radius: 8px; padding: 9px 12px;
+  font-size: 12.5px; color: var(--text-1); line-height: 1.65;
+}

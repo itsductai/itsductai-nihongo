@@ -180,8 +180,8 @@
       </div>
       <div class="card-stage" id="srsStage">
         <div class="card" id="srsCard">
-          <div class="card-face card-front" id="srsFront"></div>
-          <div class="card-face card-back" id="srsBack"></div>
+          <div class="card-face card-front" id="srsFront"><div class="card-face-content" id="srsFrontContent"></div></div>
+          <div class="card-face card-back" id="srsBack"><div class="card-face-content" id="srsBackContent"></div></div>
         </div>
       </div>
       <div class="rate-row" id="srsRateRow">
@@ -223,6 +223,11 @@
     <section class="view hidden" id="view-quiz">
       <div class="quiz-head">
         <div class="quiz-progress">Câu <span id="quizPos">0</span>/<span id="quizTotal">0</span></div>
+        <select id="quizDirectionPicker" class="filter-select">
+          <option value="kanji_nghia">Kanji → Nghĩa</option>
+          <option value="kanji_hira">Kanji → Cách đọc</option>
+          <option value="hira_nghia">Cách đọc → Nghĩa</option>
+        </select>
         <div class="quiz-score">Điểm: <span id="quizScore">0</span></div>
         <div class="quiz-timer" id="quizTimer">00:00</div>
         <button class="icon-btn focus-toggle-btn" data-focus-target="quiz" title="Phóng to toàn màn hình">⛶</button>
@@ -292,29 +297,43 @@
         <div class="quiz-result-score" id="examFinalScore"></div>
         <div class="exam-time-summary" id="examTimeSummary"></div>
         <div class="exam-speed-summary hidden" id="examSpeedSummary"></div>
-        <div class="exam-mistakes-section" id="examMistakesSection"></div>
-        <div class="exam-weakness-section" id="examWeaknessSection"></div>
-        <div class="exam-review-table-section hidden" id="examReviewTableSection">
-          <div class="exam-mistakes-title">Bảng kết quả chi tiết từng câu</div>
-          <div class="exam-review-table-wrap" id="examReviewTableWrap"></div>
+        <div class="exam-result-grid-section">
+          <div class="exam-result-grid-title">Bấm vào số câu để xem chi tiết đáp án + giải thích</div>
+          <div class="exam-result-grid" id="examResultGrid"></div>
         </div>
         <button class="primary-btn" id="btnExamRestart">Làm lại đề này</button>
       </div>
     </section>
 
+    <!-- ===== MODAL xem chi tiết 1 câu trong kết quả đề thi ===== -->
+    <div class="modal-overlay hidden" id="examDetailModalOverlay">
+      <div class="modal-box exam-detail-modal-box">
+        <div class="modal-head">
+          <div class="modal-title" id="examDetailModalTitle">Câu 1</div>
+          <button class="modal-close-btn" id="btnExamDetailModalClose">✕</button>
+        </div>
+        <div class="modal-body" id="examDetailModalBody"></div>
+      </div>
+    </div>
+
     <!-- ---- WEAKNESS MODE (thống kê điểm yếu) ---- -->
     <section class="view hidden" id="view-weakness">
       <div class="view-head">
-        <div class="weakness-title">Các từ/cấu trúc bạn hay sai nhất trong bộ này</div>
+        <div class="weakness-title" id="weaknessTitle">Các từ/cấu trúc bạn hay sai nhất trong bộ này</div>
+      </div>
+      <div class="weakness-tabs" id="weaknessTabs">
+        <button class="weakness-tab is-active" id="btnWeaknessTabDeck" data-tab="deck">Từ vựng / Ngữ pháp (bộ đang chọn)</button>
+        <button class="weakness-tab" id="btnWeaknessTabExam" data-tab="exam">Đề thi (mọi đề)</button>
       </div>
       <div id="weaknessEmpty" class="empty-state hidden">
         <div class="empty-icon">✓</div>
-        <div>Chưa phát hiện điểm yếu nào trong bộ này. Cứ tiếp tục học!</div>
+        <div id="weaknessEmptyText">Chưa phát hiện điểm yếu nào trong bộ này. Cứ tiếp tục học!</div>
       </div>
       <div id="weaknessListWrap">
-        <div class="weakness-action-row">
+        <div class="weakness-action-row" id="weaknessActionRow">
           <button class="primary-btn" id="btnReviewWeakness">Ôn riêng các từ yếu này (Flashcard)</button>
         </div>
+        <div class="weakness-exam-hint hidden" id="weaknessExamHint">Bấm vào 1 câu để xem lại đề bài, đáp án và giải thích chi tiết.</div>
         <div class="weakness-list" id="weaknessList"></div>
       </div>
     </section>
@@ -378,6 +397,10 @@
         <div class="modal-title">Chọn cách chấm điểm</div>
       </div>
       <div class="modal-body">
+        <button class="exam-mode-choice hidden" id="btnExamViewSavedResult">
+          <div class="exam-mode-choice-title">📊 Xem kết quả lần làm gần nhất</div>
+          <div class="exam-mode-choice-desc" id="examSavedResultDesc">Xem lại lưới đúng/sai và giải thích từng câu của lần làm trước — không cần làm lại.</div>
+        </button>
         <button class="exam-mode-choice" id="btnExamModeInstant">
           <div class="exam-mode-choice-title">⚡ Chấm ngay tại chỗ</div>
           <div class="exam-mode-choice-desc">Mỗi câu chấm đúng/sai ngay sau khi chọn, xem giải thích ngay, tự bấm "Tiếp tục" sang câu kế. Câu sai sẽ quay lại làm tiếp tới khi đúng.</div>

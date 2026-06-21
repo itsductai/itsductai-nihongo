@@ -42,6 +42,8 @@ const App = {
 
   quizQuestions: [],
   quizIndex: 0,
+  quizDirection: "kanji_nghia", // "kanji_nghia" | "kanji_hira" | "hira_nghia" (chỉ TUVUNG)
+  weaknessTab: "deck", // "deck" | "exam" — tab đang xem ở trang Điểm yếu
   quizScore: 0,
   quizAnswering: false, // chặn double-click khi đang xử lý 1 câu trả lời
   quizTimerHandle: null,
@@ -473,6 +475,37 @@ function saveExamHistoryStats(stats) {
   localStorage.setItem(EXAM_HISTORY_STORAGE_KEY, JSON.stringify(stats));
 }
 
+// ---------- Lưu CHI TIẾT từng câu của lần làm gần nhất (khác với loadExamHistoryStats
+// chỉ lưu điểm số tổng) — đây là dữ liệu nuôi lưới kết quả (.exam-result-dot) + popup
+// chi tiết từng câu. TRƯỚC ĐÂY dữ liệu này CHỈ tồn tại trong App.examHistory (biến tạm
+// trong RAM), bị xóa mỗi khi chọn lại đề / tải lại trang / KHÔNG được export — đây
+// chính là lý do Zane làm đề trên máy tính, export, nhập vào điện thoại nhưng không
+// thấy dữ liệu chi tiết đề thi (chỉ có điểm số tổng ở trang Thống kê, không có lưới
+// kết quả). Nay lưu lại để xem lại được trên mọi máy sau khi nhập tiến độ.
+const EXAM_DETAIL_HISTORY_STORAGE_KEY = "n2vocab_exam_detail_history";
+
+function loadExamDetailHistoryStats() {
+  try {
+    const raw = localStorage.getItem(EXAM_DETAIL_HISTORY_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveExamDetailHistoryStats(stats) {
+  localStorage.setItem(EXAM_DETAIL_HISTORY_STORAGE_KEY, JSON.stringify(stats));
+}
+
+// Gọi mỗi khi 1 đề thi hoàn thành — ghi đè snapshot chi tiết của examId này bằng
+// lần làm VỪA XONG (chỉ giữ lần gần nhất, không cộng dồn, vì đây là ảnh chụp trạng
+// thái để xem lại, không phải bộ đếm tích lũy).
+function saveExamDetailSnapshot(examId, examHistory) {
+  const stats = loadExamDetailHistoryStats();
+  stats[examId] = { examHistory, savedAt: Date.now() };
+  saveExamDetailHistoryStats(stats);
+}
+
 // Gọi đúng 1 lần khi 1 đề thi hoàn thành hẳn (finishExam). Cộng dồn totalCompletions
 // (vì đây là bộ đếm tích lũy — làm thêm 1 lần thì +1, không phải trạng thái để ghi đè),
 // còn các field "lần gần nhất" luôn lấy giá trị của lần vừa hoàn thành này.
@@ -496,6 +529,21 @@ function recordExamCompletion(examId, { score, total, seconds, firstTryWrongCoun
 let currentWeaknessIds = [];
 
 function renderWeaknessMode() {
+  document.getElementById("btnWeaknessTabDeck").classList.toggle("is-active", App.weaknessTab === "deck");
+  document.getElementById("btnWeaknessTabExam").classList.toggle("is-active", App.weaknessTab === "exam");
+
+  if (App.weaknessTab === "exam") {
+    renderExamWeaknessTab();
+  } else {
+    renderDeckWeaknessTab();
+  }
+}
+
+function renderDeckWeaknessTab() {
+  document.getElementById("weaknessTitle").textContent = "Các từ/cấu trúc bạn hay sai nhất trong bộ này";
+  document.getElementById("weaknessActionRow").classList.remove("hidden");
+  document.getElementById("weaknessExamHint").classList.add("hidden");
+
   const weakList = getWeaknessListForDeck(App.currentDeckId);
   currentWeaknessIds = weakList.map((e) => e.itemId);
 
@@ -503,6 +551,8 @@ function renderWeaknessMode() {
   const listWrap = document.getElementById("weaknessListWrap");
 
   if (weakList.length === 0) {
+    document.getElementById("weaknessEmptyText").textContent =
+      "Chưa phát hiện điểm yếu nào trong bộ này. Cứ tiếp tục học!";
     empty.classList.remove("hidden");
     listWrap.classList.add("hidden");
     return;
@@ -532,6 +582,79 @@ function renderWeaknessMode() {
     `;
     listDiv.appendChild(row);
   });
+}
+
+// Tab "Đề thi" — gộp câu sai của TẤT CẢ đề thi đã làm (deckId giả "__exam__"),
+// itemId có dạng "examId::qN". Bấm vào 1 dòng sẽ mở lại đúng popup chi tiết
+// (đề bài + đáp án + giải thích) đã dùng ở lưới kết quả, không cần làm lại đề.
+// Đây là giải pháp Zane đã CHỦ ĐỘNG CHỌN (đơn giản hơn ý tưởng ban đầu "tự động
+// tạo bộ flashcard từ câu sai") — chỉ cần xem lại được để tự ôn tập, không cần
+// tự động hóa hoàn toàn thành flashcard.
+function renderExamWeaknessTab() {
+  document.getElementById("weaknessTitle").textContent = "Các câu bạn hay sai nhất trong mọi đề thi";
+  document.getElementById("weaknessActionRow").classList.add("hidden");
+
+  const weakList = getWeaknessListForDeck("__exam__");
+
+  const empty = document.getElementById("weaknessEmpty");
+  const listWrap = document.getElementById("weaknessListWrap");
+
+  if (weakList.length === 0) {
+    document.getElementById("weaknessEmptyText").textContent =
+      "Chưa phát hiện câu nào hay sai trong các đề thi đã làm. Cứ tiếp tục luyện!";
+    empty.classList.remove("hidden");
+    listWrap.classList.add("hidden");
+    return;
+  }
+  empty.classList.add("hidden");
+  listWrap.classList.remove("hidden");
+  document.getElementById("weaknessExamHint").classList.remove("hidden");
+
+  const listDiv = document.getElementById("weaknessList");
+  listDiv.innerHTML = "";
+
+  weakList.forEach((e) => {
+    // itemId dạng "examId::qN" — examId có thể chứa dấu "-" nhưng không chứa "::"
+    const sepPos = e.itemId.indexOf("::q");
+    const examId = sepPos >= 0 ? e.itemId.slice(0, sepPos) : null;
+    const qIndex = sepPos >= 0 ? parseInt(e.itemId.slice(sepPos + 3), 10) : null;
+    const exam = examId ? App.exams.find((ex) => ex.id === examId) : null;
+    const examTitle = exam ? exam.title : (examId || "?");
+    const qLabel = qIndex !== null && !Number.isNaN(qIndex) ? `Câu ${qIndex + 1}` : "";
+
+    const row = document.createElement("div");
+    row.className = "weakness-row weakness-row-clickable";
+    row.innerHTML = `
+      <div class="weakness-row-main">
+        <div class="weakness-row-title">${examTitle} — ${qLabel}</div>
+        <div class="weakness-row-sub">${(e.lastLabel || "").replace(/\n/g, " ")}</div>
+      </div>
+      <div class="weakness-row-stats">
+        <span class="weakness-wrong-count">✕ ${e.wrongCount} lần sai</span>
+        <span class="weakness-correct-count">✓ ${e.correctCount} lần đúng</span>
+      </div>
+    `;
+    if (examId !== null && qIndex !== null && !Number.isNaN(qIndex)) {
+      row.addEventListener("click", () => openExamDetailFromWeakness(examId, qIndex));
+    }
+    listDiv.appendChild(row);
+  });
+}
+
+// Mở popup chi tiết 1 câu đề thi TỪ TAB ĐIỂM YẾU (không nhất thiết là đề đang mở
+// trong session hiện tại) — ưu tiên dùng snapshot CHI TIẾT đã lưu lần làm gần
+// nhất (saveExamDetailSnapshot) để có đủ "đáp án đã chọn" hiển thị trong popup.
+// Dùng tham số override của openExamDetailModal — KHÔNG đụng tới App.currentExamId /
+// App.examHistory toàn cục, để không ảnh hưởng 1 đề khác đang làm giữa chừng.
+function openExamDetailFromWeakness(examId, qIndex) {
+  const exam = App.exams.find((ex) => ex.id === examId);
+  if (!exam) return;
+  const detailStats = loadExamDetailHistoryStats();
+  const saved = detailStats[examId];
+  // Nếu đúng là đề đang mở trong session hiện tại, ưu tiên dùng App.examHistory
+  // sống (mới hơn snapshot lưu, ví dụ vừa trả lời xong nhưng chưa finishExam()).
+  const examHistory = App.currentExamId === examId ? App.examHistory : (saved ? saved.examHistory : {});
+  openExamDetailModal(qIndex, { examId, examHistory });
 }
 
 function startWeaknessReview() {
@@ -1454,6 +1577,12 @@ function renderFlashCard() {
   renderCardFace(document.getElementById("flashBackContent"), w, App.fieldConfig[type].back);
   renderFlashStarButtons(w);
 
+  // Luôn cuộn về đầu nội dung mỗi khi đổi sang thẻ mới — tránh tình trạng thẻ
+  // mới hiện ra nhưng còn giữ nguyên vị trí cuộn cũ của thẻ trước (gây mất chữ
+  // đầu dòng vì người học chưa cuộn lên mà đã thấy giữa/cuối nội dung).
+  document.getElementById("flashFront").scrollTop = 0;
+  document.getElementById("flashBack").scrollTop = 0;
+
   // Thẻ X/Y (số thứ tự trong hàng đợi hiện tại, bao gồm cả từ chưa nhớ đang chờ)
   const queuePos = App.flashTotalCount - App.flashQueue.length + 1;
   document.getElementById("flashQueuePos").textContent = queuePos;
@@ -1690,8 +1819,12 @@ function renderSrsCard() {
   if (!w) return;
   const type = App.currentDeckType;
 
-  renderCardFace(document.getElementById("srsFront"), w, App.fieldConfig[type].front);
-  renderCardFace(document.getElementById("srsBack"), w, App.fieldConfig[type].back);
+  renderCardFace(document.getElementById("srsFrontContent"), w, App.fieldConfig[type].front);
+  renderCardFace(document.getElementById("srsBackContent"), w, App.fieldConfig[type].back);
+
+  // Luôn cuộn về đầu nội dung mỗi khi đổi thẻ — cùng lý do như Flashcard.
+  document.getElementById("srsFront").scrollTop = 0;
+  document.getElementById("srsBack").scrollTop = 0;
 
   updateSrsRateTimePreviews(w);
 }
@@ -1878,10 +2011,21 @@ function typingHandleKeydown(e) {
    QUIZ MODE — trắc nghiệm ý nghĩa (TUVUNG: kanji->nghĩa; NGUPHAP: cấu trúc->ý nghĩa)
 =================================================================== */
 
-function getQuizPromptAndAnswer(w) {
+// direction (chỉ áp dụng cho TUVUNG, NGUPHAP luôn cố định cautruc->nghia):
+// "kanji_nghia"  : hỏi Kanji, đáp án là Nghĩa (mặc định, kiểu cũ)
+// "kanji_hira"   : hỏi Kanji, đáp án là cách đọc Hiragana
+// "hira_nghia"   : hỏi cách đọc Hiragana, đáp án là Nghĩa
+function getQuizPromptAndAnswer(w, direction) {
   const type = App.currentDeckType;
   if (type === "NGUPHAP") {
     return { prompt: w.cautruc, answer: w.nghia };
+  }
+  const dir = direction || "kanji_nghia";
+  if (dir === "kanji_hira") {
+    return { prompt: w.kanji, answer: w.doc };
+  }
+  if (dir === "hira_nghia") {
+    return { prompt: w.doc, answer: w.nghia };
   }
   return { prompt: w.kanji, answer: w.nghia };
 }
@@ -1897,6 +2041,14 @@ function buildQuizQuestions() {
 }
 
 function initQuizMode() {
+  const directionPicker = document.getElementById("quizDirectionPicker");
+  if (App.currentDeckType === "NGUPHAP") {
+    directionPicker.classList.add("hidden");
+  } else {
+    directionPicker.classList.remove("hidden");
+    directionPicker.value = App.quizDirection;
+  }
+
   App.quizQuestions = buildQuizQuestions();
   App.quizIndex = 0;
   App.quizScore = 0;
@@ -1919,14 +2071,14 @@ function initQuizMode() {
 function renderQuizQuestion() {
   App.quizAnswering = false;
   const q = App.quizQuestions[App.quizIndex];
-  const { prompt } = getQuizPromptAndAnswer(q.word);
+  const { prompt } = getQuizPromptAndAnswer(q.word, App.quizDirection);
   document.getElementById("quizPos").textContent = App.quizIndex + 1;
   document.getElementById("quizQuestion").textContent = prompt;
 
   const optsDiv = document.getElementById("quizOptions");
   optsDiv.innerHTML = "";
   q.options.forEach((opt) => {
-    const { answer } = getQuizPromptAndAnswer(opt);
+    const { answer } = getQuizPromptAndAnswer(opt, App.quizDirection);
     const btn = document.createElement("button");
     btn.className = "quiz-opt";
     btn.textContent = answer;
@@ -1942,7 +2094,7 @@ function handleQuizAnswer(btn, chosen, q) {
   document.querySelectorAll(".quiz-opt").forEach((b) => b.classList.add("disabled"));
   const correct = chosen._id === q.word._id;
   btn.classList.add(correct ? "correct" : "wrong");
-  const { answer: correctAnswer } = getQuizPromptAndAnswer(q.word);
+  const { answer: correctAnswer } = getQuizPromptAndAnswer(q.word, App.quizDirection);
 
   if (correct) {
     App.quizScore++;
@@ -2101,7 +2253,51 @@ function renderExamPickerState() {
 // startExam() sau khi người dùng đã xác nhận chọn 1 trong 2 chế độ.
 function openExamModeModal(examId) {
   App.examPendingExamId = examId;
+  const detailStats = loadExamDetailHistoryStats();
+  const saved = detailStats[examId];
+  const viewSavedBtn = document.getElementById("btnExamViewSavedResult");
+  if (saved) {
+    viewSavedBtn.classList.remove("hidden");
+    const correctCount = Object.values(saved.examHistory).filter((h) => h.firstTryCorrect === true).length;
+    const total = Object.keys(saved.examHistory).length;
+    const d = new Date(saved.savedAt);
+    const dateStr = `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
+    document.getElementById("examSavedResultDesc").textContent =
+      `Lần làm gần nhất (${dateStr}): ${correctCount}/${total} câu đúng ngay lần đầu. Xem lại lưới đúng/sai và giải thích từng câu — không cần làm lại.`;
+  } else {
+    viewSavedBtn.classList.add("hidden");
+  }
   document.getElementById("examModeModalOverlay").classList.remove("hidden");
+}
+
+// Xem lại kết quả CHI TIẾT của lần làm gần nhất đã lưu (không làm lại đề).
+// Dùng cho trường hợp: đã làm đề trên máy khác, nhập (import) tiến độ vào máy này,
+// muốn xem lại lưới đúng/sai + giải thích từng câu mà không cần làm lại từ đầu.
+function viewSavedExamResult(examId) {
+  document.getElementById("examModeModalOverlay").classList.add("hidden");
+  const exam = App.exams.find((e) => e.id === examId);
+  const detailStats = loadExamDetailHistoryStats();
+  const saved = detailStats[examId];
+  if (!exam || !saved) return;
+
+  App.currentExamId = examId;
+  App.examHistory = saved.examHistory;
+  App.examOriginalTotal = exam.questions.length;
+  App.examQueue = [];
+  App.examReviewMode = false;
+
+  document.getElementById("examTitleLabel").textContent = exam.title;
+  document.getElementById("examEmpty").classList.add("hidden");
+  document.getElementById("examBody").classList.add("hidden");
+  document.getElementById("examResult").classList.remove("hidden");
+
+  const correctCount = Object.values(App.examHistory).filter((h) => h.firstTryCorrect === true).length;
+  document.getElementById("examFinalScore").textContent =
+    `${correctCount}/${exam.questions.length} điểm (kết quả đã lưu, lần làm gần nhất)`;
+  document.getElementById("examTimeSummary").innerHTML = "";
+  document.getElementById("examSpeedSummary").classList.add("hidden");
+
+  renderExamResultGrid();
 }
 
 function confirmExamMode(mode) {
@@ -2141,7 +2337,6 @@ function startExam(examId) {
   document.getElementById("examResult").classList.add("hidden");
   document.getElementById("examBody").classList.remove("hidden");
   document.getElementById("examEmpty").classList.add("hidden");
-  document.getElementById("examReviewTableSection").classList.add("hidden");
 
   startExamTotalTimer();
   renderExamQuestion();
@@ -2262,7 +2457,10 @@ function renderExamQuestion() {
 // isLive=false: đang xem lại câu cũ qua nút Câu trước/Câu sau, hiện lại lựa chọn đã chọn,
 // không cho chọn lại (chỉ xem), không tính giờ.
 function renderExamQuestionContent(q, qIndex, isLive) {
-  document.getElementById("examQuestion").textContent = q.de_bai;
+  // dùng innerHTML (không phải textContent) để cho phép thẻ <u> gạch chân đúng
+  // từ kanji/từ được hỏi trong câu — dữ liệu de_bai do hệ thống tự kiểm soát,
+  // không phải input người dùng nên an toàn khi render trực tiếp.
+  document.getElementById("examQuestion").innerHTML = q.de_bai;
   App.examAnswering = false;
   App.examCurrentQuestion = q;
   App.examCurrentQIndex = qIndex;
@@ -2530,11 +2728,8 @@ function finishExam() {
   document.getElementById("examBody").classList.add("hidden");
   document.getElementById("examResult").classList.remove("hidden");
 
-  const scoreNote = App.examScoreMode === "review"
-    ? "đã làm hết toàn bộ đề theo 1 lượt — xem bảng chi tiết dưới đây để biết câu nào sai"
-    : "đã hoàn thành toàn bộ đề (kể cả làm lại câu sai)";
   document.getElementById("examFinalScore").textContent =
-    `${App.examScore}/${App.examOriginalTotal} điểm — ${scoreNote}`;
+    `${App.examScore}/${App.examOriginalTotal} điểm`;
 
   // Lưu vào lịch sử lâu dài (riêng biệt khỏi state phiên hiện tại, không mất khi rời trang)
   const totalSeconds = App.examTotalStartTime ? (Date.now() - App.examTotalStartTime) / 1000 : 0;
@@ -2545,68 +2740,93 @@ function finishExam() {
     seconds: totalSeconds,
     firstTryWrongCount,
   });
+  // Lưu chi tiết từng câu (đáp án đã chọn, đúng/sai) để xem lại lưới kết quả +
+  // popup giải thích sau này, kể cả sau khi tải lại trang hoặc nhập tiến độ từ máy khác.
+  saveExamDetailSnapshot(App.currentExamId, App.examHistory);
 
-  if (App.examScoreMode === "review") {
-    renderExamReviewTable();
-    document.getElementById("examTimeSummary").innerHTML = `<div class="exam-time-summary-block"><div class="exam-time-summary-title">Tổng thời gian làm bài</div><div class="exam-time-stats-row"><div class="exam-speed-stat"><div class="exam-speed-stat-num">${fmtTime(totalSeconds)}</div></div></div></div>`;
-    document.getElementById("examSpeedSummary").classList.add("hidden");
-    document.getElementById("examMistakesSection").innerHTML = "";
-  } else {
-    document.getElementById("examReviewTableSection").classList.add("hidden");
+  if (App.examSpeedMode) {
     renderExamTimeSummary();
     renderExamSpeedSummary();
-    renderExamMistakesSection();
+  } else {
+    document.getElementById("examTimeSummary").innerHTML = "";
+    document.getElementById("examSpeedSummary").classList.add("hidden");
   }
-  renderExamWeaknessSection();
+
+  renderExamResultGrid();
 }
 
-// Bảng kết quả chi tiết từng câu — chỉ dùng cho chế độ "Chấm sửa cuối bài",
-// vì đó là lần DUY NHẤT người học biết đúng/sai của toàn bộ đề.
-function renderExamReviewTable() {
+// Lưới kết quả dạng ô tròn nhỏ — mỗi ô là 1 câu, xanh/đỏ = đúng/sai, bấm vào để
+// xem chi tiết qua popup (đề bài, đáp án đã chọn, đáp án đúng, giải thích).
+// Dùng chung cho cả 2 chế độ chấm (instant/review) — không cần phân biệt UI khác.
+function renderExamResultGrid() {
   const exam = App.exams.find((e) => e.id === App.currentExamId);
-  const section = document.getElementById("examReviewTableSection");
-  const wrap = document.getElementById("examReviewTableWrap");
-  section.classList.remove("hidden");
+  const grid = document.getElementById("examResultGrid");
 
-  const rows = exam.questions.map((q, qIndex) => {
+  const cells = exam.questions.map((q, qIndex) => {
     const hist = App.examHistory[qIndex];
-    const attempt = hist && hist.attempts[0];
-    const chosenIdx = attempt ? attempt.chosenIdx : null;
-    const correct = attempt ? attempt.correct : false;
-    const chosenText = chosenIdx !== null ? q.options[chosenIdx] : "(chưa trả lời)";
-    const correctText = q.options[q.dap_an_dung];
+    const correct = hist ? hist.firstTryCorrect : false;
+    return `<button class="exam-result-dot ${correct ? "is-correct" : "is-wrong"}" data-qindex="${qIndex}">${qIndex + 1}</button>`;
+  }).join("");
 
-    let explainHtml = "";
-    if (!correct && q.giai_thich && q.giai_thich.length) {
-      const correctExplain = q.giai_thich[q.dap_an_dung] || "";
-      const chosenExplain = chosenIdx !== null ? (q.giai_thich[chosenIdx] || "") : "";
-      explainHtml = `
-        <div class="exam-review-explain">
-          <div class="exam-review-explain-line"><b>Vì sao đúng:</b> ${correctExplain}</div>
-          ${chosenIdx !== null ? `<div class="exam-review-explain-line"><b>Vì sao bạn chọn sai:</b> ${chosenExplain}</div>` : ""}
-        </div>
-      `;
-    }
+  grid.innerHTML = cells;
 
+  grid.querySelectorAll(".exam-result-dot").forEach((dot) => {
+    dot.addEventListener("click", () => openExamDetailModal(parseInt(dot.dataset.qindex, 10)));
+  });
+}
+
+// Popup chi tiết 1 câu: đề bài, đáp án đã chọn (lần đầu), đáp án đúng, giải thích
+// ngắn gọn cho TỪNG đáp án (không chỉ đáp án đúng/sai đã chọn).
+// opts.examId / opts.examHistory (tùy chọn): dùng khi mở popup từ NGOÀI session
+// đang làm đề hiện tại (ví dụ từ tab "Đề thi" ở trang Điểm yếu) — tránh phải
+// ghi đè App.currentExamId / App.examHistory toàn cục, có thể phá dữ liệu của
+// 1 đề khác đang làm giữa chừng.
+function openExamDetailModal(qIndex, opts) {
+  const examId = (opts && opts.examId) || App.currentExamId;
+  const historySource = (opts && opts.examHistory) || App.examHistory;
+  const exam = App.exams.find((e) => e.id === examId);
+  const q = exam.questions[qIndex];
+  const hist = historySource[qIndex];
+  const firstAttempt = hist ? hist.attempts[0] : null;
+  const chosenIdx = firstAttempt ? firstAttempt.chosenIdx : null;
+  const correct = firstAttempt ? firstAttempt.correct : false;
+
+  document.getElementById("examDetailModalTitle").textContent =
+    `Câu ${qIndex + 1} — ${correct ? "✓ Đúng" : "✕ Sai"}`;
+
+  const optionsHtml = q.options.map((opt, idx) => {
+    const isCorrectAnswer = idx === q.dap_an_dung;
+    const isChosen = idx === chosenIdx;
+    const explainText = (q.giai_thich && q.giai_thich[idx]) || "";
+    const tags = [];
+    if (isCorrectAnswer) tags.push('<span class="exam-detail-tag is-correct-tag">Đáp án đúng</span>');
+    if (isChosen && !isCorrectAnswer) tags.push('<span class="exam-detail-tag is-chosen-tag">Bạn đã chọn</span>');
+    if (isChosen && isCorrectAnswer) tags.push('<span class="exam-detail-tag is-chosen-tag">Bạn đã chọn</span>');
     return `
-      <div class="exam-review-row ${correct ? "is-correct" : "is-wrong"}">
-        <div class="exam-review-row-head">
-          <span class="exam-review-mark">${correct ? "✓" : "✕"}</span>
-          <span class="exam-review-qnum">Câu ${qIndex + 1}</span>
-          <span class="exam-review-qtext">${q.de_bai.split("\n").pop()}</span>
+      <div class="exam-detail-opt ${isCorrectAnswer ? "is-correct" : ""} ${isChosen && !isCorrectAnswer ? "is-wrong-chosen" : ""}">
+        <div class="exam-detail-opt-head">
+          <span class="exam-detail-opt-text">${opt}</span>
+          ${tags.join("")}
         </div>
-        <div class="exam-review-answers">
-          <span class="exam-review-answer-chip ${correct ? "is-correct" : "is-wrong"}">Bạn chọn: ${chosenText}</span>
-          ${!correct ? `<span class="exam-review-answer-chip is-correct">Đáp án đúng: ${correctText}</span>` : ""}
-        </div>
-        ${explainHtml}
+        ${explainText ? `<div class="exam-detail-opt-explain">${explainText}</div>` : ""}
       </div>
     `;
   }).join("");
 
-  wrap.innerHTML = rows;
+  document.getElementById("examDetailModalBody").innerHTML = `
+    <div class="exam-detail-question">${q.de_bai}</div>
+    <div class="exam-detail-opts">${optionsHtml}</div>
+  `;
+
+  document.getElementById("examDetailModalOverlay").classList.remove("hidden");
 }
 
+function closeExamDetailModal() {
+  document.getElementById("examDetailModalOverlay").classList.add("hidden");
+}
+
+// Bảng kết quả chi tiết từng câu — chỉ dùng cho chế độ "Chấm sửa cuối bài",
+// vì đó là lần DUY NHẤT người học biết đúng/sai của toàn bộ đề.
 // 2 mốc thời gian theo yêu cầu:
 // Mốc 1 = từ lúc bắt đầu đề tới khi đi hết LƯỢT ĐẦU (mỗi câu gốc đã được hỏi đúng 1 lần
 //         theo thứ tự, chưa tính làm lại câu sai) -> cho biết số câu đúng/sai ngay từ đầu.
@@ -2673,74 +2893,7 @@ function renderExamSpeedSummary() {
 
 // Liệt kê chi tiết câu nào sai ở lần 1, câu nào sai nhiều lần — theo đúng yêu cầu
 // "câu nào sai ở lần 1 và câu nào sai nhiều lần cho biết luôn".
-function renderExamMistakesSection() {
-  const section = document.getElementById("examMistakesSection");
-  const exam = App.exams.find((e) => e.id === App.currentExamId);
-
-  const entries = Object.keys(App.examHistory)
-    .map((qIndexStr) => {
-      const qIndex = parseInt(qIndexStr, 10);
-      const h = App.examHistory[qIndex];
-      const wrongCount = h.attempts.filter((a) => !a.correct).length;
-      return { qIndex, wrongCount, firstTryCorrect: h.firstTryCorrect };
-    })
-    .filter((e) => e.wrongCount > 0)
-    .sort((a, b) => b.wrongCount - a.wrongCount);
-
-  if (entries.length === 0) {
-    section.innerHTML = `<div class="exam-mistakes-title">🎉 Không có câu nào sai trong đề này!</div>`;
-    return;
-  }
-
-  const rows = entries
-    .map((e) => {
-      const q = exam.questions[e.qIndex];
-      const text = q.de_bai.slice(0, 70);
-      const tag = e.wrongCount >= 2 ? "sai nhiều lần" : "sai ở lần 1";
-      const tagClass = e.wrongCount >= 2 ? "tag-multi-wrong" : "tag-first-wrong";
-      return `<div class="weakness-row">
-        <div class="weakness-row-main"><div class="weakness-row-title">Câu ${e.qIndex + 1}: ${text}…</div></div>
-        <div class="weakness-row-stats">
-          <span class="exam-mistake-tag ${tagClass}">${tag}</span>
-          <span class="weakness-wrong-count">✕ ${e.wrongCount} lần</span>
-        </div>
-      </div>`;
-    })
-    .join("");
-
-  section.innerHTML = `
-    <div class="exam-mistakes-title">Chi tiết các câu đã sai (${entries.length} câu)</div>
-    <div class="weakness-list">${rows}</div>
-  `;
-}
-
-function renderExamWeaknessSection() {
-  const weakList = getWeaknessListForDeck("__exam__")
-    .filter((e) => e.itemId.startsWith(`${App.currentExamId}::`));
-
-  const section = document.getElementById("examWeaknessSection");
-  if (weakList.length === 0) {
-    section.innerHTML = "";
-    return;
-  }
-
-  const rows = weakList
-    .map((e) => {
-      const text = e.lastLabel || e.itemId;
-      return `<div class="weakness-row">
-        <div class="weakness-row-main"><div class="weakness-row-title">${text}…</div></div>
-        <div class="weakness-row-stats">
-          <span class="weakness-wrong-count">✕ ${e.wrongCount} lần sai</span>
-        </div>
-      </div>`;
-    })
-    .join("");
-
-  section.innerHTML = `
-    <div class="exam-weakness-title">Câu bạn hay sai nhất trong đề này (lịch sử nhiều đề)</div>
-    <div class="weakness-list">${rows}</div>
-  `;
-}
+// (Đã thay bằng renderExamResultGrid() — xem định nghĩa gần finishExam())
 
 function restartCurrentExam() {
   if (App.currentExamId) openExamModeModal(App.currentExamId);
@@ -2927,6 +3080,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // ----- Weakness mode -----
   document.getElementById("btnReviewWeakness").addEventListener("click", startWeaknessReview);
+  document.getElementById("btnWeaknessTabDeck").addEventListener("click", () => {
+    App.weaknessTab = "deck";
+    renderWeaknessMode();
+  });
+  document.getElementById("btnWeaknessTabExam").addEventListener("click", () => {
+    App.weaknessTab = "exam";
+    renderWeaknessMode();
+  });
 
   // ----- Sound toggle -----
   const soundBtn = document.getElementById("btnToggleSound");
@@ -3022,6 +3183,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // ----- Quiz mode -----
   document.getElementById("btnQuizRestart").addEventListener("click", initQuizMode);
+  document.getElementById("quizDirectionPicker").addEventListener("change", (e) => {
+    App.quizDirection = e.target.value;
+    initQuizMode();
+  });
 
   // ----- Match mode -----
   document.getElementById("btnMatchRestart").addEventListener("click", initMatchMode);
@@ -3033,10 +3198,20 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("btnExamModeInstant").addEventListener("click", () => {
     confirmExamMode("instant");
   });
+  document.getElementById("btnExamViewSavedResult").addEventListener("click", () => {
+    if (App.examPendingExamId) {
+      viewSavedExamResult(App.examPendingExamId);
+      App.examPendingExamId = null;
+    }
+  });
   document.getElementById("btnExamModeReview").addEventListener("click", () => {
     confirmExamMode("review");
   });
   document.getElementById("btnExamRestart").addEventListener("click", restartCurrentExam);
+  document.getElementById("btnExamDetailModalClose").addEventListener("click", closeExamDetailModal);
+  document.getElementById("examDetailModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "examDetailModalOverlay") closeExamDetailModal();
+  });
   document.getElementById("examSpeedMode").addEventListener("change", (e) => {
     toggleExamSpeedMode(e.target.checked);
   });
@@ -3064,6 +3239,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       starredItems: App.starredItems,
       weaknessStats: loadWeaknessStats(),
       examHistory: loadExamHistoryStats(),
+      examDetailHistory: loadExamDetailHistoryStats(),
       shuffleEnabled: App.shuffleEnabled,
       soundEnabled: App.soundEnabled,
       speechEnabled: App.speechEnabled,
@@ -3167,6 +3343,20 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
           });
           saveExamHistoryStats(currentExamStats);
+        }
+        if (data.examDetailHistory) {
+          // Đây là dữ liệu CHI TIẾT từng câu (lưới đúng/sai + giải thích) — khác
+          // examHistory ở trên (chỉ có điểm số tổng). Lấy theo savedAt MỚI HƠN
+          // (vì đây là ảnh chụp 1 lần làm cụ thể, không phải bộ đếm tích lũy).
+          const currentDetailStats = loadExamDetailHistoryStats();
+          Object.keys(data.examDetailHistory).forEach((examId) => {
+            const incoming = data.examDetailHistory[examId];
+            const existing = currentDetailStats[examId];
+            if (!existing || (incoming.savedAt || 0) > (existing.savedAt || 0)) {
+              currentDetailStats[examId] = incoming;
+            }
+          });
+          saveExamDetailHistoryStats(currentDetailStats);
         }
         if (data.shuffleEnabled) {
           Object.assign(App.shuffleEnabled, data.shuffleEnabled);
