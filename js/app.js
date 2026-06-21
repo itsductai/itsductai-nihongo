@@ -2337,6 +2337,10 @@ function startExam(examId) {
   document.getElementById("examResult").classList.add("hidden");
   document.getElementById("examBody").classList.remove("hidden");
   document.getElementById("examEmpty").classList.add("hidden");
+  // Nút "Thoát & xem kết quả" chỉ có ý nghĩa ở chế độ chấm ngay (vì đó là chế độ
+  // có vòng lặp làm-lại-câu-sai có thể kéo dài) — chấm cuối bài đã đi tuần tự
+  // hết đề 1 lượt rồi nên không cần "thoát sớm".
+  document.getElementById("btnExamExitEarly").classList.toggle("hidden", App.examScoreMode !== "instant");
 
   startExamTotalTimer();
   renderExamQuestion();
@@ -2427,7 +2431,11 @@ function renderExamQuestion() {
     App.examSeenOrder.push(qIndex);
   }
 
-  document.getElementById("examPos").textContent = App.examAnswered.size + 1;
+  // Số thứ tự câu LUÔN hiển thị đúng vị trí gốc của câu đang xem (qIndex+1) —
+  // KHÔNG phải số câu đã trả lời đúng. Trước đây dùng App.examAnswered.size+1
+  // (đếm số câu ĐÚNG) khiến số nhảy sai lệch hẳn so với câu đang hiện ra mỗi khi
+  // có câu làm lại (chế độ chấm ngay) hoặc câu sai (chế độ chấm cuối bài).
+  document.getElementById("examPos").textContent = qIndex + 1;
   document.getElementById("examQueueTotal").textContent = App.examOriginalTotal;
 
   const remainingUnanswered = App.examOriginalTotal - App.examAnswered.size;
@@ -2694,7 +2702,9 @@ function showExamReviewAt(pos) {
   clearInterval(App.examPerQTimerHandle);
   document.getElementById("examPerQuestionTimerWrap").classList.add("hidden");
   document.getElementById("examReviewBanner").classList.remove("hidden");
-  document.getElementById("examPos").textContent = pos + 1;
+  // Hiện đúng số thứ tự GỐC của câu (qIndex+1), không phải vị trí trong lịch sử
+  // đã-từng-thấy (pos+1) — 2 con số này có thể khác nhau khi đã có câu làm lại.
+  document.getElementById("examPos").textContent = qIndex + 1;
 
   renderExamQuestionContent(q, qIndex, false);
 }
@@ -2711,9 +2721,19 @@ function backToLiveExamQuestion() {
   const exam = App.exams.find((e) => e.id === App.currentExamId);
   const qIndex = App.examQueue[0];
   const q = exam.questions[qIndex];
-  document.getElementById("examPos").textContent = App.examAnswered.size + 1;
+  document.getElementById("examPos").textContent = qIndex + 1;
   renderExamQuestionContent(q, qIndex, true);
   startExamPerQuestionTimer();
+}
+
+// "Thoát & xem kết quả" (chỉ chế độ chấm ngay) — Zane bấm khi lười làm lại hết
+// các câu sai còn đang nằm trong hàng đợi retry. Dừng ngay, chấm điểm với những
+// gì đã làm được, các câu CHƯA TỪNG làm sẽ hiện riêng biệt là "chưa làm" (không
+// tính là sai) trong lưới kết quả — finishExam() vẫn dùng được nguyên vì nó
+// không phụ thuộc việc hàng đợi đã rỗng hay chưa.
+function exitExamEarlyAndShowResult() {
+  App.examQueue = [];
+  finishExam();
 }
 
 function finishExam() {
@@ -2762,10 +2782,15 @@ function renderExamResultGrid() {
   const exam = App.exams.find((e) => e.id === App.currentExamId);
   const grid = document.getElementById("examResultGrid");
 
+  // 3 trạng thái: đúng / sai / CHƯA LÀM (chưa có lượt nào — quan trọng từ khi có
+  // nút "Thoát & xem kết quả", vì giờ hoàn toàn có thể có câu chưa từng được làm).
   const cells = exam.questions.map((q, qIndex) => {
     const hist = App.examHistory[qIndex];
-    const correct = hist ? hist.firstTryCorrect : false;
-    return `<button class="exam-result-dot ${correct ? "is-correct" : "is-wrong"}" data-qindex="${qIndex}">${qIndex + 1}</button>`;
+    let stateClass = "is-not-done";
+    if (hist && hist.attempts.length) {
+      stateClass = hist.firstTryCorrect ? "is-correct" : "is-wrong";
+    }
+    return `<button class="exam-result-dot ${stateClass}" data-qindex="${qIndex}">${qIndex + 1}</button>`;
   }).join("");
 
   grid.innerHTML = cells;
@@ -2790,9 +2815,11 @@ function openExamDetailModal(qIndex, opts) {
   const firstAttempt = hist ? hist.attempts[0] : null;
   const chosenIdx = firstAttempt ? firstAttempt.chosenIdx : null;
   const correct = firstAttempt ? firstAttempt.correct : false;
+  const notDone = !firstAttempt;
 
-  document.getElementById("examDetailModalTitle").textContent =
-    `Câu ${qIndex + 1} — ${correct ? "✓ Đúng" : "✕ Sai"}`;
+  document.getElementById("examDetailModalTitle").textContent = notDone
+    ? `Câu ${qIndex + 1} — Chưa làm`
+    : `Câu ${qIndex + 1} — ${correct ? "✓ Đúng" : "✕ Sai"}`;
 
   const optionsHtml = q.options.map((opt, idx) => {
     const isCorrectAnswer = idx === q.dap_an_dung;
@@ -3217,6 +3244,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
   document.getElementById("btnExamPrev").addEventListener("click", examGoPrev);
   document.getElementById("btnExamNext").addEventListener("click", examGoNext);
+  document.getElementById("btnExamExitEarly").addEventListener("click", () => {
+    if (confirm("Dừng làm các câu sai còn lại và xem kết quả ngay với những gì đã làm?")) {
+      exitExamEarlyAndShowResult();
+    }
+  });
   document.getElementById("btnExamShowExplain").addEventListener("click", toggleExamExplain);
   document.getElementById("btnExamContinue").addEventListener("click", examContinueAfterInstantAnswer);
 

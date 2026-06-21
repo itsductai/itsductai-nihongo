@@ -201,17 +201,24 @@ rt {
 }
 .card-face {
   border-radius: 16px; backface-visibility: hidden;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  /* KHÔNG dùng justify-content:center ở đây — đây chính là nguyên nhân lỗi "mất chữ
+     trên/dưới": khi nội dung cao hơn khung (vd cao 800px nhưng khung tối đa 600px),
+     flexbox CĂN GIỮA nội dung khiến nó tràn ĐỀU ra cả 2 phía trên/dưới, nhưng vùng
+     tràn ở phía TRÊN không tài nào cuộn tới được (trình duyệt không hỗ trợ cuộn tới
+     vùng "âm" phía trên khi dùng justify-content:center + overflow:auto cùng lúc) —
+     nên luôn bị mất ~100px ở MỖI đầu dù cuộn hết cỡ. Thay bằng margin:auto trên
+     .card-face-content (xem dưới) — vẫn căn giữa khi nội dung ngắn, nhưng tự động
+     bỏ căn giữa (margin auto = 0) khi nội dung dài hơn khung, nên không bao giờ
+     tràn ra ngoài vùng cuộn được nữa — luôn cuộn tới được TOÀN BỘ nội dung.
+  */
+  display: flex; flex-direction: column; align-items: center;
   text-align: center; background: var(--bg-2); border: 1px solid var(--border);
   box-shadow: var(--shadow); overflow-y: auto; max-height: 72vh; min-height: 320px;
-  /* Thanh cuộn mỏng, mờ nhạt, vẫn HIỂN THỊ rõ ràng (không ẩn hẳn) để người dùng biết
-     có thể cuộn thêm khi nội dung dài hơn khung hình. */
-  scrollbar-width: thin; scrollbar-color: var(--text-2) transparent;
+  /* Ẩn hẳn thanh cuộn (theo yêu cầu) — vẫn cuộn được bằng chạm/lăn chuột bình thường,
+     chỉ là không hiện thanh cuộn trên khung nữa. */
+  scrollbar-width: none; -ms-overflow-style: none;
 }
-.card-face::-webkit-scrollbar { width: 6px; }
-.card-face::-webkit-scrollbar-track { background: transparent; }
-.card-face::-webkit-scrollbar-thumb { background: var(--text-2); border-radius: 3px; }
-.card-face::-webkit-scrollbar-thumb:hover { background: var(--text-1); }
+.card-face::-webkit-scrollbar { display: none; width: 0; height: 0; }
 
 /* Mặt trước luôn nằm trong luồng layout (quyết định chiều cao .card khi chưa lật) */
 .card-face.card-front { position: relative; width: 100%; }
@@ -229,7 +236,12 @@ rt {
 
 .card-face-content {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  width: 100%; min-height: 100%; padding: 32px 28px 40px;
+  width: 100%; padding: 32px 28px 40px;
+  /* margin:auto (thay vì dựa vào justify-content:center của .card-face cha) — co giãn
+     để căn giữa khi nội dung NGẮN hơn khung, nhưng tự động co về 0 khi nội dung DÀI
+     hơn khung (không còn khoảng trống để chia margin) — nhờ vậy không bao giờ tạo
+     ra vùng tràn "âm" phía trên mà không cuộn tới được nữa. */
+  margin: auto 0;
   /* padding-bottom lớn hơn các cạnh khác để dòng cuối cùng không bị dính sát viền
      dưới của khung cuộn — đây chính là điều Zane phản ánh "viền dưới sát quá". */
   box-sizing: border-box;
@@ -417,6 +429,11 @@ tbody tr:last-child td { border-bottom: none; }
 .exam-retry-note { color: var(--warn); margin-left: 10px; }
 .exam-progress-text { font-weight: 600; }
 .exam-nav-btn { font-size: 12px; padding: 6px 12px; }
+/* Nút "Thoát & xem kết quả" — màu cảnh báo nhẹ (không phải đỏ nguy hiểm, vì đây
+   không phải hành động phá hoại gì, chỉ là dừng sớm) để phân biệt với 2 nút
+   điều hướng câu trước/sau cạnh nó. */
+.exam-exit-early-btn { font-size: 12px; padding: 6px 12px; color: var(--warn); border-color: var(--warn); margin-left: auto; }
+.exam-exit-early-btn:hover { background: var(--warn-soft); }
 .exam-review-banner {
   background: var(--accent-soft); color: var(--accent); border-radius: 8px;
   padding: 10px 14px; font-size: 13px; margin-bottom: 14px; text-align: center;
@@ -888,6 +905,9 @@ tbody tr:last-child td { border-bottom: none; }
 .exam-result-dot:active { transform: scale(0.96); }
 .exam-result-dot.is-correct { background: var(--good-soft); color: var(--good); box-shadow: inset 0 0 0 1.5px var(--good); }
 .exam-result-dot.is-wrong { background: var(--bad-soft); color: var(--bad); box-shadow: inset 0 0 0 1.5px var(--bad); }
+/* Câu CHƯA TỪNG làm (chỉ xảy ra sau khi bấm "Thoát & xem kết quả" giữa đề) —
+   tách riêng khỏi "sai" để không đánh đồng "chưa làm" với "đã làm nhưng sai". */
+.exam-result-dot.is-not-done { background: var(--bg-3); color: var(--text-2); box-shadow: inset 0 0 0 1.5px var(--border); }
 
 /* ===== MODAL chi tiết 1 câu trong kết quả đề thi =====
    Tái dùng .modal-overlay / .modal-box / .modal-head / .modal-title /
