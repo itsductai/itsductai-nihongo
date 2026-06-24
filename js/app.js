@@ -1016,7 +1016,11 @@ async function loadDecks() {
   // Sắp theo tên hiển thị A-Z (so sánh kiểu tiếng Việt, có dấu đúng thứ tự)
   // — áp dụng ngay tại đây để MỌI nơi dùng App.decks (dropdown, sửa tạm reload...)
   // đều tự động theo đúng thứ tự, không cần sort lặp lại ở từng nơi hiển thị.
-  decks.sort((a, b) => a.title.localeCompare(b.title, "vi"));
+  // numeric:true giúp so sánh hiểu ĐÚNG các số nằm trong tên (vd "Unit 10" phải
+  // đứng SAU "Unit 3", không phải đứng trước như so sánh ký tự thường — so sánh
+  // ký tự thường sẽ thấy '1' < '3' nên xếp "Unit 10","Unit 11" lên TRƯỚC "Unit 3",
+  // "Unit 4", nhìn vào tưởng sai thứ tự dù về mặt chuỗi vẫn đúng A-Z.
+  decks.sort((a, b) => a.title.localeCompare(b.title, "vi", { numeric: true }));
   return decks;
 }
 
@@ -1035,8 +1039,9 @@ async function loadExams() {
         console.error("Lỗi tải đề thi", filename, e);
       }
     }
-    // Cùng quy tắc với loadDecks(): sắp A-Z theo tên đề ngay tại nguồn.
-    exams.sort((a, b) => a.title.localeCompare(b.title, "vi"));
+    // Cùng quy tắc với loadDecks(): sắp A-Z theo tên đề, hiểu số (numeric:true)
+    // để các đề có số năm/tháng trong tên không bị xếp sai kiểu so sánh ký tự.
+    exams.sort((a, b) => a.title.localeCompare(b.title, "vi", { numeric: true }));
     return exams;
   } catch (e) {
     console.warn("Không có thư mục đề thi hoặc index.json lỗi", e);
@@ -3443,5 +3448,3 @@ document.addEventListener("DOMContentLoaded", async () => {
   // ----- Bắt đầu với bộ đầu tiên -----
   switchDeck(App.decks[0].id);
 });
-
-
