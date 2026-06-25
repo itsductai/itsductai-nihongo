@@ -949,10 +949,14 @@ tbody tr:last-child td { border-bottom: none; }
   margin-bottom: 16px; line-height: 1.7;
 }
 .choukai-audio-box {
-  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  display: flex; flex-direction: column; gap: 12px;
   background: var(--bg-2); border: 1px solid var(--border); border-radius: 12px;
   padding: 16px 20px; margin-bottom: 16px;
 }
+/* Thanh điều khiển audio gốc của trình duyệt — có sẵn thanh thời gian/seek bar
+   để tự kéo tới đoạn muốn nghe lại, theo đúng yêu cầu hiện thời gian + tùy chỉnh. */
+#choukaiAudioEl, #choukaiShadowAudioEl { width: 100%; height: 38px; }
+.choukai-audio-controls-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .choukai-play-btn {
   background: var(--accent); color: #fff; border: none; border-radius: 24px;
   padding: 12px 22px; font-size: 14px; font-weight: 700; cursor: pointer;
