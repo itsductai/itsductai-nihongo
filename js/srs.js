@@ -32,6 +32,11 @@ const SRS = (() => {
   const DEFAULT_EASE = 2.5;
   const GRADUATE_THRESHOLD = 1440; // 1 ngày (phút) — sau ngưỡng này coi là đã "trưởng thành"
   const GRADUATED_EASY_BONUS = 1.5; // cộng thêm vào ease khi tính Dễ sau khi đã "trưởng thành"
+  // "Đã thuộc" — dành cho từ ĐÃ học trước ở nơi khác (Anki/Quizlet/sách giấy...),
+  // không muốn đi từng bước Quên→Khó→Dễ như từ hoàn toàn mới. Đẩy thẳng lên mốc
+  // RẤT XA (60 ngày) để gần như không xuất hiện lại, nhưng vẫn nằm trong hệ thống
+  // (không xóa khỏi vòng ôn hẳn — nếu lâu quá quên thật thì vẫn sẽ gặp lại).
+  const MASTERED_INTERVAL = 60 * 1440; // 60 ngày, tính theo phút
 
   function now() {
     return Date.now();
@@ -90,6 +95,10 @@ const SRS = (() => {
     next.reps = (entry.reps || 0) + 1;
     next.lastRating = rating;
     next.seen = true;
+    // "mastered" chỉ có ý nghĩa cho tới lần rate THẬT tiếp theo — nếu sau đó người
+    // học rate lại bằng Quên/Khó/Dễ (ví dụ 60 ngày sau từ đó quay lại due), coi như
+    // đang ôn THẬT lại, không còn ở trạng thái "đã thuộc, bỏ qua bước" nữa.
+    next.mastered = false;
 
     if (rating === "again") {
       next.intervalMin = MIN_INTERVAL;
@@ -107,6 +116,11 @@ const SRS = (() => {
         next.intervalMin = Math.round(entry.intervalMin * (entry.ease + GRADUATED_EASY_BONUS));
       }
       next.ease = Math.min(MAX_EASE, entry.ease + 0.1);
+    } else if (rating === "mastered") {
+      // Bỏ qua hoàn toàn các bước tăng dần — đẩy thẳng lên mốc rất xa, không đụng
+      // tới ease (giữ nguyên, vì đây không phải kết quả của 1 lần ôn thật).
+      next.intervalMin = MASTERED_INTERVAL;
+      next.mastered = true;
     }
 
     next.due = now() + next.intervalMin * 60 * 1000;
@@ -121,9 +135,11 @@ const SRS = (() => {
     return next;
   }
 
-  // Trạng thái hiển thị: new / learning (chưa qua 1 ngày) / known (đã "trưởng thành")
+  // Trạng thái hiển thị: new / learning (chưa qua 1 ngày) / known (đã "trưởng thành") /
+  // mastered (được đánh dấu "Đã thuộc" thủ công, bỏ qua các bước tăng dần)
   function status(entry) {
     if (!entry || !entry.seen) return "new";
+    if (entry.mastered) return "mastered";
     if (entry.intervalMin >= GRADUATE_THRESHOLD) return "known";
     return "learning";
   }
