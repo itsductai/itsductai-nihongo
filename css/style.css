@@ -327,6 +327,19 @@ tbody tr:last-child td { border-bottom: none; }
 .status-new { background: var(--bg-3); color: var(--text-2); }
 .status-learning { background: var(--warn-soft); color: var(--warn); }
 .status-known { background: var(--good-soft); color: var(--good); }
+.status-mastered { background: #4a3a12; color: #e0b84a; }
+
+/* Nút "Đã thuộc" — tách riêng hàng dưới 3 nút Quên/Khó/Dễ, để không lẫn vào
+   luồng chấm điểm bình thường (đây là HÀNH ĐỘNG ĐẶC BIỆT: bỏ qua các bước tăng
+   dần, dành cho từ đã học vững ở nơi khác, không phải kết quả của 1 lần ôn). */
+.srs-mastered-row { display: flex; justify-content: center; margin-top: 10px; }
+.rate-mastered {
+  padding: 10px 20px; border-radius: 10px; font-size: 13px; font-weight: 600; cursor: pointer;
+  border: 1px dashed #6b5418; background: transparent; color: #e0b84a;
+  display: flex; align-items: center; gap: 8px; transition: background 0.15s;
+}
+.rate-mastered:hover { background: #2a2210; }
+.srs-mastered-hint { font-size: 10.5px; font-weight: 400; opacity: 0.75; }
 
 /* Ô che (bật/tắt theo từng cột, hover để xem tạm thời, không gây lệch layout) */
 .cell-peek-wrap {
