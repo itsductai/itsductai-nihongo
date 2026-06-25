@@ -91,6 +91,8 @@ const App = {
   choukaiHintEnabled: false,
   choukaiReviewTab: "script",
   choukaiPendingTestId: null,
+  choukaiCurrentAudioSrc: null, // theo dõi file audio đang load, tránh load lại không cần thiết
+  choukaiAnswering: false,      // chặn bấm thêm lựa chọn sau khi đã trả lời câu hiện tại
   examLastAnswerCorrect: null, // kết quả lượt vừa chấm (chế độ instant), dùng khi bấm "Tiếp tục"
   examLastAnsweredQIndex: null,
   examPerQTimerHandle: null,
@@ -1351,6 +1353,17 @@ function setMode(mode) {
   if (mode !== "exam") {
     clearInterval(App.examPerQTimerHandle);
     clearInterval(App.examTotalTimerHandle);
+  }
+
+  // Tự dừng audio đang phát khi rời khỏi 2 tab luyện nghe — trước đây audio vẫn
+  // chạy nền dù đã chuyển qua chức năng khác, gây khó chịu/lẫn âm thanh.
+  if (mode !== "choukai") {
+    const el = document.getElementById("choukaiAudioEl");
+    if (el && !el.paused) el.pause();
+  }
+  if (mode !== "choukai-shadow") {
+    const elShadow = document.getElementById("choukaiShadowAudioEl");
+    if (elShadow && !elShadow.paused) elShadow.pause();
   }
 
   document.querySelectorAll(".nav-item").forEach((b) => {
@@ -3182,6 +3195,8 @@ function startChoukai(testId) {
   App.choukaiScore = 0;
   App.choukaiHintEnabled = false;
   App.choukaiStartTime = Date.now();
+  App.choukaiCurrentAudioSrc = null;
+  App.choukaiAnswering = false;
 
   document.getElementById("choukaiEmpty").classList.add("hidden");
   document.getElementById("choukaiResult").classList.add("hidden");
@@ -3213,6 +3228,7 @@ function renderChoukaiQuestion() {
   if (!item) { finishChoukai(); return; }
   const test = item.test, mondai = item.mondai, q = item.q, sub = item.sub;
 
+  App.choukaiAnswering = false; // mở khóa lựa chọn cho câu mới
   document.getElementById("choukaiReviewPanel").classList.add("hidden");
   document.getElementById("choukaiProgressText").textContent =
     "Câu " + (App.choukaiPos + 1) + "/" + App.choukaiQueue.length + " · Mondai " + mondai.number + " (" + mondai.name + ")";
@@ -3222,11 +3238,20 @@ function renderChoukaiQuestion() {
   const audioEl = document.getElementById("choukaiAudioEl");
   const hint = document.getElementById("choukaiAudioHint");
   if (audioSrc) {
-    audioEl.src = audioSrc;
+    // CHỈ load lại file khi file thật sự đổi (sang Mondai khác dùng file khác).
+    // Trước đây set audioEl.src mỗi lần render khiến audio bị TẢI LẠI TỪ ĐẦU mỗi
+    // khi qua câu kế trong CÙNG 1 Mondai (dùng chung 1 file) — làm gián đoạn nghe
+    // liên tục dù câu 1→5 của 1 Mondai vốn nằm trong 1 file audio duy nhất.
+    if (App.choukaiCurrentAudioSrc !== audioSrc) {
+      audioEl.src = audioSrc;
+      App.choukaiCurrentAudioSrc = audioSrc;
+    }
     hint.textContent = test.audioMode === "combined"
-      ? "⚠ Đề này dùng 1 file audio chung cho cả đề — tự tìm đúng đoạn tương ứng."
+      ? "⚠ Đề này dùng 1 file audio chung cho cả đề — tự kéo thanh thời gian tới đúng đoạn."
       : "";
   } else {
+    audioEl.removeAttribute("src");
+    App.choukaiCurrentAudioSrc = null;
     hint.textContent = "⚠ Chưa có file audio cho Mondai này.";
   }
 
@@ -3234,15 +3259,32 @@ function renderChoukaiQuestion() {
   document.getElementById("choukaiPrompt").textContent = promptText;
 
   const options = sub ? sub.options : q.options;
+  const correctIndexForRender = sub ? sub.correctIndex : q.correctIndex;
+  const key = choukaiKeyFor(mondai.number, q.qnum, item.pos.subIndex);
+  const existingAnswer = App.choukaiAnswers[key];
+
   const optWrap = document.getElementById("choukaiOptions");
   optWrap.innerHTML = "";
   options.forEach(function (opt, idx) {
     const btn = document.createElement("button");
     btn.className = "quiz-opt";
     btn.textContent = opt;
-    btn.addEventListener("click", function () { handleChoukaiAnswer(idx); });
+    if (existingAnswer) {
+      // Câu này đã trả lời rồi (quay lại bằng nút "Câu trước") — khóa lại, không
+      // cho trả lời lần 2 (tránh lặp lại lỗi cộng điểm 2 lần), chỉ hiển thị lại
+      // trạng thái đã chọn.
+      btn.classList.add("disabled");
+      if (idx === correctIndexForRender) btn.classList.add("correct");
+      else if (idx === existingAnswer.chosenIndex) btn.classList.add("wrong");
+    } else {
+      btn.addEventListener("click", function () { handleChoukaiAnswer(idx); });
+    }
     optWrap.appendChild(btn);
   });
+  if (existingAnswer) {
+    App.choukaiAnswering = true;
+    if (App.choukaiScoreMode === "instant") showChoukaiReviewPanel(existingAnswer.correct);
+  }
 
   // Gợi ý từ khóa — chỉ Mondai 3 & 5
   const hintRow = document.getElementById("choukaiHintRow");
@@ -3260,8 +3302,11 @@ function renderChoukaiQuestion() {
 }
 
 function handleChoukaiAnswer(chosenIndex) {
+  if (App.choukaiAnswering) return; // chặn bấm thêm lần nữa sau khi đã trả lời câu này
   const item = getChoukaiCurrentItem();
   if (!item) return;
+  App.choukaiAnswering = true;
+
   const mondai = item.mondai, q = item.q, sub = item.sub, pos = item.pos;
   const correctIndex = sub ? sub.correctIndex : q.correctIndex;
   const correct = chosenIndex === correctIndex;
@@ -3269,6 +3314,15 @@ function handleChoukaiAnswer(chosenIndex) {
 
   App.choukaiAnswers[key] = { chosenIndex: chosenIndex, correctIndex: correctIndex, correct: correct };
   if (correct) App.choukaiScore++;
+
+  // Khóa toàn bộ lựa chọn ngay sau khi trả lời — trước đây các nút vẫn bấm được
+  // dưới panel review, bấm thêm sẽ GHI ĐÈ đáp án + cộng điểm thêm lần nữa, khiến
+  // điểm "câu đúng" bị đẩy lên gần bằng tổng số câu đã làm. Đây là lỗi đã sửa.
+  document.querySelectorAll("#choukaiOptions .quiz-opt").forEach(function (b, idx) {
+    b.classList.add("disabled");
+    if (idx === correctIndex) b.classList.add("correct");
+    else if (idx === chosenIndex) b.classList.add("wrong");
+  });
 
   // Ghi vào hệ thống điểm yếu chung (deckId giả "__choukai__"), tái dùng
   // recordWeaknessResult đã có sẵn cho exam mode.
@@ -3614,6 +3668,18 @@ function restartCurrentExam() {
    INIT — gắn toàn bộ event listener và khởi động app khi load trang
 =================================================================== */
 
+// Tự dừng audio luyện nghe khi người dùng chuyển sang TAB TRÌNH DUYỆT khác
+// (không chỉ chuyển chức năng trong app) — đúng yêu cầu "tự tắt nếu không còn
+// ở tab luyện nghe".
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    const el = document.getElementById("choukaiAudioEl");
+    if (el && !el.paused) el.pause();
+    const elShadow = document.getElementById("choukaiShadowAudioEl");
+    if (elShadow && !elShadow.paused) elShadow.pause();
+  }
+});
+
 document.addEventListener("DOMContentLoaded", async () => {
   loadFieldConfig();
   loadEditPatches();
@@ -3944,6 +4010,19 @@ document.addEventListener("DOMContentLoaded", async () => {
   // ----- CHOUKAI mode listeners -----
   document.getElementById("choukaiPicker").addEventListener("change", (e) => {
     if (e.target.value) openChoukaiModeModal(e.target.value);
+  });
+  // Cho phép đổi Mondai NGAY GIỮA LÚC đang làm bài (không chỉ chọn trước khi bắt
+  // đầu) — đổi dropdown này khi đã đang trong session sẽ nhảy thẳng tới Mondai đó,
+  // không mất tiến độ các câu đã làm (đáp án vẫn lưu theo key riêng từng câu).
+  document.getElementById("choukaiMondaiPicker").addEventListener("change", (e) => {
+    const sessionActive = App.currentChoukaiId && !document.getElementById("choukaiBody").classList.contains("hidden");
+    if (!sessionActive) return; // đang ở modal chọn trước khi bắt đầu — để confirmChoukaiMode() đọc giá trị, không xử lý ở đây
+    const val = e.target.value;
+    App.choukaiMondaiFilter = val === "all" ? "all" : parseInt(val, 10);
+    const test = getChoukaiTest(App.currentChoukaiId);
+    App.choukaiQueue = buildChoukaiQueue(test, App.choukaiMondaiFilter);
+    App.choukaiPos = 0;
+    renderChoukaiQuestion();
   });
   document.getElementById("btnChoukaiModeInstant").addEventListener("click", () => confirmChoukaiMode("instant"));
   document.getElementById("btnChoukaiModeReview").addEventListener("click", () => confirmChoukaiMode("review"));
