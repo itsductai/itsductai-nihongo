@@ -939,3 +939,93 @@ tbody tr:last-child td { border-bottom: none; }
   background: var(--bg-2); border-radius: 8px; padding: 9px 12px;
   font-size: 12.5px; color: var(--text-1); line-height: 1.65;
 }
+
+/* ===================================================================
+   CHOUKAI MODE — Luyện nghe (聴解)
+=================================================================== */
+.choukai-mondai-instruction {
+  font-size: 12.5px; color: var(--text-2); background: var(--bg-2);
+  border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px;
+  margin-bottom: 16px; line-height: 1.7;
+}
+.choukai-audio-box {
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: 12px;
+  padding: 16px 20px; margin-bottom: 16px;
+}
+.choukai-play-btn {
+  background: var(--accent); color: #fff; border: none; border-radius: 24px;
+  padding: 12px 22px; font-size: 14px; font-weight: 700; cursor: pointer;
+  transition: transform 0.1s, opacity 0.15s;
+}
+.choukai-play-btn:hover { opacity: 0.9; }
+.choukai-play-btn:active { transform: scale(0.97); }
+.choukai-audio-hint { font-size: 12px; color: var(--text-2); }
+
+/* Toggle gợi ý từ khóa — Mondai 3 & 5 */
+.choukai-hint-row { margin-bottom: 16px; }
+.choukai-hint-toggle {
+  display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-1);
+  cursor: pointer; user-select: none;
+}
+.choukai-hint-toggle input { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
+.choukai-keywords {
+  margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px;
+}
+.choukai-keyword-chip {
+  background: var(--accent-soft); color: var(--accent); border-radius: 14px;
+  padding: 5px 12px; font-size: 12.5px; font-weight: 600;
+}
+
+.choukai-prompt {
+  font-size: 16px; font-weight: 500; margin-bottom: 16px; line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+/* Panel script/dịch/mẹo sau khi trả lời (chấm ngay) */
+.choukai-review-panel {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: 12px;
+  padding: 18px 20px; margin-top: 18px;
+}
+.choukai-review-result { font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+.choukai-review-result.is-correct { color: var(--good); }
+.choukai-review-result.is-wrong { color: var(--bad); }
+.choukai-review-tabs { display: flex; gap: 8px; margin-bottom: 12px; }
+.choukai-review-tab {
+  background: var(--bg-3); border: 1px solid var(--border); color: var(--text-1);
+  font-size: 12.5px; font-weight: 600; padding: 7px 14px; border-radius: 16px; cursor: pointer;
+}
+.choukai-review-tab.is-active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.choukai-review-content {
+  font-size: 14px; line-height: 1.85; color: var(--text-0); white-space: pre-wrap;
+  margin-bottom: 16px; max-height: 320px; overflow-y: auto;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.choukai-review-content::-webkit-scrollbar { display: none; }
+
+.choukai-mondai-breakdown {
+  display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 18px;
+}
+.choukai-mondai-breakdown-item {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px;
+  padding: 10px 16px; font-size: 12.5px; text-align: center; min-width: 90px;
+}
+.choukai-mondai-breakdown-item .num { font-size: 18px; font-weight: 700; color: var(--accent); display: block; }
+
+/* ===== Choukai Shadow mode (luyện nghe câu) ===== */
+.choukai-shadow-note {
+  font-size: 12px; color: var(--warn); background: var(--warn-soft);
+  border-radius: 10px; padding: 10px 14px; margin-bottom: 16px; line-height: 1.6;
+}
+.choukai-shadow-lines { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+.choukai-shadow-line {
+  background: var(--bg-2); border: 1px solid var(--border); border-radius: 10px; padding: 12px 16px;
+}
+.choukai-shadow-line-jp { font-size: 14.5px; color: var(--text-0); margin-bottom: 8px; line-height: 1.7; }
+.choukai-shadow-line-vi {
+  font-size: 13px; color: var(--text-1); line-height: 1.7; cursor: pointer;
+  filter: blur(5px); transition: filter 0.15s; user-select: none;
+}
+.choukai-shadow-line-vi.is-revealed { filter: blur(0); user-select: text; }
+.choukai-shadow-line-vi::before { content: "👁 Bấm để hiện bản dịch — "; color: var(--text-2); font-size: 11px; }
+.choukai-shadow-line-vi.is-revealed::before { content: ""; }
