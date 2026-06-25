@@ -317,7 +317,140 @@
       </div>
     </div>
 
-    <!-- ---- WEAKNESS MODE (thống kê điểm yếu) ---- -->
+    <!-- ===================================================================
+         CHOUKAI MODE — Luyện nghe (聴解) theo từng đề/mondai thật
+    =================================================================== -->
+    <section class="view hidden" id="view-choukai">
+      <div class="view-head">
+        <select id="choukaiPicker" class="filter-select">
+          <option value="">— chọn đề nghe —</option>
+        </select>
+        <select id="choukaiMondaiPicker" class="filter-select hidden">
+          <option value="all">Luyện cả đề (Mondai 1→5)</option>
+        </select>
+      </div>
+
+      <div id="choukaiEmpty" class="empty-state">
+        <div class="empty-icon">🎧</div>
+        <div>Chọn 1 đề nghe ở trên để bắt đầu luyện.</div>
+      </div>
+
+      <div id="choukaiBody" class="hidden">
+        <div class="exam-progress-line">
+          <button class="icon-btn exam-nav-btn" id="btnChoukaiPrev">← Câu trước</button>
+          <span class="exam-progress-text" id="choukaiProgressText">Câu 1/5 · Mondai 1</span>
+          <button class="icon-btn exam-nav-btn" id="btnChoukaiNext">Câu sau →</button>
+          <button class="ghost-btn exam-exit-early-btn hidden" id="btnChoukaiExitEarly">🚪 Thoát & xem kết quả</button>
+        </div>
+
+        <div class="choukai-mondai-instruction" id="choukaiMondaiInstruction"></div>
+
+        <div class="choukai-audio-box">
+          <audio id="choukaiAudioEl" preload="none"></audio>
+          <button class="choukai-play-btn" id="btnChoukaiPlay">▶ Phát audio câu này</button>
+          <span class="choukai-audio-hint" id="choukaiAudioHint"></span>
+        </div>
+
+        <!-- Gợi ý từ khóa khi nghe (chỉ Mondai 3 & 5) -->
+        <div class="choukai-hint-row hidden" id="choukaiHintRow">
+          <label class="choukai-hint-toggle">
+            <input type="checkbox" id="choukaiHintToggle" />
+            💡 Hiện gợi ý từ khóa khi đang nghe (luyện khả năng bắt ý, không cần ghi chú giấy)
+          </label>
+          <div class="choukai-keywords hidden" id="choukaiKeywords"></div>
+        </div>
+
+        <div class="choukai-prompt" id="choukaiPrompt"></div>
+
+        <div class="quiz-options" id="choukaiOptions"></div>
+
+        <!-- Panel hiện sau khi trả lời (chế độ chấm ngay) -->
+        <div class="choukai-review-panel hidden" id="choukaiReviewPanel">
+          <div class="choukai-review-result" id="choukaiReviewResult"></div>
+          <div class="choukai-review-tabs">
+            <button class="choukai-review-tab is-active" data-tab="script">Script</button>
+            <button class="choukai-review-tab" data-tab="vi">Dịch</button>
+            <button class="choukai-review-tab" data-tab="tip">💡 Mẹo nghe</button>
+          </div>
+          <div class="choukai-review-content" id="choukaiReviewContent"></div>
+          <button class="primary-btn" id="btnChoukaiContinue">Tiếp tục →</button>
+        </div>
+      </div>
+
+      <!-- Màn kết quả cuối -->
+      <div id="choukaiResult" class="quiz-result hidden">
+        <div class="quiz-result-title">🎉 Hoàn thành phần nghe!</div>
+        <div class="quiz-result-score" id="choukaiFinalScore"></div>
+        <div class="choukai-mondai-breakdown" id="choukaiMondaiBreakdown"></div>
+        <div class="exam-result-grid-section">
+          <div class="exam-result-grid-title">Bấm vào số câu để xem lại script + dịch + mẹo</div>
+          <div class="exam-result-grid" id="choukaiResultGrid"></div>
+        </div>
+        <button class="primary-btn" id="btnChoukaiRestart">Làm lại đề này</button>
+      </div>
+    </section>
+
+    <!-- Modal chọn chế độ chấm cho phần nghe (giống exam mode) -->
+    <div class="modal-overlay hidden" id="choukaiModeModalOverlay">
+      <div class="modal-box exam-mode-modal-box">
+        <div class="modal-head">
+          <div class="modal-title">Chọn cách chấm điểm (phần nghe)</div>
+        </div>
+        <div class="modal-body">
+          <button class="exam-mode-choice hidden" id="btnChoukaiViewSavedResult">
+            <div class="exam-mode-choice-title">📊 Xem kết quả lần làm gần nhất</div>
+            <div class="exam-mode-choice-desc" id="choukaiSavedResultDesc"></div>
+          </button>
+          <button class="exam-mode-choice" id="btnChoukaiModeInstant">
+            <div class="exam-mode-choice-title">⚡ Chấm sửa ngay</div>
+            <div class="exam-mode-choice-desc">Trả lời xong mỗi câu là xem ngay script + dịch + mẹo nghe, rồi qua câu kế.</div>
+          </button>
+          <button class="exam-mode-choice" id="btnChoukaiModeReview">
+            <div class="exam-mode-choice-title">📝 Chấm dồn cuối bài</div>
+            <div class="exam-mode-choice-desc">Nghe & làm hết các câu theo thứ tự, không biết đúng/sai lúc đang làm. Cuối bài xem kết quả đầy đủ.</div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal chi tiết 1 câu (từ lưới kết quả hoặc tab điểm yếu) -->
+    <div class="modal-overlay hidden" id="choukaiDetailModalOverlay">
+      <div class="modal-box exam-detail-modal-box">
+        <div class="modal-head">
+          <div class="modal-title" id="choukaiDetailModalTitle">Câu 1</div>
+          <button class="modal-close-btn" id="btnChoukaiDetailModalClose">✕</button>
+        </div>
+        <div class="modal-body" id="choukaiDetailModalBody"></div>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         CHOUKAI SHADOW MODE — Luyện nghe câu (tách từng câu trong script,
+         phát lại + dịch mờ từng câu, dùng để luyện shadowing/nghe chi tiết)
+    =================================================================== -->
+    <section class="view hidden" id="view-choukai-shadow">
+      <div class="view-head">
+        <select id="choukaiShadowPicker" class="filter-select">
+          <option value="">— chọn đề nghe —</option>
+        </select>
+        <select id="choukaiShadowQuestionPicker" class="filter-select hidden">
+        </select>
+      </div>
+      <div id="choukaiShadowEmpty" class="empty-state">
+        <div class="empty-icon">🔁</div>
+        <div>Chọn đề + câu cụ thể để luyện nghe từng câu trong script.</div>
+      </div>
+      <div id="choukaiShadowBody" class="hidden">
+        <div class="choukai-shadow-note">
+          ⚠️ Vì audio không có mốc thời gian riêng cho từng câu, nút "phát lại" sẽ phát lại TOÀN BỘ audio của câu hỏi này — dùng để nghe lại nhiều lần kết hợp đọc transcript bên dưới, không tách audio chính xác theo từng dòng được.
+        </div>
+        <div class="choukai-audio-box">
+          <audio id="choukaiShadowAudioEl" preload="none"></audio>
+          <button class="choukai-play-btn" id="btnChoukaiShadowPlay">▶ Phát lại audio</button>
+        </div>
+        <div class="choukai-shadow-lines" id="choukaiShadowLines"></div>
+      </div>
+    </section>
     <section class="view hidden" id="view-weakness">
       <div class="view-head">
         <div class="weakness-title" id="weaknessTitle">Các từ/cấu trúc bạn hay sai nhất trong bộ này</div>
@@ -325,6 +458,7 @@
       <div class="weakness-tabs" id="weaknessTabs">
         <button class="weakness-tab is-active" id="btnWeaknessTabDeck" data-tab="deck">Từ vựng / Ngữ pháp (bộ đang chọn)</button>
         <button class="weakness-tab" id="btnWeaknessTabExam" data-tab="exam">Đề thi (mọi đề)</button>
+        <button class="weakness-tab" id="btnWeaknessTabChoukai" data-tab="choukai">Nghe (mọi đề)</button>
       </div>
       <div id="weaknessEmpty" class="empty-state hidden">
         <div class="empty-icon">✓</div>
@@ -364,6 +498,15 @@
           <div>Chưa có đề thi nào trong hệ thống.</div>
         </div>
         <div class="stats-exam-list" id="statsExamList"></div>
+      </div>
+
+      <div class="stats-section">
+        <div class="stats-section-title">🎧 Luyện nghe <span class="stats-section-hint">(bấm tên đề để luyện ngay)</span></div>
+        <div id="statsChoukaiEmpty" class="empty-state hidden">
+          <div class="empty-icon">🎧</div>
+          <div>Chưa có đề nghe nào trong hệ thống.</div>
+        </div>
+        <div class="stats-exam-list" id="statsChoukaiList"></div>
       </div>
     </section>
 
@@ -416,7 +559,7 @@
 
 </div>
 
-<script src="js/srs.js?v=3"></script>
-<script src="js/app.js?v=3"></script>
+<script src="js/srs.js?v=4"></script>
+<script src="js/app.js?v=4"></script>
 </body>
 </html>
