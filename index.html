@@ -136,7 +136,8 @@
           <option value="all">Tất cả</option>
           <option value="new">Chưa học</option>
           <option value="learning">Đang học</option>
-          <option value="known">Đã thuộc</option>
+          <option value="known">Đã thuộc (tự nhiên)</option>
+          <option value="mastered">⭐ Đã thuộc (đánh dấu tay)</option>
           <option value="starred">★ Đã đánh dấu</option>
         </select>
         <button id="btnColConfig" class="icon-btn" title="Ẩn/hiện cột">☷ Cột</button>
@@ -189,6 +190,11 @@
         <button class="rate-btn rate-flip" id="btnSrsFlip">⟲ Lật thẻ</button>
         <button class="rate-btn rate-hard" data-srs-rate="hard">△ Khó<span class="rate-time" id="rtHardSrs"></span></button>
         <button class="rate-btn rate-remember" data-srs-rate="easy">✓ Dễ<span class="rate-time" id="rtEasySrs"></span></button>
+      </div>
+      <div class="srs-mastered-row">
+        <button class="rate-btn rate-mastered" id="btnSrsMastered" data-srs-rate="mastered" title="Dùng cho từ đã học vững ở nơi khác (Anki/Quizlet/sách...) — bỏ qua các bước tăng dần, đẩy thẳng ra rất xa, gần như không xuất hiện lại.">
+          ⭐ Đã thuộc <span class="srs-mastered-hint">(ít xuất hiện lại — bỏ qua bước Anki)</span>
+        </button>
       </div>
     </section>
 
