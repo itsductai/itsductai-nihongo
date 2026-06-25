@@ -745,11 +745,15 @@ function startWeaknessReview() {
 // (không phải App.progress hiện tại), vì bảng tổng quan hiện MỌI bộ cùng lúc.
 function computeDeckStats(deck) {
   const progress = SRS.loadProgress(deck.id);
-  let known = 0, learning = 0, fresh = 0, due = 0;
+  let known = 0, learning = 0, fresh = 0, due = 0, mastered = 0;
   deck.words.forEach((w) => {
     const entry = SRS.getEntry(progress, w._id);
     const st = SRS.status(entry);
+    // "mastered" (đánh dấu thủ công "Đã thuộc") được TÍNH VÀO known cho thanh % —
+    // về bản chất đây cũng là trạng thái "đã thuộc", chỉ khác cách đạt tới đó.
+    // Đếm riêng "mastered" thêm để có thể hiển thị huy hiệu ⭐ riêng nếu cần.
     if (st === "known") known++;
+    else if (st === "mastered") { known++; mastered++; }
     else if (st === "learning") learning++;
     else fresh++;
     if (entry.seen && SRS.isDue(entry)) due++;
@@ -758,7 +762,7 @@ function computeDeckStats(deck) {
   const pctKnown = Math.round((known / total) * 100);
   const pctLearning = Math.round((learning / total) * 100);
   const pctFresh = 100 - pctKnown - pctLearning;
-  return { known, learning, fresh, due, total: deck.words.length, pctKnown, pctLearning, pctFresh };
+  return { known, learning, fresh, due, mastered, total: deck.words.length, pctKnown, pctLearning, pctFresh };
 }
 
 function renderStatsMode() {
@@ -1915,7 +1919,7 @@ function renderTable() {
     const starCell = `<td class="col-star-cell"><button class="table-star-btn ${starred ? "is-starred" : ""}" data-star-word-id="${w._id}" title="Đánh dấu sao">${starred ? "★" : "☆"}</button></td>`;
     const cells = cols.map((col) => {
       if (col === "status") {
-        const statusLabel = { new: "Chưa học", learning: "Đang học", known: "Đã thuộc" }[st];
+        const statusLabel = { new: "Chưa học", learning: "Đang học", known: "Đã thuộc", mastered: "⭐ Đã thuộc" }[st];
         return `<td><span class="status-pill status-${st}">${statusLabel}</span></td>`;
       }
       const colMeta = meta[col];
@@ -1973,7 +1977,9 @@ function initSrsMode(restrictToIds) {
   wordPool.forEach((w) => {
     const entry = SRS.getEntry(App.progress, w._id);
     const st = SRS.status(entry);
-    if (st === "known") mastered++;
+    // Tính cả 2 loại "đã thuộc": tự nhiên qua SRS (known) VÀ đánh dấu tay (mastered) —
+    // trước đây chỉ tính "known" nên từ đánh dấu "Đã thuộc" bị thiếu khỏi số đếm này.
+    if (st === "known" || st === "mastered") mastered++;
     if (!entry.seen) {
       newWords.push(w);
     } else if (SRS.isDue(entry)) {
@@ -3913,7 +3919,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     e.stopPropagation();
     flipSrsCard();
   });
-  document.querySelectorAll("#srsRateRow [data-srs-rate]").forEach((btn) => {
+  document.querySelectorAll("#srsRateRow [data-srs-rate], #btnSrsMastered").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       rateCurrentSrsWord(btn.dataset.srsRate);
