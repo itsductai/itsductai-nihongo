@@ -346,9 +346,11 @@
         <div class="choukai-mondai-instruction" id="choukaiMondaiInstruction"></div>
 
         <div class="choukai-audio-box">
-          <audio id="choukaiAudioEl" preload="none"></audio>
-          <button class="choukai-play-btn" id="btnChoukaiPlay">▶ Phát audio câu này</button>
-          <span class="choukai-audio-hint" id="choukaiAudioHint"></span>
+          <audio id="choukaiAudioEl" preload="metadata" controls></audio>
+          <div class="choukai-audio-controls-row">
+            <button class="choukai-play-btn" id="btnChoukaiPlay">▶ Phát từ đầu</button>
+            <span class="choukai-audio-hint" id="choukaiAudioHint"></span>
+          </div>
         </div>
 
         <!-- Gợi ý từ khóa khi nghe (chỉ Mondai 3 & 5) -->
@@ -445,8 +447,10 @@
           ⚠️ Vì audio không có mốc thời gian riêng cho từng câu, nút "phát lại" sẽ phát lại TOÀN BỘ audio của câu hỏi này — dùng để nghe lại nhiều lần kết hợp đọc transcript bên dưới, không tách audio chính xác theo từng dòng được.
         </div>
         <div class="choukai-audio-box">
-          <audio id="choukaiShadowAudioEl" preload="none"></audio>
-          <button class="choukai-play-btn" id="btnChoukaiShadowPlay">▶ Phát lại audio</button>
+          <audio id="choukaiShadowAudioEl" preload="metadata" controls></audio>
+          <div class="choukai-audio-controls-row">
+            <button class="choukai-play-btn" id="btnChoukaiShadowPlay">▶ Phát từ đầu</button>
+          </div>
         </div>
         <div class="choukai-shadow-lines" id="choukaiShadowLines"></div>
       </div>
