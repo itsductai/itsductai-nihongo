@@ -78,6 +78,19 @@ const App = {
   examSpeedMode: false,
   examScoreMode: "instant", // "instant" (chấm ngay) | "review" (chấm sửa cuối bài)
   examPendingExamId: null,  // examId đang chờ chọn chế độ chấm qua modal, trước khi thực sự startExam
+
+  // ===== CHOUKAI (luyện nghe) =====
+  choukaiTests: [],
+  currentChoukaiId: null,
+  choukaiMondaiFilter: "all", // "all" | 1 | 2 | 3 | 4 | 5
+  choukaiQueue: [],          // [{mIndex, qIndex, subIndex|null}]
+  choukaiPos: 0,
+  choukaiScoreMode: "instant",
+  choukaiAnswers: {},        // key "m{M}q{Q}" hoặc "m{M}q{Q}s{S}" -> {chosenIndex, correct}
+  choukaiScore: 0,
+  choukaiHintEnabled: false,
+  choukaiReviewTab: "script",
+  choukaiPendingTestId: null,
   examLastAnswerCorrect: null, // kết quả lượt vừa chấm (chế độ instant), dùng khi bấm "Tiếp tục"
   examLastAnsweredQIndex: null,
   examPerQTimerHandle: null,
@@ -531,9 +544,12 @@ let currentWeaknessIds = [];
 function renderWeaknessMode() {
   document.getElementById("btnWeaknessTabDeck").classList.toggle("is-active", App.weaknessTab === "deck");
   document.getElementById("btnWeaknessTabExam").classList.toggle("is-active", App.weaknessTab === "exam");
+  document.getElementById("btnWeaknessTabChoukai").classList.toggle("is-active", App.weaknessTab === "choukai");
 
   if (App.weaknessTab === "exam") {
     renderExamWeaknessTab();
+  } else if (App.weaknessTab === "choukai") {
+    renderChoukaiWeaknessTab();
   } else {
     renderDeckWeaknessTab();
   }
@@ -641,6 +657,56 @@ function renderExamWeaknessTab() {
   });
 }
 
+// Tab "Nghe" — câu sai trong các đề luyện nghe, itemId dạng "testId::m{M}q{Q}[s{S}]"
+function renderChoukaiWeaknessTab() {
+  document.getElementById("weaknessTitle").textContent = "Các câu bạn hay sai nhất trong mọi đề nghe";
+  document.getElementById("weaknessActionRow").classList.add("hidden");
+
+  const weakList = getWeaknessListForDeck("__choukai__");
+
+  const empty = document.getElementById("weaknessEmpty");
+  const listWrap = document.getElementById("weaknessListWrap");
+
+  if (weakList.length === 0) {
+    document.getElementById("weaknessEmptyText").textContent =
+      "Chưa phát hiện câu nào hay sai trong các đề nghe đã làm. Cứ tiếp tục luyện!";
+    empty.classList.remove("hidden");
+    listWrap.classList.add("hidden");
+    return;
+  }
+  empty.classList.add("hidden");
+  listWrap.classList.remove("hidden");
+  document.getElementById("weaknessExamHint").classList.remove("hidden");
+
+  const listDiv = document.getElementById("weaknessList");
+  listDiv.innerHTML = "";
+
+  weakList.forEach((e) => {
+    const sepPos = e.itemId.indexOf("::m");
+    const testId = sepPos >= 0 ? e.itemId.slice(0, sepPos) : null;
+    const key = sepPos >= 0 ? e.itemId.slice(sepPos + 2) : null;
+    const test = testId ? getChoukaiTest(testId) : null;
+    const testTitle = test ? test.title : (testId || "?");
+
+    const row = document.createElement("div");
+    row.className = "weakness-row weakness-row-clickable";
+    row.innerHTML = `
+      <div class="weakness-row-main">
+        <div class="weakness-row-title">${testTitle}</div>
+        <div class="weakness-row-sub">${(e.lastLabel || "").replace(/\n/g, " ")}</div>
+      </div>
+      <div class="weakness-row-stats">
+        <span class="weakness-wrong-count">✕ ${e.wrongCount} lần sai</span>
+        <span class="weakness-correct-count">✓ ${e.correctCount} lần đúng</span>
+      </div>
+    `;
+    if (testId && key) {
+      row.addEventListener("click", () => openChoukaiDetailFromWeakness(testId, key));
+    }
+    listDiv.appendChild(row);
+  });
+}
+
 // Mở popup chi tiết 1 câu đề thi TỪ TAB ĐIỂM YẾU (không nhất thiết là đề đang mở
 // trong session hiện tại) — ưu tiên dùng snapshot CHI TIẾT đã lưu lần làm gần
 // nhất (saveExamDetailSnapshot) để có đủ "đáp án đã chọn" hiển thị trong popup.
@@ -696,6 +762,7 @@ function computeDeckStats(deck) {
 function renderStatsMode() {
   renderStatsOverviewTable();
   renderStatsExamHistory();
+  renderStatsChoukaiHistory();
 }
 
 // Bảng tổng quan: mỗi bộ 1 dòng, có thanh ngang 3 màu (đã thuộc/đang học/chưa
@@ -813,6 +880,68 @@ function renderStatsExamHistory() {
       document.getElementById("examPicker").value = examId;
       startExam(examId);
       setMode("exam");
+    });
+  });
+}
+
+// Bảng đề nghe — cùng pattern với renderStatsExamHistory, liệt kê TẤT CẢ đề
+// nghe có trong hệ thống, đề chưa làm lên trước.
+function renderStatsChoukaiHistory() {
+  const stats = loadChoukaiHistoryStats();
+  const listDiv = document.getElementById("statsChoukaiList");
+  document.getElementById("statsChoukaiEmpty").classList.add("hidden");
+
+  if (!App.choukaiTests.length) {
+    document.getElementById("statsChoukaiEmpty").classList.remove("hidden");
+    listDiv.innerHTML = "";
+    return;
+  }
+
+  const testsWithStats = App.choukaiTests.map((test) => ({ test, s: stats[test.id] || null }));
+  testsWithStats.sort((a, b) => {
+    if (!a.s && !b.s) return 0;
+    if (!a.s) return -1;
+    if (!b.s) return 1;
+    return (a.s.lastScore / a.s.lastTotal) - (b.s.lastScore / b.s.lastTotal);
+  });
+
+  const rows = testsWithStats.map(({ test, s }) => {
+    if (!s) {
+      return `
+        <div class="stats-exam-row is-not-done">
+          <button class="stats-deck-link stats-exam-row-title" data-jump-choukai="${test.id}">${test.title}</button>
+          <div class="stats-exam-row-stats">
+            <span class="stats-exam-not-done-badge">Chưa làm</span>
+          </div>
+        </div>
+      `;
+    }
+    const pct = s.lastTotal ? Math.round((s.lastScore / s.lastTotal) * 100) : 0;
+    const dateLabel = s.lastCompletedAt ? new Date(s.lastCompletedAt).toLocaleString("vi-VN") : "—";
+    const timeLabel = s.lastSeconds ? fmtTime(s.lastSeconds) : "—";
+    return `
+      <div class="stats-exam-row">
+        <button class="stats-deck-link stats-exam-row-title" data-jump-choukai="${test.id}">${test.title}</button>
+        <div class="stats-hbar stats-hbar-score" title="${s.lastScore}/${s.lastTotal} điểm">
+          <div class="stats-hbar-seg stats-hbar-known" style="width:${pct}%"></div>
+        </div>
+        <div class="stats-exam-row-stats">
+          <span class="stats-exam-stat">Đã làm <b>${s.totalCompletions}</b> lần</span>
+          <span class="stats-exam-stat">Gần nhất: <b>${s.lastScore}/${s.lastTotal}</b> điểm</span>
+          <span class="stats-exam-stat">Thời gian: <b>${timeLabel}</b></span>
+          <span class="stats-exam-stat-date">${dateLabel}</span>
+        </div>
+      </div>
+    `;
+  }).join("");
+  listDiv.innerHTML = rows;
+
+  listDiv.querySelectorAll("[data-jump-choukai]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const testId = btn.dataset.jumpChoukai;
+      document.getElementById("choukaiPicker").value = testId;
+      openChoukaiModeModal(testId);
+      setMode("choukai");
     });
   });
 }
@@ -1049,6 +1178,28 @@ async function loadExams() {
   }
 }
 
+async function loadChoukaiTests() {
+  try {
+    const res = await fetch("dethi-choukai/index.json");
+    const idx = await res.json();
+    const tests = [];
+    for (const filename of idx.files) {
+      try {
+        const r = await fetch(`dethi-choukai/${filename}`);
+        const data = await r.json();
+        tests.push(data);
+      } catch (e) {
+        console.error("Lỗi tải đề nghe", filename, e);
+      }
+    }
+    tests.sort((a, b) => a.title.localeCompare(b.title, "vi", { numeric: true }));
+    return tests;
+  } catch (e) {
+    console.warn("Không có thư mục đề nghe hoặc index.json lỗi", e);
+    return [];
+  }
+}
+
 function populateDeckPicker() {
   const picker = document.getElementById("deckPicker");
   picker.innerHTML = "";
@@ -1132,6 +1283,27 @@ function renderNav() {
     nav.appendChild(examBtn);
   }
 
+  if (App.choukaiTests.length > 0) {
+    const choukaiLabel = document.createElement("div");
+    choukaiLabel.className = "nav-section-label";
+    choukaiLabel.textContent = "Luyện nghe (聴解)";
+    nav.appendChild(choukaiLabel);
+
+    const choukaiBtn = document.createElement("button");
+    choukaiBtn.className = "nav-item";
+    choukaiBtn.dataset.mode = "choukai";
+    choukaiBtn.innerHTML = `<span class="nav-icon">🎧</span> <span>Luyện nghe theo đề</span>`;
+    choukaiBtn.addEventListener("click", () => setMode("choukai"));
+    nav.appendChild(choukaiBtn);
+
+    const shadowBtn = document.createElement("button");
+    shadowBtn.className = "nav-item";
+    shadowBtn.dataset.mode = "choukai-shadow";
+    shadowBtn.innerHTML = `<span class="nav-icon">🔁</span> <span>Luyện nghe câu</span>`;
+    shadowBtn.addEventListener("click", () => setMode("choukai-shadow"));
+    nav.appendChild(shadowBtn);
+  }
+
   // Re-apply active state for current mode if any nav-item matches
   const current = document.querySelector(".view:not(.hidden)");
   if (current) {
@@ -1201,6 +1373,8 @@ function setMode(mode) {
     App.matchNeedsReset = false;
   }
   if (mode === "exam") renderExamPickerState();
+  if (mode === "choukai") renderChoukaiPickerState();
+  if (mode === "choukai-shadow") renderChoukaiShadowPickerState();
   if (mode === "weakness") renderWeaknessMode();
   if (mode === "stats") renderStatsMode();
 }
@@ -2863,6 +3037,505 @@ function closeExamDetailModal() {
   document.getElementById("examDetailModalOverlay").classList.add("hidden");
 }
 
+/* ===================================================================
+   CHOUKAI MODE — Luyện nghe (聴解) theo đề thật, theo từng Mondai 1-5.
+   Tái dùng nhiều pattern từ EXAM MODE (mode chấm ngay/cuối bài, lưu chi
+   tiết từng câu, lưới kết quả, modal chi tiết, ghi điểm yếu) nhưng đây là
+   1 hệ thống RIÊNG vì câu hỏi gắn với audio + script/dịch/mẹo thay vì
+   4 lựa chọn giải thích từng đáp án như exam mode.
+=================================================================== */
+
+const CHOUKAI_HISTORY_KEY = "n2vocab_choukai_history";          // điểm tổng từng đề (giống EXAM_HISTORY_STORAGE_KEY)
+const CHOUKAI_DETAIL_HISTORY_KEY = "n2vocab_choukai_detail_history"; // chi tiết từng câu lần làm gần nhất
+
+function loadChoukaiHistoryStats() {
+  try { return JSON.parse(localStorage.getItem(CHOUKAI_HISTORY_KEY)) || {}; } catch (e) { return {}; }
+}
+function saveChoukaiHistoryStats(stats) {
+  localStorage.setItem(CHOUKAI_HISTORY_KEY, JSON.stringify(stats));
+}
+function loadChoukaiDetailHistoryStats() {
+  try { return JSON.parse(localStorage.getItem(CHOUKAI_DETAIL_HISTORY_KEY)) || {}; } catch (e) { return {}; }
+}
+function saveChoukaiDetailHistoryStats(stats) {
+  localStorage.setItem(CHOUKAI_DETAIL_HISTORY_KEY, JSON.stringify(stats));
+}
+function recordChoukaiCompletion(testId, info) {
+  const stats = loadChoukaiHistoryStats();
+  const prev = stats[testId] || { totalCompletions: 0 };
+  stats[testId] = {
+    totalCompletions: prev.totalCompletions + 1,
+    lastScore: info.score,
+    lastTotal: info.total,
+    lastSeconds: info.seconds,
+    lastCompletedAt: Date.now(),
+  };
+  saveChoukaiHistoryStats(stats);
+}
+function saveChoukaiDetailSnapshot(testId, answers) {
+  const stats = loadChoukaiDetailHistoryStats();
+  stats[testId] = { answers: answers, savedAt: Date.now() };
+  saveChoukaiDetailHistoryStats(stats);
+}
+
+// Mỗi câu trả lời được định danh bằng key duy nhất trong 1 đề:
+// "m{mondaiNumber}q{qnum}" hoặc thêm "s{subIndex}" cho câu có 2 câu hỏi con (Mondai 5).
+function choukaiKeyFor(mNum, qnum, subIndex) {
+  return (subIndex === undefined || subIndex === null) ? ("m" + mNum + "q" + qnum) : ("m" + mNum + "q" + qnum + "s" + subIndex);
+}
+
+function populateChoukaiPicker() {
+  const picker = document.getElementById("choukaiPicker");
+  picker.innerHTML = '<option value="">— chọn đề nghe —</option>';
+  App.choukaiTests.forEach(function (t) {
+    const opt = document.createElement("option");
+    opt.value = t.id;
+    let totalQ = 0;
+    t.mondai.forEach(function (m) {
+      m.questions.forEach(function (q) {
+        totalQ += q.isDualQuestion ? q.subQuestions.length : 1;
+      });
+    });
+    opt.textContent = t.title + " (" + totalQ + " câu)";
+    picker.appendChild(opt);
+  });
+}
+
+function renderChoukaiPickerState() {
+  const picker = document.getElementById("choukaiPicker");
+  if (picker.options.length <= 1) populateChoukaiPicker();
+  const hasResultShown = !document.getElementById("choukaiResult").classList.contains("hidden");
+  document.getElementById("choukaiEmpty").classList.toggle("hidden", !!App.currentChoukaiId);
+  document.getElementById("choukaiBody").classList.toggle("hidden", !App.currentChoukaiId || hasResultShown);
+}
+
+function getChoukaiTest(testId) {
+  return App.choukaiTests.find(function (t) { return t.id === testId; });
+}
+
+// Mở modal chọn Mondai cụ thể (hoặc cả đề) rồi chọn chế độ chấm.
+function openChoukaiModeModal(testId) {
+  App.choukaiPendingTestId = testId;
+  const test = getChoukaiTest(testId);
+  const mondaiPicker = document.getElementById("choukaiMondaiPicker");
+  mondaiPicker.innerHTML = '<option value="all">Luyện cả đề (Mondai 1→5)</option>';
+  test.mondai.forEach(function (m) {
+    const opt = document.createElement("option");
+    opt.value = String(m.number);
+    opt.textContent = "Chỉ Mondai " + m.number + " (" + m.name + ")";
+    mondaiPicker.appendChild(opt);
+  });
+  mondaiPicker.classList.remove("hidden");
+  mondaiPicker.value = "all";
+
+  const detailStats = loadChoukaiDetailHistoryStats();
+  const saved = detailStats[testId];
+  const viewSavedBtn = document.getElementById("btnChoukaiViewSavedResult");
+  if (saved) {
+    viewSavedBtn.classList.remove("hidden");
+    const correctCount = Object.values(saved.answers).filter(function (a) { return a.correct; }).length;
+    const total = Object.keys(saved.answers).length;
+    const d = new Date(saved.savedAt);
+    document.getElementById("choukaiSavedResultDesc").textContent =
+      "Lần làm gần nhất (" + d.getDate() + "/" + (d.getMonth() + 1) + "): " + correctCount + "/" + total + " câu đúng. Xem lại không cần làm lại.";
+  } else {
+    viewSavedBtn.classList.add("hidden");
+  }
+  document.getElementById("choukaiModeModalOverlay").classList.remove("hidden");
+}
+
+function confirmChoukaiMode(mode) {
+  document.getElementById("choukaiModeModalOverlay").classList.add("hidden");
+  App.choukaiScoreMode = mode;
+  const mondaiVal = document.getElementById("choukaiMondaiPicker").value;
+  App.choukaiMondaiFilter = mondaiVal === "all" ? "all" : parseInt(mondaiVal, 10);
+  startChoukai(App.choukaiPendingTestId);
+}
+
+// Xây hàng đợi câu hỏi dạng phẳng từ cấu trúc mondai lồng nhau — câu có
+// isDualQuestion (Mondai 5, câu cuối) sẽ tách thành 2 mục riêng trong hàng đợi
+// (subIndex 0 và 1) nhưng vẫn dùng chung audio/script.
+function buildChoukaiQueue(test, mondaiFilter) {
+  const queue = [];
+  test.mondai.forEach(function (m, mIndex) {
+    if (mondaiFilter !== "all" && m.number !== mondaiFilter) return;
+    m.questions.forEach(function (q, qIndex) {
+      if (q.isDualQuestion) {
+        q.subQuestions.forEach(function (sub, subIndex) {
+          queue.push({ mIndex: mIndex, qIndex: qIndex, subIndex: subIndex });
+        });
+      } else {
+        queue.push({ mIndex: mIndex, qIndex: qIndex, subIndex: null });
+      }
+    });
+  });
+  return queue;
+}
+
+function startChoukai(testId) {
+  const test = getChoukaiTest(testId);
+  if (!test) return;
+  App.currentChoukaiId = testId;
+  App.choukaiQueue = buildChoukaiQueue(test, App.choukaiMondaiFilter);
+  App.choukaiPos = 0;
+  App.choukaiAnswers = {};
+  App.choukaiScore = 0;
+  App.choukaiHintEnabled = false;
+  App.choukaiStartTime = Date.now();
+
+  document.getElementById("choukaiEmpty").classList.add("hidden");
+  document.getElementById("choukaiResult").classList.add("hidden");
+  document.getElementById("choukaiBody").classList.remove("hidden");
+  document.getElementById("btnChoukaiExitEarly").classList.toggle("hidden", App.choukaiScoreMode !== "instant");
+  document.getElementById("choukaiHintToggle").checked = false;
+
+  renderChoukaiQuestion();
+}
+
+function getChoukaiCurrentItem() {
+  const test = getChoukaiTest(App.currentChoukaiId);
+  const pos = App.choukaiQueue[App.choukaiPos];
+  if (!test || !pos) return null;
+  const mondai = test.mondai[pos.mIndex];
+  const q = mondai.questions[pos.qIndex];
+  const sub = pos.subIndex !== null ? q.subQuestions[pos.subIndex] : null;
+  return { test: test, mondai: mondai, q: q, sub: sub, pos: pos };
+}
+
+function getChoukaiAudioSrc(test, mondai) {
+  if (test.audioMode === "combined") return "file-nghe/" + test.audioFile;
+  const fname = test.audioFiles && test.audioFiles[String(mondai.number)];
+  return fname ? "file-nghe/" + fname : null;
+}
+
+function renderChoukaiQuestion() {
+  const item = getChoukaiCurrentItem();
+  if (!item) { finishChoukai(); return; }
+  const test = item.test, mondai = item.mondai, q = item.q, sub = item.sub;
+
+  document.getElementById("choukaiReviewPanel").classList.add("hidden");
+  document.getElementById("choukaiProgressText").textContent =
+    "Câu " + (App.choukaiPos + 1) + "/" + App.choukaiQueue.length + " · Mondai " + mondai.number + " (" + mondai.name + ")";
+  document.getElementById("choukaiMondaiInstruction").textContent = mondai.instruction;
+
+  const audioSrc = getChoukaiAudioSrc(test, mondai);
+  const audioEl = document.getElementById("choukaiAudioEl");
+  const hint = document.getElementById("choukaiAudioHint");
+  if (audioSrc) {
+    audioEl.src = audioSrc;
+    hint.textContent = test.audioMode === "combined"
+      ? "⚠ Đề này dùng 1 file audio chung cho cả đề — tự tìm đúng đoạn tương ứng."
+      : "";
+  } else {
+    hint.textContent = "⚠ Chưa có file audio cho Mondai này.";
+  }
+
+  const promptText = sub ? (sub.promptVi || "") : (q.prompt || "");
+  document.getElementById("choukaiPrompt").textContent = promptText;
+
+  const options = sub ? sub.options : q.options;
+  const optWrap = document.getElementById("choukaiOptions");
+  optWrap.innerHTML = "";
+  options.forEach(function (opt, idx) {
+    const btn = document.createElement("button");
+    btn.className = "quiz-opt";
+    btn.textContent = opt;
+    btn.addEventListener("click", function () { handleChoukaiAnswer(idx); });
+    optWrap.appendChild(btn);
+  });
+
+  // Gợi ý từ khóa — chỉ Mondai 3 & 5
+  const hintRow = document.getElementById("choukaiHintRow");
+  const showHintRow = (mondai.number === 3 || mondai.number === 5) && q.keywords && q.keywords.length;
+  hintRow.classList.toggle("hidden", !showHintRow);
+  const kwBox = document.getElementById("choukaiKeywords");
+  if (showHintRow && App.choukaiHintEnabled) {
+    kwBox.classList.remove("hidden");
+    kwBox.innerHTML = q.keywords.map(function (k) { return '<span class="choukai-keyword-chip">' + k + '</span>'; }).join("");
+  } else {
+    kwBox.classList.add("hidden");
+  }
+
+  document.getElementById("btnChoukaiPrev").disabled = App.choukaiPos === 0;
+}
+
+function handleChoukaiAnswer(chosenIndex) {
+  const item = getChoukaiCurrentItem();
+  if (!item) return;
+  const mondai = item.mondai, q = item.q, sub = item.sub, pos = item.pos;
+  const correctIndex = sub ? sub.correctIndex : q.correctIndex;
+  const correct = chosenIndex === correctIndex;
+  const key = choukaiKeyFor(mondai.number, q.qnum, pos.subIndex);
+
+  App.choukaiAnswers[key] = { chosenIndex: chosenIndex, correctIndex: correctIndex, correct: correct };
+  if (correct) App.choukaiScore++;
+
+  // Ghi vào hệ thống điểm yếu chung (deckId giả "__choukai__"), tái dùng
+  // recordWeaknessResult đã có sẵn cho exam mode.
+  const label = (sub ? sub.promptVi : q.prompt) || (q.script || "").slice(0, 50);
+  recordWeaknessResult("__choukai__", App.currentChoukaiId + "::" + key, correct, "M" + mondai.number + " - " + label);
+
+  if (App.choukaiScoreMode === "instant") {
+    showChoukaiReviewPanel(correct);
+  } else {
+    choukaiGoNext();
+  }
+}
+
+function showChoukaiReviewPanel(correct) {
+  const panel = document.getElementById("choukaiReviewPanel");
+  panel.classList.remove("hidden");
+  const resultEl = document.getElementById("choukaiReviewResult");
+  resultEl.textContent = correct ? "✓ Đúng!" : "✕ Sai";
+  resultEl.className = "choukai-review-result " + (correct ? "is-correct" : "is-wrong");
+  App.choukaiReviewTab = "script";
+  document.querySelectorAll(".choukai-review-tab").forEach(function (b) {
+    b.classList.toggle("is-active", b.dataset.tab === "script");
+  });
+  renderChoukaiReviewContent();
+}
+
+function renderChoukaiReviewContent() {
+  const item = getChoukaiCurrentItem();
+  if (!item) return;
+  const q = item.q;
+  const box = document.getElementById("choukaiReviewContent");
+  if (App.choukaiReviewTab === "script") box.textContent = q.script || "(không có script)";
+  else if (App.choukaiReviewTab === "vi") box.textContent = q.scriptVi || "(chưa có bản dịch)";
+  else box.textContent = q.tip || "(chưa có mẹo cho câu này)";
+}
+
+function choukaiGoNext() {
+  if (App.choukaiPos < App.choukaiQueue.length - 1) {
+    App.choukaiPos++;
+    renderChoukaiQuestion();
+  } else {
+    finishChoukai();
+  }
+}
+
+function choukaiGoPrev() {
+  if (App.choukaiPos > 0) {
+    App.choukaiPos--;
+    renderChoukaiQuestion();
+  }
+}
+
+function exitChoukaiEarlyAndShowResult() {
+  finishChoukai();
+}
+
+function finishChoukai() {
+  const totalSeconds = App.choukaiStartTime ? Math.round((Date.now() - App.choukaiStartTime) / 1000) : 0;
+  recordChoukaiCompletion(App.currentChoukaiId, {
+    score: App.choukaiScore,
+    total: App.choukaiQueue.length,
+    seconds: totalSeconds,
+  });
+  saveChoukaiDetailSnapshot(App.currentChoukaiId, App.choukaiAnswers);
+
+  document.getElementById("choukaiBody").classList.add("hidden");
+  document.getElementById("choukaiResult").classList.remove("hidden");
+  document.getElementById("choukaiFinalScore").textContent =
+    App.choukaiScore + "/" + App.choukaiQueue.length + " câu đúng";
+
+  renderChoukaiMondaiBreakdown();
+  renderChoukaiResultGrid();
+}
+
+function renderChoukaiMondaiBreakdown() {
+  const test = getChoukaiTest(App.currentChoukaiId);
+  const box = document.getElementById("choukaiMondaiBreakdown");
+  const byMondai = {};
+  App.choukaiQueue.forEach(function (pos) {
+    const mondai = test.mondai[pos.mIndex];
+    const key = mondai.number;
+    if (!byMondai[key]) byMondai[key] = { correct: 0, total: 0 };
+    byMondai[key].total++;
+    const q = mondai.questions[pos.qIndex];
+    const k = choukaiKeyFor(mondai.number, q.qnum, pos.subIndex);
+    if (App.choukaiAnswers[k] && App.choukaiAnswers[k].correct) byMondai[key].correct++;
+  });
+  box.innerHTML = Object.keys(byMondai).sort().map(function (mNum) {
+    return '<div class="choukai-mondai-breakdown-item"><span class="num">' + byMondai[mNum].correct + '/' + byMondai[mNum].total + '</span>Mondai ' + mNum + '</div>';
+  }).join("");
+}
+
+function renderChoukaiResultGrid() {
+  const test = getChoukaiTest(App.currentChoukaiId);
+  const grid = document.getElementById("choukaiResultGrid");
+  grid.innerHTML = App.choukaiQueue.map(function (pos, flatIdx) {
+    const mondai = test.mondai[pos.mIndex];
+    const q = mondai.questions[pos.qIndex];
+    const key = choukaiKeyFor(mondai.number, q.qnum, pos.subIndex);
+    const ans = App.choukaiAnswers[key];
+    const stateClass = !ans ? "is-not-done" : (ans.correct ? "is-correct" : "is-wrong");
+    return '<button class="exam-result-dot ' + stateClass + '" data-flat="' + flatIdx + '">' + (flatIdx + 1) + '</button>';
+  }).join("");
+  grid.querySelectorAll(".exam-result-dot").forEach(function (dot) {
+    dot.addEventListener("click", function () { openChoukaiDetailModal(parseInt(dot.dataset.flat, 10)); });
+  });
+}
+
+// opts.testId/opts.queue/opts.answers (tùy chọn) cho phép mở từ tab Điểm yếu
+// (đề khác đề đang chạy trong session) — giống pattern openExamDetailModal.
+function openChoukaiDetailModal(flatIdx, opts) {
+  const testId = (opts && opts.testId) || App.currentChoukaiId;
+  const queue = (opts && opts.queue) || App.choukaiQueue;
+  const answers = (opts && opts.answers) || App.choukaiAnswers;
+  const test = getChoukaiTest(testId);
+  const pos = queue[flatIdx];
+  if (!test || !pos) return;
+  const mondai = test.mondai[pos.mIndex];
+  const q = mondai.questions[pos.qIndex];
+  const sub = pos.subIndex !== null ? q.subQuestions[pos.subIndex] : null;
+  const key = choukaiKeyFor(mondai.number, q.qnum, pos.subIndex);
+  const ans = answers[key];
+  const options = sub ? sub.options : q.options;
+  const correctIndex = sub ? sub.correctIndex : q.correctIndex;
+
+  document.getElementById("choukaiDetailModalTitle").textContent =
+    "Câu " + (flatIdx + 1) + " (Mondai " + mondai.number + ") — " + (!ans ? "Chưa làm" : (ans.correct ? "✓ Đúng" : "✕ Sai"));
+
+  const optsHtml = options.map(function (opt, idx) {
+    const isCorrect = idx === correctIndex;
+    const isChosen = ans && ans.chosenIndex === idx;
+    let cls = "exam-detail-opt";
+    if (isCorrect) cls += " is-correct";
+    else if (isChosen) cls += " is-wrong-chosen";
+    const tags = [];
+    if (isCorrect) tags.push('<span class="exam-detail-tag is-correct-tag">Đáp án đúng</span>');
+    if (isChosen) tags.push('<span class="exam-detail-tag is-chosen-tag">Bạn đã chọn</span>');
+    return '<div class="' + cls + '"><div class="exam-detail-opt-head"><span class="exam-detail-opt-text">' + opt + '</span>' + tags.join("") + '</div></div>';
+  }).join("");
+
+  document.getElementById("choukaiDetailModalBody").innerHTML =
+    '<div class="choukai-review-tabs">' +
+    '<button class="choukai-review-tab is-active" data-detailtab="script">Script</button>' +
+    '<button class="choukai-review-tab" data-detailtab="vi">Dịch</button>' +
+    '<button class="choukai-review-tab" data-detailtab="tip">💡 Mẹo nghe</button>' +
+    '</div>' +
+    '<div class="choukai-review-content" id="choukaiDetailReviewContent" style="margin-bottom:16px;">' + (q.script || "") + '</div>' +
+    '<div class="exam-detail-opts">' + optsHtml + '</div>';
+
+  document.querySelectorAll('[data-detailtab]').forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll('[data-detailtab]').forEach(function (b) { b.classList.toggle("is-active", b === btn); });
+      const tab = btn.dataset.detailtab;
+      const content = tab === "script" ? q.script : (tab === "vi" ? q.scriptVi : q.tip);
+      document.getElementById("choukaiDetailReviewContent").textContent = content || "(chưa có dữ liệu)";
+    });
+  });
+
+  document.getElementById("choukaiDetailModalOverlay").classList.remove("hidden");
+}
+
+function closeChoukaiDetailModal() {
+  document.getElementById("choukaiDetailModalOverlay").classList.add("hidden");
+}
+
+// Xem lại kết quả lần làm gần nhất đã lưu — không cần làm lại đề.
+function viewSavedChoukaiResult(testId) {
+  document.getElementById("choukaiModeModalOverlay").classList.add("hidden");
+  const test = getChoukaiTest(testId);
+  const detailStats = loadChoukaiDetailHistoryStats();
+  const saved = detailStats[testId];
+  if (!test || !saved) return;
+
+  const mondaiVal = document.getElementById("choukaiMondaiPicker").value;
+  const mondaiFilter = mondaiVal === "all" ? "all" : parseInt(mondaiVal, 10);
+
+  App.currentChoukaiId = testId;
+  App.choukaiQueue = buildChoukaiQueue(test, mondaiFilter);
+  App.choukaiAnswers = saved.answers;
+  App.choukaiScore = Object.values(saved.answers).filter(function (a) { return a.correct; }).length;
+
+  document.getElementById("choukaiEmpty").classList.add("hidden");
+  document.getElementById("choukaiBody").classList.add("hidden");
+  document.getElementById("choukaiResult").classList.remove("hidden");
+  document.getElementById("choukaiFinalScore").textContent =
+    App.choukaiScore + "/" + App.choukaiQueue.length + " câu đúng (kết quả đã lưu, lần làm gần nhất)";
+  renderChoukaiMondaiBreakdown();
+  renderChoukaiResultGrid();
+}
+
+// Mở popup chi tiết câu nghe TỪ TAB ĐIỂM YẾU — itemId dạng "testId::m{M}q{Q}[s{S}]"
+function openChoukaiDetailFromWeakness(testId, key) {
+  const test = getChoukaiTest(testId);
+  if (!test) return;
+  const detailStats = loadChoukaiDetailHistoryStats();
+  const saved = detailStats[testId];
+  const answers = (App.currentChoukaiId === testId) ? App.choukaiAnswers : (saved ? saved.answers : {});
+  const queue = buildChoukaiQueue(test, "all");
+  const flatIdx = queue.findIndex(function (pos) {
+    const mondai = test.mondai[pos.mIndex];
+    const q = mondai.questions[pos.qIndex];
+    return choukaiKeyFor(mondai.number, q.qnum, pos.subIndex) === key;
+  });
+  if (flatIdx === -1) return;
+  openChoukaiDetailModal(flatIdx, { testId: testId, queue: queue, answers: answers });
+}
+
+/* ---------- CHOUKAI SHADOW MODE (luyện nghe câu, dịch mờ) ---------- */
+
+function populateChoukaiShadowPicker() {
+  const picker = document.getElementById("choukaiShadowPicker");
+  picker.innerHTML = '<option value="">— chọn đề nghe —</option>';
+  App.choukaiTests.forEach(function (t) {
+    const opt = document.createElement("option");
+    opt.value = t.id;
+    opt.textContent = t.title;
+    picker.appendChild(opt);
+  });
+}
+
+function renderChoukaiShadowPickerState() {
+  const picker = document.getElementById("choukaiShadowPicker");
+  if (picker.options.length <= 1) populateChoukaiShadowPicker();
+}
+
+function populateChoukaiShadowQuestionPicker(testId) {
+  const test = getChoukaiTest(testId);
+  const qPicker = document.getElementById("choukaiShadowQuestionPicker");
+  qPicker.innerHTML = "";
+  const queue = buildChoukaiQueue(test, "all");
+  queue.forEach(function (pos, flatIdx) {
+    const mondai = test.mondai[pos.mIndex];
+    const opt = document.createElement("option");
+    opt.value = String(flatIdx);
+    opt.textContent = "Mondai " + mondai.number + " — Câu " + (flatIdx + 1);
+    qPicker.appendChild(opt);
+  });
+  qPicker.classList.remove("hidden");
+}
+
+function renderChoukaiShadowQuestion(testId, flatIdx) {
+  const test = getChoukaiTest(testId);
+  const queue = buildChoukaiQueue(test, "all");
+  const pos = queue[flatIdx];
+  const mondai = test.mondai[pos.mIndex];
+  const q = mondai.questions[pos.qIndex];
+
+  document.getElementById("choukaiShadowEmpty").classList.add("hidden");
+  document.getElementById("choukaiShadowBody").classList.remove("hidden");
+
+  const audioSrc = getChoukaiAudioSrc(test, mondai);
+  const audioEl = document.getElementById("choukaiShadowAudioEl");
+  if (audioSrc) audioEl.src = audioSrc;
+
+  // Tách script + dịch theo dòng (mỗi lượt nói = 1 dòng) để ghép cặp hiển thị.
+  const jpLines = (q.script || "").split("\n").filter(Boolean);
+  const viLines = (q.scriptVi || "").split("\n").filter(Boolean);
+  const linesWrap = document.getElementById("choukaiShadowLines");
+  linesWrap.innerHTML = jpLines.map(function (jp, i) {
+    return '<div class="choukai-shadow-line"><div class="choukai-shadow-line-jp">' + jp + '</div>' +
+      '<div class="choukai-shadow-line-vi" data-idx="' + i + '">' + (viLines[i] || "") + '</div></div>';
+  }).join("");
+  linesWrap.querySelectorAll(".choukai-shadow-line-vi").forEach(function (el) {
+    el.addEventListener("click", function () { el.classList.toggle("is-revealed"); });
+  });
+}
+
 // Bảng kết quả chi tiết từng câu — chỉ dùng cho chế độ "Chấm sửa cuối bài",
 // vì đó là lần DUY NHẤT người học biết đúng/sai của toàn bộ đề.
 // 2 mốc thời gian theo yêu cầu:
@@ -2950,6 +3623,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   App.decks = await loadDecks();
   App.exams = await loadExams();
+  App.choukaiTests = await loadChoukaiTests();
 
   if (App.decks.length === 0) {
     document.getElementById("deckName").textContent = "Không tải được bộ học nào";
@@ -3126,6 +3800,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     App.weaknessTab = "exam";
     renderWeaknessMode();
   });
+  document.getElementById("btnWeaknessTabChoukai").addEventListener("click", () => {
+    App.weaknessTab = "choukai";
+    renderWeaknessMode();
+  });
 
   // ----- Sound toggle -----
   const soundBtn = document.getElementById("btnToggleSound");
@@ -3263,6 +3941,71 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("btnExamShowExplain").addEventListener("click", toggleExamExplain);
   document.getElementById("btnExamContinue").addEventListener("click", examContinueAfterInstantAnswer);
 
+  // ----- CHOUKAI mode listeners -----
+  document.getElementById("choukaiPicker").addEventListener("change", (e) => {
+    if (e.target.value) openChoukaiModeModal(e.target.value);
+  });
+  document.getElementById("btnChoukaiModeInstant").addEventListener("click", () => confirmChoukaiMode("instant"));
+  document.getElementById("btnChoukaiModeReview").addEventListener("click", () => confirmChoukaiMode("review"));
+  document.getElementById("btnChoukaiViewSavedResult").addEventListener("click", () => {
+    if (App.choukaiPendingTestId) {
+      viewSavedChoukaiResult(App.choukaiPendingTestId);
+      App.choukaiPendingTestId = null;
+    }
+  });
+  document.getElementById("btnChoukaiPrev").addEventListener("click", choukaiGoPrev);
+  document.getElementById("btnChoukaiNext").addEventListener("click", choukaiGoNext);
+  document.getElementById("btnChoukaiExitEarly").addEventListener("click", () => {
+    if (confirm("Dừng làm các câu còn lại và xem kết quả ngay với những gì đã làm?")) {
+      exitChoukaiEarlyAndShowResult();
+    }
+  });
+  document.getElementById("btnChoukaiContinue").addEventListener("click", choukaiGoNext);
+  document.getElementById("btnChoukaiPlay").addEventListener("click", () => {
+    const el = document.getElementById("choukaiAudioEl");
+    if (el.src) { el.currentTime = 0; el.play().catch(() => {}); }
+  });
+  document.getElementById("choukaiHintToggle").addEventListener("change", (e) => {
+    App.choukaiHintEnabled = e.target.checked;
+    renderChoukaiQuestion();
+  });
+  document.querySelectorAll(".choukai-review-tab").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".choukai-review-tab").forEach((b) => b.classList.toggle("is-active", b === btn));
+      App.choukaiReviewTab = btn.dataset.tab;
+      renderChoukaiReviewContent();
+    });
+  });
+  document.getElementById("btnChoukaiRestart").addEventListener("click", () => {
+    document.getElementById("choukaiResult").classList.add("hidden");
+    openChoukaiModeModal(App.currentChoukaiId);
+  });
+  document.getElementById("btnChoukaiDetailModalClose").addEventListener("click", closeChoukaiDetailModal);
+  document.getElementById("choukaiDetailModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "choukaiDetailModalOverlay") closeChoukaiDetailModal();
+  });
+
+  // ----- CHOUKAI SHADOW mode listeners -----
+  document.getElementById("choukaiShadowPicker").addEventListener("change", (e) => {
+    const testId = e.target.value;
+    if (!testId) {
+      document.getElementById("choukaiShadowQuestionPicker").classList.add("hidden");
+      document.getElementById("choukaiShadowBody").classList.add("hidden");
+      document.getElementById("choukaiShadowEmpty").classList.remove("hidden");
+      return;
+    }
+    populateChoukaiShadowQuestionPicker(testId);
+    renderChoukaiShadowQuestion(testId, 0);
+  });
+  document.getElementById("choukaiShadowQuestionPicker").addEventListener("change", (e) => {
+    const testId = document.getElementById("choukaiShadowPicker").value;
+    if (testId && e.target.value !== "") renderChoukaiShadowQuestion(testId, parseInt(e.target.value, 10));
+  });
+  document.getElementById("btnChoukaiShadowPlay").addEventListener("click", () => {
+    const el = document.getElementById("choukaiShadowAudioEl");
+    if (el.src) { el.currentTime = 0; el.play().catch(() => {}); }
+  });
+
   // ----- Deck picker -----
   document.getElementById("deckPicker").addEventListener("change", (e) => {
     switchDeck(e.target.value);
@@ -3283,6 +4026,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       weaknessStats: loadWeaknessStats(),
       examHistory: loadExamHistoryStats(),
       examDetailHistory: loadExamDetailHistoryStats(),
+      choukaiHistory: loadChoukaiHistoryStats(),
+      choukaiDetailHistory: loadChoukaiDetailHistoryStats(),
       shuffleEnabled: App.shuffleEnabled,
       soundEnabled: App.soundEnabled,
       speechEnabled: App.speechEnabled,
@@ -3400,6 +4145,36 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
           });
           saveExamDetailHistoryStats(currentDetailStats);
+        }
+        if (data.choukaiHistory) {
+          const currentChoukaiStats = loadChoukaiHistoryStats();
+          Object.keys(data.choukaiHistory).forEach((testId) => {
+            const incoming = data.choukaiHistory[testId];
+            const existing = currentChoukaiStats[testId];
+            if (!existing) {
+              currentChoukaiStats[testId] = { ...incoming };
+            } else {
+              existing.totalCompletions = (existing.totalCompletions || 0) + (incoming.totalCompletions || 0);
+              if ((incoming.lastCompletedAt || 0) > (existing.lastCompletedAt || 0)) {
+                existing.lastScore = incoming.lastScore;
+                existing.lastTotal = incoming.lastTotal;
+                existing.lastSeconds = incoming.lastSeconds;
+                existing.lastCompletedAt = incoming.lastCompletedAt;
+              }
+            }
+          });
+          saveChoukaiHistoryStats(currentChoukaiStats);
+        }
+        if (data.choukaiDetailHistory) {
+          const currentChoukaiDetailStats = loadChoukaiDetailHistoryStats();
+          Object.keys(data.choukaiDetailHistory).forEach((testId) => {
+            const incoming = data.choukaiDetailHistory[testId];
+            const existing = currentChoukaiDetailStats[testId];
+            if (!existing || (incoming.savedAt || 0) > (existing.savedAt || 0)) {
+              currentChoukaiDetailStats[testId] = incoming;
+            }
+          });
+          saveChoukaiDetailHistoryStats(currentChoukaiDetailStats);
         }
         if (data.shuffleEnabled) {
           Object.assign(App.shuffleEnabled, data.shuffleEnabled);
