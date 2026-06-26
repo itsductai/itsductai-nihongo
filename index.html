@@ -491,14 +491,28 @@
         <div class="weakness-title">Thống kê tổng quan — nhìn 1 lần biết hết</div>
       </div>
 
-      <div class="stats-section">
-        <div class="stats-section-title">📚 Tổng quan tất cả bộ từ vựng / ngữ pháp <span class="stats-section-hint">(bấm tên bộ để ôn ngay)</span></div>
+      <div class="stats-section stats-group-mimi">
+        <div class="stats-section-title">📘 Mimi N2 (giáo trình chính) <span class="stats-section-hint">(bấm tên bộ để ôn ngay)</span></div>
+        <div class="stats-donut-row" id="statsDonutRowMimi"></div>
         <div class="stats-overview-table-wrap">
           <table class="stats-overview-table">
             <thead>
               <tr><th>Bộ</th><th>Tiến độ</th><th>% đã thuộc</th></tr>
             </thead>
-            <tbody id="statsOverviewBody"></tbody>
+            <tbody id="statsOverviewBodyMimi"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="stats-section">
+        <div class="stats-section-title">📚 Tài liệu khác <span class="stats-section-hint">(bấm tên bộ để ôn ngay)</span></div>
+        <div class="stats-donut-row" id="statsDonutRowOther"></div>
+        <div class="stats-overview-table-wrap">
+          <table class="stats-overview-table">
+            <thead>
+              <tr><th>Bộ</th><th>Tiến độ</th><th>% đã thuộc</th></tr>
+            </thead>
+            <tbody id="statsOverviewBodyOther"></tbody>
           </table>
         </div>
       </div>
@@ -572,6 +586,6 @@
 </div>
 
 <script src="js/srs.js?v=4"></script>
-<script src="js/app.js?v=6"></script>
+<script src="js/app.js?v=7"></script>
 </body>
 </html>
