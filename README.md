@@ -356,7 +356,7 @@ Khi nhập: `weaknessStats` cộng dồn (không đè). `examDetailHistory`/`cho
 Hai field này **HOÀN TOÀN TÙY CHỌN** — file cũ không có vẫn chạy đúng như trước, không lỗi/crash gì cả. Chỉ khi file JSON MỚI khai báo thêm các field này thì app mới bật tính năng tương ứng:
 
 - **`startSec`** (số giây, đặt trong từng object `questions[]`): khi có, app tự `audioEl.currentTime = startSec` mỗi khi chuyển sang câu đó — dùng cho cả khi vẫn dùng CHUNG 1 file audio của cả Mondai. Không có field này → giữ nguyên hành vi cũ (không tự seek, người học tự kéo thanh thời gian).
-- **`lineTimestamps`** (mảng số giây, đặt trong từng object `questions[]`, PHẢI cùng số dòng với `script`): dùng ở mode "Luyện nghe câu" (`choukai-shadow`) — khi có, mỗi dòng script được bôi sáng kiểu karaoke đúng lúc audio phát tới đó (lắng nghe `timeupdate`), và bấm vào dòng tiếng Nhật sẽ nhảy audio tới đúng giây đó. Không có field này (hoặc số phần tử không khớp số dòng script) → giữ nguyên hành vi cũ (chỉ hiện dòng + dịch làm mờ, không bôi sáng).
+- **`lineTimestamps`** (mảng số giây, đặt trong từng object `questions[]`, PHẢI cùng số dòng với `script`): bật hiệu ứng karaoke (bôi sáng dòng đang phát) + cho BẤM VÀO BẤT KỲ DÒNG NÀO (tiếng Nhật hoặc bản dịch) để nhảy audio tới đúng đoạn đó. Dùng ở CẢ 2 nơi: mode "Luyện nghe câu" (`choukai-shadow`) VÀ panel xem đáp án lúc làm đề (`choukaiReviewPanel`, tab Script/Dịch). Không có field này (hoặc số phần tử không khớp số dòng script) → giữ nguyên hành vi cũ (chỉ hiện chữ bình thường, không bôi sáng, không bấm được).
 
 ```json
 {
@@ -368,7 +368,7 @@ Hai field này **HOÀN TOÀN TÙY CHỌN** — file cũ không có vẫn chạy 
 }
 ```
 
-**Trạng thái thực tế:** `choukai-18.json` (mới làm) **CHƯA có** 2 field này — do chưa có timestamp thật từ audio. Đây là việc làm DẦN khi có nhu cầu thực tế (phải nghe lại audio để đo đúng giây), không bắt buộc làm ngay.
+**Cách lấy `startSec`/`lineTimestamps` thực tế (quy trình đã dùng cho đề 18, 19):** Zane tạo 1 file `.docx` chứa transcript TỰ ĐỘNG (giọng → chữ, ví dụ qua Notta/Otter) có mốc thời gian `HH:MM:SS` kèm theo từng đoạn — file này CHỈ dùng để lấy mốc giờ + tên file audio thật, KHÔNG dùng làm script chính thức (vì máy nghe tự động có thể nghe sai vài chữ). Claude dùng thuật toán so khớp mờ (`difflib.SequenceMatcher`, script `align_timestamps.py`) để khớp từng dòng trong script CHÍNH THỨC (transcribe tay từ `.docx` gốc đề thi) với mốc giờ gần nhất trong file transcript tự động, rồi nội suy tuyến tính cho các dòng không khớp được. **Đây là ước lượng tự động, không phải đo tay 100% chính xác** — nếu nghe thực tế thấy lệch vài giây ở dòng nào, có thể sửa trực tiếp số trong mảng `lineTimestamps` của câu đó.
 
 
 - **Trang "Luyện nghe theo đề"**: chọn đề (dropdown) → chọn luyện cả đề hoặc CHỈ 1 Mondai cụ thể → modal chọn chấm ngay/chấm cuối (giống đề thi chữ, có nút "Xem kết quả lần làm gần nhất").
@@ -379,7 +379,8 @@ Hai field này **HOÀN TOÀN TÙY CHỌN** — file cũ không có vẫn chạy 
 - **Mondai 3 & 5**: toggle "💡 Hiện gợi ý từ khóa khi đang nghe" — bật thì hiện vài chip từ khóa NGAY TRONG LÚC làm câu (trước khi trả lời), hỗ trợ luyện bắt ý mà không cần ghi chú giấy.
 - **🚪 Thoát & xem kết quả** (chỉ mode chấm ngay) — giống đề chữ.
 - **Kết quả cuối**: điểm tổng + breakdown theo từng Mondai (vd "1/5 Mondai 1") + lưới ô tròn (đúng/sai/chưa làm) bấm vào xem chi tiết.
-- **Trang "Luyện nghe câu"** (mode riêng `choukai-shadow`): chọn đề + câu cụ thể, hiện TỪNG dòng script kèm bản dịch BỊ LÀM MỜ (blur), bấm vào dòng dịch để hiện rõ — luyện nghe shadowing. Có nút "Phát lại" — **CHỈ phát lại TOÀN BỘ audio của câu đó** (không tách được theo từng dòng vì không có timestamp), có cảnh báo rõ giới hạn này trong UI.
+- **Trang "Luyện nghe câu"** (mode riêng `choukai-shadow`): chọn đề + câu cụ thể, hiện TỪNG dòng script kèm bản dịch (hiện trực tiếp, KHÔNG còn làm mờ như trước). Nếu câu có `lineTimestamps`: bôi sáng kiểu karaoke đúng dòng đang phát + bấm vào BẤT KỲ dòng nào (JP hoặc VI) để nhảy audio tới đúng đoạn — xem mục field tùy chọn ở trên. Nếu KHÔNG có: vẫn dùng nút "Phát lại" để phát lại TOÀN BỘ audio của câu đó như cũ, có cảnh báo rõ giới hạn này trong UI (note tự ẩn khi câu đã có timestamp).
+- **🖥️ Phóng to toàn màn hình thật (Fullscreen)**: cả "Luyện nghe theo đề" và "Luyện nghe câu" đều có nút ⛶ dùng Fullscreen API thật của trình duyệt (che cả thanh tab/địa chỉ trên PC/laptop), không chỉ phóng to trong trang như trước. Tự fallback về CSS-only nếu trình duyệt từ chối — xem mục bug/lưu ý dưới.
 - **Lưu lịch sử**: cùng pattern với đề chữ — `n2vocab_choukai_history` (điểm tổng) + `n2vocab_choukai_detail_history` (chi tiết từng câu, key dạng `m{Mondai}q{qnum}[s{subIndex}]`).
 - **Tích hợp Điểm yếu** (tab "Nghe") và **Thống kê** (mục "🎧 Luyện nghe") — dùng lại `recordWeaknessResult("__choukai__", ...)`.
 
@@ -446,24 +447,23 @@ Các file giáo trình Mimi (`mimi-n2-unit3-adj`, `unit4`, `unit6-photu`, `unit8
 4 đề tự soạn đầy đủ (51 câu, có giải thích + gạch chân kanji): `n2-2024-07`, `n2-2024-12`, `n2-2025-07`, `n2-2025-12`. 1 đề mẫu nhỏ (`mondai1-mau-2023-12`, 3 câu). **3 đề CHƯA hoàn chỉnh:** `n2-2019-12`, `n2-2020-12`, `n2-2023-12` — mới có 30/51 câu (chỉ Mondai 1-6, THIẾU Mondai 7-9: ghép câu ★, đoạn văn), và **chưa có `giai_thich`** cho câu nào.
 
 ### `dethi-choukai/` (đề luyện nghe — MỚI, đang xây)
-- `choukai-01.json` — 31 câu, đầy đủ script+dịch+tip, audioMode `combined`.
-- `choukai-02.json` — 32 câu, đầy đủ, audioMode `split`.
-- **`choukai-18.json` — MỚI LÀM XONG** (32 câu, đầy đủ script+dịch+tip+keywords, audioMode `split`). Transcribe đúng 100% từ `聴解 18.docx` gốc. **⚠️ Tên file audio trong `audioFiles` (`聴解 18 1.mp3` ... `聴解 18 5.mp3`) là ĐOÁN THEO MẪU chung của dự án — CHƯA xác nhận được đuôi `.mp3`/`.m4a` thật trên GitHub vì ảnh chụp Zane gửi không có đề 18. Cần đối chiếu lại đúng tên+đuôi thật trước khi audio chạy được.** Đã test qua Playwright: chạy hết 32/32 câu, hiện đúng kết quả + breakdown 5 Mondai, không lỗi JS (chỉ lỗi 404 audio do chưa có file thật, đúng như dự kiến).
-- **`choukai-19` do Zane tự làm** (theo đúng schema, đã xác nhận cấu trúc đúng) — **chưa có bản lưu trong repo của Claude ở các lần trao đổi gần nhất, cần lấy lại file thật từ GitHub** nếu muốn rà soát/sửa tiếp. Zane xác nhận không cần Claude lo phần này.
-- **CHƯA LÀM: đề 03-17** (15 đề) — đã có sẵn file script gốc `聴解 N.docx` (N=3..17), cấu trúc xác nhận ổn định (Mondai1≈5-6 câu, Mondai2=6 câu, Mondai3=5 câu, Mondai4=11-12 câu, Mondai5=3-4 điểm) — chỉ cần transcribe + dịch + viết tip theo đúng quy trình mục 19.
-- **`file-nghe/` (audio thật)**: Zane tự upload trực tiếp lên GitHub, KHÔNG đi qua Claude — Claude chỉ biết tên file qua ảnh chụp Zane gửi. Cần đối chiếu kỹ tên file + đuôi mỗi khi viết `audioFiles` trong JSON mới — **đề 18 đang còn thiếu bước đối chiếu này.**
+- `choukai-01.json` — 31 câu, đầy đủ script+dịch+tip, audioMode `combined`. **CHƯA có** `startSec`/`lineTimestamps`.
+- `choukai-02.json` — 32 câu, đầy đủ, audioMode `split`. **CHƯA có** `startSec`/`lineTimestamps`.
+- **`choukai-18.json` — XONG, ĐÃ CÓ timestamp** (32 câu, đầy đủ script+dịch+tip+keywords, audioMode `split`). Transcribe đúng 100% từ `聴解 18.docx` gốc. Tên file audio (`聴解 18 1.m4a`...`5.m4a`) đã xác nhận đúng từ file `choukai_18_time.docx` (transcript tự động kèm mốc giờ mà Zane gửi) — KHÔNG còn là đoán theo mẫu nữa. `startSec`/`lineTimestamps` đã gán bằng thuật toán so khớp mờ (`align_timestamps.py`) giữa script chính thức và mốc giờ trong file transcript tự động — xem mục 19 để biết quy trình + lưu ý độ chính xác.
+- **`choukai-19.json` — XONG, ĐÃ CÓ timestamp** (32 câu — Zane tự soạn sẵn theo đúng schema, gửi lại để Claude không cần làm lại script/dịch/tip). Claude chỉ thêm `startSec`/`lineTimestamps` từ file `choukai_19_time.docx` bằng quy trình giống đề 18. Tên file audio (`聴解 19 1.m4a`...`5.m4a`) đã có sẵn đúng trong file Zane gửi.
+- **CHƯA LÀM: đề 03-17** (15 đề) — đã có sẵn file script gốc `聴解 N.docx` (N=3..17), cấu trúc xác nhận ổn định (Mondai1≈5-6 câu, Mondai2=6 câu, Mondai3=5 câu, Mondai4=11-12 câu, Mondai5=3-4 điểm) — chỉ cần transcribe + dịch + viết tip theo đúng quy trình mục 19. Nếu Zane gửi kèm file `_time.docx` tương ứng, Claude sẽ gán `startSec`/`lineTimestamps` luôn trong cùng lần làm.
+- **`file-nghe/` (audio thật)**: Zane tự upload trực tiếp lên GitHub, KHÔNG đi qua Claude. Đề 18, 19 đã xác nhận đúng tên+đuôi `.m4a` qua file transcript tự động kèm mốc giờ — các đề 01, 02 (đuôi `.m4a`/`.mp3` theo ảnh chụp cũ) và các đề sẽ làm sau vẫn cần đối chiếu cẩn thận như quy tắc cũ.
 
 ---
 
 ## 23. TODO tổng hợp — việc còn lại theo đúng yêu cầu gần nhất của Zane
 
-1. **Xác nhận tên + đuôi file audio thật cho choukai-18** (`聴解 18 1.mp3`...`5.mp3` đang là ĐOÁN theo mẫu, chưa đối chiếu ảnh GitHub thật) — ưu tiên cao, audio không chạy được nếu tên sai.
-2. **Xây tiếp 15 đề luyện nghe còn lại** (choukai-03 → choukai-17) — cần file `聴解 N.docx` tương ứng (đã có trong lần upload zip script gần nhất).
-3. **Chuẩn hóa `dong_nghia`/`trai_nghia` sang format mới** (~826 mục đang format cũ) — xem bảng mục 3, làm dần.
-4. **Quyết định xử lý 2 file trùng tên** `danh-tu-jlpt-n2.json` / `danh-tu-thiet-yeu.json` — xem mục 22.
-5. **Hoàn thiện 3 đề thi chữ thiếu** (`n2-2019-12`, `n2-2020-12`, `n2-2023-12`) — thêm Mondai 7-9 + giải thích.
-6. **Xác nhận lại nội dung file `choukai-19.json`** thật trên GitHub (Zane tự làm, Claude chưa có bản lưu để rà soát lần cuối) — Zane xác nhận chưa cần ưu tiên.
-7. **Bổ sung `startSec`/`lineTimestamps`** cho các đề choukai đã có (01, 02, 18) khi có nhu cầu thực tế — xem mục 19, field tùy chọn, cần nghe lại audio để đo đúng giây từng câu/dòng.
+1. **Xây tiếp 15 đề luyện nghe còn lại** (choukai-03 → choukai-17) — cần file `聴解 N.docx` tương ứng (đã có), và nếu Zane chuẩn bị thêm file `_time.docx` kèm mốc giờ cho từng đề thì Claude sẽ làm timestamp luôn trong cùng lượt.
+2. **Chuẩn hóa `dong_nghia`/`trai_nghia` sang format mới** (~826 mục đang format cũ) — xem bảng mục 3, làm dần.
+3. **Quyết định xử lý 2 file trùng tên** `danh-tu-jlpt-n2.json` / `danh-tu-thiet-yeu.json` — xem mục 22.
+4. **Hoàn thiện 3 đề thi chữ thiếu** (`n2-2019-12`, `n2-2020-12`, `n2-2023-12`) — thêm Mondai 7-9 + giải thích.
+5. **Bổ sung `startSec`/`lineTimestamps`** cho `choukai-01`, `choukai-02` nếu Zane chuẩn bị file `_time.docx` tương ứng — quy trình giống đề 18/19 ở mục 19.
+6. **Kiểm tra lại độ chính xác `lineTimestamps`** của đề 18/19 khi có audio thật — vì là ước lượng tự động (so khớp mờ + nội suy), có thể lệch vài giây ở 1 số dòng ngắn ("はい。", "うん。"...), sửa tay trực tiếp trong JSON nếu cần khi nghe thực tế thấy lệch.
 
 ---
 
