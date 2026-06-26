@@ -2784,10 +2784,18 @@ function renderExamQuestion() {
   document.getElementById("examPos").textContent = qIndex + 1;
   document.getElementById("examQueueTotal").textContent = App.examOriginalTotal;
 
-  const remainingUnanswered = App.examOriginalTotal - App.examAnswered.size;
-  const retryCount = App.examQueue.length - remainingUnanswered;
   const note = document.getElementById("examRetryNote");
-  note.textContent = retryCount > 0 ? `(có ${retryCount} câu làm lại trong hàng đợi)` : "";
+  // Ghi chú "câu làm lại trong hàng đợi" CHỈ có ý nghĩa ở chế độ chấm ngay (vì
+  // chỉ chế độ đó mới đẩy câu sai về cuối hàng đợi để làm lại). Chế độ chấm cuối
+  // bài đi đúng 1 lượt, không có khái niệm "làm lại" — phép tính cũ
+  // (dựa trên examAnswered chỉ tăng khi ĐÚNG) sẽ ra số âm vô nghĩa ở chế độ này.
+  if (App.examScoreMode === "instant") {
+    const remainingUnanswered = App.examOriginalTotal - App.examAnswered.size;
+    const retryCount = App.examQueue.length - remainingUnanswered;
+    note.textContent = retryCount > 0 ? `(có ${retryCount} câu làm lại trong hàng đợi)` : "";
+  } else {
+    note.textContent = "";
+  }
 
   document.getElementById("examReviewBanner").classList.add("hidden");
   document.getElementById("examHistoryNote").classList.add("hidden");
@@ -2845,11 +2853,21 @@ function renderExamQuestionContent(q, qIndex, isLive) {
     btn.textContent = q.options[optIdx];
 
     if (!isLive && lastAttempt) {
-      // Đang xem lại: tô sẵn đáp án đã chọn lần gần nhất + đáp án đúng, không cho bấm tiếp
-      btn.classList.add("disabled");
-      if (optIdx === q.dap_an_dung) btn.classList.add("correct");
-      if (optIdx === lastAttempt.chosenIdx && !lastAttempt.correct) btn.classList.add("wrong");
-      if (optIdx === lastAttempt.chosenIdx) btn.classList.add("was-chosen");
+      if (App.examScoreMode === "review") {
+        // Chấm cuối bài: cho phép SỬA lại đáp án khi quay lại xem câu đã làm —
+        // đúng với logic làm bài thật (được sửa đáp án tự do trước khi "nộp bài"
+        // ở cuối). KHÔNG tô đúng/sai (vẫn giữ nguyên tinh thần "không biết kết quả
+        // giữa lúc làm" của chế độ này), chỉ tô nhẹ ô đang được chọn.
+        if (optIdx === lastAttempt.chosenIdx) btn.classList.add("was-chosen-neutral");
+        btn.addEventListener("click", () => handleExamAnswerEditReview(btn, optIdx, qIndex, q));
+      } else {
+        // Chấm ngay: đã xem đáp án đúng/sai + giải thích rồi nên chỉ xem lại,
+        // không cho sửa (sửa sau khi đã biết đáp án thì không còn ý nghĩa).
+        btn.classList.add("disabled");
+        if (optIdx === q.dap_an_dung) btn.classList.add("correct");
+        if (optIdx === lastAttempt.chosenIdx && !lastAttempt.correct) btn.classList.add("wrong");
+        if (optIdx === lastAttempt.chosenIdx) btn.classList.add("was-chosen");
+      }
     } else if (isLive) {
       btn.addEventListener("click", () => handleExamAnswer(btn, optIdx, qIndex, q));
     }
@@ -2919,6 +2937,39 @@ function toggleExamExplain() {
 
   box.innerHTML = rows;
   box.classList.remove("hidden");
+}
+
+// Sửa lại đáp án của 1 câu ĐÃ làm, khi đang quay lại xem qua nút "Câu trước/Câu
+// sau" — CHỈ dùng cho chế độ chấm cuối bài (xem renderExamQuestionContent()).
+// Không tô đúng/sai, không tự chuyển câu — chỉ cập nhật lựa chọn rồi để người
+// học tự bấm điều hướng tiếp khi sẵn sàng, giống hệt cách làm bài thi giấy thật
+// (sửa đáp án tự do, không có phản hồi gì cho tới lúc nộp bài).
+function handleExamAnswerEditReview(btn, chosenIdx, qIndex, q) {
+  const correct = chosenIdx === q.dap_an_dung;
+  const hist = App.examHistory[qIndex];
+  const wasCorrect = hist.firstTryCorrect;
+
+  hist.attempts.push({ chosenIdx, correct, atMs: Date.now() });
+  hist.firstTryCorrect = correct; // chấm cuối bài: đáp án MỚI NHẤT mới là đáp án chính thức để chấm
+
+  // Điều chỉnh điểm + tập hợp examAnswered nếu đúng/sai có thay đổi so với trước
+  if (wasCorrect !== correct) {
+    if (correct) {
+      App.examScore++;
+      App.examAnswered.add(qIndex);
+    } else {
+      App.examScore--;
+      App.examAnswered.delete(qIndex);
+    }
+    document.getElementById("examScore").textContent = App.examScore;
+  }
+
+  recordWeaknessResult("__exam__", `${App.currentExamId}::q${qIndex}`, correct, q.de_bai.slice(0, 60));
+
+  // Chỉ cập nhật lại highlight ô đang chọn, không render lại toàn bộ (giữ nguyên
+  // vị trí xem lại hiện tại, không tự nhảy đi đâu).
+  document.querySelectorAll("#examOptions .quiz-opt").forEach((b) => b.classList.remove("was-chosen-neutral"));
+  btn.classList.add("was-chosen-neutral");
 }
 
 function handleExamAnswer(btn, chosenIdx, qIndex, q) {
@@ -3013,28 +3064,41 @@ function examContinueAfterInstantAnswer() {
 }
 
 // ----- Điều hướng xem lại câu trước / câu sau -----
+// QUAN TRỌNG: examSeenOrder[length-1] LUÔN là vị trí của câu "live" hiện tại
+// (được push vào ngay khi câu đó trở thành câu đang chờ trả lời, xem renderExamQuestion()).
+// Mọi vị trí TRƯỚC đó chắc chắn đã có lịch sử trả lời (vì phải trả lời xong mới
+// qua câu kế). Vì vậy điều hướng KHÔNG được bao giờ gọi showExamReviewAt() cho
+// chính vị trí live đó — phải luôn quay lại qua backToLiveExamQuestion() để câu
+// đó được render đúng ở trạng thái "live" (có thể bấm chọn được), không phải
+// trạng thái "xem lại" (vốn chỉ dành cho câu ĐÃ có lịch sử).
 function examGoPrev() {
-  if (!App.examSeenOrder.length) return;
+  // Không có câu nào để xem lại trước vị trí live hiện tại
+  if (App.examSeenOrder.length <= 1) return;
   if (App.examNavPos === -1) {
-    // Đang ở câu live -> lùi về câu liền trước trong lịch sử đã thấy
+    // Đang ở câu live -> lùi về câu liền trước (bỏ qua chính vị trí live ở cuối)
     App.examNavPos = App.examSeenOrder.length - 2;
   } else {
     App.examNavPos = Math.max(0, App.examNavPos - 1);
-  }
-  if (App.examNavPos < 0) {
-    App.examNavPos = 0;
   }
   showExamReviewAt(App.examNavPos);
 }
 
 function examGoNext() {
   if (App.examNavPos === -1) return; // đã ở câu live, không có gì để "tiến" thêm
-  if (App.examNavPos >= App.examSeenOrder.length - 1) {
-    // Đã ở câu cuối cùng đã xem -> quay về câu live thật
+  const nextPos = App.examNavPos + 1;
+  // Trước đây dùng "navPos >= length-1" để quyết định quay về live, nhưng kiểm
+  // tra đó chạy SAU KHI đã tăng navPos, nên lần bấm đầu tiên từ vị trí length-2
+  // sẽ tăng lên đúng length-1 (vị trí live) rồi mới showExamReviewAt() cho vị trí
+  // ĐÓ — hiện sai vì câu live chưa có lịch sử trả lời, nút bấm rơi vào trạng thái
+  // vừa không bị khóa vừa không gắn sự kiện click (không disabled, không listener)
+  // — phải bấm "Câu sau" THÊM 1 LẦN NỮA mới thực sự về lại được câu live qua
+  // nhánh backToLiveExamQuestion(). Sửa: kiểm tra TRƯỚC khi tăng, nếu vị trí kế
+  // tiếp sẽ là vị trí live (length-1) thì đi thẳng về live ngay từ lần bấm đầu.
+  if (nextPos >= App.examSeenOrder.length - 1) {
     backToLiveExamQuestion();
     return;
   }
-  App.examNavPos++;
+  App.examNavPos = nextPos;
   showExamReviewAt(App.examNavPos);
 }
 
@@ -3111,7 +3175,23 @@ function finishExam() {
   saveExamDetailSnapshot(App.currentExamId, App.examHistory);
 
   if (App.examSpeedMode) {
-    renderExamTimeSummary();
+    if (App.examScoreMode === "instant") {
+      renderExamTimeSummary();
+    } else {
+      // Chấm cuối bài: KHÔNG có khái niệm "lượt đầu / sửa lại câu sai" — mỗi câu
+      // chỉ đi qua đúng 1 lần theo thứ tự gốc, không có vòng làm lại nào cả. Trước
+      // đây vẫn gọi renderExamTimeSummary() ở đây nên hiện nhầm cả khối "Mốc 2 —
+      // Sửa lại câu sai" dù chế độ này không hề có pha sửa lại nào. Giờ chỉ hiện
+      // tổng thời gian làm bài đơn giản.
+      document.getElementById("examTimeSummary").innerHTML = `
+        <div class="exam-time-summary-block">
+          <div class="exam-time-summary-title">Thời gian làm bài</div>
+          <div class="exam-time-stats-row">
+            <div class="exam-speed-stat"><div class="exam-speed-stat-num">${fmtTime(totalSeconds)}</div><div class="exam-speed-stat-label">tổng thời gian</div></div>
+          </div>
+        </div>
+      `;
+    }
     renderExamSpeedSummary();
   } else {
     document.getElementById("examTimeSummary").innerHTML = "";
