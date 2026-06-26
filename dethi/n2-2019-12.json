@@ -12,7 +12,7 @@
       "dap_an_dung": 1,
       "giai_thich": [
         "Sai. 優しく (やさしく): hiền lành, dịu dàng.",
-        "Đúng. 等しく (ひとしく): ngang bằng, như nhau.",
+        "Đúng. 等しく (ひとしく): ngang bằng, như nhau. => Dịch câu: Anh Hayashi là người đối xử với bất kỳ ai cũng ngang bằng như nhau.",
         "Sai. 親しく (したしく): thân thiết.",
         "Sai. 厳しく (きびしく): nghiêm khắc."
       ]
@@ -27,7 +27,7 @@
       ],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. 軽傷 (けいしょう): vết thương nhẹ.",
+        "Đúng. 軽傷 (けいしょう): vết thương nhẹ. => Dịch câu: Có vẻ như vết thương của anh Ishikawa chỉ là vết thương nhẹ.",
         "Sai. Không tồn tại.",
         "Sai. 化粧 (けしょう): trang điểm.",
         "Sai. Không tồn tại."
@@ -46,7 +46,7 @@
         "Sai. 分店 (ぶんてん): chi nhánh.",
         "Sai. Không tồn tại.",
         "Sai. 分担 (ぶんたん): phân công, chia sẻ.",
-        "Đúng. 負担 (ふたん): gánh vác, chịu (chi phí)."
+        "Đúng. 負担 (ふたん): gánh vác, chịu (chi phí). => Dịch câu: Mọi người đã cùng nhau gánh vác chi phí."
       ]
     },
     {
@@ -62,7 +62,7 @@
         "Sai. 当たった (あたった): trúng, va chạm.",
         "Sai. 光った (ひかった): phát sáng, tỏa sáng.",
         "Sai. 照った (てった): chiếu sáng.",
-        "Đúng. 映った (うつった): phản chiếu, in bóng."
+        "Đúng. 映った (うつった): phản chiếu, in bóng. => Dịch câu: Hoàng hôn phản chiếu trên mặt hồ trông thật đẹp."
       ]
     },
     {
@@ -77,7 +77,7 @@
       "giai_thich": [
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại.",
-        "Đúng. 下旬 (げじゅん): hạ tuần (10 ngày cuối tháng).",
+        "Đúng. 下旬 (げじゅん): hạ tuần (10 ngày cuối tháng). => Dịch câu: Tôi dự định đi du lịch vào cuối tháng 9.",
         "Sai. Không tồn tại."
       ]
     },
@@ -94,7 +94,7 @@
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại.",
-        "Đúng. 違反 (いはん): vi phạm."
+        "Đúng. 違反 (いはん): vi phạm. => Dịch câu: Hành vi đó vi phạm luật giao thông."
       ]
     },
     {
@@ -108,7 +108,7 @@
       "dap_an_dung": 1,
       "giai_thich": [
         "Sai. Không tồn tại.",
-        "Đúng. 勇ましい (いさましい): dũng mãnh, mạnh mẽ.",
+        "Đúng. 勇ましい (いさましい): dũng mãnh, mạnh mẽ. => Dịch câu: Tôi nghe thấy một giọng nói dũng mãnh vang lên.",
         "Sai. Từ đúng là 騒がしい (さわがしい): ồn ào.",
         "Sai. Không tồn tại."
       ]
@@ -125,7 +125,7 @@
       "giai_thich": [
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại.",
-        "Đúng. 陽気 (ようき): vui vẻ, nhộn nhịp.",
+        "Đúng. 陽気 (ようき): vui vẻ, nhộn nhịp. => Dịch câu: Cửa hàng đó đang bật một bản nhạc rất nhộn nhịp.",
         "Sai. Không tồn tại."
       ]
     },
@@ -139,7 +139,7 @@
       ],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. 見逃す (みのがす): bỏ lỡ, bỏ sót.",
+        "Đúng. 見逃す (みのがす): bỏ lỡ, bỏ sót. => Dịch câu: Tôi đã bỏ lỡ mất bộ phim truyền hình mà mình đang mong đợi.",
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại."
@@ -155,7 +155,7 @@
       ],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. 拡張 (かくちょう): mở rộng (quy mô, diện tích).",
+        "Đúng. 拡張 (かくちょう): mở rộng (quy mô, diện tích). => Dịch câu: Từ tháng sau, công trình nhằm mở rộng đường sẽ bắt đầu.",
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại."
@@ -173,7 +173,7 @@
       "giai_thich": [
         "Sai. 先 (せん) thường ghép với 先月, 先日...",
         "Sai. Không ghép thành 古町長.",
-        "Đúng. 前 (まえ): cựu, người tiền nhiệm. 前町長: cựu thị trưởng.",
+        "Đúng. 前 (まえ): cựu, người tiền nhiệm. 前町長: cựu thị trưởng. => Dịch câu: Tòa nhà này được xây dựng vào thời của cựu thị trưởng.",
         "Sai. Không dùng làm tiền tố chỉ chức vụ cũ."
       ]
     },
@@ -187,7 +187,7 @@
       ],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. V(bỏ ます) + づらい: khó làm gì đó (về mặt tâm lý). 頼みづらい: khó mở lời nhờ vả.",
+        "Đúng. V(bỏ ます) + づらい: khó làm gì đó (về tâm lý). 頼みづらい: khó mở lời nhờ vả. => Dịch câu: Tôi đã được anh Ikeda giúp đỡ nhiều lần rồi nên lần này rất khó mở lời nhờ vả.",
         "Sai. Không có cấu trúc này.",
         "Sai. Không có cấu trúc này.",
         "Sai. Không có cấu trúc này."
@@ -206,7 +206,7 @@
         "Sai. 香 (かおり): mùi hương.",
         "Sai. 風 (ふう): phong cách.",
         "Sai. 味 (あじ): mùi vị.",
-        "Đúng. 政治色 (せいじしょく): màu sắc chính trị, mang tính chính trị."
+        "Đúng. 政治色 (せいじしょく): màu sắc chính trị. => Dịch câu: Lời của bài hát này mang màu sắc chính trị rất đậm nét."
       ]
     },
     {
@@ -220,7 +220,7 @@
       "dap_an_dung": 1,
       "giai_thich": [
         "Sai. 余計 (よけい): dư thừa, không cần thiết.",
-        "Đúng. 面倒 (めんどう): phiền phức, lười biếng.",
+        "Đúng. 面倒 (めんどう): phiền phức, lười biếng. => Dịch câu: Hôm nay làm thêm giờ mệt quá, lười nấu bữa tối nên tôi định ăn ở ngoài rồi hẵng về.",
         "Sai. 過剰 (かじょう): vượt quá, dư thừa.",
         "Sai. 無力 (むりょく): vô lực, bất lực."
       ]
@@ -235,7 +235,7 @@
       ],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. 本物 (ほんもの): đồ thật. まるで本物: cứ như thật.",
+        "Đúng. 本物 (ほんもの): đồ thật. まるで本物: cứ như thật. => Dịch câu: Con robot chó này cử động tự nhiên, cứ như là chó thật vậy.",
         "Sai. 現状 (げんじょう): hiện trạng.",
         "Sai. 事業 (じぎょう): sự nghiệp, công việc.",
         "Sai. 正式 (せいしき): chính thức."
@@ -251,10 +251,10 @@
       ],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. 憧れ (あこがれ): sự ngưỡng mộ, thần tượng, hình mẫu lý tưởng.",
+        "Đúng. 憧れ (あこがれ): sự ngưỡng mộ, hình mẫu lý tưởng. => Dịch câu: Tiền bối Yamashita là hình mẫu lý tưởng của tôi, tôi luôn mong một ngày nào đó sẽ được như anh ấy.",
         "Sai. 望み (のぞみ): nguyện vọng, hy vọng.",
         "Sai. 願い (ねがい): mong ước, cầu nguyện.",
-        "Sai. 夢 (ゆめ): giấc mơ (ít dùng trực tiếp để chỉ một người cụ thể đang tồn tại)."
+        "Sai. 夢 (ゆめ): giấc mơ."
       ]
     },
     {
@@ -268,8 +268,8 @@
       "dap_an_dung": 2,
       "giai_thich": [
         "Sai. 移行 (いこう): chuyển đổi (hệ thống, giai đoạn).",
-        "Sai. 転職 (てんしょく): chuyển việc (sang công ty khác).",
-        "Đúng. 転勤 (てんきん): chuyển công tác (giữa các chi nhánh trong cùng một công ty).",
+        "Sai. 転職 (てんしょく): chuyển việc (công ty khác).",
+        "Đúng. 転勤 (てんきん): chuyển công tác (cùng công ty). => Dịch câu: Hôm nay tôi nhận lệnh chuyển công tác từ chi nhánh Kyoto lên trụ sở chính ở Tokyo, nên cuối tháng này tôi sẽ chuyển nhà lên Tokyo.",
         "Sai. 移住 (いじゅう): di cư."
       ]
     },
@@ -283,10 +283,10 @@
       ],
       "dap_an_dung": 1,
       "giai_thich": [
-        "Sai. 制作 (せいさく): chế tác (nghệ thuật, phim ảnh).",
-        "Đúng. 栽培 (さいばい): trồng trọt.",
-        "Sai. 養成 (ようせい): đào tạo, bồi dưỡng (nhân lực).",
-        "Sai. 製造 (せいぞう): chế tạo, sản xuất (công nghiệp, máy móc)."
+        "Sai. 制作 (せいさく): chế tác (nghệ thuật, phim).",
+        "Đúng. 栽培 (さいばい): trồng trọt. => Dịch câu: Các nông hộ ở vùng này đang trồng rau không sử dụng thuốc trừ sâu.",
+        "Sai. 養成 (ようせい): đào tạo, bồi dưỡng.",
+        "Sai. 製造 (せいぞう): chế tạo, sản xuất."
       ]
     },
     {
@@ -301,8 +301,8 @@
       "giai_thich": [
         "Sai. 振り向く (ふりむく): ngoảnh mặt lại.",
         "Sai. 睨む (にらむ): lườm, trừng mắt.",
-        "Sai. 屈む (かがむ): khom lưng, cúi người.",
-        "Đúng. 頷く (うなずく): gật đầu (thể hiện sự đồng tình)."
+        "Sai. 屈む (かがむ): khom lưng.",
+        "Đúng. 頷く (うなずく): gật đầu. => Dịch câu: Anh ấy không nói gì về ý kiến của tôi, nhưng đã gật đầu để thể hiện sự đồng tình."
       ]
     },
     {
@@ -317,7 +317,7 @@
       "giai_thich": [
         "Sai. きちんと: cẩn thận, gọn gàng.",
         "Sai. ぼんやり: mờ nhạt, thẫn thờ.",
-        "Đúng. ごちゃごちゃ: bừa bộn, lộn xộn.",
+        "Đúng. ごちゃごちゃ: bừa bộn, lộn xộn. => Dịch câu: Trên bàn đang lộn xộn đủ thứ đồ, mau dọn dẹp sạch sẽ thôi.",
         "Sai. きょろきょろ: ngơ ngác nhìn ngó xung quanh."
       ]
     },
@@ -333,7 +333,7 @@
       "giai_thich": [
         "Sai. 楽しい (たのしい): vui vẻ.",
         "Sai. 簡単だ (かんたんだ): đơn giản.",
-        "Đúng. ハード (hard) có nghĩa là vất vả, khó khăn = 大変だ (たいへんだ).",
+        "Đúng. ハード (hard) = 大変だ (たいへんだ): vất vả. => Dịch câu: Công việc này rất vất vả.",
         "Sai. 新しい (あたらしい): mới."
       ]
     },
@@ -348,7 +348,7 @@
       "dap_an_dung": 1,
       "giai_thich": [
         "Sai. うれしくなった: trở nên vui vẻ.",
-        "Đúng. 動揺 (どうよう): dao động tâm lý, bối rối = 不安になった.",
+        "Đúng. 動揺 (どうよう) = 不安になった: bối rối, bất an. => Dịch câu: Nghe chuyện đó xong tôi rất bối rối bất an.",
         "Sai. 不満に思った: cảm thấy bất mãn.",
         "Sai. 面白いと思った: cảm thấy thú vị."
       ]
@@ -365,7 +365,7 @@
       "giai_thich": [
         "Sai. 払った (はらった): đã trả (tiền).",
         "Sai. 直した (なおした): đã sửa.",
-        "Đúng. 引き返した (ひきかえした): đã quay lại = 戻った.",
+        "Đúng. 引き返した (ひきかえした) = 戻った: đã quay lại. => Dịch câu: Nên quay lại sớm thì hơn.",
         "Sai. 答えた (こたえた): đã trả lời."
       ]
     },
@@ -382,7 +382,7 @@
         "Sai. すぐに: ngay lập tức.",
         "Sai. 少し: một chút.",
         "Sai. できるだけ: hết sức có thể.",
-        "Đúng. 一層 (いっそう): hơn nữa = もっと."
+        "Đúng. 一層 (いっそう) = もっと: hơn nữa. => Dịch câu: Tôi muốn tăng cường tính năng hơn nữa."
       ]
     },
     {
@@ -395,7 +395,7 @@
       ],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. かかりつけ: (bác sĩ/bệnh viện) quen thuộc, thường xuyên đi khám = いつも行く.",
+        "Đúng. かかりつけ = いつも行く: quen thuộc, thường xuyên đi. => Dịch câu: Đột nhiên bị đau đầu dữ dội nên tôi đã đến bệnh viện quen thuộc vẫn hay đi.",
         "Sai. Mở cửa cả vào ngày nghỉ.",
         "Sai. 近くの: ở gần.",
         "Sai. 専門の: chuyên môn."
@@ -413,8 +413,8 @@
       "giai_thich": [
         "Sai. Thời tiết bất thường dùng 異常 (いじょう).",
         "Sai. Cảm xúc đặc biệt dùng 特別 (とくべつ) hoặc 格別 (かくべつ).",
-        "Sai. Ngày đặc biệt (sinh nhật) dùng 特別 (とくべつ).",
-        "Đúng. 特殊 (とくしゅ): đặc thù (giấy phép, kỹ năng chuyên biệt)."
+        "Sai. Ngày đặc biệt dùng 特別 (とくべつ).",
+        "Đúng. 特殊 (とくしゅ): đặc thù (chuyên biệt). => Dịch câu: Để lái xe buýt thì cần có giấy phép lái xe đặc thù."
       ]
     },
     {
@@ -427,10 +427,10 @@
       ],
       "dap_an_dung": 1,
       "giai_thich": [
-        "Sai. Chất liệu thô từ tự nhiên (dầu mỏ) bị biến đổi dùng 原料 (げんりょう).",
-        "Đúng. 素材 (そざい): nguyên liệu (nấu ăn), chất liệu (quần áo).",
-        "Sai. Thông tin, căn cứ để phán đoán dùng 材料 (ざいりょう).",
-        "Sai. Nguyên nhân gây hỏng hóc dùng 原因 (げんいん)."
+        "Sai. Chất liệu thô từ tự nhiên dùng 原料 (げんりょう).",
+        "Đúng. 素材 (そざい): nguyên liệu, chất liệu. => Dịch câu: Nhà hàng này nổi tiếng với các món ăn giữ trọn hương vị của nguyên liệu.",
+        "Sai. Thông tin, căn cứ dùng 材料 (ざいりょう).",
+        "Sai. Nguyên nhân dùng 原因 (げんいん)."
       ]
     },
     {
@@ -443,10 +443,10 @@
       ],
       "dap_an_dung": 1,
       "giai_thich": [
-        "Sai. Bóng đập trúng đầu dùng 当たる (あたる).",
-        "Đúng. しみる: ngấm, buốt, rát. 目にしみる: khói làm rát mắt.",
+        "Sai. Đập trúng đầu dùng 当たる (あたる).",
+        "Đúng. しみる: ngấm, buốt, rát. => Dịch câu: Khói bay vào làm cay rát mắt, khiến tôi không cầm được nước mắt.",
         "Sai. Thắt lưng nịt chặt dùng 食い込む (くいこむ) hoặc きつい.",
-        "Sai. Dao đâm/cắt dùng 刺さる (ささる) hoặc 切れる (きれる)."
+        "Sai. Dao cắt/đâm dùng 刺さる (ささる) hoặc 切れる (きれる)."
       ]
     },
     {
@@ -459,9 +459,9 @@
       ],
       "dap_an_dung": 2,
       "giai_thich": [
-        "Sai. Đầy đủ các loại sách dùng 充実 (じゅうじつ).",
+        "Sai. Đầy đủ sách dùng 充実 (じゅうじつ).",
         "Sai. Đông kín khán giả dùng 満員 (まんいん).",
-        "Đúng. 充満 (じゅうまん): tràn ngập, lan tỏa (thường dùng cho mùi hương, khói, khí).",
+        "Đúng. 充満 (じゅうまん): tràn ngập, lan tỏa (mùi, khói). => Dịch câu: Trong phòng tràn ngập mùi đồ ăn nồng nặc nên tôi đã mở cửa sổ.",
         "Sai. Tràn ngập ước mơ dùng 溢れる (あふれる)."
       ]
     },
@@ -475,10 +475,10 @@
       ],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. めくる: lật. ページをめくる: lật trang sách, cuốn lịch.",
+        "Đúng. めくる: lật (trang, lịch). => Dịch câu: Cuốn tiểu thuyết này thú vị đến mức tôi luôn háo hức lật sang trang tiếp theo.",
         "Sai. Vắt khăn dùng 絞る (しぼる).",
-        "Sai. Dán bằng hồ dùng 貼る (はる).",
-        "Sai. Kéo cửa về phía mình dùng 引く (ひく)."
+        "Sai. Dán hồ dùng 貼る (はる).",
+        "Sai. Kéo cửa dùng 引く (ひく)."
       ]
     }
   ]
