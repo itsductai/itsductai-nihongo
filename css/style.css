@@ -515,7 +515,13 @@ tbody tr:last-child td { border-bottom: none; }
 #app.focus-mode .sidebar { display: none; }
 #app.focus-mode .main {
   padding: 64px 48px;
-  display: flex; align-items: center; justify-content: center;
+  /* LƯU Ý: dùng align-items: flex-start (KHÔNG phải center) — đây là lỗi
+     kinh điển của flexbox: align-items:center + overflow-y:auto khi nội dung
+     CAO HƠN khung nhìn sẽ làm phần ĐẦU nội dung bị đẩy lên trên vùng cuộn được
+     và không thể kéo lên xem lại (xảy ra rõ nhất với script dài ở phần nghe).
+     flex-start giữ nội dung neo từ trên, cuộn xuống dưới bình thường, không bị
+     mất phần đầu. Vẫn giữ canh giữa theo chiều ngang qua justify-content. */
+  display: flex; align-items: flex-start; justify-content: center;
 }
 #app.focus-mode .view:not(.hidden) {
   width: 100%; max-width: 880px;
@@ -1114,4 +1120,22 @@ tbody tr:last-child td { border-bottom: none; }
 }
 .karaoke-line.is-current-line {
   font-weight: 700; color: var(--accent);
+}
+
+/* Nút "⬇ Về dòng đang nghe" — chỉ hiện khi người dùng tự kéo cuộn ra khỏi dòng
+   đang phát (xem mục `attachKaraokeBehavior` trong app.js). Định vị CỐ ĐỊNH
+   theo khung nhìn (không theo khung cuộn riêng) để luôn thấy được dù đang cuộn
+   ở khung nào — kể cả khi đang ở chế độ phóng to toàn màn hình. */
+.karaoke-jump-btn {
+  position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%);
+  z-index: 80; background: var(--accent); color: #fff; border: none;
+  padding: 11px 20px; border-radius: 22px; font-size: 13px; font-weight: 700;
+  cursor: pointer; box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  animation: karaoke-jump-pulse 1.8s ease-in-out infinite;
+}
+.karaoke-jump-btn.hidden { display: none; }
+.karaoke-jump-btn:hover { filter: brightness(1.08); }
+@keyframes karaoke-jump-pulse {
+  0%, 100% { box-shadow: 0 4px 16px rgba(0,0,0,0.25), 0 0 0 0 rgba(91,141,239,0.45); }
+  50% { box-shadow: 0 4px 16px rgba(0,0,0,0.25), 0 0 0 9px rgba(91,141,239,0); }
 }
