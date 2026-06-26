@@ -1,5 +1,6 @@
 {
   "type": "TUVUNG",
+  "series": "mimi",
   "title": "Mimi UNIT 8 - Động từ",
   "words": [
     {
@@ -10,7 +11,9 @@
       "nghia": "bị phản chiếu, được chiếu",
       "vi_du": "鏡には左右が逆に映る。(Gương phản chiếu hình ảnh ngược trái phải.) 湖の水面に回りの山々が映っている。(Mặt hồ phản chiếu hình ảnh núi non xung quanh.)",
       "vi_du_ruby": "鏡には左右が逆に<ruby>映<rt>うつ</rt></ruby>る。(Gương phản chiếu hình ảnh ngược trái phải.)",
-      "dong_nghia": ["反射する"],
+      "dong_nghia": [
+        "反射する"
+      ],
       "trai_nghia": []
     },
     {
@@ -21,7 +24,9 @@
       "nghia": "chiếu, phản chiếu",
       "vi_du": "全身を映せる鏡が欲しい。(Tôi muốn có chiếc gương chiếu toàn bộ thân hình.) スクリーンに映画を映す。(Phim chiếu trên màn hình.)",
       "vi_du_ruby": "全身を<ruby>映<rt>うつ</rt></ruby>せる鏡が欲しい。(Tôi muốn có chiếc gương chiếu toàn bộ thân hình.)",
-      "dong_nghia": ["反射させる"],
+      "dong_nghia": [
+        "反射させる"
+      ],
       "trai_nghia": []
     },
     {
@@ -32,7 +37,9 @@
       "nghia": "ngập",
       "vi_du": "大雨で家の床まで水につかった。(Do mưa lớn nên nước ngập cả sàn nhà.) 肩まで湯につかると気持ちがいい。(Nước ấm ngập đến vai cảm giác rất thích.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["浸水する"],
+      "dong_nghia": [
+        "浸水する"
+      ],
       "trai_nghia": []
     },
     {
@@ -43,7 +50,9 @@
       "nghia": "ngâm, nhúng",
       "vi_du": "汚れが落ちにくいときは、洗剤の液にしばらく付けておくとよい。(Khi vết bẩn khó giặt thì nên ngâm vào dung dịch bột giặt một lúc.) 大豆を一晩水につけて柔らかくする。(Ngâm đậu nành một đêm vào nước cho nó mềm đi.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["浸す"],
+      "dong_nghia": [
+        "浸す"
+      ],
       "trai_nghia": []
     },
     {
@@ -54,8 +63,13 @@
       "nghia": "nổi lên",
       "vi_du": "池にボートが浮かんでいる。(Con thuyền nổi trên mặt hồ.) アイデアが浮かぶ。(Ý tưởng nảy ra.) 家族の顔が目に浮かぶ。(Hình ảnh gia đình hiện lên trong mắt tôi.)",
       "vi_du_ruby": "池にボートが<ruby>浮<rt>う</rt></ruby>かんでいる。(Con thuyền nổi trên mặt hồ.)",
-      "dong_nghia": ["浮上する", "思いつく"],
-      "trai_nghia": ["沈む"]
+      "dong_nghia": [
+        "浮上する",
+        "思いつく"
+      ],
+      "trai_nghia": [
+        "沈む"
+      ]
     },
     {
       "kanji": "浮かべる",
@@ -66,7 +80,9 @@
       "vi_du": "池におもちゃのボートを浮かべて遊んだ。(Thả con thuyền đồ chơi nổi trên mặt nước rồi chơi.) 彼女は目に涙を浮かべて抗議した。(Cô ấy rơm rớm nước mắt để phản đối.)",
       "vi_du_ruby": "池におもちゃのボートを<ruby>浮<rt>う</rt></ruby>かべて遊んだ。(Thả con thuyền đồ chơi nổi trên mặt nước rồi chơi.)",
       "dong_nghia": [],
-      "trai_nghia": ["沈める"]
+      "trai_nghia": [
+        "沈める"
+      ]
     },
     {
       "kanji": "浮く",
@@ -77,7 +93,9 @@
       "vi_du": "一円玉は水に浮く。(Đồng tiền 1 yên nổi trên mặt nước.) 彼は人に合わせることが苦手で、いつも集団から浮いている。(Anh ấy là người khó hòa hợp với người khác, lúc nào cũng tách biệt khỏi đám đông.)",
       "vi_du_ruby": "一円玉は水に<ruby>浮<rt>う</rt></ruby>く。(Đồng tiền 1 yên nổi trên mặt nước.)",
       "dong_nghia": [],
-      "trai_nghia": ["沈む"]
+      "trai_nghia": [
+        "沈む"
+      ]
     },
     {
       "kanji": "潜る",
@@ -87,8 +105,13 @@
       "nghia": "lặn, chìm xuống",
       "vi_du": "日本の「海女」は長時間海に潜って貝や魚を取ることができる。(Những nữ thợ lặn Nhật Bản, lặn hàng giờ dưới biển và có thể bắt cá và sò.) 彼は反政府運動に関わって、地下に潜った。(Anh ấy liên quan đến hoạt động phản chính phủ nên phải lẩn trốn dưới lòng đất.)",
       "vi_du_ruby": "日本の「海女」は長時間海に<ruby>潜<rt>もぐ</rt></ruby>って貝や魚を取ることができる。(Những nữ thợ lặn Nhật Bản, lặn hàng giờ dưới biển và có thể bắt cá và sò.)",
-      "dong_nghia": ["隠れる"],
-      "trai_nghia": ["浮かぶ", "浮上する"]
+      "dong_nghia": [
+        "隠れる"
+      ],
+      "trai_nghia": [
+        "浮かぶ",
+        "浮上する"
+      ]
     },
     {
       "kanji": "跳ねる",
@@ -98,7 +121,11 @@
       "nghia": "nhảy, bắn, tóe",
       "vi_du": "カエルは地面から大きく跳ねて、草の中へ消えた。(Con ếch nhảy những bước nhảy lớn từ mặt đất lẩn vào trong cỏ và biến mất.) てんぷらを作っていたら、油がはねて、やけどをしてしまった。(Khi làm món Tempura, dầu bắn tung tóe lên nên bị bỏng.)",
       "vi_du_ruby": "カエルは地面から大きく<ruby>跳<rt>は</rt></ruby>ねて、草の中へ消えた。(Con ếch nhảy những bước nhảy lớn từ mặt đất lẩn vào trong cỏ và biến mất.)",
-      "dong_nghia": ["飛び上がる", "飛ぶ", "弾む"],
+      "dong_nghia": [
+        "飛び上がる",
+        "飛ぶ",
+        "弾む"
+      ],
       "trai_nghia": []
     },
     {
@@ -109,7 +136,10 @@
       "nghia": "mang vác, chịu đựng",
       "vi_du": "背中にリュックを背負う。(Mang balo trên vai.) 新しい会社を立ち上げるため、彼は大きな借金を背負った。(Để thành lập một công ty mới, anh ấy đang ôm một khoản nợ lớn.)",
       "vi_du_ruby": "背中にリュックを<ruby>背負<rt>せお</rt></ruby>う。(Mang balo trên vai.)",
-      "dong_nghia": ["担ぐ", "負う"],
+      "dong_nghia": [
+        "担ぐ",
+        "負う"
+      ],
       "trai_nghia": []
     },
     {
@@ -120,8 +150,12 @@
       "nghia": "đuổi, đuổi theo, theo sau",
       "vi_du": "子供は走って母親の後を追った。(Đứa trẻ chạy đuổi theo sau lưng mẹ.) 私はいくつになっても理想に追い続けたい。(Dù có bao nhiêu tuổi đi nữa tôi vẫn muốn theo đuổi lí tưởng của mình.)",
       "vi_du_ruby": "子供は走って母親の後を<ruby>追<rt>お</rt></ruby>った。(Đứa trẻ chạy đuổi theo sau lưng mẹ.)",
-      "dong_nghia": ["追いかける"],
-      "trai_nghia": ["逃げる"]
+      "dong_nghia": [
+        "追いかける"
+      ],
+      "trai_nghia": [
+        "逃げる"
+      ]
     },
     {
       "kanji": "追いかける",
@@ -131,8 +165,13 @@
       "nghia": "chạy theo, đuổi theo",
       "vi_du": "犯人を追いかけたが、逃げられてしまった。(Đuổi theo tội phạm nhưng đã để chạy thoát mất.) スターを追いかける。(Theo đuổi ngôi sao.)",
       "vi_du_ruby": "犯人を<ruby>追<rt>お</rt></ruby>いかけたが、逃げられてしまった。(Đuổi theo tội phạm nhưng đã để chạy thoát mất.)",
-      "dong_nghia": ["追う", "追跡する"],
-      "trai_nghia": ["逃げる"]
+      "dong_nghia": [
+        "追う",
+        "追跡する"
+      ],
+      "trai_nghia": [
+        "逃げる"
+      ]
     },
     {
       "kanji": "追いつく",
@@ -143,7 +182,10 @@
       "vi_du": "彼は足が速いから、今から追いかけても追いつかないだろう。(Anh ấy đi rất nhanh, giờ có đuổi theo cũng không đuổi kịp đâu.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": ["引き離される", "追い越される"]
+      "trai_nghia": [
+        "引き離される",
+        "追い越される"
+      ]
     },
     {
       "kanji": "追い越す",
@@ -153,8 +195,13 @@
       "nghia": "vượt qua (chạy vượt)",
       "vi_du": "前を走る選手に追いついたが、追い越すことはできなかった。(Đã đuổi kịp vận động viên chạy trước nhưng không thể vượt qua được.) のろのろ走っている前の車を追い越した。(Đã vượt qua chiếc ô tô chạy chậm phía trước.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["抜く", "追い抜く"],
-      "trai_nghia": ["追い越される"]
+      "dong_nghia": [
+        "抜く",
+        "追い抜く"
+      ],
+      "trai_nghia": [
+        "追い越される"
+      ]
     },
     {
       "kanji": "振り向く",
@@ -164,8 +211,12 @@
       "nghia": "ngoảnh mặt, nhìn quanh",
       "vi_du": "名前を呼ばれて、振り向いだ。(Ai đó gọi tên, tôi quay lại nhìn.) 募金を訴えても、だれも振り向かなかった。(Kêu gọi quyên góp tiền nhưng không ai ngó ngàng đến.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["振り返る"],
-      "trai_nghia": ["前を向く"]
+      "dong_nghia": [
+        "振り返る"
+      ],
+      "trai_nghia": [
+        "前を向く"
+      ]
     },
     {
       "kanji": "捕る・採る・執る",
@@ -175,8 +226,14 @@
       "nghia": "lấy, tuyển dụng",
       "vi_du": "公園でセミを捕った。(Bắt ve ở công viên.) 今年は新入社員を30人採った。(Năm nay công ty tuyển dụng 30 nhân viên mới.) 彼の提案を採ることにした。(Tôi quyết định thông qua dự án của anh ta.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["捕まえる", "採用する"],
-      "trai_nghia": ["逃がす", "不採用にする"]
+      "dong_nghia": [
+        "捕まえる",
+        "採用する"
+      ],
+      "trai_nghia": [
+        "逃がす",
+        "不採用にする"
+      ]
     },
     {
       "kanji": "取り上げる",
@@ -186,7 +243,11 @@
       "nghia": "nhặt lên, lấy, chọn, đưa tin",
       "vi_du": "彼女は机の上の本を取り上げた。(Cô ấy cầm quyển sách ở trên bàn lên.) ニュースでこの事件は大きく取り上げられた。(Vụ án này đã được tin tức đưa tin rộng rãi.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["奪う", "没収する", "報道する"],
+      "dong_nghia": [
+        "奪う",
+        "没収する",
+        "報道する"
+      ],
       "trai_nghia": []
     },
     {
@@ -197,8 +258,13 @@
       "nghia": "nhặt vào, cho vào, thu hoạch, tiếp thu",
       "vi_du": "洗濯物を取り入れる。(Lấy đồ giặt vào.) 会社は消費者の意見を取り入れて、容器を改良した。(Công ty tiếp thu ý kiến của người tiêu dùng và cải tiến đồ đựng.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["受け入れる", "採用する"],
-      "trai_nghia": ["排除する"]
+      "dong_nghia": [
+        "受け入れる",
+        "採用する"
+      ],
+      "trai_nghia": [
+        "排除する"
+      ]
     },
     {
       "kanji": "削る",
@@ -208,8 +274,14 @@
       "nghia": "cắt, chuốt, gọt",
       "vi_du": "ナイフで鉛筆を削った。(Gọt bút chì bằng dao.) 予算を削る。(Cắt giảm ngân sách.)",
       "vi_du_ruby": "ナイフで鉛筆を<ruby>削<rt>けず</rt></ruby>った。(Gọt bút chì bằng dao.)",
-      "dong_nghia": ["削減する", "減らす", "省く"],
-      "trai_nghia": ["増やす"]
+      "dong_nghia": [
+        "削減する",
+        "減らす",
+        "省く"
+      ],
+      "trai_nghia": [
+        "増やす"
+      ]
     },
     {
       "kanji": "縛る",
@@ -219,8 +291,15 @@
       "nghia": "buộc, thắt",
       "vi_du": "古い雑誌を重ねてひもで縛る。(Xếp chồng tạp chí cũ lên rồi lấy dây buộc lại.) 学生を校則で縛る。(Học sinh bị bó buộc bởi nội quy trường học.)",
       "vi_du_ruby": "古い雑誌を重ねてひもで<ruby>縛<rt>しば</rt></ruby>る。(Xếp chồng tạp chí cũ lên rồi lấy dây buộc lại.)",
-      "dong_nghia": ["結ぶ", "制限する", "束縛する"],
-      "trai_nghia": ["解く", "自由にする"]
+      "dong_nghia": [
+        "結ぶ",
+        "制限する",
+        "束縛する"
+      ],
+      "trai_nghia": [
+        "解く",
+        "自由にする"
+      ]
     },
     {
       "kanji": "絞る・搾る",
@@ -230,7 +309,9 @@
       "nghia": "vắt, bóp",
       "vi_du": "水に濡らしたタオルを絞る。(Vắt cái khăn bị ướt.) 知恵を絞る。(Vắt óc suy nghĩ.) ひまわりの種から油を搾る。(Ép dầu từ hạt hoa hướng dương.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["限定する"],
+      "dong_nghia": [
+        "限定する"
+      ],
       "trai_nghia": []
     },
     {
@@ -241,7 +322,10 @@
       "nghia": "xoay quanh",
       "vi_du": "地球は太陽の周りを回っている。(Trái đất quay quanh mặt trời.) 目が回る。(Hoa mắt chóng mặt.) 頭が回らない。(Đầu óc quay cuồng không nghĩ được gì.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["巡る", "回転する"],
+      "dong_nghia": [
+        "巡る",
+        "回転する"
+      ],
       "trai_nghia": []
     },
     {
@@ -252,7 +336,9 @@
       "nghia": "xoay, vặn",
       "vi_du": "ドアの取っ手を回して開ける。(Vặn tay nắm cửa rồi mở.) 食費を削って携帯代に回す。(Cắt giảm chi phí ăn uống, chuyển sang trả tiền điện thoại.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["回転させる"],
+      "dong_nghia": [
+        "回転させる"
+      ],
       "trai_nghia": []
     },
     {
@@ -263,8 +349,14 @@
       "nghia": "chia, phân chia",
       "vi_du": "一つ一つ言葉を区切って話す。(Nói nhả từng chữ một.) 授業は90分だが、45分ずつに区切って行われる。(Tiết học 90 phút nhưng sẽ chia ra mỗi phần 45 phút để học.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["分ける", "分割する"],
-      "trai_nghia": ["繋ぐ", "合わせる"]
+      "dong_nghia": [
+        "分ける",
+        "分割する"
+      ],
+      "trai_nghia": [
+        "繋ぐ",
+        "合わせる"
+      ]
     },
     {
       "kanji": "組む",
@@ -274,8 +366,14 @@
       "nghia": "hiệp lực, tham gia, đoàn kết, bắt chéo",
       "vi_du": "足を組む。(Bắt chéo chân.) 同僚と組んでプロジェクトチームを作った。(Tôi hợp tác cùng đồng nghiệp lập ra nhóm dự án.) 予算を組む。(Lập ngân sách.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["協力する", "交差させる"],
-      "trai_nghia": ["解く", "離れる"]
+      "dong_nghia": [
+        "協力する",
+        "交差させる"
+      ],
+      "trai_nghia": [
+        "解く",
+        "離れる"
+      ]
     },
     {
       "kanji": "組み立てる",
@@ -285,8 +383,12 @@
       "nghia": "lắp ráp",
       "vi_du": "部品を組み立てて機械を作った。(Lắp ráp linh kiện để tạo ra máy móc.)",
       "vi_du_ruby": "部品を<ruby>組<rt>く</rt></ruby>み<ruby>立<rt>た</rt></ruby>てて機械を作った。(Lắp ráp linh kiện để tạo ra máy móc.)",
-      "dong_nghia": ["構成する"],
-      "trai_nghia": ["分解する"]
+      "dong_nghia": [
+        "構成する"
+      ],
+      "trai_nghia": [
+        "分解する"
+      ]
     },
     {
       "kanji": "加わる",
@@ -296,8 +398,14 @@
       "nghia": "thêm vào, tăng lên",
       "vi_du": "新しい選手がチームに加わった。(Thêm tuyển thủ mới vào đội.) メンバーに加わる。(Tham gia vào thành viên.)",
       "vi_du_ruby": "新しい選手がチームに<ruby>加<rt>くわ</rt></ruby>わった。(Thêm tuyển thủ mới vào đội.)",
-      "dong_nghia": ["参加する", "増す"],
-      "trai_nghia": ["減る", "抜ける"]
+      "dong_nghia": [
+        "参加する",
+        "増す"
+      ],
+      "trai_nghia": [
+        "減る",
+        "抜ける"
+      ]
     },
     {
       "kanji": "加える",
@@ -307,8 +415,14 @@
       "nghia": "tham gia, cộng vào, tăng thêm",
       "vi_du": "3に8を加えると11になる。(Cộng 8 vào 3 sẽ bằng 11.) 味が薄いので、もっと塩を加えたほうがいい。(Vị nhạt nên cho thêm chút muối thì tốt hơn.)",
       "vi_du_ruby": "3に8を<ruby>加<rt>くわ</rt></ruby>えると11になる。(Cộng 8 vào 3 sẽ bằng 11.)",
-      "dong_nghia": ["足す", "追加する"],
-      "trai_nghia": ["減らす", "引く"]
+      "dong_nghia": [
+        "足す",
+        "追加する"
+      ],
+      "trai_nghia": [
+        "減らす",
+        "引く"
+      ]
     },
     {
       "kanji": "仕上がる",
@@ -318,7 +432,10 @@
       "nghia": "được hoàn thành, kết thúc",
       "vi_du": "恋人に挙げるマフラーがやっと仕上がった。(Cuối cùng chiếc khăn choàng tặng người yêu cũng hoàn thành xong.) 苦労したが、いい作品に仕上がった。(Dù rất vất vả nhưng cũng ra được một tác phẩm tốt.)",
       "vi_du_ruby": "恋人に挙げるマフラーがやっと<ruby>仕上<rt>しあ</rt></ruby>がった。(Cuối cùng chiếc khăn choàng tặng người yêu cũng hoàn thành xong.)",
-      "dong_nghia": ["完成する", "出来上がる"],
+      "dong_nghia": [
+        "完成する",
+        "出来上がる"
+      ],
       "trai_nghia": []
     },
     {
@@ -329,7 +446,9 @@
       "nghia": "hoàn thành, kết thúc",
       "vi_du": "この仕事は月末までに仕上げてください。(Hãy làm xong công việc này trước cuối tháng nhé.)",
       "vi_du_ruby": "この仕事は月末までに<ruby>仕上<rt>しあ</rt></ruby>げてください。(Hãy làm xong công việc này trước cuối tháng nhé.)",
-      "dong_nghia": ["完成させる"],
+      "dong_nghia": [
+        "完成させる"
+      ],
       "trai_nghia": []
     },
     {
@@ -340,7 +459,9 @@
       "nghia": "ngang qua, đi qua (1 cách tình cờ)",
       "vi_du": "ラーメン屋の前を通りかかると、大勢の人が行列していた。(Tình cờ đi ngang qua tiệm mì ramen, thấy rất đông người đang xếp hàng.)",
       "vi_du_ruby": "ラーメン屋の前を<ruby>通<rt>とお</rt></ruby>りかかると、大勢の人が行列していた。(Tình cờ đi ngang qua tiệm mì ramen, thấy rất đông người đang xếp hàng.)",
-      "dong_nghia": ["通り過ぎる"],
+      "dong_nghia": [
+        "通り過ぎる"
+      ],
       "trai_nghia": []
     },
     {
@@ -351,7 +472,9 @@
       "nghia": "bay vòng quanh",
       "vi_du": "ミツバチがぶんぶん飛び回っている。(Ong bay vo ve xung quanh.) 忙しい父は海外を飛び回って仕事をしている。(Người cha bận rộn bay đi khắp các nước để làm việc.)",
       "vi_du_ruby": "ミツバチがぶんぶん<ruby>飛<rt>と</rt></ruby>び<ruby>回<rt>まわ</rt></ruby>っている。(Ong bay vo ve xung quanh.)",
-      "dong_nghia": ["駆け回る"],
+      "dong_nghia": [
+        "駆け回る"
+      ],
       "trai_nghia": []
     },
     {
@@ -362,7 +485,10 @@
       "nghia": "quay quanh",
       "vi_du": "地球は太陽の周りを巡っている。(Trái đất quay quanh mặt trời.) 歴史は巡る。(Lịch sử xoay vòng.) 家族は遺産を巡って争いを始めた。(Gia đình bắt đầu đấu đá nhau xoay quanh vấn đề tài sản.)",
       "vi_du_ruby": "地球は太陽の周りを<ruby>巡<rt>めぐ</rt></ruby>っている。(Trái đất quay quanh mặt trời.)",
-      "dong_nghia": ["回る", "循環する"],
+      "dong_nghia": [
+        "回る",
+        "循環する"
+      ],
       "trai_nghia": []
     },
     {
@@ -373,7 +499,10 @@
       "nghia": "đền bù; bù; bổ sung",
       "vi_du": "栄養不足を補うために、薬を飲んでいる。(Tôi uống thuốc để bổ sung tình trạng thiếu dinh dưỡng.) ボーナスで毎月の赤字を補う。(Bù đắp phần thâm hụt mỗi tháng bằng tiền thưởng.)",
       "vi_du_ruby": "栄養不足を<ruby>補<rt>おぎな</rt></ruby>うために、薬を飲んでいる。(Tôi uống thuốc để bổ sung tình trạng thiếu dinh dưỡng.)",
-      "dong_nghia": ["カバーする", "補充する"],
+      "dong_nghia": [
+        "カバーする",
+        "補充する"
+      ],
       "trai_nghia": []
     },
     {
@@ -384,7 +513,10 @@
       "nghia": "phòng, chống",
       "vi_du": "泥棒を防ぐために、鍵を二つ付けた。(Để phòng chống trộm, tôi đã lắp hai ổ khóa.) 日焼けを防ぐためにクリームを塗る。(Bôi kem để chống cháy nắng.)",
       "vi_du_ruby": "泥棒を<ruby>防<rt>ふせ</rt></ruby>ぐために、鍵を二つ付けた。(Để phòng chống trộm, tôi đã lắp hai ổ khóa.)",
-      "dong_nghia": ["防止する", "守る"],
+      "dong_nghia": [
+        "防止する",
+        "守る"
+      ],
       "trai_nghia": []
     },
     {
@@ -395,8 +527,13 @@
       "nghia": "cứu, giúp",
       "vi_du": "ペニシリンの発見は、多くの人々の命を救った。(Việc phát hiện ra penicilin đã cứu sống sinh mạng của rất nhiều người.) 危ないところを救われた。(Được cứu sống lúc nguy hiểm.)",
       "vi_du_ruby": "ペニシリンの発見は、多くの人々の命を<ruby>救<rt>すく</rt></ruby>った。(Việc phát hiện ra penicilin đã cứu sống sinh mạng của rất nhiều người.)",
-      "dong_nghia": ["助ける", "救助する"],
-      "trai_nghia": ["見捨てる"]
+      "dong_nghia": [
+        "助ける",
+        "救助する"
+      ],
+      "trai_nghia": [
+        "見捨てる"
+      ]
     },
     {
       "kanji": "除く",
@@ -406,8 +543,14 @@
       "nghia": "trừ, loại trừ",
       "vi_du": "この機械は空気中の有害物質を取り除く作用がある。(Cái máy này có tác dụng loại bỏ các chất độc hại trong không khí.) 彼を除いて全員満点だった。(Trừ anh ấy ra thì tất cả đều đạt điểm tuyệt đối.)",
       "vi_du_ruby": "彼を<ruby>除<rt>のぞ</rt></ruby>いて全員満点だった。(Trừ anh ấy ra thì tất cả đều đạt điểm tuyệt đối.)",
-      "dong_nghia": ["外す", "排除する"],
-      "trai_nghia": ["含める", "加える"]
+      "dong_nghia": [
+        "外す",
+        "排除する"
+      ],
+      "trai_nghia": [
+        "含める",
+        "加える"
+      ]
     },
     {
       "kanji": "省く",
@@ -417,8 +560,14 @@
       "nghia": "cắt giảm, loại bỏ; lược bớt",
       "vi_du": "表1はあまり関係ないので資料から省きましょう。(Bảng 1 không liên quan lắm nên hãy lược bớt khỏi tài liệu đi.) 手間を省く。(Cắt giảm công sức.)",
       "vi_du_ruby": "表1はあまり関係ないので資料から<ruby>省<rt>はぶ</rt></ruby>きましょう。(Bảng 1 không liên quan lắm nên hãy lược bớt khỏi tài liệu đi.)",
-      "dong_nghia": ["省略する", "削る"],
-      "trai_nghia": ["省かない", "加える"]
+      "dong_nghia": [
+        "省略する",
+        "削る"
+      ],
+      "trai_nghia": [
+        "省かない",
+        "加える"
+      ]
     },
     {
       "kanji": "誤る",
@@ -428,7 +577,10 @@
       "nghia": "mắc lỗi",
       "vi_du": "運転を誤って、事故を起こしてしまった。(Thao tác sai trong lúc lái xe nên gây ra tai nạn.) 誤って花瓶を壊してしまった。(Lỡ làm vỡ bình hoa.)",
       "vi_du_ruby": "運転を<ruby>誤<rt>あやま</rt></ruby>って、事故を起こしてしまった。(Thao tác sai trong lúc lái xe nên gây ra tai nạn.)",
-      "dong_nghia": ["間違える", "ミスする"],
+      "dong_nghia": [
+        "間違える",
+        "ミスする"
+      ],
       "trai_nghia": []
     },
     {
@@ -439,8 +591,14 @@
       "nghia": "cướp đoạt, trấn lột",
       "vi_du": "コンビニで強盗が入り、レジから売上金を奪って逃走した。(Tên trộm xông vào cửa hàng tiện lợi cướp tiền doanh thu từ quầy tính tiền rồi tẩu thoát.) 美しい花に目を奪われる。(Đôi mắt bị cuốn hút bởi bông hoa đẹp.)",
       "vi_du_ruby": "コンビニで強盗が入り、レジから売上金を<ruby>奪<rt>うば</rt></ruby>って逃走した。(Tên trộm xông vào cửa hàng tiện lợi cướp tiền doanh thu từ quầy tính tiền rồi tẩu thoát.)",
-      "dong_nghia": ["盗む", "取る", "取り上げる"],
-      "trai_nghia": ["与える"]
+      "dong_nghia": [
+        "盗む",
+        "取る",
+        "取り上げる"
+      ],
+      "trai_nghia": [
+        "与える"
+      ]
     },
     {
       "kanji": "しまう",
@@ -450,8 +608,13 @@
       "nghia": "để lại, giữ lại, cất đi",
       "vi_du": "春になったので、冬物をしまった。(Đến mùa xuân nên đã cất đồ mùa đông đi.) 洗った食器を食器棚にしまう。(Cất đĩa bát đã rửa vào tủ bát.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["片付ける", "収納する"],
-      "trai_nghia": ["出す"]
+      "dong_nghia": [
+        "片付ける",
+        "収納する"
+      ],
+      "trai_nghia": [
+        "出す"
+      ]
     },
     {
       "kanji": "怠ける",
@@ -461,8 +624,14 @@
       "nghia": "lười biếng",
       "vi_du": "仕事を怠ける。(Lười làm việc.) 怠けていないで宿題をやりなさい。(Đừng có lười biếng nữa, hãy làm bài tập đi.)",
       "vi_du_ruby": "仕事を<ruby>怠<rt>なま</rt></ruby>ける。(Lười làm việc.)",
-      "dong_nghia": ["サボる", "怠る"],
-      "trai_nghia": ["励む", "頑張る"]
+      "dong_nghia": [
+        "サボる",
+        "怠る"
+      ],
+      "trai_nghia": [
+        "励む",
+        "頑張る"
+      ]
     },
     {
       "kanji": "失う",
@@ -472,8 +641,14 @@
       "nghia": "mất",
       "vi_du": "地震で財産を失った。(Động đất làm mất hết tài sản.) 頭を打って、意識を失った。(Bị đập vào đầu nên mất hết ý thức.)",
       "vi_du_ruby": "地震で財産を<ruby>失<rt>うしな</rt></ruby>った。(Động đất làm mất hết tài sản.)",
-      "dong_nghia": ["なくす", "喪失する"],
-      "trai_nghia": ["得る", "獲得する"]
+      "dong_nghia": [
+        "なくす",
+        "喪失する"
+      ],
+      "trai_nghia": [
+        "得る",
+        "獲得する"
+      ]
     },
     {
       "kanji": "攻める",
@@ -483,8 +658,13 @@
       "nghia": "tấn công",
       "vi_du": "敵を攻める。(Tấn công kẻ thù.) 積極的に相手チームを攻めて勝利した。(Tích cực tấn công đội bạn nên đã giành thắng lợi.)",
       "vi_du_ruby": "敵を<ruby>攻<rt>せ</rt></ruby>める。(Tấn công kẻ thù.)",
-      "dong_nghia": ["攻撃する"],
-      "trai_nghia": ["守る", "防ぐ"]
+      "dong_nghia": [
+        "攻撃する"
+      ],
+      "trai_nghia": [
+        "守る",
+        "防ぐ"
+      ]
     },
     {
       "kanji": "睨む",
@@ -494,7 +674,10 @@
       "nghia": "lườm",
       "vi_du": "その学生は注意されて、逆に先生をにらんだ。(Học sinh đó bị nhắc nhở, ngược lại còn trừng mắt lườm giáo viên.)",
       "vi_du_ruby": "その学生は注意されて、逆に先生を<ruby>睨<rt>にら</rt></ruby>んだ。(Học sinh đó bị nhắc nhở, ngược lại còn trừng mắt lườm giáo viên.)",
-      "dong_nghia": ["見つめる", "注視する"],
+      "dong_nghia": [
+        "見つめる",
+        "注視する"
+      ],
       "trai_nghia": []
     },
     {
@@ -505,8 +688,13 @@
       "nghia": "đổ lỗi",
       "vi_du": "相手の失敗を責める。(Trách móc thất bại của đối phương.) 過ちを犯した自分を激しく責めた。(Tôi đã kịch liệt tự trách bản thân vì phạm lỗi lầm.)",
       "vi_du_ruby": "相手の失敗を<ruby>責<rt>せ</rt></ruby>める。(Trách móc thất bại của đối phương.)",
-      "dong_nghia": ["非難する", "咎める"],
-      "trai_nghia": ["許す"]
+      "dong_nghia": [
+        "非難する",
+        "咎める"
+      ],
+      "trai_nghia": [
+        "許す"
+      ]
     },
     {
       "kanji": "裏切る",
@@ -516,8 +704,14 @@
       "nghia": "phản bội, phản lại",
       "vi_du": "彼は味方を裏切り、敵のグループに入った。(Anh ta phản bội đồng minh, gia nhập vào phe địch.) 田中選手はファンの期待を裏切り、１回戦で負けてしまった。(Tuyển thủ Tanaka đã phụ lại sự kì vọng của người hâm mộ khi thua ngay từ hiệp 1.)",
       "vi_du_ruby": "彼は味方を<ruby>裏切<rt>うらぎ</rt></ruby>り、敵のグループに入った。(Anh ta phản bội đồng minh, gia nhập vào phe địch.)",
-      "dong_nghia": ["背く", "裏切り行為をする"],
-      "trai_nghia": ["守る", "応える"]
+      "dong_nghia": [
+        "背く",
+        "裏切り行為をする"
+      ],
+      "trai_nghia": [
+        "守る",
+        "応える"
+      ]
     },
     {
       "kanji": "頼る",
@@ -527,8 +721,13 @@
       "nghia": "nhờ vào, dựa dẫm, dựa vào, phụ thuộc",
       "vi_du": "彼は学費を親に頼らず、自分で働いて払っている。(Anh ấy không phụ thuộc tiền học phí vào bố mẹ mà tự làm việc để trả.) いつまでも辞書に頼っていると、読む力がなかなかつかない。(Cứ dựa dẫm vào từ điển thì khó mà nâng cao năng lực đọc hiểu.)",
       "vi_du_ruby": "彼は学費を親に<ruby>頼<rt>たよ</rt></ruby>らず、自分で働いて払っている。(Anh ấy không phụ thuộc tiền học phí vào bố mẹ mà tự làm việc để trả.)",
-      "dong_nghia": ["依存する", "頼む"],
-      "trai_nghia": ["自立する"]
+      "dong_nghia": [
+        "依存する",
+        "頼む"
+      ],
+      "trai_nghia": [
+        "自立する"
+      ]
     },
     {
       "kanji": "遭う",
@@ -538,7 +737,10 @@
       "nghia": "gặp, bị",
       "vi_du": "交通事故に遭ってけがをした。(Gặp tai nạn giao thông nên bị thương.) 困難に遭ってもあきらめてはいけない。(Dù có gặp khó khăn cũng không được phép từ bỏ.)",
       "vi_du_ruby": "交通事故に<ruby>遭<rt>あ</rt></ruby>ってけがをした。(Gặp tai nạn giao thông nên bị thương.)",
-      "dong_nghia": ["遭遇する", "見舞われる"],
+      "dong_nghia": [
+        "遭遇する",
+        "見舞われる"
+      ],
       "trai_nghia": []
     },
     {
@@ -549,7 +751,11 @@
       "nghia": "mời",
       "vi_du": "自宅に友人を招いた。(Tôi mời bạn bè đến nhà chơi.) 首相の言葉は世間の批判を招いた。(Phát ngôn của vị thủ tướng đã rước lấy sự chỉ trích của dư luận.) 点検ミスが大事故を招いた。(Việc kiểm tra lỏng lẻo đã dẫn đến một tai nạn lớn.)",
       "vi_du_ruby": "自宅に友人を<ruby>招<rt>まね</rt></ruby>いた。(Tôi mời bạn bè đến nhà chơi.)",
-      "dong_nghia": ["招待する", "引き起こす", "もたらす"],
+      "dong_nghia": [
+        "招待する",
+        "引き起こす",
+        "もたらす"
+      ],
       "trai_nghia": []
     },
     {
@@ -560,7 +766,10 @@
       "nghia": "bị mắc vào, bị vướng vào,bị kéo vào, bị lừa",
       "vi_du": "山で服が木に引っかかって破れてしまった。(Trên núi, áo bị mắc vào cây nên rách te tua.) 悪い男に引っかかって、彼女は全財産を取られてしまった。(Bị tên đàn ông tồi tệ lừa gạt, cô ấy bị lấy sạch toàn bộ tài sản.)",
       "vi_du_ruby": "山で服が木に<ruby>引<rt>ひ</rt></ruby>っ<ruby>掛<rt>か</rt></ruby>かって破れてしまった。(Trên núi, áo bị mắc vào cây nên rách te tua.)",
-      "dong_nghia": ["騙される", "絡まる"],
+      "dong_nghia": [
+        "騙される",
+        "絡まる"
+      ],
       "trai_nghia": []
     },
     {
@@ -571,7 +780,10 @@
       "nghia": "mắc, lừa đảo, ném vào",
       "vi_du": "釘に服をひっかけて破ってしまった。(Móc quần áo vào cây đinh làm rách đồ.) 雨の日、走ってきた車に泥水をひっかけられた。(Vào ngày mưa, bị chiếc xe chạy ngang qua bắn bùn nước tung tóe.)",
       "vi_du_ruby": "釘に服を<ruby>引<rt>ひ</rt></ruby>っ<ruby>掛<rt>か</rt></ruby>けて破ってしまった。(Móc quần áo vào cây đinh làm rách đồ.)",
-      "dong_nghia": ["掛ける", "騙す"],
+      "dong_nghia": [
+        "掛ける",
+        "騙す"
+      ],
       "trai_nghia": []
     },
     {
@@ -582,7 +794,10 @@
       "nghia": "bị lật, bị đảo ngược, hỗn loạn",
       "vi_du": "ボートが波でひっくりかえって上下さかさまになった。(Thuyền bị sóng đánh lật úp ngược lại.) 滑って仰向けにひっくり返った。(Bị trượt ngã và té ngửa ra đằng sau.)",
       "vi_du_ruby": "滑って仰向けにひっくり<ruby>返<rt>かえ</rt></ruby>った。(Bị trượt ngã và té ngửa ra đằng sau.)",
-      "dong_nghia": ["裏返る", "転倒する"],
+      "dong_nghia": [
+        "裏返る",
+        "転倒する"
+      ],
       "trai_nghia": []
     },
     {
@@ -593,7 +808,10 @@
       "nghia": "đảo ngược, lật ngửa",
       "vi_du": "魚をひっくり返して焼く。(Lật ngược mặt cá lại để nướng.) 机の上のコーヒーをうっかりひっくり返してしまった。(Tôi lỡ tay làm lật đổ ly cà phê trên bàn.)",
       "vi_du_ruby": "魚をひっくり<ruby>返<rt>かえ</rt></ruby>して焼く。(Lật ngược mặt cá lại để nướng.)",
-      "dong_nghia": ["裏返す", "倒す"],
+      "dong_nghia": [
+        "裏返す",
+        "倒す"
+      ],
       "trai_nghia": []
     },
     {
@@ -604,8 +822,13 @@
       "nghia": "trượt, đi chệch",
       "vi_du": "地震で鉄道のレールがずれた。(Do động đất nên đường ray xe lửa bị lệch.) やることがいつの間にか本来の目的からずれてしまった。(Việc đang làm không biết từ khi nào đã bị lệch khỏi mục đích ban đầu.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["外れる", "逸れる"],
-      "trai_nghia": ["合う"]
+      "dong_nghia": [
+        "外れる",
+        "逸れる"
+      ],
+      "trai_nghia": [
+        "合う"
+      ]
     },
     {
       "kanji": "ずらす",
@@ -615,7 +838,10 @@
       "nghia": "rời ra, lùi ra, hoãn lại",
       "vi_du": "机を少しずらして床を掃除した。(Tôi dịch cái bàn ra một chút để lau sàn nhà.) 旅行の予定を１週間ずらした。(Đã dời lịch trình du lịch lại 1 tuần.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["移動させる", "延期する"],
+      "dong_nghia": [
+        "移動させる",
+        "延期する"
+      ],
       "trai_nghia": []
     },
     {
@@ -626,8 +852,13 @@
       "nghia": "sụp đổ",
       "vi_du": "大雨で山が崩れた。(Trời mưa to khiến núi bị sạt lở.) 体制が崩れる。(Thể chế bị sụp đổ.)",
       "vi_du_ruby": "大雨で山が<ruby>崩<rt>くず</rt></ruby>れた。(Trời mưa to khiến núi bị sạt lở.)",
-      "dong_nghia": ["壊れる", "倒壊する"],
-      "trai_nghia": ["建つ"]
+      "dong_nghia": [
+        "壊れる",
+        "倒壊する"
+      ],
+      "trai_nghia": [
+        "建つ"
+      ]
     },
     {
       "kanji": "崩す",
@@ -637,7 +868,11 @@
       "nghia": "phá",
       "vi_du": "山を崩して住宅地が造られている。(San bằng núi để xây khu dân cư.) 体調を崩す。(Làm ảnh hưởng thể trạng.) お金を崩す。(Đổi tiền lẻ.)",
       "vi_du_ruby": "山を<ruby>崩<rt>くず</rt></ruby>して住宅地が造られている。(San bằng núi để xây khu dân cư.)",
-      "dong_nghia": ["壊す", "砕く", "両替する"],
+      "dong_nghia": [
+        "壊す",
+        "砕く",
+        "両替する"
+      ],
       "trai_nghia": []
     },
     {
@@ -648,8 +883,13 @@
       "nghia": "bão bùng, hỗn loạn",
       "vi_du": "台風の接近で山も海も荒れている。(Do bão đang tiến đến nên cả núi và biển đều đang động mạnh.) 洗剤で手が荒れる。(Da tay bị thô ráp do nước tẩy rửa.)",
       "vi_du_ruby": "台風の接近で山も海も<ruby>荒<rt>あ</rt></ruby>れている。(Do bão đang tiến đến nên cả núi và biển đều đang động mạnh.)",
-      "dong_nghia": ["荒れ狂う", "乱れる"],
-      "trai_nghia": ["穏やかになる"]
+      "dong_nghia": [
+        "荒れ狂う",
+        "乱れる"
+      ],
+      "trai_nghia": [
+        "穏やかになる"
+      ]
     },
     {
       "kanji": "荒らす",
@@ -659,7 +899,10 @@
       "nghia": "tàn phá, gây thiệt hại, phá hoại",
       "vi_du": "泥棒が入られ、部屋が荒らされた。(Bị trộm đột nhập nên căn phòng bị lục tung lên.) 胃を荒らす。(Gây hại cho dạ dày.)",
       "vi_du_ruby": "泥棒が入られ、部屋が<ruby>荒<rt>あ</rt></ruby>らされた。(Bị trộm đột nhập nên căn phòng bị lục tung lên.)",
-      "dong_nghia": ["破壊する", "めちゃくちゃにする"],
+      "dong_nghia": [
+        "破壊する",
+        "めちゃくちゃにする"
+      ],
       "trai_nghia": []
     },
     {
@@ -670,8 +913,14 @@
       "nghia": "thừa nhận, công nhận, chứng nhận",
       "vi_du": "彼は犯行を認めた。(Hắn ta đã thừa nhận hành vi phạm tội.) 彼女の慈善事業は世の中に認められた。(Hoạt động từ thiện của cô ấy đã được xã hội công nhận.)",
       "vi_du_ruby": "彼は犯行を<ruby>認<rt>みと</rt></ruby>めた。(Hắn ta đã thừa nhận hành vi phạm tội.)",
-      "dong_nghia": ["承認する", "許可する"],
-      "trai_nghia": ["否定する", "拒む"]
+      "dong_nghia": [
+        "承認する",
+        "許可する"
+      ],
+      "trai_nghia": [
+        "否定する",
+        "拒む"
+      ]
     },
     {
       "kanji": "見直す",
@@ -681,7 +930,10 @@
       "nghia": "nhìn lại, cân nhắc lại",
       "vi_du": "テストを出す前に、もう一度見直しなさい。(Trước khi nộp bài thi, hãy xem lại một lần nữa đi.) 景気悪化でこの計画は見直す必要がある。(Do tình hình kinh tế tồi tệ nên cần phải xem xét lại kế hoạch này.)",
       "vi_du_ruby": "テストを出す前に、もう一度<ruby>見直<rt>みなお</rt></ruby>しなさい。(Trước khi nộp bài thi, hãy xem lại một lần nữa đi.)",
-      "dong_nghia": ["再確認する", "再考する"],
+      "dong_nghia": [
+        "再確認する",
+        "再考する"
+      ],
       "trai_nghia": []
     },
     {
@@ -692,7 +944,9 @@
       "nghia": "quen, nhẵn mặt",
       "vi_du": "見慣れない人が教室にいる。(Trong lớp có người lạ mặt tôi chưa thấy bao giờ.) 外国から帰って見慣れた風景を見るとほっとする。(Từ nước ngoài trở về, nhìn thấy những phong cảnh quen thuộc là tôi cảm thấy nhẹ nhõm hẳn.)",
       "vi_du_ruby": "<ruby>見慣<rt>みな</rt></ruby>れない人が教室にいる。(Trong lớp có người lạ mặt tôi chưa thấy bao giờ.)",
-      "dong_nghia": ["目が慣れる"],
+      "dong_nghia": [
+        "目が慣れる"
+      ],
       "trai_nghia": []
     },
     {
@@ -703,8 +957,14 @@
       "nghia": "tìm kiếm, yêu cầu, mong muốn",
       "vi_du": "彼女は職を求めている。(Cô ấy đang đi tìm việc.) 被害者は加害者に損害賠償を求めた。(Người bị hại yêu cầu người gây tai nạn bồi thường thiệt hại.)",
       "vi_du_ruby": "彼女は職を<ruby>求<rt>もと</rt></ruby>めている。(Cô ấy đang đi tìm việc.)",
-      "dong_nghia": ["要求する", "探す", "追求する"],
-      "trai_nghia": ["与える"]
+      "dong_nghia": [
+        "要求する",
+        "探す",
+        "追求する"
+      ],
+      "trai_nghia": [
+        "与える"
+      ]
     },
     {
       "kanji": "漏れる",
@@ -714,7 +974,10 @@
       "nghia": "bị rò rỉ, lọt qua, rỉ ra",
       "vi_du": "台所でガスが漏れている。(Trong bếp đang bị rò rỉ khí ga.) 秘密が外に漏れる。(Bí mật bị lộ ra ngoài.)",
       "vi_du_ruby": "台所でガスが<ruby>漏<rt>も</rt></ruby>れている。(Trong bếp đang bị rò rỉ khí ga.)",
-      "dong_nghia": ["ばれる", "こぼれる"],
+      "dong_nghia": [
+        "ばれる",
+        "こぼれる"
+      ],
       "trai_nghia": []
     },
     {
@@ -725,8 +988,13 @@
       "nghia": "làm lộ; làm rò rỉ",
       "vi_du": "一滴も漏らさず水をバケツで運んだ。(Dùng xô mang nước đi mà không làm đổ giọt nào.) 彼は会社の秘密を他社に漏らして金銭を受け取っていた。(Anh ta tiết lộ bí mật của công ty cho công ty khác để nhận tiền.)",
       "vi_du_ruby": "一滴も<ruby>漏<rt>も</rt></ruby>らさず水をバケツで運んだ。(Dùng xô mang nước đi mà không làm đổ giọt nào.)",
-      "dong_nghia": ["こぼす", "打ち明ける"],
-      "trai_nghia": ["隠す"]
+      "dong_nghia": [
+        "こぼす",
+        "打ち明ける"
+      ],
+      "trai_nghia": [
+        "隠す"
+      ]
     },
     {
       "kanji": "なる",
@@ -736,7 +1004,9 @@
       "nghia": "ra (hoa), kết (quả)",
       "vi_du": "庭に実がなる木を植えた。(Trong vườn có trồng cái cây ra nhiều quả.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["実る"],
+      "dong_nghia": [
+        "実る"
+      ],
       "trai_nghia": []
     },
     {
@@ -747,7 +1017,9 @@
       "nghia": "bị cháy",
       "vi_du": "焼き過ぎて、魚が真っ黒にこげてしまった。(Bị nướng quá lửa nên con cá đã cháy đen thui.) じゅうたんの焦げた跡を修繕する。(Sửa lại vết cháy trên tấm thảm.)",
       "vi_du_ruby": "じゅうたんの<ruby>焦<rt>こ</rt></ruby>げた跡を修繕する。(Sửa lại vết cháy trên tấm thảm.)",
-      "dong_nghia": ["焦げ付く"],
+      "dong_nghia": [
+        "焦げ付く"
+      ],
       "trai_nghia": []
     },
     {
@@ -758,8 +1030,14 @@
       "nghia": "trái lại",
       "vi_du": "両親の期待に反して、大学に進学しなかった。(Trái với sự kỳ vọng của bố mẹ, tôi đã không học lên Đại học.) 趣旨に反する。(Trái với mục đích ban đầu.)",
       "vi_du_ruby": "両親の期待に<ruby>反<rt>はん</rt></ruby>して、大学に進学しなかった。(Trái với sự kỳ vọng của bố mẹ, tôi đã không học lên Đại học.)",
-      "dong_nghia": ["違反する", "背く"],
-      "trai_nghia": ["従う", "沿う"]
+      "dong_nghia": [
+        "違反する",
+        "背く"
+      ],
+      "trai_nghia": [
+        "従う",
+        "沿う"
+      ]
     },
     {
       "kanji": "膨れる",
@@ -769,8 +1047,14 @@
       "nghia": "phồng, sưng",
       "vi_du": "網の上でもちが膨れている。(Những chiếc bánh dày đang phồng lên trên vỉ nướng.) 借金が膨れる。(Khoản nợ phình to ra.)",
       "vi_du_ruby": "網の上でもちが<ruby>膨<rt>ふく</rt></ruby>れている。(Những chiếc bánh dày đang phồng lên trên vỉ nướng.)",
-      "dong_nghia": ["大きくなる", "増える"],
-      "trai_nghia": ["しぼむ", "縮む"]
+      "dong_nghia": [
+        "大きくなる",
+        "増える"
+      ],
+      "trai_nghia": [
+        "しぼむ",
+        "縮む"
+      ]
     },
     {
       "kanji": "膨らむ",
@@ -780,8 +1064,13 @@
       "nghia": "to ra, làm to ra, phồng lên",
       "vi_du": "桜のつぼみが膨らんだ。(Những nụ hoa anh đào đã bắt đầu chúm chím nở.) 夢が膨らむ。(Giấc mơ lớn lên.)",
       "vi_du_ruby": "桜のつぼみが<ruby>膨<rt>ふく</rt></ruby>らんだ。(Những nụ hoa anh đào đã bắt đầu chúm chím nở.)",
-      "dong_nghia": ["広がる", "大きくなる"],
-      "trai_nghia": ["しぼむ"]
+      "dong_nghia": [
+        "広がる",
+        "大きくなる"
+      ],
+      "trai_nghia": [
+        "しぼむ"
+      ]
     },
     {
       "kanji": "膨らます",
@@ -791,8 +1080,12 @@
       "nghia": "phồng, thổi phồng, phình",
       "vi_du": "娘は怒ると頬を膨らます。(Em gái tôi mỗi khi giận là lại phồng má lên.) タイヤに空気を入れて膨らます。(Bơm hơi vào để làm phồng lốp xe lên.)",
       "vi_du_ruby": "娘は怒ると頬を<ruby>膨<rt>ふく</rt></ruby>らます。(Em gái tôi mỗi khi giận là lại phồng má lên.)",
-      "dong_nghia": ["大きくする"],
-      "trai_nghia": ["しぼませる"]
+      "dong_nghia": [
+        "大きくする"
+      ],
+      "trai_nghia": [
+        "しぼませる"
+      ]
     },
     {
       "kanji": "尖る",
@@ -802,8 +1095,12 @@
       "nghia": "nhọn, sắc",
       "vi_du": "この靴は先がとがっている。(Đôi giày này có mũi rất nhọn.) 鉛筆を削ってとがらせる。(Gọt cho đầu bút chì nhọn lại.)",
       "vi_du_ruby": "この靴は先が<ruby>尖<rt>とが</rt></ruby>っている。(Đôi giày này có mũi rất nhọn.)",
-      "dong_nghia": ["鋭くなる"],
-      "trai_nghia": ["丸くなる"]
+      "dong_nghia": [
+        "鋭くなる"
+      ],
+      "trai_nghia": [
+        "丸くなる"
+      ]
     },
     {
       "kanji": "当てはまる",
@@ -813,8 +1110,14 @@
       "nghia": "áp dụng, ứng dụng",
       "vi_du": "昔話の教訓は、現代にも当てはまる物が多い。(Những bài học giáo huấn trong truyện cổ tích ngày xưa có rất nhiều thứ có thể áp dụng cho xã hội hiện đại.)",
       "vi_du_ruby": "昔話の教訓は、現代にも<ruby>当<rt>あ</rt></ruby>てはまる物が多い。(Những bài học giáo huấn trong truyện cổ tích ngày xưa có rất nhiều thứ có thể áp dụng cho xã hội hiện đại.)",
-      "dong_nghia": ["適合する", "妥当する", "該当する"],
-      "trai_nghia": ["当てはまらない"]
+      "dong_nghia": [
+        "適合する",
+        "妥当する",
+        "該当する"
+      ],
+      "trai_nghia": [
+        "当てはまらない"
+      ]
     },
     {
       "kanji": "就く",
@@ -824,8 +1127,14 @@
       "nghia": "kiếm việc",
       "vi_du": "大学を卒業して教職に就いた。(Tốt nghiệp đại học xong, tôi vào làm nghề giáo.) 王位に就く。(Lên ngôi vua.)",
       "vi_du_ruby": "大学を卒業して教職に<ruby>就<rt>つ</rt></ruby>いた。(Tốt nghiệp đại học xong, tôi vào làm nghề giáo.)",
-      "dong_nghia": ["就職する", "従事する"],
-      "trai_nghia": ["辞める", "退く"]
+      "dong_nghia": [
+        "就職する",
+        "従事する"
+      ],
+      "trai_nghia": [
+        "辞める",
+        "退く"
+      ]
     },
     {
       "kanji": "受け持つ",
@@ -835,7 +1144,10 @@
       "nghia": "đảm nhận, phụ trách, đảm đương (trách nhiệm)",
       "vi_du": "サークルで、今年は会計を受け持つことになった。(Ở câu lạc bộ, năm nay tôi được giao nhiệm vụ quản lý kế toán.) 高橋さんは新聞配達でA地区を受け持っている。(Anh Takahashi chịu trách nhiệm đi giao báo ở khu vực A.)",
       "vi_du_ruby": "サークルで、今年は会計を<ruby>受<rt>う</rt></ruby>け<ruby>持<rt>も</rt></ruby>つことになった。(Ở câu lạc bộ, năm nay tôi được giao nhiệm vụ quản lý kế toán.)",
-      "dong_nghia": ["担当する", "担う"],
+      "dong_nghia": [
+        "担当する",
+        "担う"
+      ],
       "trai_nghia": []
     },
     {
@@ -846,8 +1158,14 @@
       "nghia": "theo đó, theo",
       "vi_du": "非常の際は係員の指示に従って避難してください。(Trong trường hợp khẩn cấp, xin vui lòng di tản theo sự chỉ dẫn của nhân viên phụ trách.) 説明書に従ってパソコンをセットした。(Tôi đã thiết lập máy tính tuân theo sách hướng dẫn.)",
       "vi_du_ruby": "非常の際は係員の指示に<ruby>従<rt>したが</rt></ruby>って避難してください。(Trong trường hợp khẩn cấp, xin vui lòng di tản theo sự chỉ dẫn của nhân viên phụ trách.)",
-      "dong_nghia": ["遵守する", "服従する"],
-      "trai_nghia": ["逆らう", "反する"]
+      "dong_nghia": [
+        "遵守する",
+        "服従する"
+      ],
+      "trai_nghia": [
+        "逆らう",
+        "反する"
+      ]
     },
     {
       "kanji": "呟く",
@@ -857,8 +1175,13 @@
       "nghia": "thì thầm, thì thào",
       "vi_du": "彼女は下を向いて、何かぶつぶつつぶやいてた。(Cô ấy cúi đầu xuống và miệng đang lẩm nhẩm cái gì đó.)",
       "vi_du_ruby": "彼女は下を向いて、何かぶつぶつ<ruby>呟<rt>つぶや</rt></ruby>いてた。(Cô ấy cúi đầu xuống và miệng đang lẩm nhẩm cái gì đó.)",
-      "dong_nghia": ["ささやく", "ぼやく"],
-      "trai_nghia": ["叫ぶ"]
+      "dong_nghia": [
+        "ささやく",
+        "ぼやく"
+      ],
+      "trai_nghia": [
+        "叫ぶ"
+      ]
     },
     {
       "kanji": "述べる",
@@ -868,7 +1191,11 @@
       "nghia": "bày tỏ, nêu lên",
       "vi_du": "自分の意見を述べる。(Bày tỏ ý kiến cá nhân của bản thân.) 真実を述べることを誓います。(Tôi xin thề là sẽ khai rõ sự thật.)",
       "vi_du_ruby": "自分の意見を<ruby>述<rt>の</rt></ruby>べる。(Bày tỏ ý kiến cá nhân của bản thân.)",
-      "dong_nghia": ["言う", "表現する", "語る"],
+      "dong_nghia": [
+        "言う",
+        "表現する",
+        "語る"
+      ],
       "trai_nghia": []
     },
     {
@@ -879,8 +1206,14 @@
       "nghia": "thức giấc, mở mắt",
       "vi_du": "早朝、鳥の声で目覚めた。(Sáng sớm tinh mơ, tôi bị đánh thức bởi tiếng chim hót.) 子供は自我に目覚め、大人になっていく。(Đứa trẻ bắt đầu thức tỉnh bản ngã và dần trở thành người lớn.)",
       "vi_du_ruby": "早朝、鳥の声で<ruby>目覚<rt>めざ</rt></ruby>めた。(Sáng sớm tinh mơ, tôi bị đánh thức bởi tiếng chim hót.)",
-      "dong_nghia": ["目を覚ます", "覚醒する"],
-      "trai_nghia": ["眠る", "就寝する"]
+      "dong_nghia": [
+        "目を覚ます",
+        "覚醒する"
+      ],
+      "trai_nghia": [
+        "眠る",
+        "就寝する"
+      ]
     },
     {
       "kanji": "限る",
@@ -890,7 +1223,10 @@
       "nghia": "chỉ, giới hạn",
       "vi_du": "日本では漫画を読むのは子供に限らない。(Ở Nhật Bản, không chỉ mỗi trẻ con mới đọc manga.) 風邪を引いたときは、暖かくして寝るに限る。(Khi bị cảm thì việc đắp ấm rồi đi ngủ là số dzách.)",
       "vi_du_ruby": "日本では漫画を読むのは子供に<ruby>限<rt>かぎ</rt></ruby>らない。(Ở Nhật Bản, không chỉ mỗi trẻ con mới đọc manga.)",
-      "dong_nghia": ["限定する", "制限する"],
+      "dong_nghia": [
+        "限定する",
+        "制限する"
+      ],
       "trai_nghia": []
     },
     {
@@ -901,8 +1237,13 @@
       "nghia": "dồn về một phía",
       "vi_du": "ボートで客が一方に片寄ったため、船体が傾いてしまった。(Vì trên chiếc thuyền khách hàng dồn hết về một bên nên thân tàu đã bị nghiêng hẳn đi.) あの人の考え方は偏っている。(Lối suy nghĩ của người kia quá phiến diện.)",
       "vi_du_ruby": "ボートで客が一方に<ruby>片寄<rt>かたよ</rt></ruby>ったため、船体が傾いてしまった。(Vì trên chiếc thuyền khách hàng dồn hết về một bên nên thân tàu đã bị nghiêng hẳn đi.)",
-      "dong_nghia": ["傾く"],
-      "trai_nghia": ["バランスがとれる", "釣り合う"]
+      "dong_nghia": [
+        "傾く"
+      ],
+      "trai_nghia": [
+        "バランスがとれる",
+        "釣り合う"
+      ]
     },
     {
       "kanji": "薄まる",
@@ -912,8 +1253,12 @@
       "nghia": "bị nhạt đi, phai nhòa",
       "vi_du": "凍りがとけてジュースが薄まった。(Đá tan ra làm cho nước ép trái cây bị nhạt đi.) 味が薄まる。(Vị nhạt đi.)",
       "vi_du_ruby": "凍りがとけてジュースが<ruby>薄<rt>うす</rt></ruby>まった。(Đá tan ra làm cho nước ép trái cây bị nhạt đi.)",
-      "dong_nghia": ["和らぐ"],
-      "trai_nghia": ["濃くなる"]
+      "dong_nghia": [
+        "和らぐ"
+      ],
+      "trai_nghia": [
+        "濃くなる"
+      ]
     },
     {
       "kanji": "薄める",
@@ -923,8 +1268,12 @@
       "nghia": "pha loãng, làm nhạt đi",
       "vi_du": "水を足して味を薄めた。(Tôi cho thêm nước vào để làm nhạt vị đi.)",
       "vi_du_ruby": "水を足して味を<ruby>薄<rt>うす</rt></ruby>めた。(Tôi cho thêm nước vào để làm nhạt vị đi.)",
-      "dong_nghia": ["水増しする"],
-      "trai_nghia": ["濃くする"]
+      "dong_nghia": [
+        "水増しする"
+      ],
+      "trai_nghia": [
+        "濃くする"
+      ]
     },
     {
       "kanji": "薄れる",
@@ -934,8 +1283,14 @@
       "nghia": "mất dần đi, mỏng dần, nhạt đi",
       "vi_du": "霧が薄れ、見通しが良くなった。(Sương mù nhạt dần nên đã có thể nhìn rõ hơn.) 時がたち、記憶も薄れてしまった。(Thời gian trôi đi, ký tự cũng dần phai nhạt.)",
       "vi_du_ruby": "霧が<ruby>薄<rt>うす</rt></ruby>れ、見通しが良くなった。(Sương mù nhạt dần nên đã có thể nhìn rõ hơn.)",
-      "dong_nghia": ["薄らぐ", "消えかける"],
-      "trai_nghia": ["深まる", "強まる"]
+      "dong_nghia": [
+        "薄らぐ",
+        "消えかける"
+      ],
+      "trai_nghia": [
+        "深まる",
+        "強まる"
+      ]
     },
     {
       "kanji": "透き通る",
@@ -945,8 +1300,13 @@
       "nghia": "trong suốt, trong vắt",
       "vi_du": "川の水が透き通っている。(Dòng nước dưới sông vô cùng trong vắt.) 彼女は透き通るような肌をしている。(Cô ấy sở hữu một làn da trắng trong suốt.)",
       "vi_du_ruby": "川の水が<ruby>透<rt>す</rt></ruby>き<ruby>通<rt>とお</rt></ruby>っている。(Dòng nước dưới sông vô cùng trong vắt.)",
-      "dong_nghia": ["澄む", "透明になる"],
-      "trai_nghia": ["濁る"]
+      "dong_nghia": [
+        "澄む",
+        "透明になる"
+      ],
+      "trai_nghia": [
+        "濁る"
+      ]
     },
     {
       "kanji": "静まる・鎮まる",
@@ -956,8 +1316,14 @@
       "nghia": "yên lặng, yên tĩnh",
       "vi_du": "先生が入ってくると、教室がしいんと静まった。(Cô giáo vừa bước vào thì cả lớp im phăng phắc.) 薬を飲んだら痛みが静まった。(Sau khi uống thuốc thì cơn đau đã tan biến.)",
       "vi_du_ruby": "先生が入ってくると、教室がしいんと<ruby>静<rt>しず</rt></ruby>まった。(Cô giáo vừa bước vào thì cả lớp im phăng phắc.)",
-      "dong_nghia": ["落ち着く", "和らぐ"],
-      "trai_nghia": ["騒ぐ", "激しくなる"]
+      "dong_nghia": [
+        "落ち着く",
+        "和らぐ"
+      ],
+      "trai_nghia": [
+        "騒ぐ",
+        "激しくなる"
+      ]
     },
     {
       "kanji": "静める・鎮める",
@@ -967,8 +1333,13 @@
       "nghia": "yên lặng, làm giảm bớt, trấn áp",
       "vi_du": "司会者は騒がしい場内を一言で静めた。(Người dẫn chương trình chỉ bằng một câu nói đã dập tắt hội trường đang ồn ào.) 薬を飲んで痛みを静めた。(Tôi uống thuốc để xoa dịu đi cơn đau.)",
       "vi_du_ruby": "司会者は騒がしい場内を一言で<ruby>静<rt>しず</rt></ruby>めた。(Người dẫn chương trình chỉ bằng một câu nói đã dập tắt hội trường đang ồn ào.)",
-      "dong_nghia": ["抑える", "なだめる"],
-      "trai_nghia": ["煽る"]
+      "dong_nghia": [
+        "抑える",
+        "なだめる"
+      ],
+      "trai_nghia": [
+        "煽る"
+      ]
     },
     {
       "kanji": "優れる",
@@ -978,8 +1349,14 @@
       "nghia": "giỏi, ưu tú, tốt",
       "vi_du": "彼は運動能力に優れている。(Anh ta cực kỳ xuất sắc về năng lực vận động.) 体調がすぐれない。(Thể trạng không được tốt lắm.)",
       "vi_du_ruby": "彼は運動能力に<ruby>優<rt>すぐ</rt></ruby>れている。(Anh ta cực kỳ xuất sắc về năng lực vận động.)",
-      "dong_nghia": ["優秀だ", "秀でる"],
-      "trai_nghia": ["劣る", "劣悪だ"]
+      "dong_nghia": [
+        "優秀だ",
+        "秀でる"
+      ],
+      "trai_nghia": [
+        "劣る",
+        "劣悪だ"
+      ]
     },
     {
       "kanji": "落ち着く",
@@ -989,8 +1366,14 @@
       "nghia": "bình tĩnh, thanh thản, lắng xuống, trầm lắng",
       "vi_du": "慌てないで、落ち着いて話してください。(Đừng có cuống lên, hãy bình tĩnh nói chuyện nào.) 戦後10年経ち、ようやく世の中が落ち着いてきた。(Trải qua 10 năm sau chiến tranh, cuối cùng thế giới cũng đã bắt đầu yên bình lại.)",
       "vi_du_ruby": "慌てないで、<ruby>落<rt>お</rt></ruby>ち<ruby>着<rt>つ</rt></ruby>いて話してください。(Đừng có cuống lên, hãy bình tĩnh nói chuyện nào.)",
-      "dong_nghia": ["冷静になる", "安定する"],
-      "trai_nghia": ["慌てる", "動揺する"]
+      "dong_nghia": [
+        "冷静になる",
+        "安定する"
+      ],
+      "trai_nghia": [
+        "慌てる",
+        "動揺する"
+      ]
     },
     {
       "kanji": "長引く",
@@ -1000,8 +1383,13 @@
       "nghia": "kéo dài",
       "vi_du": "仕事が長引いて約束に遅れてしまった。(Công việc dây dưa kéo dài nên tôi đã bị đến trễ hẹn.) 今年の風邪は長引く傾向があるようだ。(Mùa cảm năm nay có vẻ có xu hướng bệnh sẽ dây dưa kéo dài.)",
       "vi_du_ruby": "仕事が<ruby>長引<rt>ながび</rt></ruby>いて約束に遅れてしまった。(Công việc dây dưa kéo dài nên tôi đã bị đến trễ hẹn.)",
-      "dong_nghia": ["遅れる", "延びる"],
-      "trai_nghia": ["早く終わる"]
+      "dong_nghia": [
+        "遅れる",
+        "延びる"
+      ],
+      "trai_nghia": [
+        "早く終わる"
+      ]
     },
     {
       "kanji": "衰える",
@@ -1011,8 +1399,14 @@
       "nghia": "suy yếu, yếu đi",
       "vi_du": "年を取ると、体力が衰える。(Càng lớn tuổi thì thể lực sẽ càng suy yếu.) 勢いが衰える。(Sức lực giảm sút đi.)",
       "vi_du_ruby": "年を取ると、体力が<ruby>衰<rt>おとろ</rt></ruby>える。(Càng lớn tuổi thì thể lực sẽ càng suy yếu.)",
-      "dong_nghia": ["弱まる", "低下する"],
-      "trai_nghia": ["盛んになる", "発展する"]
+      "dong_nghia": [
+        "弱まる",
+        "低下する"
+      ],
+      "trai_nghia": [
+        "盛んになる",
+        "発展する"
+      ]
     },
     {
       "kanji": "備わる",
@@ -1022,8 +1416,13 @@
       "nghia": "lắp đặt, chuẩn bị, sẵn có",
       "vi_du": "新幹線にはさまざまな安全装置が備わっている。(Trên tàu Shinkansen được trang bị đầy đủ các loại thiết bị an toàn khác nhau.) 彼女には作家としての素質が備わっている。(Cô ấy có sẵn trong mình những tố chất của một nhà văn.)",
       "vi_du_ruby": "新幹線にはさまざまな安全装置が<ruby>備<rt>そな</rt></ruby>わっている。(Trên tàu Shinkansen được trang bị đầy đủ các loại thiết bị an toàn khác nhau.)",
-      "dong_nghia": ["具備する", "揃う"],
-      "trai_nghia": ["欠ける"]
+      "dong_nghia": [
+        "具備する",
+        "揃う"
+      ],
+      "trai_nghia": [
+        "欠ける"
+      ]
     },
     {
       "kanji": "備える",
@@ -1033,7 +1432,10 @@
       "nghia": "lắp đặt, chuẩn bị, sẵn có",
       "vi_du": "学校では火災報知器が備えてある。(Ở trường học người ta có lắp đặt sẵn chuông báo cháy.) 将来に備えて貯蓄をする。(Tôi sẽ tích cóp tiền bạc để chuẩn bị cho tương lai sau này.)",
       "vi_du_ruby": "学校では火災報知器が<ruby>備<rt>そな</rt></ruby>えてある。(Ở trường học người ta có lắp đặt sẵn chuông báo cháy.)",
-      "dong_nghia": ["準備する", "用意する"],
+      "dong_nghia": [
+        "準備する",
+        "用意する"
+      ],
       "trai_nghia": []
     },
     {
@@ -1044,8 +1446,15 @@
       "nghia": "bảo quản, bảo vệ, tích lũy",
       "vi_du": "お金を蓄える。(Tích cóp tiền bạc.) 食料を貯蔵庫に蓄える。(Tích trữ lương thực trong kho chứa.) 本を読んで知識を蓄える。(Đọc sách để trau dồi kiến thức.)",
       "vi_du_ruby": "お金を<ruby>蓄<rt>たくわ</rt></ruby>える。(Tích cóp tiền bạc.)",
-      "dong_nghia": ["貯める", "貯蓄する", "備蓄する"],
-      "trai_nghia": ["消費する", "使い果たす"]
+      "dong_nghia": [
+        "貯める",
+        "貯蓄する",
+        "備蓄する"
+      ],
+      "trai_nghia": [
+        "消費する",
+        "使い果たす"
+      ]
     },
     {
       "kanji": "整う・調う",
@@ -1055,8 +1464,13 @@
       "nghia": "đã được chuẩn bị, sẵn sàng",
       "vi_du": "準備が整った。(Công tác chuẩn bị đã được sẵn sàng.) きちんと整った服装をする。(Ăn mặc trang phục thật chỉnh tề.)",
       "vi_du_ruby": "準備が<ruby>整<rt>ととの</rt></ruby>った。(Công tác chuẩn bị đã được sẵn sàng.)",
-      "dong_nghia": ["揃う", "まとまる"],
-      "trai_nghia": ["乱れる"]
+      "dong_nghia": [
+        "揃う",
+        "まとまる"
+      ],
+      "trai_nghia": [
+        "乱れる"
+      ]
     },
     {
       "kanji": "整える・調える",
@@ -1066,8 +1480,14 @@
       "nghia": "chuẩn bị, sẵn sàng",
       "vi_du": "準備を整えた。(Công tác chuẩn bị đã sẵn sàng.) 面接の前に服装や髪を整える。(Chỉnh đốn lại quần áo và tóc tai trước khi đi phỏng vấn.) 味を調える。(Nêm nếm gia vị.)",
       "vi_du_ruby": "準備を<ruby>整<rt>ととの</rt></ruby>えた。(Công tác chuẩn bị đã sẵn sàng.)",
-      "dong_nghia": ["整理する", "調整する"],
-      "trai_nghia": ["乱す", "散らかす"]
+      "dong_nghia": [
+        "整理する",
+        "調整する"
+      ],
+      "trai_nghia": [
+        "乱す",
+        "散らかす"
+      ]
     },
     {
       "kanji": "覆う",
@@ -1077,8 +1497,14 @@
       "nghia": "phủ lên, che phủ, che",
       "vi_du": "テーブルをテーブルクロスで覆った。(Phủ tấm trải bàn lên trên bàn.) 山頂は雪で覆われていた。(Đỉnh núi đã bị tuyết bao phủ toàn bộ.)",
       "vi_du_ruby": "テーブルをテーブルクロスで<ruby>覆<rt>おお</rt></ruby>った。(Phủ tấm trải bàn lên trên bàn.)",
-      "dong_nghia": ["包む", "隠す"],
-      "trai_nghia": ["剥がす", "現す"]
+      "dong_nghia": [
+        "包む",
+        "隠す"
+      ],
+      "trai_nghia": [
+        "剥がす",
+        "現す"
+      ]
     },
     {
       "kanji": "照る",
@@ -1088,8 +1514,13 @@
       "nghia": "chiếu sáng",
       "vi_du": "日が照っているうちに洗濯物を干そう。(Tranh thủ lúc trời còn đang hửng nắng hãy mang đồ giặt ra phơi thôi.)",
       "vi_du_ruby": "日が<ruby>照<rt>て</rt></ruby>っているうちに洗濯物を干そう。(Tranh thủ lúc trời còn đang hửng nắng hãy mang đồ giặt ra phơi thôi.)",
-      "dong_nghia": ["輝く", "光る"],
-      "trai_nghia": ["曇る"]
+      "dong_nghia": [
+        "輝く",
+        "光る"
+      ],
+      "trai_nghia": [
+        "曇る"
+      ]
     },
     {
       "kanji": "照らす",
@@ -1099,7 +1530,10 @@
       "nghia": "chiếu sáng",
       "vi_du": "懐中電灯で足跡を照らしながら夜道を歩いた。(Vừa lấy đèn pin soi đường để rọi theo dấu chân, vừa đi trên con đường tối om.) 犯罪は、法律に照らして処分される。(Tội phạm sẽ bị đối chiếu theo pháp luật để đưa ra phán xử.)",
       "vi_du_ruby": "懐中電灯で足跡を<ruby>照<rt>て</rt></ruby>らしながら夜道を歩いた。(Vừa lấy đèn pin soi đường để rọi theo dấu chân, vừa đi trên con đường tối om.)",
-      "dong_nghia": ["光を当てる", "比較する"],
+      "dong_nghia": [
+        "光を当てる",
+        "比較する"
+      ],
       "trai_nghia": []
     },
     {
@@ -1110,7 +1544,10 @@
       "nghia": "bị nhuộm, nhiễm",
       "vi_du": "染料で布が染まる。(Miếng vải được nhuộm màu nhờ thuốc nhuộm.) 恥ずかしさで頬が赤く染まった。(Hai má bị ửng đỏ lên vì xấu hổ.) 新しい思想に染まる。(Bị tiêm nhiễm tư tưởng mới.)",
       "vi_du_ruby": "染料で布が<ruby>染<rt>そ</rt></ruby>まる。(Miếng vải được nhuộm màu nhờ thuốc nhuộm.)",
-      "dong_nghia": ["感化される", "影響を受ける"],
+      "dong_nghia": [
+        "感化される",
+        "影響を受ける"
+      ],
       "trai_nghia": []
     },
     {
@@ -1121,7 +1558,9 @@
       "nghia": "nhuộm, nhiễm",
       "vi_du": "染料で布を染める。(Dùng thuốc nhuộm để nhuộm vải.) 白髪を黒く染める。(Nhuộm tóc bạc thành tóc đen.)",
       "vi_du_ruby": "染料で布を<ruby>染<rt>そ</rt></ruby>める。(Dùng thuốc nhuộm để nhuộm vải.)",
-      "dong_nghia": ["着色する"],
+      "dong_nghia": [
+        "着色する"
+      ],
       "trai_nghia": []
     },
     {
@@ -1132,7 +1571,10 @@
       "nghia": "nhân đôi, chồng chất",
       "vi_du": "目が疲れてパソコンの字がダブって見える。(Mắt bị mỏi nên khi nhìn chữ trên máy tính cứ bị nhòe thành hai hình.) うっかりして同じ日に予定をダブって入れてしまった。(Bất cẩn nên tôi vô tình nhập luôn cả hai lịch trình trùng vào cùng một ngày mất tiêu rồi.)",
       "vi_du_ruby": "",
-      "dong_nghia": ["重なる", "重複する"],
+      "dong_nghia": [
+        "重なる",
+        "重複する"
+      ],
       "trai_nghia": []
     },
     {
@@ -1143,8 +1585,13 @@
       "nghia": "mong ước, mơ ước",
       "vi_du": "プロの選手にあこがれる。(Khao khát trở thành một tuyển thủ chuyên nghiệp.) 子供のころ、田舎に住んでいた私は華やかな都会にあこがれていた。(Thời bé sống ở nông thôn nên tôi đã vô cùng ao ước cuộc sống ở chốn đô thị sầm uất hoa lệ.)",
       "vi_du_ruby": "プロの選手に<ruby>憧<rt>あこが</rt></ruby>れる。(Khao khát trở thành một tuyển thủ chuyên nghiệp.)",
-      "dong_nghia": ["恋焦がれる", "慕う"],
-      "trai_nghia": ["幻滅する"]
+      "dong_nghia": [
+        "恋焦がれる",
+        "慕う"
+      ],
+      "trai_nghia": [
+        "幻滅する"
+      ]
     },
     {
       "kanji": "羨む",
@@ -1154,7 +1601,10 @@
       "nghia": "đố kỵ, ghen tị",
       "vi_du": "人の幸せをうらやんでも仕方がない。(Dù cho có ganh tị với hạnh phúc của người khác thì cũng chẳng để làm gì cả.) 彼は宝くじに当たって、周りからうらやまれている。(Anh ta trúng vé số nên bị mọi người xung quanh ganh tị đỏ mắt.)",
       "vi_du_ruby": "人の幸せを<ruby>羨<rt>うらや</rt></ruby>んでも仕方がない。(Dù cho có ganh tị với hạnh phúc của người khác thì cũng chẳng để làm gì cả.)",
-      "dong_nghia": ["嫉妬する", "妬む"],
+      "dong_nghia": [
+        "嫉妬する",
+        "妬む"
+      ],
       "trai_nghia": []
     },
     {
@@ -1165,8 +1615,14 @@
       "nghia": "từ bỏ",
       "vi_du": "大けがをして、プロのサッカーの選手になる夢をあきらめた。(Do bị chấn thương nặng nên tôi đã đành phải từ bỏ giấc mơ trở thành cầu thủ bóng đá chuyên nghiệp.)",
       "vi_du_ruby": "大けがをして、プロのサッカーの選手になる夢を<ruby>諦<rt>あきら</rt></ruby>めた。(Do bị chấn thương nặng nên tôi đã đành phải từ bỏ giấc mơ trở thành cầu thủ bóng đá chuyên nghiệp.)",
-      "dong_nghia": ["断念する", "ギブアップする"],
-      "trai_nghia": ["頑張る", "執着する"]
+      "dong_nghia": [
+        "断念する",
+        "ギブアップする"
+      ],
+      "trai_nghia": [
+        "頑張る",
+        "執着する"
+      ]
     },
     {
       "kanji": "呆れる",
@@ -1176,8 +1632,13 @@
       "nghia": "bị shock, ngạc nhiên",
       "vi_du": "新入社員があまりに物を知らないので、あきれてしまった。(Mấy đứa nhân viên mới vào công ty chẳng chịu học hỏi tìm hiểu cái gì cả nên tôi phải cạn lời luôn.) 彼の非常識な態度にあきれた。(Tôi hoàn toàn bị sốc trước cái thái độ vô ý thức của gã ta.)",
       "vi_du_ruby": "新入社員があまりに物を知らないので、<ruby>呆<rt>あき</rt></ruby>れてしまった。(Mấy đứa nhân viên mới vào công ty chẳng chịu học hỏi tìm hiểu cái gì cả nên tôi phải cạn lời luôn.)",
-      "dong_nghia": ["唖然とする", "びっくりする"],
-      "trai_nghia": ["感心する"]
+      "dong_nghia": [
+        "唖然とする",
+        "びっくりする"
+      ],
+      "trai_nghia": [
+        "感心する"
+      ]
     },
     {
       "kanji": "恐れる",
@@ -1187,8 +1648,13 @@
       "nghia": "sợ, lo sợ, khủng khiếp, đáng sợ",
       "vi_du": "動物は火を恐れる。(Các loài động vật rất sợ lửa.) 失敗を恐れていて何でもできないよ。(Lúc nào cũng sợ thất bại thì làm sao mà làm được trò trống gì chứ.)",
       "vi_du_ruby": "動物は火を<ruby>恐<rt>おそ</rt></ruby>れる。(Các loài động vật rất sợ lửa.)",
-      "dong_nghia": ["怖がる", "危惧する"],
-      "trai_nghia": ["立ち向かう"]
+      "dong_nghia": [
+        "怖がる",
+        "危惧する"
+      ],
+      "trai_nghia": [
+        "立ち向かう"
+      ]
     },
     {
       "kanji": "恨む",
@@ -1198,8 +1664,13 @@
       "nghia": "hận, căm ghét, căm thù",
       "vi_du": "私は今でも、私をいじめた同級生を恨んでいる。(Cho đến tận bây giờ tôi vẫn còn ghim thù đứa bạn cùng lớp đã từng bắt nạt tôi.)",
       "vi_du_ruby": "私は今でも、私をいじめた同級生を<ruby>恨<rt>うら</rt></ruby>んでいる。(Cho đến tận bây giờ tôi vẫn còn ghim thù đứa bạn cùng lớp đã từng bắt nạt tôi.)",
-      "dong_nghia": ["憎む", "怨む"],
-      "trai_nghia": ["許す"]
+      "dong_nghia": [
+        "憎む",
+        "怨む"
+      ],
+      "trai_nghia": [
+        "許す"
+      ]
     },
     {
       "kanji": "慰める",
@@ -1209,8 +1680,14 @@
       "nghia": "an ủi, động viên",
       "vi_du": "失恋した友達みんなで慰めた。(Tất cả mọi người đã cùng xúm lại để an ủi động viên đứa bạn vừa mới bị thất tình.) 音楽を聞くと心が慰められる。(Khi nghe nhạc, cõi lòng tôi sẽ được xoa dịu đi phần nào.)",
       "vi_du_ruby": "失恋した友達みんなで<ruby>慰<rt>なぐさ</rt></ruby>めた。(Tất cả mọi người đã cùng xúm lại để an ủi động viên đứa bạn vừa mới bị thất tình.)",
-      "dong_nghia": ["励ます", "癒す"],
-      "trai_nghia": ["責める", "傷つける"]
+      "dong_nghia": [
+        "励ます",
+        "癒す"
+      ],
+      "trai_nghia": [
+        "責める",
+        "傷つける"
+      ]
     }
   ]
 }
