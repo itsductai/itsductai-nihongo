@@ -1,5 +1,6 @@
 {
   "type": "TUVUNG",
+  "series": "mimi",
   "title": "Mimi UNIT 10 - Tính từ B",
   "words": [
     {
@@ -10,8 +11,13 @@
       "nghia": "đơn giản, đơn thuần",
       "vi_du": "この機械は単純な仕掛けで働く。(Máy này có thể hoạt động bằng cơ chế đơn giản.) 私は単純な性格だから、お世辞でも褒められるとうれしい。(Tôi có tính cách đơn giản nên chỉ cần được khen nịnh thôi cũng vui rồi.) これは単純に私個人の問題だ。(Đây đơn giản chỉ là vấn đề cá nhân của tôi.)",
       "vi_du_ruby": "この<ruby>機械<rt>きかい</rt></ruby>は<ruby>単純<rt>たんじゅん</rt></ruby>な<ruby>仕掛<rt>しか</rt></ruby>けで<ruby>働<rt>はたら</rt></ruby>く。(Máy này có thể hoạt động bằng cơ chế đơn giản.) 私は<ruby>単純<rt>たんじゅん</rt></ruby>な<ruby>性格<rt>せいかく</rt></ruby>だから、お<ruby>世辞<rt>せじ</rt></ruby>でも<ruby>褒<rt>ほ</rt></ruby>められるとうれしい。(Tôi có tính cách đơn giản nên chỉ cần được khen nịnh thôi cũng vui rồi.) これは<ruby>単純<rt>たんじゅん</rt></ruby>に私<ruby>個人<rt>こじん</rt></ruby>の問題だ。(Đây đơn giản chỉ là vấn đề cá nhân của tôi.)",
-      "dong_nghia": ["シンプルな", "明快な"],
-      "trai_nghia": ["複雑な"]
+      "dong_nghia": [
+        "シンプルな",
+        "明快な"
+      ],
+      "trai_nghia": [
+        "複雑な"
+      ]
     },
     {
       "kanji": "純粋な",
@@ -21,8 +27,13 @@
       "nghia": "trong sáng, thuần khiết, hoàn toàn",
       "vi_du": "あの人は純粋な心の持ち主だ。(Người ấy có một tâm hồn đơn thuần.) 100％純粋な水は工業用として用いられる。(Nước sạch tinh khiết 100% được sử dụng trong công nghiệp.) これは純粋にあなたのためを思って言っているのです。(Điều này hoàn toàn là tôi nói vì nghĩ cho bạn thôi.)",
       "vi_du_ruby": "あの人は<ruby>純粋<rt>じゅんすい</rt></ruby>な心の持ち主だ。(Người ấy có một tâm hồn đơn thuần.) 100％<ruby>純粋<rt>じゅんすい</rt></ruby>な水は<ruby>工業用<rt>こうぎょうよう</rt></ruby>として<ruby>用<rt>もち</rt></ruby>いられる。(Nước sạch tinh khiết 100% được sử dụng trong công nghiệp.) これは<ruby>純粋<rt>じゅんすい</rt></ruby>にあなたのためを思って言っているのです。(Điều này hoàn toàn là tôi nói vì nghĩ cho bạn thôi.)",
-      "dong_nghia": ["清らかな", "ピュアな"],
-      "trai_nghia": ["不純な"]
+      "dong_nghia": [
+        "清らかな",
+        "ピュアな"
+      ],
+      "trai_nghia": [
+        "不純な"
+      ]
     },
     {
       "kanji": "透明な",
@@ -32,8 +43,13 @@
       "nghia": "trong suốt",
       "vi_du": "水や空気は無色透明だ。(Nước và không khí là vô sắc trong suốt.) 透明な氷/ガラス/プラスチック。(Đá/ kính/ nhựa trong suốt.)",
       "vi_du_ruby": "水や空気は<ruby>無色透明<rt>むしょくとうめい</rt></ruby>だ。(Nước và không khí là vô sắc trong suốt.) <ruby>透明<rt>とうめい</rt></ruby>な<ruby>氷<rt>こおり</rt></ruby>/ガラス/プラスチック。(Đá/ kính/ nhựa trong suốt.)",
-      "dong_nghia": ["透き通った"],
-      "trai_nghia": ["不透明な", "濁った"]
+      "dong_nghia": [
+        "透き通った"
+      ],
+      "trai_nghia": [
+        "不透明な",
+        "濁った"
+      ]
     },
     {
       "kanji": "爽やかな",
@@ -43,8 +59,14 @@
       "nghia": "dễ chịu, sảng khoái, tươi tắn",
       "vi_du": "朝の空気はさわやかだ。(Không khí buổi sáng rất trong lành sảng khoái.) さわやかな人柄/笑顔/声。(Tính cách/ nụ cười/ giọng nói tươi tắn.) さわやかに挨拶する。(Chào hỏi một cách vui vẻ rạng rỡ.)",
       "vi_du_ruby": "朝の空気は<ruby>爽<rt>さわ</rt></ruby>やかだ。(Không khí buổi sáng rất trong lành sảng khoái.) <ruby>爽<rt>さわ</rt></ruby>やかな<ruby>人柄<rt>ひとがら</rt></ruby>/<ruby>笑顔<rt>えがお</rt></ruby>/声。(Tính cách/ nụ cười/ giọng nói tươi tắn.) <ruby>爽<rt>さわ</rt></ruby>やかに<ruby>挨拶<rt>あいさつ</rt></ruby>する。(Chào hỏi một cách vui vẻ rạng rỡ.)",
-      "dong_nghia": ["すがすがしい", "快い"],
-      "trai_nghia": ["鬱陶しい", "不快な"]
+      "dong_nghia": [
+        "すがすがしい",
+        "快い"
+      ],
+      "trai_nghia": [
+        "鬱陶しい",
+        "不快な"
+      ]
     },
     {
       "kanji": "素直な",
@@ -54,8 +76,15 @@
       "nghia": "ngoan ngoãn, dễ bảo, chân thật",
       "vi_du": "いつも反抗的な学生が、今日は素直だ。(Đứa học sinh lúc nào cũng chống đối hôm nay lại ngoan ngoãn.) 彼女はいくら自分は悪くても素直に認めない。(Cô ấy dù bản thân có lỗi đến đâu cũng không chịu thành thật thừa nhận.) 優勝したが、試合の内容が良くないので素直に喜べない。(Dù giành chức vô địch nhưng nội dung trận đấu không tốt nên không thể vui mừng một cách thật lòng được.)",
       "vi_du_ruby": "いつも<ruby>反抗的<rt>はんこうてき</rt></ruby>な学生が、今日は<ruby>素直<rt>すなお</rt></ruby>だ。(Đứa học sinh lúc nào cũng chống đối hôm nay lại ngoan ngoãn.) 彼女はいくら自分は悪くても<ruby>素直<rt>すなお</rt></ruby>に<ruby>認<rt>みと</rt></ruby>めない。(Cô ấy dù bản thân có lỗi đến đâu cũng không chịu thành thật thừa nhận.) <ruby>優勝<rt>ゆうしょう</rt></ruby>したが、試合の内容が良くないので<ruby>素直<rt>すなお</rt></ruby>に<ruby>喜<rt>よろこ</rt></ruby>べない。(Dù giành chức vô địch nhưng nội dung trận đấu không tốt nên không thể vui mừng một cách thật lòng được.)",
-      "dong_nghia": ["従順な", "穏やかな"],
-      "trai_nghia": ["頑固な", "反抗的な", "ひねくれた"]
+      "dong_nghia": [
+        "従順な",
+        "穏やかな"
+      ],
+      "trai_nghia": [
+        "頑固な",
+        "反抗的な",
+        "ひねくれた"
+      ]
     },
     {
       "kanji": "率直な",
@@ -65,8 +94,13 @@
       "nghia": "trực tính, thẳng thắn",
       "vi_du": "彼は率直な人で、言うべきことをきちんと言う。(Anh ấy là người thẳng thắn nên những lời cần nói sẽ nói một cách rõ ràng.) 率直な考え/感想/反応。(Suy nghĩ/ cảm tưởng/ phản ứng thẳng thắn.) 率直に詫びる。(Thẳng thắn xin lỗi.)",
       "vi_du_ruby": "彼は<ruby>率直<rt>そっちょく</rt></ruby>な人で、言うべきことをきちんと言う。(Anh ấy là người thẳng thắn nên những lời cần nói sẽ nói một cách rõ ràng.) <ruby>率直<rt>そっちょく</rt></ruby>な考え/<ruby>感想<rt>かんそう</rt></ruby>/<ruby>反応<rt>はんのう</rt></ruby>。(Suy nghĩ/ cảm tưởng/ phản ứng thẳng thắn.) <ruby>率直<rt>そっちょく</rt></ruby>に<ruby>詫<rt>わ</rt></ruby>びる。(Thẳng thắn xin lỗi.)",
-      "dong_nghia": ["正直な", "オープンな"],
-      "trai_nghia": ["遠回しな"]
+      "dong_nghia": [
+        "正直な",
+        "オープンな"
+      ],
+      "trai_nghia": [
+        "遠回しな"
+      ]
     },
     {
       "kanji": "誠実な",
@@ -76,8 +110,14 @@
       "nghia": "thành thực, thật thà",
       "vi_du": "「誠実な人と結婚したい」と言う若者が多い。(Rất nhiều người trẻ nói rằng muốn kết hôn với người thành thật.) 誠実な人柄。(Tính cách thành thật.)",
       "vi_du_ruby": "「<ruby>誠実<rt>せいじつ</rt></ruby>な人と結婚したい」と言う<ruby>若者<rt>わかもの</rt></ruby>が多い。(Rất nhiều người trẻ nói rằng muốn kết hôn với người thành thật.) <ruby>誠実<rt>せいじつ</rt></ruby>な人柄。(Tính cách thành thật.)",
-      "dong_nghia": ["真面目な", "正直な"],
-      "trai_nghia": ["不誠実な", "嘘つきな"]
+      "dong_nghia": [
+        "真面目な",
+        "正直な"
+      ],
+      "trai_nghia": [
+        "不誠実な",
+        "嘘つきな"
+      ]
     },
     {
       "kanji": "謙虚な",
@@ -87,8 +127,13 @@
       "nghia": "khiêm tốn",
       "vi_du": "彼は謙虚な人柄だ。(Anh ấy có tính cách khiêm tốn.) 「自分が偉いと思わず謙虚になりなさい」(Đừng nghĩ mình vĩ đại, hãy sống khiêm tốn đi.) 謙虚に反省する/人の話に耳を傾ける。(Khiêm tốn kiểm điểm/ lắng nghe câu chuyện của người khác.)",
       "vi_du_ruby": "彼は<ruby>謙虚<rt>けんきょ</rt></ruby>な人柄だ。(Anh ấy có tính cách khiêm tốn.) 「自分が<ruby>偉<rt>えら</rt></ruby>いと思わず<ruby>謙虚<rt>けんきょ</rt></ruby>になりなさい」(Đừng nghĩ mình vĩ đại, hãy sống khiêm tốn đi.) <ruby>謙虚<rt>けんきょ</rt></ruby>に<ruby>反省<rt>はんせい</rt></ruby>する/人の話に耳を<ruby>傾<rt>かたむ</rt></ruby>ける。(Khiêm tốn kiểm điểm/ lắng nghe câu chuyện của người khác.)",
-      "dong_nghia": ["控えめな"],
-      "trai_nghia": ["傲慢な", "生意気な"]
+      "dong_nghia": [
+        "控えめな"
+      ],
+      "trai_nghia": [
+        "傲慢な",
+        "生意気な"
+      ]
     },
     {
       "kanji": "賢い",
@@ -98,8 +143,15 @@
       "nghia": "thông minh, khôn ngoan",
       "vi_du": "こんな難しい話が理解できるとは賢い子だ。(Vấn đề khó như thế mà có thể hiểu được đúng là một cậu bé thông minh.) 賢い消費者にならなければいけない。(Cần phải trở thành một người tiêu dùng khôn ngoan.)",
       "vi_du_ruby": "こんな難しい話が<ruby>理解<rt>りかい</rt></ruby>できるとは<ruby>賢<rt>かしこ</rt></ruby>い子だ。(Vấn đề khó như thế mà có thể hiểu được đúng là một cậu bé thông minh.) <ruby>賢<rt>かしこ</rt></ruby>い<ruby>消費者<rt>しょうひしゃ</rt></ruby>にならなければいけない。(Cần phải trở thành một người tiêu dùng khôn ngoan.)",
-      "dong_nghia": ["利口な", "聡明な", "頭がいい"],
-      "trai_nghia": ["愚かな", "馬鹿な"]
+      "dong_nghia": [
+        "利口な",
+        "聡明な",
+        "頭がいい"
+      ],
+      "trai_nghia": [
+        "愚かな",
+        "馬鹿な"
+      ]
     },
     {
       "kanji": "慎重な",
@@ -109,8 +161,13 @@
       "nghia": "thận trọng",
       "vi_du": "私は慎重な性格なので、よく考えてからでなければ行動しない。(Tôi là người có tính cách thận trọng nên nếu chưa suy nghĩ kĩ lưỡng thì sẽ không hành động.) 景気の回復について専門家は慎重な見方をしている。(Các chuyên家 đang có cái nhìn thận trọng về vấn đề khôi phục kinh tế.)",
       "vi_du_ruby": "私は<ruby>慎重<rt>しんちょう</rt></ruby>な性格なので、よく考えてからでなければ<ruby>行動<rt>こうどう</rt></ruby>しない。(Tôi là người có tính cách thận trọng nên nếu chưa suy nghĩ kĩ lưỡng thì sẽ không hành động.) <ruby>景気<rt>けいき</rt></ruby>の<ruby>回復<rt>かいふく</rt></ruby>について<ruby>専門家<rt>せんもんか</rt></ruby>は<ruby>慎重<rt>しんちょう</rt></ruby>な見方をしている。(Các chuyên家 đang có cái nhìn thận trọng về vấn đề khôi phục kinh tế.)",
-      "dong_nghia": ["注意深い"],
-      "trai_nghia": ["軽率な", "そそっかしい"]
+      "dong_nghia": [
+        "注意深い"
+      ],
+      "trai_nghia": [
+        "軽率な",
+        "そそっかしい"
+      ]
     },
     {
       "kanji": "穏やかな",
@@ -120,8 +177,15 @@
       "nghia": "điềm tĩnh, yên lặng, ôn hòa",
       "vi_du": "この辺りは気候が穏やかで住みやすい。(Vùng này khí hậu ôn hòa nên rất dễ sống.) 穏やかな海/一日/性格。(Vùng biển/ một ngày/ tính cách ôn hòa.) 「大きな声を出さないでください。穏やかに話し合いましょう」(Xin đừng lớn tiếng. Chúng ta hãy nói chuyện với nhau một cách điềm tĩnh nào.)",
       "vi_du_ruby": "この辺りは<ruby>気候<rt>きこう</rt></ruby>が<ruby>穏<rt>おだ</rt></ruby>やかで住みやすい。(Vùng này khí hậu ôn hòa nên rất dễ sống.) <ruby>穏<rt>おだ</rt></ruby>やかな海/一日/性格。(Vùng biển/ một ngày/ tính cách ôn hòa.) 「大きな声を出さないでください。<ruby>穏<rt>おだ</rt></ruby>やかに話し合いましょう」(Xin đừng lớn tiếng. Chúng ta hãy nói chuyện với nhau một cách điềm tĩnh nào.)",
-      "dong_nghia": ["静かな", "温和な", "平穏な"],
-      "trai_nghia": ["荒々しい", "激しい"]
+      "dong_nghia": [
+        "静かな",
+        "温和な",
+        "平穏な"
+      ],
+      "trai_nghia": [
+        "荒々しい",
+        "激しい"
+      ]
     },
     {
       "kanji": "真剣な",
@@ -131,8 +195,14 @@
       "nghia": "nghiêm túc, nghiêm chỉnh",
       "vi_du": "二人は結婚するつもりで真剣に付き合っている。(Hai người có ý định kết hôn nên đang tìm hiểu nhau rất nghiêm túc.) 問題解決に真剣に取り組む。(Nghiêm túc nỗ lực giải quyết vấn đề.)",
       "vi_du_ruby": "二人は結婚するつもりで<ruby>真剣<rt>しんけん</rt></ruby>に付き合っている。(Hai người có ý định kết hôn nên đang tìm hiểu nhau rất nghiêm túc.) 問題<ruby>解決<rt>かいけつ</rt></ruby>に<ruby>真剣<rt>しんけん</rt></ruby>に<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>む。(Nghiêm túc nỗ lực giải quyết vấn đề.)",
-      "dong_nghia": ["本気な", "真面目な"],
-      "trai_nghia": ["不真面目な", "いい加減な"]
+      "dong_nghia": [
+        "本気な",
+        "真面目な"
+      ],
+      "trai_nghia": [
+        "不真面目な",
+        "いい加減な"
+      ]
     },
     {
       "kanji": "正式な",
@@ -142,8 +212,14 @@
       "nghia": "chính thức, trang trọng",
       "vi_du": "日本のお札の正式な名称は「日本銀行券」だ。(Tên gọi chính thức của tiền giấy Nhật Bản là \"Tiền giấy Ngân hàng Nhật Bản\".) 3か月の試用期間を経て、正式に社員として採用された。(Trải qua 3 tháng thử việc, tôi đã được chính thức tuyển dụng làm nhân viên.)",
       "vi_du_ruby": "日本の<ruby>札<rt>さつ</rt></ruby>の<ruby>正式<rt>せいしき</rt></ruby>な<ruby>名称<rt>めいしょう</rt></ruby>は「<ruby>日本銀行券<rt>にっぽんぎんこうけん</rt></ruby>」だ。(Tên gọi chính thức của tiền giấy Nhật Bản là \"Tiền giấy Ngân hàng Nhật Bản\".) 3か月の<ruby>試用期間<rt>しようきかん</rt></ruby>を<ruby>経<rt>へ</rt></ruby>て、<ruby>正式<rt>せいしき</rt></ruby>に社員として<ruby>採用<rt>さいよう</rt></ruby>された。(Trải qua 3 tháng thử việc, tôi đã được chính thức tuyển dụng làm nhân viên.)",
-      "dong_nghia": ["公式な", "本格的な"],
-      "trai_nghia": ["略式の", "非公式な"]
+      "dong_nghia": [
+        "公式な",
+        "本格的な"
+      ],
+      "trai_nghia": [
+        "略式の",
+        "非公式な"
+      ]
     },
     {
       "kanji": "主な",
@@ -153,8 +229,13 @@
       "nghia": "chính, chủ yếu",
       "vi_du": "「今日の主なニュースを五つお伝えします」(Hôm nay chúng tôi xin truyền tải 5 tin tức chính.) この車は主に輸出用に作られている。(Chiếc xe này được sản xuất chủ yếu để xuất khẩu.) 作家の収入は印税が主だ。(Thu nhập của nhà văn chủ yếu là tiền nhuận bút.)",
       "vi_du_ruby": "「今日の<ruby>主<rt>おも</rt></ruby>なニュースを五つお伝えします」(Hôm nay chúng tôi xin truyền tải 5 tin tức chính.) この車は<ruby>主<rt>おも</rt></ruby>に<ruby>輸出用<rt>ゆしゅつよう</rt></ruby>に作られている。(Chiếc xe này được sản xuất chủ yếu để xuất khẩu.) 作家の<ruby>収入<rt>しゅうにゅう</rt></ruby>は<ruby>印税<rt>いんぜい</rt></ruby>が<ruby>主<rt>おも</rt></ruby>だ。(Thu nhập của nhà văn chủ yếu là tiền nhuận bút.)",
-      "dong_nghia": ["主要な", "メインの"],
-      "trai_nghia": ["従たる"]
+      "dong_nghia": [
+        "主要な",
+        "メインの"
+      ],
+      "trai_nghia": [
+        "従たる"
+      ]
     },
     {
       "kanji": "主要な",
@@ -164,8 +245,14 @@
       "nghia": "chủ yếu, chính",
       "vi_du": "会の主要な役員が集まって今後の方針を議論した。(Các cán bộ chủ chốt của hội đã tập trung lại để thảo luận phương hướng sau này.)",
       "vi_du_ruby": "会の<ruby>主要<rt>しゅよう</rt></ruby>な<ruby>役員<rt>やくいん</rt></ruby>が集まって今後の<ruby>方針<rt>ほうしん</rt></ruby>を<ruby>議論<rt>ぎろん</rt></ruby>した。(Các cán bộ chủ chốt của hội đã tập trung lại để thảo luận phương hướng sau này.)",
-      "dong_nghia": ["主な", "中心の"],
-      "trai_nghia": ["些末な", "マイナーな"]
+      "dong_nghia": [
+        "主な",
+        "中心の"
+      ],
+      "trai_nghia": [
+        "些末な",
+        "マイナーな"
+      ]
     },
     {
       "kanji": "貴重な",
@@ -175,8 +262,14 @@
       "nghia": "quý giá",
       "vi_du": "留学と言う貴重な体験をした。(Tôi đã có một trải nghiệm du học quý giá.) これは大変数が少ない貴重な品種のチョウだ。(Đây là một loài bướm giống quý hiếm với số lượng vô cùng ít ỏi.)",
       "vi_du_ruby": "留学と言う<ruby>貴重<rt>きちょう</rt></ruby>な<ruby>体験<rt>たいけん</rt></ruby>をした。(Tôi đã có một trải nghiệm du học quý giá.) これは大変数が少ない<ruby>貴重<rt>きちょう</rt></ruby>な<ruby>品種<rt>ひんしゅ</rt></ruby>のチョウだ。(Đây là một loài bướm giống quý hiếm với số lượng vô cùng ít ỏi.)",
-      "dong_nghia": ["大切な", "尊い"],
-      "trai_nghia": ["無価値な", "つまらない"]
+      "dong_nghia": [
+        "大切な",
+        "尊い"
+      ],
+      "trai_nghia": [
+        "無価値な",
+        "つまらない"
+      ]
     },
     {
       "kanji": "偉大な",
@@ -186,8 +279,14 @@
       "nghia": "vĩ đại",
       "vi_du": "アインシュタインは科学の分野で偉大な功績をあげた。(Einstein đã đạt được những thành tựu vĩ đại trong lĩnh vực khoa học.) 偉大な人物/生涯/業績。(Nhân vật/ cuộc đời/ thành tích vĩ đại.)",
       "vi_du_ruby": "アインシュタインは<ruby>科学<rt>かがく</rt></ruby>の<ruby>分野<rt>ぶんや</rt></ruby>で<ruby>偉大<rt>いだい</rt></ruby>な<ruby>功績<rt>こうせき</rt></ruby>をあげた。(Einstein đã đạt được những thành tựu vĩ đại trong lĩnh vực khoa học.) <ruby>偉大<rt>いだい</rt></ruby>な人物/<ruby>生涯<rt>しょうがい</rt></ruby>/<ruby>業績<rt>ぎょうせき</rt></ruby>。(Nhân vật/ cuộc đời/ thành tích vĩ đại.)",
-      "dong_nghia": ["優れた", "立派な"],
-      "trai_nghia": ["平凡な", "つまらない"]
+      "dong_nghia": [
+        "優れた",
+        "立派な"
+      ],
+      "trai_nghia": [
+        "平凡な",
+        "つまらない"
+      ]
     },
     {
       "kanji": "偉い",
@@ -197,8 +296,14 @@
       "nghia": "đáng nể, đáng ngưỡng mộ, chức vị cao",
       "vi_du": "卒業式には市長や大臣など偉い人が来ていた。(Trong lễ tốt nghiệp, những nhân vật có chức quyền cao như thị trưởng hay bộ trưởng đã đến dự.) 貧しい人を助け続けた彼女は偉いと思う。(Tôi nghĩ cô ấy thật đáng nể vì vẫn luôn giúp đỡ những người nghèo khó.)",
       "vi_du_ruby": "卒業式には<ruby>市長<rt>しちょう</rt></ruby>や<ruby>大臣<rt>だいじん</rt></ruby>など<ruby>偉<rt>えら</rt></ruby>い人が来ていた。(Trong lễ tốt nghiệp, những nhân vật có chức quyền cao như thị trưởng hay bộ trưởng đã đến dự.) <ruby>貧<rt>まず</rt></ruby>しい人を助け続けた彼女は<ruby>偉<rt>えら</rt></ruby>いと思う。(Tôi nghĩ cô ấy thật đáng nể vì vẫn luôn giúp đỡ những người nghèo khó.)",
-      "dong_nghia": ["立派な", "地位が高い"],
-      "trai_nghia": ["平凡な", "劣る"]
+      "dong_nghia": [
+        "立派な",
+        "地位が高い"
+      ],
+      "trai_nghia": [
+        "平凡な",
+        "劣る"
+      ]
     },
     {
       "kanji": "独特な",
@@ -208,8 +313,14 @@
       "nghia": "độc nhất, đặc trưng, độc đáo",
       "vi_du": "ブルーチーズには独特な香りがある。(Phô mai xanh có một hương vị rất đặc trưng.) 独特な方法/表現/文体。(Phương pháp/ cách biểu hiện/ văn phong độc đáo.)",
       "vi_du_ruby": "ブルーチーズには<ruby>独特<rt>どくとく</rt></ruby>な<ruby>香<rt>かお</rt></ruby>りがある。(Phô mai xanh có một hương vị rất đặc trưng.) <ruby>独特<rt>どくとく</rt></ruby>な方法/<ruby>表現<rt>ひょうげん</rt></ruby>/<ruby>文体<rt>ぶんたい</rt></ruby>。(Phương pháp/ cách biểu hiện/ văn phong độc đáo.)",
-      "dong_nghia": ["特有の", "ユニークな"],
-      "trai_nghia": ["平凡な", "ありふれた"]
+      "dong_nghia": [
+        "特有の",
+        "ユニークな"
+      ],
+      "trai_nghia": [
+        "平凡な",
+        "ありふれた"
+      ]
     },
     {
       "kanji": "特殊な",
@@ -219,8 +330,14 @@
       "nghia": "đặc thù, đặc biệt",
       "vi_du": "この仕事には特殊な技能が必要だ。(Công việc này cần có một kĩ năng đặc thù.) 特殊な物質/事情。(Vật chất/ sự tình đặc thù.)",
       "vi_du_ruby": "この仕事には<ruby>特殊<rt>とくしゅ</rt></ruby>な<ruby>技能<rt>ぎのう</rt></ruby>が必要だ。(Công việc này cần có một kĩ năng đặc thù.) <ruby>特殊<rt>とくしゅ</rt></ruby>な<ruby>物質<rt>ぶっしつ</rt></ruby>/<ruby>事情<rt>じじょう</rt></ruby>。(Vật chất/ sự tình đặc thù.)",
-      "dong_nghia": ["特別な", "異例の"],
-      "trai_nghia": ["一般的な", "普通の"]
+      "dong_nghia": [
+        "特別な",
+        "異例の"
+      ],
+      "trai_nghia": [
+        "一般的な",
+        "普通の"
+      ]
     },
     {
       "kanji": "奇妙な",
@@ -230,8 +347,15 @@
       "nghia": "kỳ lạ",
       "vi_du": "この魚は奇妙な形をしている。(Con cá này có một hình thù rất kì lạ.) 「昨日の夜、近所中の猫がいっせいに鳴いたんですよ」「それは奇妙ですね」(\"Tối hôm qua, bọn mèo trong xóm đồng loạt kêu gào đấy.\" \"Chuyện đó kì lạ thật nhỉ.\")",
       "vi_du_ruby": "この魚は<ruby>奇妙<rt>きみょう</rt></ruby>な形をしている。(Con cá này có một hình thù rất kì lạ.) 「昨日の夜、<ruby>近所中<rt>きんじょじゅう</rt></ruby>の猫がいっせいに<ruby>鳴<rt>な</rt></ruby>いたんですよ」「それは<ruby>奇妙<rt>きみょう</rt></ruby>ですね」(\"Tối hôm qua, bọn mèo trong xóm đồng loạt kêu gào đấy.\" \"Chuyện đó kì lạ thật nhỉ.\")",
-      "dong_nghia": ["変な", "おかしな", "妙な"],
-      "trai_nghia": ["普通の", "当たり前の"]
+      "dong_nghia": [
+        "変な",
+        "おかしな",
+        "妙な"
+      ],
+      "trai_nghia": [
+        "普通の",
+        "当たり前の"
+      ]
     },
     {
       "kanji": "妙な",
@@ -241,8 +365,13 @@
       "nghia": "lạ, tò mò (cảm giác kỳ lạ)",
       "vi_du": "妙なことに、初めて来たこの場所をなんだか知っているような気がする。(Thật là kì lạ, lần đầu tiên đến nơi này nhưng tôi cứ có cảm giác như mình đã biết từ trước rồi.) 私と彼女は性格も育った環境も違うが、妙に気が合う。(Tôi và cô ấy tính cách và môi trường lớn lên đều khác nhau, nhưng kì lạ thay lại rất hợp tính.)",
       "vi_du_ruby": "<ruby>妙<rt>みょう</rt></ruby>なことに、初めて来たこの場所をなんだか知っているような気がする。(Thật là kì lạ, lần đầu tiên đến nơi này nhưng tôi cứ có cảm giác như mình đã biết từ trước rồi.) 私と彼女は性格も育った<ruby>環境<rt>かんきょう</rt></ruby>も違うが、<ruby>妙<rt>みょう</rt></ruby>に気が合う。(Tôi và cô ấy tính cách và môi trường lớn lên đều khác nhau, nhưng kì lạ thay lại rất hợp tính.)",
-      "dong_nghia": ["奇妙な", "不思議な"],
-      "trai_nghia": ["自然な"]
+      "dong_nghia": [
+        "奇妙な",
+        "不思議な"
+      ],
+      "trai_nghia": [
+        "自然な"
+      ]
     },
     {
       "kanji": "怪しい",
@@ -252,8 +381,15 @@
       "nghia": "đáng ngờ, khả nghi, bất ổn (thời tiết/năng lực)",
       "vi_du": "家の前を怪しい男がうろうろしている。(Có một người đàn ông đáng ngờ cứ lảng vảng trước nhà.) その情報は怪しいと思う。情報源はどこだろう。(Tôi thấy thông tin đó rất đáng ngờ. Nguồn tin từ đâu vậy nhỉ.) 彼女の日本語力はかなり怪しい。通訳は無理だろう。(Khả năng tiếng Nhật của cô ấy khá là bất ổn (kém). Việc phiên dịch chắc là quá sức rồi.) 「雲が出てきた。明日の天気は怪しいぞ」(Mây đen kéo đến rồi. Thời tiết ngày mai có vẻ bất ổn đây.)",
       "vi_du_ruby": "家の前を<ruby>怪<rt>あや</rt></ruby>しい男がうろうろしている。(Có một người đàn ông đáng ngờ cứ lảng vảng trước nhà.) その情報は<ruby>怪<rt>あや</rt></ruby>しいと思う。<ruby>情報源<rt>じょうほうげん</rt></ruby>はどこだろう。(Tôi thấy thông tin đó rất đáng ngờ. Nguồn tin từ đâu vậy nhỉ.) 彼女の日本語力はかなり<ruby>怪<rt>あや</rt></ruby>しい。<ruby>通訳<rt>つうやく</rt></ruby>は無理だろう。(Khả năng tiếng Nhật của cô ấy khá là bất ổn (kém). Việc phiên dịch chắc là quá sức rồi.) 「雲が出てきた。明日の天気は<ruby>怪<rt>あや</rt></ruby>しいぞ」(Mây đen kéo đến rồi. Thời tiết ngày mai có vẻ bất ổn đây.)",
-      "dong_nghia": ["不審な", "疑わしい", "おかしい"],
-      "trai_nghia": ["確かな", "信頼できる"]
+      "dong_nghia": [
+        "不審な",
+        "疑わしい",
+        "おかしい"
+      ],
+      "trai_nghia": [
+        "確かな",
+        "信頼できる"
+      ]
     },
     {
       "kanji": "異常な",
@@ -263,8 +399,14 @@
       "nghia": "dị thường, khác thường",
       "vi_du": "今年の夏の暑さは異常だ。(Cái nóng của mùa hè năm nay thật khác thường.) 認知症の祖父に異常な言動が見られるようになった。(Đã bắt đầu thấy những hành động và lời nói bất thường ở người ông mắc bệnh suy giảm trí nhớ.) 医者に「白血球が異常に多い」と言われた。(Tôi bị bác sĩ nói là \"Lượng bạch cầu nhiều một cách bất thường\".)",
       "vi_du_ruby": "今年の夏の暑さは<ruby>異常<rt>いじょう</rt></ruby>だ。(Cái nóng của mùa hè năm nay thật khác thường.) <ruby>認知症<rt>にんちしょう</rt></ruby>の<ruby>祖父<rt>そふ</rt></ruby>に<ruby>異常<rt>いじょう</rt></ruby>な<ruby>言動<rt>げんどう</rt></ruby>が見られるようになった。(Đã bắt đầu thấy những hành động và lời nói bất thường ở người ông mắc bệnh suy giảm trí nhớ.) 医者に「<ruby>白血球<rt>はっけっきゅう</rt></ruby>が<ruby>異常<rt>いじょう</rt></ruby>に多い」と言われた。(Tôi bị bác sĩ nói là \"Lượng bạch cầu nhiều một cách bất thường\".)",
-      "dong_nghia": ["不自然な", "おかしい"],
-      "trai_nghia": ["正常な", "普通の"]
+      "dong_nghia": [
+        "不自然な",
+        "おかしい"
+      ],
+      "trai_nghia": [
+        "正常な",
+        "普通の"
+      ]
     },
     {
       "kanji": "高度な",
@@ -274,8 +416,14 @@
       "nghia": "cấp độ cao, tiên tiến, độ cao",
       "vi_du": "このメーカーは高度な半導体技術で知られている。(Nhà sản xuất này được biết đến với kĩ thuật bán dẫn tiên tiến.) 古代、この地域には高度に発達した文明があったと言われる。(Người ta nói rằng thời cổ đại, vùng này đã từng có một nền văn minh phát triển cao độ.) 飛行機は、高度1万メートルの上空を飛んでいる。(Máy bay đang bay trên bầu trời ở độ cao 1 vạn mét.)",
       "vi_du_ruby": "このメーカーは<ruby>高度<rt>こうど</rt></ruby>な<ruby>半導体<rt>はんどうたい</rt></ruby>技術で知られている。(Nhà sản xuất này được biết đến với kĩ thuật bán dẫn tiên tiến.) <ruby>古代<rt>こだい</rt></ruby>、この地域には<ruby>高度<rt>こうど</rt></ruby>に発達した<ruby>文明<rt>ぶんめい</rt></ruby>があったと言われる。(Người ta nói rằng thời cổ đại, vùng này đã từng có một nền văn minh phát triển cao độ.) 飛行機は、<ruby>高度<rt>こうど</rt></ruby>1万メートルの<ruby>上空<rt>じょうくう</rt></ruby>を飛んでいる。(Máy bay đang bay trên bầu trời ở độ cao 1 vạn mét.)",
-      "dong_nghia": ["ハイレベルな", "高い"],
-      "trai_nghia": ["低度な", "低い"]
+      "dong_nghia": [
+        "ハイレベルな",
+        "高い"
+      ],
+      "trai_nghia": [
+        "低度な",
+        "低い"
+      ]
     },
     {
       "kanji": "新たな",
@@ -285,8 +433,13 @@
       "nghia": "mới",
       "vi_du": "裁判で新たな証人が現れた。(Tại phiên tòa, một nhân chứng mới đã xuất hiện.) 会社に新たにパソコンが導入された。(Máy tính mới đã được đưa vào sử dụng trong công ty.) 気持ち/決意を新たにする。(Làm mới lại cảm xúc/ quyết tâm.)",
       "vi_du_ruby": "<ruby>裁判<rt>さいばん</rt></ruby>で<ruby>新<rt>あら</rt></ruby>たな<ruby>証人<rt>しょうにん</rt></ruby>が現れた。(Tại phiên tòa, một nhân chứng mới đã xuất hiện.) 会社に<ruby>新<rt>あら</rt></ruby>たにパソコンが<ruby>導入<rt>どうにゅう</rt></ruby>された。(Máy tính mới đã được đưa vào sử dụng trong công ty.) 気持ち/<ruby>決意<rt>けつい</rt></ruby>を<ruby>新<rt>あら</rt></ruby>たにする。(Làm mới lại cảm xúc/ quyết tâm.)",
-      "dong_nghia": ["新しい"],
-      "trai_nghia": ["古い", "従来の"]
+      "dong_nghia": [
+        "新しい"
+      ],
+      "trai_nghia": [
+        "古い",
+        "従来の"
+      ]
     },
     {
       "kanji": "合理的な",
@@ -296,8 +449,14 @@
       "nghia": "hợp lý, có logic, hiệu quả",
       "vi_du": "工場の生産ラインは合理的に作られている。(Dây chuyền sản xuất của nhà máy được thiết lập một cách rất hợp lý.)",
       "vi_du_ruby": "工場の<ruby>生産<rt>せいさん</rt></ruby>ラインは<ruby>合理的<rt>ごうりてき</rt></ruby>に作られている。(Dây chuyền sản xuất của nhà máy được thiết lập một cách rất hợp lý.)",
-      "dong_nghia": ["論理的な", "効率的な"],
-      "trai_nghia": ["非合理的な", "非効率な"]
+      "dong_nghia": [
+        "論理的な",
+        "効率的な"
+      ],
+      "trai_nghia": [
+        "非合理的な",
+        "非効率な"
+      ]
     },
     {
       "kanji": "器用な",
@@ -307,8 +466,13 @@
       "nghia": "khéo tay, khôn khéo",
       "vi_du": "彼女は手先が器用で、アクセサリーを全部手作りしている。(Cô ấy có đôi tay rất khéo léo nên đã tự làm thủ công toàn bộ trang sức.) 器用に世の中を渡る。(Sống trên đời một cách khôn khéo.)",
       "vi_du_ruby": "彼女は<ruby>手先<rt>てさき</rt></ruby>が<ruby>器用<rt>きよう</rt></ruby>で、アクセサリーを全部手作りしている。(Cô ấy có đôi tay rất khéo léo nên đã tự làm thủ công toàn bộ trang sức.) <ruby>器用<rt>きよう</rt></ruby>に<ruby>世の中<rt>よのなか</rt></ruby>を<ruby>渡<rt>わた</rt></ruby>る。(Sống trên đời một cách khôn khéo.)",
-      "dong_nghia": ["巧みな", "上手な"],
-      "trai_nghia": ["不器用な"]
+      "dong_nghia": [
+        "巧みな",
+        "上手な"
+      ],
+      "trai_nghia": [
+        "不器用な"
+      ]
     },
     {
       "kanji": "手軽な",
@@ -318,8 +482,13 @@
       "nghia": "nhẹ nhàng, đơn giản, tiện lợi",
       "vi_du": "ジョギングは誰でも手軽にできるスポーツだ。(Chạy bộ là môn thể thao mà ai cũng có thể tham gia một cách nhẹ nhàng đơn giản.) レトルト食品は手軽に食べられて便利だ。(Thực phẩm đóng gói sẵn có thể ăn một cách đơn giản nên rất tiện lợi.)",
       "vi_du_ruby": "ジョギングは誰でも<ruby>手軽<rt>てがる</rt></ruby>にできるスポーツだ。(Chạy bộ là môn thể thao mà ai cũng có thể tham gia một cách nhẹ nhàng đơn giản.) レトルト<ruby>食品<rt>しょくひん</rt></ruby>は<ruby>手軽<rt>てがる</rt></ruby>に食べられて便利だ。(Thực phẩm đóng gói sẵn có thể ăn một cách đơn giản nên rất tiện lợi.)",
-      "dong_nghia": ["簡単な", "気軽な"],
-      "trai_nghia": ["手間がかかる"]
+      "dong_nghia": [
+        "簡単な",
+        "気軽な"
+      ],
+      "trai_nghia": [
+        "手間がかかる"
+      ]
     },
     {
       "kanji": "手頃な",
@@ -329,8 +498,13 @@
       "nghia": "phù hợp, vừa phải, phải chăng (giá cả, kích thước)",
       "vi_du": "この店では手ごろな値段でおいしいフランス料理が食べられる。(Ở quán này có thể ăn những món Pháp ngon miệng với mức giá phải chăng.) このゲームは難しすぎず、初心者には手ごろだ。(Trò chơi này không quá khó nên rất phù hợp với người mới bắt đầu.) 手ごろな大きさ/厚さ/重さ。(Độ lớn/ độ dày/ trọng lượng vừa phải.)",
       "vi_du_ruby": "この店では<ruby>手頃<rt>てごろ</rt></ruby>な値段でおいしいフランス料理が食べられる。(Ở quán này có thể ăn những món Pháp ngon miệng với mức giá phải chăng.) このゲームは難しすぎず、<ruby>初心者<rt>しょしんしゃ</rt></ruby>には<ruby>手頃<rt>てごろ</rt></ruby>だ。(Trò chơi này không quá khó nên rất phù hợp với người mới bắt đầu.) <ruby>手頃<rt>てごろ</rt></ruby>な大きさ/<ruby>厚<rt>あつ</rt></ruby>さ/重さ。(Độ lớn/ độ dày/ trọng lượng vừa phải.)",
-      "dong_nghia": ["リーズナブルな", "ちょうどいい"],
-      "trai_nghia": ["不相応な"]
+      "dong_nghia": [
+        "リーズナブルな",
+        "ちょうどいい"
+      ],
+      "trai_nghia": [
+        "不相応な"
+      ]
     },
     {
       "kanji": "高価な",
@@ -340,8 +514,14 @@
       "nghia": "đắt giá, đắt tiền",
       "vi_du": "この博物館には世界一高価な宝石が展示してある。(Tại bảo tàng này đang trưng bày viên đá quý đắt giá nhất thế giới.) 高価な品/プレゼント。(Món hàng/ món quà đắt tiền.)",
       "vi_du_ruby": "この<ruby>博物館<rt>はくぶつかん</rt></ruby>には世界一<ruby>高価<rt>こうか</rt></ruby>な<ruby>宝石<rt>ほうせき</rt></ruby>が<ruby>展示<rt>てんじ</rt></ruby>してある。(Tại bảo tàng này đang trưng bày viên đá quý đắt giá nhất thế giới.) <ruby>高価<rt>こうか</rt></ruby>な品/プレゼント。(Món hàng/ món quà đắt tiền.)",
-      "dong_nghia": ["高い", "高級な"],
-      "trai_nghia": ["安価な", "安い"]
+      "dong_nghia": [
+        "高い",
+        "高級な"
+      ],
+      "trai_nghia": [
+        "安価な",
+        "安い"
+      ]
     },
     {
       "kanji": "贅沢な",
@@ -351,8 +531,14 @@
       "nghia": "xa xỉ, hoang phí, dư dả",
       "vi_du": "贅沢な暮らしをしている。(Đang sống một cuộc sống xa hoa.) 貧しいころは、お正月にごちそうを食べるのが年に一度の贅沢だった。(Thời còn nghèo khó, việc được ăn mâm cỗ ngon vào ngày Tết là sự xa xỉ mỗi năm chỉ có một lần.) 何の不自由もないのに、毎日が退屈とは贅沢な悩みだ。(Sống không thiếu thốn gì mà ngày nào cũng thấy buồn chán thì đúng là một \"nỗi phiền não xa xỉ\".)",
       "vi_du_ruby": "<ruby>贅沢<rt>ぜいたく</rt></ruby>な<ruby>暮<rt>く</rt></ruby>らしをしている。(Đang sống một cuộc sống xa hoa.) 貧しいころは、お正月にごちそうを食べるのが年に一度の<ruby>贅沢<rt>ぜいたく</rt></ruby>だった。(Thời còn nghèo khó, việc được ăn mâm cỗ ngon vào ngày Tết là sự xa xỉ mỗi năm chỉ có một lần.) 何の<ruby>不自由<rt>ふじゆう</rt></ruby>もないのに、毎日が<ruby>退屈<rt>たいくつ</rt></ruby>とは<ruby>贅沢<rt>ぜいたく</rt></ruby>な<ruby>悩<rt>なや</rt></ruby>みだ。(Sống không thiếu thốn gì mà ngày nào cũng thấy buồn chán thì đúng là một \"nỗi phiền não xa xỉ\".)",
-      "dong_nghia": ["ゴージャスな", "豪華な"],
-      "trai_nghia": ["質素な", "つましい"]
+      "dong_nghia": [
+        "ゴージャスな",
+        "豪華な"
+      ],
+      "trai_nghia": [
+        "質素な",
+        "つましい"
+      ]
     },
     {
       "kanji": "豪華な",
@@ -362,8 +548,15 @@
       "nghia": "hoành tráng, lộng lẫy, sang trọng",
       "vi_du": "客を500人招いて豪華な結婚披露宴をした。(Đã mời 500 khách và tổ chức một buổi tiệc cưới vô cùng hoành tráng.) 今日は給料日だから、ちょっと豪華にホテルで食事しよう。(Hôm nay là ngày nhận lương nên chúng ta hãy đi ăn ở khách sạn sang trọng một chút nhé.)",
       "vi_du_ruby": "客を500人<ruby>招<rt>まね</rt></ruby>いて<ruby>豪華<rt>ごうか</rt></ruby>な<ruby>結婚披露宴<rt>けっこんひろうえん</rt></ruby>をした。(Đã mời 500 khách và tổ chức một buổi tiệc cưới vô cùng hoành tráng.) 今日は<ruby>給料日<rt>きゅうりょうび</rt></ruby>だから、ちょっと<ruby>豪華<rt>ごうか</rt></ruby>にホテルで食事しよう。(Hôm nay là ngày nhận lương nên chúng ta hãy đi ăn ở khách sạn sang trọng một chút nhé.)",
-      "dong_nghia": ["ゴージャスな", "華やかな", "贅沢な"],
-      "trai_nghia": ["質素な", "みすぼらしい"]
+      "dong_nghia": [
+        "ゴージャスな",
+        "華やかな",
+        "贅沢な"
+      ],
+      "trai_nghia": [
+        "質素な",
+        "みすぼらしい"
+      ]
     },
     {
       "kanji": "高級な",
@@ -373,8 +566,14 @@
       "nghia": "cao cấp, chất lượng cao",
       "vi_du": "ツバメの巣は中華料理では高級な食材だ。(Tổ yến là một nguyên liệu cao cấp trong ẩm thực Trung Hoa.)",
       "vi_du_ruby": "ツバメの<ruby>巣<rt>す</rt></ruby>は<ruby>中華料理<rt>ちゅうかりょうり</rt></ruby>では<ruby>高級<rt>こうきゅう</rt></ruby>な<ruby>食材<rt>しょくざい</rt></ruby>だ。(Tổ yến là một nguyên liệu cao cấp trong ẩm thực Trung Hoa.)",
-      "dong_nghia": ["上等な", "高価な"],
-      "trai_nghia": ["低級な", "安物の"]
+      "dong_nghia": [
+        "上等な",
+        "高価な"
+      ],
+      "trai_nghia": [
+        "低級な",
+        "安物の"
+      ]
     },
     {
       "kanji": "上等な",
@@ -384,8 +583,14 @@
       "nghia": "thượng hạng, cao cấp, tốt/đủ giỏi",
       "vi_du": "上等なお菓子をお土産にいただいた。(Tôi đã được nhận món bánh kẹo thượng hạng làm quà lưu niệm.) 優勝は難しいだろう。3位以内に入れれば上等だ。(Giành chức vô địch chắc là khó rồi. Nếu lọt được vào top 3 thì cũng đã là quá xuất sắc rồi.)",
       "vi_du_ruby": "<ruby>上等<rt>じょうとう</rt></ruby>なお菓子をお<ruby>土産<rt>みやげ</rt></ruby>にいただいた。(Tôi đã được nhận món bánh kẹo thượng hạng làm quà lưu niệm.) 優勝は難しいだろう。3位以内に入れれば<ruby>上等<rt>じょうとう</rt></ruby>だ。(Giành chức vô địch chắc là khó rồi. Nếu lọt được vào top 3 thì cũng đã là quá xuất sắc rồi.)",
-      "dong_nghia": ["優れた", "高級な"],
-      "trai_nghia": ["下等な", "劣悪な"]
+      "dong_nghia": [
+        "優れた",
+        "高級な"
+      ],
+      "trai_nghia": [
+        "下等な",
+        "劣悪な"
+      ]
     },
     {
       "kanji": "上品な",
@@ -395,8 +600,13 @@
       "nghia": "tao nhã, thanh lịch",
       "vi_du": "彼女はいつも上品な服を着ている。(Cô ấy lúc nào cũng mặc những trang phục rất trang nhã thanh lịch.) 上品に話す/食べる/ふるまう。(Nói chuyện/ ăn uống/ cư xử một cách thanh lịch.) 上品な顔立ち/言葉遣い。(Nét mặt/ cách dùng từ tao nhã.)",
       "vi_du_ruby": "彼女はいつも<ruby>上品<rt>じょうひん</rt></ruby>な服を着ている。(Cô ấy lúc nào cũng mặc những trang phục rất trang nhã thanh lịch.) <ruby>上品<rt>じょうひん</rt></ruby>に話す/食べる/ふるまう。(Nói chuyện/ ăn uống/ cư xử một cách thanh lịch.) <ruby>上品<rt>じょうひん</rt></ruby>な<ruby>顔立<rt>かおだ</rt></ruby>ち/<ruby>言葉遣<rt>ことばづか</rt></ruby>い。(Nét mặt/ cách dùng từ tao nhã.)",
-      "dong_nghia": ["エレガントな", "品がいい"],
-      "trai_nghia": ["下品な"]
+      "dong_nghia": [
+        "エレガントな",
+        "品がいい"
+      ],
+      "trai_nghia": [
+        "下品な"
+      ]
     },
     {
       "kanji": "適度な",
@@ -406,8 +616,14 @@
       "nghia": "điều độ, thích hợp, vừa phải",
       "vi_du": "健康のためには、適度な運動が大切だ。(Để có sức khỏe thì việc vận động ở mức độ thích hợp là rất quan trọng.) 酒は適度に楽しむのがいい。(Rượu thì nên thưởng thức ở mức độ vừa phải là tốt nhất.)",
       "vi_du_ruby": "<ruby>健康<rt>けんこう</rt></ruby>のためには、<ruby>適度<rt>てきど</rt></ruby>な運動が大切だ。(Để có sức khỏe thì việc vận động ở mức độ thích hợp là rất quan trọng.) 酒は<ruby>適度<rt>てきど</rt></ruby>に楽しむのがいい。(Rượu thì nên thưởng thức ở mức độ vừa phải là tốt nhất.)",
-      "dong_nghia": ["ちょうどいい", "適切な"],
-      "trai_nghia": ["極端な", "過度な"]
+      "dong_nghia": [
+        "ちょうどいい",
+        "適切な"
+      ],
+      "trai_nghia": [
+        "極端な",
+        "過度な"
+      ]
     },
     {
       "kanji": "快適な",
@@ -417,8 +633,13 @@
       "nghia": "dễ chịu, sảng khoái, thoải mái",
       "vi_du": "新しい車の乗り心地は快適だ。(Cảm giác khi ngồi trên chiếc xe mới thật sự rất thoải mái dễ chịu.) エアコンの効いた部屋で快適に過ごす。(Trải qua thời gian thoải mái trong căn phòng có bật điều hòa mát lạnh.)",
       "vi_du_ruby": "新しい車の<ruby>乗<rt>の</rt></ruby>り<ruby>心地<rt>ごこち</rt></ruby>は<ruby>快適<rt>かいてき</rt></ruby>だ。(Cảm giác khi ngồi trên chiếc xe mới thật sự rất thoải mái dễ chịu.) エアコンの<ruby>効<rt>き</rt></ruby>いた部屋で<ruby>快適<rt>かいてき</rt></ruby>に<ruby>過<rt>す</rt></ruby>ごす。(Trải qua thời gian thoải mái trong căn phòng có bật điều hòa mát lạnh.)",
-      "dong_nghia": ["心地よい", "気持ちのいい"],
-      "trai_nghia": ["不快な"]
+      "dong_nghia": [
+        "心地よい",
+        "気持ちのいい"
+      ],
+      "trai_nghia": [
+        "不快な"
+      ]
     },
     {
       "kanji": "快い",
@@ -428,8 +649,14 @@
       "nghia": "hài lòng, dễ chịu, sẵn lòng",
       "vi_du": "草原には快い風が吹いていて気持ちが良かった。(Trên thảo nguyên có những cơn gió dễ chịu thổi qua mang lại cảm giác rất thư thái.) 急な頼みだったが、友人は快く引き受けてくれた。(Dù là một lời nhờ vả đột ngột nhưng người bạn của tôi vẫn vui vẻ sẵn lòng nhận lời.)",
       "vi_du_ruby": "<ruby>草原<rt>そうげん</rt></ruby>には<ruby>快<rt>こころよ</rt></ruby>い風が吹いていて気持ちが良かった。(Trên thảo nguyên có những cơn gió dễ chịu thổi qua mang lại cảm giác rất thư thái.) 急な<ruby>頼<rt>たの</rt></ruby>みだったが、友人は<ruby>快<rt>こころよ</rt></ruby>く<ruby>引<rt>ひ</rt></ruby>き<ruby>受<rt>う</rt></ruby>けてくれた。(Dù là một lời nhờ vả đột ngột nhưng người bạn của tôi vẫn vui vẻ sẵn lòng nhận lời.)",
-      "dong_nghia": ["気持ちいい", "爽やかな"],
-      "trai_nghia": ["不快な", "嫌な"]
+      "dong_nghia": [
+        "気持ちいい",
+        "爽やかな"
+      ],
+      "trai_nghia": [
+        "不快な",
+        "嫌な"
+      ]
     },
     {
       "kanji": "順調な",
@@ -439,8 +666,14 @@
       "nghia": "thuận lợi, suôn sẻ",
       "vi_du": "計画は順調に進んでいる。(Kế hoạch đang tiến triển một cách thuận lợi.) 手術後の経過は順調だ。(Tình hình hồi phục sau phẫu thuật đang rất khả quan.) 新作は順調な売れ行きだ。(Tác phẩm mới đang có doanh số bán ra rất suôn sẻ.)",
       "vi_du_ruby": "計画は<ruby>順調<rt>じゅんちょう</rt></ruby>に進んでいる。(Kế hoạch đang tiến triển một cách thuận lợi.) <ruby>手術後<rt>しゅじゅつご</rt></ruby>の<ruby>経過<rt>けいか</rt></ruby>は<ruby>順調<rt>じゅんちょう</rt></ruby>だ。(Tình hình hồi phục sau phẫu thuật đang rất khả quan.) <ruby>新作<rt>しんさく</rt></ruby>は<ruby>順調<rt>じゅんちょう</rt></ruby>な<ruby>売<rt>う</rt></ruby>れ<ruby>行<rt>ゆ</rt></ruby>きだ。(Tác phẩm mới đang có doanh số bán ra rất suôn sẻ.)",
-      "dong_nghia": ["スムーズな", "好調な"],
-      "trai_nghia": ["不調な", "滞る"]
+      "dong_nghia": [
+        "スムーズな",
+        "好調な"
+      ],
+      "trai_nghia": [
+        "不調な",
+        "滞る"
+      ]
     },
     {
       "kanji": "活発な",
@@ -450,8 +683,14 @@
       "nghia": "hoạt bát, năng động, sôi nổi",
       "vi_du": "うちの娘はとても活発だ。(Con gái nhà tôi vô cùng hoạt bát năng động.) 活発な議論が行われた。(Một cuộc thảo luận sôi nổi đã được diễn ra.) 最近、火山活動が活発になっている。(Gần đây, hoạt động núi lửa đang trở nên mạnh mẽ hơn.)",
       "vi_du_ruby": "うちの<ruby>娘<rt>むすめ</rt></ruby>はとても<ruby>活発<rt>かっぱつ</rt></ruby>だ。(Con gái nhà tôi vô cùng hoạt bát năng động.) <ruby>活発<rt>かっぱつ</rt></ruby>な議論が行われた。(Một cuộc thảo luận sôi nổi đã được diễn ra.) 最近、<ruby>火山活動<rt>かざんかつどう</rt></ruby>が<ruby>活発<rt>かっぱつ</rt></ruby>になっている。(Gần đây, hoạt động núi lửa đang trở nên mạnh mẽ hơn.)",
-      "dong_nghia": ["アクティブな", "元気な"],
-      "trai_nghia": ["おとなしい", "不活発な"]
+      "dong_nghia": [
+        "アクティブな",
+        "元気な"
+      ],
+      "trai_nghia": [
+        "おとなしい",
+        "不活発な"
+      ]
     },
     {
       "kanji": "的確な",
@@ -461,8 +700,14 @@
       "nghia": "rõ ràng, chính xác, xác đáng",
       "vi_du": "上司は部下に的確な指示を与えることが大切だ。(Cấp trên đưa ra những chỉ thị chính xác rõ ràng cho cấp dưới là điều rất quan trọng.) 状況を的確に把握する。(Nắm bắt tình hình một cách chính xác.)",
       "vi_du_ruby": "上司は部下に<ruby>的確<rt>てきかく</rt></ruby>な<ruby>指示<rt>しじ</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えることが大切だ。(Cấp trên đưa ra những chỉ thị chính xác rõ ràng cho cấp dưới là điều rất quan trọng.) <ruby>状況<rt>じょうきょう</rt></ruby>を<ruby>的確<rt>てきかく</rt></ruby>に<ruby>把握<rt>はあく</rt></ruby>する。(Nắm bắt tình hình một cách chính xác.)",
-      "dong_nghia": ["適切な", "正確な"],
-      "trai_nghia": ["不的確な", "不正確な"]
+      "dong_nghia": [
+        "適切な",
+        "正確な"
+      ],
+      "trai_nghia": [
+        "不的確な",
+        "不正確な"
+      ]
     },
     {
       "kanji": "確実な",
@@ -472,8 +717,14 @@
       "nghia": "chính xác, chắc chắn",
       "vi_du": "将来について確実なことは分からない。(Tôi không thể biết được những điều chắc chắn về tương lai.) この点数なら合格は確実だ。(Với số điểm như thế này thì việc thi đỗ là cái chắc.)",
       "vi_du_ruby": "<ruby>将来<rt>しょうらい</rt></ruby>について<ruby>確実<rt>かくじつ</rt></ruby>なことは分からない。(Tôi không thể biết được những điều chắc chắn về tương lai.) この点数なら<ruby>合格<rt>ごうかく</rt></ruby>は<ruby>確実<rt>かくじつ</rt></ruby>だ。(Với số điểm như thế này thì việc thi đỗ là cái chắc.)",
-      "dong_nghia": ["確かな", "間違いない"],
-      "trai_nghia": ["不確実な", "曖昧な"]
+      "dong_nghia": [
+        "確かな",
+        "間違いない"
+      ],
+      "trai_nghia": [
+        "不確実な",
+        "曖昧な"
+      ]
     },
     {
       "kanji": "明らかな",
@@ -483,8 +734,14 @@
       "nghia": "rõ ràng, sáng tỏ",
       "vi_du": "事故の原因は明らかではない。(Nguyên nhân của vụ tai nạn vẫn chưa được làm rõ.) 明らかに彼は嘘をついている。(Rõ ràng là anh ta đang nói dối rành rành ra đó.) A社とB社が合併することが明らかになった。(Việc công ty A và công ty B sát nhập đã trở nên sáng tỏ.)",
       "vi_du_ruby": "事故の<ruby>原因<rt>げんいん</rt></ruby>は<ruby>明<rt>あき</rt></ruby>らかではない。(Nguyên nhân của vụ tai nạn vẫn chưa được làm rõ.) <ruby>明<rt>あき</rt></ruby>らかに彼は<ruby>嘘<rt>うそ</rt></ruby>をついている。(Rõ ràng là anh ta đang nói dối rành rành ra đó.) A社とB社が<ruby>合併<rt>がっぺい</rt></ruby>することが<ruby>明<rt>あき</rt></ruby>らかになった。(Việc công ty A và công ty B sát nhập đã trở nên sáng tỏ.)",
-      "dong_nghia": ["はっきりした", "明白な"],
-      "trai_nghia": ["不明な", "曖昧な"]
+      "dong_nghia": [
+        "はっきりした",
+        "明白な"
+      ],
+      "trai_nghia": [
+        "不明な",
+        "曖昧な"
+      ]
     },
     {
       "kanji": "曖昧な",
@@ -494,8 +751,14 @@
       "nghia": "mơ hồ, không rõ ràng",
       "vi_du": "社長は辞任についてあいまいな態度を取った。(Giám đốc đã tỏ thái độ ậm ờ mơ hồ về việc từ chức.) あの日のことは記憶があいまいだ。(Những chuyện ngày hôm đó giờ chỉ còn là một kí ức mơ hồ.)",
       "vi_du_ruby": "社長は<ruby>辞任<rt>じにん</rt></ruby>について<ruby>曖昧<rt>あいまい</rt></ruby>な態度を取った。(Giám đốc đã tỏ thái độ ậm ờ mơ hồ về việc từ chức.) あの日のことは<ruby>記憶<rt>きおく</rt></ruby>があいまいだ。(Những chuyện ngày hôm đó giờ chỉ còn là một kí ức mơ hồ.)",
-      "dong_nghia": ["ぼやけた", "不明瞭な"],
-      "trai_nghia": ["明確な", "はっきりした"]
+      "dong_nghia": [
+        "ぼやけた",
+        "不明瞭な"
+      ],
+      "trai_nghia": [
+        "明確な",
+        "はっきりした"
+      ]
     },
     {
       "kanji": "具体的な",
@@ -505,8 +768,12 @@
       "nghia": "cụ thể, rõ ràng",
       "vi_du": "「分かりにくいので、もっと具体的に説明してください」(Khó hiểu quá, xin hãy giải thích cụ thể hơn đi ạ.) 具体的な話/例/計画/方法。(Câu chuyện/ ví dụ/ kế hoạch/ phương pháp cụ thể.)",
       "vi_du_ruby": "「分かりにくいので、もっと<ruby>具体的<rt>ぐたいてき</rt></ruby>に説明してください」(Khó hiểu quá, xin hãy giải thích cụ thể hơn đi ạ.) <ruby>具体的<rt>ぐたいてき</rt></ruby>な話/例/<ruby>計画<rt>けいかく</rt></ruby>/方法。(Câu chuyện/ ví dụ/ kế hoạch/ phương pháp cụ thể.)",
-      "dong_nghia": ["はっきりした"],
-      "trai_nghia": ["抽象的な"]
+      "dong_nghia": [
+        "はっきりした"
+      ],
+      "trai_nghia": [
+        "抽象的な"
+      ]
     },
     {
       "kanji": "抽象的な",
@@ -516,8 +783,12 @@
       "nghia": "tính trừu tượng",
       "vi_du": "名詞は形のない抽象的な物事も表す。(Danh từ cũng dùng để biểu thị những sự vật sự việc mang tính trừu tượng không có hình dạng thực.) この理論は抽象的過ぎてよくわからない。(Lý thuyết này trừu tượng quá nên tôi không hiểu rõ lắm.)",
       "vi_du_ruby": "<ruby>名詞<rt>めいし</rt></ruby>は形のない<ruby>抽象的<rt>ちゅうしょうてき</rt></ruby>な<ruby>物事<rt>ものごと</rt></ruby>も表す。(Danh từ cũng dùng để biểu thị những sự vật sự việc mang tính trừu tượng không có hình dạng thực.) この理論は<ruby>抽象的<rt>ちゅうしょうてき</rt></ruby>過ぎてよくわからない。(Lý thuyết này trừu tượng quá nên tôi không hiểu rõ lắm.)",
-      "dong_nghia": ["観念的な"],
-      "trai_nghia": ["具体的な"]
+      "dong_nghia": [
+        "観念的な"
+      ],
+      "trai_nghia": [
+        "具体的な"
+      ]
     },
     {
       "kanji": "等しい",
@@ -527,8 +798,14 @@
       "nghia": "bằng nhau, giống nhau, đồng nghĩa",
       "vi_du": "この二本の直線は長さが等しい。(Hai đường thẳng này có chiều dài bằng nhau.) 遺産は3人の子供たちに等しく分配された。(Tài sản thừa kế đã được chia đều cho 3 người con.) 彼の表情は「嫌だ」と言っているのに等しい。(Biểu cảm của anh ta đồng nghĩa với việc đang muốn nói là \"Tôi ghét/từ chối\".)",
       "vi_du_ruby": "この二本の<ruby>直線<rt>ちょくせん</rt></ruby>は長さが<ruby>等<rt>ひと</rt></ruby>しい。(Hai đường thẳng này có chiều dài bằng nhau.) <ruby>遺産<rt>いさん</rt></ruby>は3人の子供たちに<ruby>等<rt>ひと</rt></ruby>しく<ruby>分配<rt>ぶんぱい</rt></ruby>された。(Tài sản thừa kế đã được chia đều cho 3 người con.) 彼の<ruby>表情<rt>ひょうじょう</rt></ruby>は「嫌だ」と言っているのに<ruby>等<rt>ひと</rt></ruby>しい。(Biểu cảm của anh ta đồng nghĩa với việc đang muốn nói là \"Tôi ghét/từ chối\".)",
-      "dong_nghia": ["同じ", "同等の"],
-      "trai_nghia": ["異なる", "違う"]
+      "dong_nghia": [
+        "同じ",
+        "同等の"
+      ],
+      "trai_nghia": [
+        "異なる",
+        "違う"
+      ]
     },
     {
       "kanji": "平等な",
@@ -538,8 +815,14 @@
       "nghia": "bình đẳng",
       "vi_du": "法の下では誰でも平等だ。(Dưới sự bảo hộ của pháp luật thì bất kì ai cũng đều bình đẳng.) 会の収入は会員に平等に分配される。(Nguồn thu của hội sẽ được phân chia bình đẳng cho tất cả các hội viên.)",
       "vi_du_ruby": "<ruby>法<rt>ほう</rt></ruby>の下では誰でも<ruby>平等<rt>びょうどう</rt></ruby>だ。(Dưới sự bảo hộ của pháp luật thì bất kì ai cũng đều bình đẳng.) 会の収入は<ruby>会員<rt>かいいん</rt></ruby>に<ruby>平等<rt>びょうどう</rt></ruby>に分配される。(Nguồn thu của hội sẽ được phân chia bình đẳng cho tất cả các hội viên.)",
-      "dong_nghia": ["対等な", "公平な"],
-      "trai_nghia": ["不平等な", "差別的な"]
+      "dong_nghia": [
+        "対等な",
+        "公平な"
+      ],
+      "trai_nghia": [
+        "不平等な",
+        "差別的な"
+      ]
     },
     {
       "kanji": "公平な",
@@ -549,8 +832,14 @@
       "nghia": "công bằng",
       "vi_du": "教師が学生によって態度を変えるのは公平ではない。(Việc giáo viên thay đổi thái độ tùy theo từng học sinh là không hề công bằng.) 誰からも公平に意見を聞く。(Lắng nghe ý kiến một cách công bằng từ tất cả mọi người.)",
       "vi_du_ruby": "<ruby>教師<rt>きょうし</rt></ruby>が学生によって<ruby>態度<rt>たいど</rt></ruby>を変えるのは<ruby>公平<rt>こうへい</rt></ruby>ではない。(Việc giáo viên thay đổi thái độ tùy theo từng học sinh là không hề công bằng.) 誰からも<ruby>公平<rt>こうへい</rt></ruby>に意見を聞く。(Lắng nghe ý kiến một cách công bằng từ tất cả mọi người.)",
-      "dong_nghia": ["フェアな", "平等な"],
-      "trai_nghia": ["不公平な", "不当な"]
+      "dong_nghia": [
+        "フェアな",
+        "平等な"
+      ],
+      "trai_nghia": [
+        "不公平な",
+        "不当な"
+      ]
     }
   ]
 }
