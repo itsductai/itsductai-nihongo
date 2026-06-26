@@ -93,6 +93,10 @@ const App = {
   choukaiPendingTestId: null,
   choukaiCurrentAudioSrc: null, // theo dõi file audio đang load, tránh load lại không cần thiết
   choukaiAnswering: false,      // chặn bấm thêm lựa chọn sau khi đã trả lời câu hiện tại
+  // Các listener "timeupdate" karaoke đang gắn, theo từng nơi dùng (key: "shadow",
+  // "reviewScript", "reviewVi", "detailScript"...) — gỡ đúng cái CŨ trước khi gắn
+  // MỚI để tránh nhiều listener cộng dồn trên cùng 1 thẻ <audio> qua mỗi lần đổi câu.
+  karaokeHandlers: {},
   examLastAnswerCorrect: null, // kết quả lượt vừa chấm (chế độ instant), dùng khi bấm "Tiếp tục"
   examLastAnsweredQIndex: null,
   examPerQTimerHandle: null,
@@ -771,18 +775,82 @@ function renderStatsMode() {
   renderStatsChoukaiHistory();
 }
 
-// Bảng tổng quan: mỗi bộ 1 dòng, có thanh ngang 3 màu (đã thuộc/đang học/chưa
-// học) ngay trong bảng — không cần mở từng bộ ra mới biết. Nhấn tên bộ -> nhảy
-// thẳng sang SRS của bộ đó để ôn ngay những thẻ đến hạn.
-function renderStatsOverviewTable() {
-  const tbody = document.getElementById("statsOverviewBody");
+// Vẽ 1 biểu đồ tròn (donut) thuần SVG — không phụ thuộc thư viện ngoài (app
+// vẫn là HTML/CSS/JS thuần). Nhận mảng segments [{value, color, label}] và vẽ
+// các cung nối tiếp nhau bằng kỹ thuật stroke-dasharray/dashoffset, bắt đầu từ
+// vị trí 12 giờ (xoay -90°). Trả về chuỗi HTML (SVG + chữ % ở giữa).
+function buildDonutSvg(segments, centerLabel, centerSub) {
+  const size = 120, r = 48, cx = size / 2, cy = size / 2;
+  const circumference = 2 * Math.PI * r;
+  const total = segments.reduce((sum, s) => sum + s.value, 0) || 1;
+  let cumulative = 0;
+  const circles = segments.map((s) => {
+    const frac = s.value / total;
+    const length = frac * circumference;
+    const dasharray = `${length} ${circumference - length}`;
+    const dashoffset = circumference - cumulative;
+    cumulative += length;
+    if (s.value <= 0) return "";
+    return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${s.color}" stroke-width="16"
+      stroke-dasharray="${dasharray}" stroke-dashoffset="${dashoffset}" />`;
+  }).join("");
+  // Vòng nền xám mờ (trường hợp total=0, hoặc làm khung viền nhẹ phía dưới các cung màu)
+  return `
+    <svg viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" class="stats-donut-svg">
+      <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="var(--bg-3)" stroke-width="16" />
+      <g transform="rotate(-90 ${cx} ${cy})">${circles}</g>
+      <text x="${cx}" y="${cy - 2}" text-anchor="middle" class="stats-donut-center-num">${centerLabel}</text>
+      <text x="${cx}" y="${cy + 16}" text-anchor="middle" class="stats-donut-center-sub">${centerSub}</text>
+    </svg>
+  `;
+}
+
+// Render 1 nhóm (Mimi hoặc Khác): donut tổng quan + bảng từng bộ, sắp theo %
+// đã thuộc tăng dần (bộ yếu nhất lên đầu).
+function renderStatsGroup(decks, donutRowId, tbodyId, accentLabel) {
+  const donutRow = document.getElementById(donutRowId);
+  const tbody = document.getElementById(tbodyId);
   tbody.innerHTML = "";
 
-  // Sắp theo % đã thuộc tăng dần -> bộ yếu nhất/ít học nhất hiện lên đầu,
-  // giúp nhìn 1 cái biết ngay nên ưu tiên học bộ nào.
-  const decksWithStats = App.decks.map((deck) => ({ deck, s: computeDeckStats(deck) }));
-  decksWithStats.sort((a, b) => a.s.pctKnown - b.s.pctKnown);
+  if (decks.length === 0) {
+    donutRow.innerHTML = `<div class="stats-donut-empty">Chưa có bộ nào trong nhóm này.</div>`;
+    return;
+  }
 
+  const decksWithStats = decks.map((deck) => ({ deck, s: computeDeckStats(deck) }));
+
+  // Tổng hợp cả nhóm để vẽ donut tổng quan + vài số liệu nổi bật.
+  const agg = decksWithStats.reduce((acc, { s }) => {
+    acc.known += s.known; acc.learning += s.learning; acc.fresh += s.fresh; acc.total += s.total;
+    return acc;
+  }, { known: 0, learning: 0, fresh: 0, total: 0 });
+  const aggPct = agg.total ? Math.round((agg.known / agg.total) * 100) : 0;
+  const bestDeck = decksWithStats.reduce((best, cur) => (cur.s.pctKnown > best.s.pctKnown ? cur : best), decksWithStats[0]);
+  const weakestDeck = decksWithStats.reduce((worst, cur) => (cur.s.pctKnown < worst.s.pctKnown ? cur : worst), decksWithStats[0]);
+
+  donutRow.innerHTML = `
+    <div class="stats-donut-box">
+      ${buildDonutSvg(
+        [
+          { value: agg.known, color: "var(--good)" },
+          { value: agg.learning, color: "var(--warn)" },
+          { value: agg.fresh, color: "var(--border)" },
+        ],
+        `${aggPct}%`,
+        "đã thuộc"
+      )}
+    </div>
+    <div class="stats-donut-summary">
+      <div class="stats-donut-summary-title">${accentLabel} — ${decks.length} bộ, ${agg.total} từ/cấu trúc</div>
+      <div class="stats-donut-summary-row"><i class="stats-dot stats-dot-known"></i> Đã thuộc: <b>${agg.known}</b></div>
+      <div class="stats-donut-summary-row"><i class="stats-dot stats-dot-learning"></i> Đang học: <b>${agg.learning}</b></div>
+      <div class="stats-donut-summary-row"><i class="stats-dot stats-dot-fresh"></i> Chưa học: <b>${agg.fresh}</b></div>
+      <div class="stats-donut-summary-highlight">🏆 Mạnh nhất: <b>${bestDeck.deck.title}</b> (${bestDeck.s.pctKnown}%)</div>
+      <div class="stats-donut-summary-highlight is-weak">⚠ Cần ưu tiên: <b>${weakestDeck.deck.title}</b> (${weakestDeck.s.pctKnown}%)</div>
+    </div>
+  `;
+
+  decksWithStats.sort((a, b) => a.s.pctKnown - b.s.pctKnown);
   decksWithStats.forEach(({ deck, s }) => {
     const tr = document.createElement("tr");
     if (deck.id === App.currentDeckId) tr.classList.add("is-current-deck-row");
@@ -823,6 +891,17 @@ function renderStatsOverviewTable() {
       setMode("srs");
     });
   });
+}
+
+// Bảng tổng quan: tách riêng nhóm "Mimi" (giáo trình chính) khỏi các bộ khác —
+// đồng bộ với cách nhóm ở dropdown sidebar (mục populateDeckPicker). Mỗi nhóm
+// có 1 biểu đồ tròn (donut) tổng quan + bảng chi tiết từng bộ riêng.
+function renderStatsOverviewTable() {
+  const mimiDecks = App.decks.filter((d) => d.series === "mimi");
+  const otherDecks = App.decks.filter((d) => d.series !== "mimi");
+  document.querySelector(".stats-group-mimi").classList.toggle("hidden", mimiDecks.length === 0);
+  renderStatsGroup(mimiDecks, "statsDonutRowMimi", "statsOverviewBodyMimi", "Mimi N2");
+  renderStatsGroup(otherDecks, "statsDonutRowOther", "statsOverviewBodyOther", "Tài liệu khác");
 }
 
 // Bảng đề thi: liệt kê TẤT CẢ đề có trong hệ thống, kể cả CHƯA làm lần nào
@@ -963,13 +1042,55 @@ function enterFocusMode() {
     alert("Hãy chọn một đề thi ở sidebar trước khi phóng to toàn màn hình.");
     return;
   }
+  // Riêng phần nghe: tương tự, cần đã chọn đề nghe trước.
+  const choukaiView = document.getElementById("view-choukai");
+  const isChoukaiViewActive = choukaiView && !choukaiView.classList.contains("hidden");
+  if (isChoukaiViewActive && !App.currentChoukaiId) {
+    alert("Hãy chọn một đề nghe ở trên trước khi phóng to toàn màn hình.");
+    return;
+  }
+  // Riêng "Luyện nghe câu" (shadow mode): cần đã chọn đề + câu cụ thể trước.
+  const shadowView = document.getElementById("view-choukai-shadow");
+  const isShadowViewActive = shadowView && !shadowView.classList.contains("hidden");
+  if (isShadowViewActive && document.getElementById("choukaiShadowBody").classList.contains("hidden")) {
+    alert("Hãy chọn đề nghe + câu cụ thể ở trên trước khi phóng to toàn màn hình.");
+    return;
+  }
   document.getElementById("app").classList.add("focus-mode");
   document.getElementById("btnExitFocus").classList.remove("hidden");
+
+  // Bật Fullscreen API THẬT của trình duyệt — che luôn cả thanh tab/địa chỉ trên
+  // PC/laptop, không chỉ phóng to trong trang. Một số trình duyệt/khung nhúng
+  // (vd iframe không có allow="fullscreen") sẽ TỪ CHỐI lời gọi này — bắt lỗi để
+  // app vẫn hoạt động bình thường ở chế độ "phóng to trong trang" (CSS) như cũ,
+  // không bị crash hay kẹt màn hình.
+  const el = document.documentElement;
+  const req = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
+  if (req) {
+    try {
+      const p = req.call(el);
+      if (p && p.catch) p.catch(function () { /* trình duyệt từ chối — vẫn giữ focus-mode CSS, không sao */ });
+    } catch (e) { /* bỏ qua, giữ nguyên chế độ phóng to bằng CSS */ }
+  }
 }
 
 function exitFocusMode() {
   document.getElementById("app").classList.remove("focus-mode");
   document.getElementById("btnExitFocus").classList.add("hidden");
+
+  // Thoát Fullscreen API thật nếu đang ở fullscreen do app bật (không gọi nếu
+  // không phải app bật, để không ảnh hưởng fullscreen của trang khác/người dùng
+  // tự bật F11 riêng).
+  const isInFullscreen = document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
+  if (isInFullscreen) {
+    const exit = document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen;
+    if (exit) {
+      try {
+        const p = exit.call(document);
+        if (p && p.catch) p.catch(function () { /* bỏ qua */ });
+      } catch (e) { /* bỏ qua */ }
+    }
+  }
 }
 
 function loadFieldConfig() {
@@ -1143,7 +1264,10 @@ async function loadDecks() {
         return { ...w, _id: baseId };
       });
       words = applyPatchesToWords(id, words);
-      decks.push({ id, title: data.title || filename, type, words });
+      // "series" (vd "mimi") — field tùy chọn để nhóm các bộ thuộc cùng 1 giáo
+      // trình lại với nhau trong dropdown, tách khỏi các bộ lẻ khác. Không có
+      // field này thì coi như thuộc nhóm "khác" (không ảnh hưởng bộ cũ).
+      decks.push({ id, title: data.title || filename, type, series: data.series || null, words });
     } catch (e) {
       console.error("Lỗi tải bộ", filename, e);
     }
@@ -1209,13 +1333,31 @@ async function loadChoukaiTests() {
 function populateDeckPicker() {
   const picker = document.getElementById("deckPicker");
   picker.innerHTML = "";
-  App.decks.forEach((d) => {
-    const opt = document.createElement("option");
-    opt.value = d.id;
-    const typeLabel = d.type === "NGUPHAP" ? "Ngữ pháp" : "Từ vựng";
-    opt.textContent = `[${typeLabel}] ${d.title} (${d.words.length})`;
-    picker.appendChild(opt);
-  });
+
+  // Nhóm riêng "Mimi" (giáo trình chính) khỏi các bộ khác — yêu cầu mục 21
+  // README. Bộ nào có "series": "mimi" trong file JSON sẽ rơi vào optgroup
+  // Mimi, đứng ĐẦU dropdown; còn lại giữ nguyên optgroup "Tài liệu khác".
+  // Thứ tự A-Z trong từng nhóm vẫn giữ nguyên (App.decks đã được sort sẵn).
+  const mimiDecks = App.decks.filter((d) => d.series === "mimi");
+  const otherDecks = App.decks.filter((d) => d.series !== "mimi");
+
+  const renderGroup = (label, decks) => {
+    if (decks.length === 0) return;
+    const group = document.createElement("optgroup");
+    group.label = label;
+    decks.forEach((d) => {
+      const opt = document.createElement("option");
+      opt.value = d.id;
+      const typeLabel = d.type === "NGUPHAP" ? "Ngữ pháp" : "Từ vựng";
+      opt.textContent = `[${typeLabel}] ${d.title} (${d.words.length})`;
+      group.appendChild(opt);
+    });
+    picker.appendChild(group);
+  };
+
+  renderGroup("📘 Mimi N2 (giáo trình chính)", mimiDecks);
+  renderGroup("Tài liệu khác", otherDecks);
+
   picker.value = App.currentDeckId;
 }
 
@@ -2642,18 +2784,10 @@ function renderExamQuestion() {
   document.getElementById("examPos").textContent = qIndex + 1;
   document.getElementById("examQueueTotal").textContent = App.examOriginalTotal;
 
-  // Ghi chú "câu làm lại trong hàng đợi" CHỈ có ý nghĩa ở chế độ chấm ngay (vì
-  // chỉ chế độ đó mới đẩy câu sai về cuối hàng đợi để làm lại). Chế độ chấm cuối
-  // bài đi đúng 1 lượt, không có khái niệm "làm lại" — phép tính cũ
-  // (dựa trên examAnswered chỉ tăng khi ĐÚNG) sẽ ra số âm vô nghĩa ở chế độ này.
+  const remainingUnanswered = App.examOriginalTotal - App.examAnswered.size;
+  const retryCount = App.examQueue.length - remainingUnanswered;
   const note = document.getElementById("examRetryNote");
-  if (App.examScoreMode === "instant") {
-    const remainingUnanswered = App.examOriginalTotal - App.examAnswered.size;
-    const retryCount = App.examQueue.length - remainingUnanswered;
-    note.textContent = retryCount > 0 ? `(có ${retryCount} câu làm lại trong hàng đợi)` : "";
-  } else {
-    note.textContent = "";
-  }
+  note.textContent = retryCount > 0 ? `(có ${retryCount} câu làm lại trong hàng đợi)` : "";
 
   document.getElementById("examReviewBanner").classList.add("hidden");
   document.getElementById("examHistoryNote").classList.add("hidden");
@@ -2711,21 +2845,11 @@ function renderExamQuestionContent(q, qIndex, isLive) {
     btn.textContent = q.options[optIdx];
 
     if (!isLive && lastAttempt) {
-      if (App.examScoreMode === "review") {
-        // Chấm cuối bài: cho phép SỬA lại đáp án khi quay lại xem câu đã làm —
-        // đúng với logic làm bài thật (được sửa đáp án tự do trước khi "nộp bài"
-        // ở cuối). KHÔNG tô đúng/sai (vẫn giữ nguyên tinh thần "không biết kết quả
-        // giữa lúc làm" của chế độ này), chỉ tô nhẹ ô đang được chọn.
-        if (optIdx === lastAttempt.chosenIdx) btn.classList.add("was-chosen-neutral");
-        btn.addEventListener("click", () => handleExamAnswerEditReview(btn, optIdx, qIndex, q));
-      } else {
-        // Chấm ngay: đã xem đáp án đúng/sai + giải thích rồi nên chỉ xem lại,
-        // không cho sửa (sửa sau khi đã biết đáp án thì không còn ý nghĩa).
-        btn.classList.add("disabled");
-        if (optIdx === q.dap_an_dung) btn.classList.add("correct");
-        if (optIdx === lastAttempt.chosenIdx && !lastAttempt.correct) btn.classList.add("wrong");
-        if (optIdx === lastAttempt.chosenIdx) btn.classList.add("was-chosen");
-      }
+      // Đang xem lại: tô sẵn đáp án đã chọn lần gần nhất + đáp án đúng, không cho bấm tiếp
+      btn.classList.add("disabled");
+      if (optIdx === q.dap_an_dung) btn.classList.add("correct");
+      if (optIdx === lastAttempt.chosenIdx && !lastAttempt.correct) btn.classList.add("wrong");
+      if (optIdx === lastAttempt.chosenIdx) btn.classList.add("was-chosen");
     } else if (isLive) {
       btn.addEventListener("click", () => handleExamAnswer(btn, optIdx, qIndex, q));
     }
@@ -2795,39 +2919,6 @@ function toggleExamExplain() {
 
   box.innerHTML = rows;
   box.classList.remove("hidden");
-}
-
-// Sửa lại đáp án của 1 câu ĐÃ làm, khi đang quay lại xem qua nút "Câu trước/Câu
-// sau" — CHỈ dùng cho chế độ chấm cuối bài (xem renderExamQuestionContent()).
-// Không tô đúng/sai, không tự chuyển câu — chỉ cập nhật lựa chọn rồi để người
-// học tự bấm điều hướng tiếp khi sẵn sàng, giống hệt cách làm bài thi giấy thật
-// (sửa đáp án tự do, không có phản hồi gì cho tới lúc nộp bài).
-function handleExamAnswerEditReview(btn, chosenIdx, qIndex, q) {
-  const correct = chosenIdx === q.dap_an_dung;
-  const hist = App.examHistory[qIndex];
-  const wasCorrect = hist.firstTryCorrect;
-
-  hist.attempts.push({ chosenIdx, correct, atMs: Date.now() });
-  hist.firstTryCorrect = correct; // chấm cuối bài: đáp án MỚI NHẤT mới là đáp án chính thức để chấm
-
-  // Điều chỉnh điểm + tập hợp examAnswered nếu đúng/sai có thay đổi so với trước
-  if (wasCorrect !== correct) {
-    if (correct) {
-      App.examScore++;
-      App.examAnswered.add(qIndex);
-    } else {
-      App.examScore--;
-      App.examAnswered.delete(qIndex);
-    }
-    document.getElementById("examScore").textContent = App.examScore;
-  }
-
-  recordWeaknessResult("__exam__", `${App.currentExamId}::q${qIndex}`, correct, q.de_bai.slice(0, 60));
-
-  // Chỉ cập nhật lại highlight ô đang chọn, không render lại toàn bộ (giữ nguyên
-  // vị trí xem lại hiện tại, không tự nhảy đi đâu).
-  document.querySelectorAll("#examOptions .quiz-opt").forEach((b) => b.classList.remove("was-chosen-neutral"));
-  btn.classList.add("was-chosen-neutral");
 }
 
 function handleExamAnswer(btn, chosenIdx, qIndex, q) {
@@ -2922,41 +3013,28 @@ function examContinueAfterInstantAnswer() {
 }
 
 // ----- Điều hướng xem lại câu trước / câu sau -----
-// QUAN TRỌNG: examSeenOrder[length-1] LUÔN là vị trí của câu "live" hiện tại
-// (được push vào ngay khi câu đó trở thành câu đang chờ trả lời, xem renderExamQuestion()).
-// Mọi vị trí TRƯỚC đó chắc chắn đã có lịch sử trả lời (vì phải trả lời xong mới
-// qua câu kế). Vì vậy điều hướng KHÔNG được bao giờ gọi showExamReviewAt() cho
-// chính vị trí live đó — phải luôn quay lại qua backToLiveExamQuestion() để câu
-// đó được render đúng ở trạng thái "live" (có thể bấm chọn được), không phải
-// trạng thái "xem lại" (vốn chỉ dành cho câu ĐÃ có lịch sử).
 function examGoPrev() {
-  // Không có câu nào để xem lại trước vị trí live hiện tại
-  if (App.examSeenOrder.length <= 1) return;
+  if (!App.examSeenOrder.length) return;
   if (App.examNavPos === -1) {
-    // Đang ở câu live -> lùi về câu liền trước (bỏ qua chính vị trí live ở cuối)
+    // Đang ở câu live -> lùi về câu liền trước trong lịch sử đã thấy
     App.examNavPos = App.examSeenOrder.length - 2;
   } else {
     App.examNavPos = Math.max(0, App.examNavPos - 1);
+  }
+  if (App.examNavPos < 0) {
+    App.examNavPos = 0;
   }
   showExamReviewAt(App.examNavPos);
 }
 
 function examGoNext() {
   if (App.examNavPos === -1) return; // đã ở câu live, không có gì để "tiến" thêm
-  const nextPos = App.examNavPos + 1;
-  // Trước đây dùng "navPos >= length-1" để quyết định quay về live, nhưng kiểm
-  // tra đó chạy SAU KHI đã tăng navPos, nên lần bấm đầu tiên từ vị trí length-2
-  // sẽ tăng lên đúng length-1 (vị trí live) rồi mới showExamReviewAt() cho vị trí
-  // ĐÓ — hiện sai vì câu live chưa có lịch sử trả lời, nút bấm rơi vào trạng thái
-  // vừa không bị khóa vừa không gắn sự kiện click (không disabled, không listener)
-  // — phải bấm "Câu sau" THÊM 1 LẦN NỮA mới thực sự về lại được câu live qua
-  // nhánh backToLiveExamQuestion(). Sửa: kiểm tra TRƯỚC khi tăng, nếu vị trí kế
-  // tiếp sẽ là vị trí live (length-1) thì đi thẳng về live ngay từ lần bấm đầu.
-  if (nextPos >= App.examSeenOrder.length - 1) {
+  if (App.examNavPos >= App.examSeenOrder.length - 1) {
+    // Đã ở câu cuối cùng đã xem -> quay về câu live thật
     backToLiveExamQuestion();
     return;
   }
-  App.examNavPos = nextPos;
+  App.examNavPos++;
   showExamReviewAt(App.examNavPos);
 }
 
@@ -3033,23 +3111,7 @@ function finishExam() {
   saveExamDetailSnapshot(App.currentExamId, App.examHistory);
 
   if (App.examSpeedMode) {
-    if (App.examScoreMode === "instant") {
-      renderExamTimeSummary();
-    } else {
-      // Chấm cuối bài: KHÔNG có khái niệm "lượt đầu / sửa lại câu sai" — mỗi câu
-      // chỉ đi qua đúng 1 lần theo thứ tự gốc, không có vòng làm lại nào cả. Trước
-      // đây vẫn gọi renderExamTimeSummary() ở đây nên hiện nhầm cả khối "Mốc 2 —
-      // Sửa lại câu sai" dù chế độ này không hề có pha sửa lại nào. Giờ chỉ hiện
-      // tổng thời gian làm bài đơn giản.
-      document.getElementById("examTimeSummary").innerHTML = `
-        <div class="exam-time-summary-block">
-          <div class="exam-time-summary-title">Thời gian làm bài</div>
-          <div class="exam-time-stats-row">
-            <div class="exam-speed-stat"><div class="exam-speed-stat-num">${fmtTime(totalSeconds)}</div><div class="exam-speed-stat-label">tổng thời gian</div></div>
-          </div>
-        </div>
-      `;
-    }
+    renderExamTimeSummary();
     renderExamSpeedSummary();
   } else {
     document.getElementById("examTimeSummary").innerHTML = "";
@@ -3328,9 +3390,26 @@ function renderChoukaiQuestion() {
     // Trước đây set audioEl.src mỗi lần render khiến audio bị TẢI LẠI TỪ ĐẦU mỗi
     // khi qua câu kế trong CÙNG 1 Mondai (dùng chung 1 file) — làm gián đoạn nghe
     // liên tục dù câu 1→5 của 1 Mondai vốn nằm trong 1 file audio duy nhất.
+    //
+    // "startSec" (tùy chọn, số giây) trong JSON câu hỏi: nếu file JSON CÓ field
+    // này, app tự seek audio tới đúng đoạn của câu khi chuyển câu (kể cả khi vẫn
+    // dùng chung 1 file audio như cũ). Nếu KHÔNG có field này (file cũ chưa cập
+    // nhật), app giữ nguyên hành vi cũ — không tự seek, người học tự kéo thanh
+    // thời gian như trước, KHÔNG lỗi/crash gì cả.
+    const seekToStart = function () {
+      if (typeof q.startSec === "number") {
+        try { audioEl.currentTime = q.startSec; } catch (e) { /* bỏ qua nếu chưa sẵn sàng */ }
+      }
+    };
     if (App.choukaiCurrentAudioSrc !== audioSrc) {
       audioEl.src = audioSrc;
       App.choukaiCurrentAudioSrc = audioSrc;
+      if (typeof q.startSec === "number") {
+        audioEl.addEventListener("loadedmetadata", seekToStart, { once: true });
+      }
+    } else {
+      // Cùng file (cùng Mondai) — chỉ seek nếu câu mới có khai báo startSec.
+      seekToStart();
     }
     hint.textContent = test.audioMode === "combined"
       ? "⚠ Đề này dùng 1 file audio chung cho cả đề — tự kéo thanh thời gian tới đúng đoạn."
@@ -3435,14 +3514,140 @@ function showChoukaiReviewPanel(correct) {
   renderChoukaiReviewContent();
 }
 
+function clearKaraokeHandler(handlerKey) {
+  const h = App.karaokeHandlers[handlerKey];
+  if (h) {
+    if (h.audioEl && h.fn) h.audioEl.removeEventListener("timeupdate", h.fn);
+    if (h.scrollEl && h.onScroll) h.scrollEl.removeEventListener("scroll", h.onScroll);
+    if (h.jumpBtn && h.jumpBtn.parentNode) h.jumpBtn.parentNode.removeChild(h.jumpBtn);
+  }
+  App.karaokeHandlers[handlerKey] = null;
+}
+
+// Tìm khung CUỘN ĐƯỢC gần nhất bao quanh 1 phần tử — dùng để biết nên lắng
+// nghe sự kiện "scroll" ở đâu (vd panel xem đáp án cuộn riêng trong khung nhỏ,
+// còn "Luyện nghe câu" full trang thì cuộn ở `.main`). Fallback về `.main` nếu
+// không tìm thấy khung cuộn riêng nào (đây luôn là khung cuộn chính của app).
+function findScrollParent(el) {
+  // Kiểm tra CHÍNH phần tử được truyền vào trước (vd panel xem đáp án —
+  // #choukaiReviewContent CHÍNH là khung cuộn riêng, không phải cha của nó),
+  // sau đó mới đi lên các cha — vd "Luyện nghe câu" không có khung cuộn riêng,
+  // nên đi lên tới `.main` (khung cuộn chính của app).
+  let node = el;
+  while (node && node !== document.body) {
+    const cs = getComputedStyle(node);
+    if ((cs.overflowY === "auto" || cs.overflowY === "scroll") && node.scrollHeight > node.clientHeight) {
+      return node;
+    }
+    node = node.parentElement;
+  }
+  return document.querySelector(".main");
+}
+
+/* Gắn hành vi karaoke (bôi sáng dòng đang phát + tự cuộn dòng đó vào GIỮA màn
+ * hình + bấm dòng để phát lại) cho 1 danh sách phần tử dòng ĐÃ render sẵn —
+ * dùng CHUNG cho cả "Luyện nghe câu" và panel xem đáp án.
+ *
+ * Hành vi cuộn theo yêu cầu: trong lúc audio đang phát, dòng đang nghe TỰ ĐỘNG
+ * được cuộn ra giữa khung nhìn. Nếu người dùng tự kéo cuộn (muốn xem các dòng
+ * khác trong script) thì NGỪNG tự cuộn để người dùng tự do xem — chỉ tính là
+ * "tự kéo" khi việc cuộn đó KHÔNG phải do chính app gây ra (phân biệt bằng cờ
+ * isAutoScrolling). Khi đó hiện nút "⬇ Về dòng đang nghe" — bấm vào sẽ nhảy
+ * lại đúng dòng hiện tại ra giữa màn hình VÀ bật lại chế độ tự cuộn theo audio
+ * như cũ. */
+function attachKaraokeBehavior(lineEls, lineTimestamps, audioEl, handlerKey, container) {
+  clearKaraokeHandler(handlerKey);
+  if (!Array.isArray(lineTimestamps) || lineTimestamps.length !== lineEls.length || !audioEl) return;
+
+  lineEls.forEach(function (el, i) {
+    el.addEventListener("click", function () {
+      try {
+        audioEl.currentTime = lineTimestamps[i];
+        const p = audioEl.play();
+        if (p && p.catch) p.catch(function () {});
+      } catch (e) { /* bỏ qua */ }
+    });
+  });
+
+  const scrollEl = findScrollParent(container);
+  const state = { follow: true, activeIdx: -1, isAutoScrolling: false, autoScrollTimer: null };
+
+  const jumpBtn = document.createElement("button");
+  jumpBtn.className = "karaoke-jump-btn hidden";
+  jumpBtn.innerHTML = "⬇ Về dòng đang nghe";
+  jumpBtn.addEventListener("click", function () {
+    state.follow = true;
+    jumpBtn.classList.add("hidden");
+    scrollActiveIntoView();
+  });
+  container.insertAdjacentElement("afterend", jumpBtn);
+
+  function scrollActiveIntoView() {
+    const el = lineEls[state.activeIdx];
+    if (!el) return;
+    // Đặt cờ TRƯỚC khi cuộn, và chỉ tắt cờ sau khi cuộn smooth chắc đã xong —
+    // để sự kiện "scroll" do CHÍNH lệnh cuộn này gây ra không bị hiểu lầm
+    // thành người dùng tự kéo (tránh vừa tự cuộn xong lại tự ngắt theo dõi).
+    state.isAutoScrolling = true;
+    el.scrollIntoView({ block: "center", behavior: "smooth" });
+    clearTimeout(state.autoScrollTimer);
+    state.autoScrollTimer = setTimeout(function () { state.isAutoScrolling = false; }, 700);
+  }
+
+  const onScroll = function () {
+    if (state.isAutoScrolling) return; // cuộn này là do app tự làm, bỏ qua
+    if (state.follow) {
+      state.follow = false;
+      jumpBtn.classList.remove("hidden");
+    }
+  };
+  scrollEl.addEventListener("scroll", onScroll);
+
+  const handlerFn = function () {
+    const t = audioEl.currentTime;
+    let activeIdx = -1;
+    for (let i = 0; i < lineTimestamps.length; i++) {
+      if (t >= lineTimestamps[i]) activeIdx = i; else break;
+    }
+    if (activeIdx !== state.activeIdx) {
+      state.activeIdx = activeIdx;
+      lineEls.forEach(function (el, i) { el.classList.toggle("is-current-line", i === activeIdx); });
+      if (state.follow) scrollActiveIntoView();
+    }
+  };
+  App.karaokeHandlers[handlerKey] = { audioEl: audioEl, fn: handlerFn, scrollEl: scrollEl, onScroll: onScroll, jumpBtn: jumpBtn };
+  audioEl.addEventListener("timeupdate", handlerFn);
+}
+
 function renderChoukaiReviewContent() {
   const item = getChoukaiCurrentItem();
   if (!item) return;
   const q = item.q;
   const box = document.getElementById("choukaiReviewContent");
-  if (App.choukaiReviewTab === "script") box.textContent = q.script || "(không có script)";
-  else if (App.choukaiReviewTab === "vi") box.textContent = q.scriptVi || "(chưa có bản dịch)";
-  else box.textContent = q.tip || "(chưa có mẹo cho câu này)";
+  if (App.choukaiReviewTab === "tip") {
+    clearKaraokeHandler("reviewScript");
+    clearKaraokeHandler("reviewVi");
+    box.textContent = q.tip || "(chưa có mẹo cho câu này)";
+    return;
+  }
+  // Script & Dịch: hiện theo từng dòng, có karaoke highlight + bấm dòng để phát
+  // lại audio đúng đoạn đó NẾU câu này có "lineTimestamps". Không có thì vẫn
+  // hiện đúng nội dung như cũ, chỉ là không bôi sáng/không bấm được — không lỗi.
+  const jpLines = (q.script || "").split("\n").filter(Boolean);
+  const viLines = (q.scriptVi || "").split("\n").filter(Boolean);
+  const lineTimestamps = Array.isArray(q.lineTimestamps) && q.lineTimestamps.length === jpLines.length
+    ? q.lineTimestamps
+    : null;
+  const audioEl = document.getElementById("choukaiAudioEl");
+  if (App.choukaiReviewTab === "script") {
+    clearKaraokeHandler("reviewVi"); // đang xem tab khác — dọn handler của tab Dịch
+    if (!jpLines.length) { box.textContent = "(không có script)"; return; }
+    renderKaraokeLines(box, jpLines, lineTimestamps, audioEl, "reviewScript");
+  } else {
+    clearKaraokeHandler("reviewScript"); // đang xem tab khác — dọn handler của tab Script
+    if (!viLines.length) { box.textContent = "(chưa có bản dịch)"; return; }
+    renderKaraokeLines(box, viLines, lineTimestamps, audioEl, "reviewVi");
+  }
 }
 
 function choukaiGoNext() {
@@ -3649,6 +3854,34 @@ function populateChoukaiShadowQuestionPicker(testId) {
   qPicker.classList.remove("hidden");
 }
 
+/* ---------- Helper chung: render script kiểu "karaoke" + bấm dòng để phát lại ----------
+   Dùng CHUNG cho cả "Luyện nghe câu" (shadow mode) và panel xem đáp án lúc làm đề
+   (choukaiReviewPanel) — tránh viết lặp code render dòng + gắn listener ở nhiều nơi.
+
+   - container: thẻ DOM sẽ chứa các dòng (1 dòng = 1 div.karaoke-line)
+   - lines: mảng string (mỗi dòng script HOẶC mỗi dòng dịch — gọi riêng cho từng loại)
+   - lineTimestamps: mảng số giây cùng độ dài với "lines", hoặc null nếu không có
+     dữ liệu mốc giờ — khi null, chỉ hiện chữ bình thường, không bôi sáng, không bấm
+     được (giữ nguyên hành vi cũ với các đề CHƯA có timestamp, không lỗi gì cả).
+   - audioEl: thẻ <audio> tương ứng để bấm dòng → nhảy tới đúng giây + play()
+   - handlerKey: khóa định danh DUY NHẤT cho audioEl + nơi gọi (vd "shadow",
+     "reviewScript", "reviewVi") để gỡ đúng listener "timeupdate" CŨ trước khi
+     gắn cái MỚI — tránh nhiều listener cộng dồn qua mỗi lần đổi câu/đổi tab. */
+function renderKaraokeLines(container, lines, lineTimestamps, audioEl, handlerKey) {
+  const hasTime = Array.isArray(lineTimestamps) && lineTimestamps.length === lines.length;
+  container.innerHTML = lines.map(function (line, i) {
+    const cls = "karaoke-line" + (hasTime ? " is-seekable" : "");
+    return '<div class="' + cls + '" data-idx="' + i + '">' + line + '</div>';
+  }).join("");
+
+  if (!hasTime) {
+    clearKaraokeHandler(handlerKey);
+    return;
+  }
+  const lineEls = Array.from(container.querySelectorAll(".karaoke-line"));
+  attachKaraokeBehavior(lineEls, lineTimestamps, audioEl, handlerKey, container);
+}
+
 function renderChoukaiShadowQuestion(testId, flatIdx) {
   const test = getChoukaiTest(testId);
   const queue = buildChoukaiQueue(test, "all");
@@ -3666,14 +3899,39 @@ function renderChoukaiShadowQuestion(testId, flatIdx) {
   // Tách script + dịch theo dòng (mỗi lượt nói = 1 dòng) để ghép cặp hiển thị.
   const jpLines = (q.script || "").split("\n").filter(Boolean);
   const viLines = (q.scriptVi || "").split("\n").filter(Boolean);
+  // "lineTimestamps" (tùy chọn, mảng số giây — TÍNH TỪ ĐẦU FILE AUDIO của cả
+  // Mondai, vì các câu trong 1 Mondai dùng chung 1 file): nếu file JSON CÓ mảng
+  // này (cùng số dòng với script), app tự bôi sáng kiểu karaoke đúng dòng đang
+  // phát, và cho bấm vào BẤT KỲ dòng nào (tiếng Nhật hoặc bản dịch) để nhảy audio
+  // tới đúng đoạn đó. Nếu KHÔNG có (file cũ/chưa làm timestamp), giữ nguyên hành
+  // vi cũ — chỉ hiện dòng + dịch, không bôi sáng, không bấm phát lại được.
+  const lineTimestamps = Array.isArray(q.lineTimestamps) && q.lineTimestamps.length === jpLines.length
+    ? q.lineTimestamps
+    : null;
+
+  // Có timestamp rồi thì không còn đúng nữa khi nói "không tách được theo từng
+  // dòng" — ẩn note cảnh báo cũ trong trường hợp này.
+  document.getElementById("choukaiShadowNote").classList.toggle("hidden", !!lineTimestamps);
+
+  // Bản dịch hiện trực tiếp luôn, KHÔNG làm mờ/cần bấm để hiện nữa (theo yêu cầu
+  // mới — trước đây có hiệu ứng blur, giờ bỏ để đọc song song dễ hơn).
   const linesWrap = document.getElementById("choukaiShadowLines");
   linesWrap.innerHTML = jpLines.map(function (jp, i) {
-    return '<div class="choukai-shadow-line"><div class="choukai-shadow-line-jp">' + jp + '</div>' +
-      '<div class="choukai-shadow-line-vi" data-idx="' + i + '">' + (viLines[i] || "") + '</div></div>';
+    return '<div class="choukai-shadow-line" data-idx="' + i + '">' +
+      '<div class="choukai-shadow-line-jp">' + jp + '</div>' +
+      '<div class="choukai-shadow-line-vi">' + (viLines[i] || "") + '</div></div>';
   }).join("");
-  linesWrap.querySelectorAll(".choukai-shadow-line-vi").forEach(function (el) {
-    el.addEventListener("click", function () { el.classList.toggle("is-revealed"); });
-  });
+
+  // Gỡ listener karaoke CŨ trước khi gắn listener mới — tránh cộng dồn qua từng câu.
+  clearKaraokeHandler("shadow");
+
+  if (lineTimestamps) {
+    const lineEls = Array.from(linesWrap.querySelectorAll(".choukai-shadow-line"));
+    lineEls.forEach(function (el) { el.classList.add("is-seekable"); });
+    // Bấm vào dòng (CẢ tiếng Nhật và bản dịch) + bôi sáng + tự cuộn ra giữa màn
+    // hình theo audio — dùng chung hành vi với panel xem đáp án lúc làm đề.
+    attachKaraokeBehavior(lineEls, lineTimestamps, audioEl, "shadow", linesWrap);
+  }
 }
 
 // Bảng kết quả chi tiết từng câu — chỉ dùng cho chế độ "Chấm sửa cuối bài",
@@ -3794,6 +4052,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (e.key === "Escape" && document.getElementById("app").classList.contains("focus-mode")) {
       exitFocusMode();
     }
+  });
+  // Trình duyệt có thể tự thoát fullscreen (Esc, F11, vuốt xuống trên Mac...)
+  // mà KHÔNG đi qua nút X của app — lắng nghe sự kiện này để ẩn lại sidebar-hidden
+  // CSS đúng lúc, tránh app bị kẹt ở trạng thái "tưởng đang focus nhưng đã thoát
+  // fullscreen thật rồi".
+  ["fullscreenchange", "webkitfullscreenchange", "msfullscreenchange"].forEach((evt) => {
+    document.addEventListener(evt, () => {
+      const stillFullscreen = document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
+      if (!stillFullscreen && document.getElementById("app").classList.contains("focus-mode")) {
+        exitFocusMode();
+      }
+    });
   });
 
   // ----- Sidebar dạng drawer trên mobile (≤860px) -----
