@@ -267,7 +267,7 @@ Lưu vào `localStorage` (`n2vocab_editpatches`), áp đè lên dữ liệu gố
 
 ## 10. Trang Thống kê (Stats)
 
-3 phần: (1) bảng tổng quan mọi bộ từ vựng/ngữ pháp, thanh % 3 màu (đã thuộc/đang học/chưa học), sắp theo % thấp nhất lên trước; (2) bảng đề thi chữ (đã làm/chưa làm, điểm gần nhất, thời gian); (3) bảng đề luyện nghe (cùng pattern với đề thi chữ). Bấm tên bộ/đề → nhảy thẳng vào học/làm ngay.
+3 phần: (1) bảng tổng quan mọi bộ từ vựng/ngữ pháp — **MỚI: tách riêng 2 nhóm "📘 Mimi N2 (giáo trình chính)" và "📚 Tài liệu khác"** (đồng bộ với cách nhóm ở dropdown sidebar, dựa trên field `series`), mỗi nhóm có **biểu đồ tròn (donut) tổng quan** (SVG thuần, không phụ thuộc thư viện ngoài — hàm `buildDonutSvg()` trong `app.js`) hiện % đã thuộc CHUNG của cả nhóm + số liệu nổi bật (🏆 bộ mạnh nhất / ⚠ bộ cần ưu tiên trong nhóm), kèm bảng chi tiết từng bộ với thanh % 3 màu (đã thuộc/đang học/chưa học), sắp theo % thấp nhất lên trước; (2) bảng đề thi chữ (đã làm/chưa làm, điểm gần nhất, thời gian); (3) bảng đề luyện nghe (cùng pattern với đề thi chữ). Bấm tên bộ/đề → nhảy thẳng vào học/làm ngay.
 
 ---
 
