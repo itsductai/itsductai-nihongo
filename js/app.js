@@ -3516,8 +3516,107 @@ function showChoukaiReviewPanel(correct) {
 
 function clearKaraokeHandler(handlerKey) {
   const h = App.karaokeHandlers[handlerKey];
-  if (h && h.audioEl) h.audioEl.removeEventListener("timeupdate", h.fn);
+  if (h) {
+    if (h.audioEl && h.fn) h.audioEl.removeEventListener("timeupdate", h.fn);
+    if (h.scrollEl && h.onScroll) h.scrollEl.removeEventListener("scroll", h.onScroll);
+    if (h.jumpBtn && h.jumpBtn.parentNode) h.jumpBtn.parentNode.removeChild(h.jumpBtn);
+  }
   App.karaokeHandlers[handlerKey] = null;
+}
+
+// Tìm khung CUỘN ĐƯỢC gần nhất bao quanh 1 phần tử — dùng để biết nên lắng
+// nghe sự kiện "scroll" ở đâu (vd panel xem đáp án cuộn riêng trong khung nhỏ,
+// còn "Luyện nghe câu" full trang thì cuộn ở `.main`). Fallback về `.main` nếu
+// không tìm thấy khung cuộn riêng nào (đây luôn là khung cuộn chính của app).
+function findScrollParent(el) {
+  // Kiểm tra CHÍNH phần tử được truyền vào trước (vd panel xem đáp án —
+  // #choukaiReviewContent CHÍNH là khung cuộn riêng, không phải cha của nó),
+  // sau đó mới đi lên các cha — vd "Luyện nghe câu" không có khung cuộn riêng,
+  // nên đi lên tới `.main` (khung cuộn chính của app).
+  let node = el;
+  while (node && node !== document.body) {
+    const cs = getComputedStyle(node);
+    if ((cs.overflowY === "auto" || cs.overflowY === "scroll") && node.scrollHeight > node.clientHeight) {
+      return node;
+    }
+    node = node.parentElement;
+  }
+  return document.querySelector(".main");
+}
+
+/* Gắn hành vi karaoke (bôi sáng dòng đang phát + tự cuộn dòng đó vào GIỮA màn
+ * hình + bấm dòng để phát lại) cho 1 danh sách phần tử dòng ĐÃ render sẵn —
+ * dùng CHUNG cho cả "Luyện nghe câu" và panel xem đáp án.
+ *
+ * Hành vi cuộn theo yêu cầu: trong lúc audio đang phát, dòng đang nghe TỰ ĐỘNG
+ * được cuộn ra giữa khung nhìn. Nếu người dùng tự kéo cuộn (muốn xem các dòng
+ * khác trong script) thì NGỪNG tự cuộn để người dùng tự do xem — chỉ tính là
+ * "tự kéo" khi việc cuộn đó KHÔNG phải do chính app gây ra (phân biệt bằng cờ
+ * isAutoScrolling). Khi đó hiện nút "⬇ Về dòng đang nghe" — bấm vào sẽ nhảy
+ * lại đúng dòng hiện tại ra giữa màn hình VÀ bật lại chế độ tự cuộn theo audio
+ * như cũ. */
+function attachKaraokeBehavior(lineEls, lineTimestamps, audioEl, handlerKey, container) {
+  clearKaraokeHandler(handlerKey);
+  if (!Array.isArray(lineTimestamps) || lineTimestamps.length !== lineEls.length || !audioEl) return;
+
+  lineEls.forEach(function (el, i) {
+    el.addEventListener("click", function () {
+      try {
+        audioEl.currentTime = lineTimestamps[i];
+        const p = audioEl.play();
+        if (p && p.catch) p.catch(function () {});
+      } catch (e) { /* bỏ qua */ }
+    });
+  });
+
+  const scrollEl = findScrollParent(container);
+  const state = { follow: true, activeIdx: -1, isAutoScrolling: false, autoScrollTimer: null };
+
+  const jumpBtn = document.createElement("button");
+  jumpBtn.className = "karaoke-jump-btn hidden";
+  jumpBtn.innerHTML = "⬇ Về dòng đang nghe";
+  jumpBtn.addEventListener("click", function () {
+    state.follow = true;
+    jumpBtn.classList.add("hidden");
+    scrollActiveIntoView();
+  });
+  container.insertAdjacentElement("afterend", jumpBtn);
+
+  function scrollActiveIntoView() {
+    const el = lineEls[state.activeIdx];
+    if (!el) return;
+    // Đặt cờ TRƯỚC khi cuộn, và chỉ tắt cờ sau khi cuộn smooth chắc đã xong —
+    // để sự kiện "scroll" do CHÍNH lệnh cuộn này gây ra không bị hiểu lầm
+    // thành người dùng tự kéo (tránh vừa tự cuộn xong lại tự ngắt theo dõi).
+    state.isAutoScrolling = true;
+    el.scrollIntoView({ block: "center", behavior: "smooth" });
+    clearTimeout(state.autoScrollTimer);
+    state.autoScrollTimer = setTimeout(function () { state.isAutoScrolling = false; }, 700);
+  }
+
+  const onScroll = function () {
+    if (state.isAutoScrolling) return; // cuộn này là do app tự làm, bỏ qua
+    if (state.follow) {
+      state.follow = false;
+      jumpBtn.classList.remove("hidden");
+    }
+  };
+  scrollEl.addEventListener("scroll", onScroll);
+
+  const handlerFn = function () {
+    const t = audioEl.currentTime;
+    let activeIdx = -1;
+    for (let i = 0; i < lineTimestamps.length; i++) {
+      if (t >= lineTimestamps[i]) activeIdx = i; else break;
+    }
+    if (activeIdx !== state.activeIdx) {
+      state.activeIdx = activeIdx;
+      lineEls.forEach(function (el, i) { el.classList.toggle("is-current-line", i === activeIdx); });
+      if (state.follow) scrollActiveIntoView();
+    }
+  };
+  App.karaokeHandlers[handlerKey] = { audioEl: audioEl, fn: handlerFn, scrollEl: scrollEl, onScroll: onScroll, jumpBtn: jumpBtn };
+  audioEl.addEventListener("timeupdate", handlerFn);
 }
 
 function renderChoukaiReviewContent() {
@@ -3775,29 +3874,12 @@ function renderKaraokeLines(container, lines, lineTimestamps, audioEl, handlerKe
     return '<div class="' + cls + '" data-idx="' + i + '">' + line + '</div>';
   }).join("");
 
-  // Gỡ listener "timeupdate" CŨ của đúng handlerKey này (nếu có) trước khi gắn mới.
-  if (App.karaokeHandlers[handlerKey] && App.karaokeHandlers[handlerKey].audioEl) {
-    App.karaokeHandlers[handlerKey].audioEl.removeEventListener("timeupdate", App.karaokeHandlers[handlerKey].fn);
-    App.karaokeHandlers[handlerKey] = null;
+  if (!hasTime) {
+    clearKaraokeHandler(handlerKey);
+    return;
   }
-  if (!hasTime || !audioEl) return;
-
   const lineEls = Array.from(container.querySelectorAll(".karaoke-line"));
-  lineEls.forEach(function (el, i) {
-    el.addEventListener("click", function () {
-      try { audioEl.currentTime = lineTimestamps[i]; const p = audioEl.play(); if (p && p.catch) p.catch(function () {}); } catch (e) { /* bỏ qua */ }
-    });
-  });
-  const handlerFn = function () {
-    const t = audioEl.currentTime;
-    let activeIdx = -1;
-    for (let i = 0; i < lineTimestamps.length; i++) {
-      if (t >= lineTimestamps[i]) activeIdx = i; else break;
-    }
-    lineEls.forEach(function (el, i) { el.classList.toggle("is-current-line", i === activeIdx); });
-  };
-  App.karaokeHandlers[handlerKey] = { audioEl: audioEl, fn: handlerFn };
-  audioEl.addEventListener("timeupdate", handlerFn);
+  attachKaraokeBehavior(lineEls, lineTimestamps, audioEl, handlerKey, container);
 }
 
 function renderChoukaiShadowQuestion(testId, flatIdx) {
@@ -3846,24 +3928,9 @@ function renderChoukaiShadowQuestion(testId, flatIdx) {
   if (lineTimestamps) {
     const lineEls = Array.from(linesWrap.querySelectorAll(".choukai-shadow-line"));
     lineEls.forEach(function (el) { el.classList.add("is-seekable"); });
-    // Bấm vào dòng — CẢ tiếng Nhật và bản dịch — đều nhảy audio tới đúng đoạn đó.
-    lineEls.forEach(function (el, i) {
-      el.addEventListener("click", function () {
-        try { audioEl.currentTime = lineTimestamps[i]; const p = audioEl.play(); if (p && p.catch) p.catch(function () {}); } catch (e) { /* bỏ qua */ }
-      });
-    });
-    const handler = function () {
-      const t = audioEl.currentTime;
-      let activeIdx = -1;
-      for (let i = 0; i < lineTimestamps.length; i++) {
-        if (t >= lineTimestamps[i]) activeIdx = i; else break;
-      }
-      lineEls.forEach(function (el, i) {
-        el.classList.toggle("is-current-line", i === activeIdx);
-      });
-    };
-    App.karaokeHandlers.shadow = { audioEl: audioEl, fn: handler };
-    audioEl.addEventListener("timeupdate", handler);
+    // Bấm vào dòng (CẢ tiếng Nhật và bản dịch) + bôi sáng + tự cuộn ra giữa màn
+    // hình theo audio — dùng chung hành vi với panel xem đáp án lúc làm đề.
+    attachKaraokeBehavior(lineEls, lineTimestamps, audioEl, "shadow", linesWrap);
   }
 }
 
