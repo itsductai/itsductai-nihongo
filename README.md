@@ -1,49 +1,63 @@
-# N2 Vocab Lab v2 — Hướng dẫn đầy đủ
+# N2 Vocab Lab v2 — Hướng dẫn đầy đủ + Tình trạng dự án
 
-Tài liệu này giải thích cấu trúc dữ liệu JSON, quy tắc viết file, và toàn bộ cơ chế hoạt động của app — để tự thêm bộ học mới, tự debug, hoặc tự sửa code sau này mà không cần hỏi lại.
+Tài liệu này giải thích **toàn bộ** cấu trúc dữ liệu, quy tắc viết file, cơ chế hoạt động, và tình trạng hiện tại của app (đã làm gì / chưa làm gì) — để bất kỳ chat mới nào cũng hiểu ngay mà không cần đọc lại toàn bộ code. Nếu bắt đầu chat mới: **gửi kèm file zip dự án + đoạn mô tả ngắn + nội dung README này** là đủ.
 
 ---
 
-## 1. Cấu trúc thư mục
+## 0. TÓM TẮT SIÊU NGẮN (đọc trước, đọc kỹ phần này trước khi đọc gì khác)
+
+- Web app tĩnh (HTML/CSS/JS thuần), không server/database, chạy bằng `python3 -m http.server` hoặc GitHub Pages tại `itsductai.github.io/itsductai-nihongo/`.
+- Repo GitHub: `itsductai/itsductai-nihongo`, nhánh `main`.
+- 3 loại dữ liệu, đều cần file `.json` riêng + khai báo trong `index.json` của đúng thư mục:
+  - `tailieu/` — bộ từ vựng (`TUVUNG`) / ngữ pháp (`NGUPHAP`), học bằng Flashcard/SRS/Bảng/Gõ hiragana/Trắc nghiệm/Ghép thẻ.
+  - `dethi/` — đề thi trắc nghiệm chữ (đọc kanji, ngữ pháp, đọc hiểu...).
+  - `dethi-choukai/` — đề luyện nghe (聴解), kèm audio đặt trong `file-nghe/`.
+- **Quy tắc bất biến quan trọng nhất:** thêm file `.json` mới mà KHÔNG thêm tên file đó vào `index.json` tương ứng → app không lỗi gì cả nhưng file đó **không bao giờ xuất hiện**. Đây luôn là điều đầu tiên cần kiểm tra khi "tôi đã thêm mà sao không thấy".
+- Mỗi lần sửa `js/app.js` hoặc `js/srs.js`, **phải tăng số version** trong 2 dòng `<script src="js/srs.js?v=N">` / `<script src="js/app.js?v=N">` ở cuối `index.html`, nếu không trình duyệt/GitHub Pages có thể cache lại bản cũ, sửa code xong tưởng không có tác dụng.
+- Khi giao file cho người dùng: **chỉ xuất đúng (các) file vừa thay đổi**, không xuất nguyên zip cả project trừ khi được yêu cầu rõ — đỡ công upload lại toàn bộ.
+
+---
+
+## 1. Cấu trúc thư mục hiện tại
 
 ```
-app2/
+itsductai-nihongo/
 ├── index.html
-├── README.md
+├── README.md                  (file này)
 ├── css/
 │   └── style.css
 ├── js/
-│   ├── srs.js           (thuật toán ôn tập kiểu Anki, tính theo phút)
-│   └── app.js            (toàn bộ logic app: render, mode, sự kiện)
-├── tailieu/
-│   ├── index.json        (danh sách file bộ từ vựng/ngữ pháp — BẮT BUỘC cập nhật khi thêm bộ mới)
-│   ├── nut-that-n2.json       (mẫu TYPE: TUVUNG, 120 từ)
-│   └── nguphap-mau.json       (mẫu TYPE: NGUPHAP, 3 cấu trúc)
-└── dethi/
-    ├── index.json        (danh sách file đề thi — BẮT BUỘC cập nhật khi thêm đề mới)
-    └── mondai1-mau-2023-12.json   (mẫu đề thi, 3 câu)
+│   ├── srs.js                 (thuật toán ôn tập kiểu Anki + tính năng "Đã thuộc")
+│   └── app.js                 (toàn bộ logic: render, mode, sự kiện — file RẤT LỚN)
+├── tailieu/                    (bộ từ vựng / ngữ pháp — xem mục 3, 4)
+│   ├── index.json
+│   └── *.json                  (15 file hiện có — xem mục 22 để biết đầy đủ)
+├── dethi/                       (đề thi trắc nghiệm chữ — xem mục 6)
+│   ├── index.json
+│   └── *.json                   (8 file hiện có)
+├── dethi-choukai/                (đề luyện nghe — xem mục 19)
+│   ├── index.json
+│   └── choukai-NN.json           (hiện có choukai-01, choukai-02 trong repo của Claude;
+│                                   choukai-19 do Zane tự làm, CHƯA có bản lưu trong các
+│                                   lần trao đổi gần nhất — cần xác nhận lại file thật trên GitHub)
+└── file-nghe/                     (audio .m4a/.mp3 cho phần luyện nghe — Zane tự upload,
+                                     KHÔNG đi qua Claude. Tên file phải khớp 100% với field
+                                     audioFile/audioFiles trong từng choukai-NN.json)
 ```
-
-App là web app tĩnh (HTML/CSS/JS thuần), không có server/database. Mọi tiến độ học, cấu hình, và sửa tạm đều lưu trong `localStorage` của trình duyệt. Có thể mở trực tiếp `index.html` qua `python3 -m http.server` hoặc đẩy lên GitHub Pages.
 
 ---
 
-## 2. Cách thêm bộ mới — và vì sao phải sửa `index.json`
+## 2. Cách thêm 1 bộ/đề mới — quy trình bắt buộc
 
-JavaScript chạy trong trình duyệt **không có cách nào tự liệt kê file trong 1 thư mục** qua HTTP thuần (đây là giới hạn của web, không phải hạn chế riêng của app này). Vì vậy app quét dữ liệu bằng cách đọc file `index.json` liệt kê tên các file cần tải.
+JavaScript chạy trong trình duyệt **không có cách nào tự liệt kê file trong 1 thư mục** qua HTTP thuần — đây là giới hạn của web, không phải hạn chế riêng của app này. Vì vậy app luôn quét dữ liệu bằng cách đọc file `index.json` của đúng thư mục.
 
-**Quy trình thêm 1 bộ từ vựng/ngữ pháp mới:**
-1. Tạo file `.json` mới trong `tailieu/`, đặt tên không dấu, không khoảng trắng (ví dụ `n3-co-ban.json`).
-2. Viết nội dung theo đúng cấu trúc ở mục 3 hoặc mục 4 dưới đây.
-3. Mở `tailieu/index.json`, thêm tên file đó vào mảng `files`:
-   ```json
-   { "files": ["nut-that-n2.json", "nguphap-mau.json", "n3-co-ban.json"] }
-   ```
-4. Tải lại trang (F5) — bộ mới tự xuất hiện trong dropdown "Bộ học" ở sidebar.
+**Quy trình (giống nhau cho cả 3 loại — `tailieu/`, `dethi/`, `dethi-choukai/`):**
+1. Tạo file `.json` mới, đặt tên không dấu, không khoảng trắng (ví dụ `n3-co-ban.json`).
+2. Viết nội dung theo đúng cấu trúc ở mục 3/4 (tailieu), mục 6 (dethi), hoặc mục 19 (dethi-choukai).
+3. Mở `index.json` của đúng thư mục đó, thêm tên file vào mảng `files`.
+4. Tải lại trang (hard refresh nếu vừa đổi `app.js`/`srs.js`) — bộ mới tự xuất hiện trong dropdown sidebar.
 
-**Quy trình thêm 1 đề thi mới:** giống hệt nhưng làm trong thư mục `dethi/` và sửa `dethi/index.json`.
-
-Nếu quên bước 3, file mới sẽ không lỗi gì cả nhưng cũng **không xuất hiện** — đây là điều đầu tiên cần kiểm tra nếu thấy "tôi đã tạo file mà sao không thấy bộ mới".
+**Thứ tự hiển thị trong dropdown KHÔNG phụ thuộc thứ tự trong `index.json`** — app tự sắp theo `title` bên trong từng file, dùng `localeCompare(title, "vi", { numeric: true })` (sắp theo chữ cái tiếng Việt CÓ DẤU đúng thứ tự, và hiểu số tự nhiên — "Unit 3" < "Unit 4" < "Unit 10" < "Unit 11", không bị xếp theo kiểu chuỗi ký tự thường "10" < "3"). Vì vậy **thứ tự ghi trong `index.json` không quan trọng cho việc hiển thị** — chỉ cần file có trong danh sách là đủ, có thể ghi theo bất kỳ thứ tự nào (khuyến nghị vẫn ghi theo A-Z cho dễ đọc bằng mắt khi mở file ra xem).
 
 ---
 
@@ -73,40 +87,52 @@ Nếu quên bước 3, file mới sẽ không lỗi gì cả nhưng cũng **khô
 
 | Field | Bắt buộc | Giải thích |
 |---|---|---|
-| `kanji` | Có | Chữ kanji / từ vựng gốc. Dùng làm khóa định danh (`_id`) — xem mục 7. |
-| `doc` | Có | Cách đọc hiragana **thuần**, không chứa `**`. Dùng để so khớp khi tự luận ở mode "Gõ hiragana" — phải khớp chính xác ký tự với gì người học gõ ra. |
-| `doc_marked` | Không | Giống `doc` nhưng có đánh dấu trường âm bằng `**...**` quanh đoạn cần tô đỏ. Nếu để trống, app tự dùng `doc` (không tô màu). Xem quy tắc đánh dấu ở mục 5. |
-| `han_viet` | Có | Âm Hán Việt, viết hoa. Nếu từ thuần Nhật không có âm Hán Việt: ghi `"(thuần Nhật)"`. Nếu từ ngoại lai (katakana mượn tiếng Anh/Pháp...): ghi `"(từ ngoại lai)"`. |
-| `nghia` | Có | Nghĩa tiếng Việt. Không để trống — đây là field bắt buộc cho mọi chế độ học. |
-| `vi_du` | Có | Câu ví dụ tiếng Nhật kèm dịch tiếng Việt trong ngoặc, format: `câu tiếng Nhật。(dịch tiếng Việt.)` |
-| `vi_du_ruby` | Không | Giống `vi_du` nhưng **mọi** kanji trong câu (không chỉ từ đang học) nên được bọc `<ruby>kanji<rt>cách đọc</rt></ruby>` để hiện furigana nhỏ phía trên — giúp biết cách đọc của cả các kanji khác xuất hiện trong câu, không chỉ từ chính. Nếu để trống, app dùng `vi_du` thường (không furigana). |
-| `dong_nghia` | Không | Mảng các từ đồng nghĩa. Hỗ trợ 2 cách viết — xem chi tiết dưới đây. |
-| `trai_nghia` | Không | Mảng các từ trái nghĩa. Hỗ trợ 2 cách viết — xem chi tiết dưới đây. |
+| `kanji` | Có | Từ vựng gốc. Dùng làm khóa định danh `_id` — xem mục 9. |
+| `doc` | Có | Cách đọc hiragana **thuần**, không chứa `**`. Dùng so khớp ở mode "Gõ hiragana". |
+| `doc_marked` | Không | Giống `doc` nhưng đánh dấu trường âm bằng `**...**`. Để trống thì app dùng `doc`. Quy tắc đánh dấu — mục 5. |
+| `han_viet` | Có | Âm Hán Việt, viết hoa. Từ thuần Nhật: `"(thuần Nhật)"`. Từ ngoại lai: `"(từ ngoại lai)"`. |
+| `nghia` | Có | Nghĩa tiếng Việt. |
+| `vi_du` | Có | Câu ví dụ + dịch: `câu tiếng Nhật。(dịch tiếng Việt.)`. Có thể nối nhiều câu cách nhau bằng dấu cách (không phải mảng, là 1 chuỗi). |
+| `vi_du_ruby` | Không | Giống **câu đầu tiên** trong `vi_du`, nhưng kanji được bọc `<ruby>kanji<rt>đọc</rt></ruby>`. Chỉ cần ruby câu đầu, không cần toàn bộ `vi_du`. Nếu ví dụ viết bằng kana thật (vd từ đó người Nhật quy ước viết kana, không viết kanji) thì để nguyên không ruby — KHÔNG phải lỗi. |
+| `dong_nghia` / `trai_nghia` | Không | Mảng — xem 2 format dưới đây. |
 
-### Cách viết `dong_nghia` / `trai_nghia` — 2 format được hỗ trợ song song
+### `dong_nghia` / `trai_nghia` — 2 format, và **TÌNH TRẠNG THỰC TẾ HIỆN NAY (quan trọng)**
 
-**Format mới (khuyến khích dùng)** — object đầy đủ, hiện được cả furigana nhỏ phía trên kanji và nghĩa tiếng Việt kèm theo ngay trong Flashcard/Bảng:
-
+**Format mới (object đầy đủ — chuẩn cần hướng tới):**
 ```json
 "dong_nghia": [
-  { "kanji": "弱点", "doc": "じゃくてん", "nghia": "điểm yếu" },
-  { "kanji": "短所", "doc": "たんしょ", "nghia": "sở đoản" }
+  { "kanji": "弱点", "doc": "じゃくてん", "nghia": "điểm yếu" }
 ]
 ```
+`doc`/`nghia` có thể để trống nếu không cần, app vẫn hiện được (chỉ thiếu phần furigana/nghĩa kèm).
 
-| Field con | Bắt buộc | Giải thích |
-|---|---|---|
-| `kanji` | Có | Từ đồng/trái nghĩa, viết kanji (hoặc hiragana/katakana nếu từ đó không có kanji). |
-| `doc` | Không | Cách đọc — nếu có, app tự hiện furigana nhỏ phía trên kanji bằng `<ruby>`. Nếu để trống, chỉ hiện kanji không furigana. |
-| `nghia` | Không | Nghĩa tiếng Việt ngắn, hiện trong ngoặc đơn `（...）` ngay sau từ. Nếu để trống, chỉ hiện từ không kèm nghĩa. |
-
-**Format cũ (vẫn dùng được, không cần sửa lại dữ liệu cũ)** — chuỗi đơn giản, chỉ hiện kanji, không furigana không nghĩa:
-
+**Format cũ (chuỗi đơn giản — vẫn được app hỗ trợ hiển thị, KHÔNG bị lỗi/crash):**
 ```json
 "dong_nghia": ["弱点", "短所"]
 ```
+2 format trộn lẫn được trong cùng 1 mảng, app tự nhận diện đúng từng phần tử.
 
-Hai format này **trộn lẫn được trong cùng một mảng** (ví dụ vài từ dùng object đầy đủ, vài từ cũ vẫn để chuỗi) — app tự nhận diện đúng từng phần tử, không cần đồng bộ toàn bộ file cùng lúc. Để trống `[]` nếu từ đó không có đồng/trái nghĩa.
+**⚠️ TÌNH TRẠNG THỰC TẾ — đã rà soát toàn bộ `tailieu/` (lúc viết tài liệu này):** phần lớn file vẫn dùng **format cũ** (chỉ có kanji, chưa có cách đọc/nghĩa kèm theo), KHÔNG đồng nhất với 1 số file mới hơn đã dùng format đầy đủ. Thống kê cụ thể (số lượng mục `dong_nghia`+`trai_nghia`):
+
+| File | Format cũ (chuỗi) | Format mới (object) |
+|---|---|---|
+| `danh-tu-jlpt-n2.json` | 0 | 197 |
+| `danh-tu-thiet-yeu.json` | 0 | 197 |
+| `mimi-n2-unit3-adj.json` | 0 | 136 |
+| `mimi-n2-unit11.json` | 0 | 114 |
+| `mimi-n2-unit6-photu.json` | 31 | 0 |
+| `mimi-n2-tunoi-photu.json` | 144 | 0 |
+| `mimi-n2-unit4.json` | 14 | 0 |
+| `mimi-n2-unit10-adj.json` | 188 | 0 |
+| `mimi-unit8.json` | 301 | 0 |
+| `nut-that-n2.json` | 40 | 0 |
+| `nguphap-hoc-tu.json` | 83 | 2 |
+| `nguphap-mau.json` | 3 | 0 |
+| `nguphap-pham-vi-b-m11-dokkai.json` | 19 | 0 |
+| `nguphap-top40-mimitry.json` | 3 | 0 |
+| `nguphap-pham-vi-a-m789.json` | 0 | 0 |
+
+**→ TODO còn tồn đọng:** ~826 mục đang ở format cũ, cần bổ sung cách đọc + nghĩa Việt để nâng cấp lên format mới. Đây là việc **tốn nhiều thời gian** (phải tra/xác nhận đúng cách đọc+nghĩa từng từ, không thể tự suy đoán đại trà vì dễ sai) — nên làm DẦN theo từng file khi có nhu cầu thực tế, không cố làm 1 lần. **Không phải lỗi/bug** — app vẫn chạy đúng, chỉ là card sẽ hiện "thiếu thông tin phụ" (chỉ thấy kanji, không thấy cách đọc+nghĩa của từ đồng/trái nghĩa đó).
 
 ---
 
@@ -124,11 +150,9 @@ Hai format này **trộn lẫn được trong cùng một mảng** (ví dụ và
       "cau_truc_ngu_phap": "N / Vる・Vた / Aい / Aな + にもかかわらず",
       "vi_du": "<ruby>悪天候<rt>あくてんこう</rt></ruby>にもかかわらず、<ruby>試合<rt>しあい</rt></ruby>は<ruby>行<rt>おこな</rt></ruby>われた。(Mặc dù thời tiết xấu, trận đấu vẫn được diễn ra.)",
       "so_sanh_de_nham": [
-        { "cautruc": "～のに", "khac_biet": "のに mang sắc thái cảm xúc cá nhân nhiều hơn, dùng cả văn nói; にもかかわらず khách quan, trang trọng hơn." }
+        { "cautruc": "～のに", "khac_biet": "のに mang sắc thái cảm xúc cá nhân nhiều hơn; にもかかわらず khách quan, trang trọng hơn." }
       ],
-      "dong_nghia": [
-        { "kanji": "～ものの", "doc": "", "nghia": "mặc dù... nhưng" }
-      ],
+      "dong_nghia": [],
       "trai_nghia": []
     }
   ]
@@ -137,50 +161,43 @@ Hai format này **trộn lẫn được trong cùng một mảng** (ví dụ và
 
 | Field | Bắt buộc | Giải thích |
 |---|---|---|
-| `cautruc` | Có | Cấu trúc ngữ pháp. Hiện mặc định ở mặt trước flashcard. Dùng làm khóa định danh (`_id`) nếu không có `kanji`. |
-| `nghia` | Có | Ý nghĩa, cách dùng bằng tiếng Việt. |
-| `muc_do` | Không | Mức độ trang trọng / văn nói hay văn viết. Chuỗi tự do (ví dụ "Trang trọng", "Thân mật", "Trung lập"). |
-| `cau_truc_ngu_phap` | Không | Công thức ngữ pháp (V/A/N + gì), hiển thị dạng monospace nổi bật trong card. |
-| `vi_du` | Có | Câu ví dụ. **Mọi** kanji trong câu nên được bọc `<ruby>kanji<rt>đọc</rt></ruby>` để hiện furigana — không chỉ phần liên quan tới cấu trúc đang học. Không có field `vi_du_ruby` riêng cho NGUPHAP, viết trực tiếp ruby trong `vi_du`. |
-| `so_sanh_de_nham` | Không | Mảng object `{cautruc, khac_biet}` liệt kê các cấu trúc dễ nhầm và điểm khác biệt. Để `[]` nếu không có. |
-| `dong_nghia` | Không | Mảng các cấu trúc đồng nghĩa. Cùng 2 format với TUVUNG ở mục 3 — object `{kanji, doc, nghia}` (đọc/nghĩa có thể để `""`/bỏ trống nếu cấu trúc không cần furigana) hoặc chuỗi đơn giản, trộn lẫn được trong cùng mảng. |
-| `trai_nghia` | Không | Mảng các cấu trúc trái nghĩa. Cùng quy tắc format với `dong_nghia`. |
+| `cautruc` | Có | Cấu trúc ngữ pháp, dùng làm `_id`. |
+| `nghia` | Có | Ý nghĩa, cách dùng. |
+| `muc_do` | Không | Mức trang trọng/văn nói-viết, chuỗi tự do. |
+| `cau_truc_ngu_phap` | Không | Công thức (V/A/N + gì). |
+| `vi_du` | Có | Câu ví dụ — **toàn bộ** kanji trong câu nên có `<ruby>`, không có field `vi_du_ruby` riêng cho NGUPHAP (viết ruby trực tiếp trong `vi_du`). |
+| `so_sanh_de_nham` | Không | Mảng `{cautruc, khac_biet}`. |
+| `dong_nghia` / `trai_nghia` | Không | Cùng 2 format với mục 3 — xem bảng tình trạng thực tế ở trên. |
 
-**Lưu ý quan trọng:** mode "Gõ hiragana" và "Ghép thẻ" (Match) chỉ thiết kế cho TUVUNG, không xuất hiện trong nav khi đang học bộ NGUPHAP (vì cấu trúc ngữ pháp thường dài, không phù hợp kiểu chơi ghép đôi ngắn).
-
----
-
-## 5. Quy tắc đánh dấu trường âm (trong `doc_marked`)
-
-Trường âm (âm kéo dài trong tiếng Nhật) được tô đỏ bằng cách bọc đoạn ký tự cần đánh dấu trong `**...**`. App tự động chuyển `**xxx**` → `<span class="choon">xxx</span>` khi hiển thị (hàm `renderChoon` trong `app.js`).
-
-**Quy tắc nhận diện trường âm thật (không phải mọi chữ おう/えい đều là trường âm — cần hiểu đúng ngữ âm):**
-- おう, こう, ごう, とう, どう, のう, ぼう, もう, ろう, よう và biến thể có raised kana (しょう, ちょう, じょう, りょう, きょう, ぎょう, ひょう, びょう, みょう...) → đánh dấu cả 2 ký tự, ví dụ: か**こう**, **とう**ろん, り**ょう****しゅう**しょ
-- ゅう / ゆう (kyuu, shuu, juu...) → đánh dấu cả 2 ký tự, ví dụ: かく**じゅう**, けん**しゅう**
-- けい/せい/てい/ねい/へい/めい/れい/げい/ぜい/でい/べい/ぺい (e+i) → đánh dấu cả 2 ký tự, ví dụ: **せい**さん, **けい**とう
-- えい → đánh dấu cả 2 ký tự, ví dụ: **えい**きゅう
-- Trong từ katakana, dấu kéo dài `ー` (chōonpu, U+30FC) → đánh dấu luôn ký tự ngay trước nó cùng với dấu `ー`, ví dụ: **ハー**ド
-
-**Cách sửa/thêm đánh dấu ngay trong app (không cần sửa tay JSON):** dùng nút "✎ Sửa" ở Flashcard hoặc bảng, bôi đen (chọn) đoạn hiragana cần đánh dấu trong ô "Cách đọc có đánh dấu trường âm", bấm nút "Đánh dấu trường âm (đỏ)". Có thể bấm nhiều lần cho nhiều đoạn khác nhau trong cùng 1 từ. Xem mục 9 để biết cách lưu vĩnh viễn vào file.
+Mode "Gõ hiragana" và "Ghép thẻ" chỉ thiết kế cho TUVUNG, không hiện khi học NGUPHAP.
 
 ---
 
-## 6. Cấu trúc đề thi trắc nghiệm (thư mục `dethi/`)
+## 5. Quy tắc đánh dấu trường âm (`doc_marked`)
+
+Bọc đoạn cần tô đỏ trong `**...**`, app tự chuyển thành `<span class="choon">`.
+
+- おう/こう/ごう/とう/どう/のう/ぼう/もう/ろう/よう/ぞう/そう + biến thể raised-kana (しょう/ちょう/じょう/りょう/きょう/ぎょう/ひょう/びょう/みょう) → đánh dấu cả 2 ký tự.
+- ゅう/ゆう (kyuu, shuu, juu...) → đánh dấu cả 2 ký tự.
+- けい/せい/てい/ねい/へい/めい/れい/げい/ぜい/でい/べい/ぺい + えい (nhóm e+i) → đánh dấu cả 2 ký tự.
+- くう/つう (nguyên âm kéo dài đơn giản) → đánh dấu cả 2 ký tự.
+- Katakana có dấu `ー` → đánh dấu ký tự trước nó + dấu `ー`.
+
+Có thể sửa trực tiếp trong app qua nút "✎ Sửa" (bôi đen đoạn cần đánh dấu, bấm nút) — xem mục 9.
+
+---
+
+## 6. Cấu trúc đề thi trắc nghiệm chữ (`dethi/`)
 
 ```json
 {
   "title": "Mondai 1 - Đọc kanji (mẫu N2 2023-12)",
   "questions": [
     {
-      "de_bai": "次の文の＿＿＿の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n会議の内容を簡潔にまとめてください。",
+      "de_bai": "次の文の＿＿＿の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n会議の内容を<u>簡潔</u>にまとめてください。",
       "options": ["かんせつ", "かんけつ", "かんきつ", "かんかつ"],
       "dap_an_dung": 1,
-      "giai_thich": [
-        "Sai. 「かんせつ」là cách đọc của 「間接」(gián tiếp), không phải 「簡潔」.",
-        "Đúng. 「簡潔」đọc là 「かんけつ」, nghĩa là ngắn gọn, súc tích.",
-        "Sai. 「かんきつ」là cách đọc của 「柑橘」(họ cam quýt).",
-        "Sai. 「かんかつ」là cách đọc của 「管轄」(quản hạt)."
-      ]
+      "giai_thich": ["Sai. ...", "Đúng. ...", "Sai. ...", "Sai. ..."]
     }
   ]
 }
@@ -188,225 +205,273 @@ Trường âm (âm kéo dài trong tiếng Nhật) được tô đỏ bằng cá
 
 | Field | Bắt buộc | Giải thích |
 |---|---|---|
-| `title` | Có | Tên đề thi hiển thị trong dropdown "Đề thi trắc nghiệm" ở sidebar. |
-| `questions` | Có | Mảng câu hỏi, mỗi câu gồm các field bên dưới |
-| `questions[].de_bai` | Có | Đề bài. Dùng `\n` để xuống dòng nếu câu dài (ví dụ phần hướng dẫn + câu cần chọn riêng dòng). |
-| `questions[].options` | Có | Mảng **đúng 4 chuỗi** đáp án. |
-| `questions[].dap_an_dung` | Có | **Index 0-based** của đáp án đúng trong `options` (0 = đáp án thứ 1, 1 = đáp án thứ 2, 2 = thứ 3, 3 = thứ 4). |
-| `questions[].giai_thich` | Không | Mảng **đúng 4 chuỗi**, theo cùng thứ tự index với `options` — giải thích vì sao đáp án đó đúng/sai. Nếu để trống hoặc bỏ field này, nút "Xem giải thích" sẽ không xuất hiện cho câu đó (không bắt buộc viết cho mọi câu, có thể thêm dần). |
+| `de_bai` | Có | Đề bài, `\n` để xuống dòng. **Mondai 1/2/4** (đọc kanji, viết kanji, từ vựng theo văn cảnh): nên bọc `<u>...</u>` quanh từ/kanji đang được hỏi trong câu — app render bằng `innerHTML` nên tag này hoạt động, có CSS riêng tô màu nhấn (`.exam-question u`). |
+| `options` | Có | Đúng 4 chuỗi. |
+| `dap_an_dung` | Có | Index 0-based đáp án đúng. |
+| `giai_thich` | Không | Đúng 4 chuỗi theo thứ tự `options`. Để trống thì nút "Xem giải thích" không hiện cho câu đó. **Quy tắc viết:** ngắn gọn, dễ hiểu, KHÔNG dùng thuật ngữ ngữ âm học khó (ví dụ tránh nói "âm bán trọc/handakuten" — chỉ cần nói từ đó không tồn tại hoặc trùng cách đọc với từ khác thì nêu nghĩa từ đó). |
 
-**Cơ chế làm bài — chọn 1 trong 2 chế độ chấm mỗi khi bắt đầu đề (modal hỏi khi chọn đề từ dropdown):**
+**2 chế độ chấm (chọn mỗi lần bắt đầu đề qua modal):**
+- **⚡ Chấm ngay tại chỗ** — trả lời → tô đúng/sai ngay, có giải thích, nút "Tiếp tục". Sai → đẩy về cuối hàng đợi làm lại tới khi đúng. Có nút **"🚪 Thoát & xem kết quả"** để dừng giữa chừng (chỉ hiện ở mode này) — tính điểm theo những gì đã làm, câu chưa làm hiện riêng biệt "chưa làm" (không tính sai).
+- **📝 Chấm sửa cuối bài** — làm hết 1 lượt theo thứ tự gốc, không biết đúng/sai lúc làm, cuối bài hiện bảng đầy đủ.
 
-- **⚡ Chấm ngay tại chỗ**: trả lời → tô đúng/sai ngay, có nút "Xem giải thích" + nút "Tiếp tục →" để tự qua câu kế (không tự động chuyển). Trả lời sai → câu đó bị đẩy xuống cuối hàng đợi để làm lại, đến khi đúng mới tính qua hẳn. Điểm chỉ cộng 1 lần khi đúng **lần đầu tiên**. Cuối đề hiện đầy đủ 2 mốc thời gian (lượt đầu / sửa lại câu sai) như trước.
-- **📝 Chấm sửa cuối bài**: làm hết toàn bộ đề theo **đúng 1 lượt duy nhất** theo thứ tự gốc, không biết đúng/sai lúc đang làm, không lặp lại câu sai. Cuối đề hiện 1 bảng đầy đủ: mỗi câu kèm đáp án bạn đã chọn, đáp án đúng, và giải thích (nếu có) — chỉ hiện giải thích cho câu sai.
+**Kết quả cuối bài (cả 2 mode) — lưới ô tròn nhỏ:** mỗi câu 1 ô, xanh = đúng / đỏ = sai / xám = chưa làm (chỉ xuất hiện khi dùng "Thoát & xem kết quả"). Bấm vào ô → mở popup chi tiết: đề bài (có gạch chân nếu có `<u>`), 4 đáp án kèm tag "Đáp án đúng"/"Bạn đã chọn", giải thích riêng từng đáp án.
 
-Thứ tự 4 đáp án luôn được xáo trộn ngẫu nhiên mỗi lần hiện câu (tránh học vẹt vị trí đáp án). Không có khái niệm "đề thi sai" hay "trượt" — đề chỉ kết thúc khi đã đi hết hàng đợi (chế độ Chấm ngay) hoặc hết 1 lượt (chế độ Chấm cuối bài).
+**Lưu lịch sử + xem lại không cần làm lại:** mỗi lần hoàn thành đề, hệ thống lưu **2 tầng**:
+- `n2vocab_exam_history` — điểm tổng từng đề (điểm, số lần làm, thời gian).
+- `n2vocab_exam_detail_history` — chi tiết từng câu của **lần làm gần nhất** (đáp án đã chọn, đúng/sai) — dùng để vẽ lại lưới kết quả + popup chi tiết SAU KHI đã rời app/tải lại trang/nhập từ máy khác, không cần làm lại đề. Khi chọn 1 đề đã có lưu, modal chọn chế độ chấm sẽ hiện thêm nút **"📊 Xem kết quả lần làm gần nhất"**.
+
+Cả 2 đều nằm trong file Xuất/Nhập tiến độ (mục 12).
+
+**Tab "Đề thi" trong trang Điểm yếu:** gộp câu sai từ MỌI đề đã làm (dùng deckId giả `"__exam__"`, itemId dạng `"examId::qN"`), bấm vào dòng mở lại đúng popup chi tiết.
 
 ---
 
-## 7. Cách app định danh từng từ/cấu trúc (`_id`) — vì sao quan trọng
-
-Mỗi từ/cấu trúc khi tải vào app được gắn 1 `_id` nội bộ, dùng làm khóa để lưu tiến độ SRS, sửa tạm, và thống kê điểm yếu. Công thức:
+## 7. Cách app định danh (`_id`)
 
 ```
 _id = "<tên file (không đuôi .json)>::<kanji hoặc cautruc>"
 ```
+Dùng nội dung làm khóa (không dùng index mảng) để `_id` ổn định khi sắp xếp lại thứ tự từ trong file. Trùng kanji/cautruc trong cùng file → tự thêm hậu tố `#2`, `#3`...
 
-Ví dụ: từ "一転する" trong file `nut-that-n2.json` có `_id = "nut-that-n2::一転する"`.
-
-**Vì sao không dùng vị trí (index) trong mảng:** nếu dùng index, việc chèn/xóa 1 từ ở giữa file sẽ làm lệch toàn bộ `_id` của các từ phía sau, mất sạch tiến độ đã học. Dùng nội dung (`kanji`/`cautruc`) làm khóa giúp `_id` ổn định bất kể bạn sắp xếp lại thứ tự từ trong file.
-
-**Trường hợp 2 từ trùng `kanji`/`cautruc` y hệt trong cùng 1 file** (hiếm, ví dụ liệt kê riêng để học 2 nghĩa khác nhau của 1 từ đồng âm): app tự thêm hậu tố `#2`, `#3`... vào `_id` của các bản trùng tiếp theo để đảm bảo không bị nhầm lẫn.
-
-**Lưu ý khi đổi tên file:** đổi tên file `.json` sẽ làm đổi toàn bộ `_id` của các từ trong đó (vì tên file là 1 phần của `_id`) → tiến độ SRS cũ sẽ không khớp nữa. Tránh đổi tên file sau khi đã học một thời gian; nếu cần đổi, hãy export tiến độ trước.
+**Đổi tên file `.json` = đổi toàn bộ `_id` bên trong** → mất khớp tiến độ SRS cũ. Tránh đổi tên file đã học một thời gian; nếu cần, export tiến độ trước.
 
 ---
 
-## 8. Cơ chế ôn tập SRS (kiểu Anki, tính theo phút)
+## 8. SRS (kiểu Anki) + tính năng "⭐ Đã thuộc"
 
-3 nút: **Quên** (Again) / **Khó** (Hard) / **Dễ** (Easy). Công thức SM-2 đơn giản hóa, định nghĩa trong `js/srs.js`:
+3 nút thường: **Quên / Khó / Dễ** — công thức SM-2 đơn giản hóa trong `js/srs.js`:
 
-| Nút bấm | Lần đầu | Các lần sau |
+| Nút | Lần đầu | Các lần sau |
 |---|---|---|
-| Quên | → 1 phút | → luôn về lại 1 phút; hệ số dễ (ease) giảm 0.2, tối thiểu 1.3 |
-| Khó | → 6 phút | → interval hiện tại × 1.2 (tối thiểu 6 phút); ease giảm 0.05 |
-| Dễ | → 10 phút | → nếu interval < 1 ngày (1440 phút): interval × ease; nếu đã ≥ 1 ngày: interval × (ease + 1.5); ease tăng 0.1, tối đa 3.5 |
+| Quên | 1 phút | luôn về 1 phút; ease -0.2 (sàn 1.3) |
+| Khó | 6 phút | interval × 1.2; ease -0.05 |
+| Dễ | 10 phút | interval × ease (nếu <1 ngày) hoặc × (ease+1.5) (nếu ≥1 ngày); ease +0.1 (trần 3.5) |
 
-Trạng thái hiển thị trong Bảng/SRS:
-- **Chưa học** (`new`) — chưa từng được đánh giá.
-- **Đang học** (`learning`) — đã học, interval < 1 ngày.
-- **Đã thuộc** (`known`) — interval ≥ 1 ngày (1440 phút).
+Trạng thái: `new` (chưa học) / `learning` (<1 ngày) / `known` (≥1 ngày, "đã thuộc" tự nhiên).
 
-Mỗi nút trong Flashcard/SRS hiện sẵn thời gian dự kiến tới lần ôn tiếp theo (ví dụ "Dễ — 26 phút") để biết trước hệ quả của lựa chọn.
+**Nút thứ 4 riêng — "⭐ Đã thuộc"** (thêm mới): dành cho từ đã học vững ở nơi khác (Anki/Quizlet/sách giấy...), KHÔNG muốn đi từng bước Quên→Khó→Dễ. Bấm vào đẩy thẳng `intervalMin = 60 ngày` (86400 phút), set `entry.mastered = true`, trạng thái hiển thị riêng là `mastered` (≠ `known`, nhưng **được tính chung vào nhóm "known" ở thanh % tổng quan** để không bị lệch số liệu). Nếu sau 60 ngày từ đó tới hạn ôn lại và được rate bằng 1 trong 3 nút thường, cờ `mastered` tự tắt — coi như đang ôn THẬT lại từ đầu.
 
-Toàn bộ tiến độ lưu trong `localStorage`, theo từng bộ riêng biệt (key: `n2vocab_progress_<tên file>`).
+Filter riêng trong Bảng: `"⭐ Đã thuộc (đánh dấu tay)"` (value=`mastered`) tách biệt với `"Đã thuộc (tự nhiên)"` (value=`known`).
 
----
-
-## 9. Sửa thông tin trực tiếp trong app (nút ✎ Sửa) — sửa tạm, không phải sửa file gốc
-
-Có ở 2 nơi: nút "✎ Sửa" trong Flashcard mode (sửa từ đang xem), và icon ✎ ở cuối mỗi dòng trong Bảng.
-
-**Đây là sửa tạm.** Vì app chạy hoàn toàn trên trình duyệt, JavaScript không có quyền ghi đè file trên đĩa (giới hạn an toàn của mọi web app, không riêng app này). Khi bấm "Lưu thay đổi", bản sửa được lưu trong `localStorage` (key `n2vocab_editpatches`, cấu trúc `{ [tên file]: { [_id]: {...field đã sửa} } }`) và áp dụng đè lên dữ liệu gốc mỗi khi mở app — học liền mạch ngay, không cần tải lại file gì.
-
-**Field sửa được:**
-- TUVUNG: `kanji`, `doc`, `doc_marked` (kèm nút đánh dấu trường âm), `han_viet`, `nghia`, `vi_du`, `vi_du_ruby`, `dong_nghia`, `trai_nghia`.
-- NGUPHAP: `cautruc`, `nghia`, `muc_do`, `cau_truc_ngu_phap`, `vi_du`, `dong_nghia`, `trai_nghia`.
-
-Khi sửa `doc_marked`, app tự đồng bộ lại `doc` (bỏ hết dấu `**`) để mode "Gõ hiragana" vẫn so khớp đúng.
-
-**Muốn sửa vĩnh viễn vào file gốc:** dùng "Xuất tiến độ" ở sidebar (file xuất ra gồm cả các sửa tạm), mở file xuất ra, tìm phần `editPatches`, rồi tự tay copy nội dung đã sửa vào đúng file JSON tương ứng trong `tailieu/`. Cách này chắc chắn 100% và tránh rủi ro app tự động ghi sai cấu trúc file.
-
-**Nếu không muốn học 1 bộ nữa:** xóa file đó khỏi `tailieu/index.json` (và xóa file JSON) như bình thường. Các sửa tạm liên quan đến bộ đó vẫn còn trong `localStorage` nhưng vô hại — không bao giờ được áp dụng lại vì app không còn đọc bộ đó nữa. Có nút "Dọn các sửa tạm" ở sidebar để xóa sạch toàn bộ nếu muốn dọn rác.
+**3 lỗi đã từng có và đã sửa khi thêm tính năng này** (ghi lại để tránh tái phát nếu sửa `SRS.status()` lần sau): mọi nơi trong `app.js` so sánh `status === "known"` đều phải nhớ thêm nhánh `=== "mastered"` (đếm % tổng quan ở `computeDeckStats`, số đếm "đã thuộc lâu" đầu trang SRS, label badge trong Bảng) — nếu quên, các mục `mastered` sẽ bị tính lẫn vào "chưa học" hoặc hiện chữ "undefined".
 
 ---
 
-## 10. Xuất / nhập tiến độ — gồm những gì
+## 9. Sửa tạm trong app (nút ✎ Sửa)
 
-Nút "Xuất tiến độ" / "Nhập tiến độ" ở sidebar. File xuất ra (JSON) gồm:
+Lưu vào `localStorage` (`n2vocab_editpatches`), áp đè lên dữ liệu gốc mỗi lần mở app — **không sửa file gốc trên đĩa** (giới hạn an toàn của mọi web app). Field sửa được: TUVUNG (`kanji, doc, doc_marked, han_viet, nghia, vi_du, vi_du_ruby, dong_nghia, trai_nghia`), NGUPHAP (`cautruc, nghia, muc_do, cau_truc_ngu_phap, vi_du, dong_nghia, trai_nghia`). Sửa `doc_marked` → tự đồng bộ lại `doc` (bỏ `**`).
+
+**Muốn lưu vĩnh viễn vào file gốc:** Xuất tiến độ → tìm `editPatches` trong file xuất ra → tự tay copy vào đúng file JSON trong `tailieu/`.
+
+---
+
+## 10. Trang Thống kê (Stats)
+
+3 phần: (1) bảng tổng quan mọi bộ từ vựng/ngữ pháp, thanh % 3 màu (đã thuộc/đang học/chưa học), sắp theo % thấp nhất lên trước; (2) bảng đề thi chữ (đã làm/chưa làm, điểm gần nhất, thời gian); (3) bảng đề luyện nghe (cùng pattern với đề thi chữ). Bấm tên bộ/đề → nhảy thẳng vào học/làm ngay.
+
+---
+
+## 11. Trang Điểm yếu — 3 tab
+
+`"Từ vựng/Ngữ pháp (bộ đang chọn)"` / `"Đề thi (mọi đề)"` / `"Nghe (mọi đề)"`. Mỗi lần trả lời đúng/sai ở **6 chế độ học** (Flashcard, SRS, Gõ hiragana, Trắc nghiệm, Ghép thẻ, Đề thi) + **luyện nghe** đều ghi vào `n2vocab_weakness_stats` (deckId thật, hoặc `"__exam__"`/`"__choukai__"` cho 2 tab riêng). Coi là điểm yếu khi đã sai ≥1 lần, và nếu đã làm ≥3 lần thì tỷ lệ sai phải ≥40%.
+
+---
+
+## 12. Xuất / Nhập tiến độ
+
+File xuất gồm: `srsProgress, fieldConfig, visibleCols, peekCols, editPatches, starredItems, weaknessStats, examHistory, examDetailHistory, choukaiHistory, choukaiDetailHistory, shuffleEnabled, soundEnabled, speechEnabled`.
+
+Khi nhập: `weaknessStats` cộng dồn (không đè). `examDetailHistory`/`choukaiDetailHistory` lấy theo `savedAt` mới hơn. `examHistory`/`choukaiHistory` cộng `totalCompletions`, lấy `lastScore` theo `lastCompletedAt` mới hơn. Phần còn lại gộp không trùng lặp.
+
+---
+
+## 13-18. Các tính năng nhỏ khác (giữ nguyên từ trước, chưa đổi)
+
+- **Tùy chỉnh giao diện**: ⚙ Mặt thẻ (chọn field hiện trước/sau), ☷ Cột (ẩn/hiện + "ẩn để tự kiểm tra"), ⤮ Ngẫu nhiên (áp dụng từ phiên học tiếp theo).
+- **⛶ Focus mode**: ẩn sidebar, tăng cỡ chữ, thoát bằng ✕ hoặc Esc.
+- **Gõ hiragana**: tự luận thật, không hiện gợi ý sẵn. Nút 💡 Gợi ý (hiện thêm 1 ký tự) / 👁 Xem đáp án (tính chưa nhớ).
+- **Âm thanh + phát âm**: nút 🔊 (beep đúng/sai, không áp dụng Flashcard/SRS) và 🗣 (đọc to khi lật thẻ, cần 1 tương tác chạm đầu tiên trên mobile để "mở khóa").
+- **Luyện tốc độ 30s/câu**: chỉ áp dụng đề thi chữ, không khóa khi quá giờ, chỉ cảnh báo màu.
+- **Đề thi nâng cao**: xem lại câu đã làm (← →), tô chọn text được, 2 mốc thời gian (lượt đầu / sửa câu sai), lịch sử sai từng câu.
+- **Flashcard (Quizlet-style) ≠ SRS (Anki-style)**: Flashcard là hàng đợi trong 1 phiên ngắn (Chưa nhớ→quay lại sau 3 thẻ, Khó→sau 7 thẻ, Đã nhớ→ra hẳn); SRS là lịch ôn trải dài theo thời gian thật. Phím tắt Flashcard: ←Chưa nhớ ↑Khó ↓Lật →Đã nhớ.
+- **Đánh dấu ★**: không ảnh hưởng SRS, có toggle học riêng từ đã sao ở Flashcard/SRS, filter riêng ở Bảng.
+
+*(Chi tiết đầy đủ từng mục — nếu cần xem sâu hơn, đọc trực tiếp code tương ứng trong `app.js`, phần cốt lõi các mục này không đổi qua nhiều phiên làm việc.)*
+
+---
+
+## 19. Cấu trúc đề luyện nghe (`dethi-choukai/`) — TÍNH NĂNG MỚI, đầy đủ chi tiết
 
 ```json
 {
-  "exportedAt": "...",
-  "version": 5,
-  "srsProgress": { "n2vocab_progress_<tên file>": {} },
-  "fieldConfig": {},
-  "visibleCols": {},
-  "peekCols": {},
-  "editPatches": {},
-  "starredItems": {},
-  "weaknessStats": {},
-  "shuffleEnabled": { "flash": true, "srs": true },
-  "soundEnabled": true,
-  "speechEnabled": true
+  "id": "choukai-01",
+  "title": "聴解 1 (JLPT N2 2011/07)",
+  "year": "2011/07",
+  "audioMode": "combined",
+  "audioFile": "聴解 1.m4a",
+  "audioFiles": null,
+  "mondai": [
+    {
+      "number": 1, "name": "課題理解",
+      "instruction": "Hướng dẫn tiếng Việt hiện phía trên audio player",
+      "questions": [
+        {
+          "qnum": 1,
+          "prompt": "Câu hỏi đọc trước khi nghe (Mondai 1/2). NULL cho Mondai 3/4/5 (không có câu hỏi trước).",
+          "options": ["4 lựa chọn..."],
+          "correctIndex": 0,
+          "script": "Toàn bộ transcript hội thoại tiếng Nhật (mỗi lượt nói 1 dòng, cách nhau \\n)",
+          "scriptVi": "Bản dịch tiếng Việt, CÙNG SỐ DÒNG \\n như script (để chế độ Luyện nghe câu ghép cặp đúng)",
+          "tip": "Mẹo nghe/giải thích ngắn gọn — KHÔNG breakdown từng đáp án như đề thi chữ",
+          "keywords": ["chỉ có ở Mondai 3 & 5", "vài từ khóa gợi ý"]
+        }
+      ]
+    }
+  ]
 }
 ```
 
-- `srsProgress` — toàn bộ lịch sử SRS của **mọi bộ** đang có trong `localStorage`, không chỉ bộ đang mở.
-- `fieldConfig` — field nào hiện ở mặt trước/sau flashcard, riêng theo từng TYPE.
-- `visibleCols` / `peekCols` — cấu hình ẩn/hiện cột và "ẩn để tự kiểm tra" trong Bảng.
-- `editPatches` — toàn bộ các sửa tạm qua nút ✎ Sửa.
-- `starredItems` — toàn bộ các từ/cấu trúc đã đánh dấu ★, theo từng bộ.
-- `weaknessStats` — toàn bộ số liệu đúng/sai dùng cho mục Điểm yếu, của **mọi bộ và cả đề thi**.
-- `shuffleEnabled`, `soundEnabled`, `speechEnabled` — các cấu hình bật/tắt nhỏ.
+### Quy tắc cấu trúc Mondai (đúng định dạng JLPT N2 thật — đã xác nhận qua nhiều đề thật)
+| Mondai | Tên | Số câu thường gặp | Đặc điểm |
+|---|---|---|---|
+| 1 | 課題理解 | 5 | Có `prompt` (câu hỏi đọc trước), 4 lựa chọn HÀNH ĐỘNG. |
+| 2 | ポイント理解 | 6 | Có `prompt`, có THỜI GIAN ĐỌC trước 4 lựa chọn rồi mới nghe hội thoại. |
+| 3 | 概要理解 | 5 | **`prompt: null`** — không có lựa chọn in sẵn, không câu hỏi trước. Nghe hết đoạn → mới nghe câu hỏi+4 lựa chọn. |
+| 4 | 即時応答 | 11-12 (thay đổi theo năm) | **`prompt: null`**, KHÔNG có `script` hội thoại dài — chỉ 1 câu nói ngắn (`script`) + 3 lựa chọn phản hồi (không phải 4!). Có thêm field `optionsVi` (dịch các lựa chọn, vì chúng quá ngắn không cần format câu+dịch chung). |
+| 5 | 統合理解 | 2 câu đơn + 1 câu có **2 câu hỏi con** (`isDualQuestion: true` + `subQuestions: [{label, promptVi, options, correctIndex}, ...]`) = tổng 3-4 điểm. |
 
-Khi nhập vào máy khác (đã có sẵn cùng file JSON gốc trong `tailieu/`/`dethi/`), mọi thứ khôi phục đúng và áp dụng ngay. Riêng `weaknessStats` được **cộng dồn** (không đè) với số liệu đã có trên máy hiện tại, vì đây là số liệu tích lũy theo thời gian — đè thẳng sẽ làm mất lịch sử sẵn có. Các phần khác (sửa tạm, đánh dấu sao) được gộp không trùng lặp. File export cũ (chỉ có `srsProgress` không có wrapper, hoặc thiếu vài field mới) vẫn được hỗ trợ nhập vào — field nào không có trong file cũ sẽ giữ nguyên giá trị hiện tại, không bị xóa.
+### Field cấp `audioMode` — 2 kiểu file âm thanh
+- `"combined"` — 1 file audio DUY NHẤT cho cả đề (field `audioFile`, `audioFiles: null`). App tự cảnh báo "tự kéo thanh thời gian tới đúng đoạn" vì không tách được audio theo câu.
+- `"split"` — mỗi Mondai 1 file riêng (field `audioFiles: {"1": "...", "2": "...", ..., "5": "..."}`, `audioFile: null`). Đây là kiểu PHỔ BIẾN HƠN — Zane xác nhận từ đề 2 trở đi audio luôn được tách sẵn theo Mondai (tên file dạng `聴解 N M.m4a/mp3`, M=số Mondai 1-5). **Lưu ý:** dù Mondai 5 có 3 đoạn nghe (2 câu đơn + 1 câu có 2 câu hỏi con), cả 3 đoạn đó vẫn nằm chung trong **1 file duy nhất** `聴解 N 5.m4a` — file lấy theo SỐ MONDAI, không phải theo từng câu riêng.
+- **Tên file phải khớp CHÍNH XÁC** với tên thật trên GitHub (kể cả khoảng trắng, kể cả đuôi `.m4a` hay `.mp3` — đã từng bị lệch đuôi vì đoán theo mẫu cũ, luôn đối chiếu ảnh chụp GitHub thật, không suy đoán).
 
----
+### Quy tắc viết `script`/`scriptVi`/`tip`
+- `script`: transcript tiếng Nhật, mỗi câu nói của 1 người = 1 dòng riêng (`\n`), bắt đầu bằng `女:`/`男:` nếu hội thoại 2 người. Câu hỏi đặt ở dòng cuối (lặp lại prompt).
+- `scriptVi`: dịch tương ứng, **PHẢI cùng số dòng `\n`** như `script` — vì chế độ "Luyện nghe câu" (mục dưới) ghép cặp 2 mảng này theo INDEX dòng, lệch số dòng sẽ ghép sai.
+- `tip`: ngắn gọn, chỉ ra ĐÚNG đáp án dựa trên đâu (bẫy gì, từ khóa nào loại trừ đáp án nào) — không lan man, không phải dịch lại cả câu.
+- Tuyệt đối KHÔNG tự chế nội dung script khi chưa có file Word gốc — chỉ transcribe đúng 100% từ file `聴解 N.docx` (19 file script gốc, định dạng JLPT thật kèm đáp án `正解:`).
 
-## 11. Tùy chỉnh giao diện Flashcard / Bảng
+### Field tùy chọn MỚI: `startSec` (câu hỏi) và `lineTimestamps` (script) — hỗ trợ tự nhảy audio + karaoke
 
-- Nút **⚙ Mặt thẻ** (Flashcard mode): popup chọn field nào hiện ở mặt trước (chỉ chọn 1, radio button) và mặt sau (chọn nhiều, checkbox) — riêng theo từng TYPE. Lưu `localStorage` (`n2vocab_fieldconfig`).
-- Nút **☷ Cột** (Bảng mode): mỗi cột có 2 control riêng — checkbox ẩn/hiện hẳn cột khỏi bảng, và 1 switch riêng "ẩn để tự kiểm tra" (chỉ áp dụng các cột không phải định danh chính: đọc, hán việt, nghĩa, ví dụ, mức độ). Khi bật switch peek, nội dung cột đó bị che bởi 1 lớp overlay (không làm lệch chiều cao hàng), hiện ra khi rê chuột vào. Lưu `localStorage` (`n2vocab_colconfig`, `n2vocab_peekcols`).
-- Checkbox **⤮ Ngẫu nhiên** (có ở cả Flashcard và SRS): bật thì học theo thứ tự xáo trộn ngẫu nhiên, tắt thì học đúng theo thứ tự từ xuất hiện trong file JSON gốc. Bật/tắt áp dụng cho **lần học tiếp theo** (đổi bộ, restart, hoặc bắt đầu phiên mới) — không làm xáo trộn lại giữa lúc đang học để tránh mất tiến độ phiên hiện tại. Lưu `localStorage` (`n2vocab_shuffle_enabled`), riêng theo Flashcard/SRS.
+Hai field này **HOÀN TOÀN TÙY CHỌN** — file cũ không có vẫn chạy đúng như trước, không lỗi/crash gì cả. Chỉ khi file JSON MỚI khai báo thêm các field này thì app mới bật tính năng tương ứng:
 
----
+- **`startSec`** (số giây, đặt trong từng object `questions[]`): khi có, app tự `audioEl.currentTime = startSec` mỗi khi chuyển sang câu đó — dùng cho cả khi vẫn dùng CHUNG 1 file audio của cả Mondai. Không có field này → giữ nguyên hành vi cũ (không tự seek, người học tự kéo thanh thời gian).
+- **`lineTimestamps`** (mảng số giây, đặt trong từng object `questions[]`, PHẢI cùng số dòng với `script`): dùng ở mode "Luyện nghe câu" (`choukai-shadow`) — khi có, mỗi dòng script được bôi sáng kiểu karaoke đúng lúc audio phát tới đó (lắng nghe `timeupdate`), và bấm vào dòng tiếng Nhật sẽ nhảy audio tới đúng giây đó. Không có field này (hoặc số phần tử không khớp số dòng script) → giữ nguyên hành vi cũ (chỉ hiện dòng + dịch làm mờ, không bôi sáng).
 
-## 12. Chế độ phóng to toàn màn hình (⛶ Focus mode)
+```json
+{
+  "qnum": 1,
+  "startSec": 12.5,
+  "script": "...\n...\n...",
+  "lineTimestamps": [0, 4.2, 9.8],
+  ...
+}
+```
 
-Có ở mọi mode học (Flashcard, Bảng, SRS, Gõ hiragana, Trắc nghiệm, Ghép thẻ, Đề thi). Bấm nút "⛶" để ẩn sidebar và các điều khiển phụ (tìm kiếm, lọc, đồng hồ phụ...), tăng cỡ chữ để tập trung học. Thoát bằng nút "✕" tròn cố định góc trên phải, hoặc phím **Esc**.
+**Trạng thái thực tế:** `choukai-18.json` (mới làm) **CHƯA có** 2 field này — do chưa có timestamp thật từ audio. Đây là việc làm DẦN khi có nhu cầu thực tế (phải nghe lại audio để đo đúng giây), không bắt buộc làm ngay.
 
-Riêng đề thi: nếu chưa chọn đề thi nào, app sẽ chặn vào focus mode và nhắc chọn đề trước (vì dropdown chọn đề nằm ở sidebar, sẽ không bấm được khi sidebar đang ẩn).
 
----
+- **Trang "Luyện nghe theo đề"**: chọn đề (dropdown) → chọn luyện cả đề hoặc CHỈ 1 Mondai cụ thể → modal chọn chấm ngay/chấm cuối (giống đề thi chữ, có nút "Xem kết quả lần làm gần nhất").
+- **Audio player**: dùng `<audio controls>` GỐC của trình duyệt (có thanh thời gian/seek bar đầy đủ — không tự vẽ control riêng). Audio **CHỈ load lại khi đổi sang Mondai khác** (file khác) — không reload mỗi câu trong cùng 1 Mondai (tránh audio bị giật lại từ đầu liên tục).
+- **Tự dừng audio**: khi chuyển mode trong app (`setMode()`) HOẶC chuyển tab trình duyệt khác (`visibilitychange`).
+- **Đổi Mondai giữa lúc đang làm bài**: dropdown chọn Mondai dùng được NGAY CẢ khi đang làm, không chỉ lúc bắt đầu — đổi sẽ nhảy thẳng tới Mondai đó, giữ nguyên đáp án các câu đã làm.
+- **Chấm ngay**: trả lời → khóa toàn bộ nút lựa chọn (tránh bug cộng điểm 2 lần nếu bấm thêm lần nữa — ĐÃ TỪNG có bug này, xem cảnh báo dưới) → hiện panel 3 tab **Script / Dịch / Mẹo nghe** (không breakdown từng đáp án như đề chữ).
+- **Mondai 3 & 5**: toggle "💡 Hiện gợi ý từ khóa khi đang nghe" — bật thì hiện vài chip từ khóa NGAY TRONG LÚC làm câu (trước khi trả lời), hỗ trợ luyện bắt ý mà không cần ghi chú giấy.
+- **🚪 Thoát & xem kết quả** (chỉ mode chấm ngay) — giống đề chữ.
+- **Kết quả cuối**: điểm tổng + breakdown theo từng Mondai (vd "1/5 Mondai 1") + lưới ô tròn (đúng/sai/chưa làm) bấm vào xem chi tiết.
+- **Trang "Luyện nghe câu"** (mode riêng `choukai-shadow`): chọn đề + câu cụ thể, hiện TỪNG dòng script kèm bản dịch BỊ LÀM MỜ (blur), bấm vào dòng dịch để hiện rõ — luyện nghe shadowing. Có nút "Phát lại" — **CHỈ phát lại TOÀN BỘ audio của câu đó** (không tách được theo từng dòng vì không có timestamp), có cảnh báo rõ giới hạn này trong UI.
+- **Lưu lịch sử**: cùng pattern với đề chữ — `n2vocab_choukai_history` (điểm tổng) + `n2vocab_choukai_detail_history` (chi tiết từng câu, key dạng `m{Mondai}q{qnum}[s{subIndex}]`).
+- **Tích hợp Điểm yếu** (tab "Nghe") và **Thống kê** (mục "🎧 Luyện nghe") — dùng lại `recordWeaknessResult("__choukai__", ...)`.
 
-## 13. Gõ hiragana (mode "Gõ hiragana") — tự luận thật, không phải tập đánh máy
-
-Chỉ hiện kanji + nghĩa, **không hiện khung gợi ý cách đọc**. Người học tự nhớ và gõ cách đọc ra ô input, bấm **Enter** hoặc nút "Kiểm tra" để so khớp toàn bộ một lần (không soi từng ký tự khi đang gõ — đúng tinh thần tự luận).
-
-- Nút **💡 Gợi ý** — hiện thêm 1 ký tự đúng tiếp theo (dòng chấm tròn phía dưới ô input), không tính là sai.
-- Nút **👁 Xem đáp án** — hiện full đáp án ngay, tính là **chưa nhớ được** (SRS xếp ôn lại sớm hơn, ghi nhận vào thống kê điểm yếu).
-- Gõ đúng hoàn toàn → tự động chuyển qua từ tiếp theo.
-
----
-
-## 14. Âm thanh phản hồi + Thống kê điểm yếu
-
-**Âm thanh:** nút 🔊/🔇 cạnh tên app ở sidebar. Phát tiếng "beep" ngắn (tạo bằng Web Audio API, không cần file âm thanh) khi trả lời đúng/sai. Áp dụng cho: Gõ hiragana, Trắc nghiệm, Ghép thẻ, Đề thi. Không áp dụng cho Flashcard/SRS vì đó là tự đánh giá (Quên/Khó/Dễ), không có đúng/sai khách quan. Trạng thái lưu `localStorage` (`n2vocab_sound_enabled`).
-
-**Phát âm tiếng Nhật:** nút 🗣 cạnh nút 🔊. Khi bật, mỗi lần lật thẻ sang mặt sau (cả Flashcard và SRS) sẽ tự đọc cách đọc thật của từ/cấu trúc bằng Web Speech API có sẵn trong trình duyệt (miễn phí, không cần internet sau khi tải trang). Trạng thái lưu `localStorage` (`n2vocab_speech_enabled`).
-
-Lưu ý kỹ thuật quan trọng trên mobile (đặc biệt iOS): trình duyệt yêu cầu phải có ít nhất 1 tương tác chạm/click trên trang trước khi cho phép phát âm, nếu không lệnh đọc sẽ bị chặn âm thầm (không báo lỗi, chỉ là không có tiếng). App đã xử lý bằng cách "mở khóa" engine đọc ngay từ lần chạm đầu tiên trên trang (bất kỳ đâu), và tự tìm giọng đọc tiếng Nhật phù hợp nhất có sẵn trên máy. Nếu máy không có giọng đọc tiếng Nhật nào được cài, sẽ không có tiếng — đây là hạn chế của thiết bị, không phải lỗi app.
-
-**Thống kê điểm yếu:** mục "⚠ Điểm yếu" trong nav (có ở cả TUVUNG và NGUPHAP). Mỗi lần trả lời đúng/sai ở **Flashcard, SRS, Gõ hiragana, Trắc nghiệm, Ghép thẻ, Đề thi** (toàn bộ 6 chế độ học) đều được ghi nhận vào `localStorage` (`n2vocab_weakness_stats`). Một từ/câu được coi là "điểm yếu" khi đã sai ít nhất 1 lần, và nếu đã làm ≥3 lần thì tỷ lệ sai phải ≥40% (tránh báo nhầm từ đã từng sai nhưng học tốt hẳn lên về sau). Với dữ liệu còn ít (1-2 lần làm), chỉ cần có sai là hiện ngay, để dễ kiểm tra tính năng khi mới dùng.
-
-Có nút "Ôn riêng các từ yếu này" để mở thẳng Flashcard chỉ gồm các từ đang yếu. Với đề thi, sau khi hoàn thành sẽ hiện thêm danh sách câu hay sai nhất trong đề đó ngay trong phần kết quả.
-
----
-
-## 15. Luyện tốc độ khi làm đề thi (⚡ 30 giây/câu)
-
-Bật bằng checkbox "⚡ Luyện tốc độ (30s/câu)" ở đầu trang làm đề thi, áp dụng cho **cả đề từ vựng (mojigoi) và đề ngữ pháp** — mục đích rèn phản xạ nhanh để dành thời gian cho phần đọc hiểu trong bài thi thật. Bật/tắt áp dụng **ngay lập tức**, không cần đổi đề hay tải lại trang.
-
-- Mỗi câu có đồng hồ đếm ngược 30 giây. Còn ≤10 giây → chuyển vàng cảnh báo.
-- Quá 30 giây → **vẫn cho làm tiếp bình thường** (không khóa, không trừ điểm), đồng hồ chuyển đỏ và hiện số giây đã vượt (ví dụ "+5") để biết đang chậm — mục đích là phản hồi trực quan rèn cảm giác tốc độ, không phải ép buộc.
-- Đồng hồ tổng (góc trên) đo tổng thời gian làm hết cả đề; không bị reset nếu lỡ rời trang giữa lúc làm bài rồi quay lại.
-
-Tắt checkbox → làm đề bình thường, không đồng hồ, phù hợp khi muốn học kỹ và đọc lại đề chậm.
+### ⚠️ Bug đã từng gặp và ĐÃ SỬA — đọc kỹ để không lặp lại khi code tiếp
+1. **Audio không tự dừng khi rời tab** → đã thêm pause ở `setMode()` + `visibilitychange`.
+2. **Audio bị tải lại (giật về đầu) mỗi câu trong cùng 1 Mondai** → đã thêm so sánh `App.choukaiCurrentAudioSrc` trước khi set lại `audioEl.src`.
+3. **Đổi Mondai giữa bài không có tác dụng** → đã thêm listener riêng cho `choukaiMondaiPicker` khi session đang chạy.
+4. **Bug điểm số nghiêm trọng nhất:** sau khi trả lời, các nút lựa chọn VẪN bấm được dưới panel review → bấm thêm sẽ ghi đè đáp án + cộng điểm THÊM LẦN NỮA → điểm "câu đúng" trông giống "số câu đã làm". **Đã sửa bằng cờ `App.choukaiAnswering`** + khóa toàn bộ nút (`.disabled`) ngay sau khi trả lời, và khi back lại câu đã làm (nút "Câu trước") thì khóa lại luôn, không cho trả lời lần 2.
+5. **Sai đuôi file audio** (`.mp3` thay vì `.m4a` hoặc ngược lại) — luôn đối chiếu đúng tên file thật theo ảnh chụp GitHub, không suy đoán theo mẫu đề trước.
 
 ---
 
-## 15b. Làm đề thi nâng cao — xem lại câu, tô chọn đáp án, 2 mốc thời gian, lịch sử sai
-
-**Xem lại câu đã làm:** nút "← Câu trước" / "Câu sau →" ở đầu khu vực làm bài, cho phép lùi/tiến qua toàn bộ các câu đã từng hiện ra (kể cả câu đã làm lại nhiều lần). Khi xem lại, có băng thông báo "📖 Đang xem lại câu đã làm" và đáp án đã chọn được tô lại đúng như lúc làm (không cho chọn lại). Bấm "Câu sau →" liên tục tới cuối sẽ tự quay về câu đang chờ trả lời thật.
-
-**Tô chọn được đáp án:** các nút đáp án và đề bài cho phép bôi đen (chọn) text bình thường — để tự tra Google Dịch cách đọc kanji nếu cần. Trước đây bị chặn vì giới hạn mặc định của thẻ `<button>` trong HTML, đã thêm `user-select: text` để ghi đè.
-
-**2 mốc thời gian** (chỉ hiện khi bật ⚡ Luyện tốc độ), trong phần kết quả sau khi hoàn thành đề:
-- **Mốc 1 — Lượt đầu:** thời gian từ lúc bắt đầu đề tới khi đã hỏi hết lượt đầu tiên theo đúng thứ tự gốc trong file (chưa tính làm lại câu sai), kèm số câu đúng ngay lần 1 / sai lần 1.
-- **Mốc 2 — Sửa lại câu sai:** thời gian riêng từ lúc bắt đầu pha làm lại các câu đã sai cho tới khi mọi câu đều đúng (đề hoàn thành hẳn).
-
-**Lịch sử sai từng câu:** phần kết quả có khu vực "Chi tiết các câu đã sai", liệt kê từng câu kèm nhãn "sai ở lần 1" (chỉ sai 1 lần, đúng ngay lần làm lại) hoặc "sai nhiều lần" (≥2 lần sai), sắp theo số lần sai nhiều nhất trước. Trong lúc đang làm bài, nếu gặp lại 1 câu đã từng sai trước đó, sẽ có ghi chú nhỏ "⚠ Câu này đã sai N lần trong đề này" ngay dưới các đáp án.
-
----
-
-## 16. Toàn bộ key `localStorage` app sử dụng
+## 20. Toàn bộ key `localStorage`
 
 | Key | Nội dung |
 |---|---|
-| `n2vocab_progress_<tên file>` | Tiến độ SRS của 1 bộ cụ thể |
-| `n2vocab_fieldconfig` | Field hiện ở mặt trước/sau flashcard theo TYPE |
-| `n2vocab_colconfig` | Cột nào hiện/ẩn trong Bảng theo TYPE |
-| `n2vocab_peekcols` | Cột nào đang ở trạng thái "ẩn để tự kiểm tra" theo TYPE |
-| `n2vocab_editpatches` | Toàn bộ sửa tạm qua nút ✎ Sửa |
-| `n2vocab_sound_enabled` | Trạng thái bật/tắt âm thanh phản hồi |
-| `n2vocab_weakness_stats` | Thống kê số lần đúng/sai từng từ/câu, dùng cho mục Điểm yếu |
-| `n2vocab_starred` | Danh sách các từ/cấu trúc đã đánh dấu ★, theo từng bộ |
-| `n2vocab_speech_enabled` | Trạng thái bật/tắt phát âm khi lật thẻ |
-| `n2vocab_shuffle_enabled` | Trạng thái bật/tắt học theo thứ tự ngẫu nhiên, riêng cho Flashcard và SRS |
-
-Xóa toàn bộ các key này (qua DevTools hoặc xóa cache trình duyệt) sẽ reset app về trạng thái ban đầu, không ảnh hưởng file JSON gốc.
+| `n2vocab_progress_<tên file>` | Tiến độ SRS 1 bộ |
+| `n2vocab_fieldconfig` | Field hiện trước/sau flashcard theo TYPE |
+| `n2vocab_colconfig` / `n2vocab_peekcols` | Cấu hình cột Bảng |
+| `n2vocab_editpatches` | Sửa tạm qua ✎ Sửa |
+| `n2vocab_sound_enabled` / `n2vocab_speech_enabled` | Bật/tắt âm thanh/phát âm |
+| `n2vocab_weakness_stats` | Thống kê đúng/sai (mọi loại, kể cả `__exam__`/`__choukai__`) |
+| `n2vocab_starred` | Đánh dấu ★ |
+| `n2vocab_shuffle_enabled` | Ngẫu nhiên Flashcard/SRS |
+| `n2vocab_exam_history` / `n2vocab_exam_detail_history` | Điểm tổng / chi tiết từng câu đề thi chữ |
+| `n2vocab_choukai_history` / `n2vocab_choukai_detail_history` | Điểm tổng / chi tiết từng câu đề luyện nghe |
 
 ---
 
-## 17. Flashcard kiểu Quizlet — khác gì với SRS (Anki)
+## 21. Quy ước nhóm dữ liệu "Mimi" (giáo trình chính) — **ĐÃ LÀM**
 
-**Đây là 2 khái niệm khác nhau, không phải trùng lặp:**
+Các file giáo trình Mimi (`mimi-n2-unit3-adj`, `unit4`, `unit6-photu`, `unit8`, `unit10-adj`, `unit11`, `tunoi-photu`) giờ có thêm field `"series": "mimi"` ngay sau `"type"` trong JSON. `populateDeckPicker()` trong `app.js` đọc field này và render dropdown sidebar bằng 2 `<optgroup>` riêng: **"📘 Mimi N2 (giáo trình chính)"** (luôn ở ĐẦU dropdown) và **"Tài liệu khác"** (các bộ còn lại). Thứ tự A-Z trong từng nhóm vẫn giữ nguyên như cũ (không đổi cách sort). Bộ MỚI thêm sau này: muốn vào nhóm Mimi thì chỉ cần thêm `"series": "mimi"` vào file JSON, không cần sửa code thêm.
 
-- **Flashcard** = học nhanh trong 1 phiên ngắn ngay lúc đó. Khi bấm "Chưa nhớ" hoặc "Khó", từ đó **vẫn nằm trong hàng đợi của phiên học hiện tại** và sẽ quay lại sau vài thẻ nữa để lặp lại liên tục cho tới khi bạn bấm "Đã nhớ" — đúng kiểu chế độ "Learn" của Quizlet. Bấm "Chưa nhớ" → quay lại sớm (cách 3 thẻ). Bấm "Khó" → quay lại muộn hơn một chút (cách 7 thẻ, hoặc cuối hàng đợi nếu hàng đợi ngắn hơn 7). Bấm "Đã nhớ" → ra khỏi hàng đợi hẳn, không gặp lại trong phiên này nữa. Học hết toàn bộ hàng đợi → hiện màn hình hoàn thành, gợi ý học lại toàn bộ hoặc chỉ học riêng các từ đã ★ đánh dấu.
-- **SRS (mục "Ôn tập")** = lịch ôn trải dài theo thời gian thật (phút/giờ/ngày), không có khái niệm "hàng đợi trong phiên". Bấm "Khó" → 6 phút sau quay lại (có thể đã rời app, quay lại app sau mới thấy). Bấm "Dễ" → có khi ngày mai mới quay lại. Đây là cơ chế chống quên dài hạn kiểu Anki thật, xem chi tiết công thức ở mục 8.
-
-Nói ngắn: Flashcard = luyện tập trong lúc ngồi học (vài chục giây tới vài chục phút), SRS = lịch trình ôn tập trải dài nhiều ngày/tuần.
-
-**Phím tắt khi học Flashcard** (không cần click chuột, dùng được khi đặt tay trên phím mũi tên):
-- **←** Chưa nhớ
-- **↑** Khó
-- **↓** Lật thẻ
-- **→** Đã nhớ
-
-Phím tắt tự động bị tắt khi đang mở popup "✎ Sửa" hoặc đang gõ trong 1 ô input/textarea bất kỳ, để không xung đột.
+Đã kiểm tra bằng Playwright: dropdown hiện đúng 2 optgroup, nhóm Mimi có đúng 7 bộ, nhóm khác có đúng 8 bộ, không có lỗi console.
 
 ---
 
-## 18. Đánh dấu sao (★) — kiểu Quizlet
+## 22. Trạng thái dữ liệu hiện tại (kiểm kê đầy đủ — lúc viết tài liệu này)
 
-Nút ★ xuất hiện ở góc trên-phải của thẻ Flashcard (cả 2 mặt trước/sau), và 1 cột riêng ở đầu mỗi dòng trong Bảng. Bấm để đánh dấu/bỏ đánh dấu 1 từ — không ảnh hưởng gì đến tiến độ SRS hay trạng thái Chưa học/Đang học/Đã thuộc.
+### `tailieu/` (15 file)
+| File | Type | Số từ |
+|---|---|---|
+| danh-tu-jlpt-n2.json | TUVUNG | 73 |
+| danh-tu-thiet-yeu.json | TUVUNG | 73 |
+| mimi-n2-tunoi-photu.json | TUVUNG | 58 |
+| mimi-n2-unit3-adj.json | TUVUNG | 50 |
+| mimi-n2-unit4.json | TUVUNG | 100 |
+| mimi-n2-unit6-photu.json | TUVUNG | 59 |
+| mimi-unit8.json | TUVUNG | 110 |
+| mimi-n2-unit10-adj.json | TUVUNG | 50 |
+| mimi-n2-unit11.json | TUVUNG | 100 |
+| nut-that-n2.json | TUVUNG | 120 |
+| nguphap-hoc-tu.json | NGUPHAP | 66 |
+| nguphap-mau.json | NGUPHAP | 3 |
+| nguphap-pham-vi-a-m789.json | NGUPHAP | 71 |
+| nguphap-pham-vi-b-m11-dokkai.json | NGUPHAP | 29 |
+| nguphap-top40-mimitry.json | NGUPHAP | 40 |
 
-**Cách dùng:**
-- Trong **Bảng**: chọn filter "★ Đã đánh dấu" ở dropdown để chỉ xem các từ đã đánh dấu.
-- Trong **Flashcard**: có nút toggle "★ Học từ đã sao" ở đầu trang — bấm để **bật** chế độ chỉ học các từ đã ★ (nút chuyển sang màu vàng, đổi text thành "★ Đang học từ đã sao (bấm để tắt)"); bấm lại lần nữa để **tắt**, quay về học toàn bộ bộ. Ngoài ra, sau khi học hết 1 phiên (màn hình hoàn thành), có nút riêng "Chỉ học các từ đã ★" để bắt đầu phiên mới chỉ gồm các từ đó.
-- Trong **SRS (Ôn tập)**: tương tự, có nút toggle "★ Ôn từ đã sao" hoạt động cùng cơ chế bật/tắt.
+**⚠️ Trùng tên hiển thị chưa xử lý:** `danh-tu-jlpt-n2.json` và `danh-tu-thiet-yeu.json` có title GIỐNG NHAU ("Danh từ thiết yếu JLPT N2") nhưng nội dung khác — Zane chưa quyết định giữ/xóa/đổi tên cái nào, đang để cả 2.
 
-Nếu đổi sang bộ học khác, hoặc dùng "Ôn riêng từ yếu" (mục điểm yếu), trạng thái toggle ★ sẽ tự động tắt — vì đó là 2 cách giới hạn khác nhau, không nên hiển thị lẫn vào nhau.
+**⚠️ Trùng nội dung đã xử lý (không cần làm lại):** Unit 6 (phó từ/liên từ) đã rà soát kỹ — phần liên từ logic (だから/しかし/ところが...) trùng ~100% với `mimi-n2-tunoi-photu.json` nên KHÔNG đưa vào Unit 6, chỉ giữ phần phó từ mức độ/thời gian/trạng thái thực sự mới (59 từ).
 
-Dữ liệu đánh dấu lưu `localStorage` (`n2vocab_starred`, theo từng bộ riêng biệt), và được gồm trong file "Xuất tiến độ" để giữ lại khi chuyển máy khác.
+### `dethi/` (8 file — đề thi trắc nghiệm chữ)
+4 đề tự soạn đầy đủ (51 câu, có giải thích + gạch chân kanji): `n2-2024-07`, `n2-2024-12`, `n2-2025-07`, `n2-2025-12`. 1 đề mẫu nhỏ (`mondai1-mau-2023-12`, 3 câu). **3 đề CHƯA hoàn chỉnh:** `n2-2019-12`, `n2-2020-12`, `n2-2023-12` — mới có 30/51 câu (chỉ Mondai 1-6, THIẾU Mondai 7-9: ghép câu ★, đoạn văn), và **chưa có `giai_thich`** cho câu nào.
+
+### `dethi-choukai/` (đề luyện nghe — MỚI, đang xây)
+- `choukai-01.json` — 31 câu, đầy đủ script+dịch+tip, audioMode `combined`.
+- `choukai-02.json` — 32 câu, đầy đủ, audioMode `split`.
+- **`choukai-18.json` — MỚI LÀM XONG** (32 câu, đầy đủ script+dịch+tip+keywords, audioMode `split`). Transcribe đúng 100% từ `聴解 18.docx` gốc. **⚠️ Tên file audio trong `audioFiles` (`聴解 18 1.mp3` ... `聴解 18 5.mp3`) là ĐOÁN THEO MẪU chung của dự án — CHƯA xác nhận được đuôi `.mp3`/`.m4a` thật trên GitHub vì ảnh chụp Zane gửi không có đề 18. Cần đối chiếu lại đúng tên+đuôi thật trước khi audio chạy được.** Đã test qua Playwright: chạy hết 32/32 câu, hiện đúng kết quả + breakdown 5 Mondai, không lỗi JS (chỉ lỗi 404 audio do chưa có file thật, đúng như dự kiến).
+- **`choukai-19` do Zane tự làm** (theo đúng schema, đã xác nhận cấu trúc đúng) — **chưa có bản lưu trong repo của Claude ở các lần trao đổi gần nhất, cần lấy lại file thật từ GitHub** nếu muốn rà soát/sửa tiếp. Zane xác nhận không cần Claude lo phần này.
+- **CHƯA LÀM: đề 03-17** (15 đề) — đã có sẵn file script gốc `聴解 N.docx` (N=3..17), cấu trúc xác nhận ổn định (Mondai1≈5-6 câu, Mondai2=6 câu, Mondai3=5 câu, Mondai4=11-12 câu, Mondai5=3-4 điểm) — chỉ cần transcribe + dịch + viết tip theo đúng quy trình mục 19.
+- **`file-nghe/` (audio thật)**: Zane tự upload trực tiếp lên GitHub, KHÔNG đi qua Claude — Claude chỉ biết tên file qua ảnh chụp Zane gửi. Cần đối chiếu kỹ tên file + đuôi mỗi khi viết `audioFiles` trong JSON mới — **đề 18 đang còn thiếu bước đối chiếu này.**
+
+---
+
+## 23. TODO tổng hợp — việc còn lại theo đúng yêu cầu gần nhất của Zane
+
+1. **Xác nhận tên + đuôi file audio thật cho choukai-18** (`聴解 18 1.mp3`...`5.mp3` đang là ĐOÁN theo mẫu, chưa đối chiếu ảnh GitHub thật) — ưu tiên cao, audio không chạy được nếu tên sai.
+2. **Xây tiếp 15 đề luyện nghe còn lại** (choukai-03 → choukai-17) — cần file `聴解 N.docx` tương ứng (đã có trong lần upload zip script gần nhất).
+3. **Chuẩn hóa `dong_nghia`/`trai_nghia` sang format mới** (~826 mục đang format cũ) — xem bảng mục 3, làm dần.
+4. **Quyết định xử lý 2 file trùng tên** `danh-tu-jlpt-n2.json` / `danh-tu-thiet-yeu.json` — xem mục 22.
+5. **Hoàn thiện 3 đề thi chữ thiếu** (`n2-2019-12`, `n2-2020-12`, `n2-2023-12`) — thêm Mondai 7-9 + giải thích.
+6. **Xác nhận lại nội dung file `choukai-19.json`** thật trên GitHub (Zane tự làm, Claude chưa có bản lưu để rà soát lần cuối) — Zane xác nhận chưa cần ưu tiên.
+7. **Bổ sung `startSec`/`lineTimestamps`** cho các đề choukai đã có (01, 02, 18) khi có nhu cầu thực tế — xem mục 19, field tùy chọn, cần nghe lại audio để đo đúng giây từng câu/dòng.
+
+---
+
+## 24. Việc ĐÃ HOÀN THÀNH (tóm tắt, để biết KHÔNG cần làm lại)
+
+- Toàn bộ hệ thống học từ vựng/ngữ pháp (Flashcard, SRS+"Đã thuộc", Bảng, Gõ hiragana, Trắc nghiệm, Ghép thẻ) — ổn định.
+- Toàn bộ hệ thống đề thi chữ (2 mode chấm, lưu lịch sử, xem lại không cần làm lại, gạch chân kanji, lưới kết quả, "Thoát & xem kết quả") — ổn định.
+- Toàn bộ hệ thống luyện nghe MỚI (mục 19) — đã xây xong toàn bộ UI/JS/cơ chế, đã test kỹ qua Playwright, đã sửa hết các bug phát sinh — chỉ còn THIẾU DỮ LIỆU (16 đề chưa transcribe), không phải thiếu code/tính năng.
+- Sắp xếp A-Z tự nhiên (hiểu số, "Unit 3 < Unit 10") cho mọi dropdown bộ học + đề thi.
+- Trang Thống kê, trang Điểm yếu (3 tab: bộ học / đề thi / nghe).
+- Cache-busting `?v=N` cho `app.js`/`srs.js` để tránh bị cache nhầm bản cũ trên GitHub Pages.
