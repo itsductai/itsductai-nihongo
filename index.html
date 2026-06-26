@@ -334,6 +334,7 @@
         <select id="choukaiMondaiPicker" class="filter-select hidden">
           <option value="all">Luyện cả đề (Mondai 1→5)</option>
         </select>
+        <button class="icon-btn focus-toggle-btn" data-focus-target="choukai" title="Phóng to toàn màn hình">⛶</button>
       </div>
 
       <div id="choukaiEmpty" class="empty-state">
@@ -443,13 +444,14 @@
         </select>
         <select id="choukaiShadowQuestionPicker" class="filter-select hidden">
         </select>
+        <button class="icon-btn focus-toggle-btn" data-focus-target="choukai-shadow" title="Phóng to toàn màn hình">⛶</button>
       </div>
       <div id="choukaiShadowEmpty" class="empty-state">
         <div class="empty-icon">🔁</div>
         <div>Chọn đề + câu cụ thể để luyện nghe từng câu trong script.</div>
       </div>
       <div id="choukaiShadowBody" class="hidden">
-        <div class="choukai-shadow-note">
+        <div class="choukai-shadow-note" id="choukaiShadowNote">
           ⚠️ Vì audio không có mốc thời gian riêng cho từng câu, nút "phát lại" sẽ phát lại TOÀN BỘ audio của câu hỏi này — dùng để nghe lại nhiều lần kết hợp đọc transcript bên dưới, không tách audio chính xác theo từng dòng được.
         </div>
         <div class="choukai-audio-box">
@@ -570,6 +572,6 @@
 </div>
 
 <script src="js/srs.js?v=4"></script>
-<script src="js/app.js?v=5"></script>
+<script src="js/app.js?v=6"></script>
 </body>
 </html>
