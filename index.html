@@ -295,11 +295,9 @@
         <div class="exam-history-note hidden" id="examHistoryNote"></div>
         <div class="exam-explain-row hidden" id="examExplainRow">
           <button class="ghost-btn" id="btnExamShowExplain">💡 Xem giải thích đáp án</button>
-        </div>
-        <div class="exam-explain-box hidden" id="examExplainBox"></div>
-        <div class="exam-continue-row" id="examContinueRow">
           <button class="primary-btn hidden" id="btnExamContinue">Tiếp tục →</button>
         </div>
+        <div class="exam-explain-box hidden" id="examExplainBox"></div>
       </div>
       <div id="examResult" class="quiz-result hidden">
         <div class="quiz-result-title">Hoàn thành đề thi!</div>
@@ -336,6 +334,7 @@
         <select id="choukaiMondaiPicker" class="filter-select hidden">
           <option value="all">Luyện cả đề (Mondai 1→5)</option>
         </select>
+        <button class="icon-btn focus-toggle-btn" data-focus-target="choukai" title="Phóng to toàn màn hình">⛶</button>
       </div>
 
       <div id="choukaiEmpty" class="empty-state">
@@ -445,13 +444,14 @@
         </select>
         <select id="choukaiShadowQuestionPicker" class="filter-select hidden">
         </select>
+        <button class="icon-btn focus-toggle-btn" data-focus-target="choukai-shadow" title="Phóng to toàn màn hình">⛶</button>
       </div>
       <div id="choukaiShadowEmpty" class="empty-state">
         <div class="empty-icon">🔁</div>
         <div>Chọn đề + câu cụ thể để luyện nghe từng câu trong script.</div>
       </div>
       <div id="choukaiShadowBody" class="hidden">
-        <div class="choukai-shadow-note">
+        <div class="choukai-shadow-note" id="choukaiShadowNote">
           ⚠️ Vì audio không có mốc thời gian riêng cho từng câu, nút "phát lại" sẽ phát lại TOÀN BỘ audio của câu hỏi này — dùng để nghe lại nhiều lần kết hợp đọc transcript bên dưới, không tách audio chính xác theo từng dòng được.
         </div>
         <div class="choukai-audio-box">
@@ -491,14 +491,28 @@
         <div class="weakness-title">Thống kê tổng quan — nhìn 1 lần biết hết</div>
       </div>
 
-      <div class="stats-section">
-        <div class="stats-section-title">📚 Tổng quan tất cả bộ từ vựng / ngữ pháp <span class="stats-section-hint">(bấm tên bộ để ôn ngay)</span></div>
+      <div class="stats-section stats-group-mimi">
+        <div class="stats-section-title">📘 Mimi N2 (giáo trình chính) <span class="stats-section-hint">(bấm tên bộ để ôn ngay)</span></div>
+        <div class="stats-donut-row" id="statsDonutRowMimi"></div>
         <div class="stats-overview-table-wrap">
           <table class="stats-overview-table">
             <thead>
               <tr><th>Bộ</th><th>Tiến độ</th><th>% đã thuộc</th></tr>
             </thead>
-            <tbody id="statsOverviewBody"></tbody>
+            <tbody id="statsOverviewBodyMimi"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="stats-section">
+        <div class="stats-section-title">📚 Tài liệu khác <span class="stats-section-hint">(bấm tên bộ để ôn ngay)</span></div>
+        <div class="stats-donut-row" id="statsDonutRowOther"></div>
+        <div class="stats-overview-table-wrap">
+          <table class="stats-overview-table">
+            <thead>
+              <tr><th>Bộ</th><th>Tiến độ</th><th>% đã thuộc</th></tr>
+            </thead>
+            <tbody id="statsOverviewBodyOther"></tbody>
           </table>
         </div>
       </div>
@@ -572,6 +586,6 @@
 </div>
 
 <script src="js/srs.js?v=4"></script>
-<script src="js/app.js?v=4"></script>
+<script src="js/app.js?v=8"></script>
 </body>
 </html>
