@@ -93,7 +93,10 @@ const App = {
   choukaiPendingTestId: null,
   choukaiCurrentAudioSrc: null, // theo dõi file audio đang load, tránh load lại không cần thiết
   choukaiAnswering: false,      // chặn bấm thêm lựa chọn sau khi đã trả lời câu hiện tại
-  choukaiShadowTimeUpdateHandler: null, // listener karaoke hiện tại của "Luyện nghe câu", gỡ trước khi đổi câu
+  // Các listener "timeupdate" karaoke đang gắn, theo từng nơi dùng (key: "shadow",
+  // "reviewScript", "reviewVi", "detailScript"...) — gỡ đúng cái CŨ trước khi gắn
+  // MỚI để tránh nhiều listener cộng dồn trên cùng 1 thẻ <audio> qua mỗi lần đổi câu.
+  karaokeHandlers: {},
   examLastAnswerCorrect: null, // kết quả lượt vừa chấm (chế độ instant), dùng khi bấm "Tiếp tục"
   examLastAnsweredQIndex: null,
   examPerQTimerHandle: null,
@@ -964,13 +967,55 @@ function enterFocusMode() {
     alert("Hãy chọn một đề thi ở sidebar trước khi phóng to toàn màn hình.");
     return;
   }
+  // Riêng phần nghe: tương tự, cần đã chọn đề nghe trước.
+  const choukaiView = document.getElementById("view-choukai");
+  const isChoukaiViewActive = choukaiView && !choukaiView.classList.contains("hidden");
+  if (isChoukaiViewActive && !App.currentChoukaiId) {
+    alert("Hãy chọn một đề nghe ở trên trước khi phóng to toàn màn hình.");
+    return;
+  }
+  // Riêng "Luyện nghe câu" (shadow mode): cần đã chọn đề + câu cụ thể trước.
+  const shadowView = document.getElementById("view-choukai-shadow");
+  const isShadowViewActive = shadowView && !shadowView.classList.contains("hidden");
+  if (isShadowViewActive && document.getElementById("choukaiShadowBody").classList.contains("hidden")) {
+    alert("Hãy chọn đề nghe + câu cụ thể ở trên trước khi phóng to toàn màn hình.");
+    return;
+  }
   document.getElementById("app").classList.add("focus-mode");
   document.getElementById("btnExitFocus").classList.remove("hidden");
+
+  // Bật Fullscreen API THẬT của trình duyệt — che luôn cả thanh tab/địa chỉ trên
+  // PC/laptop, không chỉ phóng to trong trang. Một số trình duyệt/khung nhúng
+  // (vd iframe không có allow="fullscreen") sẽ TỪ CHỐI lời gọi này — bắt lỗi để
+  // app vẫn hoạt động bình thường ở chế độ "phóng to trong trang" (CSS) như cũ,
+  // không bị crash hay kẹt màn hình.
+  const el = document.documentElement;
+  const req = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
+  if (req) {
+    try {
+      const p = req.call(el);
+      if (p && p.catch) p.catch(function () { /* trình duyệt từ chối — vẫn giữ focus-mode CSS, không sao */ });
+    } catch (e) { /* bỏ qua, giữ nguyên chế độ phóng to bằng CSS */ }
+  }
 }
 
 function exitFocusMode() {
   document.getElementById("app").classList.remove("focus-mode");
   document.getElementById("btnExitFocus").classList.add("hidden");
+
+  // Thoát Fullscreen API thật nếu đang ở fullscreen do app bật (không gọi nếu
+  // không phải app bật, để không ảnh hưởng fullscreen của trang khác/người dùng
+  // tự bật F11 riêng).
+  const isInFullscreen = document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
+  if (isInFullscreen) {
+    const exit = document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen;
+    if (exit) {
+      try {
+        const p = exit.call(document);
+        if (p && p.catch) p.catch(function () { /* bỏ qua */ });
+      } catch (e) { /* bỏ qua */ }
+    }
+  }
 }
 
 function loadFieldConfig() {
@@ -3394,14 +3439,41 @@ function showChoukaiReviewPanel(correct) {
   renderChoukaiReviewContent();
 }
 
+function clearKaraokeHandler(handlerKey) {
+  const h = App.karaokeHandlers[handlerKey];
+  if (h && h.audioEl) h.audioEl.removeEventListener("timeupdate", h.fn);
+  App.karaokeHandlers[handlerKey] = null;
+}
+
 function renderChoukaiReviewContent() {
   const item = getChoukaiCurrentItem();
   if (!item) return;
   const q = item.q;
   const box = document.getElementById("choukaiReviewContent");
-  if (App.choukaiReviewTab === "script") box.textContent = q.script || "(không có script)";
-  else if (App.choukaiReviewTab === "vi") box.textContent = q.scriptVi || "(chưa có bản dịch)";
-  else box.textContent = q.tip || "(chưa có mẹo cho câu này)";
+  if (App.choukaiReviewTab === "tip") {
+    clearKaraokeHandler("reviewScript");
+    clearKaraokeHandler("reviewVi");
+    box.textContent = q.tip || "(chưa có mẹo cho câu này)";
+    return;
+  }
+  // Script & Dịch: hiện theo từng dòng, có karaoke highlight + bấm dòng để phát
+  // lại audio đúng đoạn đó NẾU câu này có "lineTimestamps". Không có thì vẫn
+  // hiện đúng nội dung như cũ, chỉ là không bôi sáng/không bấm được — không lỗi.
+  const jpLines = (q.script || "").split("\n").filter(Boolean);
+  const viLines = (q.scriptVi || "").split("\n").filter(Boolean);
+  const lineTimestamps = Array.isArray(q.lineTimestamps) && q.lineTimestamps.length === jpLines.length
+    ? q.lineTimestamps
+    : null;
+  const audioEl = document.getElementById("choukaiAudioEl");
+  if (App.choukaiReviewTab === "script") {
+    clearKaraokeHandler("reviewVi"); // đang xem tab khác — dọn handler của tab Dịch
+    if (!jpLines.length) { box.textContent = "(không có script)"; return; }
+    renderKaraokeLines(box, jpLines, lineTimestamps, audioEl, "reviewScript");
+  } else {
+    clearKaraokeHandler("reviewScript"); // đang xem tab khác — dọn handler của tab Script
+    if (!viLines.length) { box.textContent = "(chưa có bản dịch)"; return; }
+    renderKaraokeLines(box, viLines, lineTimestamps, audioEl, "reviewVi");
+  }
 }
 
 function choukaiGoNext() {
@@ -3608,6 +3680,51 @@ function populateChoukaiShadowQuestionPicker(testId) {
   qPicker.classList.remove("hidden");
 }
 
+/* ---------- Helper chung: render script kiểu "karaoke" + bấm dòng để phát lại ----------
+   Dùng CHUNG cho cả "Luyện nghe câu" (shadow mode) và panel xem đáp án lúc làm đề
+   (choukaiReviewPanel) — tránh viết lặp code render dòng + gắn listener ở nhiều nơi.
+
+   - container: thẻ DOM sẽ chứa các dòng (1 dòng = 1 div.karaoke-line)
+   - lines: mảng string (mỗi dòng script HOẶC mỗi dòng dịch — gọi riêng cho từng loại)
+   - lineTimestamps: mảng số giây cùng độ dài với "lines", hoặc null nếu không có
+     dữ liệu mốc giờ — khi null, chỉ hiện chữ bình thường, không bôi sáng, không bấm
+     được (giữ nguyên hành vi cũ với các đề CHƯA có timestamp, không lỗi gì cả).
+   - audioEl: thẻ <audio> tương ứng để bấm dòng → nhảy tới đúng giây + play()
+   - handlerKey: khóa định danh DUY NHẤT cho audioEl + nơi gọi (vd "shadow",
+     "reviewScript", "reviewVi") để gỡ đúng listener "timeupdate" CŨ trước khi
+     gắn cái MỚI — tránh nhiều listener cộng dồn qua mỗi lần đổi câu/đổi tab. */
+function renderKaraokeLines(container, lines, lineTimestamps, audioEl, handlerKey) {
+  const hasTime = Array.isArray(lineTimestamps) && lineTimestamps.length === lines.length;
+  container.innerHTML = lines.map(function (line, i) {
+    const cls = "karaoke-line" + (hasTime ? " is-seekable" : "");
+    return '<div class="' + cls + '" data-idx="' + i + '">' + line + '</div>';
+  }).join("");
+
+  // Gỡ listener "timeupdate" CŨ của đúng handlerKey này (nếu có) trước khi gắn mới.
+  if (App.karaokeHandlers[handlerKey] && App.karaokeHandlers[handlerKey].audioEl) {
+    App.karaokeHandlers[handlerKey].audioEl.removeEventListener("timeupdate", App.karaokeHandlers[handlerKey].fn);
+    App.karaokeHandlers[handlerKey] = null;
+  }
+  if (!hasTime || !audioEl) return;
+
+  const lineEls = Array.from(container.querySelectorAll(".karaoke-line"));
+  lineEls.forEach(function (el, i) {
+    el.addEventListener("click", function () {
+      try { audioEl.currentTime = lineTimestamps[i]; const p = audioEl.play(); if (p && p.catch) p.catch(function () {}); } catch (e) { /* bỏ qua */ }
+    });
+  });
+  const handlerFn = function () {
+    const t = audioEl.currentTime;
+    let activeIdx = -1;
+    for (let i = 0; i < lineTimestamps.length; i++) {
+      if (t >= lineTimestamps[i]) activeIdx = i; else break;
+    }
+    lineEls.forEach(function (el, i) { el.classList.toggle("is-current-line", i === activeIdx); });
+  };
+  App.karaokeHandlers[handlerKey] = { audioEl: audioEl, fn: handlerFn };
+  audioEl.addEventListener("timeupdate", handlerFn);
+}
+
 function renderChoukaiShadowQuestion(testId, flatIdx) {
   const test = getChoukaiTest(testId);
   const queue = buildChoukaiQueue(test, "all");
@@ -3627,39 +3744,37 @@ function renderChoukaiShadowQuestion(testId, flatIdx) {
   const viLines = (q.scriptVi || "").split("\n").filter(Boolean);
   // "lineTimestamps" (tùy chọn, mảng số giây — TÍNH TỪ ĐẦU FILE AUDIO của cả
   // Mondai, vì các câu trong 1 Mondai dùng chung 1 file): nếu file JSON CÓ mảng
-  // này (cùng số dòng với script), app sẽ tự bôi sáng kiểu karaoke đúng dòng
-  // đang phát khi nghe audio, và cho bấm vào dòng tiếng Nhật để nhảy audio tới
-  // đúng đoạn đó. Nếu KHÔNG có (file cũ/chưa làm timestamp), giữ nguyên hành vi
-  // cũ — chỉ hiện từng dòng + bản dịch làm mờ, không bôi sáng theo audio.
+  // này (cùng số dòng với script), app tự bôi sáng kiểu karaoke đúng dòng đang
+  // phát, và cho bấm vào BẤT KỲ dòng nào (tiếng Nhật hoặc bản dịch) để nhảy audio
+  // tới đúng đoạn đó. Nếu KHÔNG có (file cũ/chưa làm timestamp), giữ nguyên hành
+  // vi cũ — chỉ hiện dòng + dịch, không bôi sáng, không bấm phát lại được.
   const lineTimestamps = Array.isArray(q.lineTimestamps) && q.lineTimestamps.length === jpLines.length
     ? q.lineTimestamps
     : null;
 
+  // Có timestamp rồi thì không còn đúng nữa khi nói "không tách được theo từng
+  // dòng" — ẩn note cảnh báo cũ trong trường hợp này.
+  document.getElementById("choukaiShadowNote").classList.toggle("hidden", !!lineTimestamps);
+
+  // Bản dịch hiện trực tiếp luôn, KHÔNG làm mờ/cần bấm để hiện nữa (theo yêu cầu
+  // mới — trước đây có hiệu ứng blur, giờ bỏ để đọc song song dễ hơn).
   const linesWrap = document.getElementById("choukaiShadowLines");
   linesWrap.innerHTML = jpLines.map(function (jp, i) {
-    const hasTime = lineTimestamps !== null;
-    const timeAttr = hasTime ? ' data-time="' + lineTimestamps[i] + '"' : "";
-    const jpClass = "choukai-shadow-line-jp" + (hasTime ? " is-seekable" : "");
-    return '<div class="choukai-shadow-line"' + timeAttr + '><div class="' + jpClass + '">' + jp + '</div>' +
-      '<div class="choukai-shadow-line-vi" data-idx="' + i + '">' + (viLines[i] || "") + '</div></div>';
+    return '<div class="choukai-shadow-line" data-idx="' + i + '">' +
+      '<div class="choukai-shadow-line-jp">' + jp + '</div>' +
+      '<div class="choukai-shadow-line-vi">' + (viLines[i] || "") + '</div></div>';
   }).join("");
-  linesWrap.querySelectorAll(".choukai-shadow-line-vi").forEach(function (el) {
-    el.addEventListener("click", function () { el.classList.toggle("is-revealed"); });
-  });
 
-  // Gỡ listener karaoke của câu TRƯỚC (nếu có) trước khi gắn listener mới —
-  // tránh nhiều listener "timeupdate" cộng dồn qua từng lần đổi câu.
-  if (App.choukaiShadowTimeUpdateHandler) {
-    audioEl.removeEventListener("timeupdate", App.choukaiShadowTimeUpdateHandler);
-    App.choukaiShadowTimeUpdateHandler = null;
-  }
+  // Gỡ listener karaoke CŨ trước khi gắn listener mới — tránh cộng dồn qua từng câu.
+  clearKaraokeHandler("shadow");
 
   if (lineTimestamps) {
     const lineEls = Array.from(linesWrap.querySelectorAll(".choukai-shadow-line"));
+    lineEls.forEach(function (el) { el.classList.add("is-seekable"); });
+    // Bấm vào dòng — CẢ tiếng Nhật và bản dịch — đều nhảy audio tới đúng đoạn đó.
     lineEls.forEach(function (el, i) {
-      const jpEl = el.querySelector(".choukai-shadow-line-jp");
-      jpEl.addEventListener("click", function () {
-        try { audioEl.currentTime = lineTimestamps[i]; audioEl.play(); } catch (e) { /* bỏ qua */ }
+      el.addEventListener("click", function () {
+        try { audioEl.currentTime = lineTimestamps[i]; const p = audioEl.play(); if (p && p.catch) p.catch(function () {}); } catch (e) { /* bỏ qua */ }
       });
     });
     const handler = function () {
@@ -3672,7 +3787,7 @@ function renderChoukaiShadowQuestion(testId, flatIdx) {
         el.classList.toggle("is-current-line", i === activeIdx);
       });
     };
-    App.choukaiShadowTimeUpdateHandler = handler;
+    App.karaokeHandlers.shadow = { audioEl: audioEl, fn: handler };
     audioEl.addEventListener("timeupdate", handler);
   }
 }
@@ -3795,6 +3910,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (e.key === "Escape" && document.getElementById("app").classList.contains("focus-mode")) {
       exitFocusMode();
     }
+  });
+  // Trình duyệt có thể tự thoát fullscreen (Esc, F11, vuốt xuống trên Mac...)
+  // mà KHÔNG đi qua nút X của app — lắng nghe sự kiện này để ẩn lại sidebar-hidden
+  // CSS đúng lúc, tránh app bị kẹt ở trạng thái "tưởng đang focus nhưng đã thoát
+  // fullscreen thật rồi".
+  ["fullscreenchange", "webkitfullscreenchange", "msfullscreenchange"].forEach((evt) => {
+    document.addEventListener(evt, () => {
+      const stillFullscreen = document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
+      if (!stillFullscreen && document.getElementById("app").classList.contains("focus-mode")) {
+        exitFocusMode();
+      }
+    });
   });
 
   // ----- Sidebar dạng drawer trên mobile (≤860px) -----
