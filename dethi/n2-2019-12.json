@@ -12,7 +12,7 @@
       "dap_an_dung": 1,
       "giai_thich": [
         "Sai. 優しく (やさしく): hiền lành, dịu dàng.",
-        "Đúng. 等しく (ひとしく): công bằng, bình đẳng.",
+        "Đúng. 等しく (ひとしく): ngang bằng, như nhau.",
         "Sai. 親しく (したしく): thân thiết.",
         "Sai. 厳しく (きびしく): nghiêm khắc."
       ]
@@ -139,7 +139,7 @@
       ],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. 見逃す (みのがす): bỏ lỡ, xem sót.",
+        "Đúng. 見逃す (みのがす): bỏ lỡ, bỏ sót.",
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại."
