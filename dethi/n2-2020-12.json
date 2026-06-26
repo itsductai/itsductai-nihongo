@@ -7,7 +7,7 @@
       "dap_an_dung": 1,
       "giai_thich": [
         "Sai. 崩さない (くずさない): không làm sụp, không phá vỡ.",
-        "Đúng. 倒さない (たおさない): không làm đổ.",
+        "Đúng. 倒さない (たおさない): không làm đổ. => Dịch câu: Hãy cẩn thận để không làm đổ nhé.",
         "Sai. 壊さない (こわさない): không làm hỏng.",
         "Sai. 潰さない (つぶさない): không nghiền nát."
       ]
@@ -19,7 +19,7 @@
       "giai_thich": [
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại.",
-        "Đúng. 損害 (そんがい): tổn hại, thiệt hại.",
+        "Đúng. 損害 (そんがい): tổn hại, thiệt hại. => Dịch câu: Thiệt hại trong vụ việc lần này lên tới hàng chục triệu yên.",
         "Sai. 被害 (ひがい): thiệt hại, tổn thất."
       ]
     },
@@ -30,8 +30,8 @@
       "giai_thich": [
         "Sai. 苦しい (くるしい): đau khổ, khó khăn.",
         "Sai. 寂しい (さびしい): buồn, cô đơn.",
-        "Sai. 激しい (はげしい): mãnh liệt, dữ dội.",
-        "Đúng. 険しい (けわしい): dốc, hiểm trở."
+        "Sai. 激しい (はげしい): mãnh liệt.",
+        "Đúng. 険しい (けわしい): dốc, hiểm trở. => Dịch câu: Đó là một con đường núi dốc hiểm trở hơn tôi nghĩ."
       ]
     },
     {
@@ -41,7 +41,7 @@
       "giai_thich": [
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại.",
-        "Đúng. 比較的 (ひかくてき): có tính so sánh, tương đối.",
+        "Đúng. 比較的 (ひかくてき): tương đối. => Dịch câu: Khu vực này người qua lại tương đối ít.",
         "Sai. Không tồn tại."
       ]
     },
@@ -50,7 +50,7 @@
       "options": ["かこう", "かくう", "げこう", "げくう"],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. 下降 (かこう): hạ xuống, đi xuống.",
+        "Đúng. 下降 (かこう): hạ xuống, hạ độ cao. => Dịch câu: Máy bay đã bắt đầu hạ độ cao.",
         "Sai. 架空 (かくう): hư cấu, tưởng tượng.",
         "Sai. 下校 (げこう): tan trường.",
         "Sai. Không tồn tại."
@@ -61,7 +61,7 @@
       "options": ["鮮やか", "美やか", "清やか", "純やか"],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. 鮮やか (あざやか): rực rỡ, chói lọi.",
+        "Đúng. 鮮やか (あざやか): rực rỡ, chói lọi. => Dịch câu: Anh Suzuki đang mặc một chiếc áo sơ mi màu sắc rực rỡ.",
         "Sai. Không tồn tại.",
         "Sai. Từ đúng là 清らか (きよらか): trong trẻo.",
         "Sai. Không tồn tại."
@@ -74,7 +74,7 @@
       "giai_thich": [
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại.",
-        "Đúng. 帰省 (きせい): về quê.",
+        "Đúng. 帰省 (きせい): về quê. => Dịch câu: Kỳ nghỉ hè năm nay tôi không có dự định về quê.",
         "Sai. Không tồn tại."
       ]
     },
@@ -85,8 +85,9 @@
       "giai_thich": [
         "Sai. 薄める (うすめる): làm nhạt đi, pha loãng.",
         "Sai. 納める (おさめる): nộp, thu.",
-        "Sai. 貯める (ためる): tiết kiệm, dành dụm.",
-        "Đúng. 縮める (ちぢめる): thu gọn, nén lại."
+        "Sai. 貯める (ためる): tiết kiệm.",
+        "Đúng. 縮める (ちぢめる): thu gọn, nén lại. => Dịch câu: Hãy thu gọn lại thêm một chút nữa.",
+        "Sai. Không tồn tại."
       ]
     },
     {
@@ -95,7 +96,7 @@
       "dap_an_dung": 1,
       "giai_thich": [
         "Sai. 実施 (じっし): thực thi.",
-        "Đúng. 実践 (じっせん): thực tiễn, đưa vào thực hành.",
+        "Đúng. 実践 (じっせん): thực tiễn, thực hành. => Dịch câu: Từ nay tôi muốn đưa nhiều thứ vào thực tiễn.",
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại."
       ]
@@ -105,9 +106,9 @@
       "options": ["異色", "違色", "異食", "違食"],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. 異色 (いしょく): sự khác biệt, phá cách, nét mới lạ.",
+        "Đúng. 異色 (いしょく): phá cách, khác biệt, mới lạ. => Dịch câu: Trong số các tác phẩm của ông Nishimura, cuốn tiểu thuyết này khá là phá cách.",
         "Sai. Không tồn tại.",
-        "Sai. 異食 (いしょく): chứng ăn bậy (thuật ngữ y học), không hợp ngữ cảnh.",
+        "Sai. 異食 (いしょく): chứng ăn bậy (y học).",
         "Sai. Không tồn tại."
       ]
     },
@@ -118,7 +119,7 @@
       "giai_thich": [
         "Sai. Không ghép thành 復提出.",
         "Sai. Không ghép thành 改提出.",
-        "Đúng. 再提出 (さいていしゅつ): nộp lại.",
+        "Đúng. 再提出 (さいていしゅつ): nộp lại. => Dịch câu: Tôi bị giáo viên bảo phải nộp lại bài tập.",
         "Sai. Không ghép thành 補提出."
       ]
     },
@@ -127,7 +128,7 @@
       "options": ["育ち", "過ごし", "始まり", "生き"],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. 都会育ち (とかいそだち): người lớn lên ở thành phố.",
+        "Đúng. 都会育ち (とかいそだち): lớn lên ở thành phố. => Dịch câu: Người đó lớn lên ở thành phố.",
         "Sai. Không ghép thành 都会過ごし.",
         "Sai. Không ghép thành 都会始まり.",
         "Sai. Không ghép thành 都会生き."
@@ -141,7 +142,7 @@
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại.",
         "Sai. Không tồn tại.",
-        "Đúng. 一仕事 (ひとしごと): một phần công việc, một đợt công việc. 一仕事終わる: làm xong một đợt việc."
+        "Đúng. 一仕事 (ひとしごと): một phần/một đợt công việc. => Dịch câu: Làm xong một đợt công việc rồi, nghỉ giải lao thôi."
       ]
     },
     {
@@ -149,8 +150,8 @@
       "options": ["考慮", "評価", "信頼", "測定"],
       "dap_an_dung": 1,
       "giai_thich": [
-        "Sai. 考慮 (こうりょ): xem xét, suy tính.",
-        "Đúng. 評価 (ひょうか): đánh giá. 評価が分かれる: có nhiều đánh giá trái chiều.",
+        "Sai. 考慮 (こうりょ): xem xét.",
+        "Đúng. 評価 (ひょうか): đánh giá. => Dịch câu: Diễn xuất của anh ấy rất mang tính cá nhân, nên đánh giá của người xem có nhiều chiều trái ngược.",
         "Sai. 信頼 (しんらい): tin cậy.",
         "Sai. 測定 (そくてい): đo lường."
       ]
@@ -160,10 +161,10 @@
       "options": ["ゴール", "信仰", "提案", "尊重"],
       "dap_an_dung": 3,
       "giai_thich": [
-        "Sai. ゴール (goal): mục tiêu, đích đến.",
+        "Sai. ゴール (goal): mục tiêu.",
         "Sai. 信仰 (しんこう): tín ngưỡng.",
-        "Sai. 提案 (ていあん): đề án, đề xuất.",
-        "Đúng. 尊重 (そんちょう): tôn trọng (ý kiến đối phương)."
+        "Sai. 提案 (ていあん): đề xuất.",
+        "Đúng. 尊重 (そんちょう): tôn trọng. => Dịch câu: Trong khi thảo luận, việc tôn trọng và lắng nghe kỹ ý kiến của đối phương là rất quan trọng."
       ]
     },
     {
@@ -172,9 +173,9 @@
       "dap_an_dung": 3,
       "giai_thich": [
         "Sai. 発揮 (はっき): phát huy.",
-        "Sai. インパクト (impact): ấn tượng, sức tác động.",
-        "Sai. アピール (appeal): thu hút, kêu gọi.",
-        "Đúng. ターゲット (target): mục tiêu, đối tượng nhắm tới."
+        "Sai. インパクト (impact): ấn tượng.",
+        "Sai. アピール (appeal): thu hút.",
+        "Đúng. ターゲット (target): mục tiêu. => Dịch câu: Sản phẩm này được phát triển nhắm đến mục tiêu là những người từ độ tuổi 40-50 quan tâm đến sức khỏe."
       ]
     },
     {
@@ -182,9 +183,9 @@
       "options": ["定着", "専用", "独特", "区別"],
       "dap_an_dung": 2,
       "giai_thich": [
-        "Sai. 定着 (ていちゃく): định hình, cắm rễ.",
+        "Sai. 定着 (ていちゃく): định hình.",
         "Sai. 専用 (せんよう): chuyên dụng.",
-        "Đúng. 独特 (どくとく): độc đáo, nét đặc trưng riêng.",
+        "Đúng. 独特 (どくとく): độc đáo. => Dịch câu: Anh Sato có trang phục và kiểu tóc cá tính, mang một bầu không khí độc đáo khác hẳn người khác.",
         "Sai. 区別 (くべつ): phân biệt."
       ]
     },
@@ -193,10 +194,10 @@
       "options": ["戦って", "争って", "奪って", "破って"],
       "dap_an_dung": 1,
       "giai_thich": [
-        "Sai. 戦う (たたかう): chiến đấu (thường dùng đánh nhau hoặc đấu tranh).",
-        "Đúng. 争う (あらそう): cạnh tranh, giành giật. 優勝を争う: tranh chức vô địch.",
+        "Sai. 戦う (たたかう): chiến đấu.",
+        "Đúng. 争う (あらそう): cạnh tranh, giành giật. => Dịch câu: Ở giải đấu lần trước, hai người đó đã cạnh tranh chức vô địch đến tận phút cuối.",
         "Sai. 奪う (うばう): cướp đoạt.",
-        "Sai. 破る (やぶる): xé rách, đánh bại."
+        "Sai. 破る (やぶる): đánh bại."
       ]
     },
     {
@@ -206,7 +207,7 @@
       "giai_thich": [
         "Sai. 動作 (どうさ): động tác.",
         "Sai. 実感 (じっかん): cảm nhận thực tế.",
-        "Đúng. 気配 (けはい): dấu hiệu, bóng dáng. 人の気配がない: không có bóng dáng ai.",
+        "Đúng. 気配 (けはい): dấu hiệu, bóng dáng. => Dịch câu: Tôi đến thăm nhà anh Takahashi nhưng có vẻ mọi người đi vắng hết, không thấy bóng dáng ai cả.",
         "Sai. 状態 (じょうたい): trạng thái."
       ]
     },
@@ -215,10 +216,10 @@
       "options": ["不規則な", "あやふやな", "大まかな", "いいかげんな"],
       "dap_an_dung": 3,
       "giai_thich": [
-        "Sai. 不規則 (ふきそく): không có quy tắc, bất thường.",
-        "Sai. あやふや: mập mờ, không rõ ràng.",
-        "Sai. 大まか (おおまか): chung chung, đại khái.",
-        "Đúng. いいかげん: vô trách nhiệm, cẩu thả, dở dang."
+        "Sai. 不規則 (ふきそく): bất thường.",
+        "Sai. あやふや: mập mờ.",
+        "Sai. 大まか (おおまか): chung chung.",
+        "Đúng. いいかげん: vô trách nhiệm. => Dịch câu: Anh ta là một kẻ vô trách nhiệm, đến cả quy tắc tự mình đặt ra cũng không tuân thủ."
       ]
     },
     {
@@ -226,10 +227,10 @@
       "options": ["案内して", "宣伝して", "調査して", "記録して"],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. ガイド (guide) = 案内 (あんない): hướng dẫn.",
-        "Sai. 宣伝 (せんでん): tuyên truyền, quảng cáo.",
+        "Đúng. ガイド (guide) = 案内 (あんない): hướng dẫn. => Dịch câu: Tôi đang làm tình nguyện viên hướng dẫn tại các danh lam thắng cảnh của thị trấn.",
+        "Sai. 宣伝 (せんでん): tuyên truyền.",
         "Sai. 調査 (ちょうさ): điều tra.",
-        "Sai. 記録 (きろく): ghi chép, kỷ lục."
+        "Sai. 記録 (きろく): ghi chép."
       ]
     },
     {
@@ -240,7 +241,7 @@
         "Sai. 上手 (じょうず): giỏi.",
         "Sai. 自由 (じゆう): tự do.",
         "Sai. 積極的 (せっきょくてき): tích cực.",
-        "Đúng. 真剣 (しんけん): nghiêm túc, đứng đắn = まじめ."
+        "Đúng. 真剣 (しんけん) = まじめ: nghiêm túc. => Dịch câu: Anh Yamaguchi cũng đang làm một cách rất nghiêm túc."
       ]
     },
     {
@@ -248,9 +249,9 @@
       "options": ["あまりいない", "人気が出ない", "人気が出る", "たくさんいる"],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. 稀 (まれ): hiếm có = あまりいない (không có nhiều).",
+        "Đúng. 稀 (まれ) = あまりいない: hiếm có. => Dịch câu: Tôi nghĩ một ca sĩ như cô ấy là rất hiếm.",
         "Sai. Không được yêu thích.",
-        "Sai. Trở nên nổi tiếng.",
+        "Sai. Nổi tiếng.",
         "Sai. Có rất nhiều."
       ]
     },
@@ -261,7 +262,7 @@
       "giai_thich": [
         "Sai. 週末 (しゅうまつ): cuối tuần.",
         "Sai. 夜間 (やかん): ban đêm.",
-        "Đúng. 終日 (しゅうじつ): cả ngày = 一日中 (いちにちじゅう).",
+        "Đúng. 終日 (しゅうじつ) = 一日中 (いちにちじゅう): cả ngày. => Dịch câu: Con đường này cấm lưu thông cả ngày.",
         "Sai. 今日まで: đến hôm nay."
       ]
     },
@@ -271,9 +272,9 @@
       "dap_an_dung": 1,
       "giai_thich": [
         "Sai. 切る (きる): cắt.",
-        "Đúng. 弄る (いじる): nghịch, vân vê, chạm vào = 触る (さわる).",
-        "Sai. 洗う (あらう): rửa, gội.",
-        "Sai. 乾かす (かわかす): sấy, làm khô."
+        "Đúng. 弄る (いじる) = 触る (さわる): nghịch, vân vê. => Dịch câu: Aoki cứ vân vê/nghịch tóc nãy giờ.",
+        "Sai. 洗う (あらう): gội.",
+        "Sai. 乾かす (かわかす): sấy."
       ]
     },
     {
@@ -282,9 +283,9 @@
       "dap_an_dung": 1,
       "giai_thich": [
         "Sai. Phần đầu bài hát dùng 冒頭 (ぼうとう) hoặc 始め (はじめ).",
-        "Đúng. 初期 (しょき): thời kỳ đầu (của một giai đoạn lịch sử, sự vật).",
-        "Sai. Giai đoạn đầu trận đấu dùng 序盤 (じょばん) hoặc 最初 (さいしょ).",
-        "Sai. Lúc đầu (trong ngày/sự việc) dùng 最初 (さいしょ)."
+        "Đúng. 初期 (しょき): thời kỳ đầu. => Dịch câu: Tòa nhà này là một công trình kiến trúc nổi tiếng, được xây dựng vào thời kỳ đầu của thời Minh Trị.",
+        "Sai. Giai đoạn đầu trận đấu dùng 序盤 (じょばん).",
+        "Sai. Lúc đầu dùng 最初 (さいしょ)."
       ]
     },
     {
@@ -292,10 +293,10 @@
       "options": ["仕事でわからないことがあれば、彼が何でも打ち明けてくれます。", "谷口さんが戻ってきたら、伝言を打ち明けておいてもらえますか。", "大事な情報はすぐに上司に打ち明けましょう。", "ずっと秘密にしていたことを友達に打ち明けた。"],
       "dap_an_dung": 3,
       "giai_thich": [
-        "Sai. Dạy, chỉ bảo dùng 教える (おしえる).",
-        "Sai. Truyền đạt lời nhắn dùng 伝える (つたえる).",
-        "Sai. Báo cáo thông tin dùng 報告する (ほうこくする).",
-        "Đúng. 打ち明ける (うちあける): bộc bạch, thú nhận (bí mật, nỗi lòng)."
+        "Sai. Chỉ bảo dùng 教える (おしえる).",
+        "Sai. Truyền đạt dùng 伝える (つたえる).",
+        "Sai. Báo cáo dùng 報告する (ほうこくする).",
+        "Đúng. 打ち明ける (うちあける): thú nhận, bộc bạch. => Dịch câu: Tôi đã thú nhận với bạn bè chuyện mà tôi giữ bí mật suốt bấy lâu."
       ]
     },
     {
@@ -303,10 +304,10 @@
       "options": ["あの人の欠陥は、自分に都合の悪いことがあるとうそをつくことだ。", "眼鏡のレンズを硬い布でふいたら、欠陥がついてしまった。", "先月発表された車のブレーキに欠陥が見つかり、販売が中止された。", "このサービスを利用することの欠陥は費用が非常にかかることだ。"],
       "dap_an_dung": 2,
       "giai_thich": [
-        "Sai. Khuyết điểm của con người dùng 欠点 (けってん).",
+        "Sai. Khuyết điểm con người dùng 欠点 (けってん).",
         "Sai. Vết xước dùng 傷 (きず).",
-        "Đúng. 欠陥 (けっかん): lỗi, khiếm khuyết (thường dùng cho máy móc, sản phẩm, cấu trúc).",
-        "Sai. Nhược điểm của dịch vụ dùng 欠点 (けってん) hoặc デメリット (demerit)."
+        "Đúng. 欠陥 (けっかん): lỗi (máy móc, cấu trúc). => Dịch câu: Mẫu xe ra mắt tháng trước bị phát hiện có lỗi ở phanh nên đã bị ngừng bán.",
+        "Sai. Nhược điểm dùng デメリット."
       ]
     },
     {
@@ -314,10 +315,10 @@
       "options": ["山本さんは去年入学したばかりの大学を引退し、別の大学を受験するらしい。", "これまで多くの名作を残した映画監督が、今回限り引退することを発表した。", "この書店はもうすぐ商店街から引退し、駅前のビルの中で店を始めるらしい。", "中村選手は前大会でのけがが回復せず、次の試合への出場を引退した。"],
       "dap_an_dung": 1,
       "giai_thich": [
-        "Sai. Bỏ học đại học dùng 退学 (たいがく) hoặc 中退 (ちゅうたい).",
-        "Đúng. 引退 (いんたい): giải nghệ, rút lui (khỏi công việc, thể thao, nghệ thuật).",
-        "Sai. Cửa hàng dời đi/đóng cửa dùng 撤退 (てったい) hoặc 閉店 (へいてん).",
-        "Sai. Rút lui khỏi trận đấu dùng 辞退 (じたい) hoặc 棄権 (きけん)."
+        "Sai. Bỏ học dùng 退学 (たいがく).",
+        "Đúng. 引退 (いんたい): giải nghệ. => Dịch câu: Vị đạo diễn từng để lại nhiều tuyệt tác cho đến nay đã tuyên bố giải nghệ sau lần này.",
+        "Sai. Đóng cửa dời đi dùng 撤退 (てったい) hoặc 移転 (いてん).",
+        "Sai. Rút lui khỏi giải dùng 辞退 (じたい)."
       ]
     },
     {
@@ -325,10 +326,10 @@
       "options": ["大きな箱に本がぎっしり詰まっている。", "ジュースがコップにぎっしり入っている。", "少し太ったせいで、ズボンがぎっしりしている。", "朝の電車はいつも人でぎっしりしている。"],
       "dap_an_dung": 0,
       "giai_thich": [
-        "Đúng. ぎっしり: chật ních, kín mít (đồ vật nhét đầy trong một không gian).",
-        "Sai. Nước rót đầy dùng なみなみ hoặc いっぱい.",
-        "Sai. Quần áo chật chội dùng きつい hoặc ぱんぱん.",
-        "Sai. Xe điện đông người dùng ぎゅうぎゅう hoặc 満員 (まんいん)."
+        "Đúng. ぎっしり: chật ních, kín mít (đồ vật). => Dịch câu: Sách được nhét chật ních trong chiếc hộp lớn.",
+        "Sai. Nước đầy dùng なみなみ hoặc いっぱい.",
+        "Sai. Quần chật dùng きつい.",
+        "Sai. Xe điện đông người dùng 満員 (まんいん) hoặc ぎゅうぎゅう."
       ]
     }
   ]
