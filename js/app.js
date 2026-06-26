@@ -775,18 +775,82 @@ function renderStatsMode() {
   renderStatsChoukaiHistory();
 }
 
-// Bảng tổng quan: mỗi bộ 1 dòng, có thanh ngang 3 màu (đã thuộc/đang học/chưa
-// học) ngay trong bảng — không cần mở từng bộ ra mới biết. Nhấn tên bộ -> nhảy
-// thẳng sang SRS của bộ đó để ôn ngay những thẻ đến hạn.
-function renderStatsOverviewTable() {
-  const tbody = document.getElementById("statsOverviewBody");
+// Vẽ 1 biểu đồ tròn (donut) thuần SVG — không phụ thuộc thư viện ngoài (app
+// vẫn là HTML/CSS/JS thuần). Nhận mảng segments [{value, color, label}] và vẽ
+// các cung nối tiếp nhau bằng kỹ thuật stroke-dasharray/dashoffset, bắt đầu từ
+// vị trí 12 giờ (xoay -90°). Trả về chuỗi HTML (SVG + chữ % ở giữa).
+function buildDonutSvg(segments, centerLabel, centerSub) {
+  const size = 120, r = 48, cx = size / 2, cy = size / 2;
+  const circumference = 2 * Math.PI * r;
+  const total = segments.reduce((sum, s) => sum + s.value, 0) || 1;
+  let cumulative = 0;
+  const circles = segments.map((s) => {
+    const frac = s.value / total;
+    const length = frac * circumference;
+    const dasharray = `${length} ${circumference - length}`;
+    const dashoffset = circumference - cumulative;
+    cumulative += length;
+    if (s.value <= 0) return "";
+    return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${s.color}" stroke-width="16"
+      stroke-dasharray="${dasharray}" stroke-dashoffset="${dashoffset}" />`;
+  }).join("");
+  // Vòng nền xám mờ (trường hợp total=0, hoặc làm khung viền nhẹ phía dưới các cung màu)
+  return `
+    <svg viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" class="stats-donut-svg">
+      <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="var(--bg-3)" stroke-width="16" />
+      <g transform="rotate(-90 ${cx} ${cy})">${circles}</g>
+      <text x="${cx}" y="${cy - 2}" text-anchor="middle" class="stats-donut-center-num">${centerLabel}</text>
+      <text x="${cx}" y="${cy + 16}" text-anchor="middle" class="stats-donut-center-sub">${centerSub}</text>
+    </svg>
+  `;
+}
+
+// Render 1 nhóm (Mimi hoặc Khác): donut tổng quan + bảng từng bộ, sắp theo %
+// đã thuộc tăng dần (bộ yếu nhất lên đầu).
+function renderStatsGroup(decks, donutRowId, tbodyId, accentLabel) {
+  const donutRow = document.getElementById(donutRowId);
+  const tbody = document.getElementById(tbodyId);
   tbody.innerHTML = "";
 
-  // Sắp theo % đã thuộc tăng dần -> bộ yếu nhất/ít học nhất hiện lên đầu,
-  // giúp nhìn 1 cái biết ngay nên ưu tiên học bộ nào.
-  const decksWithStats = App.decks.map((deck) => ({ deck, s: computeDeckStats(deck) }));
-  decksWithStats.sort((a, b) => a.s.pctKnown - b.s.pctKnown);
+  if (decks.length === 0) {
+    donutRow.innerHTML = `<div class="stats-donut-empty">Chưa có bộ nào trong nhóm này.</div>`;
+    return;
+  }
 
+  const decksWithStats = decks.map((deck) => ({ deck, s: computeDeckStats(deck) }));
+
+  // Tổng hợp cả nhóm để vẽ donut tổng quan + vài số liệu nổi bật.
+  const agg = decksWithStats.reduce((acc, { s }) => {
+    acc.known += s.known; acc.learning += s.learning; acc.fresh += s.fresh; acc.total += s.total;
+    return acc;
+  }, { known: 0, learning: 0, fresh: 0, total: 0 });
+  const aggPct = agg.total ? Math.round((agg.known / agg.total) * 100) : 0;
+  const bestDeck = decksWithStats.reduce((best, cur) => (cur.s.pctKnown > best.s.pctKnown ? cur : best), decksWithStats[0]);
+  const weakestDeck = decksWithStats.reduce((worst, cur) => (cur.s.pctKnown < worst.s.pctKnown ? cur : worst), decksWithStats[0]);
+
+  donutRow.innerHTML = `
+    <div class="stats-donut-box">
+      ${buildDonutSvg(
+        [
+          { value: agg.known, color: "var(--good)" },
+          { value: agg.learning, color: "var(--warn)" },
+          { value: agg.fresh, color: "var(--border)" },
+        ],
+        `${aggPct}%`,
+        "đã thuộc"
+      )}
+    </div>
+    <div class="stats-donut-summary">
+      <div class="stats-donut-summary-title">${accentLabel} — ${decks.length} bộ, ${agg.total} từ/cấu trúc</div>
+      <div class="stats-donut-summary-row"><i class="stats-dot stats-dot-known"></i> Đã thuộc: <b>${agg.known}</b></div>
+      <div class="stats-donut-summary-row"><i class="stats-dot stats-dot-learning"></i> Đang học: <b>${agg.learning}</b></div>
+      <div class="stats-donut-summary-row"><i class="stats-dot stats-dot-fresh"></i> Chưa học: <b>${agg.fresh}</b></div>
+      <div class="stats-donut-summary-highlight">🏆 Mạnh nhất: <b>${bestDeck.deck.title}</b> (${bestDeck.s.pctKnown}%)</div>
+      <div class="stats-donut-summary-highlight is-weak">⚠ Cần ưu tiên: <b>${weakestDeck.deck.title}</b> (${weakestDeck.s.pctKnown}%)</div>
+    </div>
+  `;
+
+  decksWithStats.sort((a, b) => a.s.pctKnown - b.s.pctKnown);
   decksWithStats.forEach(({ deck, s }) => {
     const tr = document.createElement("tr");
     if (deck.id === App.currentDeckId) tr.classList.add("is-current-deck-row");
@@ -827,6 +891,17 @@ function renderStatsOverviewTable() {
       setMode("srs");
     });
   });
+}
+
+// Bảng tổng quan: tách riêng nhóm "Mimi" (giáo trình chính) khỏi các bộ khác —
+// đồng bộ với cách nhóm ở dropdown sidebar (mục populateDeckPicker). Mỗi nhóm
+// có 1 biểu đồ tròn (donut) tổng quan + bảng chi tiết từng bộ riêng.
+function renderStatsOverviewTable() {
+  const mimiDecks = App.decks.filter((d) => d.series === "mimi");
+  const otherDecks = App.decks.filter((d) => d.series !== "mimi");
+  document.querySelector(".stats-group-mimi").classList.toggle("hidden", mimiDecks.length === 0);
+  renderStatsGroup(mimiDecks, "statsDonutRowMimi", "statsOverviewBodyMimi", "Mimi N2");
+  renderStatsGroup(otherDecks, "statsDonutRowOther", "statsOverviewBodyOther", "Tài liệu khác");
 }
 
 // Bảng đề thi: liệt kê TẤT CẢ đề có trong hệ thống, kể cả CHƯA làm lần nào
