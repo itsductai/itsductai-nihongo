@@ -93,6 +93,7 @@ const App = {
   choukaiPendingTestId: null,
   choukaiCurrentAudioSrc: null, // theo dõi file audio đang load, tránh load lại không cần thiết
   choukaiAnswering: false,      // chặn bấm thêm lựa chọn sau khi đã trả lời câu hiện tại
+  choukaiShadowTimeUpdateHandler: null, // listener karaoke hiện tại của "Luyện nghe câu", gỡ trước khi đổi câu
   examLastAnswerCorrect: null, // kết quả lượt vừa chấm (chế độ instant), dùng khi bấm "Tiếp tục"
   examLastAnsweredQIndex: null,
   examPerQTimerHandle: null,
@@ -1143,7 +1144,10 @@ async function loadDecks() {
         return { ...w, _id: baseId };
       });
       words = applyPatchesToWords(id, words);
-      decks.push({ id, title: data.title || filename, type, words });
+      // "series" (vd "mimi") — field tùy chọn để nhóm các bộ thuộc cùng 1 giáo
+      // trình lại với nhau trong dropdown, tách khỏi các bộ lẻ khác. Không có
+      // field này thì coi như thuộc nhóm "khác" (không ảnh hưởng bộ cũ).
+      decks.push({ id, title: data.title || filename, type, series: data.series || null, words });
     } catch (e) {
       console.error("Lỗi tải bộ", filename, e);
     }
@@ -1209,13 +1213,31 @@ async function loadChoukaiTests() {
 function populateDeckPicker() {
   const picker = document.getElementById("deckPicker");
   picker.innerHTML = "";
-  App.decks.forEach((d) => {
-    const opt = document.createElement("option");
-    opt.value = d.id;
-    const typeLabel = d.type === "NGUPHAP" ? "Ngữ pháp" : "Từ vựng";
-    opt.textContent = `[${typeLabel}] ${d.title} (${d.words.length})`;
-    picker.appendChild(opt);
-  });
+
+  // Nhóm riêng "Mimi" (giáo trình chính) khỏi các bộ khác — yêu cầu mục 21
+  // README. Bộ nào có "series": "mimi" trong file JSON sẽ rơi vào optgroup
+  // Mimi, đứng ĐẦU dropdown; còn lại giữ nguyên optgroup "Tài liệu khác".
+  // Thứ tự A-Z trong từng nhóm vẫn giữ nguyên (App.decks đã được sort sẵn).
+  const mimiDecks = App.decks.filter((d) => d.series === "mimi");
+  const otherDecks = App.decks.filter((d) => d.series !== "mimi");
+
+  const renderGroup = (label, decks) => {
+    if (decks.length === 0) return;
+    const group = document.createElement("optgroup");
+    group.label = label;
+    decks.forEach((d) => {
+      const opt = document.createElement("option");
+      opt.value = d.id;
+      const typeLabel = d.type === "NGUPHAP" ? "Ngữ pháp" : "Từ vựng";
+      opt.textContent = `[${typeLabel}] ${d.title} (${d.words.length})`;
+      group.appendChild(opt);
+    });
+    picker.appendChild(group);
+  };
+
+  renderGroup("📘 Mimi N2 (giáo trình chính)", mimiDecks);
+  renderGroup("Tài liệu khác", otherDecks);
+
   picker.value = App.currentDeckId;
 }
 
@@ -3248,9 +3270,26 @@ function renderChoukaiQuestion() {
     // Trước đây set audioEl.src mỗi lần render khiến audio bị TẢI LẠI TỪ ĐẦU mỗi
     // khi qua câu kế trong CÙNG 1 Mondai (dùng chung 1 file) — làm gián đoạn nghe
     // liên tục dù câu 1→5 của 1 Mondai vốn nằm trong 1 file audio duy nhất.
+    //
+    // "startSec" (tùy chọn, số giây) trong JSON câu hỏi: nếu file JSON CÓ field
+    // này, app tự seek audio tới đúng đoạn của câu khi chuyển câu (kể cả khi vẫn
+    // dùng chung 1 file audio như cũ). Nếu KHÔNG có field này (file cũ chưa cập
+    // nhật), app giữ nguyên hành vi cũ — không tự seek, người học tự kéo thanh
+    // thời gian như trước, KHÔNG lỗi/crash gì cả.
+    const seekToStart = function () {
+      if (typeof q.startSec === "number") {
+        try { audioEl.currentTime = q.startSec; } catch (e) { /* bỏ qua nếu chưa sẵn sàng */ }
+      }
+    };
     if (App.choukaiCurrentAudioSrc !== audioSrc) {
       audioEl.src = audioSrc;
       App.choukaiCurrentAudioSrc = audioSrc;
+      if (typeof q.startSec === "number") {
+        audioEl.addEventListener("loadedmetadata", seekToStart, { once: true });
+      }
+    } else {
+      // Cùng file (cùng Mondai) — chỉ seek nếu câu mới có khai báo startSec.
+      seekToStart();
     }
     hint.textContent = test.audioMode === "combined"
       ? "⚠ Đề này dùng 1 file audio chung cho cả đề — tự kéo thanh thời gian tới đúng đoạn."
@@ -3586,14 +3625,56 @@ function renderChoukaiShadowQuestion(testId, flatIdx) {
   // Tách script + dịch theo dòng (mỗi lượt nói = 1 dòng) để ghép cặp hiển thị.
   const jpLines = (q.script || "").split("\n").filter(Boolean);
   const viLines = (q.scriptVi || "").split("\n").filter(Boolean);
+  // "lineTimestamps" (tùy chọn, mảng số giây — TÍNH TỪ ĐẦU FILE AUDIO của cả
+  // Mondai, vì các câu trong 1 Mondai dùng chung 1 file): nếu file JSON CÓ mảng
+  // này (cùng số dòng với script), app sẽ tự bôi sáng kiểu karaoke đúng dòng
+  // đang phát khi nghe audio, và cho bấm vào dòng tiếng Nhật để nhảy audio tới
+  // đúng đoạn đó. Nếu KHÔNG có (file cũ/chưa làm timestamp), giữ nguyên hành vi
+  // cũ — chỉ hiện từng dòng + bản dịch làm mờ, không bôi sáng theo audio.
+  const lineTimestamps = Array.isArray(q.lineTimestamps) && q.lineTimestamps.length === jpLines.length
+    ? q.lineTimestamps
+    : null;
+
   const linesWrap = document.getElementById("choukaiShadowLines");
   linesWrap.innerHTML = jpLines.map(function (jp, i) {
-    return '<div class="choukai-shadow-line"><div class="choukai-shadow-line-jp">' + jp + '</div>' +
+    const hasTime = lineTimestamps !== null;
+    const timeAttr = hasTime ? ' data-time="' + lineTimestamps[i] + '"' : "";
+    const jpClass = "choukai-shadow-line-jp" + (hasTime ? " is-seekable" : "");
+    return '<div class="choukai-shadow-line"' + timeAttr + '><div class="' + jpClass + '">' + jp + '</div>' +
       '<div class="choukai-shadow-line-vi" data-idx="' + i + '">' + (viLines[i] || "") + '</div></div>';
   }).join("");
   linesWrap.querySelectorAll(".choukai-shadow-line-vi").forEach(function (el) {
     el.addEventListener("click", function () { el.classList.toggle("is-revealed"); });
   });
+
+  // Gỡ listener karaoke của câu TRƯỚC (nếu có) trước khi gắn listener mới —
+  // tránh nhiều listener "timeupdate" cộng dồn qua từng lần đổi câu.
+  if (App.choukaiShadowTimeUpdateHandler) {
+    audioEl.removeEventListener("timeupdate", App.choukaiShadowTimeUpdateHandler);
+    App.choukaiShadowTimeUpdateHandler = null;
+  }
+
+  if (lineTimestamps) {
+    const lineEls = Array.from(linesWrap.querySelectorAll(".choukai-shadow-line"));
+    lineEls.forEach(function (el, i) {
+      const jpEl = el.querySelector(".choukai-shadow-line-jp");
+      jpEl.addEventListener("click", function () {
+        try { audioEl.currentTime = lineTimestamps[i]; audioEl.play(); } catch (e) { /* bỏ qua */ }
+      });
+    });
+    const handler = function () {
+      const t = audioEl.currentTime;
+      let activeIdx = -1;
+      for (let i = 0; i < lineTimestamps.length; i++) {
+        if (t >= lineTimestamps[i]) activeIdx = i; else break;
+      }
+      lineEls.forEach(function (el, i) {
+        el.classList.toggle("is-current-line", i === activeIdx);
+      });
+    };
+    App.choukaiShadowTimeUpdateHandler = handler;
+    audioEl.addEventListener("timeupdate", handler);
+  }
 }
 
 // Bảng kết quả chi tiết từng câu — chỉ dùng cho chế độ "Chấm sửa cuối bài",
