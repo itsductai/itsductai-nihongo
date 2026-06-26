@@ -1046,3 +1046,8 @@ tbody tr:last-child td { border-bottom: none; }
 .choukai-shadow-line-vi.is-revealed { filter: blur(0); user-select: text; }
 .choukai-shadow-line-vi::before { content: "👁 Bấm để hiện bản dịch — "; color: var(--text-2); font-size: 11px; }
 .choukai-shadow-line-vi.is-revealed::before { content: ""; }
+/* Karaoke highlight — chỉ áp dụng khi câu có lineTimestamps trong JSON, nếu
+   không có field này thì các class dưới đây không bao giờ được gắn vào DOM. */
+.choukai-shadow-line.is-current-line { background: var(--accent-soft, rgba(255, 200, 0, 0.12)); border-radius: 8px; box-shadow: inset 3px 0 0 var(--accent, #e0a000); }
+.choukai-shadow-line-jp.is-seekable { cursor: pointer; }
+.choukai-shadow-line-jp.is-seekable:hover { text-decoration: underline; }
