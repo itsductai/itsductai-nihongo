@@ -1,5 +1,6 @@
 {
   "type": "TUVUNG",
+  "series": "mimi",
   "title": "1. Từ nối, Phó từ & Bẫy Đọc hiểu JLPT N2",
   "words": [
     {
@@ -10,7 +11,10 @@
       "nghia": "vì vậy, do đó (kết quả khách quan)",
       "vi_du": "セール前日です。そのため、少なくとも10台は納品していただけないでしょうか。(Ngày mai là đợt giảm giá rồi. Vì vậy, anh có thể giao cho chúng tôi ít nhất 10 chiếc được không?)",
       "vi_du_ruby": "セール<ruby>前日<rt>ぜんじつ</rt></ruby>です。そのため、<ruby>少<rt>すく</rt></ruby>なくとも10<ruby>台<rt>だい</rt></ruby>は<ruby>納品<rt>のうひん</rt></ruby>していただけないでしょうか。(Ngày mai là đợt giảm giá rồi. Vì vậy, anh có thể giao cho chúng tôi ít nhất 10 chiếc được không?)",
-      "dong_nghia": ["したがって", "だから"],
+      "dong_nghia": [
+        "したがって",
+        "だから"
+      ],
       "trai_nghia": []
     },
     {
@@ -21,8 +25,13 @@
       "nghia": "do đó, vì vậy (kết luận logic chặt chẽ)",
       "vi_du": "したがって、犬も納得して互いに生活することが必要だ。(Do đó, việc chó cũng chấp nhận và cùng chung sống là điều tất yếu.)",
       "vi_du_ruby": "したがって、犬も<ruby>納得<rt>なっとく</rt></ruby>して<ruby>互<rt>たが</rt></ruby>いに<ruby>生活<rt>せいかつ</rt></ruby>することが必要だ。(Do đó, việc chó cũng chấp nhận và cùng chung sống là điều tất yếu.)",
-      "dong_nghia": ["そのため", "ゆえに"],
-      "trai_nghia": ["しかし"]
+      "dong_nghia": [
+        "そのため",
+        "ゆえに"
+      ],
+      "trai_nghia": [
+        "しかし"
+      ]
     },
     {
       "kanji": "からこそ",
@@ -32,7 +41,9 @@
       "nghia": "chính vì... nên (nhấn mạnh nguyên nhân)",
       "vi_du": "親は子どもの将来を心配しているからこそ、厳しく叱るのだ。(Chính vì cha mẹ lo lắng cho tương lai của con cái nên mới la mắng nghiêm khắc.)",
       "vi_du_ruby": "親は子どもの<ruby>将来<rt>しょうらい</rt></ruby>を<ruby>心配<rt>しんぱい</rt></ruby>しているからこそ、<ruby>厳<rt>きび</rt></ruby>しく<ruby>叱<rt>しか</rt></ruby>るのだ。(Chính vì cha mẹ lo lắng cho tương lai của con cái nên mới la mắng nghiêm khắc.)",
-      "dong_nghia": ["だからこそ"],
+      "dong_nghia": [
+        "だからこそ"
+      ],
       "trai_nghia": []
     },
     {
@@ -43,7 +54,9 @@
       "nghia": "chính vì vậy (nhấn mạnh tính tất yếu)",
       "vi_du": "だからこそ、まずはデータ分析をすることが読解力を高める。(Chính vì vậy, trước hết việc phân tích dữ liệu sẽ làm tăng khả năng đọc hiểu.)",
       "vi_du_ruby": "だからこそ、まずはデータ<ruby>分析<rt>ぶんんせき</rt></ruby>をすることが<ruby>読解力<rt>どっかいりょく</rt></ruby>を高める。(Chính vì vậy, trước hết việc phân tích dữ liệu sẽ làm tăng khả năng đọc hiểu.)",
-      "dong_nghia": ["からこそ"],
+      "dong_nghia": [
+        "からこそ"
+      ],
       "trai_nghia": []
     },
     {
@@ -54,8 +67,13 @@
       "nghia": "bởi vì (đưa ra lý do cho câu trước)",
       "vi_du": "仕事が先に進まない。なぜなら、ルールを守っていないからだ。(Công việc không tiến triển được. Lý do là bởi vì không tuân thủ các quy tắc.)",
       "vi_du_ruby": "仕事が先に進まない。なぜなら、ルールを守っていないからだ。(Công việc không tiến triển được. Lý do là bởi vì không tuân thủ các quy tắc.)",
-      "dong_nghia": ["というのも", "だって"],
-      "trai_nghia": ["したがって"]
+      "dong_nghia": [
+        "というのも",
+        "だって"
+      ],
+      "trai_nghia": [
+        "したがって"
+      ]
     },
     {
       "kanji": "というのも",
@@ -65,7 +83,9 @@
       "nghia": "lý do là vì (giải thích thêm)",
       "vi_du": "最近、少し太ってしまった。というのも、運動不足のせいだ。(Gần đây tôi hơi mập lên. Lý do là vì thiếu vận động.)",
       "vi_du_ruby": "最近、少し太ってしまった。というのも、<ruby>運動不足<rt>うんどうぶそく</rt></ruby>のせいだ。(Gần đây tôi hơi mập lên. Lý do là vì thiếu vận động.)",
-      "dong_nghia": ["なぜなら"],
+      "dong_nghia": [
+        "なぜなら"
+      ],
       "trai_nghia": []
     },
     {
@@ -76,8 +96,13 @@
       "nghia": "tuy nhiên (bất ngờ, trái với dự đoán)",
       "vi_du": "天気予報は晴れだった。ところが、午後から大雨が降った。(Dự báo thời tiết bảo trời nắng. Thế nhưng từ chiều lại mưa to.)",
       "vi_du_ruby": "<ruby>天気予報<rt>てんきよほう</rt></ruby>は晴れだった。ところが、午後から<ruby>大雨<rt>おおあめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>った。(Dự báo thời tiết bảo trời nắng. Thế nhưng từ chiều lại mưa to.)",
-      "dong_nghia": ["しかしながら", "それでも"],
-      "trai_nghia": ["だから"]
+      "dong_nghia": [
+        "しかしながら",
+        "それでも"
+      ],
+      "trai_nghia": [
+        "だから"
+      ]
     },
     {
       "kanji": "しかしながら",
@@ -87,8 +112,13 @@
       "nghia": "tuy nhiên, mặc dù vậy (trang trọng)",
       "vi_du": "しかしながら、この理解できないところが猫の魅力だ。(Tuy nhiên, chính cái điểm không thể hiểu nổi này lại là sức hấp dẫn của loài mèo.)",
       "vi_du_ruby": "しかしながら、この<ruby>理解<rt>りかい</rt></ruby>できないところが猫の<ruby>魅力<rt>みりょく</rt></ruby>だ。(Tuy nhiên, chính cái điểm không thể hiểu nổi này lại là sức hấp dẫn của loài mèo.)",
-      "dong_nghia": ["ところが", "だが"],
-      "trai_nghia": ["したがって"]
+      "dong_nghia": [
+        "ところが",
+        "だが"
+      ],
+      "trai_nghia": [
+        "したがって"
+      ]
     },
     {
       "kanji": "それでも",
@@ -98,8 +128,13 @@
       "nghia": "dù vậy, dù thế nào (vẫn kiên định)",
       "vi_du": "それでも、多様な食材を食べる経験を積む必要がある。(Dù là vậy, việc tích lũy kinh nghiệm ăn đa dạng các loại thực phẩm vẫn là cần thiết.)",
       "vi_du_ruby": "それでも、<ruby>多様<rt>たよう</rt></ruby>な<ruby>食材<rt>しょくざい</rt></ruby>を食べる<ruby>経験<rt>けいけん</rt></ruby>を<ruby>積<rt>つ</rt></ruby>む必要がある。(Dù là vậy, việc tích lũy kinh nghiệm ăn đa dạng các loại thực phẩm vẫn là cần thiết.)",
-      "dong_nghia": ["にもかかわらず", "しかし"],
-      "trai_nghia": ["したがって"]
+      "dong_nghia": [
+        "にもかかわらず",
+        "しかし"
+      ],
+      "trai_nghia": [
+        "したがって"
+      ]
     },
     {
       "kanji": "一方（で）",
@@ -109,7 +144,10 @@
       "nghia": "mặt khác, trong khi đó",
       "vi_du": "彼は仕事に厳しい一方で、部下への思いやりも忘れない。(Anh ấy một mặt nghiêm khắc trong công việc, mặt khác cũng không quên quan tâm cấp dưới.)",
       "vi_du_ruby": "彼は仕事に<ruby>厳<rt>きび</rt></ruby>しい<ruby>一方<rt>いっぽう</rt></ruby>で、<ruby>部下<rt>ぶか</rt></ruby>への思いやりも忘れない。(Anh ấy một mặt nghiêm khắc trong công việc, mặt khác cũng không quên quan tâm cấp dưới.)",
-      "dong_nghia": ["反面", "それに対し"],
+      "dong_nghia": [
+        "反面",
+        "それに対し"
+      ],
       "trai_nghia": []
     },
     {
@@ -120,7 +158,9 @@
       "nghia": "mặt trái, ngược lại (2 mặt của 1 vấn đề)",
       "vi_du": "都会の生活は便利な反面、ストレスも多い。(Cuộc sống thành thị tiện lợi nhưng mặt trái là cũng rất nhiều căng thẳng.)",
       "vi_du_ruby": "<ruby>都会<rt>とかい</rt></ruby>の生活は<ruby>便利<rt>べんり</rt></ruby>な<ruby>反面<rt>はんめん</rt></ruby>、ストレスも多い。(Cuộc sống thành thị tiện lợi nhưng mặt trái là cũng rất nhiều căng thẳng.)",
-      "dong_nghia": ["一方で"],
+      "dong_nghia": [
+        "一方で"
+      ],
       "trai_nghia": []
     },
     {
@@ -131,8 +171,13 @@
       "nghia": "so với đó, ngược lại (so sánh 2 chủ thể)",
       "vi_du": "兄は活発だ。それに対して弟は大人しい。(Anh trai thì hoạt bát. Ngược lại so với đó thì em trai lại trầm tính.)",
       "vi_du_ruby": "兄は<ruby>活発<rt>かっぱつ</rt></ruby>だ。それに<ruby>対<rt>たい</rt></ruby>して弟は大人しい。(Anh trai thì hoạt bát. Ngược lại so với đó thì em trai lại trầm tính.)",
-      "dong_nghia": ["一方で", "反対に"],
-      "trai_nghia": ["同様に"]
+      "dong_nghia": [
+        "一方で",
+        "反対に"
+      ],
+      "trai_nghia": [
+        "同様に"
+      ]
     },
     {
       "kanji": "むしろ",
@@ -142,7 +187,10 @@
       "nghia": "đúng hơn là, thay vì thế",
       "vi_du": "この失敗は不運ではない。むしろ学ぶべきチャンスだ。(Thất bại này không phải là xui xẻo. Đúng hơn nó là cơ hội để học hỏi.)",
       "vi_du_ruby": "この<ruby>失敗<rt>しっぱい</rt></ruby>は<ruby>不運<rt>ふうん</rt></ruby>ではない。<ruby>寧<rt>むし</rt></ruby>ろ学ぶべきチャンスだ。(Thất bại này không phải là xui xẻo. Đúng hơn nó là cơ hội để học hỏi.)",
-      "dong_nghia": ["かえって", "それどころか"],
+      "dong_nghia": [
+        "かえって",
+        "それどころか"
+      ],
       "trai_nghia": []
     },
     {
@@ -153,8 +201,13 @@
       "nghia": "trái lại hẳn (kết quả ngược hoàn toàn kỳ vọng)",
       "vi_du": "親切で言ったのに、かえって相手を怒らせてしまった。(Nói vì lòng tốt, ai ngờ trái lại hẳn lại làm đối phương tức giận.)",
       "vi_du_ruby": "<ruby>親切<rt>しんせつ</rt></ruby>で言ったのに、かえって相手を<ruby>怒<rt>おこ</rt></ruby>らせてしまった。(Nói vì lòng tốt, ai ngờ trái lại hẳn lại làm đối phương tức giận.)",
-      "dong_nghia": ["むしろ", "逆に"],
-      "trai_nghia": ["予想通り"]
+      "dong_nghia": [
+        "むしろ",
+        "逆に"
+      ],
+      "trai_nghia": [
+        "予想通り"
+      ]
     },
     {
       "kanji": "それどころか",
@@ -164,7 +217,9 @@
       "nghia": "không những thế, còn tệ/ngược hơn thế",
       "vi_du": "彼は反省していない。それどころか、他人のせいにしている。(Anh ta chẳng kiểm điểm bản thân gì cả. Hơn thế nữa còn đang đổ lỗi cho người khác kìa.)",
       "vi_du_ruby": "彼は<ruby>反省<rt>はんせい</rt></ruby>していない。それどころか、<ruby>他人<rt>たにん</rt></ruby>のせいにしている。(Anh ta chẳng kiểm điểm bản thân gì cả. Hơn thế nữa còn đang đổ lỗi cho người khác kìa.)",
-      "dong_nghia": ["むしろ"],
+      "dong_nghia": [
+        "むしろ"
+      ],
       "trai_nghia": []
     },
     {
@@ -175,8 +230,14 @@
       "nghia": "mặc dù, bất chấp",
       "vi_du": "悪天候にもかかわらず、多くのファンが集まった。(Bất chấp thời tiết xấu, rất đông người hâm mộ đã tập trung lại.)",
       "vi_du_ruby": "<ruby>悪天候<rt>あくてんこう</rt></ruby>にもかかわらず、多くのファンが<ruby>集<rt>あつ</rt></ruby>まった。(Bất chấp thời tiết xấu, rất đông người hâm mộ đã tập trung lại.)",
-      "dong_nghia": ["なのに", "とはいえ", "それでも"],
-      "trai_nghia": ["だから"]
+      "dong_nghia": [
+        "なのに",
+        "とはいえ",
+        "それでも"
+      ],
+      "trai_nghia": [
+        "だから"
+      ]
     },
     {
       "kanji": "とはいえ",
@@ -186,7 +247,10 @@
       "nghia": "dù là vậy, mặc dù vậy (nhượng bộ)",
       "vi_du": "春になった。とはいえ、まだ寒い日が続いている。(Trời đã sang xuân. Mặc dù vậy, những ngày lạnh giá vẫn tiếp diễn.)",
       "vi_du_ruby": "春になった。とはいえ、まだ<ruby>寒<rt>さむ</rt></ruby>い日が続いている。(Trời đã sang xuân. Mặc dù vậy, những ngày lạnh giá vẫn tiếp diễn.)",
-      "dong_nghia": ["にもかかわらず", "それでも"],
+      "dong_nghia": [
+        "にもかかわらず",
+        "それでも"
+      ],
       "trai_nghia": []
     },
     {
@@ -197,7 +261,11 @@
       "nghia": "hơn nữa, thêm vào đó (tăng cấp độ)",
       "vi_du": "雨が降ってきた。さらに風も強くなってきた。(Mưa đã rơi xuống. Hơn nữa gió cũng bắt đầu thổi mạnh lên.)",
       "vi_du_ruby": "雨が<ruby>降<rt>ふ</rt></ruby>ってきた。さらに風も強くなってきた。(Mưa đã rơi xuống. Hơn nữa gió cũng bắt đầu thổi mạnh lên.)",
-      "dong_nghia": ["その上", "それだけでなく", "なお"],
+      "dong_nghia": [
+        "その上",
+        "それだけでなく",
+        "なお"
+      ],
       "trai_nghia": []
     },
     {
@@ -208,8 +276,13 @@
       "nghia": "không chỉ vậy mà còn",
       "vi_du": "この店は安い。それだけでなく、味も最高だ。(Quán này rẻ. Không chỉ vậy mà vị cũng cực kỳ ngon.)",
       "vi_du_ruby": "この店は安い。それだけでなく、味も<ruby>最高<rt>さいこう</rt></ruby>だ。(Quán này rẻ. Không chỉ vậy mà vị cũng cực kỳ ngon.)",
-      "dong_nghia": ["さらに", "その上"],
-      "trai_nghia": ["それだけだ"]
+      "dong_nghia": [
+        "さらに",
+        "その上"
+      ],
+      "trai_nghia": [
+        "それだけだ"
+      ]
     },
     {
       "kanji": "なお",
@@ -219,7 +292,10 @@
       "nghia": "ngoài ra, bên cạnh đó (thêm thông báo/lưu ý)",
       "vi_du": "会議は3時までです。なお、資料は机の上にあります。(Cuộc họp đến 3 giờ. Ngoài ra, tài liệu đang để trên bàn.)",
       "vi_du_ruby": "<ruby>会議<rt>かいぎ</rt></ruby>は3時までです。なお、<ruby>資料<rt>しりょう</rt></ruby>は<ruby>机<rt>つくえ</rt></ruby>の上にあります。(Cuộc họp đến 3 giờ. Ngoài ra, tài liệu đang để trên bàn.)",
-      "dong_nghia": ["さらに", "また"],
+      "dong_nghia": [
+        "さらに",
+        "また"
+      ],
       "trai_nghia": []
     },
     {
@@ -230,7 +306,11 @@
       "nghia": "tức là, nói cách khác (kết luận)",
       "vi_du": "父の兄、つまり私のおじが明日遊びに来る。(Anh trai của bố, tức là bác tôi ngày mai sẽ đến chơi.)",
       "vi_du_ruby": "父の兄、つまり私の<ruby>伯父<rt>おじ</rt></ruby>が明日遊びに来る。(Anh trai của bố, tức là bác tôi ngày mai sẽ đến chơi.)",
-      "dong_nghia": ["すなわち", "要するに", "言い換えれば"],
+      "dong_nghia": [
+        "すなわち",
+        "要するに",
+        "言い換えれば"
+      ],
       "trai_nghia": []
     },
     {
@@ -241,7 +321,10 @@
       "nghia": "tức là, đó là (trang trọng/học thuật)",
       "vi_du": "最初の読者、すなわち担当編集者を念頭に置いて書く。(Vừa viết vừa nhắm đến độc giả đầu tiên, tức là biên tập viên phụ trách.)",
       "vi_du_ruby": "<ruby>最初<rt>さいしょ</rt></ruby>の読者、すなわち<ruby>担当編集者<rt>たんとうへんしゅうしゃ</rt></ruby>を<ruby>念頭<rt>ねんとう</rt></ruby>に<ruby>置<rt>お</rt></ruby>いて書く。(Vừa viết vừa nhắm đến độc giả đầu tiên, tức là biên tập viên phụ trách.)",
-      "dong_nghia": ["つまり", "言い換えれば"],
+      "dong_nghia": [
+        "つまり",
+        "言い換えれば"
+      ],
       "trai_nghia": []
     },
     {
@@ -252,8 +335,13 @@
       "nghia": "tóm lại, nói gọn lại",
       "vi_du": "要するに、そこで得られる知識は世界共有になったのだ。(Tóm lại, kiến thức có được ở đó đã trở thành tài sản chung của thế giới.)",
       "vi_du_ruby": "<ruby>要<rt>よう</rt></ruby>するに、そこで得られる<ruby>知識<rt>ちしき</rt></ruby>は世界<ruby>共有<rt>きょうゆう</rt></ruby>になったのだ。(Tóm lại, kiến thức có được ở đó đã trở thành tài sản chung của thế giới.)",
-      "dong_nghia": ["つまり", "手短に言えば"],
-      "trai_nghia": ["詳細に言えば"]
+      "dong_nghia": [
+        "つまり",
+        "手短に言えば"
+      ],
+      "trai_nghia": [
+        "詳細に言えば"
+      ]
     },
     {
       "kanji": "言い換えれば",
@@ -263,7 +351,10 @@
       "nghia": "nói cách khác, diễn đạt theo cách khác",
       "vi_du": "言い換えれば、「聞く気がない」と思われてしまうのだ。(Nói cách khác, sẽ bị người khác nghĩ là \"Không có thái độ muốn lắng nghe\".)",
       "vi_du_ruby": "<ruby>言<rt>い</rt></ruby>い<ruby>換<rt>か</rt></ruby>えれば、「聞く気がない」と思われてしまうのだ。(Nói cách khác, sẽ bị người khác nghĩ là \"Không có thái độ muốn lắng nghe\".)",
-      "dong_nghia": ["つまり", "すなわち"],
+      "dong_nghia": [
+        "つまり",
+        "すなわち"
+      ],
       "trai_nghia": []
     },
     {
@@ -274,7 +365,10 @@
       "nghia": "có thể nói là, ví như là (ẩn dụ)",
       "vi_du": "彼女はいわば、チームの心臓だ。(Cô ấy có thể nói là trái tim của cả đội.)",
       "vi_du_ruby": "彼女はいわば、チームの<ruby>心臓<rt>しんぞう</rt></ruby>だ。(Cô ấy có thể nói là trái tim của cả đội.)",
-      "dong_nghia": ["例えるなら", "言ってみれば"],
+      "dong_nghia": [
+        "例えるなら",
+        "言ってみれば"
+      ],
       "trai_nghia": []
     },
     {
@@ -285,7 +379,9 @@
       "nghia": "đó là, điều này có nghĩa là (dùng để định nghĩa)",
       "vi_du": "人間というのは、手早くポイントだけを教えて説明を省略しがちだ。(Con người có nghĩa là giống loài thường chỉ dạy nhanh điểm chính mà bỏ qua giải thích cặn kẽ.)",
       "vi_du_ruby": "<ruby>人間<rt>にんげん</rt></ruby>というのは、手早くポイントだけを教えて<ruby>説明<rt>せつめい</rt></ruby>を<ruby>省略<rt>しょうりゃく</rt></ruby>しがちだ。(Con người có nghĩa là giống loài thường chỉ dạy nhanh điểm chính mà bỏ qua giải thích cặn kẽ.)",
-      "dong_nghia": ["とは"],
+      "dong_nghia": [
+        "とは"
+      ],
       "trai_nghia": []
     },
     {
@@ -296,8 +392,13 @@
       "nghia": "không hẳn là, không phải là (phủ định một phần)",
       "vi_du": "何でもナナメに読めば思考力が深まるわけではない。(Không phải cứ đọc xéo/chỉ trích mọi thứ là năng lực tư duy sẽ sâu sắc lên đâu.)",
       "vi_du_ruby": "何でもナナメに読めば<ruby>思考力<rt>しこうりょく</rt></ruby>が深まるわけではない。(Không phải cứ đọc xéo/chỉ trích mọi thứ là năng lực tư duy sẽ sâu sắc lên đâu.)",
-      "dong_nghia": ["というわけではない", "必ずしも～ない"],
-      "trai_nghia": ["絶対に～だ"]
+      "dong_nghia": [
+        "というわけではない",
+        "必ずしも～ない"
+      ],
+      "trai_nghia": [
+        "絶対に～だ"
+      ]
     },
     {
       "kanji": "というわけではない",
@@ -307,7 +408,9 @@
       "nghia": "không có nghĩa là, không hẳn là",
       "vi_du": "「しわ」はすべての人にできるというわけではない。(Nếp nhăn không hẳn là ai cũng sẽ bị.)",
       "vi_du_ruby": "「しわ」はすべての人にできるというわけではない。(Nếp nhăn không hẳn là ai cũng sẽ bị.)",
-      "dong_nghia": ["わけではない"],
+      "dong_nghia": [
+        "わけではない"
+      ],
       "trai_nghia": []
     },
     {
@@ -318,8 +421,12 @@
       "nghia": "không nhất thiết là, chưa chắc đã",
       "vi_du": "お金があれば必ずしも幸せになれるとは限らない。(Có tiền chưa chắc đã hạnh phúc.)",
       "vi_du_ruby": "お金があれば<ruby>必<rt>かなら</rt></ruby>ずしも<ruby>幸<rt>しあわ</rt></ruby>せになれるとは<ruby>限<rt>かぎ</rt></ruby>らない。(Có tiền chưa chắc đã hạnh phúc.)",
-      "dong_nghia": ["わけではない"],
-      "trai_nghia": ["絶対に～だ"]
+      "dong_nghia": [
+        "わけではない"
+      ],
+      "trai_nghia": [
+        "絶対に～だ"
+      ]
     },
     {
       "kanji": "そうではなく",
@@ -329,7 +436,9 @@
       "nghia": "không phải như vậy, mà là... (ý chính nằm phía sau)",
       "vi_du": "そうではなく、「この相手に対してどのように説得するか」が重要なのだ。(Không phải thế, mà là \"Làm thế nào để thuyết phục đối tượng này\" mới là điều quan trọng.)",
       "vi_du_ruby": "そうではなく、「この相手に対してどのように<ruby>説得<rt>せっとく</rt></ruby>するか」が<ruby>重要<rt>じゅうよう</rt></ruby>なのだ。(Không phải thế, mà là \"Làm thế nào để thuyết phục đối tượng này\" mới là điều quan trọng.)",
-      "dong_nghia": ["むしろ"],
+      "dong_nghia": [
+        "むしろ"
+      ],
       "trai_nghia": []
     },
     {
@@ -340,7 +449,9 @@
       "nghia": "chỉ đơn thuần là, chẳng qua chỉ là",
       "vi_du": "これは単なる予測にすぎない。(Đây chẳng qua chỉ là một dự đoán đơn thuần thôi.)",
       "vi_du_ruby": "これは<ruby>単<rt>たん</rt></ruby>なる<ruby>予測<rt>よそく</rt></ruby>にすぎない。(Đây chẳng qua chỉ là một dự đoán đơn thuần thôi.)",
-      "dong_nghia": ["でしかない"],
+      "dong_nghia": [
+        "でしかない"
+      ],
       "trai_nghia": []
     },
     {
@@ -351,8 +462,13 @@
       "nghia": "không có lý nào, tuyệt đối không thể",
       "vi_du": "人生に地図などあるわけがない。(Chẳng có cái lý nào cuộc đời lại có bản đồ cho sẵn cả.)",
       "vi_du_ruby": "<ruby>人生<rt>じんせい</rt></ruby>に<ruby>地図<rt>ちず</rt></ruby>などあるわけがない。(Chẳng có cái lý nào cuộc đời lại có bản đồ cho sẵn cả.)",
-      "dong_nghia": ["はずがない", "絶対に～ない"],
-      "trai_nghia": ["当然だ"]
+      "dong_nghia": [
+        "はずがない",
+        "絶対に～ない"
+      ],
+      "trai_nghia": [
+        "当然だ"
+      ]
     },
     {
       "kanji": "ただし",
@@ -362,7 +478,10 @@
       "nghia": "tuy nhiên, trừ khi (thêm điều kiện ngoại lệ)",
       "vi_du": "入場は無料です。ただし、小学生以下に限ります。(Vào cửa miễn phí. Tuy nhiên, chỉ giới hạn cho học sinh tiểu học trở xuống.)",
       "vi_du_ruby": "<ruby>入場<rt>にゅうじょう</rt></ruby>は無料です。ただし、<ruby>小学生以下<rt>しょうがくせいいか</rt></ruby>に<ruby>限<rt>かぎ</rt></ruby>ります。(Vào cửa miễn phí. Tuy nhiên, chỉ giới hạn cho học sinh tiểu học trở xuống.)",
-      "dong_nghia": ["もっとも", "ただ"],
+      "dong_nghia": [
+        "もっとも",
+        "ただ"
+      ],
       "trai_nghia": []
     },
     {
@@ -373,7 +492,10 @@
       "nghia": "tuy nhiên, mặc dù vậy (bổ sung ngoại lệ làm giảm mức độ câu trước)",
       "vi_du": "全員参加してください。もっとも、病気の場合は別ですが。(Tất cả mọi người hãy tham gia. Tuy nhiên nếu bị ốm thì là ngoại lệ.)",
       "vi_du_ruby": "全員<ruby>参加<rt>さんか</rt></ruby>してください。もっとも、<ruby>病気<rt>びょうき</rt></ruby>の<ruby>場合<rt>ばあい</rt></ruby>は別ですが。(Tất cả mọi người hãy tham gia. Tuy nhiên nếu bị ốm thì là ngoại lệ.)",
-      "dong_nghia": ["ただし", "ただ"],
+      "dong_nghia": [
+        "ただし",
+        "ただ"
+      ],
       "trai_nghia": []
     },
     {
@@ -384,7 +506,10 @@
       "nghia": "tuy nhiên, nhưng chỉ là (nhượng bộ nhẹ)",
       "vi_du": "ただ、無理に勉強を押しつけてもいい結果は得られない。(Chỉ là, có ép buộc học hành đi chăng nữa cũng không đạt được kết quả tốt.)",
       "vi_du_ruby": "ただ、無理に勉強を押しつけてもいい結果は得られない。(Chỉ là, có ép buộc học hành đi chăng nữa cũng không đạt được kết quả tốt.)",
-      "dong_nghia": ["ただし", "もっとも"],
+      "dong_nghia": [
+        "ただし",
+        "もっとも"
+      ],
       "trai_nghia": []
     },
     {
@@ -395,8 +520,13 @@
       "nghia": "vốn dĩ, ngay từ đầu, cơ bản mà nói",
       "vi_du": "そもそもこうしたのものにいいも悪いもないのである。(Vốn dĩ ngay từ đầu, mấy cái thứ này làm gì có chuyện tốt hay xấu.)",
       "vi_du_ruby": "そもそもこうしたのものにいいも悪いもないのである。(Vốn dĩ ngay từ đầu, mấy cái thứ này làm gì có chuyện tốt hay xấu.)",
-      "dong_nghia": ["もともと", "最初から"],
-      "trai_nghia": ["結末として"]
+      "dong_nghia": [
+        "もともと",
+        "最初から"
+      ],
+      "trai_nghia": [
+        "結末として"
+      ]
     },
     {
       "kanji": "いったい",
@@ -406,7 +536,9 @@
       "nghia": "rốt cuộc là, đến tận cùng (nhấn mạnh câu hỏi)",
       "vi_du": "新たな視点は、いったいどこからやってくるのか。(Góc nhìn mới mẻ này rốt cuộc là từ đâu mà ra cơ chứ?)",
       "vi_du_ruby": "<ruby>新<rt>あら</rt></ruby>たな<ruby>視点<rt>してん</rt></ruby>は、いったいどこからやってくるのか。(Góc nhìn mới mẻ này rốt cuộc là từ đâu mà ra cơ chứ?)",
-      "dong_nghia": ["そもそも"],
+      "dong_nghia": [
+        "そもそも"
+      ],
       "trai_nghia": []
     },
     {
@@ -417,7 +549,10 @@
       "nghia": "như thế nào, biết bao (how / how much)",
       "vi_du": "いかに努力しても、結果が出なければ意味がない。(Dù có nỗ lực biết bao nhiêu đi nữa, không có kết quả thì cũng vô nghĩa.)",
       "vi_du_ruby": "いかに<ruby>努力<rt>どりょく</rt></ruby>しても、結果が出なければ意味がない。(Dù có nỗ lực biết bao nhiêu đi nữa, không có kết quả thì cũng vô nghĩa.)",
-      "dong_nghia": ["どれほど", "どのように"],
+      "dong_nghia": [
+        "どれほど",
+        "どのように"
+      ],
       "trai_nghia": []
     },
     {
@@ -428,8 +563,13 @@
       "nghia": "đến cùng, suy cho cùng cũng chỉ là",
       "vi_du": "これはあくまで私の個人的な意見です。(Đây suy cho cùng cũng chỉ là ý kiến cá nhân của tôi thôi.)",
       "vi_du_ruby": "これはあくまで私の<ruby>個人的<rt>こじんてき</rt></ruby>な意見です。(Đây suy cho cùng cũng chỉ là ý kiến cá nhân của tôi thôi.)",
-      "dong_nghia": ["最後まで", "徹底的に"],
-      "trai_nghia": ["途中で"]
+      "dong_nghia": [
+        "最後まで",
+        "徹底的に"
+      ],
+      "trai_nghia": [
+        "途中で"
+      ]
     },
     {
       "kanji": "まさに",
@@ -439,8 +579,13 @@
       "nghia": "chính xác là, quả đúng là",
       "vi_du": "彼女の提案は、まさに私が探していたものだ。(Đề xuất của cô ấy quả đúng là thứ tôi đang tìm kiếm.)",
       "vi_du_ruby": "彼女の<ruby>提案<rt>ていあん</rt></ruby>は、まさに私が<ruby>探<rt>さが</rt></ruby>していたものだ。(Đề xuất của cô ấy quả đúng là thứ tôi đang tìm kiếm.)",
-      "dong_nghia": ["たしかに", "ちょうど"],
-      "trai_nghia": ["まるで～ない"]
+      "dong_nghia": [
+        "たしかに",
+        "ちょうど"
+      ],
+      "trai_nghia": [
+        "まるで～ない"
+      ]
     },
     {
       "kanji": "いずれ",
@@ -450,8 +595,13 @@
       "nghia": "sớm hay muộn, trong thời gian tới",
       "vi_du": "いずれもどこかに問題点を抱えていた。(Sớm hay muộn thì kiểu gì cũng sẽ ôm một vấn đề nào đó thôi.)",
       "vi_du_ruby": "いずれもどこかに<ruby>問題点<rt>もんだいてん</rt></ruby>を<ruby>抱<rt>かか</rt></ruby>えていた。(Sớm hay muộn thì kiểu gì cũng sẽ ôm một vấn đề nào đó thôi.)",
-      "dong_nghia": ["いつか", "やがて"],
-      "trai_nghia": ["すぐに"]
+      "dong_nghia": [
+        "いつか",
+        "やがて"
+      ],
+      "trai_nghia": [
+        "すぐに"
+      ]
     },
     {
       "kanji": "やがて",
@@ -461,8 +611,13 @@
       "nghia": "dần dần, chẳng mấy chốc",
       "vi_du": "そうして表のデータを読む力を磨くことで、やがて能力も高まる。(Việc mài giũa khả năng đọc dữ liệu bảng biểu như vậy thì dần dần năng lực cũng sẽ tăng lên.)",
       "vi_du_ruby": "そうして表のデータを読む力を<ruby>磨<rt>みが</rt></ruby>くことで、やがて<ruby>能力<rt>のうりょく</rt></ruby>も高まる。(Việc mài giũa khả năng đọc dữ liệu bảng biểu như vậy thì dần dần năng lực cũng sẽ tăng lên.)",
-      "dong_nghia": ["次第に", "いずれ"],
-      "trai_nghia": ["突然"]
+      "dong_nghia": [
+        "次第に",
+        "いずれ"
+      ],
+      "trai_nghia": [
+        "突然"
+      ]
     },
     {
       "kanji": "ようやく",
@@ -472,8 +627,13 @@
       "nghia": "cuối cùng thì (sau bao khó khăn)",
       "vi_du": "5年の研究を経て、ようやく薬が完成した。(Trải qua 5 năm nghiên cứu, cuối cùng thì loại thuốc này cũng đã hoàn thành.)",
       "vi_du_ruby": "5年の<ruby>研究<rt>けんきゅう</rt></ruby>を<ruby>経<rt>へ</rt></ruby>て、ようやく薬が<ruby>完成<rt>かんせい</rt></ruby>した。(Trải qua 5 năm nghiên cứu, cuối cùng thì loại thuốc này cũng đã hoàn thành.)",
-      "dong_nghia": ["ついに", "やっと"],
-      "trai_nghia": ["最初から"]
+      "dong_nghia": [
+        "ついに",
+        "やっと"
+      ],
+      "trai_nghia": [
+        "最初から"
+      ]
     },
     {
       "kanji": "最終的に",
@@ -483,8 +643,13 @@
       "nghia": "cuối cùng, tựu trung lại",
       "vi_du": "本は、最終的には誰に向かって語っているかわからないスタイルで書かれる。(Về cơ bản thì sách được viết theo phong cách mà cuối cùng chẳng biết là đang nói với ai.)",
       "vi_du_ruby": "本は、<ruby>最終的<rt>さいしゅうてき</rt></ruby>には誰に向かって<ruby>語<rt>かた</rt></ruby>っているかわからないスタイルで書かれる。(Về cơ bản thì sách được viết theo phong cách mà cuối cùng chẳng biết là đang nói với ai.)",
-      "dong_nghia": ["結局は", "最後に"],
-      "trai_nghia": ["最初に"]
+      "dong_nghia": [
+        "結局は",
+        "最後に"
+      ],
+      "trai_nghia": [
+        "最初に"
+      ]
     },
     {
       "kanji": "もたらす",
@@ -494,8 +659,13 @@
       "nghia": "mang lại, gây ra (kết quả tốt lẫn xấu)",
       "vi_du": "そうした別の構図をもたらす新たな視点。(Một góc nhìn mới mẻ mang lại một cục diện khác như thế.)",
       "vi_du_ruby": "そうした別の<ruby>構図<rt>こうず</rt></ruby>をもたらす<ruby>新<rt>あら</rt></ruby>たな<ruby>視点<rt>してん</rt></ruby>。(Một góc nhìn mới mẻ mang lại một cục diện khác như thế.)",
-      "dong_nghia": ["引き起こす", "与える"],
-      "trai_nghia": ["奪う"]
+      "dong_nghia": [
+        "引き起こす",
+        "与える"
+      ],
+      "trai_nghia": [
+        "奪う"
+      ]
     },
     {
       "kanji": "思いがけない",
@@ -505,8 +675,13 @@
       "nghia": "không ngờ tới, ngoài dự tính (cả tốt lẫn xấu)",
       "vi_du": "これまでと同じ行動をしていたのでは、思いがけない失敗をする。(Nếu cứ hành động y như trước nay thì sẽ gặp phải thất bại không ngờ tới.)",
       "vi_du_ruby": "これまでと同じ行動をしていたのでは、<ruby>思いがけない<rt>おもいがけない</rt></ruby><ruby>失敗<rt>しっぱい</rt></ruby>をする。(Nếu cứ hành động y như trước nay thì sẽ gặp phải thất bại không ngờ tới.)",
-      "dong_nghia": ["予想外の", "不測の"],
-      "trai_nghia": ["予想通りの"]
+      "dong_nghia": [
+        "予想外の",
+        "不測の"
+      ],
+      "trai_nghia": [
+        "予想通りの"
+      ]
     },
     {
       "kanji": "見直す",
@@ -516,8 +691,13 @@
       "nghia": "xem xét lại để thay đổi",
       "vi_du": "基本的な生活習慣を見直したほうがいい。(Tốt nhất là nên xem xét (điều chỉnh) lại những thói quen sinh hoạt cơ bản.)",
       "vi_du_ruby": "<ruby>基本的<rt>きほんてき</rt></ruby>な<ruby>生活習慣<rt>せいかつしゅうかん</rt></ruby>を<ruby>見直<rt>みなお</rt></ruby>したほうがいい。(Tốt nhất là nên xem xét (điều chỉnh) lại những thói quen sinh hoạt cơ bản.)",
-      "dong_nghia": ["再考する", "改善する"],
-      "trai_nghia": ["放置する"]
+      "dong_nghia": [
+        "再考する",
+        "改善する"
+      ],
+      "trai_nghia": [
+        "放置する"
+      ]
     },
     {
       "kanji": "長けている",
@@ -527,8 +707,14 @@
       "nghia": "xuất sắc về mặt nào đó",
       "vi_du": "空気を読みとりながら、上手にふるまうことにも長けています。(Rất xuất sắc (giỏi giang) trong việc vừa đọc bầu không khí vừa cư xử một cách khéo léo.)",
       "vi_du_ruby": "空気を読みとりながら、上手にふるまうことにも<ruby>長<rt>た</rt></ruby>けています。(Rất xuất sắc (giỏi giang) trong việc vừa đọc bầu không khí vừa cư xử một cách khéo léo.)",
-      "dong_nghia": ["優れている", "上手だ"],
-      "trai_nghia": ["劣っている", "苦手だ"]
+      "dong_nghia": [
+        "優れている",
+        "上手だ"
+      ],
+      "trai_nghia": [
+        "劣っている",
+        "苦手だ"
+      ]
     },
     {
       "kanji": "顔色を窺う",
@@ -538,8 +724,13 @@
       "nghia": "thăm dò sắc mặt, đọc thái độ người khác",
       "vi_du": "飼い主のその日の顔色を窺う。(Thăm dò sắc mặt của chủ nhân ngày hôm đó.)",
       "vi_du_ruby": "<ruby>飼い主<rt>かいぬし</rt></ruby>のその日の<ruby>顔色<rt>かおいろ</rt></ruby>を<ruby>窺<rt>うかが</rt></ruby>う。(Thăm dò sắc mặt của chủ nhân ngày hôm đó.)",
-      "dong_nghia": ["機嫌をとる", "空気を読む"],
-      "trai_nghia": ["気にしない"]
+      "dong_nghia": [
+        "機嫌をとる",
+        "空気を読む"
+      ],
+      "trai_nghia": [
+        "気にしない"
+      ]
     },
     {
       "kanji": "構え",
@@ -549,7 +740,11 @@
       "nghia": "tâm thế, tư thế tinh thần",
       "vi_du": "聞く構えがないと、相手から成長がない人と見られてしまう。(Nếu không có tâm thế lắng nghe, sẽ bị đối phương đánh giá là người không có sự phát triển.)",
       "vi_du_ruby": "聞く<ruby>構<rt>かま</rt></ruby>えがないと、相手から<ruby>成長<rt>せいちょう</rt></ruby>がない人と見られてしまう。(Nếu không có tâm thế lắng nghe, sẽ bị đối phương đánh giá là người không có sự phát triển.)",
-      "dong_nghia": ["心構え", "姿勢", "態度"],
+      "dong_nghia": [
+        "心構え",
+        "姿勢",
+        "態度"
+      ],
       "trai_nghia": []
     },
     {
@@ -560,8 +755,14 @@
       "nghia": "ghim trong đầu, luôn ý thức về",
       "vi_du": "担当編集者を念頭に置きながら書いている。(Vừa viết vừa ghim trong đầu (nhắm tới) biên tập viên phụ trách.)",
       "vi_du_ruby": "<ruby>担当編集者<rt>たんとうへんしゅうしゃ</rt></ruby>を<ruby>念頭<rt>ねんとう</rt></ruby>に<ruby>置<rt>お</rt></ruby>きながら書いている。(Vừa viết vừa ghim trong đầu (nhắm tới) biên tập viên phụ trách.)",
-      "dong_nghia": ["意識する", "考慮する"],
-      "trai_nghia": ["度外視する", "忘れる"]
+      "dong_nghia": [
+        "意識する",
+        "考慮する"
+      ],
+      "trai_nghia": [
+        "度外視する",
+        "忘れる"
+      ]
     },
     {
       "kanji": "当然",
@@ -571,8 +772,14 @@
       "nghia": "đương nhiên, lẽ dĩ nhiên",
       "vi_du": "努力すれば上達するのは当然だ。(Nếu nỗ lực thì tiến bộ là điều đương nhiên.)",
       "vi_du_ruby": "<ruby>努力<rt>どりょく</rt></ruby>すれば<ruby>上達<rt>じょうたつ</rt></ruby>するのは<ruby>当然<rt>とうぜん</rt></ruby>だ。(Nếu nỗ lực thì tiến bộ là điều đương nhiên.)",
-      "dong_nghia": ["当たり前", "もちろんだ"],
-      "trai_nghia": ["意外", "思いがけない"]
+      "dong_nghia": [
+        "当たり前",
+        "もちろんだ"
+      ],
+      "trai_nghia": [
+        "意外",
+        "思いがけない"
+      ]
     },
     {
       "kanji": "以来",
@@ -582,7 +789,9 @@
       "nghia": "từ đó đến nay, kể từ khi",
       "vi_du": "卒業以来、彼とは会っていない。(Từ khi tốt nghiệp đến nay, tôi chưa gặp lại anh ấy.)",
       "vi_du_ruby": "<ruby>卒業以来<rt>そつぎょういらい</rt></ruby>、彼とは会っていない。(Từ khi tốt nghiệp đến nay, tôi chưa gặp lại anh ấy.)",
-      "dong_nghia": ["からずっと"],
+      "dong_nghia": [
+        "からずっと"
+      ],
       "trai_nghia": []
     },
     {
@@ -593,8 +802,14 @@
       "nghia": "ban đầu, lúc đầu",
       "vi_du": "当初の計画とは異なる。(Khác với kế hoạch ban đầu.)",
       "vi_du_ruby": "<ruby>当初<rt>とうしょ</rt></ruby>の<ruby>計画<rt>けいかく</rt></ruby>とは<ruby>異<rt>こと</rt></ruby>なる。(Khác với kế hoạch ban đầu.)",
-      "dong_nghia": ["最初", "初め"],
-      "trai_nghia": ["最後", "最終"]
+      "dong_nghia": [
+        "最初",
+        "初め"
+      ],
+      "trai_nghia": [
+        "最後",
+        "最終"
+      ]
     },
     {
       "kanji": "今後",
@@ -604,8 +819,14 @@
       "nghia": "từ nay, trong tương lai",
       "vi_du": "今後の計画を立てる。(Lập kế hoạch cho sau này.)",
       "vi_du_ruby": "<ruby>今後<rt>こんご</rt></ruby>の<ruby>計画<rt>けいかく</rt></ruby>を<ruby>立<rt>た</rt></ruby>てる。(Lập kế hoạch cho sau này.)",
-      "dong_nghia": ["これから", "将来"],
-      "trai_nghia": ["過去", "これまで"]
+      "dong_nghia": [
+        "これから",
+        "将来"
+      ],
+      "trai_nghia": [
+        "過去",
+        "これまで"
+      ]
     },
     {
       "kanji": "今や",
@@ -615,8 +836,14 @@
       "nghia": "hiện tại đã, bây giờ thì (nhấn mạnh sự thay đổi so với quá khứ)",
       "vi_du": "今やスマホは必需品だ。(Bây giờ thì smartphone đã trở thành một nhu yếu phẩm rồi.)",
       "vi_du_ruby": "今やスマホは<ruby>必需品<rt>ひつじゅひん</rt></ruby>だ。(Bây giờ thì smartphone đã trở thành một nhu yếu phẩm rồi.)",
-      "dong_nghia": ["現在では", "今では"],
-      "trai_nghia": ["昔は", "以前は"]
+      "dong_nghia": [
+        "現在では",
+        "今では"
+      ],
+      "trai_nghia": [
+        "昔は",
+        "以前は"
+      ]
     },
     {
       "kanji": "改めて",
@@ -626,7 +853,10 @@
       "nghia": "làm lại, xem xét lại (một cách trang trọng)",
       "vi_du": "その件については、改めて確認する。(Về sự việc đó, tôi sẽ xem xét/xác nhận lại một lần nữa.)",
       "vi_du_ruby": "その件については、<ruby>改<rt>あらた</rt></ruby>めて<ruby>確認<rt>かくにん</rt></ruby>する。(Về sự việc đó, tôi sẽ xem xét/xác nhận lại một lần nữa.)",
-      "dong_nghia": ["もう一度", "再び"],
+      "dong_nghia": [
+        "もう一度",
+        "再び"
+      ],
       "trai_nghia": []
     },
     {
@@ -637,7 +867,10 @@
       "nghia": "đầu tiên, trước mắt, tạm thời",
       "vi_du": "とりあえずビールを注文する。(Trước mắt cứ gọi bia đã.)",
       "vi_du_ruby": "とりあえずビールを<ruby>注文<rt>ちゅうもん</rt></ruby>する。(Trước mắt cứ gọi bia đã.)",
-      "dong_nghia": ["一応", "ひとまず"],
+      "dong_nghia": [
+        "一応",
+        "ひとまず"
+      ],
       "trai_nghia": []
     }
   ]

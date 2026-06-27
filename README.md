@@ -13,7 +13,7 @@ Tài liệu này giải thích **toàn bộ** cấu trúc dữ liệu, quy tắc
   - `dethi/` — đề thi trắc nghiệm chữ (đọc kanji, ngữ pháp, đọc hiểu...).
   - `dethi-choukai/` — đề luyện nghe (聴解), kèm audio đặt trong `file-nghe/`.
 - **Quy tắc bất biến quan trọng nhất:** thêm file `.json` mới mà KHÔNG thêm tên file đó vào `index.json` tương ứng → app không lỗi gì cả nhưng file đó **không bao giờ xuất hiện**. Đây luôn là điều đầu tiên cần kiểm tra khi "tôi đã thêm mà sao không thấy".
-- Mỗi lần sửa `js/app.js` hoặc `js/srs.js`, **phải tăng số version** trong 2 dòng `<script src="js/srs.js?v=N">` / `<script src="js/app.js?v=N">` ở cuối `index.html`, nếu không trình duyệt/GitHub Pages có thể cache lại bản cũ, sửa code xong tưởng không có tác dụng.
+- Mỗi lần sửa BẤT KỲ file `js/*.js` nào (10 module sau khi tách + `srs.js`), **phải tăng số version `?v=N` của ĐÚNG file đó** trong `index.html` (xem mục 1), nếu không trình duyệt/GitHub Pages có thể cache lại bản cũ, sửa code xong tưởng không có tác dụng. Không cần tăng version của các file không đổi.
 - Khi giao file cho người dùng: **chỉ xuất đúng (các) file vừa thay đổi**, không xuất nguyên zip cả project trừ khi được yêu cầu rõ — đỡ công upload lại toàn bộ.
 
 ---
@@ -28,26 +28,52 @@ itsductai-nihongo/
 │   └── style.css
 ├── js/
 │   ├── srs.js                 (thuật toán ôn tập kiểu Anki + tính năng "Đã thuộc")
-│   └── app.js                 (toàn bộ logic: render, mode, sự kiện — file RẤT LỚN)
+│   ├── core.js                 (App state, utils, render helpers, audio/speech)
+│   ├── stats-weakness.js       (Theo dõi điểm yếu + lịch sử đề thi/nghe + trang Thống kê)
+│   ├── config-focus.js         (Focus mode toàn màn hình + các config lưu localStorage)
+│   ├── loader-nav.js           (Load decks/exams, dropdown, sidebar nav, switchDeck/setMode)
+│   ├── flashcard-edit.js       (Panel cấu hình field/cột, modal sửa từ, mode Flashcard)
+│   ├── table-srs-typing.js     (Mode Bảng, mode SRS, mode Gõ)
+│   ├── quiz-match.js           (Mode Trắc nghiệm nhanh + mode Nối từ)
+│   ├── exam.js                 (Toàn bộ tính năng "Luyện đề thi chữ")
+│   ├── choukai.js               (Toàn bộ tính năng "Luyện nghe" — đề nghe + Luyện nghe câu)
+│   └── init.js                  (Gắn event listener + khởi động app — PHẢI load SAU CÙNG)
 ├── tailieu/                    (bộ từ vựng / ngữ pháp — xem mục 3, 4)
 │   ├── index.json
-│   └── *.json                  (15 file hiện có — xem mục 22 để biết đầy đủ)
+│   └── *.json                  (20 file hiện có — xem mục 22 để biết đầy đủ)
 ├── dethi/                       (đề thi trắc nghiệm chữ — xem mục 6)
 │   ├── index.json
 │   └── *.json                   (8 file hiện có)
 ├── dethi-choukai/                (đề luyện nghe — xem mục 19)
 │   ├── index.json
-│   └── choukai-NN.json           (hiện có choukai-01, choukai-02 trong repo của Claude;
-│                                   choukai-19 do Zane tự làm, CHƯA có bản lưu trong các
-│                                   lần trao đổi gần nhất — cần xác nhận lại file thật trên GitHub)
+│   └── choukai-NN.json           (hiện có choukai-01, 02, 18, 19)
 └── file-nghe/                     (audio .m4a/.mp3 cho phần luyện nghe — Zane tự upload,
                                      KHÔNG đi qua Claude. Tên file phải khớp 100% với field
                                      audioFile/audioFiles trong từng choukai-NN.json)
 ```
 
----
+### ⚠️ QUAN TRỌNG: `app.js` đã được TÁCH thành 10 module — KHÔNG còn 1 file lớn nữa
 
-## 2. Cách thêm 1 bộ/đề mới — quy trình bắt buộc
+Trước đây toàn bộ logic nằm trong 1 file `js/app.js` (4740 dòng, ~200KB) — mỗi lần cần sửa
+1 chỗ nhỏ, Claude phải đọc/ghi vào file rất lớn, tốn rất nhiều token/usage không cần thiết.
+File đã được **cắt nguyên văn** (không sửa 1 ký tự nào, đã xác nhận khớp 100% byte-cho-byte
+với bản gốc) thành 10 file nhỏ theo đúng tính năng — xem cây thư mục ở trên.
+
+**Quy tắc bắt buộc khi sửa code từ giờ:**
+1. **Xác định đúng module** cần sửa dựa theo tính năng (ví dụ: sửa gì liên quan đến đề nghe →
+   chỉ cần đọc/sửa `js/choukai.js`, KHÔNG cần đọc cả 10 file).
+2. Tất cả module vẫn dùng CHUNG 1 biến toàn cục `App` (định nghĩa trong `core.js`) và gọi hàm
+   qua lại bình thường — đây KHÔNG phải ES module (không có `import`/`export`), chỉ là nhiều
+   thẻ `<script>` tải tuần tự, nên **không cần lo về thứ tự load** giữa các module (trừ
+   `init.js` luôn phải đứng CUỐI vì nó chạy code thực thi ngay lúc tải, cần các hàm ở module
+   khác đã được định nghĩa xong).
+3. **Tăng version `?v=N`** của ĐÚNG module vừa sửa trong `index.html` (không cần tăng version
+   của các module không đổi) — xem dòng `<script src="js/xxx.js?v=N">`.
+4. Nếu cần thêm 1 hàm MỚI mà không chắc nó thuộc module nào, đặt nó vào module có chứa các
+   hàm liên quan gần nhất về mặt tính năng — không tạo file mới trừ khi tính năng đó đủ lớn
+   để tách riêng (như cách `choukai.js` đã tách khỏi exam.js trước đây).
+
+
 
 JavaScript chạy trong trình duyệt **không có cách nào tự liệt kê file trong 1 thư mục** qua HTTP thuần — đây là giới hạn của web, không phải hạn chế riêng của app này. Vì vậy app luôn quét dữ liệu bằng cách đọc file `index.json` của đúng thư mục.
 
@@ -55,7 +81,7 @@ JavaScript chạy trong trình duyệt **không có cách nào tự liệt kê f
 1. Tạo file `.json` mới, đặt tên không dấu, không khoảng trắng (ví dụ `n3-co-ban.json`).
 2. Viết nội dung theo đúng cấu trúc ở mục 3/4 (tailieu), mục 6 (dethi), hoặc mục 19 (dethi-choukai).
 3. Mở `index.json` của đúng thư mục đó, thêm tên file vào mảng `files`.
-4. Tải lại trang (hard refresh nếu vừa đổi `app.js`/`srs.js`) — bộ mới tự xuất hiện trong dropdown sidebar.
+4. Tải lại trang (hard refresh nếu vừa đổi file `.js` nào) — bộ mới tự xuất hiện trong dropdown sidebar.
 
 **Thứ tự hiển thị trong dropdown KHÔNG phụ thuộc thứ tự trong `index.json`** — app tự sắp theo `title` bên trong từng file, dùng `localeCompare(title, "vi", { numeric: true })` (sắp theo chữ cái tiếng Việt CÓ DẤU đúng thứ tự, và hiểu số tự nhiên — "Unit 3" < "Unit 4" < "Unit 10" < "Unit 11", không bị xếp theo kiểu chuỗi ký tự thường "10" < "3"). Vì vậy **thứ tự ghi trong `index.json` không quan trọng cho việc hiển thị** — chỉ cần file có trong danh sách là đủ, có thể ghi theo bất kỳ thứ tự nào (khuyến nghị vẫn ghi theo A-Z cho dễ đọc bằng mắt khi mở file ra xem).
 
@@ -253,7 +279,7 @@ Trạng thái: `new` (chưa học) / `learning` (<1 ngày) / `known` (≥1 ngày
 
 Filter riêng trong Bảng: `"⭐ Đã thuộc (đánh dấu tay)"` (value=`mastered`) tách biệt với `"Đã thuộc (tự nhiên)"` (value=`known`).
 
-**3 lỗi đã từng có và đã sửa khi thêm tính năng này** (ghi lại để tránh tái phát nếu sửa `SRS.status()` lần sau): mọi nơi trong `app.js` so sánh `status === "known"` đều phải nhớ thêm nhánh `=== "mastered"` (đếm % tổng quan ở `computeDeckStats`, số đếm "đã thuộc lâu" đầu trang SRS, label badge trong Bảng) — nếu quên, các mục `mastered` sẽ bị tính lẫn vào "chưa học" hoặc hiện chữ "undefined".
+**3 lỗi đã từng có và đã sửa khi thêm tính năng này** (ghi lại để tránh tái phát nếu sửa `SRS.status()` lần sau): mọi nơi trong code (chủ yếu `stats-weakness.js`, `table-srs-typing.js`) so sánh `status === "known"` đều phải nhớ thêm nhánh `=== "mastered"` (đếm % tổng quan ở `computeDeckStats`, số đếm "đã thuộc lâu" đầu trang SRS, label badge trong Bảng) — nếu quên, các mục `mastered` sẽ bị tính lẫn vào "chưa học" hoặc hiện chữ "undefined".
 
 ---
 
@@ -267,21 +293,36 @@ Lưu vào `localStorage` (`n2vocab_editpatches`), áp đè lên dữ liệu gố
 
 ## 10. Trang Thống kê (Stats)
 
-3 phần: (1) bảng tổng quan mọi bộ từ vựng/ngữ pháp — **MỚI: tách riêng 2 nhóm "📘 Mimi N2 (giáo trình chính)" và "📚 Tài liệu khác"** (đồng bộ với cách nhóm ở dropdown sidebar, dựa trên field `series`), mỗi nhóm có **biểu đồ tròn (donut) tổng quan** (SVG thuần, không phụ thuộc thư viện ngoài — hàm `buildDonutSvg()` trong `app.js`) hiện % đã thuộc CHUNG của cả nhóm + số liệu nổi bật (🏆 bộ mạnh nhất / ⚠ bộ cần ưu tiên trong nhóm), kèm bảng chi tiết từng bộ với thanh % 3 màu (đã thuộc/đang học/chưa học), sắp theo % thấp nhất lên trước; (2) bảng đề thi chữ (đã làm/chưa làm, điểm gần nhất, thời gian); (3) bảng đề luyện nghe (cùng pattern với đề thi chữ). Bấm tên bộ/đề → nhảy thẳng vào học/làm ngay.
+3 phần: (1) bảng tổng quan mọi bộ từ vựng/ngữ pháp — tách riêng 2 nhóm "📘 Mimi N2 (giáo trình chính)" và "📚 Tài liệu khác" (dựa trên field `series`), mỗi nhóm có **biểu đồ tròn (donut) tổng quan** (SVG thuần, hàm `buildDonutSvg()` trong `stats-weakness.js`) hiện % đã thuộc CHUNG của cả nhóm + 🏆 bộ mạnh nhất / ⚠ bộ cần ưu tiên, kèm bảng chi tiết từng bộ với thanh % 3 màu; (2) bảng đề thi chữ; (3) bảng đề luyện nghe. Bấm tên bộ/đề → nhảy thẳng vào học/làm ngay.
+
+**MỚI: Lưu & xem lại NHIỀU LẦN làm 1 đề** — mỗi đề thi chữ/đề nghe giờ hiện thêm **"🏆 Tốt nhất: x/y"** (điểm cao nhất trong mọi lần đã làm, không chỉ lần gần nhất) và nút **"📊 Xem lưới N lần làm"**. Bấm vào mở modal **lưới kết quả**: hàng ngang = số câu (1, 2, 3...), cột dọc = "Lần 1, Lần 2, Lần 3..." theo đúng thứ tự thời gian đã làm. Câu **SAI** ở lần đó → vòng tròn **ĐỎ**, bên trong hiện **số đáp án ĐÚNG** (1-4, tra trực tiếp từ file đề JSON, không lưu trùng lặp). Câu **ĐÚNG** → vòng tròn **XANH**, không hiện gì bên trong. Nhìn 1 lần là biết ngay câu nào sai từ lần đầu và đã khắc phục được chưa qua các lần sau.
+
+- **Chỉ lưu khi HOÀN THÀNH hẳn 1 đề** (gọi trong `finishExam()`/`finishChoukai()`) — bỏ ngang giữa đường (đổi đề, chuyển mode, tắt trang) **KHÔNG lưu gì cả**, đúng yêu cầu. "Dừng sớm và xem kết quả" (nút thoát giữa bài có xác nhận) VẪN được coi là hoàn thành (người dùng chủ động chọn kết thúc), câu chưa làm tới sẽ hiện dấu "—" (không tính đúng/sai) trong lưới.
+- Lưu trữ: `n2vocab_exam_attempts` / `n2vocab_choukai_attempts` — mỗi đề là 1 mảng các lần làm `{completedAt, score, total, results}` (results chỉ lưu đúng/sai từng câu, KHÔNG lưu đáp án đúng vì luôn tra sống từ file đề — tránh dữ liệu trùng lặp, file đề sửa nội dung sau cũng không làm sai lệch lịch sử). Giới hạn tối đa 50 lần/đề (`MAX_ATTEMPTS_KEPT`), lần cũ nhất bị loại nếu vượt.
+- **Tự động nâng cấp (migrate) dữ liệu CŨ**: nếu 1 đề chưa có gì trong hệ mới nhưng có snapshot CŨ (`n2vocab_exam_detail_history`/`n2vocab_choukai_detail_history`, lưu duy nhất bản gần nhất từ trước khi có tính năng này), tự động biến nó thành "Lần 1" — không mất lịch sử Zane đã làm trước đó. **Thứ tự gọi quan trọng**: `recordExamAttempt()`/`recordChoukaiAttempt()` PHẢI chạy TRƯỚC `saveExamDetailSnapshot()`/`saveChoukaiDetailSnapshot()` trong hàm finish — nếu đảo ngược, đoạn migrate sẽ đọc nhầm snapshot VỪA ghi của lần hiện tại thành "dữ liệu cũ", tạo ra 1 lần làm trùng lặp giả (bug đã gặp và sửa, xem mục bug log).
+- Đã thêm vào **Export/Import** (mục 12) — gộp theo `completedAt`, không trùng lặp giữa nhiều máy.
 
 ---
 
 ## 11. Trang Điểm yếu — 3 tab
 
-`"Từ vựng/Ngữ pháp (bộ đang chọn)"` / `"Đề thi (mọi đề)"` / `"Nghe (mọi đề)"`. Mỗi lần trả lời đúng/sai ở **6 chế độ học** (Flashcard, SRS, Gõ hiragana, Trắc nghiệm, Ghép thẻ, Đề thi) + **luyện nghe** đều ghi vào `n2vocab_weakness_stats` (deckId thật, hoặc `"__exam__"`/`"__choukai__"` cho 2 tab riêng). Coi là điểm yếu khi đã sai ≥1 lần, và nếu đã làm ≥3 lần thì tỷ lệ sai phải ≥40%.
+`"Từ vựng/Ngữ pháp (bộ đang chọn)"` / `"Đề thi (mọi đề)"` / `"Nghe (mọi đề)"`. Mỗi lần trả lời đúng/sai ở **6 chế độ học** + **luyện nghe** đều ghi vào `n2vocab_weakness_stats`.
+
+**MỚI: Hệ thống "hệ số quan trọng" (priority) thay cho tỉ lệ sai cũ** — thông minh hơn, ưu tiên đúng theo yêu cầu "sai lần đầu rất quan trọng":
+- **Sai ở LẦN ĐẦU TIÊN** gặp câu/từ đó → `priority` khởi đầu **CAO NGAY (100)**. Đúng ngay từ đầu → khởi đầu **0** (chưa coi là điểm yếu).
+- Mỗi lần làm **ĐÚNG** tiếp theo (bất kể đầu sai hay không) → `priority` **giảm 25** (tối thiểu 0) — đúng liên tục 4 lần thì hết hẳn là điểm yếu.
+- Mỗi lần làm **SAI** (kể cả không phải lần đầu) → `priority` **tăng 35** (tối đa 100) — sai lại thì coi là điểm yếu nghiêm trọng ngay.
+- Chỉ hiện trong danh sách điểm yếu khi `priority > 0`, sắp giảm dần theo `priority` — câu/từ dai dẳng sai luôn nổi lên đầu.
+- UI: mỗi dòng có **thanh + số priority màu đỏ/vàng/xanh** (hàm `renderPriorityBadge()`) + tag **"⚠ sai từ lần đầu"** nếu đúng vậy.
+- Dữ liệu CŨ (lưu trước khi có hệ này, thiếu field `priority`) tự "nâng cấp" ở lần ghi kết quả tiếp theo (`getEntryPriority()` ước lượng tạm theo tỉ lệ sai hiện có).
 
 ---
 
 ## 12. Xuất / Nhập tiến độ
 
-File xuất gồm: `srsProgress, fieldConfig, visibleCols, peekCols, editPatches, starredItems, weaknessStats, examHistory, examDetailHistory, choukaiHistory, choukaiDetailHistory, shuffleEnabled, soundEnabled, speechEnabled`.
+File xuất gồm: `srsProgress, fieldConfig, visibleCols, peekCols, editPatches, starredItems, weaknessStats, examHistory, examDetailHistory, examAttempts, choukaiHistory, choukaiDetailHistory, choukaiAttempts, shuffleEnabled, soundEnabled, speechEnabled`.
 
-Khi nhập: `weaknessStats` cộng dồn (không đè). `examDetailHistory`/`choukaiDetailHistory` lấy theo `savedAt` mới hơn. `examHistory`/`choukaiHistory` cộng `totalCompletions`, lấy `lastScore` theo `lastCompletedAt` mới hơn. Phần còn lại gộp không trùng lặp.
+Khi nhập: `weaknessStats` cộng dồn (không đè). `examDetailHistory`/`choukaiDetailHistory` lấy theo `savedAt` mới hơn. `examHistory`/`choukaiHistory` cộng `totalCompletions`, lấy `lastScore` theo `lastCompletedAt` mới hơn. **`examAttempts`/`choukaiAttempts` (MỚI): GỘP mảng 2 máy lại, loại trùng theo `completedAt`, sắp lại theo thời gian** — đảm bảo lưới kết quả đúng đủ dù học trên nhiều máy khác nhau, không trùng lặp khi export/import lại nhiều lần. Phần còn lại gộp không trùng lặp.
 
 ---
 
@@ -296,7 +337,7 @@ Khi nhập: `weaknessStats` cộng dồn (không đè). `examDetailHistory`/`cho
 - **Flashcard (Quizlet-style) ≠ SRS (Anki-style)**: Flashcard là hàng đợi trong 1 phiên ngắn (Chưa nhớ→quay lại sau 3 thẻ, Khó→sau 7 thẻ, Đã nhớ→ra hẳn); SRS là lịch ôn trải dài theo thời gian thật. Phím tắt Flashcard: ←Chưa nhớ ↑Khó ↓Lật →Đã nhớ.
 - **Đánh dấu ★**: không ảnh hưởng SRS, có toggle học riêng từ đã sao ở Flashcard/SRS, filter riêng ở Bảng.
 
-*(Chi tiết đầy đủ từng mục — nếu cần xem sâu hơn, đọc trực tiếp code tương ứng trong `app.js`, phần cốt lõi các mục này không đổi qua nhiều phiên làm việc.)*
+*(Chi tiết đầy đủ từng mục — nếu cần xem sâu hơn, đọc trực tiếp code tương ứng trong module phù hợp — xem cây thư mục mục 1 để biết tính năng nào nằm ở file nào — phần cốt lõi các mục này không đổi qua nhiều phiên làm việc.)*
 
 ---
 
@@ -393,6 +434,7 @@ Hai field này **HOÀN TOÀN TÙY CHỌN** — file cũ không có vẫn chạy 
 6. **`audioEl.play()` ném lỗi không bắt được** — `.play()` trả về 1 Promise, lỗi (vd "no supported sources" khi chưa có file audio thật) bị REJECT bất đồng bộ, KHÔNG bị `try/catch` thông thường bắt được. Phải dùng `const p = audioEl.play(); if (p && p.catch) p.catch(() => {});` ở MỌI nơi gọi `.play()` sau khi set `currentTime`.
 7. **Focus mode (phóng to toàn màn hình) làm MẤT phần ĐẦU của nội dung dài (script)** — do CSS `#app.focus-mode .main { display:flex; align-items:center; ... overflow-y:auto }`: đây là lỗi kinh điển của flexbox, khi nội dung CAO HƠN khung nhìn, `align-items:center` khiến phần đầu bị đẩy lên trên vùng cuộn được và KHÔNG THỂ cuộn lên xem lại. **Đã sửa bằng cách đổi `align-items: center` → `align-items: flex-start`** — giữ canh giữa ngang qua `justify-content`, bỏ canh giữa dọc để nội dung neo từ trên, cuộn xuống bình thường.
 8. **`findScrollParent()` (dùng cho tính năng tự cuộn karaoke) tìm SAI khung cuộn** — lúc đầu code bắt đầu tìm từ `el.parentElement` (cha của phần tử được truyền vào), khiến với panel xem đáp án (chính `#choukaiReviewContent` LÀ khung cuộn riêng, không phải cha của nó) bị bỏ qua, tự cuộn nhầm sang `.main` ở ngoài. **Đã sửa: kiểm tra CHÍNH phần tử được truyền vào trước, rồi mới đi lên các cha.**
+9. **Lưu trùng lặp "Lần 1" khi migrate dữ liệu cũ sang hệ thống nhiều lần làm (attempts)** — ban đầu gọi `saveChoukaiDetailSnapshot()` (ghi snapshot CŨ, dùng để migrate) TRƯỚC `recordChoukaiAttempt()` trong `finishChoukai()`. Vì `recordChoukaiAttempt()`/`getChoukaiAttempts()` có cơ chế "nếu chưa có gì trong hệ mới, biến snapshot cũ thành Lần 1", khi gọi SAU, nó đọc nhầm snapshot VỪA ghi của chính lần làm hiện tại thành "dữ liệu cũ", tạo ra 1 lần làm ảo trùng lặp (lần làm đầu tiên luôn bị nhân đôi thành 2 dòng trong lưới kết quả). **Đã sửa: đảo thứ tự, gọi `recordExamAttempt()`/`recordChoukaiAttempt()` LUÔN PHẢI ĐỨNG TRƯỚC** `saveExamDetailSnapshot()`/`saveChoukaiDetailSnapshot()` trong cả `finishExam()` và `finishChoukai()`. Phát hiện được nhờ test Playwright làm 2 lần liên tiếp rồi đếm số dòng trong lưới.
 
 ---
 
@@ -415,32 +457,39 @@ Hai field này **HOÀN TOÀN TÙY CHỌN** — file cũ không có vẫn chạy 
 
 ## 21. Quy ước nhóm dữ liệu "Mimi" (giáo trình chính) — **ĐÃ LÀM**
 
-Các file giáo trình Mimi (`mimi-n2-unit3-adj`, `unit4`, `unit6-photu`, `unit8`, `unit10-adj`, `unit11`, `tunoi-photu`) giờ có thêm field `"series": "mimi"` ngay sau `"type"` trong JSON. `populateDeckPicker()` trong `app.js` đọc field này và render dropdown sidebar bằng 2 `<optgroup>` riêng: **"📘 Mimi N2 (giáo trình chính)"** (luôn ở ĐẦU dropdown) và **"Tài liệu khác"** (các bộ còn lại). Thứ tự A-Z trong từng nhóm vẫn giữ nguyên như cũ (không đổi cách sort). Bộ MỚI thêm sau này: muốn vào nhóm Mimi thì chỉ cần thêm `"series": "mimi"` vào file JSON, không cần sửa code thêm.
+Các file giáo trình Mimi (`mimi-n2-unit1`, `unit2`, `unit3-adj`, `unit4`, `unit6-photu`, `unit7`, `unit8`, `unit9`, `unit10-adj`, `unit11`, `unit12`, `tunoi-photu`) giờ có thêm field `"series": "mimi"` ngay sau `"type"` trong JSON. `populateDeckPicker()` trong `loader-nav.js` đọc field này và render dropdown sidebar bằng 2 `<optgroup>` riêng: **"📘 Mimi N2 (giáo trình chính)"** (luôn ở ĐẦU dropdown) và **"Tài liệu khác"** (các bộ còn lại). Thứ tự A-Z trong từng nhóm vẫn giữ nguyên như cũ (không đổi cách sort). Bộ MỚI thêm sau này: muốn vào nhóm Mimi thì chỉ cần thêm `"series": "mimi"` vào file JSON, không cần sửa code thêm.
 
-Đã kiểm tra bằng Playwright: dropdown hiện đúng 2 optgroup, nhóm Mimi có đúng 7 bộ, nhóm khác có đúng 8 bộ, không có lỗi console.
+Đã kiểm tra bằng Playwright: dropdown hiện đúng 2 optgroup (lúc đó nhóm Mimi mới có 7 bộ, nhóm khác 8 bộ — sau khi thêm Unit 1/2/7/9/12 thì nhóm Mimi có 12 bộ, nhóm khác vẫn 8 bộ), không có lỗi console.
 
 ---
 
 ## 22. Trạng thái dữ liệu hiện tại (kiểm kê đầy đủ — lúc viết tài liệu này)
 
-### `tailieu/` (15 file)
+### `tailieu/` (20 file)
 | File | Type | Số từ |
 |---|---|---|
 | danh-tu-jlpt-n2.json | TUVUNG | 73 |
 | danh-tu-thiet-yeu.json | TUVUNG | 73 |
+| mimi-n2-unit1.json | TUVUNG | 100 |
+| mimi-n2-unit2.json | TUVUNG | 120 |
 | mimi-n2-tunoi-photu.json | TUVUNG | 58 |
 | mimi-n2-unit3-adj.json | TUVUNG | 50 |
 | mimi-n2-unit4.json | TUVUNG | 100 |
 | mimi-n2-unit6-photu.json | TUVUNG | 59 |
+| mimi-n2-unit7.json | TUVUNG | 99 |
 | mimi-unit8.json | TUVUNG | 110 |
+| mimi-n2-unit9.json | TUVUNG | 50 |
 | mimi-n2-unit10-adj.json | TUVUNG | 50 |
 | mimi-n2-unit11.json | TUVUNG | 100 |
+| mimi-n2-unit12.json | TUVUNG | 100 |
 | nut-that-n2.json | TUVUNG | 120 |
 | nguphap-hoc-tu.json | NGUPHAP | 66 |
 | nguphap-mau.json | NGUPHAP | 3 |
 | nguphap-pham-vi-a-m789.json | NGUPHAP | 71 |
 | nguphap-pham-vi-b-m11-dokkai.json | NGUPHAP | 29 |
 | nguphap-top40-mimitry.json | NGUPHAP | 40 |
+
+**Mimi Unit 1, 2, 7, 9, 12 — MỚI LÀM XONG** (469 từ): Unit 1 (danh từ tổng hợp, 100 từ), Unit 2 (động từ, 120 từ, gộp từ 2 phần nguồn), Unit 7 (danh từ, 99 từ), Unit 9 (từ ngoại lai/katakana, 50 từ — không có `han_viet` vì là từ vay mượn), Unit 12 (động từ, 100 từ). Tất cả đã có `"series": "mimi"`, `doc_marked` đúng quy tắc, `vi_du_ruby` ruby cả từ đang học + từ khó N2 khác trong câu, đồng/trái nghĩa bổ sung có chọn lọc ở từ quan trọng (không ép buộc đủ 100%).
 
 **⚠️ Trùng tên hiển thị chưa xử lý:** `danh-tu-jlpt-n2.json` và `danh-tu-thiet-yeu.json` có title GIỐNG NHAU ("Danh từ thiết yếu JLPT N2") nhưng nội dung khác — Zane chưa quyết định giữ/xóa/đổi tên cái nào, đang để cả 2.
 
@@ -477,4 +526,4 @@ Các file giáo trình Mimi (`mimi-n2-unit3-adj`, `unit4`, `unit6-photu`, `unit8
 - Toàn bộ hệ thống luyện nghe MỚI (mục 19) — đã xây xong toàn bộ UI/JS/cơ chế, đã test kỹ qua Playwright, đã sửa hết các bug phát sinh — chỉ còn THIẾU DỮ LIỆU (16 đề chưa transcribe), không phải thiếu code/tính năng.
 - Sắp xếp A-Z tự nhiên (hiểu số, "Unit 3 < Unit 10") cho mọi dropdown bộ học + đề thi.
 - Trang Thống kê, trang Điểm yếu (3 tab: bộ học / đề thi / nghe).
-- Cache-busting `?v=N` cho `app.js`/`srs.js` để tránh bị cache nhầm bản cũ trên GitHub Pages.
+- Cache-busting `?v=N` riêng cho TỪNG file `.js` (10 module + `srs.js`) để tránh bị cache nhầm bản cũ trên GitHub Pages.

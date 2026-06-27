@@ -1,0 +1,1204 @@
+{
+  "type": "TUVUNG",
+  "series": "mimi",
+  "title": "Mimi UNIT 7 - Danh từ",
+  "words": [
+    {
+      "kanji": "食料・食糧",
+      "doc": "しょくりょう",
+      "doc_marked": "しょくりょう",
+      "han_viet": "THỰC LIỆU/THỰC LƯƠNG",
+      "nghia": "đồ ăn, thực phẩm",
+      "vi_du": "日本は食料の自給率が低いと言われる。 (Nước Nhật là nước có tỉ lệ tự cung thức ăn thấp.) 地震に備えて災害用の食料を用意しておく。 (Trang bị cho động đất chuẩn bị sẵn thức ăn dùng khi hỏa hoạn.) 戦後はしばらく食糧難の時代が続いた。 (Kéo dài thời kì thiếu lương thực một thời gian sau chiến tranh.)",
+      "vi_du_ruby": "<ruby>日本<rt>にほん</rt></ruby>は<ruby>食料<rt>しょくりょう</rt></ruby>の<ruby>自給率<rt>じきゅうりつ</rt></ruby>が<ruby>低<rt>ひく</rt></ruby>いと<ruby>言<rt>い</rt></ruby>われる。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "粒",
+      "doc": "つぶ",
+      "doc_marked": "つぶ",
+      "han_viet": "LẠP",
+      "nghia": "hạt, viên",
+      "vi_du": "ぶどうを一粒食べる。 (Ăn từng hạt nho.) イヤリングには真珠が一粒ついていた。 (Bông tai có đính một hạt ngọc trai.) 今年の新入社員は粒ぞろいだ。 (Những nhân viên mới năm nay là những hạt ngọc đã sàng lọc.)",
+      "vi_du_ruby": "ぶどうを<ruby>一粒<rt>ひとつぶ</rt></ruby><ruby>食<rt>た</rt></ruby>べる。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "屑",
+      "doc": "くず",
+      "doc_marked": "くず",
+      "han_viet": "TIẾT",
+      "nghia": "vụn, rác, phần thừa",
+      "vi_du": "野菜のくずを捨てる。 (Vứt vụn rác của rau.) 「お前は人間のくずだ」 (Mày là đồ rác rưởi của loài người.)",
+      "vi_du_ruby": "<ruby>野菜<rt>やさい</rt></ruby>のくずを<ruby>捨<rt>す</rt></ruby>てる。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "栽培",
+      "doc": "さいばい",
+      "doc_marked": "さいば**い**",
+      "han_viet": "TÀI BỒI",
+      "nghia": "nuôi trồng",
+      "vi_du": "この畑では小麦を栽培している。 (Cánh đồng này đang trồng lúa mì.)",
+      "vi_du_ruby": "この<ruby>畑<rt>はたけ</rt></ruby>では<ruby>小麦<rt>こむぎ</rt></ruby>を<ruby>栽培<rt>さいばい</rt></ruby>している。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "収穫",
+      "doc": "しゅうかく",
+      "doc_marked": "しゅうかく",
+      "han_viet": "THU HOẠCH",
+      "nghia": "thu hoạch",
+      "vi_du": "今年は米が昨年の1.5倍の収穫を上げた。 (Năm nay thu hoạch lúa gấp 1,5 lần so với năm ngoái.) 農作物を収穫する。 (Thu hoạch nông sản.) パーティーはつまらなかったが、いろいろな人と知り合えたのは収穫だった。 (Bữa tiệc thì chán ngấy nhưng được cái có nhiều bạn bè, người quen.)",
+      "vi_du_ruby": "<ruby>今年<rt>こんねん</rt></ruby>は<ruby>米<rt>こめ</rt></ruby>が<ruby>昨年<rt>さくねん</rt></ruby>の1.5<ruby>倍<rt>ばい</rt></ruby>の<ruby>収穫<rt>しゅうかく</rt></ruby>を<ruby>上<rt>あ</rt></ruby>げた。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "産地",
+      "doc": "さんち",
+      "doc_marked": "さんち",
+      "han_viet": "SẢN ĐỊA",
+      "nghia": "nơi sản xuất",
+      "vi_du": "青森県は、リンゴの産地として有名だ。 (Huyện Aomori nổi tiếng với đặc sản là táo.)",
+      "vi_du_ruby": "<ruby>青森県<rt>あおもりけん</rt></ruby>は、リンゴの<ruby>産地<rt>さんち</rt></ruby>として<ruby>有名<rt>ゆうめい</rt></ruby>だ。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "土地",
+      "doc": "とち",
+      "doc_marked": "とち",
+      "han_viet": "THỔ ĐỊA",
+      "nghia": "đất đai",
+      "vi_du": "土地を買って家を建てる。 (Mua đất xây nhà.) 旅行に行くと、その土地の名産を買ってくる。 (Khi đi du lịch, sẽ mua đặc sản của vùng đó về.) 「ここは初めての土地です」 (Đây là lần đầu tiên đến vùng đất này.)",
+      "vi_du_ruby": "<ruby>土地<rt>とち</rt></ruby>を<ruby>買<rt>か</rt></ruby>って<ruby>家<rt>いえ</rt></ruby>を<ruby>建<rt>た</rt></ruby>てる。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "倉庫",
+      "doc": "そうこ",
+      "doc_marked": "そ**う**こ",
+      "han_viet": "THƯƠNG KHỐ",
+      "nghia": "kho",
+      "vi_du": "港には多くの倉庫が並んでいる。 (Có rất nhiều kho ở cảng biển.)",
+      "vi_du_ruby": "<ruby>港<rt>みなと</rt></ruby>には<ruby>多<rt>おお</rt></ruby>くの<ruby>倉庫<rt>そうこ</rt></ruby>が<ruby>並<rt>なら</rt></ruby>んでいる。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "所有",
+      "doc": "しょゆう",
+      "doc_marked": "しょゆう",
+      "han_viet": "SỞ HỮU",
+      "nghia": "sở hữu",
+      "vi_du": "山本家は広い畑を所有している。 (Nhà Yamamoto sở hữu một cánh đồng rộng lớn.)",
+      "vi_du_ruby": "<ruby>山本家<rt>やまもとけ</rt></ruby>は<ruby>広<rt>ひろ</rt></ruby>い<ruby>畑<rt>はたけ</rt></ruby>を<ruby>所有<rt>しょゆう</rt></ruby>している。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "収集",
+      "doc": "しゅうしゅう",
+      "doc_marked": "しゅうしゅう",
+      "han_viet": "THU TẬP",
+      "nghia": "thu thập, sưu tập",
+      "vi_du": "ゴミは可燃・不燃に分別して収集する地域が多い。 (Có rất nhiều vùng phân chia rác cháy được và không cháy được rồi tập hợp lại.) 趣味は切手を収集することです。 (Sở thích là sưu tập tem.)",
+      "vi_du_ruby": "ゴミは<ruby>可燃<rt>かねん</rt></ruby>・<ruby>不燃<rt>ふねん</rt></ruby>に<ruby>分別<rt>ぶんべつ</rt></ruby>して<ruby>収集<rt>しゅうしゅう</rt></ruby>する<ruby>地域<rt>ちいき</rt></ruby>が<ruby>多<rt>おお</rt></ruby>い。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "滞在",
+      "doc": "たいざい",
+      "doc_marked": "た**い**ざ**い**",
+      "han_viet": "TRỆ TẠI",
+      "nghia": "ở, sự tạm trú",
+      "vi_du": "今回の海外出張は、約1か月の滞在になる予定だ。 (Chuyến đi công tác nước ngoài lần này, dự tính sẽ ở lại một tháng.) 多くの芸術家がパリに滞在する。 (Nhiều nhà họa sĩ đang trú tại Paris.)",
+      "vi_du_ruby": "<ruby>今回<rt>こんかい</rt></ruby>の<ruby>海外出張<rt>かいがいしゅっちょう</rt></ruby>は、<ruby>約<rt>やく</rt></ruby>1<ruby>か月<rt>かげつ</rt></ruby>の<ruby>滞在<rt>たいざい</rt></ruby>になる<ruby>予定<rt>よてい</rt></ruby>だ。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "便",
+      "doc": "びん",
+      "doc_marked": "びん",
+      "han_viet": "TIỆN",
+      "nghia": "sự thuận tiện; chuyến (tàu/bay)",
+      "vi_du": "ここは交通の便がいい。 (Ở đây phương tiện giao thông thuận lợi.) 「朝一番の便で書類を送ったから、明日の午前中に着くと思います」 (Nếu gửi tài liệu vào chuyến bưu điện sớm nhất buổi sáng thì sẽ tới trong sáng ngày mai đấy.) 「上海行き25便搭乗受付を開始いたします」 (Chuyến bay 25 đến Thượng Hải bắt đầu lên máy bay tại quầy tiếp tân.)",
+      "vi_du_ruby": "ここは<ruby>交通<rt>こうつう</rt></ruby>の<ruby>便<rt>びん</rt></ruby>がいい。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "設備",
+      "doc": "せつび",
+      "doc_marked": "せつび",
+      "han_viet": "THIẾT BỊ",
+      "nghia": "thiết bị",
+      "vi_du": "うちの大学はスポーツ設備が充実している。 (Trường đại học của tôi trang bị đầy đủ các thiết bị thể thao.) 近代的な設備の工場。 (Công ty có thiết bị tiên tiến, hiện đại.)",
+      "vi_du_ruby": "うちの<ruby>大学<rt>だいがく</rt></ruby>はスポーツ<ruby>設備<rt>せつび</rt></ruby>が<ruby>充実<rt>じゅうじつ</rt></ruby>している。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "設計",
+      "doc": "せっけい",
+      "doc_marked": "せっけい",
+      "han_viet": "THIẾT KẾ",
+      "nghia": "sự thiết kế",
+      "vi_du": "このロボットは、設計から制作まですべて大学生たちが行った。 (Con robot này từ thiết kế đến chế tạo toàn bộ đều do học sinh đại học tổ chức.) うちの家は、知り合いの建築士に設計してもらった。 (Nhà tôi do người quen là nhà thiết kế xây dựng cho.)",
+      "vi_du_ruby": "このロボットは、<ruby>設計<rt>せっけい</rt></ruby>から<ruby>制作<rt>せいさく</rt></ruby>まですべて<ruby>大学生<rt>だいがくせい</rt></ruby>たちが<ruby>行<rt>おこな</rt></ruby>った。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "制作・製作",
+      "doc": "せいさく",
+      "doc_marked": "せいさく",
+      "han_viet": "CHẾ TÁC",
+      "nghia": "chế tác",
+      "vi_du": "｛絵/彫刻/番組/映画...｝を制作する。 (Chế tác tranh/điêu khắc/chương trình/phim ảnh...) ｛機械/ロボット/家具...｝を製作する。 (Chế tạo máy móc/robot/đồ nội thất...)",
+      "vi_du_ruby": "｛<ruby>絵<rt>え</rt></ruby>/<ruby>彫刻<rt>ちょうこく</rt></ruby>/<ruby>番組<rt>ばんぐみ</rt></ruby>/<ruby>映画<rt>えいが</rt></ruby>...｝を<ruby>制作<rt>せいさく</rt></ruby>する。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "製造",
+      "doc": "せいぞう",
+      "doc_marked": "せいぞう",
+      "han_viet": "CHẾ TẠO",
+      "nghia": "chế tạo, sản xuất",
+      "vi_du": "この会社は車を製造している。 (Công ty này sản xuất ô tô.) レコードは何年も前に製造が中止された。 (Đĩa nhựa đã bị cấm chế tạo từ mấy năm trước đây.)",
+      "vi_du_ruby": "この<ruby>会社<rt>かいしゃ</rt></ruby>は<ruby>車<rt>くるま</rt></ruby>を<ruby>製造<rt>せいぞう</rt></ruby>している。",
+      "dong_nghia": [
+        {
+          "kanji": "製作",
+          "doc": "せいさく",
+          "nghia": "chế tác (thiên về sản phẩm thủ công/nghệ thuật hơn)"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "建築",
+      "doc": "けんちく",
+      "doc_marked": "けんちく",
+      "han_viet": "KIẾN TRÚC",
+      "nghia": "kiến trúc, sự xây dựng",
+      "vi_du": "｛橋/家...｝を建築する。 (Xây dựng cầu/nhà...)",
+      "vi_du_ruby": "｛<ruby>橋<rt>はし</rt></ruby>/<ruby>家<rt>いえ</rt></ruby>...｝を<ruby>建築<rt>けんちく</rt></ruby>する。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "人工",
+      "doc": "じんこう",
+      "doc_marked": "じんこう",
+      "han_viet": "NHÂN CÔNG",
+      "nghia": "nhân tạo",
+      "vi_du": "このスキー場では人口の雪を降らせている。 (Bãi trượt tuyết này người ta làm tuyết rơi nhân tạo.) 人口ダイヤモンドは工業用に使われる。 (Kim cương nhân tạo được dùng trong các công ty.)",
+      "vi_du_ruby": "このスキー<ruby>場<rt>じょう</rt></ruby>では<ruby>人工<rt>じんこう</rt></ruby>の<ruby>雪<rt>ゆき</rt></ruby>を<ruby>降<rt>ふ</rt></ruby>らせている。",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "天然",
+          "doc": "てんねん",
+          "nghia": "tự nhiên, thiên nhiên"
+        }
+      ]
+    },
+    {
+      "kanji": "圧力",
+      "doc": "あつりょく",
+      "doc_marked": "あつりょく",
+      "han_viet": "ÁP LỰC",
+      "nghia": "áp lực",
+      "vi_du": "空気に圧力を加えて圧縮する。 (Nén khí bằng cách gia tăng áp lực.) 相手に圧力をかけて従わせる。 (Gia tăng áp lực cho đối phương bắt phục tùng.)",
+      "vi_du_ruby": "<ruby>空気<rt>くうき</rt></ruby>に<ruby>圧力<rt>あつりょく</rt></ruby>を<ruby>加<rt>くわ</rt></ruby>えて<ruby>圧縮<rt>あっしゅく</rt></ruby>する。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "刺激",
+      "doc": "しげき",
+      "doc_marked": "しげき",
+      "han_viet": "THÍCH KÍCH",
+      "nghia": "kích thích, khiêu khích",
+      "vi_du": "筋肉に電気で刺激を与えると、ぴくりと働く。 (Kích thích cơ bắp bằng điện sẽ cử động giật giật.) 彼は今感情が不安定だから、刺激しないほうがいい。 (Bây giờ tình cảm anh ấy đang bất định không nên kích thích anh ấy sẽ tốt hơn.)",
+      "vi_du_ruby": "<ruby>筋肉<rt>きんにく</rt></ruby>に<ruby>電気<rt>でんき</rt></ruby>で<ruby>刺激<rt>しげき</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えると、ぴくりと<ruby>働<rt>はたら</rt></ruby>く。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "摩擦",
+      "doc": "まさつ",
+      "doc_marked": "まさつ",
+      "han_viet": "MA SÁT",
+      "nghia": "ma sát, xung khắc",
+      "vi_du": "木の枝の摩擦の熱で森林火災が起こった。 (Do nhiệt của sự ma sát các cành cây mà đã xảy ra cháy rừng.) 会社内で絶えず摩擦が起きている。 (Trong công ty không ngừng xảy ra ma sát, cạnh tranh nhau.)",
+      "vi_du_ruby": "<ruby>木<rt>き</rt></ruby>の<ruby>枝<rt>えだ</rt></ruby>の<ruby>摩擦<rt>まさつ</rt></ruby>の<ruby>熱<rt>ねつ</rt></ruby>で<ruby>森林火災<rt>しんりんかさい</rt></ruby>が<ruby>起<rt>お</rt></ruby>こった。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "立場",
+      "doc": "たちば",
+      "doc_marked": "たちば",
+      "han_viet": "LẬP TRƯỜNG",
+      "nghia": "lập trường",
+      "vi_du": "自分の意見を主張するだけではなく、相手の立場に立って考えてみることも大切だ。 (Không chỉ chủ trương ý kiến của cá nhân mình, việc đứng vào trường hợp của người khác và suy nghĩ cũng là điều quan trọng.) 会議で上司に反対の立場を取った。 (Tại cuộc họp, đã có lập trường phản đối sếp.)",
+      "vi_du_ruby": "<ruby>自分<rt>じぶん</rt></ruby>の<ruby>意見<rt>いけん</rt></ruby>を<ruby>主張<rt>しゅちょう</rt></ruby>するだけではなく、<ruby>相手<rt>あいて</rt></ruby>の<ruby>立場<rt>たちば</rt></ruby>に<ruby>立<rt>た</rt></ruby>って<ruby>考<rt>かんが</rt></ruby>えてみることも<ruby>大切<rt>たいせつ</rt></ruby>だ。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "役割",
+      "doc": "やくわり",
+      "doc_marked": "やくわり",
+      "han_viet": "DỊCH CÁT",
+      "nghia": "vai trò",
+      "vi_du": "仕事の役割を決める。 (Quyết định vai trò công việc.) 鉄道は日本の近代化に大きな役割を果たした。 (Đường sắt đã hoàn thành nhiệm vụ lớn đối với sự hiện đại hóa của Nhật Bản.)",
+      "vi_du_ruby": "<ruby>仕事<rt>しごと</rt></ruby>の<ruby>役割<rt>やくわり</rt></ruby>を<ruby>決<rt>き</rt></ruby>める。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "分担",
+      "doc": "ぶんたん",
+      "doc_marked": "ぶんたん",
+      "han_viet": "PHÂN ĐẢM",
+      "nghia": "chia sẻ",
+      "vi_du": "同僚と分担して仕事を進めている。 (Chia sẻ công việc với đồng nghiệp và tiến triển nó.) ｛費用/作業/役割...｝を分担する。 (Phân chia chi phí/công việc/vai trò...)",
+      "vi_du_ruby": "<ruby>同僚<rt>どうりょう</rt></ruby>と<ruby>分担<rt>ぶんたん</rt></ruby>して<ruby>仕事<rt>しごと</rt></ruby>を<ruby>進<rt>すす</rt></ruby>めている。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "担当",
+      "doc": "たんとう",
+      "doc_marked": "たんとう",
+      "han_viet": "ĐẢM ĐƯƠNG",
+      "nghia": "chịu trách nhiệm, đảm đương",
+      "vi_du": "会社で営業を担当している。 (Ở công ty đảm nhiệm việc kinh doanh.) 担当の医師から検査結果の説明を受けた。 (Tôi đã nhận kết quả kiểm tra từ bác sĩ phụ trách.)",
+      "vi_du_ruby": "<ruby>会社<rt>かいしゃ</rt></ruby>で<ruby>営業<rt>えいぎょう</rt></ruby>を<ruby>担当<rt>たんとう</rt></ruby>している。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "交代・交替",
+      "doc": "こうたい",
+      "doc_marked": "こうた**い**",
+      "han_viet": "GIAO ĐẠI/GIAO THẾ",
+      "nghia": "thay phiên, thay đổi",
+      "vi_du": "首相が交代した。 (Thay đổi chính phủ.) 長距離なので、交代で運転した。 (Vì khoảng cách xa nên đổi ca nhau để lái.) 看護師は1日3交替制のことが多い。 (Nhiều y tá một ngày thay 3 ca.)",
+      "vi_du_ruby": "<ruby>首相<rt>しゅしょう</rt></ruby>が<ruby>交代<rt>こうたい</rt></ruby>した。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "代理",
+      "doc": "だいり",
+      "doc_marked": "だいり",
+      "han_viet": "ĐẠI LÝ",
+      "nghia": "đại diện, đại lí",
+      "vi_du": "父の代理で親戚の結婚式に出席した。 (Tôi đại diện bố tham dự lễ kết hôn của người quen.) この店では、一番先輩の店員が店長の代理をしている。 (Ở cửa hàng này, nhân viên lớn tuổi nhất giữ vai trò như chủ cửa hàng.)",
+      "vi_du_ruby": "<ruby>父<rt>ちち</rt></ruby>の<ruby>代理<rt>だいり</rt></ruby>で<ruby>親戚<rt>しんせき</rt></ruby>の<ruby>結婚式<rt>けっこんしき</rt></ruby>に<ruby>出席<rt>しゅっせき</rt></ruby>した。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "審判",
+      "doc": "しんぱん",
+      "doc_marked": "しんぱん",
+      "han_viet": "THẨM PHÁN",
+      "nghia": "thẩm phán, trọng tài",
+      "vi_du": "審判が笛を吹いて、試合が始まった。 (Trọng tài thổi còi, trận đấu bắt đầu.) 選挙は政治に対する国民の審判だ。 (Cuộc bầu cử là sự phẩm phán của nhân dân đối với nền chính trị.)",
+      "vi_du_ruby": "<ruby>審判<rt>しんぱん</rt></ruby>が<ruby>笛<rt>ふえ</rt></ruby>を<ruby>吹<rt>ふ</rt></ruby>いて、<ruby>試合<rt>しあい</rt></ruby>が<ruby>始<rt>はじ</rt></ruby>まった。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "監督",
+      "doc": "かんとく",
+      "doc_marked": "かんとく",
+      "han_viet": "GIÁM ĐỐC",
+      "nghia": "huấn luyện viên, đạo diễn, quản lý",
+      "vi_du": "スポーツ大会の監督を務める。 (Tôi đảm nhận công việc huấn luyện viên của đại hội thể thao.) 部下を監督する。 (Chỉ dạy cấp dưới.)",
+      "vi_du_ruby": "スポーツ<ruby>大会<rt>たいかい</rt></ruby>の<ruby>監督<rt>かんとく</rt></ruby>を<ruby>務<rt>つと</rt></ruby>める。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "予測",
+      "doc": "よそく",
+      "doc_marked": "よそく",
+      "han_viet": "DỰ TRẮC",
+      "nghia": "dự đoán",
+      "vi_du": "データに基づいて結果を予測する。 (Dựa vào dữ liệu để dự đoán kết quả.) 売り上げ予測が外れた。 (Doanh thu không nằm trong dự đoán.) 客がどれぐらい来るか、予測がつかない。 (Khách đến khoảng bao nhiêu, không thể dự đoán được.)",
+      "vi_du_ruby": "データに<ruby>基<rt>もと</rt></ruby>づいて<ruby>結果<rt>けっか</rt></ruby>を<ruby>予測<rt>よそく</rt></ruby>する。",
+      "dong_nghia": [
+        {
+          "kanji": "推測",
+          "doc": "すいそく",
+          "nghia": "phỏng đoán, suy đoán"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "予期",
+      "doc": "よき",
+      "doc_marked": "よき",
+      "han_viet": "DỰ KỲ",
+      "nghia": "kì vọng, mong đợi, dự đoán",
+      "vi_du": "今回の実験では、予期に反し、いいデータが得られなかった。 (Thí nghiệm lần này, số liệu không đạt được như mong đợi.) 予期せぬことが起こって、仕事のスケジュールが大幅に遅れてしまった。 (Xảy ra chuyện không như mong đợi, đã làm lịch trình công việc chậm đi rất nhiều.)",
+      "vi_du_ruby": "<ruby>今回<rt>こんかい</rt></ruby>の<ruby>実験<rt>じっけん</rt></ruby>では、<ruby>予期<rt>よき</rt></ruby>に<ruby>反<rt>はん</rt></ruby>し、いいデータが<ruby>得<rt>え</rt></ruby>られなかった。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "判断",
+      "doc": "はんだん",
+      "doc_marked": "はんだん",
+      "han_viet": "PHÁN ĐOẠN",
+      "nghia": "phán đoán, nhận định",
+      "vi_du": "外見や肩書で人を判断するのはよくない。 (Phán đoán con người dựa vào ngoại hình và chức vụ là không tốt.) どちらが正しいか、判断がつかない。 (Không thể phán đoán được cái nào tốt cả.)",
+      "vi_du_ruby": "<ruby>外見<rt>がいけん</rt></ruby>や<ruby>肩書<rt>かたがき</rt></ruby>で<ruby>人<rt>ひと</rt></ruby>を<ruby>判断<rt>はんだん</rt></ruby>するのはよくない。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "評価",
+      "doc": "ひょうか",
+      "doc_marked": "ひょ**う**か",
+      "han_viet": "BÌNH GIÁ",
+      "nghia": "đánh giá, bình phẩm",
+      "vi_du": "この映画に対する世間の評価を高める。 (Bộ phim này được thế giới đánh giá cao.) 成績を五段階で評価する。 (Thành tích được đánh giá bằng 5 giai đoạn.) 業績が評価され、昇進した。 (Được đánh giá thành tích trong công việc và đã thăng chức.)",
+      "vi_du_ruby": "この<ruby>映画<rt>えいが</rt></ruby>に<ruby>対<rt>たい</rt></ruby>する<ruby>世間<rt>せけん</rt></ruby>の<ruby>評価<rt>ひょうか</rt></ruby>を<ruby>高<rt>たか</rt></ruby>める。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "指示",
+      "doc": "しじ",
+      "doc_marked": "しじ",
+      "han_viet": "CHỈ THỊ",
+      "nghia": "chỉ dẫn, chỉ thị",
+      "vi_du": "部長は田中さんに会議のレポートを出すよう指示した。 (Trưởng phòng chỉ thị anh Tanaka đưa ra báo cáo trong cuộc họp.) 「地震や火事の場合は、係員の指示に従って避難してください」 (Trong trường hợp có động đất hay hỏa hoạn thì hãy lánh nạn theo chỉ thị của quản lí.)",
+      "vi_du_ruby": "<ruby>部長<rt>ぶちょう</rt></ruby>は<ruby>田中<rt>たなか</rt></ruby>さんに<ruby>会議<rt>かいぎ</rt></ruby>のレポートを<ruby>出<rt>だ</rt></ruby>すよう<ruby>指示<rt>しじ</rt></ruby>した。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "無視",
+      "doc": "むし",
+      "doc_marked": "むし",
+      "han_viet": "VÔ THỊ",
+      "nghia": "bỏ qua, phớt lờ",
+      "vi_du": "話しかけたのに無視された。 (Dù đã bắt chuyện nhưng bị lờ đi.) 交通事故の原因は信号無視だった。 (Nguyên nhân của vụ tai nạn giao thông là do phớt lờ đèn tín hiệu.)",
+      "vi_du_ruby": "<ruby>話<rt>はな</rt></ruby>しかけたのに<ruby>無視<rt>むし</rt></ruby>された。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "無断",
+      "doc": "むだん",
+      "doc_marked": "むだん",
+      "han_viet": "VÔ ĐOẠN",
+      "nghia": "không có sự cho phép",
+      "vi_du": "無断で人のものを使ってはいけない。 (Không có sự cho phép mà sử dụng đồ của người khác là không được.) 無断欠勤して上司に怒られた。 (Nghỉ làm mà không xin phép nên bị cấp trên nổi giận.)",
+      "vi_du_ruby": "<ruby>無断<rt>むだん</rt></ruby>で<ruby>人<rt>ひと</rt></ruby>のものを<ruby>使<rt>つか</rt></ruby>ってはいけない。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "承知",
+      "doc": "しょうち",
+      "doc_marked": "しょうち",
+      "han_viet": "THỪA TRI",
+      "nghia": "hiểu, đồng ý, chấp nhận",
+      "vi_du": "「この仕事、明日までに頼みます」「承知しました」 (Công việc đến sáng mai nhờ anh nhé. Vâng tôi hiểu rồi.) 私の学力では合格は難しいと承知しているが、それでも受験したい。 (Tôi hiểu với học lực của mình thì khó mà đậu được nhưng cũng muốn dự thi.)",
+      "vi_du_ruby": "「この<ruby>仕事<rt>しごと</rt></ruby>、<ruby>明日<rt>あした</rt></ruby>までに<ruby>頼<rt>たの</rt></ruby>みます」「<ruby>承知<rt>しょうち</rt></ruby>しました」",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "納得",
+      "doc": "なっとく",
+      "doc_marked": "なっとく",
+      "han_viet": "NẠP ĐẮC",
+      "nghia": "bị thuyết phục, thỏa mãn, hài lòng",
+      "vi_du": "会社のやり方には納得できない。 (Tôi không thể lí giải được cách làm của công ty.) 先生の解説で自分の間違いがようやく納得できた。 (Nhờ vào sự giải thích của giáo viên mà tôi đã hiểu được những vấn đề khúc mắc.)",
+      "vi_du_ruby": "<ruby>会社<rt>かいしゃ</rt></ruby>のやり<ruby>方<rt>かた</rt></ruby>には<ruby>納得<rt>なっとく</rt></ruby>できない。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "疑問",
+      "doc": "ぎもん",
+      "doc_marked": "ぎもん",
+      "han_viet": "NGHI VẤN",
+      "nghia": "nghi vấn, câu hỏi",
+      "vi_du": "子供はいろいろなことに疑問を持つ。 (Bọn trẻ có rất nhiều điều thắc mắc.) そんなことができるかどうか疑問だ。 (Việc này có được hay không là một điều nghi vấn.)",
+      "vi_du_ruby": "<ruby>子供<rt>こども</rt></ruby>はいろいろなことに<ruby>疑問<rt>ぎもん</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "推測",
+      "doc": "すいそく",
+      "doc_marked": "すいそく",
+      "han_viet": "THÔI TRẮC",
+      "nghia": "phỏng đoán, dự báo",
+      "vi_du": "相手の気持ちを推測する。 (Suy đoán cảm xúc đối phương.) 新聞記者は推測で記事を書いてはいけない。 (Kí giả bài báo không thể dựa vào suy đoán mà viết bài.)",
+      "vi_du_ruby": "<ruby>相手<rt>あいて</rt></ruby>の<ruby>気持<rt>きも</rt></ruby>ちを<ruby>推測<rt>すいそく</rt></ruby>する。",
+      "dong_nghia": [
+        {
+          "kanji": "予測",
+          "doc": "よそく",
+          "nghia": "dự đoán"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "肯定",
+      "doc": "こうてい",
+      "doc_marked": "こうて**い**",
+      "han_viet": "KHẲNG ĐỊNH",
+      "nghia": "công nhận, tán thành, tích cực",
+      "vi_du": "相手の意見を肯定する。 (Khẳng định ý kiến của đối phương.) 私は何事も、肯定的に考えるようにしている。 (Dù là chuyện gì tôi cũng cố gắng suy nghĩ một cách tích cực.)",
+      "vi_du_ruby": "<ruby>相手<rt>あいて</rt></ruby>の<ruby>意見<rt>いけん</rt></ruby>を<ruby>肯定<rt>こうてい</rt></ruby>する。",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "否定",
+          "doc": "ひてい",
+          "nghia": "phủ định"
+        }
+      ]
+    },
+    {
+      "kanji": "参考",
+      "doc": "さんこう",
+      "doc_marked": "さんこう",
+      "han_viet": "THAM KHẢO",
+      "nghia": "tham khảo",
+      "vi_du": "いろいろな資料を参考してレポートを書いた。 (Tham khảo nhiều tài liệu và viết báo cáo.) 留学を決めるとき、先輩のアドバイスが参考になった。 (Khi quyết định du học, tôi đã tham khảo ý kiến tiền bối.)",
+      "vi_du_ruby": "いろいろな<ruby>資料<rt>しりょう</rt></ruby>を<ruby>参考<rt>さんこう</rt></ruby>してレポートを<ruby>書<rt>か</rt></ruby>いた。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "程度",
+      "doc": "ていど",
+      "doc_marked": "てい**ど**",
+      "han_viet": "TRÌNH ĐỘ",
+      "nghia": "trình độ, mức",
+      "vi_du": "彼女の学校は教育の程度が高い。 (Trường học của cô ấy có trình độ giáo dục cao.) 「会議に30分程度遅れるので、先に始めておいてください」 (Tôi sẽ trễ cuộc họp chừng 30 phút, mọi người hãy bắt đầu trước đi nhé.)",
+      "vi_du_ruby": "<ruby>彼女<rt>かのじょ</rt></ruby>の<ruby>学校<rt>がっこう</rt></ruby>は<ruby>教育<rt>きょういく</rt></ruby>の<ruby>程度<rt>ていど</rt></ruby>が<ruby>高<rt>たか</rt></ruby>い。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "評判",
+      "doc": "ひょうばん",
+      "doc_marked": "ひょ**う**ばん",
+      "han_viet": "BÌNH PHÁN",
+      "nghia": "bình luận, được đánh giá, có tiếng",
+      "vi_du": "大統領就任演説は評判が良かった。 (Bài diễn thuyết nhận chức của vị tổng thống được đánh giá cao.) 彼女は評判の美人だ。 (Cô ấy được coi là một mỹ nhân.)",
+      "vi_du_ruby": "<ruby>大統領<rt>だいとうりょう</rt></ruby><ruby>就任<rt>しゅうにん</rt></ruby><ruby>演説<rt>えんぜつ</rt></ruby>は<ruby>評判<rt>ひょうばん</rt></ruby>が<ruby>良<rt>よ</rt></ruby>かった。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "批評",
+      "doc": "ひひょう",
+      "doc_marked": "ひひ**ょう**",
+      "han_viet": "PHÊ BÌNH",
+      "nghia": "phê bình, lời bình, bình phẩm",
+      "vi_du": "新聞に新刊書の批評が載った。 (Trên bài báo đăng đánh giá về công bố mới.) 先生は私の作文について何も批評しなかった。 (Cô giáo không đánh giá gì về bài văn của tôi.)",
+      "vi_du_ruby": "<ruby>新聞<rt>しんぶん</rt></ruby>に<ruby>新刊書<rt>しんかんしょ</rt></ruby>の<ruby>批評<rt>ひひょう</rt></ruby>が<ruby>載<rt>の</rt></ruby>った。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "推薦",
+      "doc": "すいせん",
+      "doc_marked": "すいせん",
+      "han_viet": "THÔI TIẾN",
+      "nghia": "tiến cử, giới thiệu",
+      "vi_du": "重役たちは、田中氏を次期社長に推薦した。 (Tiến cử anh Tanaka làm giám đốc trong nhiệm kì tới.) この本は、高校生に読ませたい本として多くの教師が推薦している。 (Quyển sách này nhiều giáo viên đã đề cử để muốn nhiều học sinh cấp ba đọc.)",
+      "vi_du_ruby": "<ruby>重役<rt>じゅうやく</rt></ruby>たちは、<ruby>田中氏<rt>たなかし</rt></ruby>を<ruby>次期社長<rt>じきしゃちょう</rt></ruby>に<ruby>推薦<rt>すいせん</rt></ruby>した。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "信用",
+      "doc": "しんよう",
+      "doc_marked": "しんよう",
+      "han_viet": "TÍN DỤNG",
+      "nghia": "tin tưởng, tín nhiệm",
+      "vi_du": "｛人/人の言葉｝を信用してお金を貸す。 (Tin người/tin lời người nói rồi cho mượn tiền.) 彼は信用がないので、大事な仕事を任せてもらえない。 (Vì không tin tưởng anh ấy nên không thể giao việc quan trọng cho anh ta.)",
+      "vi_du_ruby": "｛<ruby>人<rt>ひと</rt></ruby>/<ruby>人<rt>ひと</rt></ruby>の<ruby>言葉<rt>ことば</rt></ruby>｝を<ruby>信用<rt>しんよう</rt></ruby>してお<ruby>金<rt>かね</rt></ruby>を<ruby>貸<rt>か</rt></ruby>す。",
+      "dong_nghia": [
+        {
+          "kanji": "信頼",
+          "doc": "しんらい",
+          "nghia": "tin cậy, tín nhiệm"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "信頼",
+      "doc": "しんらい",
+      "doc_marked": "しんら**い**",
+      "han_viet": "TÍN LẠI",
+      "nghia": "tin cậy, tín nhiệm, tin tưởng",
+      "vi_du": "彼は信頼できる指導者だ。 (Anh ấy là một nhà lãnh đạo đáng tin cậy.) 上司の信頼に応えていい仕事をしたい。 (Tôi muốn làm công việc tốt để đáp lại lòng tin của sếp.)",
+      "vi_du_ruby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>信頼<rt>しんらい</rt></ruby>できる<ruby>指導者<rt>しどうしゃ</rt></ruby>だ。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "尊重",
+      "doc": "そんちょう",
+      "doc_marked": "そんちょう",
+      "han_viet": "TÔN TRỌNG",
+      "nghia": "tôn trọng",
+      "vi_du": "人の意見を尊重する。 (Tôn trọng ý kiến của người khác.) ｛個性/人権...｝を尊重する。 (Tôn trọng cá nhân/quyền con người...)",
+      "vi_du_ruby": "<ruby>人<rt>ひと</rt></ruby>の<ruby>意見<rt>いけん</rt></ruby>を<ruby>尊重<rt>そんちょう</rt></ruby>する。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "作業",
+      "doc": "さぎょう",
+      "doc_marked": "さぎ**ょう**",
+      "han_viet": "TÁC NGHIỆP",
+      "nghia": "công việc, sự làm việc",
+      "vi_du": "時計を作る仕事は、作業が細かくて複雑だ。 (Công việc làm đồng hồ có những thao tác tỉ mỉ phức tạp.) 「時間が少ないから、能率的に作業を進めましょう」 (Vì không có thời gian nên hãy tiến hành những thao tác công việc mang tính năng suất.)",
+      "vi_du_ruby": "<ruby>時計<rt>とけい</rt></ruby>を<ruby>作<rt>つく</rt></ruby>る<ruby>仕事<rt>しごと</rt></ruby>は、<ruby>作業<rt>さぎょう</rt></ruby>が<ruby>細<rt>こま</rt></ruby>かくて<ruby>複雑<rt>ふくざつ</rt></ruby>だ。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "工夫",
+      "doc": "くふう",
+      "doc_marked": "くふ**う**",
+      "han_viet": "CÔNG PHU",
+      "nghia": "công sức, công phu, lao tâm khổ tứ",
+      "vi_du": "仕事のやり方を工夫すれば、もう少し時間を短縮できるだろう。 (Nếu chịu khó làm công việc này công phu hơn thì sẽ có thể rút ngắn thời gian.) 今年はクリスマスツリーの飾り付けに工夫を凝らした。 (Năm nay đã công phu, tỉ mỉ trang trí cho những cây thông noel.)",
+      "vi_du_ruby": "<ruby>仕事<rt>しごと</rt></ruby>のやり<ruby>方<rt>かた</rt></ruby>を<ruby>工夫<rt>くふう</rt></ruby>すれば、もう<ruby>少<rt>すこ</rt></ruby>し<ruby>時間<rt>じかん</rt></ruby>を<ruby>短縮<rt>たんしゅく</rt></ruby>できるだろう。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "消化",
+      "doc": "しょうか",
+      "doc_marked": "しょ**う**か",
+      "han_viet": "TIÊU HÓA",
+      "nghia": "tiêu hóa",
+      "vi_du": "私は胃腸が弱いので、消化｛が/に｝いいものを食べるようにしている。 (Dạ dày tôi yếu nên ăn những thứ dễ tiêu hóa tốt.) 厳しいスケジュールだったが、何とか消化できた。 (Dù lịch trình rất khắc nghiệt nhưng bằng cách nào đó cũng đã giải quyết được.)",
+      "vi_du_ruby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>胃腸<rt>いちょう</rt></ruby>が<ruby>弱<rt>よわ</rt></ruby>いので、<ruby>消化<rt>しょうか</rt></ruby>｛が/に｝いいものを<ruby>食<rt>た</rt></ruby>べるようにしている。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "吸収",
+      "doc": "きゅうしゅう",
+      "doc_marked": "きゅうしゅう",
+      "han_viet": "HẤP THU",
+      "nghia": "sự hấp thụ",
+      "vi_du": "この物質は｛水分/匂い/音...｝を吸収する。 (Sản phẩm này hấp thụ nước/mùi hôi/âm thanh...) 留学したら、できるだけ多くの知識を吸収したい。 (Nếu đi du học, tôi muốn tiếp thu càng nhiều kiến thức càng tốt.)",
+      "vi_du_ruby": "この<ruby>物質<rt>ぶっしつ</rt></ruby>は｛<ruby>水分<rt>すいぶん</rt></ruby>/<ruby>匂<rt>にお</rt></ruby>い/<ruby>音<rt>おと</rt></ruby>...｝を<ruby>吸収<rt>きゅうしゅう</rt></ruby>する。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "設置",
+      "doc": "せっち",
+      "doc_marked": "せっち",
+      "han_viet": "THIẾT TRÍ",
+      "nghia": "lắp đặt",
+      "vi_du": "工場に新しい機械を設置する。 (Công ty lắp đặt máy mới.) その問題について検討する委員会を設置した。 (Đã xây dựng một ủy ban tham khảo về vấn đề này.)",
+      "vi_du_ruby": "<ruby>工場<rt>こうじょう</rt></ruby>に<ruby>新<rt>あたら</rt></ruby>しい<ruby>機械<rt>きかい</rt></ruby>を<ruby>設置<rt>せっち</rt></ruby>する。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "設定",
+      "doc": "せってい",
+      "doc_marked": "せって**い**",
+      "han_viet": "THIẾT ĐỊNH",
+      "nghia": "thiết lập",
+      "vi_du": "エアコンの温度を26度に設定する。 (Thiết lập nhiệt độ điều hòa ở 26 độ.) 携帯電話の料金では、さまざまなプランが設定されている。 (Trong cước phí điện thoại đã thiết lập rất nhiều kế hoạch.)",
+      "vi_du_ruby": "エアコンの<ruby>温度<rt>おんど</rt></ruby>を26<ruby>度<rt>ど</rt></ruby>に<ruby>設定<rt>せってい</rt></ruby>する。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "調節",
+      "doc": "ちょうせつ",
+      "doc_marked": "ちょ**う**せつ",
+      "han_viet": "ĐIỀU TIẾT",
+      "nghia": "điều tiết, điều chỉnh",
+      "vi_du": "リモコンで温度の調節をする。 (Điều khiển nhiệt độ bằng điều khiển từ xa.) 椅子の高さを調節する。 (Điều chỉnh chiều cao của ghế.)",
+      "vi_du_ruby": "リモコンで<ruby>温度<rt>おんど</rt></ruby>の<ruby>調節<rt>ちょうせつ</rt></ruby>をする。",
+      "dong_nghia": [
+        {
+          "kanji": "調整",
+          "doc": "ちょうせい",
+          "nghia": "điều chỉnh"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "調整",
+      "doc": "ちょうせい",
+      "doc_marked": "ちょ**う**せ**い**",
+      "han_viet": "ĐIỀU CHỈNH",
+      "nghia": "điều chỉnh",
+      "vi_du": "テレビの映りが悪いので、アンテナの向きを調節した。 (Hình ảnh của tivi không tốt, điều chỉnh hướng của ăng ten.) ｛日程/利害...｝を調節する。 (Điều chỉnh lịch trình/lợi hại...)",
+      "vi_du_ruby": "テレビの<ruby>映<rt>うつ</rt></ruby>りが<ruby>悪<rt>わる</rt></ruby>いので、アンテナの<ruby>向<rt>む</rt></ruby>きを<ruby>調節<rt>ちょうせつ</rt></ruby>した。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "解放",
+      "doc": "かいほう",
+      "doc_marked": "かいほ**う**",
+      "han_viet": "GIẢI PHÓNG",
+      "nghia": "giải phóng, thoát khỏi",
+      "vi_du": "人質を解放する。 (Giải phóng con tin.) 抑圧から解放された。 (Giải phóng khỏi sự áp bức.)",
+      "vi_du_ruby": "<ruby>人質<rt>ひとじち</rt></ruby>を<ruby>解放<rt>かいほう</rt></ruby>する。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "総合",
+      "doc": "そうごう",
+      "doc_marked": "そ**う**ごう",
+      "han_viet": "TỔNG HỢP",
+      "nghia": "tổng hợp",
+      "vi_du": "皆の意見を総合して、結論を出す。 (Tổng hợp ý kiến của mọi người và đưa ra kết luận.)",
+      "vi_du_ruby": "<ruby>皆<rt>みんな</rt></ruby>の<ruby>意見<rt>いけん</rt></ruby>を<ruby>総合<rt>そうごう</rt></ruby>して、<ruby>結論<rt>けつろん</rt></ruby>を<ruby>出<rt>だ</rt></ruby>す。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "連続",
+      "doc": "れんぞく",
+      "doc_marked": "れんぞく",
+      "han_viet": "LIÊN TỤC",
+      "nghia": "liên tục",
+      "vi_du": "3回連続で失敗してしまった。 (Thất bại lần thứ 3 liên tiếp.) 昨日と今日、連続して地震が起こった。 (Ngày hôm qua và hôm nay liên tục xảy ra động đất.)",
+      "vi_du_ruby": "3<ruby>回<rt>かい</rt></ruby><ruby>連続<rt>れんぞく</rt></ruby>で<ruby>失敗<rt>しっぱい</rt></ruby>してしまった。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "持続",
+      "doc": "じぞく",
+      "doc_marked": "じぞく",
+      "han_viet": "TRÌ TỤC",
+      "nghia": "kéo dài, duy trì",
+      "vi_du": "この薬の効果は6時間持続する。 (Hiệu quả của thuốc này sẽ kéo dài trong 6 tiếng đồng hồ.) 最近、｛集中力/やる気/体力...｝が持続しなくて困る。 (Gần đây không còn khả năng tập trung/động lực/thể lực...thật chán.)",
+      "vi_du_ruby": "この<ruby>薬<rt>くすり</rt></ruby>の<ruby>効果<rt>こうか</rt></ruby>は6<ruby>時間<rt>じかん</rt></ruby><ruby>持続<rt>じぞく</rt></ruby>する。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "中断",
+      "doc": "ちゅうだん",
+      "doc_marked": "ちゅ**う**だん",
+      "han_viet": "TRUNG ĐOẠN",
+      "nghia": "gián đoạn",
+      "vi_du": "雨で試合が中断した。 (Trận đấu tạm hoãn do mưa.) なかなか結論が出ず、会議は一時中断された。 (Mãi mà không đưa ra được kết luận cuộc họp đành phải tạm hoãn 1 giờ.)",
+      "vi_du_ruby": "<ruby>雨<rt>あめ</rt></ruby>で<ruby>試合<rt>しあい</rt></ruby>が<ruby>中断<rt>ちゅうだん</rt></ruby>した。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "安定",
+      "doc": "あんてい",
+      "doc_marked": "あんて**い**",
+      "han_viet": "AN ĐỊNH",
+      "nghia": "ổn định",
+      "vi_du": "正社員になって、安定した暮らしがしたい。 (Muốn trở thành nhân viên chính thức để có cuộc sống ổn định hơn.) ｛天候/社会/感情/病状...｝が安定する。 (Thời tiết/xã hội/tình cảm/bệnh trạng... ổn định.)",
+      "vi_du_ruby": "<ruby>正社員<rt>せいしゃいん</rt></ruby>になって、<ruby>安定<rt>あんてい</rt></ruby>した<ruby>暮<rt>く</rt></ruby>らしがしたい。",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "不安定",
+          "doc": "ふあんてい",
+          "nghia": "bất ổn"
+        }
+      ]
+    },
+    {
+      "kanji": "混乱",
+      "doc": "こんらん",
+      "doc_marked": "こんらん",
+      "han_viet": "HỖN LOẠN",
+      "nghia": "hỗn độn, hỗn loạn",
+      "vi_du": "頭が混乱して、どうしていいのかわからない。 (Cái đầu đang rối loạn nên không biết cái nào là tốt.) 通りでナイフを持った男が暴れ、大混乱が起こった。 (Người đàn ông cầm dao nổi loạn trên đường làm náo loạn lên.)",
+      "vi_du_ruby": "<ruby>頭<rt>あたま</rt></ruby>が<ruby>混乱<rt>こんらん</rt></ruby>して、どうしていいのかわからない。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "上昇",
+      "doc": "じょうしょう",
+      "doc_marked": "じょうしょう",
+      "han_viet": "THƯỢNG THĂNG",
+      "nghia": "tiến lên, tăng lên",
+      "vi_du": "午後から気温が急激に上昇した。 (Từ chiều nhiệt độ đột ngột tăng cao.) ｛物価/人気/飛行機...｝が上昇する。 (Vật giá/sự hâm mộ/máy bay... tăng lên.)",
+      "vi_du_ruby": "<ruby>午後<rt>ごご</rt></ruby>から<ruby>気温<rt>きおん</rt></ruby>が<ruby>急激<rt>きゅうげき</rt></ruby>に<ruby>上昇<rt>じょうしょう</rt></ruby>した。",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "下降",
+          "doc": "かこう",
+          "nghia": "hạ xuống"
+        }
+      ]
+    },
+    {
+      "kanji": "達成",
+      "doc": "たっせい",
+      "doc_marked": "たっせ**い**",
+      "han_viet": "ĐẠT THÀNH",
+      "nghia": "thành tựu, đạt được",
+      "vi_du": "5年かかって、やっと目標を達成した。 (Mất 5 năm, cuối cùng cũng đạt được mục đích.) 予定より1か月早く、入場者数100万人を達成した。 (Đã đạt được 100 vạn người vào công ty sớm hơn 1 tháng so với dự định.)",
+      "vi_du_ruby": "5<ruby>年<rt>ねん</rt></ruby>かかって、やっと<ruby>目標<rt>もくひょう</rt></ruby>を<ruby>達成<rt>たっせい</rt></ruby>した。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "事情",
+      "doc": "じじょう",
+      "doc_marked": "じじ**ょう**",
+      "han_viet": "SỰ TÌNH",
+      "nghia": "tình hình, sự tình, nguyên cớ",
+      "vi_du": "「この度、事情により退社することになりました」 (Chuyến đi này, tôi đã từ chức vì tình hình sự việc.) 彼女はヨーロッパの事情に詳しい。 (Cô ấy biết rõ tường tận về sự tình của châu Âu.) 家を建てたいが、経済的な事情が許さない。 (Muốn xây nhà nhưng tình thế kinh tế không cho phép.)",
+      "vi_du_ruby": "「この<ruby>度<rt>たび</rt></ruby>、<ruby>事情<rt>じじょう</rt></ruby>により<ruby>退社<rt>たいしゃ</rt></ruby>することになりました」",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "事態",
+      "doc": "じたい",
+      "doc_marked": "じた**い**",
+      "han_viet": "SỰ THÁI",
+      "nghia": "tình hình, tình trạng",
+      "vi_du": "預金している銀行が倒産するという、大変な事態になった。 (Ngân hàng tôi đang gửi tiết kiệm bị phá sản nên đang lâm vào tình trạng khó khăn.) 緊急事態が発生した。 (Phát sinh tình trạng khẩn cấp.)",
+      "vi_du_ruby": "<ruby>預金<rt>よきん</rt></ruby>している<ruby>銀行<rt>ぎんこう</rt></ruby>が<ruby>倒産<rt>とうさん</rt></ruby>するという、<ruby>大変<rt>たいへん</rt></ruby>な<ruby>事態<rt>じたい</rt></ruby>になった。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "障害",
+      "doc": "しょうがい",
+      "doc_marked": "しょうが**い**",
+      "han_viet": "CHƯỚNG NGẠI",
+      "nghia": "cản trở, khó khăn",
+      "vi_du": "彼は目が見えないという障害を乗り越えてピアニストになった。 (Anh ấy đã vượt qua chướng ngại với đôi mắt không nhìn thấy để trở thành nhà piano.) 独身なので、海外赴任に何の障害もない。 (Vì độc thân nên không gặp chướng ngại gì khi nhận chức ở nước ngoài.)",
+      "vi_du_ruby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>目<rt>め</rt></ruby>が<ruby>見<rt>み</rt></ruby>えないという<ruby>障害<rt>しょうがい</rt></ruby>を<ruby>乗<rt>の</rt></ruby>り<ruby>越<rt>こ</rt></ruby>えてピアニストになった。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "福祉",
+      "doc": "ふくし",
+      "doc_marked": "ふくし",
+      "han_viet": "PHÚC LỢI",
+      "nghia": "phúc lợi",
+      "vi_du": "大学で福祉について勉強した。 (Tôi đang học về phúc lợi xã hội tại trường đại học.) 公共の福祉。 (Phúc lợi cộng đồng.)",
+      "vi_du_ruby": "<ruby>大学<rt>だいがく</rt></ruby>で<ruby>福祉<rt>ふくし</rt></ruby>について<ruby>勉強<rt>べんきょう</rt></ruby>した。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "社会",
+      "doc": "しゃかい",
+      "doc_marked": "しゃか**い**",
+      "han_viet": "XÃ HỘI",
+      "nghia": "xã hội",
+      "vi_du": "定年退職後は社会の役に立つことをしたい。 (Sau khi về hưu tôi muốn làm công việc có ích cho xã hội.) 1年間入院していたので、社会復帰のため、リハビリに励んでいる。 (Vì 1 năm nhập viện để có thể trở lại với xã hội tôi đang điều trị phục hồi.)",
+      "vi_du_ruby": "<ruby>定年退職後<rt>ていねんたいしょくご</rt></ruby>は<ruby>社会<rt>しゃかい</rt></ruby>の<ruby>役<rt>やく</rt></ruby>に<ruby>立<rt>た</rt></ruby>つことをしたい。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "都会",
+      "doc": "とかい",
+      "doc_marked": "とか**い**",
+      "han_viet": "ĐÔ HỘI",
+      "nghia": "thành phố, thành thị",
+      "vi_du": "田舎の高校生だった私は、都会にあこがれていた。 (Một đứa học sinh vùng quê như tôi rất ao ước sống ở thành phố.)",
+      "vi_du_ruby": "<ruby>田舎<rt>いなか</rt></ruby>の<ruby>高校生<rt>こうこうせい</rt></ruby>だった<ruby>私<rt>わたし</rt></ruby>は、<ruby>都会<rt>とかい</rt></ruby>にあこがれていた。",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "田舎",
+          "doc": "いなか",
+          "nghia": "nông thôn, quê"
+        }
+      ]
+    },
+    {
+      "kanji": "世論",
+      "doc": "せろん",
+      "doc_marked": "せろん",
+      "han_viet": "THẾ LUẬN",
+      "nghia": "dư luận, ý kiến công chúng",
+      "vi_du": "現代の政治家は世論を無視することはできない。 (Những nhà chính trị gia ngày nay không thể phớt lờ ý kiến của công chúng.)",
+      "vi_du_ruby": "<ruby>現代<rt>げんだい</rt></ruby>の<ruby>政治家<rt>せいじか</rt></ruby>は<ruby>世論<rt>せろん</rt></ruby>を<ruby>無視<rt>むし</rt></ruby>することはできない。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "民族",
+      "doc": "みんぞく",
+      "doc_marked": "みんぞく",
+      "han_viet": "DÂN TỘC",
+      "nghia": "dân tộc",
+      "vi_du": "世界にはさまざまな民族が存在する。 (Trên thế giới tồn tại rất nhiều dân tộc.) ロシアは多民族国家だ。 (Nước Nga là quốc gia đa dân tộc.)",
+      "vi_du_ruby": "<ruby>世界<rt>せかい</rt></ruby>にはさまざまな<ruby>民族<rt>みんぞく</rt></ruby>が<ruby>存在<rt>そんざい</rt></ruby>する。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "増大",
+      "doc": "ぞうだい",
+      "doc_marked": "ぞ**う**だい",
+      "han_viet": "TĂNG ĐẠI",
+      "nghia": "sự mở rộng, sự tăng thêm",
+      "vi_du": "近年、海外からの観光客数が増大している。 (Những năm gần đây, số lượng khách du lịch từ nước ngoài đang tăng lên đáng kể.)",
+      "vi_du_ruby": "<ruby>近年<rt>きんねん</rt></ruby>、<ruby>海外<rt>かいがい</rt></ruby>からの<ruby>観光客数<rt>かんこうきゃくすう</rt></ruby>が<ruby>増大<rt>ぞうだい</rt></ruby>している。",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "減少",
+          "doc": "げんしょう",
+          "nghia": "giảm thiểu"
+        }
+      ]
+    },
+    {
+      "kanji": "増量",
+      "doc": "ぞうりょう",
+      "doc_marked": "ぞ**う**り**ょう**",
+      "han_viet": "TĂNG LƯỢNG",
+      "nghia": "sự tăng số lượng, sự tăng cân",
+      "vi_du": "このラーメン屋は、追加料金なしで麺を増量してくれる。 (Quán mì này tăng thêm lượng mì miễn phí không tính thêm tiền.)",
+      "vi_du_ruby": "このラーメン<ruby>屋<rt>や</rt></ruby>は、<ruby>追加料金<rt>ついかりょうきん</rt></ruby>なしで<ruby>麺<rt>めん</rt></ruby>を<ruby>増量<rt>ぞうりょう</rt></ruby>してくれる。",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "減量",
+          "doc": "げんりょう",
+          "nghia": "giảm trọng lượng, giảm cân"
+        }
+      ]
+    },
+    {
+      "kanji": "増税",
+      "doc": "ぞうぜい",
+      "doc_marked": "ぞ**う**ぜ**い**",
+      "han_viet": "TĂNG THUẾ",
+      "nghia": "sự tăng thuế",
+      "vi_du": "来年から消費税の増税が予定されている。 (Từ năm sau dự kiến sẽ tăng thuế tiêu thụ.)",
+      "vi_du_ruby": "<ruby>来年<rt>らいねん</rt></ruby>から<ruby>消費税<rt>しょうひぜい</rt></ruby>の<ruby>増税<rt>ぞうぜい</rt></ruby>が<ruby>予定<rt>よてい</rt></ruby>されている。",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "減税",
+          "doc": "げんぜい",
+          "nghia": "giảm thuế"
+        }
+      ]
+    },
+    {
+      "kanji": "増員",
+      "doc": "ぞういん",
+      "doc_marked": "ぞ**う**いん",
+      "han_viet": "TĂNG VIÊN",
+      "nghia": "tăng thêm số nhân sự",
+      "vi_du": "仕事が忙しくなったので、来月から増員する予定だ。 (Vì công việc trở nên bận rộn nên dự kiến sẽ tăng thêm nhân viên từ tháng sau.)",
+      "vi_du_ruby": "<ruby>仕事<rt>しごと</rt></ruby>が<ruby>忙<rt>いそが</rt></ruby>しくなったので、<ruby>来月<rt>らいげつ</rt></ruby>から<ruby>増員<rt>ぞういん</rt></ruby>する<ruby>予定<rt>よてい</rt></ruby>だ。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "減点",
+      "doc": "げんてん",
+      "doc_marked": "げんてん",
+      "han_viet": "GIẢM ĐIỂM",
+      "nghia": "sự giảm trừ, sự giảm điểm",
+      "vi_du": "時間内に答えを書かないと、減点される。 (Nếu không viết câu trả lời trong thời gian quy định sẽ bị trừ điểm.)",
+      "vi_du_ruby": "<ruby>時間内<rt>じかんない</rt></ruby>に<ruby>答<rt>こた</rt></ruby>えを<ruby>書<rt>か</rt></ruby>かないと、<ruby>減点<rt>げんてん</rt></ruby>される。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "減退",
+      "doc": "げんたい",
+      "doc_marked": "げんた**い**",
+      "han_viet": "GIẢM THOÁI",
+      "nghia": "giảm thiểu",
+      "vi_du": "夏は食欲が減退しがちだ。 (Vào mùa hè cảm giác thèm ăn thường giảm đi.)",
+      "vi_du_ruby": "<ruby>夏<rt>なつ</rt></ruby>は<ruby>食欲<rt>しょくよく</rt></ruby>が<ruby>減退<rt>げんたい</rt></ruby>しがちだ。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "減量",
+      "doc": "げんりょう",
+      "doc_marked": "げんり**ょう**",
+      "han_viet": "GIẢM LƯỢNG",
+      "nghia": "giảm trọng lượng, tụt cân",
+      "vi_du": "試合に向けて、選手は減量に取り組んでいる。 (Hướng tới trận đấu, tuyển thủ đang nỗ lực giảm cân.)",
+      "vi_du_ruby": "<ruby>試合<rt>しあい</rt></ruby>に<ruby>向<rt>む</rt></ruby>けて、<ruby>選手<rt>せんしゅ</rt></ruby>は<ruby>減量<rt>げんりょう</rt></ruby>に<ruby>取<rt>と</rt></ruby>り<ruby>組<rt>く</rt></ruby>んでいる。",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "増量",
+          "doc": "ぞうりょう",
+          "nghia": "tăng cân, tăng lượng"
+        }
+      ]
+    },
+    {
+      "kanji": "開発",
+      "doc": "かいはつ",
+      "doc_marked": "かいはつ",
+      "han_viet": "KHAI PHÁT",
+      "nghia": "sự phát triển, khai thác",
+      "vi_du": "新しい薬の開発には長い時間がかかる。 (Việc phát triển thuốc mới cần rất nhiều thời gian.)",
+      "vi_du_ruby": "<ruby>新<rt>あたら</rt></ruby>しい<ruby>薬<rt>くすり</rt></ruby>の<ruby>開発<rt>かいはつ</rt></ruby>には<ruby>長<rt>なが</rt></ruby>い<ruby>時間<rt>じかん</rt></ruby>がかかる。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "開店",
+      "doc": "かいてん",
+      "doc_marked": "かいてん",
+      "han_viet": "KHAI ĐIẾM",
+      "nghia": "sự mở cửa hàng",
+      "vi_du": "駅前に新しい店が開店した。 (Một cửa hàng mới đã mở trước nhà ga.)",
+      "vi_du_ruby": "<ruby>駅前<rt>えきまえ</rt></ruby>に<ruby>新<rt>あたら</rt></ruby>しい<ruby>店<rt>みせ</rt></ruby>が<ruby>開店<rt>かいてん</rt></ruby>した。",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "閉店",
+          "doc": "へいてん",
+          "nghia": "đóng cửa hàng"
+        }
+      ]
+    },
+    {
+      "kanji": "開業",
+      "doc": "かいぎょう",
+      "doc_marked": "かいぎ**ょう**",
+      "han_viet": "KHAI NGHIỆP",
+      "nghia": "bắt đầu kinh doanh, khởi nghiệp",
+      "vi_du": "彼は会社を辞めて、独立して開業した。 (Anh ấy đã nghỉ việc công ty rồi khởi nghiệp riêng.)",
+      "vi_du_ruby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>会社<rt>かいしゃ</rt></ruby>を<ruby>辞<rt>や</rt></ruby>めて、<ruby>独立<rt>どくりつ</rt></ruby>して<ruby>開業<rt>かいぎょう</rt></ruby>した。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "開催",
+      "doc": "かいさい",
+      "doc_marked": "かいさ**い**",
+      "han_viet": "KHAI THÔI",
+      "nghia": "sự tổ chức, tổ chức",
+      "vi_du": "来年、この町でオリンピックが開催される。 (Sang năm, Olympic sẽ được tổ chức tại thành phố này.)",
+      "vi_du_ruby": "<ruby>来年<rt>らいねん</rt></ruby>、この<ruby>町<rt>まち</rt></ruby>でオリンピックが<ruby>開催<rt>かいさい</rt></ruby>される。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "開放",
+      "doc": "かいほう",
+      "doc_marked": "かいほ**う**",
+      "han_viet": "KHAI PHÓNG",
+      "nghia": "sự mở cửa, sự tự do hóa",
+      "vi_du": "夏休み中は、図書館を一般市民にも開放している。 (Trong kỳ nghỉ hè, thư viện cũng mở cửa cho người dân thường vào.)",
+      "vi_du_ruby": "<ruby>夏休<rt>なつやす</rt></ruby>み<ruby>中<rt>ちゅう</rt></ruby>は、<ruby>図書館<rt>としょかん</rt></ruby>を<ruby>一般市民<rt>いっぱんしみん</rt></ruby>にも<ruby>開放<rt>かいほう</rt></ruby>している。",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "閉鎖",
+          "doc": "へいさ",
+          "nghia": "phong tỏa, đóng kín"
+        }
+      ]
+    },
+    {
+      "kanji": "閉鎖",
+      "doc": "へいさ",
+      "doc_marked": "へいさ",
+      "han_viet": "BẾ TỎA",
+      "nghia": "sự phong bế, sự phong tỏa",
+      "vi_du": "経営不振のため、工場が閉鎖された。 (Do kinh doanh khó khăn, nhà máy đã bị đóng cửa.)",
+      "vi_du_ruby": "<ruby>経営不振<rt>けいえいふしん</rt></ruby>のため、<ruby>工場<rt>こうじょう</rt></ruby>が<ruby>閉鎖<rt>へいさ</rt></ruby>された。",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "開放",
+          "doc": "かいほう",
+          "nghia": "mở cửa, tự do hóa"
+        }
+      ]
+    },
+    {
+      "kanji": "密閉",
+      "doc": "みっぺい",
+      "doc_marked": "みっぺ**い**",
+      "han_viet": "MẬT BẾ",
+      "nghia": "kín hơi, kín gió",
+      "vi_du": "食品を密閉容器に入れて保存する。 (Cho thực phẩm vào hộp kín để bảo quản.)",
+      "vi_du_ruby": "<ruby>食品<rt>しょくひん</rt></ruby>を<ruby>密閉<rt>みっぺい</rt></ruby><ruby>容器<rt>ようき</rt></ruby>に<ruby>入<rt>い</rt></ruby>れて<ruby>保存<rt>ほぞん</rt></ruby>する。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "改善",
+      "doc": "かいぜん",
+      "doc_marked": "かいぜん",
+      "han_viet": "CẢI THIỆN",
+      "nghia": "cải thiện, cải cách",
+      "vi_du": "組合は待遇の改善を求めてストを行った。 (Các tổ chức công đoàn đã tổ chức những cuộc biểu tình đòi cải thiện chế độ đãi ngộ.) 「生活を改善しなければ、生活習慣病は治りません」 (Nếu không cải thiện cuộc sống thì sẽ không sửa được bệnh lối sống.)",
+      "vi_du_ruby": "<ruby>組合<rt>くみあい</rt></ruby>は<ruby>待遇<rt>たいぐう</rt></ruby>の<ruby>改善<rt>かいぜん</rt></ruby>を<ruby>求<rt>もと</rt></ruby>めてストを<ruby>行<rt>おこな</rt></ruby>った。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "改良",
+      "doc": "かいりょう",
+      "doc_marked": "かいり**ょう**",
+      "han_viet": "CẢI LƯƠNG",
+      "nghia": "sự cải thiện, sự cải tiến",
+      "vi_du": "その製品は改良を重ねることで、一層使いやすくなった。 (Sản phẩm này bao gồm những cải tiến nên đã dễ dàng sử dụng hơn rất nhiều.)",
+      "vi_du_ruby": "その<ruby>製品<rt>せいひん</rt></ruby>は<ruby>改良<rt>かいりょう</rt></ruby>を<ruby>重<rt>かさ</rt></ruby>ねることで、<ruby>一層<rt>いっそう</rt></ruby><ruby>使<rt>つか</rt></ruby>いやすくなった。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "改革",
+      "doc": "かいかく",
+      "doc_marked": "か**い**かく",
+      "han_viet": "CẢI CÁCH",
+      "nghia": "cải cách",
+      "vi_du": "古い制度を改革しなければ、この国の発展は望めない。 (Nếu không cải cách chế độ cũ thì không mong sự phát triển ở đất nước này.)",
+      "vi_du_ruby": "<ruby>古<rt>ふる</rt></ruby>い<ruby>制度<rt>せいど</rt></ruby>を<ruby>改革<rt>かいかく</rt></ruby>しなければ、この<ruby>国<rt>くに</rt></ruby>の<ruby>発展<rt>はってん</rt></ruby>は<ruby>望<rt>のぞ</rt></ruby>めない。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "改正",
+      "doc": "かいせい",
+      "doc_marked": "か**い**せ**い**",
+      "han_viet": "CẢI CHÍNH",
+      "nghia": "sự sửa chữa, sự thay đổi, sự chỉnh sửa",
+      "vi_du": "4月から新幹線のダイヤが改正されるそうだ。 (Nghe nói từ tháng 4 bảng giờ tàu shinkansen sẽ được thay đổi.) ｛法律/条約/規則...｝を改正する。 (Sửa chữa luật pháp/hiệp ước/quy tắc...)",
+      "vi_du_ruby": "4<ruby>月<rt>がつ</rt></ruby>から<ruby>新幹線<rt>しんかんせん</rt></ruby>のダイヤが<ruby>改正<rt>かいせい</rt></ruby>されるそうだ。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "改定",
+      "doc": "かいてい",
+      "doc_marked": "か**い**てい",
+      "han_viet": "CẢI ĐỊNH",
+      "nghia": "hiệu chỉnh",
+      "vi_du": "来年から消費税率が改定されることになった。 (Từ năm sau sẽ cải cách thuế tiêu thụ.) ｛定価/規則...｝を改定する。 (Hiệu chỉnh giá cố định/quy định...)",
+      "vi_du_ruby": "<ruby>来年<rt>らいねん</rt></ruby>から<ruby>消費税率<rt>しょうひぜいりつ</rt></ruby>が<ruby>改定<rt>かいてい</rt></ruby>されることになった。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "改修",
+      "doc": "かいしゅう",
+      "doc_marked": "か**い**しゅう",
+      "han_viet": "CẢI TU",
+      "nghia": "sự sửa chữa, sự cải tiến, nâng cấp",
+      "vi_du": "アパートが古くなったので、大規模な改修が行われることになった。 (Căn nhà đã cũ nên quyết định tổ chức cải cách với quy mô lớn.) ｛道路/橋/建築物/河川...｝を改修する。 (Sửa chữa con đường/cây cầu/công trình kiến trúc/dòng sông...)",
+      "vi_du_ruby": "アパートが<ruby>古<rt>ふる</rt></ruby>くなったので、<ruby>大規模<rt>だいきぼ</rt></ruby>な<ruby>改修<rt>かいしゅう</rt></ruby>が<ruby>行<rt>おこな</rt></ruby>われることになった。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "一致",
+      "doc": "いっち",
+      "doc_marked": "い**っ**ち",
+      "han_viet": "NHẤT TRÍ",
+      "nghia": "sự nhất trí, sự giống nhau, sự thống nhất",
+      "vi_du": "二人の意見が一致した。 (Thống nhất ý kiến hai người với nhau.) 彼の指紋が、現場に残された指紋と一致した。 (Dấu vân tay của anh ấy trùng với dấu vân tay ở hiện trường.)",
+      "vi_du_ruby": "<ruby>二人<rt>ふたり</rt></ruby>の<ruby>意見<rt>いけん</rt></ruby>が<ruby>一致<rt>いっち</rt></ruby>した。",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "不一致",
+          "doc": "ふいっち",
+          "nghia": "sự không khớp, bất đồng"
+        }
+      ]
+    },
+    {
+      "kanji": "一方",
+      "doc": "いっぽう",
+      "doc_marked": "い**っ**ぽ**う**",
+      "han_viet": "NHẤT PHƯƠNG",
+      "nghia": "đơn phương, một chiều, mặt khác",
+      "vi_du": "飛行機の中で乗客が一方に片寄ると危ない。 (Trong máy bay, hành khách dồn về một phía sẽ rất nguy hiểm.) マウスを2グループに分け、一方にはAの薬を、もう一方にはBの薬を与えた。 (Chia chuột thành hai nhóm, một nhóm chịu ảnh hưởng của thuốc A, nhóm còn lại là thuốc B.)",
+      "vi_du_ruby": "<ruby>飛行機<rt>ひこうき</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で<ruby>乗客<rt>じょうきゃく</rt></ruby>が<ruby>一方<rt>いっぽう</rt></ruby>に<ruby>片寄<rt>かたよ</rt></ruby>ると<ruby>危<rt>きけん</rt></ruby>ない。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "一定",
+      "doc": "いってい",
+      "doc_marked": "い**っ**て**い**",
+      "han_viet": "NHẤT ĐỊNH",
+      "nghia": "nhất định",
+      "vi_du": "倉庫の中は一定の温度を保たれている。 (Trong kho đang bảo quản một nhiệt độ nhất định.) 一定の成績を取らなければ、奨学金はもらえない。 (Nếu không đạt được thành tích nhất định thì sẽ không thể nhận được học bổng.)",
+      "vi_du_ruby": "<ruby>倉庫<rt>そうこ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>は<ruby>一定<rt>いってい</rt></ruby>の<ruby>温度<rt>おんど</rt></ruby>を<ruby>保<rt>たも</rt></ruby>たれている。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "一人前",
+      "doc": "いちにんまえ",
+      "doc_marked": "いちにんま**え**",
+      "han_viet": "NHẤT NHÂN TIỀN",
+      "nghia": "người lớn, người trưởng thành",
+      "vi_du": "経済的に親から独立しなければ、一人前とは言えないだろう。 (Nếu không độc lập kinh tế khỏi bố mẹ thì không thể nói là người lớn được.) 「すし、一人前お願いします」 (Cho tôi một suất sushi người lớn.)",
+      "vi_du_ruby": "<ruby>経済的<rt>けいざいてき</rt></ruby>に<ruby>親<rt>おや</rt></ruby>から<ruby>独立<rt>どくりつ</rt></ruby>しなければ、<ruby>一人前<rt>いちにんまえ</rt></ruby>とは<ruby>言<rt>い</rt></ruby>えないだろう。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "一流",
+      "doc": "いちりゅう",
+      "doc_marked": "いちり**ゅう**",
+      "han_viet": "NHẤT LƯU",
+      "nghia": "bậc nhất, hạng nhất, hàng đầu, cao cấp",
+      "vi_du": "彼がまだ若いが、コックとしての腕は一流だ。 (Anh ấy vẫn còn trẻ nhưng tay nghề nấu ăn thì bậc nhất.) 一流の｛ホテル/店/企業/人物...｝。 (Khách sạn/cửa hàng/xí nghiệp/nhân vật... hàng đầu.)",
+      "vi_du_ruby": "<ruby>彼<rt>かれ</rt></ruby>がまだ<ruby>若<rt>わか</rt></ruby>いが、コックとしての<ruby>腕<rt>うで</rt></ruby>は<ruby>一流<rt>いちりゅう</rt></ruby>だ。",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

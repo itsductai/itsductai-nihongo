@@ -2,334 +2,154 @@
   "title": "Đề thi JLPT N2 2023-12 (Official)",
   "questions": [
     {
-      "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n昨日から<u>腕</u>が痛くて困っている。",
+      "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n昨日から\"腕\"が痛くて困っている。",
       "options": ["こし", "うで", "かた", "ひざ"],
-      "dap_an_dung": 1,
-      "giai_thich": [
-        "Sai. 腰 (こし): eo, hông.",
-        "Đúng. 腕 (うで): cánh tay. => Dịch câu: Từ hôm qua cánh tay tôi bị đau nên rất khổ sở.",
-        "Sai. 肩 (かた): vai.",
-        "Sai. 膝 (ひざ): đầu gối."
-      ]
+      "dap_an_dung": 1
     },
     {
-      "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n青木さんは<u>善良</u>な人です。",
+      "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n青木さんは\"善良\"な人です。",
       "options": ["せんりょう", "ぜんりゅう", "ぜんりょう", "せんりゅう"],
-      "dap_an_dung": 2,
-      "giai_thich": [
-        "Sai. Không tồn tại.",
-        "Sai. Không tồn tại.",
-        "Đúng. 善良 (ぜんりょう): lương thiện. => Dịch câu: Anh Aoki là người lương thiện.",
-        "Sai. Không tồn tại."
-      ]
+      "dap_an_dung": 2
     },
     {
-      "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n丸山さんは意外に<u>幼い</u>ところがある。",
+      "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n丸山さんは意外に\"幼い\"ところがある。",
       "options": ["おさない", "するどい", "かしこい", "しつこい"],
-      "dap_an_dung": 0,
-      "giai_thich": [
-        "Đúng. 幼い (おさない): ngây thơ, trẻ con. => Dịch câu: Anh Maruyama có những nét trẻ con/ngây thơ đến bất ngờ.",
-        "Sai. 鋭い (するどい): sắc bén.",
-        "Sai. 賢い (かしこい): thông minh.",
-        "Sai. しつこい: dai dẳng."
-      ]
+      "dap_an_dung": 0
     },
     {
-      "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n古いデータを<u>削除</u>した。",
+      "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n古いデータを\"削除\"した。",
       "options": ["そくよ", "さくよ", "そくじょ", "さくじょ"],
-      "dap_an_dung": 3,
-      "giai_thich": [
-        "Sai. Không tồn tại.",
-        "Sai. Không tồn tại.",
-        "Sai. Không tồn tại.",
-        "Đúng. 削除 (さくじょ): xóa. => Dịch câu: Tôi đã xóa dữ liệu cũ."
-      ]
+      "dap_an_dung": 3
     },
     {
-      "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n私たちは働く機会の<u>平等</u>を求めています。",
+      "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n私たちは働く機会の\"平等\"を求めています。",
       "options": ["へいど", "びょうどう", "びょうど", "へいどう"],
-      "dap_an_dung": 1,
-      "giai_thich": [
-        "Sai. Không tồn tại.",
-        "Đúng. 平等 (びょうどう): bình đẳng. => Dịch câu: Chúng tôi đang đòi hỏi sự bình đẳng về cơ hội việc làm.",
-        "Sai. Không tồn tại.",
-        "Sai. Không tồn tại."
-      ]
+      "dap_an_dung": 1
     },
     {
-      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\nお金の<u>かんり</u>は、きちんとしてください。",
+      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\nお金の\"かんり\"は、きちんとしてください。",
       "options": ["管利", "官理", "管理", "官利"],
-      "dap_an_dung": 2,
-      "giai_thich": [
-        "Sai. Không tồn tại.",
-        "Sai. Không tồn tại.",
-        "Đúng. 管理 (かんり): quản lý. => Dịch câu: Hãy quản lý tiền bạc cho cẩn thận nhé.",
-        "Sai. Không tồn tại."
-      ]
+      "dap_an_dung": 2
     },
     {
-      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\n今日から2週間の<u>けんしゅう</u>を行います。",
+      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\n今日から2週間の\"けんしゅう\"を行います。",
       "options": ["演習", "研習", "研修", "演修"],
-      "dap_an_dung": 2,
-      "giai_thich": [
-        "Sai. 演習 (えんしゅう): diễn tập.",
-        "Sai. Không tồn tại.",
-        "Đúng. 研修 (けんしゅう): thực tập, đào tạo. => Dịch câu: Từ hôm nay chúng tôi sẽ tổ chức đợt đào tạo kéo dài 2 tuần.",
-        "Sai. Không tồn tại."
-      ]
+      "dap_an_dung": 2
     },
     {
-      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\n社会は<u>たえず</u>変化している。",
+      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\n社会は\"たえず\"変化している。",
       "options": ["完えず", "絶えず", "停えず", "滞えず"],
-      "dap_an_dung": 1,
-      "giai_thich": [
-        "Sai. Không tồn tại.",
-        "Đúng. 絶えず (たえず): liên tục, không ngừng. => Dịch câu: Xã hội đang không ngừng biến đổi.",
-        "Sai. Không tồn tại.",
-        "Sai. Không tồn tại."
-      ]
+      "dap_an_dung": 1
     },
     {
-      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\n選挙で誰に<u>とうひょう</u>するかまだ決めていない。",
+      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\n選挙で誰に\"とうひょう\"するかまだ決めていない。",
       "options": ["投票", "当票", "投標", "当標"],
-      "dap_an_dung": 0,
-      "giai_thich": [
-        "Đúng. 投票 (とうひょう): bỏ phiếu. => Dịch câu: Tôi vẫn chưa quyết định sẽ bỏ phiếu cho ai trong cuộc bầu cử.",
-        "Sai. Không tồn tại.",
-        "Sai. Không tồn tại.",
-        "Sai. Không tồn tại."
-      ]
+      "dap_an_dung": 0
     },
     {
-      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\n中島さんは何かを<u>かかえて</u>部屋に入ってきた。",
+      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\n中島さんは何かを\"かかえて\"部屋に入ってきた。",
       "options": ["押えて", "捕えて", "握えて", "抱えて"],
-      "dap_an_dung": 3,
-      "giai_thich": [
-        "Sai. 押さえる (おさえる): giữ, nắm bắt.",
-        "Sai. 捕らえる (とらえる): bắt giữ.",
-        "Sai. Không tồn tại.",
-        "Đúng. 抱える (かかえる): ôm, mang vác. => Dịch câu: Anh Nakajima đã ôm thứ gì đó đi vào phòng."
-      ]
+      "dap_an_dung": 3
     },
     {
       "de_bai": "問題3 ( )に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n彼は兄に対抗( )を持っているようだ。",
       "options": ["心", "欲", "願", "熱"],
-      "dap_an_dung": 0,
-      "giai_thich": [
-        "Đúng. 対抗心 (たいこうしん): tinh thần ganh đua. => Dịch câu: Có vẻ như cậu ấy có tâm lý ganh đua với anh trai mình.",
-        "Sai. Không ghép thành 対抗欲.",
-        "Sai. Không ghép thành 対抗願.",
-        "Sai. Không ghép thành 対抗熱."
-      ]
+      "dap_an_dung": 0
     },
     {
       "de_bai": "問題3 ( )に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n引っ越しのための( )手続きをしなければならない。",
       "options": ["総", "複", "多", "諸"],
-      "dap_an_dung": 3,
-      "giai_thich": [
-        "Sai. Không ghép thành 総手続き.",
-        "Sai. Không ghép thành 複手続き.",
-        "Sai. Không ghép thành 多手続き.",
-        "Đúng. 諸手続き (しょてつづき): các loại thủ tục. => Dịch câu: Tôi phải làm các loại thủ tục để chuyển nhà."
-      ]
+      "dap_an_dung": 3
     },
     {
       "de_bai": "問題3 ( )に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n買い物をしている二人( )にインタビューをしました。",
       "options": ["出かけ", "連れ", "会い", "集まり"],
-      "dap_an_dung": 1,
-      "giai_thich": [
-        "Sai. Không có cấu trúc này.",
-        "Đúng. 二人連れ (ふたりづれ): nhóm 2 người đi cùng nhau. => Dịch câu: Chúng tôi đã phỏng vấn một nhóm hai người đang đi mua sắm cùng nhau.",
-        "Sai. Không có cấu trúc này.",
-        "Sai. Không có cấu trúc này."
-      ]
+      "dap_an_dung": 1
     },
     {
       "de_bai": "問題4 ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\nこのアニメは、登場人物がとてもかわいいと、若者の間で( )になっている。",
       "options": ["課題", "題名", "題材", "話題"],
-      "dap_an_dung": 3,
-      "giai_thich": [
-        "Sai. 課題 (かだい): vấn đề cần giải quyết.",
-        "Sai. 題名 (だいめい): nhan đề.",
-        "Sai. 題材 (だいざい): đề tài.",
-        "Đúng. 話題 (わだい): chủ đề trò chuyện. => Dịch câu: Bộ anime này đang trở thành chủ đề bàn tán sôi nổi trong giới trẻ vì các nhân vật rất dễ thương."
-      ]
+      "dap_an_dung": 3
     },
     {
       "de_bai": "問題4 ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\nあのとき、友達に謝らなかったことをずっと( )している。",
       "options": ["同情", "後悔", "我慢", "恐縮"],
-      "dap_an_dung": 1,
-      "giai_thich": [
-        "Sai. 同情 (どうじょう): đồng cảm.",
-        "Đúng. 後悔 (こうかい): hối hận. => Dịch câu: Tôi vẫn luôn hối hận vì lúc đó đã không xin lỗi bạn mình.",
-        "Sai. 我慢 (がまん): chịu đựng.",
-        "Sai. 恐縮 (きょうしゅく): áy náy."
-      ]
+      "dap_an_dung": 1
     },
     {
       "de_bai": "問題4 ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n楽器の音量を確認するために、コンサートの前日に会場で( )をした。",
       "options": ["チャージ", "アポイントメント", "オリエンテーション", "リハーサル"],
-      "dap_an_dung": 3,
-      "giai_thich": [
-        "Sai. チャージ (charge): sạc, nạp tiền.",
-        "Sai. アポイントメント (appointment): cuộc hẹn.",
-        "Sai. オリエンテーション (orientation): buổi định hướng.",
-        "Đúng. リハーサル (rehearsal): diễn tập. => Dịch câu: Để kiểm tra âm lượng của nhạc cụ, chúng tôi đã diễn tập tại hội trường vào ngày trước buổi hòa nhạc."
-      ]
+      "dap_an_dung": 3
     },
     {
       "de_bai": "問題4 ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\nこの魚は、いつでもこの辺りの海にいるわけではなく、( )の時期にしかいない。",
       "options": ["特定", "指定", "固定", "限定"],
-      "dap_an_dung": 0,
-      "giai_thich": [
-        "Đúng. 特定 (とくてい): đặc định, cụ thể. => Dịch câu: Loài cá này không phải lúc nào cũng có ở vùng biển quanh đây, mà chỉ xuất hiện vào những thời điểm cụ thể nhất định.",
-        "Sai. 指定 (してい): chỉ định.",
-        "Sai. 固定 (こてい): cố định.",
-        "Sai. 限定 (げんてい): giới hạn."
-      ]
+      "dap_an_dung": 0
     },
     {
       "de_bai": "問題4 ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\nこの季節は乾燥していて、肌が( )になる。",
       "options": ["どろどろ", "ふさふさ", "かさかさ", "べたべた"],
-      "dap_an_dung": 2,
-      "giai_thich": [
-        "Sai. どろどろ: dính nhớp (bùn).",
-        "Sai. ふさふさ: rậm rạp (tóc).",
-        "Đúng. かさかさ: khô khốc, thô ráp. => Dịch câu: Mùa này thời tiết hanh khô nên da dẻ trở nên khô khốc.",
-        "Sai. べたべた: dính dính (mồ hôi)."
-      ]
+      "dap_an_dung": 2
     },
     {
       "de_bai": "問題4 ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n先生の発音をよく聞いて、同じになるように発音を( )みましょう。",
       "options": ["まねて", "かなえて", "映して", "保って"],
-      "dap_an_dung": 0,
-      "giai_thich": [
-        "Đúng. 真似る (まねる): bắt chước. => Dịch câu: Hãy nghe kỹ phát âm của giáo viên và thử bắt chước phát âm sao cho giống nhé.",
-        "Sai. 叶える (かなえる): hiện thực hóa.",
-        "Sai. 映す (うつす): phản chiếu.",
-        "Sai. 保つ (たもつ): giữ gìn."
-      ]
+      "dap_an_dung": 0
     },
     {
       "de_bai": "問題4 ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n金子さんとは初めて会ったが、お互いサッカーが大好きだと分かって、話が( )。",
       "options": ["飛び出した", "行き過ぎた", "盛り上がった", "駆け抜けた"],
-      "dap_an_dung": 2,
-      "giai_thich": [
-        "Sai. 飛び出す (とびだす): lao ra.",
-        "Sai. 行き過ぎる (いきすぎる): đi quá đà.",
-        "Đúng. 盛り上がる (もりあがる): sôi nổi. => Dịch câu: Dù mới gặp anh Kaneko lần đầu nhưng khi biết cả hai đều rất thích bóng đá, cuộc trò chuyện đã trở nên vô cùng sôi nổi.",
-        "Sai. 駆け抜ける (かけぬける): chạy xuyên qua."
-      ]
+      "dap_an_dung": 2
     },
     {
-      "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\nこれについては、<u>各自</u>が責任を持つことにします。",
+      "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\nこれについては、\"各自\"が責任を持つことにします。",
       "options": ["私", "代表者", "一人一人", "あなた"],
-      "dap_an_dung": 2,
-      "giai_thich": [
-        "Sai. 私: tôi.",
-        "Sai. 代表者: người đại diện.",
-        "Đúng. 各自 (かくじ) = 一人一人: mỗi cá nhân. => Dịch câu: Về vấn đề này, mỗi cá nhân sẽ tự chịu trách nhiệm.",
-        "Sai. あなた: bạn."
-      ]
+      "dap_an_dung": 2
     },
     {
-      "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n明日はレポートを<u>仕上げる</u>つもりです。",
+      "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n明日はレポートを\"仕上げる\"つもりです。",
       "options": ["書く", "完成させる", "出す", "整理する"],
-      "dap_an_dung": 1,
-      "giai_thich": [
-        "Sai. 書く (かく): viết.",
-        "Đúng. 仕上げる (しあげる) = 完成させる: hoàn thành. => Dịch câu: Tôi định ngày mai sẽ hoàn thành báo cáo.",
-        "Sai. 出す (だす): nộp.",
-        "Sai. 整理する (せいりする): sắp xếp lại."
-      ]
+      "dap_an_dung": 1
     },
     {
-      "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\nそれは<u>深刻な</u>問題だ。",
+      "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\nそれは\"深刻な\"問題だ。",
       "options": ["単純な", "身近な", "微妙な", "重大な"],
-      "dap_an_dung": 3,
-      "giai_thich": [
-        "Sai. 単純 (たんじゅん): đơn giản.",
-        "Sai. 身近 (みぢか): gần gũi.",
-        "Sai. 微妙 (びみょう): tinh tế, khó tả.",
-        "Đúng. 深刻 (しんこく) = 重大 (じゅうだい): nghiêm trọng. => Dịch câu: Đó là một vấn đề nghiêm trọng."
-      ]
+      "dap_an_dung": 3
     },
     {
-      "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n今日は<u>同僚</u>と食事に行く予定です。",
+      "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n今日は\"同僚\"と食事に行く予定です。",
       "options": ["同じ会社の人", "同じアパートの人", "同じ出身地の人", "同じクラスの人"],
-      "dap_an_dung": 0,
-      "giai_thich": [
-        "Đúng. 同僚 (どうりょう) = 同じ会社の人: đồng nghiệp. => Dịch câu: Hôm nay tôi dự định đi ăn với đồng nghiệp.",
-        "Sai. Người cùng chung cư.",
-        "Sai. Người cùng quê.",
-        "Sai. Người cùng lớp."
-      ]
+      "dap_an_dung": 0
     },
     {
-      "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n前田さんはさっきから<u>うつむいて</u>いる。",
+      "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n前田さんはさっきから\"うつむいて\"いる。",
       "options": ["上を向いて", "横を向いて", "下を向いて", "後ろを向いて"],
-      "dap_an_dung": 2,
-      "giai_thich": [
-        "Sai. Ngước lên trên.",
-        "Sai. Nhìn sang ngang.",
-        "Đúng. 俯く (うつむく) = 下を向いて: cúi gầm mặt. => Dịch câu: Anh Maeda cứ cúi gầm mặt xuống từ nãy đến giờ.",
-        "Sai. Quay ra đằng sau."
-      ]
+      "dap_an_dung": 2
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「廃止」",
       "options": ["両親は20年以上続けてきた店を廃止することにした。", "点検のため、午前中はエレベーターの使用を廃止します。", "雨が降ってきたので、今日のイベントは廃止します。", "時代に合わない古い制度は廃止したほうがいい。"],
-      "dap_an_dung": 3,
-      "giai_thich": [
-        "Sai. Đóng cửa tiệm dùng 閉店 (へいてん) hoặc 廃業 (はいぎょう).",
-        "Sai. Tạm dừng thang máy dùng 停止 (ていし) hoặc 中止 (ちゅうし).",
-        "Sai. Hủy sự kiện dùng 中止 (ちゅうし).",
-        "Đúng. 廃止 (はいし): bãi bỏ. => Dịch câu: Nên bãi bỏ những chế độ cũ không còn phù hợp với thời đại."
-      ]
+      "dap_an_dung": 3
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「腫れる」",
       "options": ["森さんのポケットは、物が多くて腫れている。", "今日はたくさん食べたので、おなかが腫れている。", "サッカーの試合でけがをして、足が腫れてしまった。", "オーブンでクッキーを焼いたら、だんだん腫れてきた。"],
-      "dap_an_dung": 2,
-      "giai_thich": [
-        "Sai. Túi phồng dùng 膨らむ (ふくらむ).",
-        "Sai. Bụng no căng dùng 膨れる (ふくれる).",
-        "Đúng. 腫れる (はれる): sưng tấy. => Dịch câu: Do bị thương trong trận bóng đá nên chân tôi đã bị sưng tấy lên.",
-        "Sai. Bánh nở dùng 膨らむ (ふくらむ)."
-      ]
+      "dap_an_dung": 2
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「上達」",
       "options": ["毎日練習しているので、ピアノがかなり上達した。", "いい病院で治療してもらえたようで、祖父の体調は上達した。", "同じ作家が好きなことが分かって、大野さんとの仲が上達した。", "小川さんが詳しく説明してくれたので、理解が上達した。"],
-      "dap_an_dung": 0,
-      "giai_thich": [
-        "Đúng. 上達 (じょうたつ): tiến bộ (kỹ năng). => Dịch câu: Vì ngày nào cũng luyện tập nên tôi đã đánh piano tiến bộ hơn khá nhiều.",
-        "Sai. Sức khỏe tiến triển dùng 回復 (かいふく) hoặc よくなる.",
-        "Sai. Mối quan hệ tiến triển dùng 深まる (ふかまる).",
-        "Sai. Sự thấu hiểu dùng 深まる (ふかまる)."
-      ]
+      "dap_an_dung": 0
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「暮れ」",
       "options": ["この物語の暮れは、意外な内容だった。", "旅行の暮れに、みんなで記念に写真を撮った。", "授業の暮れに、先生が今日の宿題を出した。", "今年の暮れは、実家で両親と過ごしたい。"],
-      "dap_an_dung": 3,
-      "giai_thich": [
-        "Sai. Phần kết truyện dùng 結末 (けつまつ).",
-        "Sai. Cuối chuyến đi dùng 終わり (おわり).",
-        "Sai. Cuối giờ học dùng 終わり (おわり).",
-        "Đúng. 暮れ (くれ): dịp cuối năm. => Dịch câu: Dịp cuối năm nay, tôi muốn dành thời gian ở nhà cùng với bố mẹ."
-      ]
+      "dap_an_dung": 3
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「残高」",
       "options": ["私たちが会議室を利用できる残高は、あと10分です。", "私の銀行口座の残高は、1,000円しかありません。", "この町の残高は、ついに1万人を下回りました。", "山の頂上までの残高は、100メートルくらいです。"],
-      "dap_an_dung": 1,
-      "giai_thich": [
-        "Sai. Thời gian còn lại dùng 残り時間 (のこりじかん).",
-        "Đúng. 残高 (ざんだか): số dư (tài khoản). => Dịch câu: Số dư trong tài khoản ngân hàng của tôi chỉ còn đúng 1.000 yên.",
-        "Sai. Dân số còn lại dùng 残りの人口 (のこりのじんこう) hoặc 残り.",
-        "Sai. Quãng đường còn lại dùng 残り (のこり)."
-      ]
+      "dap_an_dung": 1
     }
   ]
 }
