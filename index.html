@@ -368,6 +368,50 @@
     </div>
 
     <!-- ===================================================================
+         TRANG "NHÓM NGỮ PHÁP" — xem theo nhóm nghĩa + họ dễ nhầm, học Flashcard
+         chọn lọc theo nhóm, Quiz chuyên biệt luyện phân biệt cấu trúc dễ nhầm.
+    =================================================================== -->
+    <section class="view hidden" id="view-grammargroups">
+      <div class="view-head">
+        <div class="weakness-title">📚 Nhóm ngữ pháp — học chọn lọc theo nghĩa &amp; phân biệt cấu trúc dễ nhầm</div>
+      </div>
+      <div class="gg-tabs">
+        <button class="gg-tab-btn is-active" data-tab="nhomnghia">Theo nhóm nghĩa</button>
+        <button class="gg-tab-btn" data-tab="hodenham">⚠️ Họ dễ nhầm</button>
+      </div>
+      <div id="grammarGroupsBody"></div>
+    </section>
+
+    <!-- Modal Flashcard chọn lọc theo nhóm nghĩa -->
+    <div class="modal-overlay hidden" id="ggFlashModalOverlay">
+      <div class="modal-box gg-flash-modal-box">
+        <div class="modal-head">
+          <div class="modal-title" id="ggFlashTitle">Flashcard nhóm</div>
+          <button class="modal-close-btn" id="btnGgFlashClose">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="gg-flash-card" id="ggFlashCardInner"></div>
+          <div class="gg-flash-nav">
+            <button id="btnGgFlashPrev">← Trước</button>
+            <button id="btnGgFlashFlip">↻ Lật thẻ</button>
+            <button id="btnGgFlashNext">Tiếp →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Quiz luyện phân biệt 1 họ dễ nhầm -->
+    <div class="modal-overlay hidden" id="ggQuizModalOverlay">
+      <div class="modal-box">
+        <div class="modal-head">
+          <div class="modal-title" id="ggQuizTitle">Luyện phân biệt</div>
+          <button class="modal-close-btn" id="btnGgQuizClose">✕</button>
+        </div>
+        <div class="modal-body" id="ggQuizBody"></div>
+      </div>
+    </div>
+
+    <!-- ===================================================================
          CHOUKAI MODE — Luyện nghe (聴解) theo từng đề/mondai thật
     =================================================================== -->
     <section class="view hidden" id="view-choukai">
@@ -638,15 +682,16 @@
      load SAU CÙNG vì nó chạy code thực thi ngay (DOMContentLoaded) cần mọi hàm
      ở các module khác đã được định nghĩa xong. Xem mục cấu trúc file trong
      README.md để biết module nào phụ trách phần nào. -->
-<script src="js/core.js?v=2"></script>
+<script src="js/core.js?v=3"></script>
 <script src="js/stats-weakness.js?v=3"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=3"></script>
+<script src="js/loader-nav.js?v=4"></script>
 <script src="js/flashcard-edit.js?v=2"></script>
 <script src="js/table-srs-typing.js?v=1"></script>
 <script src="js/quiz-match.js?v=1"></script>
 <script src="js/exam.js?v=4"></script>
 <script src="js/choukai.js?v=3"></script>
-<script src="js/init.js?v=6"></script>
+<script src="js/grammar-groups.js?v=1"></script>
+<script src="js/init.js?v=7"></script>
 </body>
 </html>

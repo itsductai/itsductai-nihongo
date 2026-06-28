@@ -6,6 +6,8 @@ const App = {
   decks: [],
   exams: [],
   grammarIndex: {}, // tra cứu cautruc -> cả entry NGUPHAP, build lại bằng buildGrammarIndex()
+  grammarGroupsData: null, // data/grammar-groups.json — nhóm nghĩa + họ dễ nhầm
+  grammarGroupsTab: "nhomnghia",
   currentDeckId: null,
   currentDeckType: null, // "TUVUNG" | "NGUPHAP"
   currentWords: [],

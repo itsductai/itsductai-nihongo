@@ -1277,3 +1277,72 @@ mark.exam-note-mark {
 .grammar-related-nghia.is-unknown { color: var(--text-2); font-style: italic; font-size: 12px; }
 .grammar-related-nghia-inline { font-weight: 400; color: var(--text-1); font-size: 12.5px; }
 .grammar-related-khacbiet { color: var(--text-1); margin-top: 4px; font-size: 12.5px; }
+
+/* ===== Trang "Nhóm ngữ pháp" — theo nghĩa + họ dễ nhầm ===== */
+.gg-tabs { display: flex; gap: 8px; margin: 0 0 16px; }
+.gg-tab-btn {
+  padding: 8px 18px; border-radius: 16px; border: 1px solid var(--border);
+  background: var(--bg-2); color: var(--text-1); font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.gg-tab-btn.is-active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.gg-group { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+.gg-group-head {
+  display: flex; align-items: center; gap: 12px; padding: 12px 16px; cursor: pointer;
+  background: var(--bg-2);
+}
+.gg-group-title { font-weight: 700; color: var(--text-0); flex: 1; }
+.gg-group-count { font-size: 12px; color: var(--text-2); }
+.gg-flash-btn {
+  background: var(--accent); color: #fff; border: none; border-radius: 14px;
+  padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; flex-shrink: 0;
+}
+.gg-group-items { padding: 14px 16px; background: var(--bg-1); }
+.gg-item { padding: 10px 0; border-bottom: 1px solid var(--border); }
+.gg-item:last-child { border-bottom: none; }
+.gg-item-cautruc { font-size: 15px; font-weight: 800; color: var(--text-0); }
+.gg-item-nghia { color: var(--text-1); margin-top: 2px; font-size: 13px; }
+.gg-item-structure { color: var(--text-2); font-size: 11.5px; margin-top: 2px; font-style: italic; }
+.gg-item-vidu { margin-top: 6px; font-size: 12.5px; }
+.gg-item-dongnghia { margin-top: 4px; font-size: 11.5px; color: var(--good); }
+
+.gg-family { border: 1px solid var(--warn); border-radius: 10px; margin-bottom: 14px; overflow: hidden; }
+.gg-family-head {
+  display: flex; align-items: center; gap: 12px; padding: 12px 16px;
+  background: var(--warn-soft, rgba(250,166,26,0.15));
+}
+.gg-family-title { font-weight: 700; color: var(--text-0); flex: 1; }
+.gg-quiz-btn {
+  background: var(--warn); color: #1f1300; border: none; border-radius: 14px;
+  padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; flex-shrink: 0;
+}
+.gg-family-members { padding: 12px 16px; display: grid; gap: 10px; }
+.gg-member { background: var(--bg-2); border-radius: 8px; padding: 10px 12px; border-left: 3px solid var(--accent); }
+.gg-member.is-refonly { border-left-color: var(--text-2); opacity: 0.85; }
+.gg-member-cautruc { font-weight: 800; font-size: 14px; color: var(--text-0); }
+.gg-member-nghia { color: var(--text-1); font-size: 12.5px; margin-top: 2px; }
+.gg-member-khacbiet { color: var(--text-1); font-size: 12px; margin-top: 4px; }
+.gg-member-vidu { margin-top: 6px; font-size: 12px; }
+.gg-member-tag { font-size: 10.5px; color: var(--text-2); margin-top: 4px; font-style: italic; }
+
+.gg-flash-modal-box { width: 480px; max-width: 92vw; }
+.gg-flash-card {
+  min-height: 220px; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: var(--bg-2); border-radius: 12px; padding: 24px; cursor: pointer; text-align: center; gap: 8px;
+}
+.gg-flash-front-cautruc { font-size: 24px; }
+.gg-flash-hint { font-size: 11.5px; color: var(--text-2); margin-top: 10px; }
+.gg-flash-nav { display: flex; gap: 8px; margin-top: 14px; }
+.gg-flash-nav button {
+  flex: 1; padding: 9px 0; border-radius: 8px; border: 1px solid var(--border);
+  background: var(--bg-2); color: var(--text-0); font-size: 13px; font-weight: 600; cursor: pointer;
+}
+.gg-flash-nav button:hover { border-color: var(--accent); color: var(--accent); }
+
+.gg-quiz-prompt { font-size: 15px; text-align: center; margin-bottom: 16px; line-height: 1.6; }
+.gg-quiz-explain { margin-top: 14px; padding: 12px; background: var(--bg-2); border-radius: 8px; }
+.gg-quiz-next-btn {
+  display: block; width: 100%; margin-top: 14px; padding: 10px 0; border-radius: 8px; border: none;
+  background: var(--accent); color: #fff; font-size: 13px; font-weight: 700; cursor: pointer;
+}
+.gg-quiz-result { text-align: center; font-size: 16px; padding: 20px 0; line-height: 1.8; }

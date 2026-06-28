@@ -223,6 +223,20 @@ function renderNav() {
     nav.appendChild(shadowBtn);
   }
 
+  if (App.grammarGroupsData) {
+    const ggLabel = document.createElement("div");
+    ggLabel.className = "nav-section-label";
+    ggLabel.textContent = "Học thông minh";
+    nav.appendChild(ggLabel);
+
+    const ggBtn = document.createElement("button");
+    ggBtn.className = "nav-item";
+    ggBtn.dataset.mode = "grammargroups";
+    ggBtn.innerHTML = `<span class="nav-icon">📚</span> <span>Nhóm ngữ pháp</span>`;
+    ggBtn.addEventListener("click", () => setMode("grammargroups"));
+    nav.appendChild(ggBtn);
+  }
+
   // Re-apply active state for current mode if any nav-item matches
   const current = document.querySelector(".view:not(.hidden)");
   if (current) {
@@ -308,6 +322,7 @@ function setMode(mode) {
   if (mode === "weakness") renderWeaknessMode();
   if (mode === "stats") renderStatsMode();
   if (mode === "examnotes") renderExamNotesMode();
+  if (mode === "grammargroups") renderGrammarGroupsMode();
 }
 
 /* ===================================================================

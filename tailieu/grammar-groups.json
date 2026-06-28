@@ -1,0 +1,1911 @@
+{
+  "nhom_nghia": [
+    {
+      "so": "00",
+      "ten": "Khác / Cần xếp tay",
+      "items": [
+        {
+          "cautruc": "長けている",
+          "nghia": "Xuất sắc về mặt nào đó / Có tài vượt trội về lĩnh vực X.",
+          "cau_truc_ngu_phap": "N に長けている（たけている）",
+          "vi_du": "彼は<ruby>語学<rt>ごがく</rt></ruby>に<ruby>長<rt>た</rt></ruby>けている。(Anh ấy cực kỳ xuất sắc về mặt ngoại ngữ.)",
+          "dong_nghia": [
+            "優れている",
+            "上手だ"
+          ]
+        },
+        {
+          "cautruc": "念頭に置く",
+          "nghia": "Ghim vào trong đầu / Luôn luôn giữ ý thức về điều này trong suốt quá trình làm việc khác.",
+          "cau_truc_ngu_phap": "N を念頭に置く（ねんとうにおく）",
+          "vi_du": "その<ruby>点<rt>てん</rt></ruby>を<ruby>念頭<rt>ねんとう</rt></ruby>に<ruby>置<rt>お</rt></ruby>いて<ruby>計画<rt>けいかく</rt></ruby>を<ruby>立<rt>た</rt></ruby>てる。(Lập kế hoạch trong khi luôn ghim điều đó trong đầu.)",
+          "dong_nghia": [
+            "意識する",
+            "考慮する"
+          ]
+        },
+        {
+          "cautruc": "構え",
+          "nghia": "Tâm thế / Tư thế chuẩn bị sẵn sàng về mặt tinh thần trước một sự việc.",
+          "cau_truc_ngu_phap": "N の構え / Vる構え（かまえ）",
+          "vi_du": "<ruby>試合<rt>しあい</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に、<ruby>相手<rt>あいて</rt></ruby>の<ruby>構<rt>かま</rt></ruby>えをよく<ruby>観察<rt>かんさつ</rt></ruby>した。(Trước trận đấu, tôi đã quan sát kỹ tư thế chuẩn bị của đối phương.)",
+          "dong_nghia": [
+            "心構え (tâm thế, sự chuẩn bị tinh thần)",
+            "態度 (thái độ)"
+          ]
+        },
+        {
+          "cautruc": "〜おきに",
+          "nghia": "Cách khoảng... (định kỳ, đều đặn)",
+          "cau_truc_ngu_phap": "Số lượng + おきに",
+          "vi_du": "このバスは10分おきに<ruby>来<rt>く</rt></ruby>る。(Xe bus này cách 10 phút lại có 1 chuyến.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜末に／〜た末に",
+          "nghia": "Sau nhiều trăn trở/nỗ lực, cuối cùng...",
+          "cau_truc_ngu_phap": "V-た + 末に",
+          "vi_du": "<ruby>長<rt>なが</rt></ruby>い<ruby>議論<rt>ぎろん</rt></ruby>の末に、<ruby>結論<rt>けつろん</rt></ruby>が出た。(Sau cuộc tranh luận kéo dài, cuối cùng đã có kết luận.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜だらけ",
+          "nghia": "Đầy (luôn mang sắc thái tiêu cực)",
+          "cau_truc_ngu_phap": "N + だらけ",
+          "vi_du": "この<ruby>部屋<rt>へや</rt></ruby>はほこりだらけだ。(Căn phòng này đầy bụi.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜として／としての",
+          "nghia": "Với tư cách là / Trong vai trò là",
+          "cau_truc_ngu_phap": "N + として／としての + N",
+          "vi_du": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>政治家<rt>せいじか</rt></ruby>として<ruby>発言<rt>はつげん</rt></ruby>した。(Anh ấy đã phát biểu với tư cách là một chính trị gia.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜に加えて",
+          "nghia": "Thêm vào đó / Hơn nữa (cộng thêm cùng tầm quan trọng)",
+          "cau_truc_ngu_phap": "N + に加えて",
+          "vi_du": "<ruby>給料<rt>きゅうりょう</rt></ruby>に加えて、ボーナスも<ruby>出<rt>で</rt></ruby>た。(Thêm vào lương, còn có cả tiền thưởng.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜わけだ／わけです／というわけだ",
+          "nghia": "Thì ra là / Có lý là (kết luận diễn giải từ thông tin đã nêu)",
+          "cau_truc_ngu_phap": "câu + わけだ (cuối đoạn, sau khi giải thích lý do)",
+          "vi_du": "<ruby>道<rt>みち</rt></ruby>が<ruby>混<rt>こ</rt></ruby>んでいた。それで<ruby>遅<rt>おく</rt></ruby>れたわけだ。(Đường bị tắc. Thì ra là vì vậy mà bị muộn.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜という (diễn đạt lại khái niệm/lời người khác)",
+          "nghia": "Được gọi là / Nghe nói là...",
+          "cau_truc_ngu_phap": "N/câu + という",
+          "vi_du": "「もったいない」という<ruby>言葉<rt>ことば</rt></ruby>には<ruby>深<rt>ふか</rt></ruby>い<ruby>意味<rt>いみ</rt></ruby>がある。(Từ được gọi là 'mottainai' có một ý nghĩa sâu sắc.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜てください (đề nghị/khuyến cáo)",
+          "nghia": "Hãy... (đề nghị, hướng dẫn)",
+          "cau_truc_ngu_phap": "V-て + ください",
+          "vi_du": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>水<rt>みず</rt></ruby>をたくさん<ruby>飲<rt>の</rt></ruby>んでください。(Hãy uống nhiều nước mỗi ngày.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "実は",
+          "nghia": "Thực ra là... (tiết lộ thông tin bất ngờ)",
+          "cau_truc_ngu_phap": "実は + câu (thường đầu đoạn 2)",
+          "vi_du": "<ruby>元気<rt>げんき</rt></ruby>そうに<ruby>見<rt>み</rt></ruby>えるが、実は<ruby>病気<rt>びょうき</rt></ruby>なのだ。(Nhìn có vẻ khỏe mạnh, nhưng thực ra anh ấy bị bệnh.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "さらに",
+          "nghia": "Hơn nữa / Thêm vào đó (bổ sung thông tin)",
+          "cau_truc_ngu_phap": "さらに + câu bổ sung",
+          "vi_du": "<ruby>値段<rt>ねだん</rt></ruby>が<ruby>安<rt>やす</rt></ruby>い。さらに、<ruby>品質<rt>ひんしつ</rt></ruby>もいい。(Giá rẻ. Hơn nữa, chất lượng cũng tốt.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "すると",
+          "nghia": "Thì / Lúc đó (kết quả tự nhiên tiếp theo)",
+          "cau_truc_ngu_phap": "すると + kết quả tự nhiên",
+          "vi_du": "ボタンを<ruby>押<rt>お</rt></ruby>した。すると、ドアが<ruby>開<rt>あ</rt></ruby>いた。(Tôi bấm nút. Thì cửa đã mở ra.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "反面／かえって",
+          "nghia": "Mặt khác / Mặt trái (2 mặt cùng tồn tại song song, điểm gài đáp án sai)",
+          "cau_truc_ngu_phap": "V/A/N + 反面 ｜ かえって + câu",
+          "vi_du": "<ruby>便利<rt>べんり</rt></ruby>になった<ruby>反面<rt>はんめん</rt></ruby>、<ruby>人<rt>ひと</rt></ruby>と<ruby>人<rt>ひと</rt></ruby>のつながりが<ruby>薄<rt>うす</rt></ruby>くなった。(Mặt khác khi đã tiện lợi hơn, sự gắn kết giữa người với người lại trở nên mờ nhạt.)",
+          "dong_nghia": [
+            "Tần suất thấp (1 đề gần nhất 25.12) nhưng thường là điểm gài đáp án nhiễu"
+          ]
+        },
+        {
+          "cautruc": "〜というのは",
+          "nghia": "...đây là / Điều này có nghĩa là... (định nghĩa)",
+          "cau_truc_ngu_phap": "N + というのは + định nghĩa",
+          "vi_du": "「サステナブル」というのは、<ruby>持続<rt>じぞく</rt></ruby><ruby>可能<rt>かのう</rt></ruby>であるという<ruby>意味<rt>いみ</rt></ruby>だ。(Cái gọi là 'bền vững' có nghĩa là có thể duy trì lâu dài.)",
+          "dong_nghia": [
+            "TẦN SUẤT THỰC RẤT CAO (đứng thứ 2 toàn bảng B) — phần đứng SAU は là phần quan trọng nhất"
+          ]
+        },
+        {
+          "cautruc": "ばかりだ (2 nghĩa)",
+          "nghia": "① V-たばかりだ = Vừa mới... ｜ ② V-るばかりだ = Cứ thế tăng/giảm dần (1 chiều)",
+          "cau_truc_ngu_phap": "① V-た + ばかりだ ｜ ② V-る + ばかりだ",
+          "vi_du": "①<ruby>朝<rt>あさ</rt></ruby><ruby>起<rt>お</rt></ruby>きたばかりだから、まだパジャマのままだ。(Vì vừa mới ngủ dậy nên vẫn còn mặc nguyên đồ ngủ.)\n②<ruby>景気<rt>けいき</rt></ruby>は<ruby>悪<rt>わる</rt></ruby>くなるばかりだ。(Tình hình kinh tế cứ thế xấu đi mãi. — 7 đề thật, M7×6)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜がたい",
+          "nghia": "Khó mà, khó lòng (cảm giác/đánh giá khó thực hiện)",
+          "cau_truc_ngu_phap": "V-masu + がたい",
+          "vi_du": "あの<ruby>日<rt>ひ</rt></ruby>の<ruby>感動<rt>かんどう</rt></ruby>は<ruby>今<rt>いま</rt></ruby>でも<ruby>忘<rt>わす</rt></ruby>れがたい。(Sự xúc động ngày đó đến giờ tôi vẫn khó lòng quên được.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜というと／といえば／といったら",
+          "nghia": "Nói đến... (liên tưởng ngay đến)",
+          "cau_truc_ngu_phap": "N + というと／といえば／といったら",
+          "vi_du": "<ruby>京都<rt>きょうと</rt></ruby>というと、お<ruby>寺<rt>てら</rt></ruby>を<ruby>思<rt>おも</rt></ruby>い<ruby>出<rt>だ</rt></ruby>す<ruby>人<rt>ひと</rt></ruby>が<ruby>多<rt>おお</rt></ruby>い。(Nói đến Kyoto, nhiều người nghĩ ngay đến những ngôi chùa.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜において／における",
+          "nghia": "Tại, ở, trong (trang trọng, lĩnh vực/địa điểm trừu tượng)",
+          "cau_truc_ngu_phap": "N + において／における + N",
+          "vi_du": "<ruby>現代<rt>げんだい</rt></ruby><ruby>社会<rt>しゃかい</rt></ruby>においては、<ruby>情報<rt>じょうほう</rt></ruby>が<ruby>非常<rt>ひじょう</rt></ruby>に<ruby>重要<rt>じゅうよう</rt></ruby>だ。(Trong xã hội hiện đại, thông tin vô cùng quan trọng.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜つつある",
+          "nghia": "Đang dần dần (thay đổi từ từ, văn viết trang trọng)",
+          "cau_truc_ngu_phap": "V-masu + つつある",
+          "vi_du": "<ruby>地球<rt>ちきゅう</rt></ruby>の<ruby>気温<rt>きおん</rt></ruby>は<ruby>上昇<rt>じょうしょう</rt></ruby>しつつある。(Nhiệt độ Trái Đất đang dần tăng lên.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜に応じ(て)",
+          "nghia": "Tùy theo, ứng với",
+          "cau_truc_ngu_phap": "N + に応じて",
+          "vi_du": "<ruby>状況<rt>じょうきょう</rt></ruby>に<ruby>応<rt>おう</rt></ruby>じて、<ruby>対応<rt>たいおう</rt></ruby>を<ruby>変<rt>か</rt></ruby>える。(Tùy theo tình huống mà thay đổi cách xử lý.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜に沿って／沿い",
+          "nghia": "Theo, dọc theo, đúng với (phương hướng/nguyên tắc)",
+          "cau_truc_ngu_phap": "N + に沿って／沿い",
+          "vi_du": "<ruby>会社<rt>かいしゃ</rt></ruby>の<ruby>方針<rt>ほうしん</rt></ruby>に<ruby>沿<rt>そ</rt></ruby>って、<ruby>計画<rt>けいかく</rt></ruby>を<ruby>立<rt>た</rt></ruby>てる。(Lập kế hoạch theo đúng phương châm của công ty.)\n<ruby>道<rt>みち</rt></ruby>に<ruby>沿<rt>そ</rt></ruby>いに<ruby>桜<rt>さくら</rt></ruby>の<ruby>木<rt>き</rt></ruby>が<ruby>並<rt>なら</rt></ruby>んでいる。(Hàng cây hoa anh đào nối nhau dọc theo con đường.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜のもとで／に",
+          "nghia": "Dưới, trong (sự bảo trợ/ảnh hưởng của)",
+          "cau_truc_ngu_phap": "N + のもとで／のもとに",
+          "vi_du": "<ruby>先生<rt>せんせい</rt></ruby>の<ruby>指導<rt>しどう</rt></ruby>のもとで、<ruby>研究<rt>けんきゅう</rt></ruby>を<ruby>進<rt>すす</rt></ruby>めている。(Tôi đang tiến hành nghiên cứu dưới sự hướng dẫn của giáo sư.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜(か)と思ったら／思うと",
+          "nghia": "Vừa mới... thì đã (ngay lập tức, bất ngờ)",
+          "cau_truc_ngu_phap": "V-た + (か)と思ったら／思うと",
+          "vi_du": "<ruby>晴<rt>は</rt></ruby>れたかと<ruby>思<rt>おも</rt></ruby>ったら、すぐに<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>ってきた。(Vừa mới nắng lên thì trời đã mưa ngay.)",
+          "dong_nghia": []
+        }
+      ]
+    },
+    {
+      "so": "01",
+      "ten": "Phủ định mạnh / Bất khả thi",
+      "items": [
+        {
+          "cautruc": "〜わけがない",
+          "nghia": "Tuyệt đối không thể, không có lý nào (Phủ định mạnh mẽ dựa trên căn cứ xác thực).",
+          "cau_truc_ngu_phap": "Thể thông thường + わけがない",
+          "vi_du": "こんなに<ruby>難<rt>むずか</rt></ruby>しい<ruby>問題<rt>もんだい</rt></ruby>、私に解けるわけがない。(Bài toán khó thế này, không có lý nào tôi giải được.)",
+          "dong_nghia": [
+            "〜はずがない",
+            "〜っこない"
+          ]
+        },
+        {
+          "cautruc": "〜っこない",
+          "nghia": "Không đời nào, làm gì có chuyện (Dùng trong hội thoại, văn nói hằng ngày).",
+          "cau_truc_ngu_phap": "Vます (bỏ masu) + っこない",
+          "vi_du": "こんなにたくさんの<ruby>仕事<rt>しごと</rt></ruby>、今日中に終わりっこないよ。(Nhiều việc thế này, không đời nào xong được trong hôm nay đâu.)",
+          "dong_nghia": [
+            "〜はずがない",
+            "〜わけがない"
+          ]
+        },
+        {
+          "cautruc": "〜ものか",
+          "nghia": "Đời nào / Không bao giờ (Phủ định cực kỳ mạnh mẽ, bày tỏ cảm xúc bác bỏ).",
+          "cau_truc_ngu_phap": "Thể thông thường + ものか / もんか",
+          "vi_du": "あんな人に、<ruby>負<rt>ま</rt></ruby>けるものか。(Đời nào tôi chịu thua kẻ như hắn.)",
+          "dong_nghia": [
+            "〜絶対〜ない"
+          ]
+        },
+        {
+          "cautruc": "〜得ない（えない） / 〜ようがない",
+          "nghia": "Không thể xảy ra / Không có cách nào để thực hiện.",
+          "cau_truc_ngu_phap": "Vます (bỏ masu) + 得ない / ようがない",
+          "vi_du": "彼の話はまったく<ruby>事実<rt>じじつ</rt></ruby>であり<ruby>得<rt>え</rt></ruby>ない。(Câu chuyện của anh ta hoàn toàn không thể nào là sự thật được.)",
+          "dong_nghia": [
+            "〜はずがない",
+            "〜方法がない"
+          ]
+        },
+        {
+          "cautruc": "ないことはない／ないこともない",
+          "nghia": "Không phải là không (thể) — phủ định của phủ định, sắc thái nhẹ nhàng/dè dặt",
+          "cau_truc_ngu_phap": "V-ない + ことはない／こともない",
+          "vi_du": "<ruby>忙<rt>いそが</rt></ruby>しいが、<ruby>手伝<rt>てつだ</rt></ruby>わないこともない。(Tôi bận, nhưng cũng không phải là không giúp được.)",
+          "dong_nghia": []
+        }
+      ]
+    },
+    {
+      "so": "02",
+      "ten": "Bắt buộc / Nghĩa vụ / Không có lựa chọn",
+      "items": [
+        {
+          "cautruc": "〜ざるを得ない",
+          "nghia": "Buộc phải, không thể không làm (Dù bản thân không muốn, mang tính bất khả kháng).",
+          "cau_truc_ngu_phap": "Vない (bỏ ない) + ざるを得ない ※する → せざるを得ない",
+          "vi_du": "<ruby>台風<rt>たいふう</rt></ruby>のため、イベントは<ruby>中止<rt>ちゅうし</rt></ruby>せざるを<ruby>得<rt>え</rt></ruby>ない。(Do bão nên buộc phải hủy bỏ sự kiện.)",
+          "dong_nghia": [
+            "〜しかない",
+            "〜やむを得ない"
+          ]
+        },
+        {
+          "cautruc": "〜しかない / 〜ほかない",
+          "nghia": "Chỉ còn cách... / Không còn lựa chọn nào khác ngoài V. Thể hiện sự bất đắc dĩ.",
+          "cau_truc_ngu_phap": "Vる + しかない / ほかない",
+          "vi_du": "パソコンが<ruby>壊<rt>こわ</rt></ruby>れたなら、<ruby>新<rt>あたら</rt></ruby>しいのを<ruby>買<rt>か</rt></ruby>うしかない。(Máy tính hỏng rồi thì chỉ còn cách mua cái mới thôi.)",
+          "dong_nghia": [
+            "〜よりほかない",
+            "Thể hiện sự bất đắc dĩ, không còn lựa chọn nào khác trong tình huống được nêu"
+          ]
+        }
+      ]
+    },
+    {
+      "so": "03",
+      "ten": "Nhượng bộ / Nghịch tiếp (tuy...nhưng, mặc dù)",
+      "items": [
+        {
+          "cautruc": "〜にしては",
+          "nghia": "Vậy mà... (Diễn tả sự bất ngờ, kết quả trái với dự đoán thông thường dựa trên tuổi tác, năng lực, địa vị).",
+          "cau_truc_ngu_phap": "N / Thể thông thường + にしては",
+          "vi_du": "外国人にしても、日本語が<ruby>上手<rt>じょうず</rt></ruby>ですね。(Là người nước ngoài vậy mà tiếng Nhật của bạn giỏi thật đấy.)",
+          "dong_nghia": [
+            "〜わりに"
+          ]
+        },
+        {
+          "cautruc": "反面",
+          "nghia": "Mặt trái / Ngược lại (Đề cập hai mặt tốt - xấu luôn tồn tại song song trong một vấn đề).",
+          "cau_truc_ngu_phap": "Thể thông thường + 反面",
+          "vi_du": "ネットは<ruby>便利<rt>べんり</rt></ruby>な<ruby>反面<rt>はんめん</rt></ruby>、<ruby>危険<rt>きけん</rt></ruby>も潜んでいる。(Internet rất tiện lợi nhưng mặt trái là cũng tiềm ẩn nhiều nguy hiểm.)",
+          "dong_nghia": [
+            "一方で"
+          ]
+        },
+        {
+          "cautruc": "かえって",
+          "nghia": "Trái lại hẳn / Ngược kỳ vọng (Hành động tưởng giải quyết được vấn đề nhưng lại làm tình huống tệ hơn).",
+          "cau_truc_ngu_phap": "Liên từ / Phó từ",
+          "vi_du": "よかれと思って言ったのに、かえって<ruby>怒<rt>おこ</rt></ruby>らせてしまった。(Tưởng là tốt nên mới nói, ai ngờ trái lại còn làm đối phương giận hơn.)",
+          "dong_nghia": [
+            "逆に"
+          ]
+        },
+        {
+          "cautruc": "それでも",
+          "nghia": "Dù vậy / Tuy nhiên (Bất chấp khó khăn ở vế trước, tác giả vẫn khẳng định ý chí kiên định ở vế sau).",
+          "cau_truc_ngu_phap": "Liên từ",
+          "vi_du": "<ruby>失敗<rt>しっぱい</rt></ruby>するかもしれない。それでもやってみたい。(Có thể sẽ thất bại. Dù vậy tôi vẫn muốn thử làm xem sao.)",
+          "dong_nghia": [
+            "だが",
+            "しかし",
+            "Tín hiệu tác giả vẫn khẳng định ý chí bất chấp khó khăn vừa nêu"
+          ]
+        },
+        {
+          "cautruc": "～にもかかわらず",
+          "nghia": "mặc dù..., dù... vẫn (nhấn mạnh sự bất ngờ/đối nghịch hơn のに)",
+          "cau_truc_ngu_phap": "N / Vる・Vた / Aい / Aな + にもかかわらず",
+          "vi_du": "<ruby>悪天候<rt>あくてんこう</rt></ruby>にもかかわらず、試合は行われた。(Mặc dù thời tiết xấu, trận đấu vẫn được diễn ra.)",
+          "dong_nghia": [
+            "～ものの"
+          ]
+        },
+        {
+          "cautruc": "～ものの",
+          "nghia": "tuy... nhưng..., mặc dù... (vế sau thường là kết quả không như mong đợi)",
+          "cau_truc_ngu_phap": "Vる・Vた / Aい / Aな(である) / Nである + ものの",
+          "vi_du": "<ruby>合格<rt>ごうかく</rt></ruby>したものの、まだ実感がない。(Tuy đã đỗ rồi nhưng vẫn chưa cảm thấy thực sự.)",
+          "dong_nghia": [
+            "～にもかかわらず",
+            "～が"
+          ]
+        },
+        {
+          "cautruc": "とはいえ",
+          "nghia": "Dù vậy / Tuy vậy (đứng đầu câu mới, nối ý)",
+          "cau_truc_ngu_phap": "とはいえ + câu",
+          "vi_du": "<ruby>給料<rt>きゅうりょう</rt></ruby>が<ruby>上<rt>あ</rt></ruby>がった。とはいえ、<ruby>物価<rt>ぶっか</rt></ruby>も<ruby>上<rt>あ</rt></ruby>がっている。(Lương đã tăng. Dù vậy, giá cả cũng đang tăng.)",
+          "dong_nghia": []
+        }
+      ]
+    },
+    {
+      "so": "04",
+      "ten": "Điều kiện / Giả định",
+      "items": [
+        {
+          "cautruc": "〜次第で",
+          "nghia": "Tùy thuộc vào N (đứng giữa câu, khác 次第だ cuối câu)",
+          "cau_truc_ngu_phap": "N + 次第で",
+          "vi_du": "<ruby>努力<rt>どりょく</rt></ruby>次第で、<ruby>結果<rt>けっか</rt></ruby>は<ruby>変<rt>か</rt></ruby>わる。(Tùy thuộc vào sự nỗ lực mà kết quả sẽ thay đổi.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜としたら／とすると／とすれば",
+          "nghia": "Nếu giả sử (thử đặt điều kiện)",
+          "cau_truc_ngu_phap": "V/N + としたら／とすると／とすれば",
+          "vi_du": "<ruby>もし<rt></rt></ruby><ruby>明日<rt>あした</rt></ruby><ruby>休<rt>やす</rt></ruby>めるとしたら、どこへ<ruby>行<rt>い</rt></ruby>きたいですか。(Nếu giả sử ngày mai được nghỉ, bạn muốn đi đâu?)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜ものなら",
+          "nghia": "Nếu mà... được (giả định khó xảy ra/có rủi ro)",
+          "cau_truc_ngu_phap": "V-られる(khả năng) + ものなら",
+          "vi_du": "<ruby>戻<rt>もど</rt></ruby>れるものなら、<ruby>あの<rt></rt></ruby><ruby>時<rt>とき</rt></ruby>に<ruby>戻<rt>もど</rt></ruby>りたい。(Nếu mà có thể trở về được, tôi muốn trở về lúc đó.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜限り",
+          "nghia": "Trong chừng mực, miễn là còn (giới hạn điều kiện)",
+          "cau_truc_ngu_phap": "V-る/N + 限り",
+          "vi_du": "わたしが<ruby>知<rt>し</rt></ruby>っている<ruby>限<rt>かぎ</rt></ruby>り、その<ruby>話<rt>はなし</rt></ruby>は<ruby>本当<rt>ほんとう</rt></ruby>だ。(Trong chừng mực tôi biết, câu chuyện đó là thật.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜にしたら／すれば／しても",
+          "nghia": "Nếu xét theo, đứng ở góc độ của...",
+          "cau_truc_ngu_phap": "N + にしたら／にすれば／にしても",
+          "vi_du": "<ruby>子供<rt>こども</rt></ruby>にしたら、それは<ruby>難<rt>むずか</rt></ruby>しい<ruby>決断<rt>けつだん</rt></ruby>だっただろう。(Đứng ở góc độ của một đứa trẻ thì đó hẳn là một quyết định khó khăn.)",
+          "dong_nghia": []
+        }
+      ]
+    },
+    {
+      "so": "05",
+      "ten": "Nguyên nhân - Lý do - Kết quả",
+      "items": [
+        {
+          "cautruc": "〜わけにはいかない",
+          "nghia": "Không thể (do cản trở về mặt tâm lý, đạo lý, nghĩa vụ xã hội).",
+          "cau_truc_ngu_phap": "Vる + わけにはいかない",
+          "vi_du": "あしたは<ruby>大事<rt>だいじ</rt></ruby>なテストがあるので、<ruby>休<rt>やす</rt></ruby>むわけにはいかない。(Ngày mai có bài kiểm tra quan trọng nên không thể nghỉ được.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜わけではない / 〜というわけではない",
+          "nghia": "Không hẳn là / Không có nghĩa là.\n⚡ BẪY DOKKAI: Bác bỏ một phần suy diễn của người đọc, không phải phủ định hoàn toàn.",
+          "cau_truc_ngu_phap": "Thể thông thường + わけではない",
+          "vi_du": "お<ruby>金<rt>かね</rt></ruby>があれば<ruby>幸<rt>しあわ</rt></ruby>せになれるというわけではない。(Không hẳn cứ có tiền là sẽ hạnh phúc.)",
+          "dong_nghia": [
+            "〜必ずしも〜ない"
+          ]
+        },
+        {
+          "cautruc": "〜を契機に / 〜をきっかけに",
+          "nghia": "Nhân cơ hội này / Lấy cớ từ sự việc này (Dẫn đến sự thay đổi lớn).",
+          "cau_truc_ngu_phap": "N + を契機に",
+          "vi_du": "<ruby>入院<rt>にゅういん</rt></ruby>したのをきっかけに、タバコをやめた。(Lấy cớ từ việc phải nhập viện, tôi đã bỏ hẳn thuốc lá.)",
+          "dong_nghia": [
+            "〜を機に"
+          ]
+        },
+        {
+          "cautruc": "〜あげく",
+          "nghia": "Cuối cùng thì... (Sau một hồi rắc rối, lặp đi lặp lại một hành động thì dẫn đến kết quả thường là xấu).",
+          "cau_truc_ngu_phap": "Vた / Nの + あげく",
+          "vi_du": "さんざん<ruby>悩<rt>なや</rt></ruby>んだあげく、<ruby>結局<rt>けっきょく</rt></ruby>買わなかった。(Sau một hồi chần chừ đắn đo, cuối cùng thì lại không mua.)",
+          "dong_nghia": [
+            "〜た結果（悪い）"
+          ]
+        },
+        {
+          "cautruc": "〜末（に）",
+          "nghia": "Sau cùng, kết cục... (Sau một thời gian dài trăn trở, suy nghĩ, cãi vã thì đưa ra quyết định cuối cùng).",
+          "cau_truc_ngu_phap": "Vた / Nの + 末に",
+          "vi_du": "<ruby>激<rt>はげ</rt></ruby>しい<ruby>議論<rt>ぎろん</rt></ruby>の<ruby>末<rt>すえ</rt></ruby>に、ようやく<ruby>結論<rt>けつろん</rt></ruby>が出た。(Sau cùng của một cuộc tranh luận nảy lửa, cuối cùng cũng đưa ra được kết luận.)",
+          "dong_nghia": [
+            "〜た結果"
+          ]
+        },
+        {
+          "cautruc": "〜たのでは",
+          "nghia": "Nếu cứ... thì (Đưa ra giả thuyết một hành động dẫn đến hậu quả xấu, mang tính cảnh báo).",
+          "cau_truc_ngu_phap": "Vた / Vる + のでは",
+          "vi_du": "そんなに<ruby>怠<rt>なま</rt></ruby>けていたのでは、<ruby>試験<rt>しけん</rt></ruby>に<ruby>落<rt>お</rt></ruby>ちてしまうよ。(Nếu cứ lười biếng như thế thì sẽ thi trượt mất đấy.)",
+          "dong_nghia": [
+            "〜たら（悪い結果になる）",
+            "Tác giả dùng để cảnh báo về hậu quả xấu của một cách làm/suy nghĩ cụ thể"
+          ]
+        },
+        {
+          "cautruc": "むしろ",
+          "nghia": "Đúng hơn là / Thay vì thế.\n⚡ MẸO DOKKAI: Tác giả đính chính: \"Không phải A, ĐÚNG HƠN LÀ B\". Ý chính luôn nằm ở vế sau むしろ.",
+          "cau_truc_ngu_phap": "Liên từ / Phó từ",
+          "vi_du": "この<ruby>失敗<rt>しっぱい</rt></ruby>は<ruby>不運<rt>ふうん</rt></ruby>ではない。<ruby>寧<rt>むし</rt></ruby>ろチャンスだ。(Thất bại này không phải là xui xẻo. Đúng hơn nó là một cơ hội.)",
+          "dong_nghia": [
+            "かえって",
+            "そうではなく",
+            "Ý chính tác giả luôn nằm SAU むしろ, là điểm sửa lại nhận định trước đó"
+          ]
+        },
+        {
+          "cautruc": "そのため / だからこそ / からこそ",
+          "nghia": "Vì thế / Chính vì vậy nên mới... (Nhấn mạnh nguyên nhân, tiền đề cốt lõi).",
+          "cau_truc_ngu_phap": "Liên từ",
+          "vi_du": "だからこそ、<ruby>今<rt>いま</rt></ruby>すぐ<ruby>行動<rt>こうどう</rt></ruby>すべきだ。(Chính vì vậy, cần phải hành động ngay lập tức.)",
+          "dong_nghia": [
+            "ゆえに",
+            "したがって"
+          ]
+        },
+        {
+          "cautruc": "ゆえに / ためだ",
+          "nghia": "Do đó (Văn viết trang trọng) / Nguyên nhân là vì...",
+          "cau_truc_ngu_phap": "Liên từ",
+          "vi_du": "我思う、ゆえに我あり。(Tôi tư duy, do đó tôi tồn tại.)",
+          "dong_nghia": [
+            "だから",
+            "したがって"
+          ]
+        },
+        {
+          "cautruc": "〜役に立つ / 〜だけに / 〜だけあって / 〜というのは",
+          "nghia": "Chính vì... nên / Quả đúng là / Giải thích khái niệm quan trọng bằng cách định nghĩa.",
+          "cau_truc_ngu_phap": "Thể thông thường + だけに",
+          "vi_du": "たくさん<ruby>練習<rt>れんしゅう</rt></ruby>しただけに、<ruby>優勝<rt>ゆうしょう</rt></ruby>できてとてもうれしい。(Chính vì đã nỗ lực luyện tập rất nhiều nên khi giành chức vô địch tôi vô cùng sung sướng.)",
+          "dong_nghia": [
+            "〜だからこそ"
+          ]
+        },
+        {
+          "cautruc": "〜からこそ",
+          "nghia": "Chính vì... (nhấn mạnh nguyên nhân đặc biệt, xuất hiện cả M8 và M9)",
+          "cau_truc_ngu_phap": "V/A/N + からこそ",
+          "vi_du": "<ruby>失敗<rt>しっぱい</rt></ruby>したからこそ、<ruby>成長<rt>せいちょう</rt></ruby>できた。(Chính vì đã thất bại nên tôi mới trưởng thành được.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "そこで",
+          "nghia": "Vì vậy / Do đó (dẫn đến giải pháp/hành động tiếp theo)",
+          "cau_truc_ngu_phap": "そこで + câu giải pháp",
+          "vi_du": "<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>ってきた。そこで、<ruby>傘<rt>かさ</rt></ruby>を<ruby>買<rt>か</rt></ruby>った。(Trời mưa. Vì vậy tôi đã mua một cái ô.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "からこそ／だからこそ (dokkai)",
+          "nghia": "Chính vì... (nguyên nhân tất yếu, nhấn mạnh điều kiện duy nhất)",
+          "cau_truc_ngu_phap": "V/A/N + からこそ ｜ だからこそ + câu",
+          "vi_du": "<ruby>困難<rt>こんなん</rt></ruby>な<ruby>状況<rt>じょうきょう</rt></ruby>だからこそ、みんなで<ruby>協力<rt>きょうりょく</rt></ruby>すべきだ。(Chính vì tình huống khó khăn nên mọi người mới phải hợp tác.)",
+          "dong_nghia": [
+            "Nhấn mạnh nguyên nhân là điều kiện CẦN THIẾT duy nhất, khác lý do thông thường"
+          ]
+        },
+        {
+          "cautruc": "ためだ",
+          "nghia": "Đó là vì... (giải thích nguyên nhân của việc ĐÃ xảy ra)",
+          "cau_truc_ngu_phap": "câu + のはためだ ｜ V-た + のはためだ",
+          "vi_du": "<ruby>失敗<rt>しっぱい</rt></ruby>したのは、<ruby>準備<rt>じゅんび</rt></ruby>が<ruby>足<rt>た</rt></ruby>りなかったためだ。(Sở dĩ thất bại là vì sự chuẩn bị chưa đủ.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜ことから",
+          "nghia": "Vì, do (lý do dẫn tới kết luận/cách gọi tên)",
+          "cau_truc_ngu_phap": "câu + ことから",
+          "vi_du": "<ruby>形<rt>かたち</rt></ruby>が<ruby>似<rt>に</rt></ruby>ていることから、この<ruby>花<rt>はな</rt></ruby>は「<ruby>猫<rt>ねこ</rt></ruby>の<ruby>目<rt>め</rt></ruby>」と<ruby>呼<rt>よ</rt></ruby>ばれている。(Vì hình dáng giống nhau nên loài hoa này được gọi là 'mắt mèo'.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜だけに",
+          "nghia": "Chính vì (đặc biệt là...) nên (lý do đặc biệt dẫn đến kết quả)",
+          "cau_truc_ngu_phap": "V/A/N + だけに",
+          "vi_du": "<ruby>長<rt>なが</rt></ruby>い<ruby>間<rt>あいだ</rt></ruby><ruby>準備<rt>じゅんび</rt></ruby>してきたただけに、<ruby>合格<rt>ごうかく</rt></ruby>できて<ruby>嬉<rt>うれ</rt></ruby>しい。(Chính vì đã chuẩn bị suốt một thời gian dài nên tôi rất vui khi đỗ.)",
+          "dong_nghia": []
+        }
+      ]
+    },
+    {
+      "so": "06",
+      "ten": "Mức độ - Giới hạn - Phạm vi",
+      "items": [
+        {
+          "cautruc": "〜にすぎない",
+          "nghia": "Chẳng qua chỉ là... / Chỉ đơn thuần là... (Đánh giá mức độ thấp).",
+          "cau_truc_ngu_phap": "N / Thể thông thường + にすぎない",
+          "vi_du": "それは単なる<ruby>噂<rt>うわさ</rt></ruby>にすぎない。(Đó chẳng qua chỉ là tin đồn thôi.)",
+          "dong_nghia": [
+            "〜でしかない",
+            "〜ただの〜だ"
+          ]
+        },
+        {
+          "cautruc": "〜ばかりか / 〜のみならず",
+          "nghia": "Không chỉ... mà còn (Vế sau thường có mức độ nặng hơn hoặc quy mô rộng hơn).",
+          "cau_truc_ngu_phap": "N / Thể thông thường + ばかりか",
+          "vi_du": "この<ruby>薬<rt>くすり</rt></ruby>は<ruby>効<rt>き</rt></ruby>かないばかりか、<ruby>副作用<rt>ふくさよう</rt></ruby>もある。(Thuốc này không những không hiệu quả mà còn có tác dụng phụ.)",
+          "dong_nghia": [
+            "〜だけでなく"
+          ]
+        },
+        {
+          "cautruc": "〜さえ / 〜すら",
+          "nghia": "Đến cả, ngay cả (Lấy một ví dụ cực đoan nhất để nói lên toàn thể).",
+          "cau_truc_ngu_phap": "N + さえ / すら",
+          "vi_du": "そんなことは、子どもでさえ知っている。(Chuyện như thế thì đến cả trẻ con cũng biết.)",
+          "dong_nghia": [
+            "〜も"
+          ]
+        },
+        {
+          "cautruc": "〜においてのみ",
+          "nghia": "Chỉ trong... / Chỉ khi... (Giới hạn tuyệt đối vào một phạm vi hoặc điều kiện cụ thể).",
+          "cau_truc_ngu_phap": "N + においてのみ",
+          "vi_du": "この<ruby>規則<rt>きそく</rt></ruby>は<ruby>社内<rt>しゃない</rt></ruby>においてのみ<ruby>適用<rt>てきよう</rt></ruby>される。(Quy tắc này chỉ được áp dụng giới hạn trong phạm vi nội bộ công ty.)",
+          "dong_nghia": [
+            "〜だけで"
+          ]
+        },
+        {
+          "cautruc": "さえ〜ば",
+          "nghia": "Chỉ cần... là đủ (Điều kiện duy nhất đủ để vế sau xảy ra).",
+          "cau_truc_ngu_phap": "N + さえ + Vば/Aければ",
+          "vi_du": "スマホさえあれば、どこでも<ruby>連絡<rt>れんらく</rt></ruby>が取れる。(Chỉ cần có smartphone là ở đâu cũng có thể liên lạc được.)",
+          "dong_nghia": [
+            "Điều kiện tối thiểu/duy nhất đảm bảo cho vế sau xảy ra"
+          ]
+        },
+        {
+          "cautruc": "それどころか",
+          "nghia": "Hơn thế nữa (Theo chiều ngược lại, mức độ tăng tiến mạnh mẽ).",
+          "cau_truc_ngu_phap": "Liên từ",
+          "vi_du": "彼は<ruby>反省<rt>はんせい</rt></ruby>していない。それどころか、<ruby>他人<rt>たにん</rt></ruby>のせいにしている。(Anh ta chẳng hối lỗi gì cả. Hơn thế nữa còn đang đổ lỗi cho người khác kìa.)",
+          "dong_nghia": [
+            "むしろ"
+          ]
+        },
+        {
+          "cautruc": "～さえ～ば",
+          "nghia": "chỉ cần... thì... (nhấn mạnh điều kiện tối thiểu, đủ để dẫn đến kết quả)",
+          "cau_truc_ngu_phap": "N + さえ + Vば / Aければ / Aなら",
+          "vi_du": "あなたが<ruby>来<rt>き</rt></ruby>てくれさえすれば、私は安心です。(Chỉ cần bạn đến thì tôi sẽ yên tâm.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜しかない／〜ほかない",
+          "nghia": "Chỉ còn cách... (bất đắc dĩ)",
+          "cau_truc_ngu_phap": "V-る + しかない／ほかない",
+          "vi_du": "<ruby>終電<rt>しゅうでん</rt></ruby>がないので、タクシーで<ruby>帰<rt>かえ</rt></ruby>るしかない。(Vì không còn chuyến tàu cuối nên chỉ còn cách bắt taxi về.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜において／においてのみ",
+          "nghia": "Tại / Trong (trang trọng, lĩnh vực/địa điểm trừu tượng); Chỉ trong...",
+          "cau_truc_ngu_phap": "N + において(のみ)",
+          "vi_du": "この<ruby>分野<rt>ぶんや</rt></ruby>においては、<ruby>彼<rt>かれ</rt></ruby>が<ruby>一番<rt>いちばん</rt></ruby>だ。(Trong lĩnh vực này, anh ấy là số một.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜に限らず",
+          "nghia": "Không riêng gì... mà còn (mở rộng phạm vi)",
+          "cau_truc_ngu_phap": "N + に限らず",
+          "vi_du": "この<ruby>問題<rt>もんだい</rt></ruby>は<ruby>日本<rt>にほん</rt></ruby>に限らず、<ruby>世界中<rt>せかいじゅう</rt></ruby>で<ruby>起<rt>お</rt></ruby>きている。(Vấn đề này không riêng gì ở Nhật mà đang xảy ra trên toàn thế giới.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜に限り／に限る",
+          "nghia": "Chỉ riêng, chỉ trong trường hợp (giới hạn phạm vi áp dụng)",
+          "cau_truc_ngu_phap": "N + に限り／に限る",
+          "vi_du": "この<ruby>割引<rt>わりびき</rt></ruby>は<ruby>本日<rt>ほんじつ</rt></ruby>に<ruby>限<rt>かぎ</rt></ruby>り<ruby>有効<rt>ゆうこう</rt></ruby>です。(Khuyến mãi này chỉ có hiệu lực trong ngày hôm nay.)",
+          "dong_nghia": []
+        }
+      ]
+    },
+    {
+      "so": "07",
+      "ten": "Suy đoán - Khả năng - Phán đoán",
+      "items": [
+        {
+          "cautruc": "〜かねない",
+          "nghia": "Rất có thể sẽ... (Dẫn đến một hậu quả/kết quả xấu, tiêu cực).",
+          "cau_truc_ngu_phap": "Vます (bỏ masu) + かねない",
+          "vi_du": "<ruby>睡眠不足<rt>すいみんぶそく</rt></ruby>で<ruby>運転<rt>うんてん</rt></ruby>すると、<ruby>大事故<rt>だいじこ</rt></ruby>を起こしかねない。(Lái xe trong tình trạng thiếu ngủ thì rất có thể sẽ gây ra tai nạn lớn.)",
+          "dong_nghia": [
+            "〜かもしれない"
+          ]
+        },
+        {
+          "cautruc": "〜まい",
+          "nghia": "Chắc là không (Suy đoán phủ định) / Quyết không (Ý chí phủ định).",
+          "cau_truc_ngu_phap": "Vる + まい / Vます + まい",
+          "vi_du": "あんなまずい店には二<ruby>度<rt>ど</rt></ruby>と行くまい。(Quán dở tệ như thế, tôi quyết không bao giờ đến lần thứ hai.)",
+          "dong_nghia": [
+            "〜ないだろう",
+            "〜ないつもりだ"
+          ]
+        },
+        {
+          "cautruc": "必ずしも〜ない",
+          "nghia": "Không nhất thiết... / Chưa chắc đã...\n⚡ TÍN HIỆU VÀNG: Điểm gài bẫy Dokkai kinh điển. Điều người đọc mặc định là luôn đúng thì tác giả bảo \"chưa chắc\".",
+          "cau_truc_ngu_phap": "必ずしも + Thể phủ định",
+          "vi_du": "お金持ちが必ずしも<ruby>幸福<rt>こうふく</rt></ruby>だとは<ruby>限<rt>かぎ</rt></ruby>らない。(Người giàu chưa chắc đã là người hạnh phúc.)",
+          "dong_nghia": [
+            "〜わけではない",
+            "〜とは限らない",
+            "TÍN HIỆU VÀNG trong dokkai: điều người đọc nghĩ 'luôn đúng' hóa ra chưa chắc đúng"
+          ]
+        },
+        {
+          "cautruc": "〜はずだ",
+          "nghia": "Lẽ ra phải... / Chắc chắn là... (Thể hiện kỳ vọng, logic tất yếu).",
+          "cau_truc_ngu_phap": "Thể thông thường + はずだ",
+          "vi_du": "彼はもうすぐ<ruby>到着<rt>とうちゃく</rt></ruby>するはずだ。(Chắc chắn là anh ấy sắp đến nơi rồi.)",
+          "dong_nghia": [
+            "〜に違いない",
+            "Nếu thực tế trong bài đọc KHÁC với はずだ → đó thường là điểm tranh luận chính của đoạn văn"
+          ]
+        },
+        {
+          "cautruc": "〜と思われる",
+          "nghia": "Được cho là... (Cách nói suy đoán khách quan, dùng nhiều trong văn viết học thuật).",
+          "cau_truc_ngu_phap": "Thể thông thường + と思われる",
+          "vi_du": "この<ruby>遺跡<rt>いせき</rt></ruby>は1000<ruby>年前<rt>ねんまえ</rt></ruby>のものと<ruby>思<rt>おも</rt></ruby>われる。(Di tích này được cho là có từ 1000 năm trước.)",
+          "dong_nghia": [
+            "〜と考えられる"
+          ]
+        },
+        {
+          "cautruc": "〜に違いない",
+          "nghia": "Chắc chắn là... (tin chắc dựa trên chứng cứ/trực giác)",
+          "cau_truc_ngu_phap": "V/A/N + に違いない",
+          "vi_du": "この<ruby>足跡<rt>あしあと</rt></ruby>は<ruby>子供<rt>こども</rt></ruby>のものに違いない。(Dấu chân này chắc chắn là của trẻ con.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜だろう（か）",
+          "nghia": "Có lẽ / Chẳng biết có... (suy đoán nhẹ hoặc tự hỏi dẫn dắt)",
+          "cau_truc_ngu_phap": "V/A/N + だろう（か）",
+          "vi_du": "なぜこんなことが<ruby>起<rt>お</rt></ruby>きたのだろうか。(Chẳng biết vì sao điều này lại xảy ra?)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜かもしれない／ません",
+          "nghia": "Có thể là / Có lẽ (khả năng, không chắc chắn)",
+          "cau_truc_ngu_phap": "V/A/N + かもしれない",
+          "vi_du": "<ruby>明日<rt>あした</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>るかもしれない。(Có thể ngày mai sẽ mưa.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜のではないか",
+          "nghia": "Phải chăng...? (mời người đọc đồng thuận nhẹ)",
+          "cau_truc_ngu_phap": "V/A/N + のではないか",
+          "vi_du": "もっと<ruby>話<rt>はな</rt></ruby>し<ruby>合<rt>あ</rt></ruby>うべきなのではないか。(Phải chăng nên trao đổi với nhau nhiều hơn?)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜だろうか (dokkai)",
+          "nghia": "Phải chăng...? (tự hỏi, dẫn dắt — KHÔNG phải câu hỏi thật)",
+          "cau_truc_ngu_phap": "V/A/N + のだろうか",
+          "vi_du": "なぜ<ruby>人々<rt>ひとびと</rt></ruby>はこの<ruby>商品<rt>しょうひん</rt></ruby>を<ruby>選<rt>えら</rt></ruby>ぶのだろうか。(Vì sao mọi người lại chọn sản phẩm này?)",
+          "dong_nghia": [
+            "Câu trả lời thường nằm ngay SAU だろうか trong đoạn văn, không phải câu hỏi thật cần người đọc trả lời"
+          ]
+        },
+        {
+          "cautruc": "いわば",
+          "nghia": "Có thể nói là / Nói theo cách khác (ẩn dụ)",
+          "cau_truc_ngu_phap": "いわば + cách diễn đạt ẩn dụ",
+          "vi_du": "AIはいわば<ruby>人間<rt>にんげん</rt></ruby>の<ruby>第二<rt>だいに</rt></ruby>の<ruby>頭脳<rt>ずのう</rt></ruby>だ。(AI có thể nói là bộ não thứ hai của con người.)",
+          "dong_nghia": [
+            "Phần đứng sau いわば thường là phép ẩn dụ quan trọng thể hiện quan điểm của tác giả"
+          ]
+        },
+        {
+          "cautruc": "ことはない／こともない (2 nghĩa)",
+          "nghia": "① V-る + ことはない = Không cần... ｜ ② V-ない + こともない = Cũng có thể (không phải là không)",
+          "cau_truc_ngu_phap": "① V-る + ことはない ｜ ② V-ない + こともない",
+          "vi_du": "①<ruby>失敗<rt>しっぱい</rt></ruby>したからといって、そんなに<ruby>泣<rt>な</rt></ruby>くことはない。(Dù có thất bại thì cũng không cần phải khóc đến vậy.)\n②<ruby>忙<rt>いそが</rt></ruby>しいが、<ruby>手伝<rt>てつだ</rt></ruby>えないこともない。(Tôi đang bận, nhưng cũng không phải là không giúp được. — 7 đề thật, M7×4)",
+          "dong_nghia": []
+        }
+      ]
+    },
+    {
+      "so": "08",
+      "ten": "Liệt kê - Ví dụ điển hình",
+      "items": [
+        {
+          "cautruc": "〜からして",
+          "nghia": "Ngay từ (Xét từ cái nhỏ nhất/điểm cơ bản nhất đã như thế rồi, thì những cái khác khỏi nói).",
+          "cau_truc_ngu_phap": "N + からして",
+          "vi_du": "このレストランは、<ruby>雰囲気<rt>ふんいき</rt></ruby>からして<ruby>高級<rt>こうきゅう</rt></ruby>そうだ。(Nhà hàng này ngay từ bầu không khí đã thấy cao cấp rồi.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜をもとに",
+          "nghia": "Dựa trên / Lấy X làm cơ sở (nhẹ, như nguyên liệu)",
+          "cau_truc_ngu_phap": "N + をもとに",
+          "vi_du": "<ruby>実話<rt>じつわ</rt></ruby>をもとに<ruby>作<rt>つく</rt></ruby>られた<ruby>映画<rt>えいが</rt></ruby>だ。(Đây là bộ phim được làm dựa trên chuyện thật.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜ことになる",
+          "nghia": "Coi như là / Kết quả thành ra là... (kết quả logic tất yếu)",
+          "cau_truc_ngu_phap": "V-る/Aい/Aな/N + ことになる",
+          "vi_du": "この<ruby>まま<rt></rt></ruby>では、<ruby>計画<rt>けいかく</rt></ruby>が<ruby>失敗<rt>しっぱい</rt></ruby>することになる。(Cứ thế này thì kế hoạch sẽ thất bại - đó là điều tất yếu.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "しかし",
+          "nghia": "Nhưng / Tuy nhiên (chuyển ý ngược, phổ biến nhất)",
+          "cau_truc_ngu_phap": "しかし + câu",
+          "vi_du": "<ruby>頑張<rt>がんば</rt></ruby>った。しかし、<ruby>結果<rt>けっか</rt></ruby>は<ruby>悪<rt>わる</rt></ruby>かった。(Tôi đã cố gắng. Nhưng kết quả lại không tốt.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "こうして",
+          "nghia": "Như vậy / Cứ thế mà... (tổng kết quá trình)",
+          "cau_truc_ngu_phap": "こうして + câu kết quả",
+          "vi_du": "こうして、<ruby>長<rt>なが</rt></ruby>い<ruby>研究<rt>けんきゅう</rt></ruby>が<ruby>完成<rt>かんせい</rt></ruby>した。(Như vậy, công trình nghiên cứu dài hạn đã hoàn thành.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "たとえば／例えば",
+          "nghia": "Ví dụ như / Chẳng hạn",
+          "cau_truc_ngu_phap": "たとえば + ví dụ cụ thể",
+          "vi_du": "<ruby>果物<rt>くだもの</rt></ruby>、たとえばりんごやみかんが<ruby>好<rt>す</rt></ruby>きだ。(Tôi thích trái cây, ví dụ như táo hay quýt.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "ところが",
+          "nghia": "Thế nhưng / Vậy mà (chuyển ý bất ngờ, mạnh)",
+          "cau_truc_ngu_phap": "ところが + câu trái ngược",
+          "vi_du": "<ruby>晴<rt>は</rt></ruby>れると<ruby>思<rt>おも</rt></ruby>っていた。ところが、<ruby>大雨<rt>おおあめ</rt></ruby>になった。(Tôi nghĩ trời sẽ nắng. Vậy mà lại mưa to.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "だが",
+          "nghia": "Nhưng (văn viết, ngắn gọn, học thuật)",
+          "cau_truc_ngu_phap": "だが + câu",
+          "vi_du": "<ruby>計画<rt>けいかく</rt></ruby>は<ruby>順調<rt>じゅんちょう</rt></ruby>だった。だが、<ruby>予算<rt>よさん</rt></ruby>が<ruby>不足<rt>ふそく</rt></ruby>した。(Kế hoạch diễn ra thuận lợi. Nhưng ngân sách bị thiếu.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "また",
+          "nghia": "Và / Hơn nữa (liệt kê thêm, đơn giản)",
+          "cau_truc_ngu_phap": "また + câu liệt kê",
+          "vi_du": "この<ruby>店<rt>みせ</rt></ruby>は<ruby>安<rt>やす</rt></ruby>い。また、<ruby>店員<rt>てんいん</rt></ruby>も<ruby>親切<rt>しんせつ</rt></ruby>だ。(Quán này rẻ. Và nhân viên cũng thân thiện.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "ただし",
+          "nghia": "Tuy nhiên / Nhưng có điều kiện là",
+          "cau_truc_ngu_phap": "ただし + điều kiện/ngoại lệ",
+          "vi_du": "<ruby>入場<rt>にゅうじょう</rt></ruby>は<ruby>無料<rt>むりょう</rt></ruby>だ。ただし、<ruby>予約<rt>よやく</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>だ。(Vào cửa miễn phí. Tuy nhiên cần đặt trước.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "このように",
+          "nghia": "Như vậy / Theo cách này (tóm tắt cách thức)",
+          "cau_truc_ngu_phap": "このように + câu tóm tắt",
+          "vi_du": "このように、データを<ruby>分析<rt>ぶんせき</rt></ruby>した<ruby>結果<rt>けっか</rt></ruby>、<ruby>傾向<rt>けいこう</rt></ruby>が<ruby>分<rt>わ</rt></ruby>かった。(Theo cách này, qua phân tích dữ liệu đã rõ được xu hướng.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜といった",
+          "nghia": "Như, chẳng hạn như (liệt kê ví dụ điển hình ngay trước N tổng quát)",
+          "cau_truc_ngu_phap": "N1、N2 + といった + N(tổng quát)",
+          "vi_du": "りんごやみかんといった<ruby>果物<rt>くだもの</rt></ruby>が<ruby>好<rt>す</rt></ruby>きだ。(Tôi thích các loại trái cây như táo hay quýt.)\nこのスーパーでは、トマトやきゅうりといった<ruby>夏<rt>なつ</rt></ruby>の<ruby>野菜<rt>やさい</rt></ruby>が<ruby>多<rt>おお</rt></ruby>く<ruby>並<rt>なら</rt></ruby>んでいる。(8 đề thật: M7×1, M8×3, M9×4)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜といっても",
+          "nghia": "Nói là... nhưng (mức độ không như người nghe tưởng)",
+          "cau_truc_ngu_phap": "N/V + といっても + phủ nhận mức độ",
+          "vi_du": "<ruby>料理<rt>りょうり</rt></ruby>が<ruby>できる<rt></rt></ruby>といっても、<ruby>簡単<rt>かんたん</rt></ruby>なものしか<ruby>作<rt>つく</rt></ruby>れない。(Nói là biết nấu ăn, nhưng tôi chỉ làm được những món đơn giản thôi.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜ところだった",
+          "nghia": "Suýt thì (nhưng thực tế đã KHÔNG xảy ra)",
+          "cau_truc_ngu_phap": "V-る + ところだった",
+          "vi_du": "もう<ruby>少<rt>すこ</rt></ruby>しで<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>遅<rt>おく</rt></ruby>れるところだった。(Suýt nữa thì tôi đã trễ tàu.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜ながらも",
+          "nghia": "Tuy... nhưng vẫn (1 câu, cùng chủ thể)",
+          "cau_truc_ngu_phap": "V-masu/Aい + ながらも",
+          "vi_du": "<ruby>忙<rt>いそが</rt></ruby>しいと<ruby>思<rt>おも</rt></ruby>いながらも、まだ<ruby>返事<rt>へんじ</rt></ruby>ができていない。(Tuy nghĩ là mình đang bận, nhưng tôi vẫn chưa trả lời được.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜かのようだ",
+          "nghia": "Như thể là, cứ như là (so sánh ví von)",
+          "cau_truc_ngu_phap": "V/Aな + かのようだ",
+          "vi_du": "まるで<ruby>夢<rt>ゆめ</rt></ruby>を<ruby>見<rt>み</rt></ruby>ているかのようだ。(Cứ như thể là tôi đang mơ vậy.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜ことにする",
+          "nghia": "Quyết định là, coi như là",
+          "cau_truc_ngu_phap": "V-る + ことにする",
+          "vi_du": "<ruby>来年<rt>らいねん</rt></ruby>から<ruby>留学<rt>りゅうがく</rt></ruby>することにした。(Tôi đã quyết định sẽ đi du học từ năm sau.)",
+          "dong_nghia": []
+        }
+      ]
+    },
+    {
+      "so": "09",
+      "ten": "Thời gian - Trình tự - Đồng thời",
+      "items": [
+        {
+          "cautruc": "〜からには / 〜以上（は） / 〜上は",
+          "nghia": "Một khi đã... thì đương nhiên phải (Vế sau luôn thể hiện ý chí, nghĩa vụ, quyết tâm).",
+          "cau_truc_ngu_phap": "Vる / Vた + からには / 以上は",
+          "vi_du": "やると<ruby>決<rt>き</rt></ruby>めたからには、最後まで<ruby>頑張<rt>がんば</rt></ruby>るつもりだ。(Một khi đã quyết định làm thì tôi dự định sẽ cố gắng tới cùng.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜にあたって / 〜に際して / 〜に先立って",
+          "nghia": "Nhân dịp / Khi chuẩn bị / Trước khi làm gì (Sắc thái trang trọng, hay dùng trong công sở).",
+          "cau_truc_ngu_phap": "Vる / N + にあたって",
+          "vi_du": "新しい<ruby>事業<rt>じぎょう</rt></ruby>を<ruby>始<rt>はじ</rt></ruby>めるにあたって、<ruby>資金<rt>しきん</rt></ruby>を<ruby>準備<rt>じゅんび</rt></ruby>した。(Nhân dịp/Trước khi bắt đầu sự nghiệp mới, tôi đã chuẩn bị vốn.)",
+          "dong_nghia": [
+            "〜の前に",
+            "〜の時に"
+          ]
+        },
+        {
+          "cautruc": "〜に伴って / 〜につれて / 〜にしたがって / 〜とともに",
+          "nghia": "Cùng với... / Càng... càng... (Diễn tả sự thay đổi đồng thời giữa 2 vế).",
+          "cau_truc_ngu_phap": "Vる / N + に伴って",
+          "vi_du": "<ruby>人口<rt>じんこう</rt></ruby>の<ruby>増加<rt>ぞうか</rt></ruby>に<ruby>伴<rt>ともな</rt></ruby>って、<ruby>住宅<rt>じゅうたく</rt></ruby>の<ruby>需要<rt>じゅよう</rt></ruby>も高まっている。(Cùng với sự gia tăng dân số, nhu cầu về nhà ở cũng đang tăng cao.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜次第（しだい） / 〜しだいで / 〜次第だ",
+          "nghia": "Ngay sau khi (V-masu bỏ masu + 次第) / Tùy thuộc vào (N + しだいで) / Lý do là (Đuôi câu 次第だ).",
+          "cau_truc_ngu_phap": "Vます(bỏ masu)/N + 次第",
+          "vi_du": "スケジュールが決まり<ruby>次第<rt>しだい</rt></ruby>、ご<ruby>連絡<rt>れんらく</rt></ruby>します。(Ngay sau khi lịch trình được quyết định, tôi sẽ liên lạc.)",
+          "dong_nghia": [
+            "〜たらすぐに",
+            "〜によって決まる"
+          ]
+        },
+        {
+          "cautruc": "〜て初めて",
+          "nghia": "Chỉ sau khi... thì mới... (Điều kiện tiên quyết, không có vế trước thì vế sau không xảy ra).",
+          "cau_truc_ngu_phap": "Vて + 初めて",
+          "vi_du": "<ruby>病気<rt>びょうき</rt></ruby>になって<ruby>初<rt>はじ</rt></ruby>めて、<ruby>健康<rt>けんこう</rt></ruby>のありがたさがわかった。(Chỉ sau khi đổ bệnh, tôi mới hiểu được sự quý giá của sức khỏe.)",
+          "dong_nghia": [
+            "〜てからやっと",
+            "Không có X → KHÔNG THỂ có Y, nhấn mạnh điều kiện tiên quyết bắt buộc"
+          ]
+        },
+        {
+          "cautruc": "〜間に / 〜うちに",
+          "nghia": "Trong lúc... / Tranh thủ lúc trạng thái chưa thay đổi.",
+          "cau_truc_ngu_phap": "Vる / Vている / Nの + 間に",
+          "vi_du": "<ruby>若<rt>わか</rt></ruby>いうちに、いろいろな<ruby>経験<rt>けいけん</rt></ruby>をしたほうがいい。(Nên trải nghiệm nhiều thứ tranh thủ lúc còn trẻ.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "V-たうえで",
+          "nghia": "Sau khi làm V xong rồi mới làm vế sau (Thứ tự bắt buộc, dựa trên tiền đề vế trước).",
+          "cau_truc_ngu_phap": "Vた / Nの + うえで",
+          "vi_du": "よく<ruby>考<rt>かんが</rt></ruby>えたうえで、お<ruby>返事<rt>へんじ</rt></ruby>いたします。(Sau khi suy nghĩ kỹ lưỡng, tôi sẽ xin trả lời.)",
+          "dong_nghia": [
+            "〜してから"
+          ]
+        },
+        {
+          "cautruc": "V-るうえで",
+          "nghia": "Trong việc... / Trong quá trình... (đồng thời, đang diễn ra)",
+          "cau_truc_ngu_phap": "V-る + うえで",
+          "vi_du": "<ruby>仕事<rt>しごと</rt></ruby>を<ruby>進<rt>すす</rt></ruby>めるうえで、コミュニケーションが<ruby>大切<rt>たいせつ</rt></ruby>だ。(Trong quá trình thực hiện công việc, việc giao tiếp là rất quan trọng.)",
+          "dong_nghia": [
+            "〜する場合に"
+          ]
+        },
+        {
+          "cautruc": "一方（で）",
+          "nghia": "Mặt khác / Trong khi đó (Đưa ra một khía cạnh đối lập, phản diện của vấn đề).",
+          "cau_truc_ngu_phap": "Thể thông thường + 一方で",
+          "vi_du": "この<ruby>仕事<rt>しごと</rt></ruby>は<ruby>給料<rt>きゅうりょう</rt></ruby>が高い<ruby>一方<rt>いっぽう</rt></ruby>で、ストレスも多い。(Công việc này tiền lương cao nhưng mặt khác áp lực cũng nhiều.)",
+          "dong_nghia": [
+            "反面",
+            "9 đề xuất hiện — đề hay hỏi trực tiếp về sự đối lập giữa 2 khía cạnh này"
+          ]
+        },
+        {
+          "cautruc": "顔色を窺う",
+          "nghia": "Quan sát phản ứng, thăm dò sắc mặt hoặc thái độ của người khác trước khi hành động.",
+          "cau_truc_ngu_phap": "顔色を窺う（かおいろをうかがう）",
+          "vi_du": "いつも<ruby>上司<rt>じょうし</rt></ruby>の<ruby>顔色<rt>かおいろ</rt></ruby>を<ruby>窺<rt>うかが</rt></ruby>って<ruby>仕事<rt>しごと</rt></ruby>をする。(Lúc nào cũng làm việc trong tâm thế thăm dò sắc mặt sếp.)",
+          "dong_nghia": [
+            "空気を読む"
+          ]
+        },
+        {
+          "cautruc": "〜うちに",
+          "nghia": "Trong lúc còn X / Tranh thủ trước khi thay đổi",
+          "cau_truc_ngu_phap": "V-る/Aい/Aな + うちに",
+          "vi_du": "<ruby>子供<rt>こども</rt></ruby>が<ruby>小<rt>ちい</rt></ruby>さいうちに、たくさん<ruby>遊<rt>あそ</rt></ruby>んであげたい。(Tranh thủ lúc con còn nhỏ, tôi muốn chơi cùng con nhiều.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜次第だ／次第",
+          "nghia": "Tùy vào N (cuối câu) / Ngay khi V xong (giữa câu)",
+          "cau_truc_ngu_phap": "N + 次第だ (cuối câu) ｜ V-masu + 次第 (giữa câu)",
+          "vi_du": "<ruby>結果<rt>けっか</rt></ruby>は<ruby>努力<rt>どりょく</rt></ruby>次第だ。(Kết quả tùy thuộc vào sự nỗ lực.) <ruby>到着<rt>とうちゃく</rt></ruby>次第、ご<ruby>連絡<rt>れんらく</rt></ruby>します。(Ngay khi đến tôi sẽ liên lạc.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜ことを考えると",
+          "nghia": "Khi nghĩ đến... / Xét về... (phân tích → kết luận)",
+          "cau_truc_ngu_phap": "N の/V-る + ことを考えると",
+          "vi_du": "<ruby>将来<rt>しょうらい</rt></ruby>のことを考えると、<ruby>今<rt>いま</rt></ruby>から<ruby>貯金<rt>ちょきん</rt></ruby>すべきだ。(Xét đến tương lai, từ giờ nên tiết kiệm tiền.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜とともに",
+          "nghia": "Cùng với / Đồng thời (xảy ra cùng lúc)",
+          "cau_truc_ngu_phap": "N/V-る + とともに",
+          "vi_du": "<ruby>年齢<rt>ねんれい</rt></ruby>とともに、<ruby>体力<rt>たいりょく</rt></ruby>が<ruby>低下<rt>ていか</rt></ruby>する。(Cùng với tuổi tác, thể lực suy giảm.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜に先立って",
+          "nghia": "Trước khi (trang trọng, có sự chuẩn bị)",
+          "cau_truc_ngu_phap": "N/V-る + に先立って",
+          "vi_du": "<ruby>開会式<rt>かいかいしき</rt></ruby>に先立って、<ruby>挨拶<rt>あいさつ</rt></ruby>が<ruby>行<rt>おこな</rt></ruby>われた。(Trước khi diễn ra lễ khai mạc, đã có phần phát biểu.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "もちろん",
+          "nghia": "Tất nhiên / Dĩ nhiên (thừa nhận điều hiển nhiên trước khi phản biện)",
+          "cau_truc_ngu_phap": "もちろん + câu",
+          "vi_du": "もちろん<ruby>努力<rt>どりょく</rt></ruby>は<ruby>大切<rt>たいせつ</rt></ruby>だ。しかし、それだけでは<ruby>足<rt>た</rt></ruby>りない。(Tất nhiên nỗ lực là quan trọng. Nhưng chỉ vậy thôi thì chưa đủ.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "確かに",
+          "nghia": "Đúng là / Chắc chắn là (xác nhận trước khi phản biện)",
+          "cau_truc_ngu_phap": "確かに〜が/けど + câu phản biện",
+          "vi_du": "確かに<ruby>値段<rt>ねだん</rt></ruby>は<ruby>高<rt>たか</rt></ruby>いが、<ruby>品質<rt>ひんしつ</rt></ruby>はいい。(Đúng là giá cao, nhưng chất lượng tốt.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "次第 (2 nghĩa)",
+          "nghia": "① V-masu + 次第 = Ngay khi vừa... ｜ ② N + 次第で = Tùy vào N",
+          "cau_truc_ngu_phap": "① V-masu + 次第 ｜ ② N + 次第で",
+          "vi_du": "①<ruby>到着<rt>とうちゃく</rt></ruby>次第、ご<ruby>連絡<rt>れんらく</rt></ruby>いたします。(Ngay khi đến tôi sẽ liên lạc ngay.)\n②<ruby>安<rt>やす</rt></ruby>い<ruby>材料<rt>ざいりょう</rt></ruby>でも、<ruby>工夫<rt>くふう</rt></ruby>次第で<ruby>豪華<rt>ごうか</rt></ruby>なごちそうができる。(Dù nguyên liệu rẻ, nhưng tùy vào sự sáng tạo mà có thể làm thành món ngon sang trọng. — 8 đề thật, M7×5 M8×3)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "にともなって／ともない／ともなう",
+          "nghia": "Cùng với, kéo theo (2 sự việc biến đổi song song)",
+          "cau_truc_ngu_phap": "N/V-る + にともなって",
+          "vi_du": "<ruby>人口<rt>じんこう</rt></ruby>の<ruby>増加<rt>ぞうか</rt></ruby>にともなって、<ruby>交通<rt>こうつう</rt></ruby>の<ruby>問題<rt>もんだい</rt></ruby>も<ruby>深刻<rt>しんこく</rt></ruby>になってきた。(Cùng với sự gia tăng dân số, vấn đề giao thông cũng trở nên nghiêm trọng hơn.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜て以来",
+          "nghia": "Từ khi... đến giờ (vẫn tiếp diễn)",
+          "cau_truc_ngu_phap": "V-て + 以来",
+          "vi_du": "<ruby>就職<rt>しゅうしょく</rt></ruby>して<ruby>以来<rt>いらい</rt></ruby>、ずっとこのかばんを<ruby>使<rt>つか</rt></ruby>っている。(Từ khi đi làm đến giờ tôi vẫn luôn dùng chiếc cặp này.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "お/ご + V + 願う",
+          "nghia": "Xin được, mong được (cách nói khiêm nhường, lịch sự, trang trọng)",
+          "cau_truc_ngu_phap": "ご + V(danh từ hóa) + 願います",
+          "vi_du": "ご<ruby>了承<rt>りょうしょう</rt></ruby>願います。(Xin được sự thông cảm/đồng ý của quý vị.)",
+          "dong_nghia": [
+            "3 đề thật xuất hiện (M8×2 M9×1) — dùng trong văn bản/hội thoại trang trọng, kính ngữ"
+          ]
+        },
+        {
+          "cautruc": "〜に際して／際し",
+          "nghia": "Vào lúc, khi (dịp quan trọng, trang trọng)",
+          "cau_truc_ngu_phap": "N/V-る + に際して",
+          "vi_du": "<ruby>卒業<rt>そつぎょう</rt></ruby>に<ruby>際<rt>さい</rt></ruby>して、<ruby>先生<rt>せんせい</rt></ruby>に<ruby>感謝<rt>かんしゃ</rt></ruby>の<ruby>言葉<rt>ことば</rt></ruby>を<ruby>伝<rt>つた</rt></ruby>えた。(Vào dịp tốt nghiệp, tôi đã gửi lời cảm ơn đến thầy giáo.)",
+          "dong_nghia": []
+        }
+      ]
+    },
+    {
+      "so": "10",
+      "ten": "Đánh giá - Cảm xúc - Thái độ người nói",
+      "items": [
+        {
+          "cautruc": "〜ものではない",
+          "nghia": "Không nên làm... (Mang sắc thái phán xét đạo đức, phê phán tập tục/hành vi).",
+          "cau_truc_ngu_phap": "Vる + ものではない",
+          "vi_du": "<ruby>目上<rt>めうえ</rt></ruby>の人に向かって、そんな<ruby>口<rt>くち</rt></ruby>の聞き方をするものではない。(Không nên ăn nói cái kiểu như thế với người bề trên.)",
+          "dong_nghia": [
+            "〜べきではない",
+            "Mang sắc thái phê phán tập tục/hành vi, thường gặp trong đoạn nêu chuẩn mực xã hội"
+          ]
+        },
+        {
+          "cautruc": "〜べき / 〜べきだ / 〜べきではない",
+          "nghia": "Nên / Cần phải / Không nên.\n⚡ MẸO DOKKAI: Thể hiện lời khuyên mạnh mẽ của tác giả. Câu hỏi dạng \"Tác giả nghĩ gì?\" thường nhắm thẳng vào câu có đuôi này.",
+          "cau_truc_ngu_phap": "Vる + べき",
+          "vi_du": "<ruby>約束<rt>やくそく</rt></ruby>は<ruby>守<rt>まも</rt></ruby>るべきだ。(Đã hứa thì cần phải giữ lời.)",
+          "dong_nghia": [
+            "〜たほうがいい"
+          ]
+        },
+        {
+          "cautruc": "〜ことに / 〜ことか",
+          "nghia": "Thật là... / Biết bao nhiêu (Nhấn mạnh cảm xúc người viết).",
+          "cau_truc_ngu_phap": "Vた / Aい / Aな + ことに",
+          "vi_du": "<ruby>残念<rt>ざんねん</rt></ruby>なことに、<ruby>試合<rt>しあい</rt></ruby>に<ruby>負<rt>ま</rt></ruby>けてしまった。(Thật đáng tiếc là chúng ta đã thua trận đấu.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜として / 〜ことだ / 〜ことになっている",
+          "nghia": "Với tư cách là / Nên làm gì / Theo quy định hiện hành.",
+          "cau_truc_ngu_phap": "Nとして / Vる・Vないことだ",
+          "vi_du": "<ruby>上手<rt>じょうず</rt></ruby>になりたいなら、毎日<ruby>練習<rt>れんしゅう</rt></ruby>することだ。(Nếu muốn giỏi lên thì nên luyện tập mỗi ngày.)",
+          "dong_nghia": [
+            "〜べきだ"
+          ]
+        },
+        {
+          "cautruc": "〜べきだ／べきではない",
+          "nghia": "Nên / Không nên (lời khuyên mạnh, quan điểm cốt lõi tác giả)",
+          "cau_truc_ngu_phap": "V-る + べきだ／べきではない",
+          "vi_du": "<ruby>政府<rt>せいふ</rt></ruby>はもっと<ruby>対策<rt>たいさく</rt></ruby>を<ruby>講<rt>こう</rt></ruby>じるべきだ。(Chính phủ nên có thêm biện pháp đối phó.)",
+          "dong_nghia": [
+            "Câu hỏi 'tác giả nghĩ gì' của đề Mondai 11 thường nhắm trực tiếp vào câu chứa べきだ"
+          ]
+        },
+        {
+          "cautruc": "なんて〜ことか",
+          "nghia": "Biết bao nhiêu...! (cảm thán mạnh)",
+          "cau_truc_ngu_phap": "なんて + Aい/Aな + ことか",
+          "vi_du": "なんて<ruby>美<rt>うつく</rt></ruby>しい<ruby>景色<rt>けしき</rt></ruby>なことか!(Cảnh đẹp biết bao nhiêu!)",
+          "dong_nghia": [
+            "5 đề thật xuất hiện (M7×3 M8×2) — thường dùng để nhấn mạnh cảm xúc mạnh trong văn viết/hội thoại"
+          ]
+        }
+      ]
+    },
+    {
+      "so": "11",
+      "ten": "So sánh - Đối chiếu - Lập trường",
+      "items": [
+        {
+          "cautruc": "〜に比べて",
+          "nghia": "So với... (Cấu trúc so sánh nền tảng).",
+          "cau_truc_ngu_phap": "N + に比べて",
+          "vi_du": "<ruby>去年<rt>きょねん</rt></ruby>に<ruby>比<rt>くら</rt></ruby>べて、今年は<ruby>雨<rt>あめ</rt></ruby>が多い。(So với năm ngoái thì năm nay mưa nhiều hơn.)",
+          "dong_nghia": [
+            "〜と比較して"
+          ]
+        },
+        {
+          "cautruc": "〜から言わせれば",
+          "nghia": "Theo quan điểm của tôi / Nếu để tôi nói thì... (Dấu hiệu chỉ ý kiến cá nhân mạnh mẽ).",
+          "cau_truc_ngu_phap": "N + から言わせれば",
+          "vi_du": "私から<ruby>言<rt>い</rt></ruby>わせれば、それは<ruby>時間<rt>じかん</rt></ruby>の<ruby>無駄<rt>むだ</rt></ruby>だ。(Theo quan điểm của tôi thì điều đó chỉ lãng phí thời gian thôi.)",
+          "dong_nghia": [
+            "〜から見ると",
+            "〜にとっては"
+          ]
+        },
+        {
+          "cautruc": "〜に照らし合わせて",
+          "nghia": "Đối chiếu với chuẩn mực / Chiếu theo (Đánh giá dựa trên một thước đo đạo đức, giá trị cố hữu).",
+          "cau_truc_ngu_phap": "N + に照らし合わせて",
+          "vi_du": "<ruby>自分<rt>じぶん</rt></ruby>の<ruby>経験<rt>けいけん</rt></ruby>に<ruby>照<rt>て</rt></ruby>らし<ruby>合<rt>あ</rt></ruby>わせて<ruby>考<rt>かんが</rt></ruby>える。(Suy nghĩ dựa trên việc đối chiếu với kinh nghiệm của bản thân.)",
+          "dong_nghia": [
+            "〜を基準にして"
+          ]
+        },
+        {
+          "cautruc": "〜にとって vs 〜によって",
+          "nghia": "Đối với (lập trường) vs Bởi (nguyên nhân/phương tiện)",
+          "cau_truc_ngu_phap": "N + にとって ｜ N + によって",
+          "vi_du": "この<ruby>決定<rt>けってい</rt></ruby>は<ruby>私<rt>わたし</rt></ruby>にとって<ruby>重要<rt>じゅうよう</rt></ruby>だ。(Quyết định này quan trọng đối với tôi.) 事故は<ruby>不注意<rt>ふちゅうい</rt></ruby>によって<ruby>起<rt>お</rt></ruby>きた。(Tai nạn xảy ra do sự bất cẩn.)",
+          "dong_nghia": []
+        }
+      ]
+    },
+    {
+      "so": "12",
+      "ten": "Mục đích - Phương tiện - Cách thức",
+      "items": [
+        {
+          "cautruc": "〜にほかならない",
+          "nghia": "Chính là / Không gì khác ngoài (Dùng ở đuôi câu để khẳng định chắc nịch kết luận).",
+          "cau_truc_ngu_phap": "N + にほかならない",
+          "vi_du": "この<ruby>成功<rt>せいこう</rt></ruby>は、みんなの<ruby>努力<rt>どりょく</rt></ruby>の<ruby>結果<rt>けっか</rt></ruby>にほかならない。(Thành công này không gì khác ngoài kết quả của sự nỗ lực từ mọi người.)",
+          "dong_nghia": [
+            "〜だ",
+            "まさに〜だ"
+          ]
+        },
+        {
+          "cautruc": "〜かねる",
+          "nghia": "Khó mà / Không thể (Dùng nhiều trong văn phong công sở, Keigo để từ chối khéo một cách lịch sự).",
+          "cau_truc_ngu_phap": "Vます (bỏ masu) + かねる",
+          "vi_du": "お<ruby>客様<rt>きゃくさま</rt></ruby>の<ruby>要望<rt>ようぼう</rt></ruby>にはお<ruby>応<rt>こた</rt></ruby>えしかねます。(Chúng tôi khó lòng mà đáp ứng được yêu cầu của quý khách.)",
+          "dong_nghia": [
+            "〜できない"
+          ]
+        },
+        {
+          "cautruc": "〜どころか / 〜どころではない",
+          "nghia": "Đừng nói là... trái lại còn (Mức độ khác xa dự đoán) / Không phải lúc để làm gì.",
+          "cau_truc_ngu_phap": "N / Thể thông thường + どころか",
+          "vi_du": "彼は<ruby>貯金<rt>ちょきん</rt></ruby>するどころか、<ruby>借金<rt>しゃっきん</rt></ruby>だらけだ。(Anh ta đừng nói là có tiền tiết kiệm, trái lại còn đang nợ ngập đầu.)",
+          "dong_nghia": [
+            "〜ばかりか"
+          ]
+        },
+        {
+          "cautruc": "〜ではないか / 〜のではないかと思う / 〜だろうか",
+          "nghia": "Phải chăng là...? / Tôi nghĩ rằng có lẽ...\n⚡ MẸO DOKKAI: Tác giả đưa ra giả thuyết hoặc đặt câu hỏi tự vấn để mời người đọc đồng thuận. Câu trả lời nằm ngay sau đó.",
+          "cau_truc_ngu_phap": "Thể thông thường + ではないか",
+          "vi_du": "これは<ruby>新<rt>あたら</rt></ruby>しい<ruby>時代<rt>じだい</rt></ruby>の<ruby>幕開<rt>まくあ</rt></ruby>けではないだろうか。(Phải chăng đây chính là sự khởi đầu của một thời đại mới?)",
+          "dong_nghia": [
+            "〜と思う"
+          ]
+        },
+        {
+          "cautruc": "たしかに〜が",
+          "nghia": "Đúng là... nhưng... (Nhượng bộ có chủ ý: thừa nhận vế trước để lấy đà khẳng định vế sau mới là quan trọng).",
+          "cau_truc_ngu_phap": "たしかに〜が／けど",
+          "vi_du": "たしかに<ruby>便利<rt>べんり</rt></ruby>だが、<ruby>高<rt>たか</rt></ruby>すぎる。(Đúng là tiện lợi thật đấy nhưng mà đắt quá.)",
+          "dong_nghia": [
+            "なるほど〜が",
+            "Ý chính của tác giả luôn nằm ở vế SAU が/けど, không phải vế nhượng bộ trước"
+          ]
+        },
+        {
+          "cautruc": "〜も…ば〜も / 〜ては…ては… / 〜（に）は…が／けど",
+          "nghia": "Cấu trúc so sánh, lặp lại hành động hoặc nhượng bộ nhẹ để làm nổi bật luận điểm chính.",
+          "cau_truc_ngu_phap": "Nも〜ばNも / VてはVては / VるにはVるが",
+          "vi_du": "<ruby>人生<rt>じんせい</rt></ruby>には<ruby>楽<rt>たの</rt></ruby>しいこともあれば、<ruby>苦<rt>くる</rt></ruby>しいこともある。(Cuộc đời có những lúc vui thì cũng có những lúc khổ.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜ようがない",
+          "nghia": "Không có cách nào để... (tuyệt đối bất lực)",
+          "cau_truc_ngu_phap": "V-masu + ようがない",
+          "vi_du": "<ruby>連絡先<rt>れんらくさき</rt></ruby>を知らないので、<ruby>確認<rt>かくにん</rt></ruby>しようがない。(Vì không biết số liên lạc nên không có cách nào xác nhận được.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜すら",
+          "nghia": "Ngay cả... (đưa ví dụ cực đoan để nhấn mạnh)",
+          "cau_truc_ngu_phap": "N + すら",
+          "vi_du": "<ruby>忙<rt>いそが</rt></ruby>しくて、<ruby>食事<rt>しょくじ</rt></ruby>する時間すらない。(Bận đến mức ngay cả thời gian ăn cũng không có.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜は／ならともかく(として)",
+          "nghia": "Còn... thì để sau, tạm không tính/không bàn đến",
+          "cau_truc_ngu_phap": "N + は／ならともかく(として)",
+          "vi_du": "デートで<ruby>着<rt>き</rt></ruby>るならともかく、<ruby>仕事<rt>しごと</rt></ruby>には<ruby>派手<rt>はで</rt></ruby>すぎる。(Nếu mặc đi hẹn hò thì còn được, nhưng đi làm thì quá lòe loẹt.)",
+          "dong_nghia": []
+        }
+      ]
+    },
+    {
+      "so": "13",
+      "ten": "Diễn đạt lại - Tóm tắt - Nói cách khác",
+      "items": [
+        {
+          "cautruc": "〜ということだ",
+          "nghia": "Tức là / Nghĩa là... (diễn giải lại, trang trọng)",
+          "cau_truc_ngu_phap": "câu + ということだ",
+          "vi_du": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>来<rt>こ</rt></ruby>られないということだ。つまり、<ruby>代理<rt>だいり</rt></ruby>を<ruby>立<rt>た</rt></ruby>てる<ruby>必要<rt>ひつよう</rt></ruby>がある。(Nghĩa là anh ấy không đến được. Vậy cần phải tìm người thay thế.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "つまり",
+          "nghia": "Tức là / Kết luận (tóm gọn — tần suất thực tế rất cao trong Mondai 11)",
+          "cau_truc_ngu_phap": "câu A。つまり、câu B (kết luận)",
+          "vi_du": "<ruby>収入<rt>しゅうにゅう</rt></ruby>が<ruby>減<rt>へ</rt></ruby>り、<ruby>支出<rt>ししゅつ</rt></ruby>は<ruby>増<rt>ふ</rt></ruby>えた。つまり、<ruby>生活<rt>せいかつ</rt></ruby>が<ruby>苦<rt>くる</rt></ruby>しくなったということだ。(Thu nhập giảm, chi tiêu tăng. Tức là cuộc sống đã trở nên khó khăn hơn.)",
+          "dong_nghia": [
+            "11 đề xuất hiện — câu đứng NGAY SAU つまり luôn là câu quan trọng nhất của đoạn, ưu tiên học cao nhất nhóm Nhân quả"
+          ]
+        },
+        {
+          "cautruc": "要するに",
+          "nghia": "Nói tóm lại / Kết luận là (tổng kết đoạn dài)",
+          "cau_truc_ngu_phap": "要するに + câu tóm tắt",
+          "vi_du": "<ruby>長<rt>なが</rt></ruby>い<ruby>説明<rt>せつめい</rt></ruby>だったが、要するに<ruby>予算<rt>よさん</rt></ruby>が<ruby>足<rt>た</rt></ruby>りないということだ。(Giải thích dài dòng, nhưng nói tóm lại là không đủ ngân sách.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "すなわち",
+          "nghia": "Tức là / Đó là (trang trọng hơn つまり)",
+          "cau_truc_ngu_phap": "câu A、すなわち câu B",
+          "vi_du": "<ruby>地球温暖化<rt>ちきゅうおんだんか</rt></ruby>、すなわち<ruby>気温<rt>きおん</rt></ruby>の<ruby>上昇<rt>じょうしょう</rt></ruby>が<ruby>問題<rt>もんだい</rt></ruby>だ。(Sự nóng lên toàn cầu, tức là việc nhiệt độ tăng lên, đang là vấn đề.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "言い換えれば",
+          "nghia": "Nói cách khác / Diễn đạt lại đơn giản hơn",
+          "cau_truc_ngu_phap": "言い換えれば + cách diễn đạt khác",
+          "vi_du": "<ruby>言<rt>い</rt></ruby>い<ruby>換<rt>か</rt></ruby>えれば、それは<ruby>選択<rt>せんたく</rt></ruby>の<ruby>自由<rt>じゆう</rt></ruby>がないということだ。(Nói cách khác, đó là việc không có tự do lựa chọn.)",
+          "dong_nghia": []
+        }
+      ]
+    },
+    {
+      "so": "14",
+      "ten": "Hối hận - Tiếc nuối - Đáng lẽ",
+      "items": [
+        {
+          "cautruc": "思いがけない",
+          "nghia": "Không ngờ tới / Ngoài dự tính (Trái hoàn toàn với logic ban đầu).",
+          "cau_truc_ngu_phap": "Tính từ đuôi い",
+          "vi_du": "これまでと同じ<ruby>行動<rt>こうどう</rt></ruby>をしていては、<ruby>思<rt>おも</rt></ruby>いがけない<ruby>失敗<rt>しっぱい</rt></ruby>をする。(Nếu cứ hành động y như trước nay thì sẽ gặp phải thất bại không ngờ tới.)",
+          "dong_nghia": [
+            "予想外の",
+            "不測の"
+          ]
+        },
+        {
+          "cautruc": "〜べきだった",
+          "nghia": "Đáng lẽ phải làm (hối tiếc về việc KHÔNG LÀM)",
+          "cau_truc_ngu_phap": "V-る + べきだった",
+          "vi_du": "もっと<ruby>早<rt>はや</rt></ruby>く<ruby>相談<rt>そうだん</rt></ruby>するべきだった。(Đáng lẽ tôi phải bàn bạc sớm hơn.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜ばよかった",
+          "nghia": "Giá mà đã... (hối tiếc về việc đã làm SAI hoặc KHÔNG LÀM)",
+          "cau_truc_ngu_phap": "V-ば + よかった",
+          "vi_du": "もう<ruby>少<rt>すこ</rt></ruby>し<ruby>早<rt>はや</rt></ruby>く<ruby>出発<rt>しゅっぱつ</rt></ruby>すればよかった。(Giá mà tôi xuất phát sớm hơn một chút.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜なんて／〜とは",
+          "nghia": "Mà lại... (ngạc nhiên, không ngờ tới)",
+          "cau_truc_ngu_phap": "N/V + なんて／とは + cảm xúc bất ngờ",
+          "vi_du": "<ruby>姉<rt>あね</rt></ruby>が10<ruby>年<rt>ねん</rt></ruby><ruby>以上<rt>いじょう</rt></ruby><ruby>日記<rt>にっき</rt></ruby>を<ruby>書<rt>か</rt></ruby>くなんて、<ruby>私<rt>わたし</rt></ruby>にはとてもできない。(Chị tôi viết nhật ký liên tục hơn 10 năm — thật không ngờ, tôi thì không thể làm được như vậy.)",
+          "dong_nghia": [
+            "7 đề thật xuất hiện (M7×6 M8×2) — dấu hiệu nhận biết: đi kèm cảm xúc ngạc nhiên/thán phục/thất vọng"
+          ]
+        }
+      ]
+    },
+    {
+      "so": "15",
+      "ten": "Xu hướng - Trạng thái - Khuynh hướng",
+      "items": [
+        {
+          "cautruc": "〜にかけては",
+          "nghia": "Riêng về mặt... (Thường theo sau bằng một lời khen ngợi ai đó xuất sắc về lĩnh vực gì).",
+          "cau_truc_ngu_phap": "N + にかけては",
+          "vi_du": "足の速さにかけては、クラスの誰にも<ruby>負<rt>ま</rt></ruby>けない。(Riêng về khoản chạy nhanh thì tôi không thua bất cứ ai trong lớp.)",
+          "dong_nghia": [
+            "〜については"
+          ]
+        },
+        {
+          "cautruc": "〜と言えるだろう",
+          "nghia": "Có thể nói rằng... (Đuôi câu đưa ra kết luận một cách thận trọng, thường nằm cuối đoạn văn).",
+          "cau_truc_ngu_phap": "Thể thông thường + と言えるだろう",
+          "vi_du": "この<ruby>傾向<rt>けいこう</rt></ruby>は今後も続くと<ruby>言<rt>い</rt></ruby>えるだろう。(Có thể nói rằng xu hướng này sẽ tiếp tục trong tương lai.)",
+          "dong_nghia": [
+            "〜だろう"
+          ]
+        },
+        {
+          "cautruc": "〜あまり / 〜向け / 〜向き / 〜がち / 〜気味 / 〜っぽい",
+          "nghia": "Thể hiện sắc thái đánh giá, khuynh hướng (thường là tiêu cực).",
+          "cau_truc_ngu_phap": "N / Vます (bỏ masu) + がち/気味/っぽい",
+          "vi_du": "最近、<ruby>彼<rt>かれ</rt></ruby>は<ruby>風邪<rt>かぜ</rt></ruby>気味だ。(Gần đây anh ấy có vẻ hơi cảm cảm.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜一方だ",
+          "nghia": "Ngày càng... (1 chiều, không đổi chiều, thường tiêu cực)",
+          "cau_truc_ngu_phap": "V-る + 一方だ",
+          "vi_du": "<ruby>少子化<rt>しょうしか</rt></ruby>は<ruby>進<rt>すす</rt></ruby>む一方だ。(Tình trạng giảm sinh ngày càng trầm trọng hơn.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜がち",
+          "nghia": "Hay bị / Có xu hướng (tiêu cực, đã từng xảy ra)",
+          "cau_truc_ngu_phap": "V-masu/N + がち",
+          "vi_du": "<ruby>最近<rt>さいきん</rt></ruby>、<ruby>体調<rt>たいちょう</rt></ruby>を<ruby>崩<rt>くず</rt></ruby>しがちだ。(Gần đây tôi hay bị suy yếu sức khỏe.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜ものだ",
+          "nghia": "Đó là lẽ thường / Bản chất tất yếu (quy luật chung, không phải ý kiến cá nhân)",
+          "cau_truc_ngu_phap": "V-る/Aい/Aな + ものだ",
+          "vi_du": "<ruby>人間<rt>にんげん</rt></ruby>は<ruby>誰<rt>だれ</rt></ruby>でも<ruby>失敗<rt>しっぱい</rt></ruby>するものだ。(Con người ai cũng đều mắc sai lầm - đó là lẽ thường.)",
+          "dong_nghia": [
+            "13 đề thật xuất hiện (cao nhất sheet), là 1 trong các tín hiệu tìm câu chứa ý chính tác giả"
+          ]
+        },
+        {
+          "cautruc": "〜だけでなく〜も",
+          "nghia": "Không chỉ X mà còn Y (vế sau thường mạnh/rộng hơn)",
+          "cau_truc_ngu_phap": "V/A/N + だけでなく〜も",
+          "vi_du": "この<ruby>店<rt>みせ</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>だけでなく<ruby>雰囲気<rt>ふんいき</rt></ruby>もいい。(Quán này không chỉ món ăn mà không khí cũng tốt.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜そうです／そうだ (nghe nói)",
+          "nghia": "Nghe nói là / Có vẻ là (theo thông tin/dấu hiệu từ nguồn khác)",
+          "cau_truc_ngu_phap": "V/A + そうだ (thể từ điển)",
+          "vi_du": "<ruby>天気予報<rt>てんきよほう</rt></ruby>によると、<ruby>明日<rt>あした</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>だそうだ。(Theo dự báo thời tiết, nghe nói ngày mai sẽ mưa.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜そうだ (quan sát + dự đoán hành vi)",
+          "nghia": "Có vẻ sẽ... (dự đoán dựa trên quan sát trực tiếp)",
+          "cau_truc_ngu_phap": "V-masu (bỏ ます) + そうだ",
+          "vi_du": "この<ruby>計画<rt>けいかく</rt></ruby>は<ruby>期待<rt>きたい</rt></ruby>できそうだ。(Kế hoạch này có vẻ đáng kỳ vọng.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜てはいかがでしょうか",
+          "nghia": "Hay là... (gợi ý lịch sự, thường ở câu kết)",
+          "cau_truc_ngu_phap": "V-て + はいかがでしょうか",
+          "vi_du": "もう<ruby>少<rt>すこ</rt></ruby>し<ruby>休<rt>やす</rt></ruby>んでみてはいかがでしょうか。(Hay là bạn thử nghỉ ngơi thêm một chút xem sao?)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜というものだ",
+          "nghia": "Đó mới là, vốn là (lẽ thường khách quan, nhận định chung)",
+          "cau_truc_ngu_phap": "câu + というものだ",
+          "vi_du": "<ruby>努力<rt>どりょく</rt></ruby>すれば<ruby>必<rt>かなら</rt></ruby>ず<ruby>成功<rt>せいこう</rt></ruby>するというものではない。(Không phải hễ cố gắng là chắc chắn sẽ thành công đâu - đó mới là lẽ thường.)",
+          "dong_nghia": []
+        }
+      ]
+    },
+    {
+      "so": "16",
+      "ten": "Bất kể / Không phân biệt / Không liên quan",
+      "items": [
+        {
+          "cautruc": "〜を問わず",
+          "nghia": "Bất kể / Không phân biệt",
+          "cau_truc_ngu_phap": "N + を問わず",
+          "vi_du": "この<ruby>仕事<rt>しごと</rt></ruby>は<ruby>経験<rt>けいけん</rt></ruby>の<ruby>有無<rt>ゆうむ</rt></ruby>を問わず<ruby>応募<rt>おうぼ</rt></ruby>できる。(Công việc này không phân biệt có kinh nghiệm hay không đều có thể ứng tuyển.)",
+          "dong_nghia": []
+        },
+        {
+          "cautruc": "〜といわず〜といわず／〜はともかく",
+          "nghia": "Cả A và B đều (không phân biệt) ｜ Khoan/tạm không nói đến...",
+          "cau_truc_ngu_phap": "N1といわずN2といわず ｜ N + はともかく",
+          "vi_du": "<ruby>平日<rt>へいじつ</rt></ruby>といわず<ruby>休日<rt>きゅうじつ</rt></ruby>といわず、いつも<ruby>忙<rt>いそが</rt></ruby>しい。(Bất kể ngày thường hay ngày nghỉ, lúc nào cũng bận.)",
+          "dong_nghia": []
+        }
+      ]
+    }
+  ],
+  "ho_de_nham": [
+    {
+      "ten": "わけ",
+      "members": [
+        {
+          "cautruc": "〜わけだ／〜わけです／〜というわけだ",
+          "nghia_ngan": "Rõ là.../Chính là vì...",
+          "khac_biet": "kết luận hợp lý từ thông tin đã biết, KHÔNG phải lựa chọn/khả năng.",
+          "vi_du": "<ruby>道<rt>みち</rt></ruby>が<ruby>混<rt>こ</rt></ruby>んでいた。それで<ruby>遅<rt>おく</rt></ruby>れたわけだ。(Đường bị tắc. Thì ra là vì vậy mà bị muộn.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Thì ra là / Có lý là (kết luận diễn giải từ thông tin đã nêu)"
+        },
+        {
+          "cautruc": "〜わけではない",
+          "nghia_ngan": "Không hẳn là...",
+          "khac_biet": "chỉ bác bỏ MỘT PHẦN suy luận, không phủ định hoàn toàn.",
+          "vi_du": "お<ruby>金<rt>かね</rt></ruby>があれば<ruby>幸<rt>しあわ</rt></ruby>せになれるというわけではない。(Không hẳn cứ có tiền là sẽ hạnh phúc.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Không hẳn là / Không có nghĩa là.\n⚡ BẪY DOKKAI: Bác bỏ một phần suy diễn của người đọc, không phải phủ định hoàn toàn."
+        },
+        {
+          "cautruc": "〜わけがない",
+          "nghia_ngan": "Tuyệt đối không thể, không có lý nào",
+          "khac_biet": "phủ định MẠNH dựa trên lý lẽ chắc chắn.",
+          "vi_du": "こんなに<ruby>難<rt>むずか</rt></ruby>しい<ruby>問題<rt>もんだい</rt></ruby>、私に解けるわけがない。(Bài toán khó thế này, không có lý nào tôi giải được.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Tuyệt đối không thể, không có lý nào (Phủ định mạnh mẽ dựa trên căn cứ xác thực)."
+        },
+        {
+          "cautruc": "〜わけにはいかない",
+          "nghia_ngan": "Không thể...",
+          "khac_biet": "vì cản trở về đạo lý/tâm lý/nghĩa vụ xã hội, không phải vì năng lực.",
+          "vi_du": "あしたは<ruby>大事<rt>だいじ</rt></ruby>なテストがあるので、<ruby>休<rt>やす</rt></ruby>むわけにはいかない。(Ngày mai có bài kiểm tra quan trọng nên không thể nghỉ được.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Không thể (do cản trở về mặt tâm lý, đạo lý, nghĩa vụ xã hội)."
+        }
+      ]
+    },
+    {
+      "ten": "もの",
+      "members": [
+        {
+          "cautruc": "〜ものだ",
+          "nghia_ngan": "Vốn là...",
+          "khac_biet": "chỉ bản chất/lẽ thường tình tự nhiên, hoặc hồi tưởng quá khứ (thường + thì).",
+          "vi_du": "<ruby>人間<rt>にんげん</rt></ruby>は<ruby>誰<rt>だれ</rt></ruby>でも<ruby>失敗<rt>しっぱい</rt></ruby>するものだ。(Con người ai cũng đều mắc sai lầm - đó là lẽ thường.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Đó là lẽ thường / Bản chất tất yếu (quy luật chung, không phải ý kiến cá nhân)"
+        },
+        {
+          "cautruc": "〜ものか",
+          "nghia_ngan": "Đời nào / Không bao giờ",
+          "khac_biet": "phủ định CỰC MẠNH kèm cảm xúc bất mãn/phản kháng.",
+          "vi_du": "あんな人に、<ruby>負<rt>ま</rt></ruby>けるものか。(Đời nào tôi chịu thua kẻ như hắn.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Đời nào / Không bao giờ (Phủ định cực kỳ mạnh mẽ, bày tỏ cảm xúc bác bỏ)."
+        },
+        {
+          "cautruc": "〜ものではない",
+          "nghia_ngan": "Không nên làm...",
+          "khac_biet": "mang sắc thái PHÁN XÉT đạo đức, phê phán.",
+          "vi_du": "<ruby>目上<rt>めうえ</rt></ruby>の人に向かって、そんな<ruby>口<rt>くち</rt></ruby>の聞き方をするものではない。(Không nên ăn nói cái kiểu như thế với người bề trên.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Không nên làm... (Mang sắc thái phán xét đạo đức, phê phán tập tục/hành vi)."
+        },
+        {
+          "cautruc": "〜ものなら",
+          "nghia_ngan": "Nếu mà (lỡ)... thì",
+          "khac_biet": "giả định 1 điều khó xảy ra/có hậu quả nghiêm trọng.",
+          "vi_du": "<ruby>戻<rt>もど</rt></ruby>れるものなら、<ruby>あの<rt></rt></ruby><ruby>時<rt>とき</rt></ruby>に<ruby>戻<rt>もど</rt></ruby>りたい。(Nếu mà có thể trở về được, tôi muốn trở về lúc đó.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Nếu mà... được (giả định khó xảy ra/có rủi ro)"
+        },
+        {
+          "cautruc": "〜というものだ",
+          "nghia_ngan": "Đúng là.../Phải nói rằng...",
+          "khac_biet": "nhận định khái quát, đúc kết quy luật chung.",
+          "vi_du": "<ruby>努力<rt>どりょく</rt></ruby>すれば<ruby>必<rt>かなら</rt></ruby>ず<ruby>成功<rt>せいこう</rt></ruby>するというものではない。(Không phải hễ cố gắng là chắc chắn sẽ thành công đâu - đó mới là lẽ thường.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Đó mới là, vốn là (lẽ thường khách quan, nhận định chung)"
+        }
+      ]
+    },
+    {
+      "ten": "かかわらず／問わず／限らず (bất kể, không phân biệt)",
+      "members": [
+        {
+          "cautruc": "〜にもかかわらず",
+          "nghia_ngan": "Mặc dù, dù... vẫn",
+          "khac_biet": "quan hệ NHƯỢNG BỘ (vế sau trái ngược kỳ vọng từ vế trước).",
+          "vi_du": "<ruby>悪天候<rt>あくてんこう</rt></ruby>にもかかわらず、試合は行われた。(Mặc dù thời tiết xấu, trận đấu vẫn được diễn ra.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "mặc dù..., dù... vẫn (nhấn mạnh sự bất ngờ/đối nghịch hơn のに)"
+        },
+        {
+          "cautruc": "〜にかかわらず",
+          "nghia_ngan": "Không liên quan đến / bất kể",
+          "khac_biet": "đi kèm 2 LỰA CHỌN ĐỐI LẬP, KHÔNG mang nghĩa nhượng bộ như にもかかわらず.",
+          "vi_du": "天気にかかわらず、試合は行われる。(Bất kể thời tiết thế nào, trận đấu vẫn diễn ra.)",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Không liên quan đến / bất kể"
+        },
+        {
+          "cautruc": "〜を問わず",
+          "nghia_ngan": "Bất kể, không phân biệt",
+          "khac_biet": "phạm vi liệt kê RỘNG, đi với DANH TỪ chỉ phạm trù, không cần 2 lựa chọn đối lập.",
+          "vi_du": "この<ruby>仕事<rt>しごと</rt></ruby>は<ruby>経験<rt>けいけん</rt></ruby>の<ruby>有無<rt>ゆうむ</rt></ruby>を問わず<ruby>応募<rt>おうぼ</rt></ruby>できる。(Công việc này không phân biệt có kinh nghiệm hay không đều có thể ứng tuyển.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Bất kể / Không phân biệt"
+        },
+        {
+          "cautruc": "〜に限らず",
+          "nghia_ngan": "Không chỉ riêng... (mà còn)",
+          "khac_biet": "MỞ RỘNG phạm vi thêm, khác hẳn 2 cấu trúc trên (không phải 'bất kể').",
+          "vi_du": "この<ruby>問題<rt>もんだい</rt></ruby>は<ruby>日本<rt>にほん</rt></ruby>に限らず、<ruby>世界中<rt>せかいじゅう</rt></ruby>で<ruby>起<rt>お</rt></ruby>きている。(Vấn đề này không riêng gì ở Nhật mà đang xảy ra trên toàn thế giới.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Không riêng gì... mà còn (mở rộng phạm vi)"
+        }
+      ]
+    },
+    {
+      "ten": "しかない／ほかない／ようがない (chỉ còn cách, không có cách nào)",
+      "members": [
+        {
+          "cautruc": "〜しかない",
+          "nghia_ngan": "Chỉ còn cách...",
+          "khac_biet": "bất đắc dĩ nhưng vẫn CÓ 1 lựa chọn duy nhất để làm.",
+          "vi_du": "<ruby>終電<rt>しゅうでん</rt></ruby>がないので、タクシーで<ruby>帰<rt>かえ</rt></ruby>るしかない。(Vì không còn chuyến tàu cuối nên chỉ còn cách bắt taxi về.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Chỉ còn cách... (bất đắc dĩ)"
+        },
+        {
+          "cautruc": "〜ほかない",
+          "nghia_ngan": "Giống しかない, văn viết/trang trọng hơn một chút.",
+          "khac_biet": "",
+          "vi_du": "",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Giống しかない, văn viết/trang trọng hơn một chút."
+        },
+        {
+          "cautruc": "〜ようがない",
+          "nghia_ngan": "Không có cách nào để...",
+          "khac_biet": "TUYỆT ĐỐI bất lực, không còn cách nào cả (mạnh hơn しかない).",
+          "vi_du": "<ruby>連絡先<rt>れんらくさき</rt></ruby>を知らないので、<ruby>確認<rt>かくにん</rt></ruby>しようがない。(Vì không biết số liên lạc nên không có cách nào xác nhận được.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Không có cách nào để... (tuyệt đối bất lực)"
+        },
+        {
+          "cautruc": "〜得ない（えない）",
+          "nghia_ngan": "Không thể xảy ra/không thể làm được",
+          "khac_biet": "nhấn vào tính KHÔNG THỂ của hành động/sự việc.",
+          "vi_du": "彼の話はまったく<ruby>事実<rt>じじつ</rt></ruby>であり<ruby>得<rt>え</rt></ruby>ない。(Câu chuyện của anh ta hoàn toàn không thể nào là sự thật được.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Không thể xảy ra / Không có cách nào để thực hiện."
+        }
+      ]
+    },
+    {
+      "ten": "べき (nên, đáng lẽ)",
+      "members": [
+        {
+          "cautruc": "〜べきだ",
+          "nghia_ngan": "Nên / Cần phải",
+          "khac_biet": "lời khuyên/nghĩa vụ đạo đức ở HIỆN TẠI/TƯƠNG LAI.",
+          "vi_du": "<ruby>政府<rt>せいふ</rt></ruby>はもっと<ruby>対策<rt>たいさく</rt></ruby>を<ruby>講<rt>こう</rt></ruby>じるべきだ。(Chính phủ nên có thêm biện pháp đối phó.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Nên / Không nên (lời khuyên mạnh, quan điểm cốt lõi tác giả)"
+        },
+        {
+          "cautruc": "〜べきではない",
+          "nghia_ngan": "Không nên",
+          "khac_biet": "phủ định của べきだ.",
+          "vi_du": "",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Không nên"
+        },
+        {
+          "cautruc": "〜べきだった",
+          "nghia_ngan": "Đáng lẽ phải làm (nhưng đã không làm)",
+          "khac_biet": "HỐI TIẾC về QUÁ KHỨ, khác hẳn べきだ.",
+          "vi_du": "もっと<ruby>早<rt>はや</rt></ruby>く<ruby>相談<rt>そうだん</rt></ruby>するべきだった。(Đáng lẽ tôi phải bàn bạc sớm hơn.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Đáng lẽ phải làm (hối tiếc về việc KHÔNG LÀM)"
+        }
+      ]
+    },
+    {
+      "ten": "からこそ／だからこそ (chính vì... mới)",
+      "members": [
+        {
+          "cautruc": "〜からこそ",
+          "nghia_ngan": "Chính vì... (mới)",
+          "khac_biet": "nhấn mạnh nguyên nhân, đặt SAU mệnh đề lý do.",
+          "vi_du": "<ruby>困難<rt>こんなん</rt></ruby>な<ruby>状況<rt>じょうきょう</rt></ruby>だからこそ、みんなで<ruby>協力<rt>きょうりょく</rt></ruby>すべきだ。(Chính vì tình huống khó khăn nên mọi người mới phải hợp tác.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Chính vì... (nguyên nhân tất yếu, nhấn mạnh điều kiện duy nhất)"
+        },
+        {
+          "cautruc": "だからこそ",
+          "nghia_ngan": "Cũng là 'chính vì vậy' nhưng ĐỨNG ĐẦU CÂU, nối tiếp câu trước (không cần lý do ngay trước nó như からこそ).",
+          "khac_biet": "",
+          "vi_du": "周りに反対された。だからこそ、私はやってみたいと思った。(Mọi người xung quanh phản đối. Chính vì vậy mà tôi lại càng muốn thử làm.)",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Cũng là 'chính vì vậy' nhưng ĐỨNG ĐẦU CÂU, nối tiếp câu trước (không cần lý do ngay trước nó như からこそ)."
+        }
+      ]
+    },
+    {
+      "ten": "にしては／にしたら・すれば・しても (so với thì lại / theo quan điểm nếu)",
+      "members": [
+        {
+          "cautruc": "〜にしては",
+          "nghia_ngan": "Vậy mà...",
+          "khac_biet": "kết quả TRÁI VỚI dự đoán dựa trên 1 tiêu chí (vd 初心者にしては上手だ).",
+          "vi_du": "外国人にしても、日本語が<ruby>上手<rt>じょうず</rt></ruby>ですね。(Là người nước ngoài vậy mà tiếng Nhật của bạn giỏi thật đấy.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Vậy mà... (Diễn tả sự bất ngờ, kết quả trái với dự đoán thông thường dựa trên tuổi tác, năng lực, địa vị)."
+        },
+        {
+          "cautruc": "〜にしたら／にすれば／にしても",
+          "nghia_ngan": "Theo quan điểm của.../Dù có... thì cũng",
+          "khac_biet": "đứng ở GÓC NHÌN của ai đó, KHÁC HẲN ý 'trái dự đoán' của にしては.",
+          "vi_du": "<ruby>子供<rt>こども</rt></ruby>にしたら、それは<ruby>難<rt>むずか</rt></ruby>しい<ruby>決断<rt>けつだん</rt></ruby>だっただろう。(Đứng ở góc độ của một đứa trẻ thì đó hẳn là một quyết định khó khăn.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Nếu xét theo, đứng ở góc độ của..."
+        }
+      ]
+    },
+    {
+      "ten": "によって vs にとって",
+      "members": [
+        {
+          "cautruc": "〜によって",
+          "nghia_ngan": "Bởi, do, dựa vào",
+          "khac_biet": "chỉ NGUYÊN NHÂN/PHƯƠNG TIỆN/TÁC NHÂN gây ra sự việc, hoặc 'tùy theo'.",
+          "vi_du": "事故は不注意によって起こった。(Tai nạn xảy ra do sự bất cẩn.)",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Bởi, do, dựa vào"
+        },
+        {
+          "cautruc": "〜にとって",
+          "nghia_ngan": "Đối với (ai đó)",
+          "khac_biet": "chỉ LẬP TRƯỜNG/GÓC NHÌN nhận định, không phải nguyên nhân.",
+          "vi_du": "",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Đối với (ai đó)"
+        }
+      ]
+    },
+    {
+      "ten": "だけに／だけあって／だけでなく (chính vì.../không chỉ...)",
+      "members": [
+        {
+          "cautruc": "〜だけに",
+          "nghia_ngan": "Chính vì... (nên kết quả đặc biệt hơn)",
+          "khac_biet": "vế sau có thể TÍCH CỰC hoặc TIÊU CỰC.",
+          "vi_du": "<ruby>長<rt>なが</rt></ruby>い<ruby>間<rt>あいだ</rt></ruby><ruby>準備<rt>じゅんび</rt></ruby>してきたただけに、<ruby>合格<rt>ごうかく</rt></ruby>できて<ruby>嬉<rt>うれ</rt></ruby>しい。(Chính vì đã chuẩn bị suốt một thời gian dài nên tôi rất vui khi đỗ.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Chính vì (đặc biệt là...) nên (lý do đặc biệt dẫn đến kết quả)"
+        },
+        {
+          "cautruc": "〜だけあって",
+          "nghia_ngan": "Quả đúng là... (xứng đáng với)",
+          "khac_biet": "vế sau LUÔN mang nghĩa TÍCH CỰC.",
+          "vi_du": "",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Quả đúng là... (xứng đáng với)"
+        },
+        {
+          "cautruc": "〜だけでなく〜も",
+          "nghia_ngan": "Không chỉ... mà còn...",
+          "khac_biet": "liệt kê THÊM, không liên quan đến 2 cấu trúc trên.",
+          "vi_du": "この<ruby>店<rt>みせ</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>だけでなく<ruby>雰囲気<rt>ふんいき</rt></ruby>もいい。(Quán này không chỉ món ăn mà không khí cũng tốt.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Không chỉ X mà còn Y (vế sau thường mạnh/rộng hơn)"
+        }
+      ]
+    },
+    {
+      "ten": "ということだ／というものだ／というのは (diễn đạt lại, định nghĩa)",
+      "members": [
+        {
+          "cautruc": "〜ということだ",
+          "nghia_ngan": "Nghe nói là.../Tức là...",
+          "khac_biet": "TRUYỀN ĐẠT LẠI thông tin nghe được, hoặc diễn giải lại ý.",
+          "vi_du": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>来<rt>こ</rt></ruby>られないということだ。つまり、<ruby>代理<rt>だいり</rt></ruby>を<ruby>立<rt>た</rt></ruby>てる<ruby>必要<rt>ひつよう</rt></ruby>がある。(Nghĩa là anh ấy không đến được. Vậy cần phải tìm người thay thế.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Tức là / Nghĩa là... (diễn giải lại, trang trọng)"
+        },
+        {
+          "cautruc": "〜というものだ",
+          "nghia_ngan": "Đúng là.../Phải nói rằng...",
+          "khac_biet": "ĐÚC KẾT quy luật/bản chất chung (gần nhóm もの).",
+          "vi_du": "<ruby>努力<rt>どりょく</rt></ruby>すれば<ruby>必<rt>かなら</rt></ruby>ず<ruby>成功<rt>せいこう</rt></ruby>するというものではない。(Không phải hễ cố gắng là chắc chắn sẽ thành công đâu - đó mới là lẽ thường.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Đó mới là, vốn là (lẽ thường khách quan, nhận định chung)"
+        },
+        {
+          "cautruc": "〜というのは",
+          "nghia_ngan": "...là gì thì...",
+          "khac_biet": "dùng để GIẢI THÍCH/ĐỊNH NGHĨA 1 khái niệm vừa nêu.",
+          "vi_du": "「サステナブル」というのは、<ruby>持続<rt>じぞく</rt></ruby><ruby>可能<rt>かのう</rt></ruby>であるという<ruby>意味<rt>いみ</rt></ruby>だ。(Cái gọi là 'bền vững' có nghĩa là có thể duy trì lâu dài.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "...đây là / Điều này có nghĩa là... (định nghĩa)"
+        }
+      ]
+    },
+    {
+      "ten": "次第 (đa nghĩa theo cách dùng — DỄ NHẦM NHẤT vì viết giống 100%)",
+      "members": [
+        {
+          "cautruc": "V-stem + 次第",
+          "nghia_ngan": "Ngay sau khi vừa... (làm liền không chậm trễ)",
+          "khac_biet": "đi sau ĐỘNG TỪ dạng masu bỏ masu.",
+          "vi_du": "東京に着き次第、ご連絡します。(Vừa đến Tokyo là tôi liên lạc ngay.)",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Ngay sau khi vừa... (làm liền không chậm trễ)"
+        },
+        {
+          "cautruc": "N + 次第だ／次第です",
+          "nghia_ngan": "Tùy thuộc vào...",
+          "khac_biet": "đi sau DANH TỪ, ý nghĩa hoàn toàn khác cách dùng trên.",
+          "vi_du": "結果は天気次第だ。(Kết quả thế nào còn tùy vào thời tiết.)",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Tùy thuộc vào..."
+        },
+        {
+          "cautruc": "N + 次第で(は)",
+          "nghia_ngan": "Tùy theo... mà (kết quả khác nhau)",
+          "khac_biet": "gần nghĩa với 次第だ nhưng nhấn vào SỰ THAY ĐỔI kết quả.",
+          "vi_du": "考え方次第で、人生は変わる。(Tùy vào cách suy nghĩ mà cuộc đời thay đổi.)",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Tùy theo... mà (kết quả khác nhau)"
+        }
+      ]
+    },
+    {
+      "ten": "ばかりか／ばかりだ (giống chữ ばかり nhưng nghĩa khác hẳn)",
+      "members": [
+        {
+          "cautruc": "〜ばかりか",
+          "nghia_ngan": "Không chỉ... mà còn... (mức độ nặng hơn)",
+          "khac_biet": "gần nghĩa のみならず.",
+          "vi_du": "この<ruby>薬<rt>くすり</rt></ruby>は<ruby>効<rt>き</rt></ruby>かないばかりか、<ruby>副作用<rt>ふくさよう</rt></ruby>もある。(Thuốc này không những không hiệu quả mà còn có tác dụng phụ.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Không chỉ... mà còn (Vế sau thường có mức độ nặng hơn hoặc quy mô rộng hơn)."
+        },
+        {
+          "cautruc": "〜ばかりだ",
+          "nghia_ngan": "Chỉ toàn là.../Ngày càng... (1 chiều)",
+          "khac_biet": "KHÔNG liên quan gì đến nghĩa 'không chỉ' của ばかりか.",
+          "vi_du": "",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Chỉ toàn là.../Ngày càng... (1 chiều)"
+        }
+      ]
+    },
+    {
+      "ten": "ところが／ところだった (giống chữ ところ nhưng nghĩa khác hẳn)",
+      "members": [
+        {
+          "cautruc": "ところが",
+          "nghia_ngan": "Nhưng/Thế nhưng",
+          "khac_biet": "liên từ chỉ KẾT QUẢ BẤT NGỜ, trái ngược dự đoán.",
+          "vi_du": "<ruby>晴<rt>は</rt></ruby>れると<ruby>思<rt>おも</rt></ruby>っていた。ところが、<ruby>大雨<rt>おおあめ</rt></ruby>になった。(Tôi nghĩ trời sẽ nắng. Vậy mà lại mưa to.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Thế nhưng / Vậy mà (chuyển ý bất ngờ, mạnh)"
+        },
+        {
+          "cautruc": "〜ところだった",
+          "nghia_ngan": "Suýt thì...",
+          "khac_biet": "chỉ việc GẦN XẢY RA nhưng cuối cùng KHÔNG xảy ra.",
+          "vi_du": "もう<ruby>少<rt>すこ</rt></ruby>しで<ruby>電車<rt>でんしゃ</rt></ruby>に<ruby>遅<rt>おく</rt></ruby>れるところだった。(Suýt nữa thì tôi đã trễ tàu.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Suýt thì (nhưng thực tế đã KHÔNG xảy ra)"
+        }
+      ]
+    },
+    {
+      "ten": "としたら・とすると・とすれば (giả định) vs にしたら・にすれば・にしても (góc nhìn/nhượng bộ)",
+      "members": [
+        {
+          "cautruc": "〜としたら／とすると／とすれば",
+          "nghia_ngan": "Nếu giả như... thì",
+          "khac_biet": "GIẢ ĐỊNH 1 tình huống chưa xảy ra để suy luận kết quả.",
+          "vi_du": "<ruby>もし<rt></rt></ruby><ruby>明日<rt>あした</rt></ruby><ruby>休<rt>やす</rt></ruby>めるとしたら、どこへ<ruby>行<rt>い</rt></ruby>きたいですか。(Nếu giả sử ngày mai được nghỉ, bạn muốn đi đâu?)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Nếu giả sử (thử đặt điều kiện)"
+        },
+        {
+          "cautruc": "〜にしたら／にすれば／にしても",
+          "nghia_ngan": "Theo quan điểm của.../Dù có... cũng",
+          "khac_biet": "KHÔNG phải giả định, mà là góc nhìn/nhượng bộ.",
+          "vi_du": "<ruby>子供<rt>こども</rt></ruby>にしたら、それは<ruby>難<rt>むずか</rt></ruby>しい<ruby>決断<rt>けつだん</rt></ruby>だっただろう。(Đứng ở góc độ của một đứa trẻ thì đó hẳn là một quyết định khó khăn.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Nếu xét theo, đứng ở góc độ của..."
+        }
+      ]
+    },
+    {
+      "ten": "っこない／まい (phủ định suy đoán — văn nói vs trang trọng)",
+      "members": [
+        {
+          "cautruc": "〜っこない",
+          "nghia_ngan": "Không đời nào, làm gì có chuyện",
+          "khac_biet": "văn NÓI, suy đoán phủ định CHẮC CHẮN.",
+          "vi_du": "こんなにたくさんの<ruby>仕事<rt>しごと</rt></ruby>、今日中に終わりっこないよ。(Nhiều việc thế này, không đời nào xong được trong hôm nay đâu.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Không đời nào, làm gì có chuyện (Dùng trong hội thoại, văn nói hằng ngày)."
+        },
+        {
+          "cautruc": "〜まい",
+          "nghia_ngan": "Chắc là không / Quyết không",
+          "khac_biet": "văn VIẾT/trang trọng hơn, có thêm nghĩa Ý CHÍ mà っこない không có.",
+          "vi_du": "あんなまずい店には二<ruby>度<rt>ど</rt></ruby>と行くまい。(Quán dở tệ như thế, tôi quyết không bao giờ đến lần thứ hai.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Chắc là không (Suy đoán phủ định) / Quyết không (Ý chí phủ định)."
+        }
+      ]
+    },
+    {
+      "ten": "どころか／どころではない (giống chữ どころ nhưng nghĩa khác hẳn)",
+      "members": [
+        {
+          "cautruc": "〜どころか",
+          "nghia_ngan": "Đừng nói là... trái lại còn...",
+          "khac_biet": "mức độ THỰC TẾ khác xa, vượt xa dự đoán.",
+          "vi_du": "彼は<ruby>貯金<rt>ちょきん</rt></ruby>するどころか、<ruby>借金<rt>しゃっきん</rt></ruby>だらけだ。(Anh ta đừng nói là có tiền tiết kiệm, trái lại còn đang nợ ngập đầu.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Đừng nói là... trái lại còn (Mức độ khác xa dự đoán) / Không phải lúc để làm gì."
+        },
+        {
+          "cautruc": "〜どころではない",
+          "nghia_ngan": "Không phải lúc/chuyện để...",
+          "khac_biet": "KHÔNG mang nghĩa so sánh như どころか.",
+          "vi_du": "今は試験前で、旅行どころではない。(Giờ đang trước kỳ thi, không phải lúc để đi du lịch.)",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Không phải lúc/chuyện để..."
+        }
+      ]
+    },
+    {
+      "ten": "ことか／ことだ／こととなっている (giống chữ こと)",
+      "members": [
+        {
+          "cautruc": "〜ことか",
+          "nghia_ngan": "Biết bao nhiêu... (cảm thán)",
+          "khac_biet": "NHẤN MẠNH CẢM XÚC, thường đi với なんて/どんなに.",
+          "vi_du": "",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Biết bao nhiêu... (cảm thán)"
+        },
+        {
+          "cautruc": "〜ことだ",
+          "nghia_ngan": "Nên làm... (lời khuyên)",
+          "khac_biet": "khác hẳn ことか, mang nghĩa KHUYÊN/RA LỆNH nhẹ.",
+          "vi_du": "",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Nên làm... (lời khuyên)"
+        },
+        {
+          "cautruc": "〜ことになっている",
+          "nghia_ngan": "Theo quy định/thông lệ thì...",
+          "khac_biet": "chỉ QUY ĐỊNH có sẵn, không phải lời khuyên.",
+          "vi_du": "",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Theo quy định/thông lệ thì..."
+        }
+      ]
+    },
+    {
+      "ten": "あまり／がち／っぽい (sắc thái khuynh hướng — dễ lẫn nhóm)",
+      "members": [
+        {
+          "cautruc": "〜あまり",
+          "nghia_ngan": "Vì quá... (nên)",
+          "khac_biet": "chỉ NGUYÊN NHÂN do mức độ cao gây ra kết quả tiêu cực.",
+          "vi_du": "最近、<ruby>彼<rt>かれ</rt></ruby>は<ruby>風邪<rt>かぜ</rt></ruby>気味だ。(Gần đây anh ấy có vẻ hơi cảm cảm.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Thể hiện sắc thái đánh giá, khuynh hướng (thường là tiêu cực)."
+        },
+        {
+          "cautruc": "〜がち",
+          "nghia_ngan": "Hay bị, có xu hướng (tiêu cực, đã từng lặp lại)",
+          "khac_biet": "chỉ THÓI/XU HƯỚNG, không phải nguyên nhân tức thời.",
+          "vi_du": "<ruby>最近<rt>さいきん</rt></ruby>、<ruby>体調<rt>たいちょう</rt></ruby>を<ruby>崩<rt>くず</rt></ruby>しがちだ。(Gần đây tôi hay bị suy yếu sức khỏe.)",
+          "co_the_chinh_thuc": true,
+          "nghia_day_du": "Hay bị / Có xu hướng (tiêu cực, đã từng xảy ra)"
+        },
+        {
+          "cautruc": "〜っぽい",
+          "nghia_ngan": "Có vẻ.../Mang tính chất...",
+          "khac_biet": "chỉ ẤN TƯỢNG/CẢM GIÁC bề ngoài, nhẹ hơn 2 cấu trúc trên.",
+          "vi_du": "彼は子供っぽい性格だ。(Anh ấy có tính cách trẻ con.)",
+          "co_the_chinh_thuc": false,
+          "nghia_day_du": "Có vẻ.../Mang tính chất..."
+        }
+      ]
+    }
+  ]
+}

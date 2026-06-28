@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   App.decks = await loadDecks();
   buildGrammarIndex();
+  await loadGrammarGroups();
   App.exams = await loadExams();
   App.choukaiTests = await loadChoukaiTests();
 
@@ -358,6 +359,23 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("btnGrammarRelatedClose").addEventListener("click", closeGrammarRelatedPopup);
   document.getElementById("grammarRelatedModalOverlay").addEventListener("click", (e) => {
     if (e.target.id === "grammarRelatedModalOverlay") closeGrammarRelatedPopup();
+  });
+
+  // ----- Trang "Nhóm ngữ pháp" -----
+  document.querySelectorAll(".gg-tab-btn").forEach((btn) => {
+    btn.addEventListener("click", () => setGrammarGroupsTab(btn.dataset.tab));
+  });
+  document.getElementById("btnGgFlashClose").addEventListener("click", closeGgFlashModal);
+  document.getElementById("ggFlashModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "ggFlashModalOverlay") closeGgFlashModal();
+  });
+  document.getElementById("ggFlashCardInner").addEventListener("click", ggFlashFlip);
+  document.getElementById("btnGgFlashPrev").addEventListener("click", ggFlashPrev);
+  document.getElementById("btnGgFlashNext").addEventListener("click", ggFlashNext);
+  document.getElementById("btnGgFlashFlip").addEventListener("click", ggFlashFlip);
+  document.getElementById("btnGgQuizClose").addEventListener("click", closeGgQuizModal);
+  document.getElementById("ggQuizModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "ggQuizModalOverlay") closeGgQuizModal();
   });
 
   // ----- Ghi chú đề thi (bôi đen text trong câu hỏi/đáp án/giải thích) -----
