@@ -57,7 +57,7 @@ async function loadExams() {
         const r = await fetch(`dethi/${filename}`);
         const data = await r.json();
         const id = filename.replace(/\.json$/, "");
-        exams.push({ id, title: data.title || filename, questions: data.questions || [] });
+        exams.push({ id, title: data.title || filename, questions: data.questions || [], mondai_breakdown: data.mondai_breakdown || null });
       } catch (e) {
         console.error("Lỗi tải đề thi", filename, e);
       }

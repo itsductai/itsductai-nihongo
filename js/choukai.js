@@ -515,6 +515,12 @@ function finishChoukai() {
   recordChoukaiAttempt(App.currentChoukaiId);
   saveChoukaiDetailSnapshot(App.currentChoukaiId, App.choukaiAnswers);
 
+  // Điểm mô phỏng JLPT (Linear + IRT) — chỉ tính trên đúng (các) Mondai đã luyện
+  // (nếu Zane chỉ chọn luyện riêng 1 Mondai thì KHÔNG tính cả các Mondai khác vào).
+  const choukaiTest = getChoukaiTest(App.currentChoukaiId);
+  const jlptScoring = computeChoukaiJlptScoring(choukaiTest, App.choukaiAnswers, App.choukaiMondaiFilter);
+  document.getElementById("choukaiJlptScoreBox").innerHTML = renderJlptScoreBox(jlptScoring, "Nghe hiểu");
+
   document.getElementById("choukaiBody").classList.add("hidden");
   document.getElementById("choukaiResult").classList.remove("hidden");
   document.getElementById("choukaiFinalScore").textContent =

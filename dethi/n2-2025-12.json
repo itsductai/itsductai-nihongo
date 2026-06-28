@@ -817,5 +817,52 @@
         "Đúng. 「になったのかもしれません」nghĩa là 'có thể đã trở thành (cách nói này)' — đúng mạch văn kết luận nhẹ nhàng, hợp lý khi tác giả suy đoán về lý do cách diễn đạt 'thưởng thức bằng mắt' đã hình thành một cách tự nhiên từ trực giác của con người."
       ]
     }
+  ],
+  "mondai_breakdown": [
+    {
+      "mondai": 1,
+      "ten": "Đọc Hán tự",
+      "so_cau": 5
+    },
+    {
+      "mondai": 2,
+      "ten": "Viết Hán tự",
+      "so_cau": 5
+    },
+    {
+      "mondai": 3,
+      "ten": "Tiền/hậu tố",
+      "so_cau": 3
+    },
+    {
+      "mondai": 4,
+      "ten": "Tìm từ phù hợp văn cảnh",
+      "so_cau": 7
+    },
+    {
+      "mondai": 5,
+      "ten": "Từ đồng nghĩa",
+      "so_cau": 5
+    },
+    {
+      "mondai": 6,
+      "ten": "Cách dùng từ",
+      "so_cau": 5
+    },
+    {
+      "mondai": 7,
+      "ten": "Ngữ pháp câu",
+      "so_cau": 12
+    },
+    {
+      "mondai": 8,
+      "ten": "Sắp xếp câu (★)",
+      "so_cau": 5
+    },
+    {
+      "mondai": 9,
+      "ten": "Ngữ pháp đoạn văn",
+      "so_cau": 4
+    }
   ]
 }

@@ -817,5 +817,52 @@
         "Đúng. 「感じるようになりました」nghĩa là 'đã trở nên cảm nhận được (rõ hơn)' — đúng mạch văn kết luận của bài viết, diễn tả sự thay đổi trong nhận thức của tác giả sau khi biết về hiện tượng bất thường của lá đỏ: 'qua việc tìm hiểu về lá đỏ, tôi đã cảm nhận rõ hơn rằng nóng lên toàn cầu là vấn đề gần gũi'."
       ]
     }
+  ],
+  "mondai_breakdown": [
+    {
+      "mondai": 1,
+      "ten": "Đọc Hán tự",
+      "so_cau": 5
+    },
+    {
+      "mondai": 2,
+      "ten": "Viết Hán tự",
+      "so_cau": 5
+    },
+    {
+      "mondai": 3,
+      "ten": "Tiền/hậu tố",
+      "so_cau": 3
+    },
+    {
+      "mondai": 4,
+      "ten": "Tìm từ phù hợp văn cảnh",
+      "so_cau": 7
+    },
+    {
+      "mondai": 5,
+      "ten": "Từ đồng nghĩa",
+      "so_cau": 5
+    },
+    {
+      "mondai": 6,
+      "ten": "Cách dùng từ",
+      "so_cau": 5
+    },
+    {
+      "mondai": 7,
+      "ten": "Ngữ pháp câu",
+      "so_cau": 12
+    },
+    {
+      "mondai": 8,
+      "ten": "Sắp xếp câu (★)",
+      "so_cau": 5
+    },
+    {
+      "mondai": 9,
+      "ten": "Ngữ pháp đoạn văn",
+      "so_cau": 4
+    }
   ]
 }

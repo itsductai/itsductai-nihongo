@@ -344,7 +344,31 @@ Khi nhập: `weaknessStats` cộng dồn (không đè). `examDetailHistory`/`cho
 
 ---
 
-## 12c. Ngữ pháp liên quan (đồng nghĩa + dễ nhầm) — dùng đúng field đã có sẵn
+## 12d. Điểm mô phỏng JLPT (Linear Score + Simulated IRT Score)
+
+Sau khi hoàn thành đề thi chữ HOẶC đề nghe, hiện thêm khối **"📊 Mô phỏng điểm JLPT"** (thang 0-60) ngay dưới điểm thô, dựa trên tài liệu đặc tả "JLPT N2 Scoring Engine" Zane cung cấp.
+
+**Trọng số theo số thứ tự Mondai — CỐ ĐỊNH, không cần phân biệt FORMAT_OLD/FORMAT_NEW** (đã đối chiếu kỹ tài liệu đặc tả: trọng số mỗi Mondai giống nhau giữa 2 format, chỉ SỐ CÂU một vài Mondai khác nhau — nên không cần cấu hình old/new riêng, chỉ cần biết Mondai nào có BAO NHIÊU CÂU TRONG ĐỀ NÀY):
+- Từ vựng-Ngữ pháp: M1-7 = ×1đ, M8-9 = ×2đ
+- Đọc hiểu: M10-14 = ×3đ (chưa có đề nào dùng tới, để sẵn cho sau)
+- Nghe hiểu: M1=×2, M2=×2.5, M3=×3, M4=×1, M5=×3
+
+**2 công thức** (`js/scoring.js`, hàm `calculateLinearScore`/`calculateIRTScore`):
+- Linear: `round((raw/maxRaw) * 60)` — chia tỉ lệ đều.
+- IRT mô phỏng: `round(60 * (raw/maxRaw)^1.15)` — phạt nặng hơn ở vùng điểm thô thấp (mô phỏng IRT thật chống khoanh lụi).
+
+**Linh động theo đúng cấu trúc THẬT của từng đề** ("tùy đề tùy mondai" theo đúng yêu cầu):
+- Đề thi chữ: thêm field mới `mondai_breakdown` (mảng `{mondai, ten, so_cau}` liên tiếp) vào TOP-LEVEL mỗi file `dethi/*.json` — đã thêm cho cả 8 file hiện có, xác minh khớp 100% bằng cách dò ranh giới câu chỉ dẫn (`de_bai`) thật trong dữ liệu trước khi gán (4 đề Mondai 1-9 đủ 51 câu, 3 đề chỉ Mondai 1-6 = 30 câu, 1 đề mẫu chỉ Mondai 1 = 3 câu). **Đề mới thêm sau này PHẢI tự thêm field này** (không có thì khối điểm JLPT sẽ không hiện, không lỗi).
+- Đề nghe: KHÔNG cần thêm field gì — đếm trực tiếp từ cấu trúc `test.mondai[]` đã có sẵn. Nếu chỉ luyện riêng 1 Mondai (`App.choukaiMondaiFilter`), điểm chỉ tính trên ĐÚNG Mondai đó, không tính sai vào các Mondai chưa luyện.
+- Đã test thực tế đề nghe `choukai-01` có cấu trúc KHÔNG chuẩn hẳn theo OLD/NEW (M4=11 câu kiểu NEW nhưng M5=4 câu kiểu OLD) — code vẫn tính đúng vì chỉ dựa vào số câu THẬT, không giả định cứng theo 1 format nào.
+
+**Bug đã gặp lúc làm**: `loadExams()` (`loader-nav.js`) chỉ whitelist đúng 3 field `id/title/questions` khi đọc file đề thi, làm `mondai_breakdown` mới thêm bị rớt mất hoàn toàn — đã sửa thêm field này vào danh sách giữ lại.
+
+**Hiển thị**: `renderJlptScoreBox()` trong `scoring.js` — Linear + IRT to, điểm thô nhỏ hơn, có `<details>` xem breakdown từng Mondai, kèm dòng disclaimer rằng đây là điểm MÔ PHỎNG tham khảo, không phải điểm thi thật.
+
+---
+
+
 
 Schema NGUPHAP (mục 4) đã có sẵn `so_sanh_de_nham` ({cautruc, khac_biet}) và `dong_nghia` — chỉ là **chưa được khai thác hiệu quả**: `dong_nghia` đa số file (`pham-vi-a-m789`, `top40-mimitry`...) chỉ lưu CHUỖI THÔ (vd `["～ものの"]`), không có nghĩa kèm theo.
 

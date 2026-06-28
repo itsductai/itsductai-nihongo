@@ -908,6 +908,11 @@ function finishExam() {
   document.getElementById("examFinalScore").textContent =
     `${App.examScore}/${App.examOriginalTotal} điểm`;
 
+  // Điểm mô phỏng JLPT (Linear + IRT) — chỉ tính được khi đề có field mondai_breakdown
+  // (đã thêm cho mọi đề thi thật hiện có; đề nào THIẾU field này thì bỏ qua, không lỗi).
+  const jlptScoring = computeExamJlptScoring(App.currentExamId, App.examHistory);
+  document.getElementById("examJlptScoreBox").innerHTML = renderJlptScoreBox(jlptScoring, "Từ vựng - Ngữ pháp");
+
   // Lưu vào lịch sử lâu dài (riêng biệt khỏi state phiên hiện tại, không mất khi rời trang)
   const totalSeconds = App.examTotalStartTime ? (Date.now() - App.examTotalStartTime) / 1000 : 0;
   const firstTryWrongCount = Object.values(App.examHistory).filter((h) => h.firstTryCorrect === false).length;
