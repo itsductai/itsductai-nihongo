@@ -346,6 +346,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("attemptsGridModalOverlay").addEventListener("click", (e) => {
     if (e.target.id === "attemptsGridModalOverlay") closeAttemptsGridModal();
   });
+
+  // ----- Ghi chú đề thi (bôi đen text trong câu hỏi/đáp án/giải thích) -----
+  initExamNoteSelectionHandler();
+  document.getElementById("examNoteToolbarBtn").addEventListener("click", openExamNotePopupForSelection);
+  document.getElementById("btnExamNotePopupSave").addEventListener("click", saveExamNoteFromPopup);
+  document.getElementById("btnExamNotePopupCancel").addEventListener("click", closeExamNotePopup);
+  document.getElementById("examNotePopupInput").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") saveExamNoteFromPopup();
+    if (e.key === "Escape") closeExamNotePopup();
+  });
   document.getElementById("examSpeedMode").addEventListener("change", (e) => {
     toggleExamSpeedMode(e.target.checked);
   });

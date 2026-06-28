@@ -338,6 +338,28 @@
     </div>
 
     <!-- ===================================================================
+         GHI CHÚ ĐỀ THI — bôi đen 1 đoạn trong câu hỏi/đáp án/giải thích lúc
+         làm đề -> hiện nút nổi -> ghi nội dung muốn nhớ (vd "kanarazu = nhất
+         định") -> lưu lại, xem sau ở trang "Ghi chú đề thi".
+    =================================================================== -->
+    <button class="exam-note-toolbar-btn hidden" id="examNoteToolbarBtn">📝 Ghi chú</button>
+    <div class="exam-note-popup hidden" id="examNotePopup">
+      <div class="exam-note-popup-selected" id="examNotePopupSelectedText"></div>
+      <input type="text" id="examNotePopupInput" class="exam-note-popup-input" placeholder="Ghi nghĩa/ghi nhớ ở đây..." />
+      <div class="exam-note-popup-actions">
+        <button id="btnExamNotePopupSave" class="exam-note-popup-save">Lưu</button>
+        <button id="btnExamNotePopupCancel" class="exam-note-popup-cancel">Hủy</button>
+      </div>
+    </div>
+
+    <section class="view hidden" id="view-examnotes">
+      <div class="view-head">
+        <div class="weakness-title">📝 Ghi chú đề thi — bôi đen từ/đoạn lúc làm đề để ghi nhớ, xem lại ở đây</div>
+      </div>
+      <div id="examNotesList"></div>
+    </section>
+
+    <!-- ===================================================================
          CHOUKAI MODE — Luyện nghe (聴解) theo từng đề/mondai thật
     =================================================================== -->
     <section class="view hidden" id="view-choukai">
@@ -611,12 +633,12 @@
 <script src="js/core.js?v=1"></script>
 <script src="js/stats-weakness.js?v=2"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=1"></script>
+<script src="js/loader-nav.js?v=2"></script>
 <script src="js/flashcard-edit.js?v=1"></script>
 <script src="js/table-srs-typing.js?v=1"></script>
 <script src="js/quiz-match.js?v=1"></script>
-<script src="js/exam.js?v=2"></script>
+<script src="js/exam.js?v=3"></script>
 <script src="js/choukai.js?v=2"></script>
-<script src="js/init.js?v=3"></script>
+<script src="js/init.js?v=4"></script>
 </body>
 </html>

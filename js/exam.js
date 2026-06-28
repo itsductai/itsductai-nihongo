@@ -1,5 +1,199 @@
 /* ===== MODULE: exam.js — Toàn bộ tính năng "Luyện đề thi chữ" (dethi): chọn đề, làm bài, chấm, xem lại, lưu lịch sử ===== */
 
+/* ===================================================================
+   GHI CHÚ ĐỀ THI — bôi đen 1 đoạn text trong câu hỏi/đáp án/giải thích lúc
+   làm đề, ghi lại nghĩa/ghi nhớ riêng (vd bôi "必ず" ghi "nhất định"), xem lại
+   sau ở trang "Ghi chú đề thi" (nhóm theo đề, theo câu).
+   Lưu: { [examId]: { [qIndex]: [ {id, text, note, createdAt} ] } }
+=================================================================== */
+const EXAM_NOTES_KEY = "n2vocab_exam_notes";
+
+function loadExamNotesRaw() {
+  try {
+    const raw = localStorage.getItem(EXAM_NOTES_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveExamNotesRaw(data) {
+  localStorage.setItem(EXAM_NOTES_KEY, JSON.stringify(data));
+}
+
+function addExamNote(examId, qIndex, text, note) {
+  const all = loadExamNotesRaw();
+  if (!all[examId]) all[examId] = {};
+  if (!all[examId][qIndex]) all[examId][qIndex] = [];
+  all[examId][qIndex].push({
+    id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
+    text, note, createdAt: Date.now(),
+  });
+  saveExamNotesRaw(all);
+}
+
+function getExamNotesForQuestion(examId, qIndex) {
+  const all = loadExamNotesRaw();
+  return (all[examId] && all[examId][qIndex]) || [];
+}
+
+function deleteExamNote(examId, qIndex, noteId) {
+  const all = loadExamNotesRaw();
+  if (all[examId] && all[examId][qIndex]) {
+    all[examId][qIndex] = all[examId][qIndex].filter((n) => n.id !== noteId);
+    if (all[examId][qIndex].length === 0) delete all[examId][qIndex];
+    if (Object.keys(all[examId]).length === 0) delete all[examId];
+  }
+  saveExamNotesRaw(all);
+}
+
+// Bọc lần xuất hiện ĐẦU TIÊN của `text` trong containerEl bằng <mark> kèm
+// tooltip là nội dung ghi chú — đi qua từng text node con (kể cả trong button)
+// bằng TreeWalker, dùng Range.surroundContents để bọc mà KHÔNG phá cấu trúc
+// DOM xung quanh (an toàn với <button>, <span>... đã có sẵn).
+function highlightTextInContainer(containerEl, text, note) {
+  if (!text || !containerEl) return;
+  const walker = document.createTreeWalker(containerEl, NodeFilter.SHOW_TEXT, null);
+  let node;
+  while ((node = walker.nextNode())) {
+    const idx = node.nodeValue.indexOf(text);
+    if (idx !== -1) {
+      try {
+        const range = document.createRange();
+        range.setStart(node, idx);
+        range.setEnd(node, idx + text.length);
+        const mark = document.createElement("mark");
+        mark.className = "exam-note-mark";
+        mark.title = note.note;
+        mark.dataset.noteId = note.id;
+        range.surroundContents(mark);
+      } catch (e) { /* range bất thường (hiếm) — bỏ qua, không vỡ trang */ }
+      return;
+    }
+  }
+}
+
+// Áp TẤT CẢ ghi chú đã lưu của 1 câu vào 1 khung chứa (câu hỏi / đáp án /
+// giải thích / modal xem chi tiết) — gọi lại mỗi khi nội dung khung đó vừa
+// được render/innerHTML mới (vì innerHTML mới sẽ xóa mất highlight cũ).
+function applyExamNoteHighlights(containerEl, examId, qIndex) {
+  if (!containerEl) return;
+  const notes = getExamNotesForQuestion(examId, qIndex);
+  notes.forEach((note) => highlightTextInContainer(containerEl, note.text, note));
+}
+
+let examNoteSelectedText = "";
+
+// Lắng nghe người dùng BÔI ĐEN (chọn) text trong vùng câu hỏi/đáp án/giải
+// thích lúc làm đề — hiện nút nổi "📝 Ghi chú" ngay cạnh đoạn vừa chọn.
+function initExamNoteSelectionHandler() {
+  document.addEventListener("mouseup", () => {
+    const examView = document.getElementById("view-exam");
+    if (!examView || examView.classList.contains("hidden")) return;
+    const sel = window.getSelection();
+    const toolbarBtn = document.getElementById("examNoteToolbarBtn");
+    if (!sel || sel.isCollapsed || !sel.toString().trim()) {
+      toolbarBtn.classList.add("hidden");
+      return;
+    }
+    const allowedIds = ["examQuestion", "examOptions", "examExplainBox"];
+    const anchorNode = sel.anchorNode;
+    const inAllowedArea = allowedIds.some((id) => {
+      const el = document.getElementById(id);
+      return el && el.contains(anchorNode);
+    });
+    if (!inAllowedArea) {
+      toolbarBtn.classList.add("hidden");
+      return;
+    }
+    examNoteSelectedText = sel.toString().trim();
+    const rect = sel.getRangeAt(0).getBoundingClientRect();
+    toolbarBtn.style.top = `${rect.top + window.scrollY - 38}px`;
+    toolbarBtn.style.left = `${rect.left + window.scrollX}px`;
+    toolbarBtn.classList.remove("hidden");
+  });
+}
+
+function openExamNotePopupForSelection() {
+  document.getElementById("examNoteToolbarBtn").classList.add("hidden");
+  const popup = document.getElementById("examNotePopup");
+  document.getElementById("examNotePopupSelectedText").textContent = examNoteSelectedText;
+  const input = document.getElementById("examNotePopupInput");
+  input.value = "";
+  const toolbarBtn = document.getElementById("examNoteToolbarBtn");
+  popup.style.top = toolbarBtn.style.top;
+  popup.style.left = toolbarBtn.style.left;
+  popup.classList.remove("hidden");
+  input.focus();
+}
+
+function closeExamNotePopup() {
+  document.getElementById("examNotePopup").classList.add("hidden");
+}
+
+function saveExamNoteFromPopup() {
+  const noteContent = document.getElementById("examNotePopupInput").value.trim();
+  if (!noteContent || !examNoteSelectedText) { closeExamNotePopup(); return; }
+  const qIndex = App.examCurrentQIndex;
+  if (App.currentExamId == null || qIndex == null) { closeExamNotePopup(); return; }
+  addExamNote(App.currentExamId, qIndex, examNoteSelectedText, noteContent);
+  closeExamNotePopup();
+  window.getSelection().removeAllRanges();
+  // Áp highlight NGAY trên khung đang hiện, không render lại cả câu (tránh
+  // mất trạng thái đã chọn/đã chấm của câu đang làm).
+  applyExamNoteHighlights(document.getElementById("examQuestion"), App.currentExamId, qIndex);
+  applyExamNoteHighlights(document.getElementById("examOptions"), App.currentExamId, qIndex);
+  applyExamNoteHighlights(document.getElementById("examExplainBox"), App.currentExamId, qIndex);
+}
+
+// Trang "Ghi chú đề thi" — nhóm theo đề (đề mục lớn), trong mỗi đề sắp theo
+// số câu tăng dần. Bấm "Câu N" để mở modal xem lại đúng câu đó (tái dùng
+// openExamDetailModal có sẵn) kèm highlight ghi chú luôn trong modal.
+function renderExamNotesMode() {
+  const container = document.getElementById("examNotesList");
+  const all = loadExamNotesRaw();
+  const examIds = Object.keys(all).filter((id) => Object.keys(all[id]).length > 0);
+
+  if (examIds.length === 0) {
+    container.innerHTML = `<div class="examnotes-empty">Chưa có ghi chú nào. Khi làm đề, hãy BÔI ĐEN (chọn) từ/đoạn muốn ghi nhớ trong câu hỏi, đáp án, hoặc giải thích — nút "📝 Ghi chú" sẽ hiện lên ngay cạnh để bạn lưu lại.</div>`;
+    return;
+  }
+
+  container.innerHTML = examIds.map((examId) => {
+    const exam = App.exams.find((e) => e.id === examId);
+    const title = exam ? exam.title : examId;
+    const qIndexes = Object.keys(all[examId]).map(Number).sort((a, b) => a - b);
+    const rows = qIndexes.map((qIndex) => {
+      return all[examId][qIndex].map((n) => `
+        <div class="examnotes-row">
+          <button class="examnotes-jump" data-exam="${examId}" data-q="${qIndex}">Câu ${qIndex + 1}</button>
+          <span class="examnotes-text">${n.text}</span>
+          <span class="examnotes-arrow">→</span>
+          <span class="examnotes-note">${n.note}</span>
+          <button class="examnotes-del" data-exam="${examId}" data-q="${qIndex}" data-id="${n.id}" title="Xóa ghi chú này">✕</button>
+        </div>
+      `).join("");
+    }).join("");
+    return `<div class="examnotes-group"><div class="examnotes-group-title">📄 ${title}</div>${rows}</div>`;
+  }).join("");
+
+  container.querySelectorAll(".examnotes-jump").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const examId = btn.dataset.exam;
+      const qIndex = parseInt(btn.dataset.q, 10);
+      openExamDetailModal(qIndex, { examId, examHistory: {} });
+      applyExamNoteHighlights(document.getElementById("examDetailModalBody"), examId, qIndex);
+    });
+  });
+  container.querySelectorAll(".examnotes-del").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (!confirm("Xóa ghi chú này?")) return;
+      deleteExamNote(btn.dataset.exam, parseInt(btn.dataset.q, 10), btn.dataset.id);
+      renderExamNotesMode();
+    });
+  });
+}
+
 function renderExamPickerState() {
   const empty = document.getElementById("examEmpty");
   const body = document.getElementById("examBody");
@@ -334,6 +528,11 @@ function renderExamQuestionContent(q, qIndex, isLive) {
   } else {
     explainRow.classList.add("hidden");
   }
+
+  // Áp lại ghi chú đã lưu trước đó cho câu này (nếu có) — vì innerHTML/options
+  // vừa render mới xóa mất highlight cũ.
+  applyExamNoteHighlights(document.getElementById("examQuestion"), App.currentExamId, qIndex);
+  applyExamNoteHighlights(optsDiv, App.currentExamId, qIndex);
 }
 
 // Hiện/ẩn khu vực giải thích đáp án cho câu đang xem (cả live và review đều dùng được,
@@ -366,6 +565,7 @@ function toggleExamExplain() {
 
   box.innerHTML = rows;
   box.classList.remove("hidden");
+  applyExamNoteHighlights(box, App.currentExamId, App.examCurrentQIndex);
 }
 
 // Sửa lại đáp án của 1 câu ĐÃ làm, khi đang quay lại xem qua nút "Câu trước/Câu

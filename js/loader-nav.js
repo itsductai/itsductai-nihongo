@@ -193,6 +193,13 @@ function renderNav() {
     examBtn.innerHTML = `<span class="nav-icon">▤</span> <span>Làm đề thi</span>`;
     examBtn.addEventListener("click", () => setMode("exam"));
     nav.appendChild(examBtn);
+
+    const examNotesBtn = document.createElement("button");
+    examNotesBtn.className = "nav-item";
+    examNotesBtn.dataset.mode = "examnotes";
+    examNotesBtn.innerHTML = `<span class="nav-icon">📝</span> <span>Ghi chú đề thi</span>`;
+    examNotesBtn.addEventListener("click", () => setMode("examnotes"));
+    nav.appendChild(examNotesBtn);
   }
 
   if (App.choukaiTests.length > 0) {
@@ -300,6 +307,7 @@ function setMode(mode) {
   if (mode === "choukai-shadow") renderChoukaiShadowPickerState();
   if (mode === "weakness") renderWeaknessMode();
   if (mode === "stats") renderStatsMode();
+  if (mode === "examnotes") renderExamNotesMode();
 }
 
 /* ===================================================================
