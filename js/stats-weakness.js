@@ -225,9 +225,12 @@ function getExamAttempts(examId) {
   const results = [];
   for (let i = 0; i < total; i++) {
     const h = oldSnapshot.examHistory[i];
-    results.push(h ? h.firstTryCorrect : null);
+    if (!h) { results.push(null); continue; }
+    const firstAttempt = h.attempts && h.attempts[0];
+    const chosenText = (firstAttempt && exam) ? exam.questions[i].options[firstAttempt.chosenIdx] : null;
+    results.push({ correct: !!h.firstTryCorrect, chosenText: chosenText });
   }
-  const score = results.filter((r) => r === true).length;
+  const score = results.filter((r) => isResultCorrect(r)).length;
   const migrated = [{ completedAt: oldSnapshot.savedAt || Date.now(), score, total, results }];
   all[examId] = migrated;
   saveExamAttemptsRaw(all);
@@ -236,15 +239,34 @@ function getExamAttempts(examId) {
 
 // Gọi trong finishExam() — đọc trực tiếp App.examHistory (đã có sẵn firstTryCorrect
 // từng câu của lần làm VỪA XONG) để ghi thành 1 attempt mới, CỘNG VÀO cuối mảng.
+// Đọc đúng/sai từ 1 phần tử results[i] — hỗ trợ CẢ 2 dạng: boolean (dữ liệu CŨ,
+// trước khi lưu thêm chosenText) và object {correct, chosenText} (dữ liệu MỚI).
+function isResultCorrect(r) {
+  if (r === true) return true;
+  if (r && typeof r === "object") return !!r.correct;
+  return false;
+}
+// Nội dung đáp án ĐÃ CHỌN ở lần làm đó — null nếu là dữ liệu CŨ (chưa lưu cái này).
+function getResultChosenText(r) {
+  return (r && typeof r === "object") ? (r.chosenText || null) : null;
+}
+
 function recordExamAttempt(examId) {
   const exam = App.exams.find((ex) => ex.id === examId);
   const total = exam ? exam.questions.length : App.examOriginalTotal;
   const results = [];
   for (let i = 0; i < total; i++) {
     const h = App.examHistory[i];
-    results.push(h ? h.firstTryCorrect : null);
+    if (!h) { results.push(null); continue; }
+    const firstAttempt = h.attempts && h.attempts[0];
+    // LƯU Ý: chosenIdx ở đây là vị trí trong q.options GỐC (không phải vị trí
+    // đang HIỂN THỊ sau khi đảo) — xem cách so sánh "chosenIdx === q.dap_an_dung"
+    // ở các nơi khác trong file này, nên tra thẳng q.options[chosenIdx] luôn ra
+    // đúng nội dung đã chọn, không bị lệch dù đáp án có đảo thứ tự hiển thị.
+    const chosenText = (firstAttempt && exam) ? exam.questions[i].options[firstAttempt.chosenIdx] : null;
+    results.push({ correct: !!h.firstTryCorrect, chosenText: chosenText });
   }
-  const score = results.filter((r) => r === true).length;
+  const score = results.filter((r) => isResultCorrect(r)).length;
 
   const all = loadExamAttemptsRaw();
   if (!all[examId]) all[examId] = getExamAttempts(examId); // đảm bảo đã migrate dữ liệu cũ trước khi cộng thêm
@@ -315,11 +337,15 @@ function getChoukaiAttempts(testId) {
   const oldSnapshot = detailStats[testId];
   if (!oldSnapshot || !oldSnapshot.answers) return [];
 
+  const test = getChoukaiTest(testId);
+  const optsByKey = test ? getChoukaiOptionsByKey(test) : {};
   const results = {};
   Object.keys(oldSnapshot.answers).forEach((key) => {
-    results[key] = !!oldSnapshot.answers[key].correct;
+    const a = oldSnapshot.answers[key];
+    const opts = optsByKey[key];
+    results[key] = { correct: !!a.correct, chosenText: opts ? opts[a.chosenIndex] : null };
   });
-  const score = Object.values(results).filter((r) => r === true).length;
+  const score = Object.values(results).filter((r) => isResultCorrect(r)).length;
   const total = Object.keys(results).length;
   const migrated = [{ completedAt: oldSnapshot.savedAt || Date.now(), score, total, results }];
   all[testId] = migrated;
@@ -329,16 +355,33 @@ function getChoukaiAttempts(testId) {
 
 // Gọi trong finishChoukai() — đọc App.choukaiAnswers (đã có sẵn correct từng câu
 // của lần làm VỪA XONG) để ghi thành 1 attempt mới.
+// Map sẵn key -> mảng options của câu đó (đi 1 lần qua cả đề) — dùng để tra
+// nhanh "đã chọn nội dung gì" mà không phải lặp lại buildChoukaiQueue nhiều lần.
+function getChoukaiOptionsByKey(test) {
+  const map = {};
+  const queue = buildChoukaiQueue(test, "all");
+  queue.forEach((pos) => {
+    const m = test.mondai[pos.mIndex];
+    const q = m.questions[pos.qIndex];
+    const key = choukaiKeyFor(m.number, q.qnum, pos.subIndex);
+    map[key] = pos.subIndex === null ? q.options : q.subQuestions[pos.subIndex].options;
+  });
+  return map;
+}
+
 function recordChoukaiAttempt(testId) {
   const test = getChoukaiTest(testId);
   if (!test) return;
   const columns = getChoukaiColumns(test);
+  const optsByKey = getChoukaiOptionsByKey(test);
   const results = {};
   columns.forEach((col) => {
     const ans = App.choukaiAnswers[col.key];
-    results[col.key] = ans ? !!ans.correct : null;
+    if (!ans) { results[col.key] = null; return; }
+    const opts = optsByKey[col.key];
+    results[col.key] = { correct: !!ans.correct, chosenText: opts ? opts[ans.chosenIndex] : null };
   });
-  const score = Object.values(results).filter((r) => r === true).length;
+  const score = Object.values(results).filter((r) => isResultCorrect(r)).length;
   const total = columns.length;
 
   const all = loadChoukaiAttemptsRaw();
@@ -730,13 +773,23 @@ function renderStatsOverviewTable() {
 // thẳng sang trang Làm đề thi và tự chọn đúng đề đó.
 /* ===================================================================
    MODAL "LƯỚI KẾT QUẢ NHIỀU LẦN LÀM" — dùng CHUNG cho cả đề thi chữ và đề
-   nghe. Hàng ngang = số câu (1, 2, 3...), cột dọc = lần làm (Lần 1, Lần 2...).
-   Câu SAI ở lần đó → vòng tròn ĐỎ, bên trong hiện SỐ đáp án ĐÚNG (1-4).
-   Câu ĐÚNG → vòng tròn XANH, không hiện gì bên trong (theo đúng yêu cầu).
-   columns: [{key, label}], attempts: [{completedAt, score, total, results}],
-   getCorrectLabel(key) => string số đáp án đúng (vd "3") để hiện trong vòng đỏ.
+   nghe. Hàng ngang = số câu, cột dọc = lần làm (Lần 1, Lần 2...).
+   Câu SAI ở lần đó → vòng ĐỎ, hiện NỘI DUNG đáp án ĐÚNG thật (không phải số
+   thứ tự — vì thứ tự 1-2-3-4 bị ĐẢO khác nhau mỗi lần làm, số không có nghĩa
+   gì để so sánh giữa các lần). Câu ĐÚNG → vòng XANH, không hiện chữ bên trong.
+   BẤM VÀO BẤT KỲ Ô NÀO (đã làm) → mở modal xem ĐẦY ĐỦ câu hỏi/đáp án/giải thích.
+   columns: [{key, label}], attempts: [{completedAt, score, total, results}]
+     (results[key] = null nếu chưa làm, hoặc {correct, chosenText} — chosenText
+     có thể null với dữ liệu CŨ trước khi tính năng này được nâng cấp).
+   getCorrectText(key) => chuỗi nội dung đáp án ĐÚNG thật của câu đó.
+   onCellClick(key) => mở modal xem chi tiết đầy đủ câu đó.
 =================================================================== */
-function renderAttemptsGrid(title, columns, attempts, getCorrectLabel) {
+function escAttrText(str) {
+  if (str === null || str === undefined) return "";
+  return String(str).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+function renderAttemptsGrid(title, columns, attempts, getCorrectText, onCellClick) {
   document.getElementById("attemptsGridTitle").textContent = title;
   const body = document.getElementById("attemptsGridBody");
 
@@ -751,10 +804,19 @@ function renderAttemptsGrid(title, columns, attempts, getCorrectLabel) {
     const dateLabel = attempt.completedAt ? new Date(attempt.completedAt).toLocaleDateString("vi-VN") : "";
     const cells = columns.map((c) => {
       const r = attempt.results[c.key];
-      if (r === null || r === undefined) return `<td class="attempts-grid-cell"><span class="attempts-grid-dot is-empty">—</span></td>`;
-      if (r === true) return `<td class="attempts-grid-cell"><span class="attempts-grid-dot is-correct"></span></td>`;
-      const correctLabel = getCorrectLabel(c.key);
-      return `<td class="attempts-grid-cell"><span class="attempts-grid-dot is-wrong">${correctLabel}</span></td>`;
+      if (r === null || r === undefined) {
+        return `<td class="attempts-grid-cell"><span class="attempts-grid-dot is-empty">—</span></td>`;
+      }
+      const correct = isResultCorrect(r);
+      const chosenText = getResultChosenText(r);
+      if (correct) {
+        const tip = "✓ Đúng" + (chosenText ? " — đã chọn: " + chosenText : "") + " (bấm để xem chi tiết)";
+        return `<td class="attempts-grid-cell"><span class="attempts-grid-dot is-correct" data-qkey="${escAttrText(c.key)}" title="${escAttrText(tip)}"></span></td>`;
+      }
+      const correctText = getCorrectText(c.key) || "(?)";
+      const shortText = correctText.length > 9 ? correctText.slice(0, 8) + "…" : correctText;
+      const tip = "✕ Sai — đáp án ĐÚNG: " + correctText + (chosenText ? " | bạn đã chọn: " + chosenText : "") + " (bấm để xem chi tiết)";
+      return `<td class="attempts-grid-cell"><span class="attempts-grid-dot is-wrong" data-qkey="${escAttrText(c.key)}" title="${escAttrText(tip)}">${escAttrText(shortText)}</span></td>`;
     }).join("");
     return `
       <tr>
@@ -776,10 +838,16 @@ function renderAttemptsGrid(title, columns, attempts, getCorrectLabel) {
     </div>
     <div class="attempts-grid-legend">
       <span><span class="attempts-grid-dot is-correct" style="margin-right:6px"></span>Đúng</span>
-      <span><span class="attempts-grid-dot is-wrong" style="margin-right:6px">N</span>Sai — số trong vòng tròn là đáp án ĐÚNG</span>
+      <span><span class="attempts-grid-dot is-wrong" style="margin-right:6px">✕</span>Sai — chữ trong ô là đáp án ĐÚNG thật (di chuột/bấm để xem đầy đủ)</span>
     </div>
   `;
   document.getElementById("attemptsGridModalOverlay").classList.remove("hidden");
+
+  if (onCellClick) {
+    body.querySelectorAll(".attempts-grid-dot[data-qkey]").forEach((el) => {
+      el.addEventListener("click", () => onCellClick(el.dataset.qkey));
+    });
+  }
 }
 
 function openExamAttemptsGridModal(examId) {
@@ -791,7 +859,13 @@ function openExamAttemptsGridModal(examId) {
     `📊 ${exam.title} — Lưới kết quả qua các lần làm`,
     columns,
     attempts,
-    (qIndex) => String(exam.questions[qIndex].dap_an_dung + 1)
+    (qIndex) => exam.questions[qIndex].options[exam.questions[qIndex].dap_an_dung],
+    (qKeyStr) => {
+      const qIndex = parseInt(qKeyStr, 10);
+      closeAttemptsGridModal();
+      openExamDetailModal(qIndex, { examId, examHistory: {} });
+      applyExamNoteHighlights(document.getElementById("examDetailModalBody"), examId, qIndex);
+    }
   );
 }
 
@@ -800,21 +874,32 @@ function openChoukaiAttemptsGridModal(testId) {
   if (!test) return;
   const attempts = getChoukaiAttempts(testId);
   const columns = getChoukaiColumns(test);
-  // Map key -> đáp án đúng (số 1-based) để hiện trong vòng tròn đỏ.
+  const optsByKey = getChoukaiOptionsByKey(test);
+  // Map key -> đáp án đúng (nội dung thật) để hiện trong ô đỏ + tra flatIdx khi bấm.
   const correctByKey = {};
   const queue = buildChoukaiQueue(test, "all");
-  queue.forEach((pos) => {
+  queue.forEach((pos, flatIdx) => {
     const m = test.mondai[pos.mIndex];
     const q = m.questions[pos.qIndex];
     const key = choukaiKeyFor(m.number, q.qnum, pos.subIndex);
     const correctIdx = pos.subIndex === null ? q.correctIndex : q.subQuestions[pos.subIndex].correctIndex;
-    correctByKey[key] = correctIdx;
+    correctByKey[key] = { correctIdx, flatIdx };
   });
   renderAttemptsGrid(
     `📊 ${test.title} — Lưới kết quả qua các lần làm`,
     columns,
     attempts,
-    (key) => String((correctByKey[key] ?? -1) + 1)
+    (key) => {
+      const info = correctByKey[key];
+      const opts = optsByKey[key];
+      return info && opts ? opts[info.correctIdx] : null;
+    },
+    (key) => {
+      const info = correctByKey[key];
+      if (!info) return;
+      closeAttemptsGridModal();
+      openChoukaiDetailModal(info.flatIdx, { testId, queue, answers: {} });
+    }
   );
 }
 
