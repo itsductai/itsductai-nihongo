@@ -1,57 +1,78 @@
 /* ===== MODULE: exam.js — Toàn bộ tính năng "Luyện đề thi chữ" (dethi): chọn đề, làm bài, chấm, xem lại, lưu lịch sử ===== */
 
 /* ===================================================================
-   GHI CHÚ ĐỀ THI — bôi đen 1 đoạn text trong câu hỏi/đáp án/giải thích lúc
-   làm đề, ghi lại nghĩa/ghi nhớ riêng (vd bôi "必ず" ghi "nhất định"), xem lại
-   sau ở trang "Ghi chú đề thi" (nhóm theo đề, theo câu).
-   Lưu: { [examId]: { [qIndex]: [ {id, text, note, createdAt} ] } }
+   GHI CHÚ ĐỀ THI / ĐỀ NGHE — bôi đen 1 đoạn text trong câu hỏi/đáp án/giải
+   thích lúc làm đề (CẢ đề thi chữ VÀ đề luyện nghe), ghi lại nghĩa/ghi nhớ
+   riêng (vd bôi "必ず" ghi "nhất định"), xem lại sau ở trang "Ghi chú" (nhóm
+   theo đề, theo câu), BẤM VÀO PHẦN ĐÃ GHI CHÚ để SỬA lại nội dung.
+   Lưu riêng theo từng loại đề (không lẫn dữ liệu):
+     n2vocab_exam_notes    = { [examId]:  { [qIndex]: [ {id,text,note,createdAt} ] } }
+     n2vocab_choukai_notes = { [testId]:  { [qKey]:   [ {id,text,note,createdAt} ] } }
+   (qKey của đề nghe là chuỗi dạng "m{M}q{Q}[s{S}]" — xem choukaiKeyFor() trong choukai.js)
 =================================================================== */
-const EXAM_NOTES_KEY = "n2vocab_exam_notes";
+function notesStorageKey(kind) {
+  return kind === "choukai" ? "n2vocab_choukai_notes" : "n2vocab_exam_notes";
+}
 
-function loadExamNotesRaw() {
+function loadNotesRawG(kind) {
   try {
-    const raw = localStorage.getItem(EXAM_NOTES_KEY);
+    const raw = localStorage.getItem(notesStorageKey(kind));
     return raw ? JSON.parse(raw) : {};
   } catch (e) {
     return {};
   }
 }
 
-function saveExamNotesRaw(data) {
-  localStorage.setItem(EXAM_NOTES_KEY, JSON.stringify(data));
+function saveNotesRawG(kind, data) {
+  localStorage.setItem(notesStorageKey(kind), JSON.stringify(data));
 }
 
-function addExamNote(examId, qIndex, text, note) {
-  const all = loadExamNotesRaw();
-  if (!all[examId]) all[examId] = {};
-  if (!all[examId][qIndex]) all[examId][qIndex] = [];
-  all[examId][qIndex].push({
+function addNoteG(kind, id, qKey, text, note) {
+  const all = loadNotesRawG(kind);
+  if (!all[id]) all[id] = {};
+  if (!all[id][qKey]) all[id][qKey] = [];
+  all[id][qKey].push({
     id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
     text, note, createdAt: Date.now(),
   });
-  saveExamNotesRaw(all);
+  saveNotesRawG(kind, all);
 }
 
-function getExamNotesForQuestion(examId, qIndex) {
-  const all = loadExamNotesRaw();
-  return (all[examId] && all[examId][qIndex]) || [];
+function updateNoteG(kind, id, qKey, noteId, newNoteText) {
+  const all = loadNotesRawG(kind);
+  const arr = all[id] && all[id][qKey];
+  const target = arr && arr.find((n) => n.id === noteId);
+  if (target) target.note = newNoteText;
+  saveNotesRawG(kind, all);
 }
 
-function deleteExamNote(examId, qIndex, noteId) {
-  const all = loadExamNotesRaw();
-  if (all[examId] && all[examId][qIndex]) {
-    all[examId][qIndex] = all[examId][qIndex].filter((n) => n.id !== noteId);
-    if (all[examId][qIndex].length === 0) delete all[examId][qIndex];
-    if (Object.keys(all[examId]).length === 0) delete all[examId];
+function deleteNoteG(kind, id, qKey, noteId) {
+  const all = loadNotesRawG(kind);
+  if (all[id] && all[id][qKey]) {
+    all[id][qKey] = all[id][qKey].filter((n) => n.id !== noteId);
+    if (all[id][qKey].length === 0) delete all[id][qKey];
+    if (Object.keys(all[id]).length === 0) delete all[id];
   }
-  saveExamNotesRaw(all);
+  saveNotesRawG(kind, all);
 }
+
+function getNotesForQuestionG(kind, id, qKey) {
+  const all = loadNotesRawG(kind);
+  return (all[id] && all[id][qKey]) || [];
+}
+
+// ---- Các tên hàm CŨ của riêng đề thi chữ — giữ lại làm wrapper mỏng để
+// KHÔNG phải sửa các chỗ đã gọi chúng trước đó (giảm rủi ro vỡ tính năng cũ). ----
+function loadExamNotesRaw() { return loadNotesRawG("exam"); }
+function addExamNote(examId, qIndex, text, note) { addNoteG("exam", examId, qIndex, text, note); }
+function getExamNotesForQuestion(examId, qIndex) { return getNotesForQuestionG("exam", examId, qIndex); }
+function deleteExamNote(examId, qIndex, noteId) { deleteNoteG("exam", examId, qIndex, noteId); }
 
 // Bọc lần xuất hiện ĐẦU TIÊN của `text` trong containerEl bằng <mark> kèm
 // tooltip là nội dung ghi chú — đi qua từng text node con (kể cả trong button)
 // bằng TreeWalker, dùng Range.surroundContents để bọc mà KHÔNG phá cấu trúc
-// DOM xung quanh (an toàn với <button>, <span>... đã có sẵn).
-function highlightTextInContainer(containerEl, text, note) {
+// DOM xung quanh. Bấm vào <mark> này sẽ mở lại popup để SỬA ghi chú.
+function highlightTextInContainer(containerEl, text, note, kind, id, qKey) {
   if (!text || !containerEl) return;
   const walker = document.createTreeWalker(containerEl, NodeFilter.SHOW_TEXT, null);
   let node;
@@ -64,9 +85,14 @@ function highlightTextInContainer(containerEl, text, note) {
         range.setEnd(node, idx + text.length);
         const mark = document.createElement("mark");
         mark.className = "exam-note-mark";
-        mark.title = note.note;
+        mark.title = note.note + " (bấm để sửa)";
         mark.dataset.noteId = note.id;
         range.surroundContents(mark);
+        mark.addEventListener("click", (e) => {
+          e.stopPropagation();
+          e.preventDefault();
+          openNotePopupForEdit(kind, id, qKey, note.id, note.text, note.note, mark);
+        });
       } catch (e) { /* range bất thường (hiếm) — bỏ qua, không vỡ trang */ }
       return;
     }
@@ -76,37 +102,66 @@ function highlightTextInContainer(containerEl, text, note) {
 // Áp TẤT CẢ ghi chú đã lưu của 1 câu vào 1 khung chứa (câu hỏi / đáp án /
 // giải thích / modal xem chi tiết) — gọi lại mỗi khi nội dung khung đó vừa
 // được render/innerHTML mới (vì innerHTML mới sẽ xóa mất highlight cũ).
-function applyExamNoteHighlights(containerEl, examId, qIndex) {
+function applyNoteHighlights(containerEl, kind, id, qKey) {
   if (!containerEl) return;
-  const notes = getExamNotesForQuestion(examId, qIndex);
-  notes.forEach((note) => highlightTextInContainer(containerEl, note.text, note));
+  const notes = getNotesForQuestionG(kind, id, qKey);
+  notes.forEach((note) => highlightTextInContainer(containerEl, note.text, note, kind, id, qKey));
 }
 
-let examNoteSelectedText = "";
+// Wrapper cũ riêng đề thi chữ — giữ tên cũ để không phải sửa các nơi đã gọi.
+function applyExamNoteHighlights(containerEl, examId, qIndex) {
+  applyNoteHighlights(containerEl, "exam", examId, qIndex);
+}
+
+// state của popup ghi chú đang mở — null nếu đang TẠO MỚI (từ bôi đen),
+// có giá trị nếu đang SỬA 1 ghi chú có sẵn (bấm vào <mark>).
+let noteCtx = { kind: "exam", id: null, qKey: null, selectedText: "", editingNoteId: null };
 
 // Lắng nghe người dùng BÔI ĐEN (chọn) text trong vùng câu hỏi/đáp án/giải
-// thích lúc làm đề — hiện nút nổi "📝 Ghi chú" ngay cạnh đoạn vừa chọn.
+// thích — áp dụng CHO CẢ đề thi chữ (view-exam) và đề luyện nghe (view-choukai,
+// bao gồm panel xem đáp án) — hiện nút nổi "📝 Ghi chú" ngay cạnh đoạn vừa chọn.
 function initExamNoteSelectionHandler() {
   document.addEventListener("mouseup", () => {
     const examView = document.getElementById("view-exam");
-    if (!examView || examView.classList.contains("hidden")) return;
-    const sel = window.getSelection();
+    const choukaiView = document.getElementById("view-choukai");
+    let kind = null, allowedIds = [];
+    if (examView && !examView.classList.contains("hidden")) {
+      kind = "exam";
+      allowedIds = ["examQuestion", "examOptions", "examExplainBox"];
+    } else if (choukaiView && !choukaiView.classList.contains("hidden")) {
+      kind = "choukai";
+      allowedIds = ["choukaiPrompt", "choukaiOptions", "choukaiReviewContent"];
+    }
     const toolbarBtn = document.getElementById("examNoteToolbarBtn");
+    if (!kind) { toolbarBtn.classList.add("hidden"); return; }
+
+    const sel = window.getSelection();
     if (!sel || sel.isCollapsed || !sel.toString().trim()) {
       toolbarBtn.classList.add("hidden");
       return;
     }
-    const allowedIds = ["examQuestion", "examOptions", "examExplainBox"];
     const anchorNode = sel.anchorNode;
-    const inAllowedArea = allowedIds.some((id) => {
-      const el = document.getElementById(id);
+    const inAllowedArea = allowedIds.some((idd) => {
+      const el = document.getElementById(idd);
       return el && el.contains(anchorNode);
     });
     if (!inAllowedArea) {
       toolbarBtn.classList.add("hidden");
       return;
     }
-    examNoteSelectedText = sel.toString().trim();
+
+    noteCtx.kind = kind;
+    noteCtx.selectedText = sel.toString().trim();
+    noteCtx.editingNoteId = null;
+    if (kind === "exam") {
+      noteCtx.id = App.currentExamId;
+      noteCtx.qKey = App.examCurrentQIndex;
+    } else {
+      noteCtx.id = App.currentChoukaiId;
+      noteCtx.qKey = getCurrentChoukaiNoteKey();
+    }
+    if (noteCtx.id == null || noteCtx.qKey == null) { toolbarBtn.classList.add("hidden"); return; }
+
     const rect = sel.getRangeAt(0).getBoundingClientRect();
     toolbarBtn.style.top = `${rect.top + window.scrollY - 38}px`;
     toolbarBtn.style.left = `${rect.left + window.scrollX}px`;
@@ -117,7 +172,7 @@ function initExamNoteSelectionHandler() {
 function openExamNotePopupForSelection() {
   document.getElementById("examNoteToolbarBtn").classList.add("hidden");
   const popup = document.getElementById("examNotePopup");
-  document.getElementById("examNotePopupSelectedText").textContent = examNoteSelectedText;
+  document.getElementById("examNotePopupSelectedText").textContent = noteCtx.selectedText;
   const input = document.getElementById("examNotePopupInput");
   input.value = "";
   const toolbarBtn = document.getElementById("examNoteToolbarBtn");
@@ -127,68 +182,131 @@ function openExamNotePopupForSelection() {
   input.focus();
 }
 
+// Mở popup để SỬA 1 ghi chú đã có (bấm vào <mark> hoặc nút ✎ ở trang Ghi chú).
+function openNotePopupForEdit(kind, id, qKey, noteId, text, currentNote, anchorEl) {
+  noteCtx = { kind, id, qKey, selectedText: text, editingNoteId: noteId };
+  const popup = document.getElementById("examNotePopup");
+  document.getElementById("examNotePopupSelectedText").textContent = text;
+  const input = document.getElementById("examNotePopupInput");
+  input.value = currentNote;
+  const rect = anchorEl.getBoundingClientRect();
+  popup.style.top = `${rect.bottom + window.scrollY + 6}px`;
+  popup.style.left = `${rect.left + window.scrollX}px`;
+  popup.classList.remove("hidden");
+  document.getElementById("examNoteToolbarBtn").classList.add("hidden");
+  input.focus();
+  input.select();
+}
+
 function closeExamNotePopup() {
   document.getElementById("examNotePopup").classList.add("hidden");
 }
 
 function saveExamNoteFromPopup() {
   const noteContent = document.getElementById("examNotePopupInput").value.trim();
-  if (!noteContent || !examNoteSelectedText) { closeExamNotePopup(); return; }
-  const qIndex = App.examCurrentQIndex;
-  if (App.currentExamId == null || qIndex == null) { closeExamNotePopup(); return; }
-  addExamNote(App.currentExamId, qIndex, examNoteSelectedText, noteContent);
-  closeExamNotePopup();
-  window.getSelection().removeAllRanges();
-  // Áp highlight NGAY trên khung đang hiện, không render lại cả câu (tránh
-  // mất trạng thái đã chọn/đã chấm của câu đang làm).
-  applyExamNoteHighlights(document.getElementById("examQuestion"), App.currentExamId, qIndex);
-  applyExamNoteHighlights(document.getElementById("examOptions"), App.currentExamId, qIndex);
-  applyExamNoteHighlights(document.getElementById("examExplainBox"), App.currentExamId, qIndex);
-}
+  if (!noteContent) { closeExamNotePopup(); return; }
 
-// Trang "Ghi chú đề thi" — nhóm theo đề (đề mục lớn), trong mỗi đề sắp theo
-// số câu tăng dần. Bấm "Câu N" để mở modal xem lại đúng câu đó (tái dùng
-// openExamDetailModal có sẵn) kèm highlight ghi chú luôn trong modal.
-function renderExamNotesMode() {
-  const container = document.getElementById("examNotesList");
-  const all = loadExamNotesRaw();
-  const examIds = Object.keys(all).filter((id) => Object.keys(all[id]).length > 0);
-
-  if (examIds.length === 0) {
-    container.innerHTML = `<div class="examnotes-empty">Chưa có ghi chú nào. Khi làm đề, hãy BÔI ĐEN (chọn) từ/đoạn muốn ghi nhớ trong câu hỏi, đáp án, hoặc giải thích — nút "📝 Ghi chú" sẽ hiện lên ngay cạnh để bạn lưu lại.</div>`;
+  if (noteCtx.editingNoteId) {
+    // ----- ĐANG SỬA ghi chú có sẵn -----
+    updateNoteG(noteCtx.kind, noteCtx.id, noteCtx.qKey, noteCtx.editingNoteId, noteContent);
+    closeExamNotePopup();
+    // Cập nhật tooltip của <mark> tương ứng đang hiện trên màn hình (nếu có)
+    document.querySelectorAll(`mark.exam-note-mark[data-note-id="${noteCtx.editingNoteId}"]`).forEach((m) => {
+      m.title = noteContent + " (bấm để sửa)";
+    });
+    if (!document.getElementById("view-examnotes").classList.contains("hidden")) {
+      renderExamNotesMode();
+    }
     return;
   }
 
-  container.innerHTML = examIds.map((examId) => {
-    const exam = App.exams.find((e) => e.id === examId);
-    const title = exam ? exam.title : examId;
-    const qIndexes = Object.keys(all[examId]).map(Number).sort((a, b) => a - b);
-    const rows = qIndexes.map((qIndex) => {
-      return all[examId][qIndex].map((n) => `
-        <div class="examnotes-row">
-          <button class="examnotes-jump" data-exam="${examId}" data-q="${qIndex}">Câu ${qIndex + 1}</button>
-          <span class="examnotes-text">${n.text}</span>
-          <span class="examnotes-arrow">→</span>
-          <span class="examnotes-note">${n.note}</span>
-          <button class="examnotes-del" data-exam="${examId}" data-q="${qIndex}" data-id="${n.id}" title="Xóa ghi chú này">✕</button>
-        </div>
-      `).join("");
+  // ----- ĐANG TẠO MỚI từ bôi đen -----
+  if (!noteCtx.selectedText) { closeExamNotePopup(); return; }
+  addNoteG(noteCtx.kind, noteCtx.id, noteCtx.qKey, noteCtx.selectedText, noteContent);
+  closeExamNotePopup();
+  window.getSelection().removeAllRanges();
+
+  if (noteCtx.kind === "exam") {
+    applyNoteHighlights(document.getElementById("examQuestion"), "exam", noteCtx.id, noteCtx.qKey);
+    applyNoteHighlights(document.getElementById("examOptions"), "exam", noteCtx.id, noteCtx.qKey);
+    applyNoteHighlights(document.getElementById("examExplainBox"), "exam", noteCtx.id, noteCtx.qKey);
+  } else {
+    applyNoteHighlights(document.getElementById("choukaiPrompt"), "choukai", noteCtx.id, noteCtx.qKey);
+    applyNoteHighlights(document.getElementById("choukaiOptions"), "choukai", noteCtx.id, noteCtx.qKey);
+    applyNoteHighlights(document.getElementById("choukaiReviewContent"), "choukai", noteCtx.id, noteCtx.qKey);
+  }
+}
+
+
+
+// Trang "Ghi chú" — nhóm theo đề (đề mục lớn, cả đề thi chữ VÀ đề luyện nghe),
+// trong mỗi đề sắp theo số câu tăng dần. Bấm "Câu N" để nhảy tới đúng câu đó
+// (kèm highlight ghi chú), bấm ✎ để SỬA nội dung ghi chú, ✕ để xóa.
+function renderExamNotesMode() {
+  const container = document.getElementById("examNotesList");
+  const examAll = loadNotesRawG("exam");
+  const choukaiAll = loadNotesRawG("choukai");
+  const examIds = Object.keys(examAll).filter((id) => Object.keys(examAll[id]).length > 0);
+  const choukaiIds = Object.keys(choukaiAll).filter((id) => Object.keys(choukaiAll[id]).length > 0);
+
+  if (examIds.length === 0 && choukaiIds.length === 0) {
+    container.innerHTML = `<div class="examnotes-empty">Chưa có ghi chú nào. Khi làm đề thi chữ HOẶC đề luyện nghe, hãy BÔI ĐEN (chọn) từ/đoạn muốn ghi nhớ trong câu hỏi, đáp án, hoặc giải thích — nút "📝 Ghi chú" sẽ hiện lên ngay cạnh để bạn lưu lại.</div>`;
+    return;
+  }
+
+// Escape ký tự đặc biệt khi chèn nội dung ghi chú (do người dùng tự gõ) vào
+// HTML/thuộc tính — tránh vỡ layout hoặc lỗi hiển thị nếu ghi chú có dấu " < > &.
+function escNoteHtml(str) {
+  return String(str).replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+  function buildRows(all, examOrTests, idGetter) {
+    return Object.keys(all).filter((id) => Object.keys(all[id]).length > 0).map((id) => {
+      const item = examOrTests.find((e) => e.id === id);
+      const title = item ? item.title : id;
+      const qKeys = Object.keys(all[id]);
+      // Sắp: số thì sắp tăng dần (đề thi chữ); chuỗi (đề nghe) sắp theo alphabet tự nhiên.
+      qKeys.sort((a, b) => (isNaN(a) || isNaN(b)) ? a.localeCompare(b) : Number(a) - Number(b));
+      const rows = qKeys.map((qKey) => {
+        return all[id][qKey].map((n) => `
+          <div class="examnotes-row">
+            <button class="examnotes-jump" data-kind="${idGetter}" data-id="${id}" data-qkey="${qKey}">${idGetter === "exam" ? "Câu " + (Number(qKey) + 1) : qKey}</button>
+            <span class="examnotes-text">${escNoteHtml(n.text)}</span>
+            <span class="examnotes-arrow">→</span>
+            <span class="examnotes-note">${escNoteHtml(n.note)}</span>
+            <button class="examnotes-edit" data-kind="${idGetter}" data-id="${id}" data-qkey="${qKey}" data-noteid="${n.id}" data-text="${escNoteHtml(n.text)}" data-note="${escNoteHtml(n.note)}" title="Sửa ghi chú">✎</button>
+            <button class="examnotes-del" data-kind="${idGetter}" data-id="${id}" data-qkey="${qKey}" data-noteid="${n.id}" title="Xóa ghi chú này">✕</button>
+          </div>
+        `).join("");
+      }).join("");
+      return `<div class="examnotes-group"><div class="examnotes-group-title">${idGetter === "exam" ? "📄" : "🎧"} ${title}</div>${rows}</div>`;
     }).join("");
-    return `<div class="examnotes-group"><div class="examnotes-group-title">📄 ${title}</div>${rows}</div>`;
-  }).join("");
+  }
+
+  container.innerHTML = buildRows(examAll, App.exams, "exam") + buildRows(choukaiAll, App.choukaiTests, "choukai");
 
   container.querySelectorAll(".examnotes-jump").forEach((btn) => {
     btn.addEventListener("click", () => {
-      const examId = btn.dataset.exam;
-      const qIndex = parseInt(btn.dataset.q, 10);
-      openExamDetailModal(qIndex, { examId, examHistory: {} });
-      applyExamNoteHighlights(document.getElementById("examDetailModalBody"), examId, qIndex);
+      const id = btn.dataset.id, qKey = btn.dataset.qkey, kind = btn.dataset.kind;
+      if (kind === "exam") {
+        const qIndex = parseInt(qKey, 10);
+        openExamDetailModal(qIndex, { examId: id, examHistory: {} });
+        applyNoteHighlights(document.getElementById("examDetailModalBody"), "exam", id, qIndex);
+      } else {
+        jumpToChoukaiNote(id, qKey);
+      }
+    });
+  });
+  container.querySelectorAll(".examnotes-edit").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      openNotePopupForEdit(btn.dataset.kind, btn.dataset.id, btn.dataset.qkey, btn.dataset.noteid, btn.dataset.text, btn.dataset.note, btn);
+      e.stopPropagation();
     });
   });
   container.querySelectorAll(".examnotes-del").forEach((btn) => {
     btn.addEventListener("click", () => {
       if (!confirm("Xóa ghi chú này?")) return;
-      deleteExamNote(btn.dataset.exam, parseInt(btn.dataset.q, 10), btn.dataset.id);
+      deleteNoteG(btn.dataset.kind, btn.dataset.id, btn.dataset.qkey, btn.dataset.noteid);
       renderExamNotesMode();
     });
   });

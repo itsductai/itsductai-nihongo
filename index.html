@@ -34,10 +34,6 @@
         <label for="deckPicker">Bộ học (từ vựng / ngữ pháp)</label>
         <select id="deckPicker"></select>
       </div>
-      <div class="deck-select">
-        <label for="examPicker">Đề thi trắc nghiệm</label>
-        <select id="examPicker"></select>
-      </div>
       <div class="data-actions">
         <button id="btnExport" class="ghost-btn">Xuất tiến độ</button>
         <label class="ghost-btn file-btn">
@@ -263,6 +259,7 @@
     <!-- ---- EXAM MODE (đề thi trắc nghiệm thật) ---- -->
     <section class="view hidden" id="view-exam">
       <div class="quiz-head">
+        <select id="examPicker" class="filter-select"></select>
         <div class="quiz-progress" id="examTitleLabel">Chưa chọn đề</div>
         <div class="quiz-score">Điểm: <span id="examScore">0</span>/<span id="examTotal">0</span></div>
         <label class="toggle speed-toggle">
@@ -274,7 +271,7 @@
       </div>
       <div id="examEmpty" class="empty-state">
         <div class="empty-icon">▤</div>
-        <div>Chọn một đề thi ở sidebar để bắt đầu làm bài.</div>
+        <div>Chọn một đề thi ở trên để bắt đầu làm bài.</div>
       </div>
       <div id="examBody" class="hidden">
         <div class="exam-progress-line">
@@ -633,12 +630,12 @@
 <script src="js/core.js?v=1"></script>
 <script src="js/stats-weakness.js?v=2"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=2"></script>
+<script src="js/loader-nav.js?v=3"></script>
 <script src="js/flashcard-edit.js?v=1"></script>
 <script src="js/table-srs-typing.js?v=1"></script>
 <script src="js/quiz-match.js?v=1"></script>
-<script src="js/exam.js?v=3"></script>
-<script src="js/choukai.js?v=2"></script>
-<script src="js/init.js?v=4"></script>
+<script src="js/exam.js?v=4"></script>
+<script src="js/choukai.js?v=3"></script>
+<script src="js/init.js?v=5"></script>
 </body>
 </html>

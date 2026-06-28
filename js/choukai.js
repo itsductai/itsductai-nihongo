@@ -255,6 +255,12 @@ function renderChoukaiQuestion() {
   }
 
   document.getElementById("btnChoukaiPrev").disabled = App.choukaiPos === 0;
+
+  // Áp lại ghi chú đã lưu trước đó cho câu này (nếu có) — vì textContent/options
+  // vừa render mới xóa mất highlight cũ.
+  const noteQKey = choukaiKeyFor(mondai.number, q.qnum, item.pos.subIndex);
+  applyNoteHighlights(document.getElementById("choukaiPrompt"), "choukai", App.currentChoukaiId, noteQKey);
+  applyNoteHighlights(optWrap, "choukai", App.currentChoukaiId, noteQKey);
 }
 
 function handleChoukaiAnswer(chosenIndex) {
@@ -414,11 +420,14 @@ function renderChoukaiReviewContent() {
   const item = getChoukaiCurrentItem();
   if (!item) return;
   const q = item.q;
+  const noteId = App.currentChoukaiId;
+  const noteQKey = choukaiKeyFor(item.mondai.number, q.qnum, item.pos.subIndex);
   const box = document.getElementById("choukaiReviewContent");
   if (App.choukaiReviewTab === "tip") {
     clearKaraokeHandler("reviewScript");
     clearKaraokeHandler("reviewVi");
     box.textContent = q.tip || "(chưa có mẹo cho câu này)";
+    applyNoteHighlights(box, "choukai", noteId, noteQKey);
     return;
   }
   // Script & Dịch: hiện theo từng dòng, có karaoke highlight + bấm dòng để phát
@@ -439,6 +448,35 @@ function renderChoukaiReviewContent() {
     if (!viLines.length) { box.textContent = "(chưa có bản dịch)"; return; }
     renderKaraokeLines(box, viLines, lineTimestamps, audioEl, "reviewVi");
   }
+  applyNoteHighlights(box, "choukai", noteId, noteQKey);
+}
+
+// Key ghi chú của câu ĐANG HIỆN (dùng cho bôi đen tạo ghi chú lúc làm đề nghe).
+function getCurrentChoukaiNoteKey() {
+  const item = getChoukaiCurrentItem();
+  if (!item) return null;
+  return choukaiKeyFor(item.mondai.number, item.q.qnum, item.pos.subIndex);
+}
+
+// Nhảy tới đúng câu đã ghi chú trong 1 đề nghe (gọi từ trang "Ghi chú") — bắt
+// đầu lại đề đó (luôn dùng "all" Mondai để chắc tìm thấy câu), tìm vị trí khớp
+// qKey trong queue rồi render thẳng tới đó, không cần làm lại từ câu 1.
+function jumpToChoukaiNote(testId, qKey) {
+  const test = getChoukaiTest(testId);
+  if (!test) return;
+  App.choukaiMondaiFilter = "all";
+  App.choukaiScoreMode = App.choukaiScoreMode || "instant";
+  startChoukai(testId);
+  const idx = App.choukaiQueue.findIndex((pos) => {
+    const m = test.mondai[pos.mIndex];
+    const q = m.questions[pos.qIndex];
+    return choukaiKeyFor(m.number, q.qnum, pos.subIndex) === qKey;
+  });
+  if (idx >= 0) {
+    App.choukaiPos = idx;
+    renderChoukaiQuestion(); // hàm này đã TỰ áp highlight ghi chú cho prompt+options rồi
+  }
+  setMode("choukai");
 }
 
 function choukaiGoNext() {

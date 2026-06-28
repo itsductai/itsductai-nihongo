@@ -326,6 +326,24 @@ Khi nhập: `weaknessStats` cộng dồn (không đè). `examDetailHistory`/`cho
 
 ---
 
+## 12b. Ghi chú đề thi / đề nghe (MỚI) + gọn hóa chọn đề thi
+
+**Gọn hóa UI chọn đề thi**: dropdown `#examPicker` đã CHUYỂN từ sidebar vào thẳng trong tab "Làm đề thi" (`.quiz-head`), giống cách "Luyện nghe theo đề" đã làm (`#choukaiPicker` trong `.view-head`) — không cần qua sidebar nữa.
+
+**Ghi chú (note)**: BÔI ĐEN (chọn) 1 đoạn text trong câu hỏi/đáp án/giải thích — áp dụng CẢ lúc làm đề thi chữ (`#examQuestion`, `#examOptions`, `#examExplainBox`) VÀ đề luyện nghe (`#choukaiPrompt`, `#choukaiOptions`, `#choukaiReviewContent`) — nút nổi "📝 Ghi chú" hiện cạnh đoạn vừa chọn, gõ nghĩa/ghi nhớ rồi lưu. Đoạn đó được bọc `<mark class="exam-note-mark">` (vàng, gạch chân chấm), giữ nguyên khi điều hướng qua câu khác rồi quay lại (tự áp lại lúc render).
+
+**Sửa ghi chú**: bấm trực tiếp vào phần đã bôi vàng (`<mark>`) — MỞ LẠI popup ngay tại đó để sửa nội dung, không cần qua trang riêng. Cũng sửa được từ trang "Ghi chú" qua nút ✎.
+
+**Trang "📝 Ghi chú"** (nav mới, sau "Làm đề thi"): nhóm theo đề (📄 đề thi chữ, 🎧 đề nghe), trong mỗi đề sắp theo số câu. Bấm "Câu N"/"mXqY" → nhảy thẳng tới đúng câu đó (đề thi: mở modal xem chi tiết; đề nghe: bắt đầu lại đề rồi tự nhảy tới đúng vị trí trong queue — hàm `jumpToChoukaiNote()`), kèm highlight luôn. Nút ✎ sửa, ✕ xóa.
+
+**Lưu trữ**: 2 key riêng `n2vocab_exam_notes` / `n2vocab_choukai_notes`, cấu trúc `{ [examId/testId]: { [qIndex/qKey]: [ {id, text, note, createdAt} ] } }` (qKey đề nghe = chuỗi `choukaiKeyFor()`, vd `"m2q3"`). Hàm lõi DÙNG CHUNG cho cả 2 loại đề (`loadNotesRawG/addNoteG/updateNoteG/deleteNoteG/getNotesForQuestionG/applyNoteHighlights` trong `exam.js`, nhận tham số `kind: "exam"|"choukai"`) — các tên hàm CŨ riêng đề thi chữ (`loadExamNotesRaw`, `addExamNote`...) vẫn giữ làm wrapper mỏng gọi xuống hàm chung, không phải sửa lại chỗ đã gọi trước đó.
+
+**⚠️ CHƯA có trong Export/Import** (mục 12) — 2 key `n2vocab_exam_notes`/`n2vocab_choukai_notes` hiện chỉ lưu trên 1 máy, chưa đồng bộ đa máy. Cần làm thêm nếu Zane muốn ghi chú theo qua nhiều máy.
+
+**Bug đã gặp và sửa lúc làm tính năng này**: `jumpToChoukaiNote()` lúc đầu gọi `applyNoteHighlights()` thêm 1 lần SAU khi đã gọi `renderChoukaiQuestion()` (hàm này tự áp highlight bên trong rồi) → bị áp 2 lần, tạo `<mark>` LỒNG trong `<mark>`. Đã sửa: bỏ lệnh gọi thừa, chỉ để `renderChoukaiQuestion()` tự áp 1 lần duy nhất.
+
+---
+
 ## 13-18. Các tính năng nhỏ khác (giữ nguyên từ trước, chưa đổi)
 
 - **Tùy chỉnh giao diện**: ⚙ Mặt thẻ (chọn field hiện trước/sau), ☷ Cột (ẩn/hiện + "ẩn để tự kiểm tra"), ⤮ Ngẫu nhiên (áp dụng từ phiên học tiếp theo).
