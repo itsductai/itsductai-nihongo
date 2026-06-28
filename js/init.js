@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   ensureVoicesLoaded();
 
   App.decks = await loadDecks();
+  buildGrammarIndex();
   App.exams = await loadExams();
   App.choukaiTests = await loadChoukaiTests();
 
@@ -347,6 +348,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (e.target.id === "attemptsGridModalOverlay") closeAttemptsGridModal();
   });
 
+  // Nút "🔗 Xem ngữ pháp liên quan" được tạo ĐỘNG (innerHTML) mỗi lần render
+  // thẻ flashcard/SRS, nên gắn listener qua delegation ở document thay vì gắn
+  // trực tiếp (gắn trực tiếp sẽ mất ngay khi card render lại).
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".grammar-related-btn");
+    if (btn) openGrammarRelatedPopup(btn.dataset.cautruc);
+  });
+  document.getElementById("btnGrammarRelatedClose").addEventListener("click", closeGrammarRelatedPopup);
+  document.getElementById("grammarRelatedModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "grammarRelatedModalOverlay") closeGrammarRelatedPopup();
+  });
+
   // ----- Ghi chú đề thi (bôi đen text trong câu hỏi/đáp án/giải thích) -----
   initExamNoteSelectionHandler();
   document.getElementById("examNoteToolbarBtn").addEventListener("click", openExamNotePopupForSelection);
@@ -457,7 +470,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("btnExport").addEventListener("click", () => {
     const exportPayload = {
       exportedAt: new Date().toISOString(),
-      version: 7,
+      version: 8,
       srsProgress: SRS.exportAll(),
       fieldConfig: App.fieldConfig,
       visibleCols: App.visibleCols,
@@ -468,9 +481,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       examHistory: loadExamHistoryStats(),
       examDetailHistory: loadExamDetailHistoryStats(),
       examAttempts: getAllExamAttemptsForExport(),
+      examNotes: loadNotesRawG("exam"),
       choukaiHistory: loadChoukaiHistoryStats(),
       choukaiDetailHistory: loadChoukaiDetailHistoryStats(),
       choukaiAttempts: getAllChoukaiAttemptsForExport(),
+      choukaiNotes: loadNotesRawG("choukai"),
       shuffleEnabled: App.shuffleEnabled,
       soundEnabled: App.soundEnabled,
       speechEnabled: App.speechEnabled,
@@ -653,6 +668,11 @@ document.addEventListener("DOMContentLoaded", async () => {
           });
           saveChoukaiAttemptsRaw(currentChoukaiAttempts);
         }
+        // Ghi chú (note) đề thi/đề nghe — cấu trúc lồng 2 cấp { id: { qKey: [notes] } },
+        // GỘP SÂU theo từng id rồi từng qKey (không đè cả cụm), loại trùng theo
+        // `note.id` (phòng export rồi nhập lại trên CHÍNH máy đó, tránh nhân đôi).
+        if (data.examNotes) mergeNotesOnImport("exam", data.examNotes);
+        if (data.choukaiNotes) mergeNotesOnImport("choukai", data.choukaiNotes);
         if (data.shuffleEnabled) {
           Object.assign(App.shuffleEnabled, data.shuffleEnabled);
           saveShuffleConfig();
@@ -691,6 +711,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Tải lại deck từ file gốc (không còn patch) để phản ánh ngay
     loadDecks().then((decks) => {
       App.decks = decks;
+      buildGrammarIndex();
       const stillExists = decks.find((d) => d.id === App.currentDeckId);
       switchDeck(stillExists ? App.currentDeckId : decks[0].id);
       alert("Đã xóa toàn bộ các sửa tạm.");

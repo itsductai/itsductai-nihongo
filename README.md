@@ -344,6 +344,22 @@ Khi nhập: `weaknessStats` cộng dồn (không đè). `examDetailHistory`/`cho
 
 ---
 
+## 12c. Ngữ pháp liên quan (đồng nghĩa + dễ nhầm) — dùng đúng field đã có sẵn
+
+Schema NGUPHAP (mục 4) đã có sẵn `so_sanh_de_nham` ({cautruc, khac_biet}) và `dong_nghia` — chỉ là **chưa được khai thác hiệu quả**: `dong_nghia` đa số file (`pham-vi-a-m789`, `top40-mimitry`...) chỉ lưu CHUỖI THÔ (vd `["～ものの"]`), không có nghĩa kèm theo.
+
+**Đã làm — KHÔNG cần sửa lại file JSON nào:**
+- `buildGrammarIndex()` (`core.js`) — gộp TẤT CẢ cấu trúc của mọi bộ NGUPHAP đang có thành 1 index tra cứu `cautruc -> cả entry`, build lúc khởi động + sau khi xóa sửa tạm + sau khi sửa 1 từ qua modal ✎.
+- `enrichGrammarSynonym()` — khi render `dong_nghia` cho NGUPHAP, nếu mục đó là chuỗi thô thì TỰ TRA cứu qua index để lấy nghĩa thật, hiện kèm luôn (không sửa file gốc, chỉ enrich lúc hiển thị).
+- Nút **"🔗 Xem ngữ pháp liên quan / dễ nhầm"** tự hiện trên mặt thẻ (flashcard/SRS) khi mặt đó có cấu hình hiện field `dong_nghia` hoặc `so_sanh_de_nham` VÀ từ đó thực sự có dữ liệu. Bấm vào mở popup gồm 2 phần:
+  - 🟢 **Đồng nghĩa** — liệt kê cấu trúc + nghĩa thật (tra qua index).
+  - ⚠️ **Dễ nhầm** — liệt kê cấu trúc + ghi chú phân biệt (`khac_biet`, đã có sẵn trong data) + nghĩa thật nếu tra được.
+- Hàm: `openGrammarRelatedPopup(cautruc)` / `closeGrammarRelatedPopup()` (`flashcard-edit.js`), modal `#grammarRelatedModalOverlay` (`index.html`).
+
+**CHƯA làm (đã trao đổi, để sau nếu cần)**: trang riêng "Nhóm ngữ pháp" gom theo nhãn để xem tổng quan cả hệ thống, và mode flashcard chuyên biệt để LUYỆN phân biệt các cặp dễ nhầm. Popup hiện tại đã giải quyết phần lớn nhu cầu xem nhanh lúc học bình thường.
+
+---
+
 ## 13-18. Các tính năng nhỏ khác (giữ nguyên từ trước, chưa đổi)
 
 - **Tùy chỉnh giao diện**: ⚙ Mặt thẻ (chọn field hiện trước/sau), ☷ Cột (ẩn/hiện + "ẩn để tự kiểm tra"), ⤮ Ngẫu nhiên (áp dụng từ phiên học tiếp theo).

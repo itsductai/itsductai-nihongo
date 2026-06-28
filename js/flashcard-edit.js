@@ -114,6 +114,63 @@ function buildColConfigPanel() {
   });
 }
 
+/* ===================================================================
+   POPUP "NGỮ PHÁP LIÊN QUAN" — bấm nút 🔗 trên thẻ flashcard/SRS NGUPHAP để
+   xem TẤT CẢ cấu trúc đồng nghĩa (cùng nhóm nghĩa, sắc thái khác chút nhưng
+   thi ít phân biệt) + cấu trúc DỄ NHẦM (giống cấu trúc/chữ nhưng nghĩa khác)
+   của 1 cấu trúc, kèm nghĩa thật (tra qua App.grammarIndex) để học tối ưu.
+=================================================================== */
+function openGrammarRelatedPopup(cautruc) {
+  const word = findGrammarByCautruc(cautruc);
+  if (!word) return;
+
+  const dongNghiaItems = (word.dong_nghia || []).map((item) => {
+    const str = typeof item === "string" ? item : item.kanji;
+    const found = findGrammarByCautruc(str);
+    return { cautruc: str, nghia: found ? found.nghia : (typeof item === "object" ? item.nghia : null) };
+  });
+  const deNhamItems = (word.so_sanh_de_nham || []).map((item) => {
+    const found = findGrammarByCautruc(item.cautruc);
+    return { cautruc: item.cautruc, khac_biet: item.khac_biet, nghia: found ? found.nghia : null };
+  });
+
+  let html = `<div class="grammar-related-current"><div class="cf-cautruc">${word.cautruc}</div><div class="cf-nghia">${word.nghia}</div></div>`;
+
+  if (dongNghiaItems.length) {
+    html += `<div class="cf-block-label">🟢 Đồng nghĩa — cùng nhóm nghĩa/lập trường, sắc thái có thể khác chút nhưng đề thi ít phân biệt</div>`;
+    html += dongNghiaItems.map((it) => `
+      <div class="grammar-related-item is-dongnghia">
+        <div class="grammar-related-cautruc">${it.cautruc}</div>
+        ${it.nghia
+          ? `<div class="grammar-related-nghia">${it.nghia}</div>`
+          : `<div class="grammar-related-nghia is-unknown">(chưa tra được nghĩa — cấu trúc này chưa có trong dữ liệu hiện tại)</div>`}
+      </div>
+    `).join("");
+  }
+
+  if (deNhamItems.length) {
+    html += `<div class="cf-block-label">⚠️ Dễ nhầm — cấu trúc/chữ tương tự nhưng nghĩa khác, chú ý phân biệt</div>`;
+    html += deNhamItems.map((it) => `
+      <div class="grammar-related-item is-denham">
+        <div class="grammar-related-cautruc">${it.cautruc}${it.nghia ? ` <span class="grammar-related-nghia-inline">— ${it.nghia}</span>` : ""}</div>
+        <div class="grammar-related-khacbiet">${it.khac_biet}</div>
+      </div>
+    `).join("");
+  }
+
+  if (!dongNghiaItems.length && !deNhamItems.length) {
+    html += `<div class="examnotes-empty">Cấu trúc này chưa có dữ liệu đồng nghĩa/dễ nhầm.</div>`;
+  }
+
+  document.getElementById("grammarRelatedTitle").textContent = `🔗 Ngữ pháp liên quan với "${word.cautruc}"`;
+  document.getElementById("grammarRelatedBody").innerHTML = html;
+  document.getElementById("grammarRelatedModalOverlay").classList.remove("hidden");
+}
+
+function closeGrammarRelatedPopup() {
+  document.getElementById("grammarRelatedModalOverlay").classList.add("hidden");
+}
+
 function renderCardFace(containerEl, word, fieldKeys) {
   const type = App.currentDeckType;
   const meta = FIELD_META[type];
@@ -121,7 +178,18 @@ function renderCardFace(containerEl, word, fieldKeys) {
     .map((key) => (meta[key] ? meta[key].render(word) : ""))
     .filter(Boolean)
     .join("");
-  containerEl.innerHTML = html || '<div class="cf-nghia">(chưa chọn field hiển thị)</div>';
+  // Nút "Xem ngữ pháp liên quan/dễ nhầm" — chỉ hiện cho NGUPHAP, CHỈ khi mặt
+  // thẻ đang render này có cấu hình hiện field dong_nghia/so_sanh_de_nham
+  // (tôn trọng đúng cấu hình ẩn/hiện field người dùng đã chọn), VÀ từ này
+  // thực sự có dữ liệu liên quan để xem (không hiện nút vô nghĩa).
+  let extra = "";
+  if (type === "NGUPHAP" && (fieldKeys.includes("dong_nghia") || fieldKeys.includes("so_sanh_de_nham"))) {
+    const hasRelated = (word.dong_nghia && word.dong_nghia.length) || (word.so_sanh_de_nham && word.so_sanh_de_nham.length);
+    if (hasRelated) {
+      extra = `<button class="grammar-related-btn" data-cautruc="${String(word.cautruc).replace(/"/g, "&quot;")}">🔗 Xem ngữ pháp liên quan / dễ nhầm</button>`;
+    }
+  }
+  containerEl.innerHTML = (html || '<div class="cf-nghia">(chưa chọn field hiển thị)</div>') + extra;
 }
 
 /* ===================================================================
@@ -303,6 +371,7 @@ function saveEditModal() {
   }
 
   saveWordEdit(App.currentDeckId, editModalCurrentWordId, changed);
+  if (App.currentDeckType === "NGUPHAP") buildGrammarIndex();
 
   closeEditModal();
   renderFlashCard();

@@ -5,6 +5,7 @@
 const App = {
   decks: [],
   exams: [],
+  grammarIndex: {}, // tra cứu cautruc -> cả entry NGUPHAP, build lại bằng buildGrammarIndex()
   currentDeckId: null,
   currentDeckType: null, // "TUVUNG" | "NGUPHAP"
   currentWords: [],
@@ -131,6 +132,37 @@ const App = {
 
 /* ---------- Field metadata (nhãn hiển thị + cách render) ---------- */
 
+// Index TRA CỨU NHANH mọi cấu trúc ngữ pháp (gộp TẤT CẢ bộ NGUPHAP đang có) —
+// dùng để: (1) làm giàu hiển thị "đồng nghĩa" (vốn nhiều file chỉ lưu chuỗi
+// thô chưa kèm nghĩa — tra ra đây để hiện kèm nghĩa cho dễ học), (2) cho popup
+// "Xem ngữ pháp liên quan". Gọi lại buildGrammarIndex() mỗi khi App.decks đổi
+// (sau loadDecks() hoặc sau khi xóa sửa tạm) để không bị cũ dữ liệu.
+function buildGrammarIndex() {
+  const index = {};
+  App.decks.forEach((deck) => {
+    if (deck.type !== "NGUPHAP") return;
+    deck.words.forEach((w) => {
+      if (w.cautruc) index[w.cautruc] = w;
+    });
+  });
+  App.grammarIndex = index;
+}
+
+function findGrammarByCautruc(cautruc) {
+  return (App.grammarIndex && App.grammarIndex[cautruc]) || null;
+}
+
+// Chuẩn hóa 1 mục dong_nghia CHO NGỮ PHÁP về dạng có nghĩa kèm theo — nếu mục
+// đó vốn chỉ là chuỗi thô (format cũ, đa số file hiện tại), tự tra cứu qua
+// buildGrammarIndex() để LẤY THÊM nghĩa thật, không cần sửa lại từng file JSON.
+// Nếu không tra được (cấu trúc đó chưa có trong dữ liệu) thì vẫn hiện chuỗi
+// thô, không vỡ trang.
+function enrichGrammarSynonym(item) {
+  if (typeof item !== "string") return item; // đã là format mới {kanji/cautruc, doc, nghia} -> giữ nguyên
+  const found = findGrammarByCautruc(item);
+  return found ? { kanji: item, nghia: found.nghia } : { kanji: item };
+}
+
 const FIELD_META = {
   TUVUNG: {
     kanji: { label: "Kanji", render: (w) => `<div class="cf-kanji">${w.kanji}</div>` },
@@ -168,7 +200,7 @@ const FIELD_META = {
     dong_nghia: {
       label: "Cấu trúc đồng nghĩa",
       render: (w) => (w.dong_nghia && w.dong_nghia.length
-        ? `<div class="cf-block-label">Đồng nghĩa</div><div class="cf-synonyms">${renderSynonymList(w.dong_nghia)}</div>` : ""),
+        ? `<div class="cf-block-label">Đồng nghĩa</div><div class="cf-synonyms">${renderSynonymList(w.dong_nghia.map(enrichGrammarSynonym))}</div>` : ""),
     },
     trai_nghia: {
       label: "Cấu trúc trái nghĩa",
