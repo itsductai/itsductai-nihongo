@@ -61,6 +61,31 @@ function getNotesForQuestionG(kind, id, qKey) {
   return (all[id] && all[id][qKey]) || [];
 }
 
+// Gộp ghi chú (note) đề thi/đề nghe lúc NHẬP file — cấu trúc lồng 2 cấp
+// { id: { qKey: [ {id, text, note, createdAt} ] } }. Gộp SÂU theo từng id rồi
+// từng qKey (không đè cả cụm của 1 đề/1 câu), loại trùng theo `note.id` (phòng
+// trường hợp export rồi nhập lại trên CHÍNH máy đó, tránh ghi chú bị nhân đôi).
+function mergeNotesOnImport(kind, incomingNotes) {
+  const current = loadNotesRawG(kind);
+  Object.keys(incomingNotes).forEach((id) => {
+    if (!current[id]) current[id] = {};
+    Object.keys(incomingNotes[id]).forEach((qKey) => {
+      const existing = current[id][qKey] || [];
+      const incoming = incomingNotes[id][qKey] || [];
+      const seenIds = new Set(existing.map((n) => n.id));
+      const merged = [...existing];
+      incoming.forEach((n) => {
+        if (!seenIds.has(n.id)) {
+          merged.push(n);
+          seenIds.add(n.id);
+        }
+      });
+      current[id][qKey] = merged;
+    });
+  });
+  saveNotesRawG(kind, current);
+}
+
 // ---- Các tên hàm CŨ của riêng đề thi chữ — giữ lại làm wrapper mỏng để
 // KHÔNG phải sửa các chỗ đã gọi chúng trước đó (giảm rủi ro vỡ tính năng cũ). ----
 function loadExamNotesRaw() { return loadNotesRawG("exam"); }
