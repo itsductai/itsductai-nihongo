@@ -714,7 +714,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         renderFlashCard();
         alert("Đã nhập tiến độ, cấu hình và các sửa tạm thành công.");
       } catch (err) {
-        alert("File không hợp lệ.");
+        console.error("Lỗi nhập file:", err);
+        alert("File không hợp lệ.\n\nChi tiết lỗi: " + err.message);
       }
     };
     reader.readAsText(file);
