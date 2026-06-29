@@ -378,6 +378,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (e.target.id === "ggQuizModalOverlay") closeGgQuizModal();
   });
 
+  // ----- Modal "Học SRS gộp nhiều bộ" -----
+  document.getElementById("btnOpenComboSrs").addEventListener("click", openComboSrsModal);
+  document.getElementById("btnComboSrsClose").addEventListener("click", closeComboSrsModal);
+  document.getElementById("comboSrsModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "comboSrsModalOverlay") closeComboSrsModal();
+  });
+  document.getElementById("btnComboSrsStart").addEventListener("click", confirmStartComboSrs);
+
   // ----- Ghi chú đề thi (bôi đen text trong câu hỏi/đáp án/giải thích) -----
   initExamNoteSelectionHandler();
   document.getElementById("examNoteToolbarBtn").addEventListener("click", openExamNotePopupForSelection);

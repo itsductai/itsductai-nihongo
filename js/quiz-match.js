@@ -95,7 +95,7 @@ function handleQuizAnswer(btn, chosen, q) {
     playWrongSound();
     recordWeaknessResult(App.currentDeckId, q.word._id, false);
   }
-  SRS.saveProgress(App.currentDeckId, App.progress);
+  saveCurrentSrsProgress();
 
   setTimeout(() => {
     App.quizIndex++;
@@ -181,7 +181,7 @@ function handleMatchClick(div, cell) {
         App.matchPairs++;
         document.getElementById("matchPairs").textContent = App.matchPairs;
         SRS.rate(App.progress, a.cell.word._id, "easy");
-        SRS.saveProgress(App.currentDeckId, App.progress);
+        saveCurrentSrsProgress();
         recordWeaknessResult(App.currentDeckId, a.cell.word._id, true);
         App.matchSelected = [];
         App.matchLocked = false;

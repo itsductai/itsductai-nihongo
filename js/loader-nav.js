@@ -248,6 +248,7 @@ function renderNav() {
 function switchDeck(deckId) {
   const deck = App.decks.find((d) => d.id === deckId);
   if (!deck) return;
+  App.srsComboActive = false; // rời khỏi mode "học SRS gộp nhiều bộ" nếu đang ở đó
   App.currentDeckId = deckId;
   App.currentDeckType = deck.type;
   App.currentWords = deck.words;

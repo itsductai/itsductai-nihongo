@@ -268,9 +268,21 @@ function recordExamAttempt(examId) {
   }
   const score = results.filter((r) => isResultCorrect(r)).length;
 
+  // Lưu LUÔN điểm mô phỏng JLPT (Linear + IRT) của lần làm này vào attempt —
+  // trước đây 2 điểm này chỉ tính tạm lúc hiện màn hình kết quả rồi mất, không
+  // lưu ở đâu cả. Giờ lưu thẳng vào đây để: (1) xem lại được ở lưới kết quả
+  // nhiều lần làm, (2) TỰ ĐỘNG được Xuất/Nhập tiến độ theo (mục 12) vì dùng
+  // chung object `n2vocab_exam_attempts` đã có sẵn cơ chế export/import, không
+  // cần sửa thêm gì ở phần export/import.
+  const jlpt = computeExamJlptScoring(examId, App.examHistory);
+
   const all = loadExamAttemptsRaw();
   if (!all[examId]) all[examId] = getExamAttempts(examId); // đảm bảo đã migrate dữ liệu cũ trước khi cộng thêm
-  all[examId].push({ completedAt: Date.now(), score, total, results });
+  all[examId].push({
+    completedAt: Date.now(), score, total, results,
+    linearScore: jlpt ? jlpt.linearScore : null,
+    irtScore: jlpt ? jlpt.irtScore : null,
+  });
   if (all[examId].length > MAX_ATTEMPTS_KEPT) {
     all[examId] = all[examId].slice(all[examId].length - MAX_ATTEMPTS_KEPT);
   }
@@ -384,9 +396,18 @@ function recordChoukaiAttempt(testId) {
   const score = Object.values(results).filter((r) => isResultCorrect(r)).length;
   const total = columns.length;
 
+  // Lưu LUÔN điểm mô phỏng JLPT của lần làm này — dùng ĐÚNG App.choukaiMondaiFilter
+  // tại thời điểm hoàn thành (nếu chỉ luyện riêng 1 Mondai thì điểm cũng chỉ tính
+  // đúng Mondai đó, khớp với điều đã hiện trên màn hình kết quả lúc finishChoukai()).
+  const jlpt = computeChoukaiJlptScoring(test, App.choukaiAnswers, App.choukaiMondaiFilter);
+
   const all = loadChoukaiAttemptsRaw();
   if (!all[testId]) all[testId] = getChoukaiAttempts(testId);
-  all[testId].push({ completedAt: Date.now(), score, total, results });
+  all[testId].push({
+    completedAt: Date.now(), score, total, results,
+    linearScore: jlpt ? jlpt.linearScore : null,
+    irtScore: jlpt ? jlpt.irtScore : null,
+  });
   if (all[testId].length > MAX_ATTEMPTS_KEPT) {
     all[testId] = all[testId].slice(all[testId].length - MAX_ATTEMPTS_KEPT);
   }
@@ -635,8 +656,103 @@ function computeDeckStats(deck) {
 
 function renderStatsMode() {
   renderStatsOverviewTable();
+  renderStatsGrammarItems();
   renderStatsExamHistory();
   renderStatsChoukaiHistory();
+}
+
+// Thống kê ngữ pháp theo TỪNG CẤU TRÚC riêng lẻ (KHÔNG gộp theo bộ như 2 nhóm
+// Mimi/Tài liệu khác ở trên) — vì mỗi bộ NGUPHAP có thể gồm vài chục cấu trúc
+// khác nhau, gộp theo bộ sẽ che mất việc "cấu trúc A trong bộ X đã thuộc, cấu
+// trúc B trong CÙNG bộ X vẫn còn yếu". Sắp yếu nhất lên đầu giống quy ước chung.
+function renderStatsGrammarItems() {
+  const donutRow = document.getElementById("statsDonutRowGrammarItems");
+  const tbody = document.getElementById("statsOverviewBodyGrammarItems");
+  tbody.innerHTML = "";
+
+  const grammarDecks = App.decks.filter((d) => d.type === "NGUPHAP");
+  if (grammarDecks.length === 0) {
+    donutRow.innerHTML = `<div class="stats-donut-empty">Chưa có bộ ngữ pháp nào.</div>`;
+    return;
+  }
+
+  // Gộp TẤT CẢ cấu trúc của TẤT CẢ bộ NGUPHAP thành 1 danh sách phẳng — mỗi
+  // dòng = 1 cấu trúc thật, kèm deckId để bấm vào nhảy đúng bộ chứa nó.
+  const items = [];
+  grammarDecks.forEach((deck) => {
+    const progress = SRS.loadProgress(deck.id);
+    deck.words.forEach((w) => {
+      const entry = SRS.getEntry(progress, w._id);
+      const st = SRS.status(entry);
+      items.push({ deckId: deck.id, deckTitle: deck.title, cautruc: w.cautruc, nghia: w.nghia, status: st, due: entry.seen && SRS.isDue(entry) });
+    });
+  });
+
+  const agg = items.reduce((acc, it) => {
+    if (it.status === "known" || it.status === "mastered") acc.known++;
+    else if (it.status === "learning") acc.learning++;
+    else acc.fresh++;
+    acc.total++;
+    return acc;
+  }, { known: 0, learning: 0, fresh: 0, total: 0 });
+  const aggPct = agg.total ? Math.round((agg.known / agg.total) * 100) : 0;
+
+  donutRow.innerHTML = `
+    <div class="stats-donut-box">
+      ${buildDonutSvg(
+        [
+          { value: agg.known, color: "var(--good)" },
+          { value: agg.learning, color: "var(--warn)" },
+          { value: agg.fresh, color: "var(--border)" },
+        ],
+        `${aggPct}%`,
+        "đã thuộc"
+      )}
+    </div>
+    <div class="stats-donut-summary">
+      <div class="stats-donut-summary-title">📖 Ngữ pháp — ${agg.total} cấu trúc (tính riêng từng cấu trúc, ${grammarDecks.length} bộ)</div>
+      <div class="stats-donut-summary-row"><i class="stats-dot stats-dot-known"></i> Đã thuộc: <b>${agg.known}</b></div>
+      <div class="stats-donut-summary-row"><i class="stats-dot stats-dot-learning"></i> Đang học: <b>${agg.learning}</b></div>
+      <div class="stats-donut-summary-row"><i class="stats-dot stats-dot-fresh"></i> Chưa học: <b>${agg.fresh}</b></div>
+    </div>
+  `;
+
+  // Sắp YẾU NHẤT lên đầu (fresh/learning trước known) để biết nên ôn cấu trúc nào trước.
+  const statusRank = { fresh: 0, learning: 1, known: 2, mastered: 3 };
+  items.sort((a, b) => statusRank[a.status] - statusRank[b.status]);
+
+  items.forEach((it) => {
+    const pct = (it.status === "known" || it.status === "mastered") ? 100 : (it.status === "learning" ? 50 : 0);
+    const knownW = (it.status === "known" || it.status === "mastered") ? 100 : 0;
+    const learningW = it.status === "learning" ? 100 : 0;
+    const freshW = it.status === "fresh" ? 100 : 0;
+    const tr = document.createElement("tr");
+    if (it.deckId === App.currentDeckId) tr.classList.add("is-current-deck-row");
+    tr.innerHTML = `
+      <td class="stats-deck-name-cell">
+        <button class="stats-deck-link" data-jump-deck="${it.deckId}" title="${it.nghia}">${it.cautruc}</button>
+        <span class="stats-deck-type-tag">${it.deckTitle}</span>
+        ${it.due ? `<span class="stats-due-badge">cần ôn</span>` : ""}
+      </td>
+      <td class="stats-bar-cell">
+        <div class="stats-hbar" title="${it.status}">
+          <div class="stats-hbar-seg stats-hbar-known" style="width:${knownW}%"></div>
+          <div class="stats-hbar-seg stats-hbar-learning" style="width:${learningW}%"></div>
+          <div class="stats-hbar-seg stats-hbar-fresh" style="width:${freshW}%"></div>
+        </div>
+      </td>
+      <td class="stats-pct-cell">${pct}%</td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  tbody.querySelectorAll("[data-jump-deck]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const deckId = btn.dataset.jumpDeck;
+      if (deckId !== App.currentDeckId) switchDeck(deckId);
+      setMode("srs");
+    });
+  });
 }
 
 // Vẽ 1 biểu đồ tròn (donut) thuần SVG — không phụ thuộc thư viện ngoài (app
@@ -822,7 +938,7 @@ function renderAttemptsGrid(title, columns, attempts, getCorrectText, onCellClic
       <tr>
         <th class="attempts-grid-row-head">
           Lần ${idx + 1}
-          <div class="attempts-grid-row-score">${attempt.score}/${attempt.total} · ${dateLabel}</div>
+          <div class="attempts-grid-row-score">${attempt.score}/${attempt.total} · ${dateLabel}${attempt.linearScore != null ? ` · Linear ${attempt.linearScore} / IRT ${attempt.irtScore}` : ""}</div>
         </th>
         ${cells}
       </tr>

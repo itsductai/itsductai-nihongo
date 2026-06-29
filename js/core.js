@@ -8,6 +8,7 @@ const App = {
   grammarIndex: {}, // tra cứu cautruc -> cả entry NGUPHAP, build lại bằng buildGrammarIndex()
   grammarGroupsData: null, // data/grammar-groups.json — nhóm nghĩa + họ dễ nhầm
   grammarGroupsTab: "nhomnghia",
+  srsComboActive: false, // true khi đang học SRS gộp nhiều bộ ngữ pháp cùng lúc (xem startComboSrs())
   currentDeckId: null,
   currentDeckType: null, // "TUVUNG" | "NGUPHAP"
   currentWords: [],

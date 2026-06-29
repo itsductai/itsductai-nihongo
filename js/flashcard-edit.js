@@ -490,7 +490,7 @@ function flashMarkResult(result) {
     // tránh gọi SRS.rate() nhiều lần liên tiếp trong vài giây (do hàng đợi xoay
     // vòng) làm nhiễu ease factor — SRS chỉ nên phản ánh đánh giá sau cùng.
     SRS.rate(App.progress, itemId, "easy");
-    SRS.saveProgress(App.currentDeckId, App.progress);
+    saveCurrentSrsProgress();
     recordWeaknessResult(App.currentDeckId, itemId, true);
     App.flashRememberedCount++;
   } else if (result === "not_remembered") {

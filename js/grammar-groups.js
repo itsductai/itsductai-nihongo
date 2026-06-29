@@ -218,6 +218,34 @@ function ggQuizNext() {
   }
 }
 
+/* ===================================================================
+   MODAL "HỌC SRS GỘP NHIỀU BỘ" — chọn 1 hoặc nhiều bộ NGUPHAP để học CHUNG
+   trong 1 phiên SRS (tái dùng startComboSrs() trong table-srs-typing.js).
+=================================================================== */
+function openComboSrsModal() {
+  const list = document.getElementById("comboSrsDeckList");
+  const grammarDecks = App.decks.filter((d) => d.type === "NGUPHAP");
+  list.innerHTML = grammarDecks.map((d) => `
+    <label class="combo-srs-deck-item">
+      <input type="checkbox" value="${d.id}" class="combo-srs-checkbox">
+      <span>${d.title}</span>
+      <span class="combo-srs-deck-count">${d.words.length} cấu trúc</span>
+    </label>
+  `).join("");
+  document.getElementById("comboSrsModalOverlay").classList.remove("hidden");
+}
+
+function closeComboSrsModal() {
+  document.getElementById("comboSrsModalOverlay").classList.add("hidden");
+}
+
+function confirmStartComboSrs() {
+  const checked = Array.from(document.querySelectorAll(".combo-srs-checkbox:checked")).map((c) => c.value);
+  if (!checked.length) { alert("Chọn ít nhất 1 bộ để bắt đầu học."); return; }
+  closeComboSrsModal();
+  startComboSrs(checked);
+}
+
 function closeGgQuizModal() {
   document.getElementById("ggQuizModalOverlay").classList.add("hidden");
 }

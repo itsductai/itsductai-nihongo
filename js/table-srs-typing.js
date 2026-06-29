@@ -1,5 +1,61 @@
 /* ===== MODULE: table-srs-typing.js — Mode Bảng, mode SRS (ôn theo thuật toán), mode Gõ (typing) ===== */
 
+/* ===================================================================
+   HỌC SRS GỘP NHIỀU BỘ NGỮ PHÁP TÙY Ý — tái dùng TOÀN BỘ giao diện/thuật toán
+   SRS có sẵn (giống Anki), chỉ khác là App.currentWords/App.progress được gộp
+   từ NHIỀU bộ cùng lúc thay vì 1 bộ. `_id` mỗi từ đã có dạng "deckId::key" sẵn
+   (xem wordId() trong core.js) -> không trùng nhau giữa các bộ, gộp an toàn.
+=================================================================== */
+function startComboSrs(deckIds) {
+  const decks = deckIds.map((id) => App.decks.find((d) => d.id === id)).filter(Boolean);
+  if (!decks.length) return;
+
+  const comboWords = [];
+  const comboProgress = {};
+  decks.forEach((deck) => {
+    Object.assign(comboProgress, SRS.loadProgress(deck.id));
+    comboWords.push(...deck.words);
+  });
+
+  App.srsComboActive = true;
+  App.currentDeckId = "__combo__";
+  App.currentDeckType = "NGUPHAP"; // combo chỉ áp dụng cho bộ ngữ pháp
+  App.currentWords = comboWords;
+  App.progress = comboProgress;
+
+  const comboLabel = `🔀 Gộp ${decks.length} bộ: ${decks.map((d) => d.title).join(" + ")}`;
+  document.getElementById("deckName").textContent = comboLabel;
+  document.getElementById("mobileTopbarTitle").textContent = comboLabel;
+
+  setMode("srs");
+  initSrsMode();
+}
+
+// Lúc lưu progress của 1 phiên SRS GỘP — KHÔNG thể lưu chung 1 chỗ (vì các từ
+// gốc từ NHIỀU bộ khác nhau) — tách lại đúng theo từng deckId gốc (lấy từ tiền
+// tố của _id, dạng "deckId::key") rồi lưu riêng vào progress THẬT của bộ đó.
+function saveComboProgress(progress) {
+  const byDeck = {};
+  Object.keys(progress).forEach((id) => {
+    const sep = id.indexOf("::");
+    const deckId = sep === -1 ? id : id.slice(0, sep);
+    if (!byDeck[deckId]) byDeck[deckId] = {};
+    byDeck[deckId][id] = progress[id];
+  });
+  Object.keys(byDeck).forEach((deckId) => {
+    const real = SRS.loadProgress(deckId);
+    Object.assign(real, byDeck[deckId]);
+    SRS.saveProgress(deckId, real);
+  });
+}
+
+// Wrapper DÙNG CHUNG cho mọi chỗ cần lưu progress trong file này — tự động lưu
+// đúng cách theo có đang ở combo mode hay không, KHÔNG cần sửa từng nơi gọi.
+function saveCurrentSrsProgress() {
+  if (App.srsComboActive) saveComboProgress(App.progress);
+  else SRS.saveProgress(App.currentDeckId, App.progress);
+}
+
 function renderTable() {
   const type = App.currentDeckType;
   const meta = TABLE_COL_META[type];
@@ -75,7 +131,7 @@ function renderTable() {
     });
   });
 
-  SRS.saveProgress(App.currentDeckId, App.progress);
+  saveCurrentSrsProgress();
 }
 
 /* ===================================================================
@@ -115,7 +171,7 @@ function initSrsMode(restrictToIds) {
   App.srsQueue = orderedDue.concat(newSlice);
   App.srsIndex = 0;
 
-  SRS.saveProgress(App.currentDeckId, App.progress);
+  saveCurrentSrsProgress();
 
   const empty = document.getElementById("srsEmpty");
   const stage = document.getElementById("srsStage");
@@ -169,7 +225,7 @@ function rateCurrentSrsWord(rating) {
   const w = App.srsQueue[App.srsIndex];
   if (!w) return;
   SRS.rate(App.progress, w._id, rating);
-  SRS.saveProgress(App.currentDeckId, App.progress);
+  saveCurrentSrsProgress();
 
   // Ghi nhận vào thống kê điểm yếu chung: "Quên" = sai, "Khó"/"Dễ" = đúng
   // (đã nhớ được, chỉ khác mức độ dễ/khó khi nhớ lại).
@@ -278,7 +334,7 @@ function typingShowAnswer() {
 
   // Xem đáp án = coi như chưa nhớ được, xếp ôn lại sớm hơn
   SRS.rate(App.progress, w._id, "again");
-  SRS.saveProgress(App.currentDeckId, App.progress);
+  saveCurrentSrsProgress();
   recordWeaknessResult(App.currentDeckId, w._id, false);
 
   setTimeout(() => {
@@ -314,7 +370,7 @@ function typingCheckAnswer() {
     playWrongSound();
     recordWeaknessResult(App.currentDeckId, w._id, false);
   }
-  SRS.saveProgress(App.currentDeckId, App.progress);
+  saveCurrentSrsProgress();
 
   setTimeout(() => {
     App.typingIndex++;
