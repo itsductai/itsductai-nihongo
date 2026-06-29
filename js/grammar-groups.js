@@ -40,8 +40,8 @@ function renderGrammarGroupsTab(tab) {
         </div>
         <div class="gg-group-items hidden" id="gg-items-${gi}">
           ${g.items.map((it) => `
-            <div class="gg-item">
-              <div class="gg-item-cautruc">${it.cautruc}</div>
+            <div class="gg-item ${it.bo_sung ? "is-bosung" : ""}">
+              <div class="gg-item-cautruc">${it.cautruc}${it.bo_sung ? ' <span class="gg-bosung-tag">＋ Claude bổ sung</span>' : ""}</div>
               <div class="gg-item-nghia">${it.nghia}</div>
               ${it.cau_truc_ngu_phap ? `<div class="gg-item-structure">${it.cau_truc_ngu_phap}</div>` : ""}
               ${it.vi_du ? `<div class="gg-item-vidu">${renderExampleSentences(it.vi_du)}</div>` : ""}
@@ -74,11 +74,10 @@ function renderGrammarGroupsTab(tab) {
         <div class="gg-family-members">
           ${fam.members.map((m) => `
             <div class="gg-member ${m.co_the_chinh_thuc ? "" : "is-refonly"}">
-              <div class="gg-member-cautruc">${m.cautruc}</div>
+              <div class="gg-member-cautruc">${m.cautruc}${m.bo_sung ? ' <span class="gg-bosung-tag">＋ Claude bổ sung</span>' : ""}</div>
               <div class="gg-member-nghia">${m.nghia_ngan}</div>
               <div class="gg-member-khacbiet">${m.khac_biet}</div>
               ${m.vi_du ? `<div class="gg-member-vidu">${renderExampleSentences(m.vi_du)}</div>` : ""}
-              ${!m.co_the_chinh_thuc ? `<div class="gg-member-tag">⚠ chỉ tham khảo — chưa có thẻ riêng</div>` : ""}
             </div>
           `).join("")}
         </div>
