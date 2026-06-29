@@ -1381,3 +1381,20 @@ mark.exam-note-mark {
   background: var(--accent); padding: 1px 7px; border-radius: 8px; vertical-align: middle; margin-left: 4px;
 }
 .gg-item.is-bosung, .gg-member.is-refonly { border-left: 3px solid var(--accent); background: var(--bg-1); }
+
+/* Khu vực "Ngữ pháp theo từng cấu trúc" trong trang Thống kê — có thể tới
+   200+ dòng (từng cấu trúc riêng, không gộp theo bộ), giới hạn chiều cao +
+   cuộn riêng để không kéo dài trang Thống kê quá mức. */
+.stats-grammar-items-wrap { max-height: 480px; overflow-y: auto; }
+
+/* ===== Modal "Học SRS gộp nhiều bộ ngữ pháp" ===== */
+.combo-srs-hint { font-size: 12.5px; color: var(--text-1); margin-bottom: 14px; line-height: 1.5; }
+.combo-srs-deck-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; max-height: 320px; overflow-y: auto; }
+.combo-srs-deck-item {
+  display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 8px;
+  background: var(--bg-2); cursor: pointer; font-size: 13px;
+}
+.combo-srs-deck-item:hover { background: var(--bg-1); }
+.combo-srs-deck-item input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
+.combo-srs-deck-item span:nth-child(2) { flex: 1; color: var(--text-0); font-weight: 600; }
+.combo-srs-deck-count { font-size: 11px; color: var(--text-2); }
