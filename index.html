@@ -375,6 +375,7 @@
     <section class="view hidden" id="view-grammargroups">
       <div class="view-head">
         <div class="weakness-title">📚 Nhóm ngữ pháp — học chọn lọc theo nghĩa &amp; phân biệt cấu trúc dễ nhầm</div>
+        <button class="ghost-btn" id="btnOpenComboSrs">🔀 Học SRS gộp nhiều bộ</button>
       </div>
       <div class="gg-tabs">
         <button class="gg-tab-btn is-active" data-tab="nhomnghia">Theo nhóm nghĩa</button>
@@ -382,6 +383,21 @@
       </div>
       <div id="grammarGroupsBody"></div>
     </section>
+
+    <!-- Modal chọn bộ ngữ pháp để học gộp SRS (Anki-style) -->
+    <div class="modal-overlay hidden" id="comboSrsModalOverlay">
+      <div class="modal-box">
+        <div class="modal-head">
+          <div class="modal-title">🔀 Học SRS gộp nhiều bộ ngữ pháp</div>
+          <button class="modal-close-btn" id="btnComboSrsClose">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="combo-srs-hint">Chọn 1 hoặc nhiều bộ muốn học CHUNG trong 1 phiên — tiến độ vẫn lưu riêng đúng theo từng bộ gốc như bình thường, chỉ gộp lại để học cùng lúc.</div>
+          <div id="comboSrsDeckList" class="combo-srs-deck-list"></div>
+          <button class="primary-btn" id="btnComboSrsStart">▶ Bắt đầu học</button>
+        </div>
+      </div>
+    </div>
 
     <!-- Modal Flashcard chọn lọc theo nhóm nghĩa -->
     <div class="modal-overlay hidden" id="ggFlashModalOverlay">
@@ -608,6 +624,19 @@
       </div>
 
       <div class="stats-section">
+        <div class="stats-section-title">📖 Ngữ pháp — theo từng cấu trúc <span class="stats-section-hint">(không gộp theo bộ — bấm cấu trúc để mở đúng bộ chứa nó)</span></div>
+        <div class="stats-donut-row" id="statsDonutRowGrammarItems"></div>
+        <div class="stats-overview-table-wrap stats-grammar-items-wrap">
+          <table class="stats-overview-table">
+            <thead>
+              <tr><th>Cấu trúc</th><th>Tiến độ</th><th>% đã thuộc</th></tr>
+            </thead>
+            <tbody id="statsOverviewBodyGrammarItems"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="stats-section">
         <div class="stats-section-title">📝 Đề thi <span class="stats-section-hint">(bấm tên đề để làm ngay)</span></div>
         <div id="statsExamEmpty" class="empty-state hidden">
           <div class="empty-icon">▤</div>
@@ -684,17 +713,17 @@
      load SAU CÙNG vì nó chạy code thực thi ngay (DOMContentLoaded) cần mọi hàm
      ở các module khác đã được định nghĩa xong. Xem mục cấu trúc file trong
      README.md để biết module nào phụ trách phần nào. -->
-<script src="js/core.js?v=3"></script>
+<script src="js/core.js?v=4"></script>
 <script src="js/scoring.js?v=1"></script>
-<script src="js/stats-weakness.js?v=4"></script>
+<script src="js/stats-weakness.js?v=5"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=5"></script>
-<script src="js/flashcard-edit.js?v=2"></script>
-<script src="js/table-srs-typing.js?v=1"></script>
-<script src="js/quiz-match.js?v=1"></script>
+<script src="js/loader-nav.js?v=6"></script>
+<script src="js/flashcard-edit.js?v=3"></script>
+<script src="js/table-srs-typing.js?v=2"></script>
+<script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=6"></script>
 <script src="js/choukai.js?v=4"></script>
-<script src="js/grammar-groups.js?v=1"></script>
-<script src="js/init.js?v=8"></script>
+<script src="js/grammar-groups.js?v=2"></script>
+<script src="js/init.js?v=9"></script>
 </body>
 </html>
