@@ -9,6 +9,9 @@ const App = {
   grammarGroupsData: null, // data/grammar-groups.json — nhóm nghĩa + họ dễ nhầm
   grammarGroupsTab: "nhomnghia",
   srsComboActive: false, // true khi đang học SRS gộp nhiều bộ ngữ pháp cùng lúc (xem startComboSrs())
+  choukaiDraftIndex: null, // đáp án đang chọn NHÁP (chưa xác nhận) của câu đề nghe hiện tại
+  choukaiFlagged: new Set(), // các câu đề nghe đã đánh dấu cờ để xem lại (key choukaiKeyFor)
+  choukaiUnsure: new Set(), // các câu đề nghe đã đánh dấu phân vân
   currentDeckId: null,
   currentDeckType: null, // "TUVUNG" | "NGUPHAP"
   currentWords: [],

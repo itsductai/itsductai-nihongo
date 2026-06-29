@@ -136,6 +136,8 @@ function startChoukai(testId) {
   App.choukaiStartTime = Date.now();
   App.choukaiCurrentAudioSrc = null;
   App.choukaiAnswering = false;
+  App.choukaiFlagged = new Set();
+  App.choukaiUnsure = new Set();
 
   document.getElementById("choukaiEmpty").classList.add("hidden");
   document.getElementById("choukaiResult").classList.add("hidden");
@@ -168,7 +170,9 @@ function renderChoukaiQuestion() {
   const test = item.test, mondai = item.mondai, q = item.q, sub = item.sub;
 
   App.choukaiAnswering = false; // mở khóa lựa chọn cho câu mới
+  App.choukaiDraftIndex = null; // chưa chọn nháp gì cho câu mới
   document.getElementById("choukaiReviewPanel").classList.add("hidden");
+  document.getElementById("btnChoukaiConfirm").disabled = true;
   document.getElementById("choukaiProgressText").textContent =
     "Câu " + (App.choukaiPos + 1) + "/" + App.choukaiQueue.length + " · Mondai " + mondai.number + " (" + mondai.name + ")";
   document.getElementById("choukaiMondaiInstruction").textContent = mondai.instruction;
@@ -218,6 +222,9 @@ function renderChoukaiQuestion() {
   const correctIndexForRender = sub ? sub.correctIndex : q.correctIndex;
   const key = choukaiKeyFor(mondai.number, q.qnum, item.pos.subIndex);
   const existingAnswer = App.choukaiAnswers[key];
+  document.getElementById("btnChoukaiConfirm").classList.toggle("hidden", !!existingAnswer);
+  document.getElementById("btnChoukaiFlag").classList.toggle("is-active", App.choukaiFlagged.has(key));
+  document.getElementById("btnChoukaiUnsure").classList.toggle("is-active", App.choukaiUnsure.has(key));
 
   const optWrap = document.getElementById("choukaiOptions");
   optWrap.innerHTML = "";
@@ -230,10 +237,10 @@ function renderChoukaiQuestion() {
       // cho trả lời lần 2 (tránh lặp lại lỗi cộng điểm 2 lần), chỉ hiển thị lại
       // trạng thái đã chọn.
       btn.classList.add("disabled");
-      if (idx === correctIndexForRender) btn.classList.add("correct");
+      if (idx === correctIndexForRender) btn.classList.add(getChoukaiCorrectColorClass(key));
       else if (idx === existingAnswer.chosenIndex) btn.classList.add("wrong");
     } else {
-      btn.addEventListener("click", function () { handleChoukaiAnswer(idx); });
+      btn.addEventListener("click", function () { selectChoukaiDraft(idx, btn); });
     }
     optWrap.appendChild(btn);
   });
@@ -263,6 +270,51 @@ function renderChoukaiQuestion() {
   applyNoteHighlights(optWrap, "choukai", App.currentChoukaiId, noteQKey);
 }
 
+// Chọn NHÁP — chỉ tô sáng lựa chọn, KHÔNG chấm/khóa lại như trước (giống cách
+// làm đề trắc nghiệm: chọn xong vẫn đổi ý được, phải bấm "Xác nhận" mới chốt).
+function selectChoukaiDraft(idx, btn) {
+  if (App.choukaiAnswering) return;
+  App.choukaiDraftIndex = idx;
+  document.querySelectorAll("#choukaiOptions .quiz-opt").forEach(function (b) { b.classList.remove("is-draft"); });
+  btn.classList.add("is-draft");
+  document.getElementById("btnChoukaiConfirm").disabled = false;
+}
+
+// Chốt đáp án đã chọn nháp — từ đây mới thật sự chạy logic chấm/khóa cũ.
+function confirmChoukaiAnswer() {
+  if (App.choukaiDraftIndex == null) return;
+  handleChoukaiAnswer(App.choukaiDraftIndex);
+}
+
+function toggleChoukaiFlag() {
+  const item = getChoukaiCurrentItem();
+  if (!item) return;
+  const key = choukaiKeyFor(item.mondai.number, item.q.qnum, item.pos.subIndex);
+  if (App.choukaiFlagged.has(key)) App.choukaiFlagged.delete(key);
+  else App.choukaiFlagged.add(key);
+  document.getElementById("btnChoukaiFlag").classList.toggle("is-active", App.choukaiFlagged.has(key));
+}
+
+function toggleChoukaiUnsure() {
+  const item = getChoukaiCurrentItem();
+  if (!item) return;
+  const key = choukaiKeyFor(item.mondai.number, item.q.qnum, item.pos.subIndex);
+  if (App.choukaiUnsure.has(key)) App.choukaiUnsure.delete(key);
+  else App.choukaiUnsure.add(key);
+  document.getElementById("btnChoukaiUnsure").classList.toggle("is-active", App.choukaiUnsure.has(key));
+}
+
+// Trả về đúng class màu cho 1 đáp án ĐÚNG dựa theo có đánh dấu 🚩lụi/❓phân vân
+// hay không khi làm câu đó — "đúng nhưng đã đánh dấu lụi/phân vân" thì tô màu
+// CẢNH BÁO khác (không phải xanh chắc chắn như bình thường) để biết mà xem lại
+// vì sao đúng, tránh ảo tưởng là mình NẮM CHẮC kiến thức đó.
+// Câu SAI luôn giữ màu đỏ bình thường dù có đánh dấu gì hay không.
+function getChoukaiCorrectColorClass(key) {
+  if (App.choukaiFlagged.has(key)) return "is-correct-lucky";   // 🚩 lụi mà vẫn đúng -> cam/vàng cảnh báo
+  if (App.choukaiUnsure.has(key)) return "is-correct-unsure";   // ❓ phân vân mà đúng -> đỏ cam nhẹ hơn lụi
+  return "correct";
+}
+
 function handleChoukaiAnswer(chosenIndex) {
   if (App.choukaiAnswering) return; // chặn bấm thêm lần nữa sau khi đã trả lời câu này
   const item = getChoukaiCurrentItem();
@@ -282,7 +334,7 @@ function handleChoukaiAnswer(chosenIndex) {
   // điểm "câu đúng" bị đẩy lên gần bằng tổng số câu đã làm. Đây là lỗi đã sửa.
   document.querySelectorAll("#choukaiOptions .quiz-opt").forEach(function (b, idx) {
     b.classList.add("disabled");
-    if (idx === correctIndex) b.classList.add("correct");
+    if (idx === correctIndex) b.classList.add(getChoukaiCorrectColorClass(key));
     else if (idx === chosenIndex) b.classList.add("wrong");
   });
 
@@ -556,8 +608,10 @@ function renderChoukaiResultGrid() {
     const q = mondai.questions[pos.qIndex];
     const key = choukaiKeyFor(mondai.number, q.qnum, pos.subIndex);
     const ans = App.choukaiAnswers[key];
-    const stateClass = !ans ? "is-not-done" : (ans.correct ? "is-correct" : "is-wrong");
-    return '<button class="exam-result-dot ' + stateClass + '" data-flat="' + flatIdx + '">' + (flatIdx + 1) + '</button>';
+    const colorClass = ans && ans.correct ? getChoukaiCorrectColorClass(key) : "is-wrong";
+    const stateClass = !ans ? "is-not-done" : (colorClass === "correct" ? "is-correct" : colorClass);
+    const tag = (App.choukaiFlagged.has(key) ? "🚩" : "") + (App.choukaiUnsure.has(key) ? "❓" : "");
+    return '<button class="exam-result-dot ' + stateClass + '" data-flat="' + flatIdx + '">' + (flatIdx + 1) + (tag ? '<span class="exam-result-dot-tag">' + tag + '</span>' : '') + '</button>';
   }).join("");
   grid.querySelectorAll(".exam-result-dot").forEach(function (dot) {
     dot.addEventListener("click", function () { openChoukaiDetailModal(parseInt(dot.dataset.flat, 10)); });

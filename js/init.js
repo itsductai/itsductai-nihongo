@@ -441,6 +441,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
   document.getElementById("btnChoukaiContinue").addEventListener("click", choukaiGoNext);
+  document.getElementById("btnChoukaiConfirm").addEventListener("click", confirmChoukaiAnswer);
+  document.getElementById("btnChoukaiFlag").addEventListener("click", toggleChoukaiFlag);
+  document.getElementById("btnChoukaiUnsure").addEventListener("click", toggleChoukaiUnsure);
   document.getElementById("btnChoukaiPlay").addEventListener("click", () => {
     const el = document.getElementById("choukaiAudioEl");
     if (el.src) { el.currentTime = 0; el.play().catch(() => {}); }

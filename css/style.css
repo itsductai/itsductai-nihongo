@@ -1398,3 +1398,19 @@ mark.exam-note-mark {
 .combo-srs-deck-item input[type="checkbox"] { width: 16px; height: 16px; cursor: pointer; }
 .combo-srs-deck-item span:nth-child(2) { flex: 1; color: var(--text-0); font-weight: 600; }
 .combo-srs-deck-count { font-size: 11px; color: var(--text-2); }
+
+/* ===== Chọn nháp + Cờ/Phân vân (đề nghe) ===== */
+.quiz-opt.is-draft { border-color: var(--accent); background: var(--accent-soft, rgba(74,144,226,0.15)); }
+.choukai-flag-btn, .choukai-unsure-btn { font-size: 14px; padding: 6px 10px; }
+.choukai-flag-btn.is-active { background: var(--warn); color: #fff; border-color: var(--warn); }
+.choukai-unsure-btn.is-active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.exam-result-dot-tag { font-size: 9px; margin-left: 1px; }
+
+/* ===== Màu cảnh báo khi ĐÚNG nhưng đã đánh dấu lụi/phân vân lúc làm (đề nghe) —
+   tránh ảo tưởng chắc kiến thức khi thực ra chỉ đoán mò/không tự tin. ===== */
+.quiz-opt.is-correct-lucky, .exam-result-dot.is-correct-lucky {
+  background: #d4a017; border-color: #d4a017; color: #fff; /* 🚩 lụi mà đúng -> vàng cam (cảnh báo nhẹ) */
+}
+.quiz-opt.is-correct-unsure, .exam-result-dot.is-correct-unsure {
+  background: #d2521e; border-color: #d2521e; color: #fff; /* ❓ phân vân mà đúng -> đỏ cam (cảnh báo mạnh hơn) */
+}

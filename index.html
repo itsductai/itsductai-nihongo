@@ -452,6 +452,8 @@
           <button class="icon-btn exam-nav-btn" id="btnChoukaiPrev">← Câu trước</button>
           <span class="exam-progress-text" id="choukaiProgressText">Câu 1/5 · Mondai 1</span>
           <button class="icon-btn exam-nav-btn" id="btnChoukaiNext">Câu sau →</button>
+          <button class="icon-btn choukai-flag-btn" id="btnChoukaiFlag" title="Đánh dấu để xem lại">🚩</button>
+          <button class="icon-btn choukai-unsure-btn" id="btnChoukaiUnsure" title="Đánh dấu phân vân">❓</button>
           <button class="ghost-btn exam-exit-early-btn hidden" id="btnChoukaiExitEarly">🚪 Thoát & xem kết quả</button>
         </div>
 
@@ -477,6 +479,9 @@
         <div class="choukai-prompt" id="choukaiPrompt"></div>
 
         <div class="quiz-options" id="choukaiOptions"></div>
+        <!-- Chọn NHÁP xong vẫn đổi ý được — bấm nút này mới thật sự chốt & chấm,
+             y như làm đề trắc nghiệm (không tự chuyển/chấm ngay lúc vừa chọn). -->
+        <button class="primary-btn" id="btnChoukaiConfirm" disabled>✓ Xác nhận đáp án</button>
 
         <!-- Panel hiện sau khi trả lời (chế độ chấm ngay) -->
         <div class="choukai-review-panel hidden" id="choukaiReviewPanel">
@@ -713,7 +718,7 @@
      load SAU CÙNG vì nó chạy code thực thi ngay (DOMContentLoaded) cần mọi hàm
      ở các module khác đã được định nghĩa xong. Xem mục cấu trúc file trong
      README.md để biết module nào phụ trách phần nào. -->
-<script src="js/core.js?v=4"></script>
+<script src="js/core.js?v=5"></script>
 <script src="js/scoring.js?v=1"></script>
 <script src="js/stats-weakness.js?v=5"></script>
 <script src="js/config-focus.js?v=1"></script>
@@ -722,8 +727,8 @@
 <script src="js/table-srs-typing.js?v=2"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=6"></script>
-<script src="js/choukai.js?v=4"></script>
+<script src="js/choukai.js?v=6"></script>
 <script src="js/grammar-groups.js?v=2"></script>
-<script src="js/init.js?v=9"></script>
+<script src="js/init.js?v=10"></script>
 </body>
 </html>
