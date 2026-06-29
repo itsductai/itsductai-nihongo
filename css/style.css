@@ -1372,3 +1372,12 @@ mark.exam-note-mark {
 .jlpt-mondai-frac { flex: 1; color: var(--text-1); }
 .jlpt-mondai-weight { color: var(--text-2); }
 .jlpt-score-disclaimer { font-size: 10.5px; color: var(--text-2); margin-top: 10px; font-style: italic; line-height: 1.4; }
+
+/* Nhãn "Claude bổ sung" — đánh dấu rõ những cấu trúc Claude tự thêm vào để lấp
+   khoảng trống dữ liệu (vốn chỉ tồn tại trong ghi chú so sánh của thẻ khác,
+   chưa có thẻ riêng đầy đủ) — KHÁC với thẻ gốc đã qua kiểm duyệt nội dung. */
+.gg-bosung-tag {
+  display: inline-block; font-size: 9.5px; font-weight: 700; color: #fff;
+  background: var(--accent); padding: 1px 7px; border-radius: 8px; vertical-align: middle; margin-left: 4px;
+}
+.gg-item.is-bosung, .gg-member.is-refonly { border-left: 3px solid var(--accent); background: var(--bg-1); }
