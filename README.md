@@ -570,7 +570,7 @@ Các file giáo trình Mimi (`mimi-n2-unit1`, `unit2`, `unit3-adj`, `unit4`, `un
 **⚠️ Trùng nội dung đã xử lý (không cần làm lại):** Unit 6 (phó từ/liên từ) đã rà soát kỹ — phần liên từ logic (だから/しかし/ところが...) trùng ~100% với `mimi-n2-tunoi-photu.json` nên KHÔNG đưa vào Unit 6, chỉ giữ phần phó từ mức độ/thời gian/trạng thái thực sự mới (59 từ).
 
 ### `dethi/` (8 file — đề thi trắc nghiệm chữ)
-4 đề tự soạn đầy đủ (51 câu, có giải thích + gạch chân kanji): `n2-2024-07`, `n2-2024-12`, `n2-2025-07`, `n2-2025-12`. 1 đề mẫu nhỏ (`mondai1-mau-2023-12`, 3 câu). `n2-2019-12`, `n2-2020-12`, `n2-2023-12` — 30/51 câu (chỉ Mondai 1-6, THIẾU Mondai 7-9: ghép câu ★, đoạn văn) — **đã có đủ `giai_thich` cho cả 30 câu** mỗi đề (đã rà soát kỹ, không phát hiện đáp án sai trong dữ liệu gốc).
+9 đề tự soạn đầy đủ 51 câu (Mondai 1-9, có giải thích chuẩn): `n2-2021-07`, `n2-2021-12`, `n2-2022-07`, `n2-2022-12`, `n2-2023-07`, `n2-2024-07`, `n2-2024-12`, `n2-2025-07`, `n2-2025-12`. 1 đề mẫu nhỏ (`mondai1-mau-2023-12`, 3 câu). `n2-2019-12`, `n2-2020-12`, `n2-2023-12` — 30/51 câu (chỉ Mondai 1-6, THIẾU Mondai 7-9: ghép câu ★, đoạn văn) — **đã có đủ `giai_thich` cho cả 30 câu** mỗi đề.
 
 ### `dethi-choukai/` (đề luyện nghe — MỚI, đang xây)
 - `choukai-01.json` — 31 câu, đầy đủ script+dịch+tip, audioMode `combined`. **CHƯA có** `startSec`/`lineTimestamps`.
