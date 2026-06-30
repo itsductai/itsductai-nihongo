@@ -264,7 +264,16 @@ function recordExamAttempt(examId) {
     // ở các nơi khác trong file này, nên tra thẳng q.options[chosenIdx] luôn ra
     // đúng nội dung đã chọn, không bị lệch dù đáp án có đảo thứ tự hiển thị.
     const chosenText = (firstAttempt && exam) ? exam.questions[i].options[firstAttempt.chosenIdx] : null;
-    results.push({ correct: !!h.firstTryCorrect, chosenText: chosenText });
+    // Lưu LUÔN cờ/phân vân/đáp án thứ 2 đang phân vân vào ĐÂY — dùng chung object
+    // n2vocab_exam_attempts đã có cơ chế Export/Import sẵn (mục 12), không cần
+    // sửa thêm export/import. Trước đây 3 thứ này chỉ tồn tại tạm trong session
+    // (App.examFlagged/Unsure là Set, mất ngay khi đổi trang/tắt app).
+    const secondGuessText = (exam && h.secondGuessIdx != null) ? exam.questions[i].options[h.secondGuessIdx] : null;
+    results.push({
+      correct: !!h.firstTryCorrect, chosenText: chosenText,
+      flagged: App.examFlagged.has(i), unsure: App.examUnsure.has(i),
+      secondGuessText: secondGuessText,
+    });
   }
   const score = results.filter((r) => isResultCorrect(r)).length;
 
@@ -391,7 +400,10 @@ function recordChoukaiAttempt(testId) {
     const ans = App.choukaiAnswers[col.key];
     if (!ans) { results[col.key] = null; return; }
     const opts = optsByKey[col.key];
-    results[col.key] = { correct: !!ans.correct, chosenText: opts ? opts[ans.chosenIndex] : null };
+    results[col.key] = {
+      correct: !!ans.correct, chosenText: opts ? opts[ans.chosenIndex] : null,
+      flagged: App.choukaiFlagged.has(col.key), unsure: App.choukaiUnsure.has(col.key),
+    };
   });
   const score = Object.values(results).filter((r) => isResultCorrect(r)).length;
   const total = columns.length;
@@ -925,14 +937,20 @@ function renderAttemptsGrid(title, columns, attempts, getCorrectText, onCellClic
       }
       const correct = isResultCorrect(r);
       const chosenText = getResultChosenText(r);
+      // Tag 🚩/❓/🤔 đọc từ dữ liệu đã LƯU VĨNH VIỄN của lần làm này (không phải
+      // App.examFlagged/Unsure hiện tại — vốn chỉ tồn tại tạm trong session đang
+      // làm) — nhờ vậy xem lại được CẢ CÁC LẦN LÀM TRƯỚC, và đúng dữ liệu sau
+      // khi Nhập file tiến độ từ máy khác.
+      const tag = (r.flagged ? "🚩" : "") + (r.unsure ? "❓" : "") + (r.secondGuessText && !correct ? "🤔" : "");
+      const tagHtml = tag ? `<span class="attempts-grid-dot-tag">${tag}</span>` : "";
       if (correct) {
-        const tip = "✓ Đúng" + (chosenText ? " — đã chọn: " + chosenText : "") + " (bấm để xem chi tiết)";
-        return `<td class="attempts-grid-cell"><span class="attempts-grid-dot is-correct" data-qkey="${escAttrText(c.key)}" title="${escAttrText(tip)}"></span></td>`;
+        const tip = "✓ Đúng" + (chosenText ? " — đã chọn: " + chosenText : "") + (r.flagged ? " | 🚩 đã đánh dấu lụi" : "") + (r.unsure ? " | ❓ đã phân vân" : "") + " (bấm để xem chi tiết)";
+        return `<td class="attempts-grid-cell"><span class="attempts-grid-dot is-correct" data-qkey="${escAttrText(c.key)}" title="${escAttrText(tip)}">${tagHtml}</span></td>`;
       }
       const correctText = getCorrectText(c.key) || "(?)";
       const shortText = correctText.length > 9 ? correctText.slice(0, 8) + "…" : correctText;
-      const tip = "✕ Sai — đáp án ĐÚNG: " + correctText + (chosenText ? " | bạn đã chọn: " + chosenText : "") + " (bấm để xem chi tiết)";
-      return `<td class="attempts-grid-cell"><span class="attempts-grid-dot is-wrong" data-qkey="${escAttrText(c.key)}" title="${escAttrText(tip)}">${escAttrText(shortText)}</span></td>`;
+      const tip = "✕ Sai — đáp án ĐÚNG: " + correctText + (chosenText ? " | bạn đã chọn: " + chosenText : "") + (r.secondGuessText ? " | 🤔 đã phân vân với: " + r.secondGuessText : "") + " (bấm để xem chi tiết)";
+      return `<td class="attempts-grid-cell"><span class="attempts-grid-dot is-wrong" data-qkey="${escAttrText(c.key)}" title="${escAttrText(tip)}">${escAttrText(shortText)}${tagHtml}</span></td>`;
     }).join("");
     return `
       <tr>
