@@ -9,7 +9,13 @@
         "したしく",
         "きびしく"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「やさしく」(dịu dàng) không phải cách đọc của 「等しく」.",
+        "Đúng. 「等しく」đọc là 「ひとしく」, nghĩa là bình đẳng/như nhau — 'đối xử như nhau với tất cả mọi người'.",
+        "Sai. 「したしく」(gần gũi/thân thiết) không phải cách đọc của 「等しく」.",
+        "Sai. 「きびしく」(nghiêm khắc) không phải cách đọc của 「等しく」."
+      ]
     },
     {
       "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n石川さんのけがは、\"軽傷\"だったらしい。",
@@ -19,7 +25,13 @@
         "けしょう",
         "けそう"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「軽傷」đọc là 「けいしょう」, nghĩa là vết thương nhẹ.",
+        "Sai. Không có cách đọc 「けいしょ」cho từ này.",
+        "Sai. 「けしょう」là cách đọc của từ khác (化粧 - trang điểm), không phải 軽傷.",
+        "Sai. Không có cách đọc 「けそう」cho từ này."
+      ]
     },
     {
       "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n費用はみんなで\"負担\"した。",
@@ -29,7 +41,13 @@
         "ぶんたん",
         "ふたん"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. Không có cách đọc 「ぶんてん」cho từ này.",
+        "Sai. Không có cách đọc 「ふてん」cho từ này.",
+        "Sai. 「ぶんたん」không đúng — chữ 負 đọc 「ふ」chứ không phải 「ぶん」trong từ này.",
+        "Đúng. 「負担」đọc là 「ふたん」, nghĩa là gánh chịu (chi phí, trách nhiệm)."
+      ]
     },
     {
       "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n湖に\"映った\"夕日がきれいだ。",
@@ -39,7 +57,13 @@
         "てった",
         "うつった"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「あたった」(trúng/chiếu vào) không phải cách đọc của 「映った」.",
+        "Sai. 「ひかった」(lóe sáng) không phải cách đọc của 「映った」.",
+        "Sai. Không có cách đọc 「てった」cho từ này.",
+        "Đúng. 「映った」đọc là 「うつった」, nghĩa là phản chiếu (ánh chiều phản chiếu trên hồ)."
+      ]
     },
     {
       "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n9月の\"下旬\"に旅行に行く予定です。",
@@ -49,7 +73,13 @@
         "げじゅん",
         "かしゅん"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. Không có cách đọc 「げしゅん」cho từ này.",
+        "Sai. Không có cách đọc 「かじゅん」cho từ này.",
+        "Đúng. 「下旬」đọc là 「げじゅん」, nghĩa là hạ tuần (10 ngày cuối tháng).",
+        "Sai. Không có cách đọc 「かしゅん」cho từ này."
+      ]
     },
     {
       "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4からひとつ選びなさい。\nその行為は交通ルールに\"いはん\"します。",
@@ -59,7 +89,13 @@
         "違判",
         "違反"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. Không có từ 「偉判」trong tiếng Nhật chuẩn.",
+        "Sai. Không có từ 「偉反」trong tiếng Nhật chuẩn.",
+        "Sai. Không có từ 「違判」trong tiếng Nhật chuẩn.",
+        "Đúng. 「違反」đọc là 「いはん」, nghĩa là vi phạm (luật lệ)."
+      ]
     },
     {
       "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4からひとつ選びなさい。\n\"いさましい\"声が聞こえてきた。",
@@ -69,7 +105,13 @@
         "騒ましい",
         "勢ましい"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「戦ましい」không phải cách viết kanji đúng của 「いさましい」.",
+        "Đúng. 「勇ましい」đọc là 「いさましい」, nghĩa là dũng cảm, hùng dũng.",
+        "Sai. 「騒ましい」không phải cách viết kanji đúng của 「いさましい」.",
+        "Sai. 「勢ましい」không phải cách viết kanji đúng của 「いさましい」."
+      ]
     },
     {
       "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4からひとつ選びなさい。\nその店には\"ようきな\"音楽が流れていた。",
@@ -79,7 +121,13 @@
         "陽気",
         "陽起"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「揚起」không phải cách viết đúng (và không tồn tại với nghĩa này).",
+        "Sai. 「揚気」không phải cách viết đúng.",
+        "Đúng. 「陽気」đọc là 「ようき」, nghĩa là vui vẻ, sôi động — 'nhạc vui vẻ vang lên trong tiệm'.",
+        "Sai. 「陽起」không phải cách viết đúng."
+      ]
     },
     {
       "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4からひとつ選びなさい。\n楽しみにしていたドラマを\"みのがして\"しまった。",
@@ -89,7 +137,13 @@
         "見欠して",
         "見去して"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「見逃して」đọc là 「みのがして」, nghĩa là bỏ lỡ, xem hụt (bộ phim đang mong chờ).",
+        "Sai. 「見延して」không tồn tại trong tiếng Nhật.",
+        "Sai. 「見欠して」không tồn tại trong tiếng Nhật.",
+        "Sai. 「見去して」không tồn tại trong tiếng Nhật."
+      ]
     },
     {
       "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4からひとつ選びなさい。\n来月から、道路を\"かくちょう\"するための工事が始まる。",
@@ -99,7 +153,13 @@
         "拡長",
         "広長"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「拡張」đọc là 「かくちょう」, nghĩa là mở rộng (đường, hệ thống...).",
+        "Sai. 「広張」không phải từ đúng, phải dùng chữ 拡 không phải 広.",
+        "Sai. 「拡長」không phải từ đúng — phải là 拡張 (mở rộng) không phải 拡長.",
+        "Sai. 「広長」không tồn tại với nghĩa này."
+      ]
     },
     {
       "de_bai": "問題3 ( )に入れるのに最もよいものを、1・2・3・4からひとつ選びなさい。\nこの建物は( )町長の時代に建てられた。",
@@ -109,7 +169,13 @@
         "前",
         "昔"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「先町長」không phải cách nói tự nhiên để chỉ thị trưởng nhiệm kỳ trước.",
+        "Sai. 「古町長」không phải cách nói tự nhiên — 古 (cũ) không ghép với chức danh người theo cách này.",
+        "Đúng. 「前町長」nghĩa là 'thị trưởng tiền nhiệm' — tòa nhà được xây thời thị trưởng trước.",
+        "Sai. 「昔町長」không phải cách nói tự nhiên trong tiếng Nhật."
+      ]
     },
     {
       "de_bai": "問題3 ( )に入れるのに最もよいものを、1・2・3・4からひとつ選びなさい。\n池田さんには何度も助けてもらっているので、今回は頼み( )。",
@@ -119,7 +185,13 @@
         "きつい",
         "よわい"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「頼みづらい」nghĩa là 'khó mà nhờ vả' — vì đã được giúp nhiều lần nên lần này ngại nhờ tiếp.",
+        "Sai. 「頼みわるい」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Sai. 「頼みきつい」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Sai. 「頼みよわい」không phải cách ghép tự nhiên trong tiếng Nhật."
+      ]
     },
     {
       "de_bai": "問題3 ( )に入れるのに最もよいものを、1・2・3・4からひとつ選びなさい。\nこの歌の歌詞は政治( )が強いように感じられる。",
@@ -129,7 +201,13 @@
         "味",
         "色"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「政治香」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Sai. 「政治風」không phải cách ghép tự nhiên (風 thường ghép kiểu khác, vd 洋風).",
+        "Sai. 「政治味」không phải cách ghép tự nhiên.",
+        "Đúng. 「政治色」nghĩa là 'màu sắc/sắc thái chính trị' — lời bài hát này có sắc thái chính trị rõ."
+      ]
     },
     {
       "de_bai": "問題4 ( )に入れるのに最もよいものを、1・2・3・4からひとつ選びなさい。\n今日は残業で疲れていて夕食を作るのが( )だから、外で食べて帰ろうと思う。",
@@ -139,7 +217,13 @@
         "過剰",
         "無力"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「余計」(thừa thãi, không cần thiết) không hợp ngữ cảnh 'mệt nên không muốn nấu ăn'.",
+        "Đúng. 「面倒」nghĩa là 'phiền phức, rắc rối' — vì mệt nên thấy nấu ăn phiền phức, đi ăn ngoài.",
+        "Sai. 「過剰」(quá mức) không hợp ngữ cảnh này.",
+        "Sai. 「無力」(vô lực, không có sức) không hợp ngữ cảnh này."
+      ]
     },
     {
       "de_bai": "問題4 ( )に入れるのに最もよいものを、1・2・3・4からひとつ選びなさい。\nこの大のロボットは動きが自然で、まるで( )の犬のようだ。",
@@ -149,7 +233,13 @@
         "事業",
         "正式"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「本物」nghĩa là 'đồ thật/con thật' — robot chuyển động tự nhiên như chó thật.",
+        "Sai. 「現状」(hiện trạng) không hợp ngữ cảnh so sánh với chó thật.",
+        "Sai. 「事業」(sự nghiệp, công việc kinh doanh) không hợp ngữ cảnh này.",
+        "Sai. 「正式」(chính thức) không hợp ngữ cảnh này."
+      ]
     },
     {
       "de_bai": "問題4 ( )に入れるのに最もよいものを、1・2・3・4からひとつ選びなさい。\n山下先輩は私の( )で、いつか山下先輩のようになりたいと思っている。",
@@ -159,7 +249,13 @@
         "願い",
         "夢"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「憧れ」nghĩa là 'người mình ngưỡng mộ, hình mẫu lý tưởng' — muốn trở thành như tiền bối một ngày nào đó.",
+        "Sai. 「望み」(mong muốn, hy vọng) không hợp ngữ cảnh chỉ một NGƯỜI làm hình mẫu.",
+        "Sai. 「願い」(nguyện vọng) không hợp ngữ cảnh này.",
+        "Sai. 「夢」(ước mơ) không hợp ngữ cảnh chỉ một người làm hình mẫu theo cách này."
+      ]
     },
     {
       "de_bai": "問題4 ( )に入れるのに最もよいものを、1・2・3・4からひとつ選びなさい。\n今日会社で京都支社から東京本社への( )を命じられ、今月末に東京へ引っ越すことになった。",
@@ -169,7 +265,13 @@
         "転勤",
         "移住"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「移行」(chuyển đổi, quá trình chuyển tiếp - vd hệ thống) không hợp ngữ cảnh chuyển công tác cá nhân.",
+        "Sai. 「転職」nghĩa là 'đổi việc/đổi công ty', không phải chuyển trong CÙNG công ty như câu này.",
+        "Đúng. 「転勤」nghĩa là 'điều chuyển công tác' (trong cùng công ty) — được lệnh điều chuyển từ chi nhánh Kyoto về trụ sở Tokyo.",
+        "Sai. 「移住」(di trú, định cư) thường dùng cho việc chuyển nơi sống dài hạn, không hợp ngữ cảnh công việc này."
+      ]
     },
     {
       "de_bai": "問題4 ( )に入れるのに最もよいものを、1・2・3・4からひとつ選びなさい。\nこの辺りの農家は、無農薬で野菜を( )しています。",
@@ -179,7 +281,13 @@
         "養成",
         "製造"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「制作」(chế tác, thường dùng cho sản phẩm nghệ thuật/phim) không hợp ngữ cảnh trồng rau.",
+        "Đúng. 「栽培」nghĩa là 'trồng trọt, canh tác' — trồng rau không thuốc trừ sâu.",
+        "Sai. 「養成」(đào tạo, bồi dưỡng - dùng cho người) không hợp ngữ cảnh trồng rau.",
+        "Sai. 「製造」(sản xuất, chế tạo - dùng cho hàng hóa công nghiệp) không hợp ngữ cảnh trồng rau."
+      ]
     },
     {
       "de_bai": "問題4 ( )に入れるのに最もよいものを、1・2・3・4からひとつ選びなさい。\n彼は私の意見に対して何も言わなかったが、( )ことで同意を示してくれた。",
@@ -189,7 +297,13 @@
         "かがむ",
         "うなずく"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「ふりむく」(quay đầu lại nhìn) không thể hiện ý đồng ý.",
+        "Sai. 「にらむ」(nhìn trừng trừng) ngược nghĩa với việc thể hiện sự đồng ý.",
+        "Sai. 「かがむ」(cúi/khom người) không liên quan đến việc thể hiện đồng ý.",
+        "Đúng. 「うなずく」nghĩa là 'gật đầu' — gật đầu để thể hiện sự đồng ý."
+      ]
     },
     {
       "de_bai": "問題4 ( )に入れるのに最もよいものを、1・2・3・4からひとつ選びなさい。\n机の上がいろいろな物で( )しているから、早くきれいに片付けよう。",
@@ -199,7 +313,13 @@
         "ごちゃごちゃ",
         "きょろきょろ"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「きちんと」(gọn gàng, ngăn nắp) ngược nghĩa với ngữ cảnh cần dọn dẹp.",
+        "Sai. 「ぼんやり」(mơ hồ, lờ mờ) không hợp ngữ cảnh đồ vật bừa trên bàn.",
+        "Đúng. 「ごちゃごちゃ」nghĩa là 'lộn xộn, bừa bộn' — bàn bừa nhiều đồ nên cần dọn dẹp gấp.",
+        "Sai. 「きょろきょろ」(nhìn ngó xung quanh, dùng cho ánh mắt/người) không hợp ngữ cảnh đồ vật trên bàn."
+      ]
     },
     {
       "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\nこの仕事はとても\"ハードだ\"。",
@@ -209,7 +329,13 @@
         "大変だ",
         "新しい"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「楽しい」(vui vẻ) ngược nghĩa với ハード (vất vả).",
+        "Sai. 「簡単だ」(đơn giản) ngược nghĩa với ハード.",
+        "Đúng. 「ハードだ」nghĩa là 'vất vả, nặng nhọc' — gần nghĩa với 「大変だ」(vất vả, khó khăn).",
+        "Sai. 「新しい」(mới) không liên quan nghĩa của ハード."
+      ]
     },
     {
       "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\nその話を聞いて\"動揺した\"。",
@@ -219,7 +345,13 @@
         "不満に思った",
         "面白いと思った"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「うれしくなった」(trở nên vui) ngược nghĩa với 動揺した.",
+        "Đúng. 「動揺した」nghĩa là 'dao động, hoang mang' — gần nghĩa với 「不安になった」(trở nên lo lắng).",
+        "Sai. 「不満に思った」(cảm thấy bất mãn) không sát nghĩa bằng 不安になった.",
+        "Sai. 「面白いと思った」(thấy thú vị) không liên quan nghĩa của 動揺した."
+      ]
     },
     {
       "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n早く\"引き返した\"ほうがいい。",
@@ -229,7 +361,13 @@
         "戻った",
         "答えた"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「払った」(trả tiền) không liên quan nghĩa của 引き返した.",
+        "Sai. 「直した」(sửa lại) không liên quan nghĩa của 引き返した.",
+        "Đúng. 「引き返した」nghĩa là 'quay trở lại' — gần nghĩa với 「戻った」(trở về/quay lại).",
+        "Sai. 「答えた」(trả lời) không liên quan nghĩa của 引き返した."
+      ]
     },
     {
       "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n機能を\"一層\"強化したい。",
@@ -239,7 +377,13 @@
         "できるだけ",
         "もっと"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「すぐに」(ngay lập tức) không sát nghĩa của 一層.",
+        "Sai. 「少し」(một chút) ngược nghĩa với 一層 (vốn nhấn mạnh MỨC ĐỘ TĂNG THÊM).",
+        "Sai. 「できるだけ」(càng nhiều càng tốt/hết mức có thể) không sát nghĩa của 一層.",
+        "Đúng. 「一層」nghĩa là 'hơn nữa, càng thêm' — gần nghĩa với 「もっと」(thêm/hơn nữa)."
+      ]
     },
     {
       "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n急にひどい頭痛がしてきたので、\"かかりつけの\"病院に行った。",
@@ -249,7 +393,13 @@
         "近くの",
         "専門の"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「かかりつけの」nghĩa là 'thường khám/quen thuộc' — gần nghĩa với 「いつも行く」(nơi hay đến khám).",
+        "Sai. 「休日も開いている」(mở cả ngày nghỉ) không phải nghĩa của かかりつけ.",
+        "Sai. 「近くの」(gần) không phải nghĩa chính xác — かかりつけ nhấn vào việc QUEN THUỘC/HAY KHÁM chứ không phải khoảng cách.",
+        "Sai. 「専門の」(chuyên khoa) không phải nghĩa của かかりつけ."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「特殊」",
@@ -259,7 +409,13 @@
         "母は誕生日など、特殊な日にはとても豪華な料理を作ってくれる。",
         "バスを運転するためには特殊な免許が必要だ。"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「特殊な寒さ」không phải cách dùng tự nhiên — diễn tả thời tiết lạ thường nên dùng 「異常な」(bất thường) thay vì 特殊.",
+        "Sai. 「特殊な喜び」không phải cách dùng tự nhiên cho cảm xúc — nên dùng 「特別な」(đặc biệt) thay vì 特殊.",
+        "Sai. 「特殊な日」không phải cách dùng tự nhiên cho 'ngày đặc biệt' — nên dùng 「特別な」thay vì 特殊.",
+        "Đúng. 「特殊な免許」là cách dùng chuẩn — 特殊 nghĩa là 'đặc thù, đặc biệt về tính chất/chuyên môn', rất hợp khi nói về loại giấy phép đặc biệt (vd lái xe buýt)."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「素材」",
@@ -269,7 +425,13 @@
         "いろいろな情報を集めて、判断の素材にする。",
         "故障の素材になったものを探さなくてはいけない。"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「石油を素材に」ít tự nhiên — với nguyên liệu công nghiệp thường dùng 「原料」hơn là 素材.",
+        "Đúng. 「素材の味を生かした料理」là cụm rất tự nhiên và phổ biến — 素材 nghĩa là 'nguyên liệu (thực phẩm)', món ăn giữ được vị nguyên liệu gốc.",
+        "Sai. 「判断の素材にする」không tự nhiên — nên dùng 「材料」hoặc 「根拠」thay vì 素材 trong ngữ cảnh trừu tượng này.",
+        "Sai. 「故障の素材」không có nghĩa — 素材 không dùng để chỉ nguyên nhân hỏng hóc."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「しみる」",
@@ -279,7 +441,13 @@
         "食べすぎで、ベルトがおなかにしみて苦しい。",
         "料理をしているときに包丁の先が指にしみて、少し血が出た。"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「頭にしみて」không hợp — しみる dùng cho cảm giác CAY/XÓT do chất lỏng/khí thấm vào, không hợp với việc bóng đập vào đầu.",
+        "Đúng. 「目にしみて」là cách dùng chuẩn — しみる nghĩa là 'cay, xót' (khói làm cay mắt, chảy nước mắt).",
+        "Sai. 「おなかにしみて」không hợp — bụng bị thắt lưng bó chặt thì dùng từ khác (vd きつい), không phải しみる.",
+        "Sai. 「指にしみて」không hợp với việc dao cắt vào tay — nên dùng động từ khác (vd 切れる) chứ không phải しみる."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「充満」",
@@ -289,7 +457,13 @@
         "部屋に食べ物の強いにおいが充満していたので、窓を開けた。",
         "夢が充満している子どもたちが大好きで、小学校の教師になった。"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「本が充満している」không tự nhiên — sách nhiều thì dùng 「ぎっしり」hoặc 「いっぱい」, không dùng 充満 (vốn dùng cho khí/mùi lan tỏa khắp không gian).",
+        "Sai. 「観客が充満している」không tự nhiên với người — nên dùng 「いっぱい」hoặc 「満員」.",
+        "Đúng. 「においが充満していた」là cách dùng chuẩn — 充満 nghĩa là 'lan tỏa đầy khắp' (mùi, khí, khói) trong không gian kín.",
+        "Sai. 「夢が充満している子ども」không tự nhiên — 充満 không dùng cho trạng thái trừu tượng như 'tràn đầy ước mơ'."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「めくる」",
@@ -299,7 +473,13 @@
         "封筒に書類を入れ、開かないように丁寧にのりでめくっておいた。",
         "そのドアは押すのではなくて手前にめくらないと開きませんよ。"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「ページをめくる」là cách dùng chuẩn — めくる nghĩa là 'lật, giở' (trang sách).",
+        "Sai. 「タオルをめくって」không hợp — lau người bằng khăn ướt thì dùng từ khác (vd 絞る/しぼる để vắt khăn), không phải めくる.",
+        "Sai. 「のりでめくっておいた」không hợp — めくる là LẬT/GIỞ RA, ngược với hành động DÁN KÍN bằng keo.",
+        "Sai. 「手前にめくらないと」không hợp — mở cửa thì dùng 引く (kéo)/押す (đẩy), không dùng めくる (vốn dùng cho vật phẳng như trang giấy)."
+      ]
     }
   ],
   "mondai_breakdown": [

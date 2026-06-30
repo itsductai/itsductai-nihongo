@@ -9,7 +9,13 @@
         "かた",
         "ひざ"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「こし」(eo/lưng) không phải cách đọc của 「腕」.",
+        "Đúng. 「腕」đọc là 「うで」, nghĩa là cánh tay — bị đau tay từ hôm qua.",
+        "Sai. 「かた」(bả vai) không phải cách đọc của 「腕」.",
+        "Sai. 「ひざ」(đầu gối) không phải cách đọc của 「腕」."
+      ]
     },
     {
       "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n青木さんは\"善良\"な人です。",
@@ -19,7 +25,13 @@
         "ぜんりょう",
         "せんりゅう"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. Không có cách đọc 「せんりょう」cho từ này.",
+        "Sai. Không có cách đọc 「ぜんりゅう」cho từ này.",
+        "Đúng. 「善良」đọc là 「ぜんりょう」, nghĩa là hiền lương, tốt bụng.",
+        "Sai. Không có cách đọc 「せんりゅう」cho từ này (せんりゅう là từ khác — 川柳, thơ ngắn)."
+      ]
     },
     {
       "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n丸山さんは意外に\"幼い\"ところがある。",
@@ -29,7 +41,13 @@
         "かしこい",
         "しつこい"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「幼い」đọc là 「おさない」, nghĩa là ngây thơ, trẻ con (về tính cách) — có vẻ ngây thơ một cách bất ngờ.",
+        "Sai. 「するどい」(sắc sảo) không phải cách đọc của 「幼い」.",
+        "Sai. 「かしこい」(thông minh, khôn khéo) không phải cách đọc của 「幼い」.",
+        "Sai. 「しつこい」(dai dẳng, lằng nhằng) không phải cách đọc của 「幼い」."
+      ]
     },
     {
       "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n古いデータを\"削除\"した。",
@@ -39,7 +57,13 @@
         "そくじょ",
         "さくじょ"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. Không có cách đọc 「そくよ」cho từ này.",
+        "Sai. Không có cách đọc 「さくよ」cho từ này.",
+        "Sai. Không có cách đọc 「そくじょ」cho từ này.",
+        "Đúng. 「削除」đọc là 「さくじょ」, nghĩa là xóa bỏ — đã xóa dữ liệu cũ."
+      ]
     },
     {
       "de_bai": "問題1 の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n私たちは働く機会の\"平等\"を求めています。",
@@ -49,7 +73,13 @@
         "びょうど",
         "へいどう"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. Không có cách đọc 「へいど」cho từ này.",
+        "Đúng. 「平等」đọc là 「びょうどう」, nghĩa là bình đẳng — mong muốn sự bình đẳng về cơ hội làm việc.",
+        "Sai. Không có cách đọc 「びょうど」cho từ này.",
+        "Sai. Không có cách đọc 「へいどう」cho từ này."
+      ]
     },
     {
       "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\nお金の\"かんり\"は、きちんとしてください。",
@@ -59,7 +89,13 @@
         "管理",
         "官利"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「管利」không tồn tại trong tiếng Nhật.",
+        "Sai. 「官理」không tồn tại trong tiếng Nhật.",
+        "Đúng. 「管理」đọc là 「かんり」, nghĩa là quản lý — hãy quản lý tiền cho cẩn thận.",
+        "Sai. 「官利」không tồn tại trong tiếng Nhật."
+      ]
     },
     {
       "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\n今日から2週間の\"けんしゅう\"を行います。",
@@ -69,7 +105,13 @@
         "研修",
         "演修"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「演習」(diễn tập, đọc là えんしゅう) gần giống nhưng SAI cách đọc và nghĩa so với けんしゅう được yêu cầu.",
+        "Sai. 「研習」không phải từ chuẩn — phải dùng 研修 mới đúng.",
+        "Đúng. 「研修」đọc là 「けんしゅう」, nghĩa là tập huấn, đào tạo — tiến hành tập huấn 2 tuần từ hôm nay.",
+        "Sai. 「演修」không tồn tại trong tiếng Nhật."
+      ]
     },
     {
       "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\n社会は\"たえず\"変化している。",
@@ -79,7 +121,13 @@
         "停えず",
         "滞えず"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「完えず」không tồn tại trong tiếng Nhật.",
+        "Đúng. 「絶えず」đọc là 「たえず」, nghĩa là không ngừng, liên tục — xã hội không ngừng biến đổi.",
+        "Sai. 「停えず」không tồn tại trong tiếng Nhật.",
+        "Sai. 「滞えず」không tồn tại trong tiếng Nhật."
+      ]
     },
     {
       "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\n選挙で誰に\"とうひょう\"するかまだ決めていない。",
@@ -89,7 +137,13 @@
         "投標",
         "当標"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「投票」đọc là 「とうひょう」, nghĩa là bỏ phiếu, biểu quyết — chưa quyết định sẽ bỏ phiếu cho ai.",
+        "Sai. 「当票」không tồn tại trong tiếng Nhật.",
+        "Sai. 「投標」không tồn tại với nghĩa này trong tiếng Nhật.",
+        "Sai. 「当標」không tồn tại trong tiếng Nhật."
+      ]
     },
     {
       "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\n中島さんは何かを\"かかえて\"部屋に入ってきた。",
@@ -99,7 +153,13 @@
         "握えて",
         "抱えて"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「押えて」(đè/giữ) không phải cách viết kanji của 「かかえて」.",
+        "Sai. 「捕えて」(bắt giữ) không phải cách viết kanji của 「かかえて」.",
+        "Sai. 「握えて」không tồn tại trong tiếng Nhật (nắm thì viết là 握って).",
+        "Đúng. 「抱えて」đọc là 「かかえて」, nghĩa là ôm/mang theo (trong tay/người) — ai đó bước vào phòng đang ôm gì đó."
+      ]
     },
     {
       "de_bai": "問題3 ( )に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n彼は兄に対抗( )を持っているようだ。",
@@ -109,7 +169,13 @@
         "願",
         "熱"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「対抗心」nghĩa là 'tâm lý đối kháng, ganh đua' — có vẻ anh ấy có tâm lý ganh đua với anh trai.",
+        "Sai. 「対抗欲」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Sai. 「対抗願」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Sai. 「対抗熱」không phải cách ghép tự nhiên trong tiếng Nhật."
+      ]
     },
     {
       "de_bai": "問題3 ( )に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n引っ越しのための( )手続きをしなければならない。",
@@ -119,7 +185,13 @@
         "多",
         "諸"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「総手続き」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Sai. 「複手続き」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Sai. 「多手続き」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Đúng. 「諸手続き」nghĩa là 'các thủ tục (nhiều loại)' — phải làm các thủ tục cho việc chuyển nhà."
+      ]
     },
     {
       "de_bai": "問題3 ( )に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n買い物をしている二人( )にインタビューをしました。",
@@ -129,7 +201,13 @@
         "会い",
         "集まり"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「二人出かけ」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Đúng. 「二人連れ」nghĩa là 'một cặp/nhóm 2 người đi cùng nhau' — đã phỏng vấn một cặp đang đi mua sắm.",
+        "Sai. 「二人会い」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Sai. 「二人集まり」không phải cách ghép tự nhiên trong tiếng Nhật."
+      ]
     },
     {
       "de_bai": "問題4 ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\nこのアニメは、登場人物がとてもかわいいと、若者の間で( )になっている。",
@@ -139,7 +217,13 @@
         "題材",
         "話題"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「課題」(bài tập, vấn đề cần giải quyết) không hợp ngữ cảnh 'được nhiều người trẻ chú ý đến'.",
+        "Sai. 「題名」(tên tác phẩm, tựa đề) không hợp ngữ cảnh này.",
+        "Sai. 「題材」(đề tài, chất liệu sáng tác) không hợp ngữ cảnh 'trở thành chủ đề được nói đến'.",
+        "Đúng. 「話題」nghĩa là 'đề tài được nói đến, hot trend' — nhân vật dễ thương khiến anime này trở thành chủ đề hot trong giới trẻ."
+      ]
     },
     {
       "de_bai": "問題4 ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\nあのとき、友達に謝らなかったことをずっと( )している。",
@@ -149,7 +233,13 @@
         "我慢",
         "恐縮"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「同情」(thương cảm, đồng cảm) không hợp ngữ cảnh tự trách bản thân.",
+        "Đúng. 「後悔」nghĩa là 'hối hận' — vẫn luôn hối hận vì đã không xin lỗi bạn lúc đó.",
+        "Sai. 「我慢」(nhẫn nhịn, chịu đựng) không hợp ngữ cảnh này.",
+        "Sai. 「恐縮」(cảm thấy ngại/áy náy khi nhận ơn huệ) không hợp ngữ cảnh việc đã qua như thế này."
+      ]
     },
     {
       "de_bai": "問題4 ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n楽器の音量を確認するために、コンサートの前日に会場で( )をした。",
@@ -159,7 +249,13 @@
         "オリエンテーション",
         "リハーサル"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「チャージ」(nạp tiền/sạc) không hợp ngữ cảnh kiểm tra âm lượng trước buổi hòa nhạc.",
+        "Sai. 「アポイントメント」(cuộc hẹn) không hợp ngữ cảnh 'thực hiện việc gì đó để kiểm tra âm lượng'.",
+        "Sai. 「オリエンテーション」(buổi định hướng/giới thiệu) không hợp ngữ cảnh kiểm tra kỹ thuật âm thanh.",
+        "Đúng. 「リハーサル」nghĩa là 'diễn tập, tổng duyệt' — diễn tập tại hội trường để kiểm tra âm lượng nhạc cụ."
+      ]
     },
     {
       "de_bai": "問題4 ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\nこの魚は、いつでもこの辺りの海にいるわけではなく、( )の時期にしかいない。",
@@ -169,7 +265,13 @@
         "固定",
         "限定"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「特定の時期」nghĩa là 'thời điểm cụ thể/nhất định' — loài cá này không phải lúc nào cũng có ở vùng biển này, chỉ có vào thời điểm nhất định.",
+        "Sai. 「指定の時期」(thời điểm được CHỈ ĐỊNH bởi ai đó) không hợp ngữ cảnh tự nhiên này.",
+        "Sai. 「固定の時期」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Sai. 「限定の時期」không phải cách ghép tự nhiên — 限定 thường ghép với danh từ chỉ SỐ LƯỢNG/PHẠM VI, không phải 'thời điểm' theo cách này."
+      ]
     },
     {
       "de_bai": "問題4 ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\nこの季節は乾燥していて、肌が( )になる。",
@@ -179,7 +281,13 @@
         "かさかさ",
         "べたべた"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「どろどろ」(nhớp nháp, sệt) không hợp miêu tả da khô vào mùa hanh.",
+        "Sai. 「ふさふさ」(rậm rạp, dùng cho tóc/lông) không hợp miêu tả da.",
+        "Đúng. 「かさかさ」nghĩa là 'khô ráp' — mùa này hanh khô nên da bị khô ráp.",
+        "Sai. 「べたべた」(dính dính, nhớp) ngược nghĩa với da KHÔ trong câu này."
+      ]
     },
     {
       "de_bai": "問題4 ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n先生の発音をよく聞いて、同じになるように発音を( )みましょう。",
@@ -189,7 +297,13 @@
         "映して",
         "保って"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「まねて」nghĩa là 'bắt chước, mô phỏng' — nghe kỹ cách phát âm của giáo viên rồi bắt chước phát âm giống vậy.",
+        "Sai. 「かなえて」(làm cho thành hiện thực, vd ước mơ) không hợp ngữ cảnh luyện phát âm.",
+        "Sai. 「映して」(chiếu, phản chiếu) không hợp ngữ cảnh luyện phát âm theo giáo viên.",
+        "Sai. 「保って」(giữ, duy trì) không hợp ngữ cảnh 'làm theo cho giống'."
+      ]
     },
     {
       "de_bai": "問題4 ( ) に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n金子さんとは初めて会ったが、お互いサッカーが大好きだと分かって、話が( )。",
@@ -199,7 +313,13 @@
         "盛り上がった",
         "駆け抜けた"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「飛び出した」(nhảy bật ra, lao ra) không hợp miêu tả không khí buổi nói chuyện trở nên sôi nổi.",
+        "Sai. 「行き過ぎた」(đi quá đà) không hợp ngữ cảnh này.",
+        "Đúng. 「盛り上がった」nghĩa là 'trở nên sôi nổi, rôm rả' — biết cả 2 đều thích bóng đá nên câu chuyện trở nên sôi nổi.",
+        "Sai. 「駆け抜けた」(chạy vượt qua) không hợp ngữ cảnh cuộc nói chuyện."
+      ]
     },
     {
       "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\nこれについては、\"各自\"が責任を持つことにします。",
@@ -209,7 +329,13 @@
         "一人一人",
         "あなた"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「私」(tôi) không sát nghĩa của 各自 (mang nghĩa SỐ NHIỀU, mỗi người).",
+        "Sai. 「代表者」(người đại diện) không sát nghĩa của 各自.",
+        "Đúng. 「各自」nghĩa là 'mỗi người, từng cá nhân' — gần nghĩa với 「一人一人」(từng người một).",
+        "Sai. 「あなた」(bạn, ngôi thứ 2 số ít) không sát nghĩa của 各自."
+      ]
     },
     {
       "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n明日はレポートを\"仕上げる\"つもりです。",
@@ -219,7 +345,13 @@
         "出す",
         "整理する"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「書く」(viết) chỉ là một phần của việc 仕上げる, không sát nghĩa đầy đủ.",
+        "Đúng. 「仕上げる」nghĩa là 'hoàn thành, làm cho xong' — gần nghĩa với 「完成させる」(hoàn thành).",
+        "Sai. 「出す」(nộp, đưa ra) không sát nghĩa của 仕上げる (vốn nhấn vào việc HOÀN TẤT chứ không phải nộp).",
+        "Sai. 「整理する」(sắp xếp, chỉnh lý) không sát nghĩa của 仕上げる."
+      ]
     },
     {
       "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\nそれは\"深刻な\"問題だ。",
@@ -229,7 +361,13 @@
         "微妙な",
         "重大な"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「単純な」(đơn giản) ngược nghĩa với 深刻な.",
+        "Sai. 「身近な」(gần gũi, thân quen) không sát nghĩa của 深刻な.",
+        "Sai. 「微妙な」(tinh vi, mơ hồ) không sát nghĩa của 深刻な.",
+        "Đúng. 「深刻な」nghĩa là 'nghiêm trọng' — gần nghĩa với 「重大な」(trọng đại, nghiêm trọng)."
+      ]
     },
     {
       "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n今日は\"同僚\"と食事に行く予定です。",
@@ -239,7 +377,13 @@
         "同じ出身地の人",
         "同じクラスの人"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「同僚」nghĩa là 'đồng nghiệp' — gần nghĩa với 「同じ会社の人」(người cùng công ty).",
+        "Sai. 「同じアパートの人」(người cùng khu chung cư) không sát nghĩa của 同僚.",
+        "Sai. 「同じ出身地の人」(người cùng quê) không sát nghĩa của 同僚.",
+        "Sai. 「同じクラスの人」(người cùng lớp) không sát nghĩa của 同僚."
+      ]
     },
     {
       "de_bai": "問題5 の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n前田さんはさっきから\"うつむいて\"いる。",
@@ -249,7 +393,13 @@
         "下を向いて",
         "後ろを向いて"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「上を向いて」(ngước lên) ngược nghĩa với うつむいて.",
+        "Sai. 「横を向いて」(quay sang ngang) không sát nghĩa của うつむいて.",
+        "Đúng. 「うつむいて」nghĩa là 'cúi đầu xuống' — gần nghĩa với 「下を向いて」(hướng mặt xuống dưới).",
+        "Sai. 「後ろを向いて」(quay ra sau) không sát nghĩa của うつむいて."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「廃止」",
@@ -259,7 +409,13 @@
         "雨が降ってきたので、今日のイベントは廃止します。",
         "時代に合わない古い制度は廃止したほうがいい。"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「店を廃止する」không tự nhiên — đóng cửa tiệm kinh doanh gia đình thì dùng 「閉じる/たたむ」, không dùng 廃止 (vốn dùng cho CHẾ ĐỘ/QUY ĐỊNH).",
+        "Sai. 「エレベーターの使用を廃止します」ở đây không hợp — tạm ngưng sử dụng để kiểm tra thì dùng 「中止/停止」, 廃止 mang nghĩa BÃI BỎ VĨNH VIỄN không hợp với việc tạm thời.",
+        "Sai. 「イベントを廃止します」không hợp — hủy 1 sự kiện cụ thể do mưa thì dùng 「中止」, không dùng 廃止.",
+        "Đúng. 「古い制度は廃止したほうがいい」là cách dùng chuẩn — 廃止 nghĩa là 'bãi bỏ' (chế độ, quy định không còn phù hợp)."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「腫れる」",
@@ -269,7 +425,13 @@
         "サッカーの試合でけがをして、足が腫れてしまった。",
         "オーブンでクッキーを焼いたら、だんだん腫れてきた。"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「ポケットが腫れている」không hợp — túi áo phồng lên do nhiều đồ thì dùng 「ふくらんでいる」, không dùng 腫れる (vốn chỉ dùng cho CƠ THỂ SỐNG sưng lên).",
+        "Sai. 「おなかが腫れている」ở đây không hợp tự nhiên — bụng no sau khi ăn nhiều thì dùng 「膨れている」, 腫れる nghiêng về sưng do VIÊM/CHẤN THƯƠNG hơn là no bụng.",
+        "Đúng. 「けがをして、足が腫れてしまった」là cách dùng chuẩn — 腫れる nghĩa là 'sưng lên' (do chấn thương/viêm).",
+        "Sai. 「クッキーが腫れてきた」không hợp — bánh phồng lên khi nướng thì dùng 「膨らむ」, không dùng 腫れる."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「上達」",
@@ -279,7 +441,13 @@
         "同じ作家が好きなことが分かって、大野さんとの仲が上達した。",
         "小川さんが詳しく説明してくれたので、理解が上達した。"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「ピアノがかなり上達した」là cách dùng chuẩn — 上達 nghĩa là 'tiến bộ, giỏi lên' (về kỹ năng).",
+        "Sai. 「祖父の体調は上達した」không hợp — sức khỏe tốt lên thì dùng 「回復した/良くなった」, không dùng 上達 (vốn chỉ dùng cho KỸ NĂNG luyện tập được).",
+        "Sai. 「仲が上達した」không hợp — quan hệ tốt lên thì dùng 「深まった/良くなった」, không dùng 上達.",
+        "Sai. 「理解が上達した」không hợp — hiểu rõ hơn thì dùng 「深まった/進んだ」, không dùng 上達 (vốn chỉ dùng cho kỹ năng luyện tập, không phải sự hiểu biết)."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「暮れ」",
@@ -289,7 +457,13 @@
         "授業の暮れに、先生が今日の宿題を出した。",
         "今年の暮れは、実家で両親と過ごしたい。"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「物語の暮れ」không hợp — phần kết của câu chuyện dùng 「結末/終わり」, không dùng 暮れ (vốn chỉ dùng cho THỜI GIAN trong ngày/năm).",
+        "Sai. 「旅行の暮れ」không hợp — cuối chuyến du lịch dùng 「最後」, không dùng 暮れ.",
+        "Sai. 「授業の暮れ」không hợp — cuối buổi học dùng 「終わり」, không dùng 暮れ.",
+        "Đúng. 「今年の暮れ」là cách dùng chuẩn — 暮れ nghĩa là 'cuối năm' (年の暮れ là cụm cố định)."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1・2・3・4から一つ選びなさい。\n「残高」",
@@ -299,7 +473,13 @@
         "この町の残高は、ついに1万人を下回りました。",
         "山の頂上までの残高は、100メートルくらいです。"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「利用できる残高」không hợp — thời gian còn lại để dùng phòng họp dùng 「残り時間」, không dùng 残高 (vốn chỉ dùng cho SỐ DƯ tài chính).",
+        "Đúng. 「銀行口座の残高」là cách dùng chuẩn — 残高 nghĩa là 'số dư' (tài khoản ngân hàng).",
+        "Sai. 「町の残高」không hợp — dân số còn lại của thị trấn dùng 「人口」, không dùng 残高.",
+        "Sai. 「頂上までの残高」không hợp — khoảng cách còn lại đến đỉnh núi dùng 「残りの距離」, không dùng 残高."
+      ]
     }
   ],
   "mondai_breakdown": [
