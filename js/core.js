@@ -12,6 +12,8 @@ const App = {
   choukaiDraftIndex: null, // đáp án đang chọn NHÁP (chưa xác nhận) của câu đề nghe hiện tại
   choukaiFlagged: new Set(), // các câu đề nghe đã đánh dấu cờ để xem lại (key choukaiKeyFor)
   choukaiUnsure: new Set(), // các câu đề nghe đã đánh dấu phân vân
+  examFlagged: new Set(), // các câu đề thi chữ đã đánh dấu cờ (key = qIndex, dùng theo App.currentExamId)
+  examUnsure: new Set(), // các câu đề thi chữ đã đánh dấu phân vân
   currentDeckId: null,
   currentDeckType: null, // "TUVUNG" | "NGUPHAP"
   currentWords: [],

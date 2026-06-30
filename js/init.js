@@ -400,6 +400,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
   document.getElementById("btnExamPrev").addEventListener("click", examGoPrev);
   document.getElementById("btnExamNext").addEventListener("click", examGoNext);
+  document.getElementById("btnExamFlag").addEventListener("click", toggleExamFlag);
+  document.getElementById("btnExamUnsure").addEventListener("click", toggleExamUnsure);
   document.getElementById("btnExamExitEarly").addEventListener("click", () => {
     if (confirm("Dừng làm các câu sai còn lại và xem kết quả ngay với những gì đã làm?")) {
       exitExamEarlyAndShowResult();

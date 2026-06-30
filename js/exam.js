@@ -435,6 +435,8 @@ function startExam(examId) {
   App.examNavPos = -1;
   App.examReviewMode = false;
   App.examQuestionTimeLog = [];
+  App.examFlagged = new Set();
+  App.examUnsure = new Set();
 
   App.examSpeedMode = document.getElementById("examSpeedMode").checked;
   App.examTotalStartTime = null;
@@ -592,6 +594,8 @@ function renderExamQuestionContent(q, qIndex, isLive) {
   App.examAnswering = false;
   App.examCurrentQuestion = q;
   App.examCurrentQIndex = qIndex;
+  document.getElementById("btnExamFlag").classList.toggle("is-active", App.examFlagged.has(qIndex));
+  document.getElementById("btnExamUnsure").classList.toggle("is-active", App.examUnsure.has(qIndex));
 
   const optsDiv = document.getElementById("examOptions");
   optsDiv.innerHTML = "";
@@ -630,7 +634,7 @@ function renderExamQuestionContent(q, qIndex, isLive) {
         // Chấm ngay: đã xem đáp án đúng/sai + giải thích rồi nên chỉ xem lại,
         // không cho sửa (sửa sau khi đã biết đáp án thì không còn ý nghĩa).
         btn.classList.add("disabled");
-        if (optIdx === q.dap_an_dung) btn.classList.add("correct");
+        if (optIdx === q.dap_an_dung) btn.classList.add(getExamCorrectColorClass(qIndex));
         if (optIdx === lastAttempt.chosenIdx && !lastAttempt.correct) btn.classList.add("wrong");
         if (optIdx === lastAttempt.chosenIdx) btn.classList.add("was-chosen");
       }
@@ -744,6 +748,30 @@ function handleExamAnswerEditReview(btn, chosenIdx, qIndex, q) {
   btn.classList.add("was-chosen-neutral");
 }
 
+// Trả về đúng class màu cho 1 đáp án ĐÚNG dựa theo có đánh dấu 🚩lụi/❓phân vân
+// hay không khi làm câu đó — giống hệt logic bên đề nghe (choukai.js).
+function getExamCorrectColorClass(qIndex) {
+  if (App.examFlagged.has(qIndex)) return "is-correct-lucky";
+  if (App.examUnsure.has(qIndex)) return "is-correct-unsure";
+  return "correct";
+}
+
+function toggleExamFlag() {
+  const qIndex = App.examCurrentQIndex;
+  if (qIndex == null) return;
+  if (App.examFlagged.has(qIndex)) App.examFlagged.delete(qIndex);
+  else App.examFlagged.add(qIndex);
+  document.getElementById("btnExamFlag").classList.toggle("is-active", App.examFlagged.has(qIndex));
+}
+
+function toggleExamUnsure() {
+  const qIndex = App.examCurrentQIndex;
+  if (qIndex == null) return;
+  if (App.examUnsure.has(qIndex)) App.examUnsure.delete(qIndex);
+  else App.examUnsure.add(qIndex);
+  document.getElementById("btnExamUnsure").classList.toggle("is-active", App.examUnsure.has(qIndex));
+}
+
 function handleExamAnswer(btn, chosenIdx, qIndex, q) {
   if (App.examAnswering) return; // chặn double-click
   App.examAnswering = true;
@@ -792,14 +820,14 @@ function handleExamAnswer(btn, chosenIdx, qIndex, q) {
   // Chấm ngay tại chỗ (instant): tô đúng/sai, phát âm thanh, hiện nút giải thích,
   // và KHÔNG tự động chuyển câu — chờ người học tự bấm "Tiếp tục →".
   document.querySelectorAll("#examOptions .quiz-opt").forEach((b) => b.classList.add("disabled"));
-  btn.classList.add(correct ? "correct" : "wrong");
+  btn.classList.add(correct ? getExamCorrectColorClass(qIndex) : "wrong");
 
   if (correct) {
     playCorrectSound();
   } else {
     playWrongSound();
     document.querySelectorAll("#examOptions .quiz-opt").forEach((b) => {
-      if (b.textContent === q.options[q.dap_an_dung]) b.classList.add("correct");
+      if (b.textContent === q.options[q.dap_an_dung]) b.classList.add(getExamCorrectColorClass(qIndex));
     });
   }
 
@@ -999,9 +1027,11 @@ function renderExamResultGrid() {
     const hist = App.examHistory[qIndex];
     let stateClass = "is-not-done";
     if (hist && hist.attempts.length) {
-      stateClass = hist.firstTryCorrect ? "is-correct" : "is-wrong";
+      stateClass = hist.firstTryCorrect ? getExamCorrectColorClass(qIndex) : "is-wrong";
+      if (stateClass === "correct") stateClass = "is-correct";
     }
-    return `<button class="exam-result-dot ${stateClass}" data-qindex="${qIndex}">${qIndex + 1}</button>`;
+    const tag = (App.examFlagged.has(qIndex) ? "🚩" : "") + (App.examUnsure.has(qIndex) ? "❓" : "");
+    return `<button class="exam-result-dot ${stateClass}" data-qindex="${qIndex}">${qIndex + 1}${tag ? `<span class="exam-result-dot-tag">${tag}</span>` : ""}</button>`;
   }).join("");
 
   grid.innerHTML = cells;
