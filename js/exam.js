@@ -435,6 +435,8 @@ function startExam(examId) {
   App.examNavPos = -1;
   App.examReviewMode = false;
   App.examQuestionTimeLog = [];
+  App.examFlagged = new Set();
+  App.examUnsure = new Set();
 
   App.examSpeedMode = document.getElementById("examSpeedMode").checked;
   App.examTotalStartTime = null;
@@ -592,6 +594,8 @@ function renderExamQuestionContent(q, qIndex, isLive) {
   App.examAnswering = false;
   App.examCurrentQuestion = q;
   App.examCurrentQIndex = qIndex;
+  document.getElementById("btnExamFlag").classList.toggle("is-active", App.examFlagged.has(qIndex));
+  document.getElementById("btnExamUnsure").classList.toggle("is-active", App.examUnsure.has(qIndex));
 
   const optsDiv = document.getElementById("examOptions");
   optsDiv.innerHTML = "";
@@ -630,7 +634,7 @@ function renderExamQuestionContent(q, qIndex, isLive) {
         // Chấm ngay: đã xem đáp án đúng/sai + giải thích rồi nên chỉ xem lại,
         // không cho sửa (sửa sau khi đã biết đáp án thì không còn ý nghĩa).
         btn.classList.add("disabled");
-        if (optIdx === q.dap_an_dung) btn.classList.add("correct");
+        if (optIdx === q.dap_an_dung) btn.classList.add(getExamCorrectColorClass(qIndex));
         if (optIdx === lastAttempt.chosenIdx && !lastAttempt.correct) btn.classList.add("wrong");
         if (optIdx === lastAttempt.chosenIdx) btn.classList.add("was-chosen");
       }
@@ -640,6 +644,26 @@ function renderExamQuestionContent(q, qIndex, isLive) {
 
     optsDiv.appendChild(btn);
   });
+
+  // Quay lại xem 1 câu đã trả lời SAI và đã chọn đáp án thứ 2 đang phân vân
+  // trước đó (instant mode) — phải VẼ LẠI hộp + viền đáp án thứ 2, nếu không sẽ
+  // bị MẤT trạng thái khi điều hướng Câu trước/Câu sau (chỉ lưu trong examHistory,
+  // không tự re-render như màu đúng/sai bình thường).
+  document.getElementById("examSecondGuessBox").classList.add("hidden");
+  if (!isLive && lastAttempt && App.examScoreMode !== "review" && !lastAttempt.correct
+      && history && history.secondGuessIdx != null) {
+    const box = document.getElementById("examSecondGuessBox");
+    const isSecondCorrect = history.secondGuessIdx === q.dap_an_dung;
+    const secondText = q.options[history.secondGuessIdx];
+    box.innerHTML = `<div class="exam-secondguess-label">🤔 Bạn đã phân vân với đáp án khác:</div>
+      <div class="exam-secondguess-opts">
+        <button class="exam-secondguess-opt ${isSecondCorrect ? "is-second-correct" : "is-second-wrong"}" disabled>${secondText}</button>
+      </div>`;
+    box.classList.remove("hidden");
+    optsDiv.querySelectorAll(".quiz-opt").forEach((o) => {
+      if (o.textContent === secondText) o.classList.add(isSecondCorrect ? "is-second-correct-ring" : "is-second-wrong-ring");
+    });
+  }
 
   // Hiện ghi chú lịch sử nếu câu này đã từng bị sai trước đây (kể cả khi xem live lại sau khi đã trả lời)
   const histNote = document.getElementById("examHistoryNote");
@@ -744,6 +768,30 @@ function handleExamAnswerEditReview(btn, chosenIdx, qIndex, q) {
   btn.classList.add("was-chosen-neutral");
 }
 
+// Trả về đúng class màu cho 1 đáp án ĐÚNG dựa theo có đánh dấu 🚩lụi/❓phân vân
+// hay không khi làm câu đó — giống hệt logic bên đề nghe (choukai.js).
+function getExamCorrectColorClass(qIndex) {
+  if (App.examFlagged.has(qIndex)) return "is-correct-lucky";
+  if (App.examUnsure.has(qIndex)) return "is-correct-unsure";
+  return "correct";
+}
+
+function toggleExamFlag() {
+  const qIndex = App.examCurrentQIndex;
+  if (qIndex == null) return;
+  if (App.examFlagged.has(qIndex)) App.examFlagged.delete(qIndex);
+  else App.examFlagged.add(qIndex);
+  document.getElementById("btnExamFlag").classList.toggle("is-active", App.examFlagged.has(qIndex));
+}
+
+function toggleExamUnsure() {
+  const qIndex = App.examCurrentQIndex;
+  if (qIndex == null) return;
+  if (App.examUnsure.has(qIndex)) App.examUnsure.delete(qIndex);
+  else App.examUnsure.add(qIndex);
+  document.getElementById("btnExamUnsure").classList.toggle("is-active", App.examUnsure.has(qIndex));
+}
+
 function handleExamAnswer(btn, chosenIdx, qIndex, q) {
   if (App.examAnswering) return; // chặn double-click
   App.examAnswering = true;
@@ -792,14 +840,14 @@ function handleExamAnswer(btn, chosenIdx, qIndex, q) {
   // Chấm ngay tại chỗ (instant): tô đúng/sai, phát âm thanh, hiện nút giải thích,
   // và KHÔNG tự động chuyển câu — chờ người học tự bấm "Tiếp tục →".
   document.querySelectorAll("#examOptions .quiz-opt").forEach((b) => b.classList.add("disabled"));
-  btn.classList.add(correct ? "correct" : "wrong");
+  btn.classList.add(correct ? getExamCorrectColorClass(qIndex) : "wrong");
 
   if (correct) {
     playCorrectSound();
   } else {
     playWrongSound();
     document.querySelectorAll("#examOptions .quiz-opt").forEach((b) => {
-      if (b.textContent === q.options[q.dap_an_dung]) b.classList.add("correct");
+      if (b.textContent === q.options[q.dap_an_dung]) b.classList.add(getExamCorrectColorClass(qIndex));
     });
   }
 
@@ -818,6 +866,41 @@ function handleExamAnswer(btn, chosenIdx, qIndex, q) {
     document.getElementById("examExplainRow").classList.remove("hidden");
   }
   document.getElementById("btnExamContinue").classList.remove("hidden");
+
+  // Nếu câu này đã đánh dấu ❓ phân vân VÀ trả lời sai — hỏi thêm đáp án thứ 2
+  // mà người học cũng đang lưỡng lự giữa 2 lựa chọn (không chỉ đáp án đã chọn).
+  if (!correct && App.examUnsure.has(qIndex)) {
+    showExamSecondGuessPicker(qIndex, q, chosenIdx);
+  }
+}
+
+// UI hỏi "Bạn còn phân vân với đáp án nào khác?" — chỉ hiện khi câu đã đánh dấu
+// ❓ và trả lời sai. Cho chọn 1 trong các đáp án CÒN LẠI (trừ đáp án vừa chọn)
+// làm "lựa chọn thứ 2 đang lưỡng lự". Nếu lựa chọn thứ 2 đó ĐÚNG, tô riêng màu
+// để biết là tuy chọn sai nhưng đáp án đúng đã nằm trong 2 phương án cân nhắc.
+function showExamSecondGuessPicker(qIndex, q, firstChosenIdx) {
+  const box = document.getElementById("examSecondGuessBox");
+  const optsNow = document.querySelectorAll("#examOptions .quiz-opt");
+  box.innerHTML = `<div class="exam-secondguess-label">🤔 Bạn còn phân vân với đáp án nào khác không?</div>
+    <div class="exam-secondguess-opts" id="examSecondGuessOpts"></div>`;
+  const wrap = document.getElementById("examSecondGuessOpts");
+  q.options.forEach((opt, idx) => {
+    if (idx === firstChosenIdx) return; // không cho chọn lại đáp án vừa chọn
+    const b = document.createElement("button");
+    b.className = "exam-secondguess-opt";
+    b.textContent = opt;
+    b.addEventListener("click", () => {
+      const hist = App.examHistory[qIndex];
+      hist.secondGuessIdx = idx;
+      const isSecondCorrect = idx === q.dap_an_dung;
+      wrap.querySelectorAll(".exam-secondguess-opt").forEach((x) => { x.disabled = true; });
+      b.classList.add(isSecondCorrect ? "is-second-correct" : "is-second-wrong");
+      // Tô luôn đáp án đó trong khung trả lời chính để dễ đối chiếu
+      optsNow.forEach((o) => { if (o.textContent === opt) o.classList.add(isSecondCorrect ? "is-second-correct-ring" : "is-second-wrong-ring"); });
+    });
+    wrap.appendChild(b);
+  });
+  box.classList.remove("hidden");
 }
 
 // Bấm "Tiếp tục →" sau khi đã chấm ngay 1 câu (chế độ instant) — đây là lúc
@@ -999,9 +1082,12 @@ function renderExamResultGrid() {
     const hist = App.examHistory[qIndex];
     let stateClass = "is-not-done";
     if (hist && hist.attempts.length) {
-      stateClass = hist.firstTryCorrect ? "is-correct" : "is-wrong";
+      stateClass = hist.firstTryCorrect ? getExamCorrectColorClass(qIndex) : "is-wrong";
+      if (stateClass === "correct") stateClass = "is-correct";
     }
-    return `<button class="exam-result-dot ${stateClass}" data-qindex="${qIndex}">${qIndex + 1}</button>`;
+    const tag = (App.examFlagged.has(qIndex) ? "🚩" : "") + (App.examUnsure.has(qIndex) ? "❓" : "")
+      + (hist && hist.secondGuessIdx === q.dap_an_dung ? "🤔" : "");
+    return `<button class="exam-result-dot ${stateClass}" data-qindex="${qIndex}">${qIndex + 1}${tag ? `<span class="exam-result-dot-tag">${tag}</span>` : ""}</button>`;
   }).join("");
 
   grid.innerHTML = cells;
