@@ -137,7 +137,7 @@ function startChoukai(testId) {
   App.choukaiCurrentAudioSrc = null;
   App.choukaiAnswering = false;
   App.choukaiFlagged = new Set();
-  App.choukaiUnsure = new Set();
+  App.choukaiUnsureOptions = {};
 
   document.getElementById("choukaiEmpty").classList.add("hidden");
   document.getElementById("choukaiResult").classList.add("hidden");
@@ -224,14 +224,34 @@ function renderChoukaiQuestion() {
   const existingAnswer = App.choukaiAnswers[key];
   document.getElementById("btnChoukaiConfirm").classList.toggle("hidden", !!existingAnswer);
   document.getElementById("btnChoukaiFlag").classList.toggle("is-active", App.choukaiFlagged.has(key));
-  document.getElementById("btnChoukaiUnsure").classList.toggle("is-active", App.choukaiUnsure.has(key));
 
+  const unsureSet = getChoukaiUnsureSet(key);
   const optWrap = document.getElementById("choukaiOptions");
   optWrap.innerHTML = "";
   options.forEach(function (opt, idx) {
     const btn = document.createElement("button");
-    btn.className = "quiz-opt";
-    btn.textContent = opt;
+    btn.className = "quiz-opt choukai-opt";
+    // Nội dung đáp án bọc trong span riêng để badge 🤔 không bị đè lên chữ.
+    const textSpan = document.createElement("span");
+    textSpan.className = "choukai-opt-text";
+    textSpan.textContent = opt;
+    btn.appendChild(textSpan);
+
+    // Badge 🤔 phân vân — đánh dấu RIÊNG cho đáp án này (đáp án mình lăn tăn,
+    // suýt chọn ngoài đáp án chính). Bấm badge KHÔNG chọn đáp án (stopPropagation).
+    const unsureBadge = document.createElement("span");
+    unsureBadge.className = "choukai-opt-unsure" + (unsureSet.has(idx) ? " is-on" : "");
+    unsureBadge.textContent = "🤔";
+    unsureBadge.title = "Đánh dấu phân vân đáp án này (suýt chọn)";
+    unsureBadge.addEventListener("click", function (e) {
+      e.stopPropagation();
+      toggleChoukaiUnsureOption(key, idx);
+      unsureBadge.classList.toggle("is-on", getChoukaiUnsureSet(key).has(idx));
+      btn.classList.toggle("is-unsure-opt", getChoukaiUnsureSet(key).has(idx));
+    });
+    btn.appendChild(unsureBadge);
+    if (unsureSet.has(idx)) btn.classList.add("is-unsure-opt");
+
     if (existingAnswer) {
       // Câu này đã trả lời rồi (quay lại bằng nút "Câu trước") — khóa lại, không
       // cho trả lời lần 2 (tránh lặp lại lỗi cộng điểm 2 lần), chỉ hiển thị lại
@@ -295,23 +315,33 @@ function toggleChoukaiFlag() {
   document.getElementById("btnChoukaiFlag").classList.toggle("is-active", App.choukaiFlagged.has(key));
 }
 
-function toggleChoukaiUnsure() {
-  const item = getChoukaiCurrentItem();
-  if (!item) return;
-  const key = choukaiKeyFor(item.mondai.number, item.q.qnum, item.pos.subIndex);
-  if (App.choukaiUnsure.has(key)) App.choukaiUnsure.delete(key);
-  else App.choukaiUnsure.add(key);
-  document.getElementById("btnChoukaiUnsure").classList.toggle("is-active", App.choukaiUnsure.has(key));
+// ===== PHÂN VÂN THEO TỪNG ĐÁP ÁN =====
+// Lấy Set các optionIndex đã đánh dấu phân vân cho 1 câu (key). Luôn trả về Set
+// (rỗng nếu chưa có) để nơi gọi khỏi phải kiểm tra null.
+function getChoukaiUnsureSet(key) {
+  const arr = App.choukaiUnsureOptions[key];
+  return new Set(arr || []);
 }
 
-// Trả về đúng class màu cho 1 đáp án ĐÚNG dựa theo có đánh dấu 🚩lụi/❓phân vân
-// hay không khi làm câu đó — "đúng nhưng đã đánh dấu lụi/phân vân" thì tô màu
-// CẢNH BÁO khác (không phải xanh chắc chắn như bình thường) để biết mà xem lại
-// vì sao đúng, tránh ảo tưởng là mình NẮM CHẮC kiến thức đó.
-// Câu SAI luôn giữ màu đỏ bình thường dù có đánh dấu gì hay không.
+// Bật/tắt phân vân cho 1 đáp án cụ thể trong 1 câu.
+function toggleChoukaiUnsureOption(key, optIdx) {
+  const set = getChoukaiUnsureSet(key);
+  if (set.has(optIdx)) set.delete(optIdx);
+  else set.add(optIdx);
+  if (set.size) App.choukaiUnsureOptions[key] = Array.from(set).sort(function (a, b) { return a - b; });
+  else delete App.choukaiUnsureOptions[key];
+}
+
+function choukaiHasUnsure(key) {
+  return !!(App.choukaiUnsureOptions[key] && App.choukaiUnsureOptions[key].length);
+}
+
+// Trả về đúng class màu cho 1 đáp án ĐÚNG dựa theo có đánh dấu 🚩 lụi hay không khi
+// làm câu đó — "đúng nhưng đánh dấu lụi" thì tô màu CẢNH BÁO (không phải xanh chắc
+// chắn) để biết mà xem lại vì sao đúng, tránh ảo tưởng nắm chắc kiến thức đó.
+// Câu SAI luôn giữ màu đỏ bình thường. (Phân vân nay tô riêng theo từng đáp án.)
 function getChoukaiCorrectColorClass(key) {
   if (App.choukaiFlagged.has(key)) return "is-correct-lucky";   // 🚩 lụi mà vẫn đúng -> cam/vàng cảnh báo
-  if (App.choukaiUnsure.has(key)) return "is-correct-unsure";   // ❓ phân vân mà đúng -> đỏ cam nhẹ hơn lụi
   return "correct";
 }
 
@@ -332,10 +362,18 @@ function handleChoukaiAnswer(chosenIndex) {
   // Khóa toàn bộ lựa chọn ngay sau khi trả lời — trước đây các nút vẫn bấm được
   // dưới panel review, bấm thêm sẽ GHI ĐÈ đáp án + cộng điểm thêm lần nữa, khiến
   // điểm "câu đúng" bị đẩy lên gần bằng tổng số câu đã làm. Đây là lỗi đã sửa.
+  const unsureSet = getChoukaiUnsureSet(key);
   document.querySelectorAll("#choukaiOptions .quiz-opt").forEach(function (b, idx) {
     b.classList.add("disabled");
     if (idx === correctIndex) b.classList.add(getChoukaiCorrectColorClass(key));
     else if (idx === chosenIndex) b.classList.add("wrong");
+    // Giữ lại dấu phân vân theo đáp án sau khi chấm.
+    b.classList.toggle("is-unsure-opt", unsureSet.has(idx));
+    // Cảnh báo mạnh: chọn SAI nhưng đáp án ĐÚNG lại là 1 đáp án mình đã phân vân
+    // -> trực giác đúng mà tự bỏ qua, cần xem kỹ vì sao lại loại nó ra.
+    if (!correct && idx === correctIndex && unsureSet.has(idx)) {
+      b.classList.add("is-unsure-was-right");
+    }
   });
 
   // Ghi vào hệ thống điểm yếu chung (deckId giả "__choukai__"), tái dùng
@@ -610,7 +648,7 @@ function renderChoukaiResultGrid() {
     const ans = App.choukaiAnswers[key];
     const colorClass = ans && ans.correct ? getChoukaiCorrectColorClass(key) : "is-wrong";
     const stateClass = !ans ? "is-not-done" : (colorClass === "correct" ? "is-correct" : colorClass);
-    const tag = (App.choukaiFlagged.has(key) ? "🚩" : "") + (App.choukaiUnsure.has(key) ? "❓" : "");
+    const tag = (App.choukaiFlagged.has(key) ? "🚩" : "") + (choukaiHasUnsure(key) ? "🤔" : "");
     return '<button class="exam-result-dot ' + stateClass + '" data-flat="' + flatIdx + '">' + (flatIdx + 1) + (tag ? '<span class="exam-result-dot-tag">' + tag + '</span>' : '') + '</button>';
   }).join("");
   grid.querySelectorAll(".exam-result-dot").forEach(function (dot) {
@@ -638,15 +676,20 @@ function openChoukaiDetailModal(flatIdx, opts) {
   document.getElementById("choukaiDetailModalTitle").textContent =
     "Câu " + (flatIdx + 1) + " (Mondai " + mondai.number + ") — " + (!ans ? "Chưa làm" : (ans.correct ? "✓ Đúng" : "✕ Sai"));
 
+  const unsureSet = getChoukaiUnsureSet(key);
   const optsHtml = options.map(function (opt, idx) {
     const isCorrect = idx === correctIndex;
     const isChosen = ans && ans.chosenIndex === idx;
+    const isUnsure = unsureSet.has(idx);
     let cls = "exam-detail-opt";
     if (isCorrect) cls += " is-correct";
     else if (isChosen) cls += " is-wrong-chosen";
+    if (isUnsure) cls += " is-unsure-opt";
     const tags = [];
     if (isCorrect) tags.push('<span class="exam-detail-tag is-correct-tag">Đáp án đúng</span>');
     if (isChosen) tags.push('<span class="exam-detail-tag is-chosen-tag">Bạn đã chọn</span>');
+    if (isUnsure) tags.push('<span class="exam-detail-tag is-unsure-tag">🤔 Phân vân</span>');
+    if (isUnsure && isCorrect && ans && !ans.correct) tags.push('<span class="exam-detail-tag is-unsure-tag">⚠ Trực giác đúng mà bỏ qua!</span>');
     return '<div class="' + cls + '"><div class="exam-detail-opt-head"><span class="exam-detail-opt-text">' + opt + '</span>' + tags.join("") + '</div></div>';
   }).join("");
 

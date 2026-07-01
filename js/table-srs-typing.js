@@ -203,7 +203,25 @@ function renderSrsCard() {
   document.getElementById("srsFront").scrollTop = 0;
   document.getElementById("srsBack").scrollTop = 0;
 
+  renderSrsStarButtons(w);
   updateSrsRateTimePreviews(w);
+}
+
+// Cập nhật trạng thái nút ★ trên thẻ SRS (2 mặt). Trong chế độ học GỘP nhiều bộ
+// (__combo__) thì ẩn nút — vì các từ gộp không mang theo deckId gốc nên không thể
+// đánh dấu sao đúng bộ; đánh dấu sao chỉ dùng khi ôn từng bộ riêng.
+function renderSrsStarButtons(w) {
+  const btns = document.querySelectorAll(".srs-star-btn");
+  if (App.srsComboActive) {
+    btns.forEach((btn) => { btn.classList.add("hidden"); });
+    return;
+  }
+  const starred = isStarred(App.currentDeckId, w._id);
+  btns.forEach((btn) => {
+    btn.classList.remove("hidden");
+    btn.classList.toggle("is-starred", starred);
+    btn.textContent = starred ? "★" : "☆";
+  });
 }
 
 function flipSrsCard() {

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>N2 Vocab Lab</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/theme-plus.css?v=1">
 </head>
 <body>
 
@@ -23,6 +24,17 @@
       </div>
       <button id="btnToggleSound" class="sound-toggle-btn" title="Bật/tắt âm thanh phản hồi">🔊</button>
       <button id="btnToggleSpeech" class="sound-toggle-btn" title="Bật/tắt phát âm khi lật thẻ">🗣</button>
+    </div>
+
+    <!-- Đếm ngược ngày thi JLPT N2 — nhắc deadline, tạo động lực học hết tài liệu -->
+    <div class="exam-countdown" id="examCountdown" data-exam-date="2026-07-05">
+      <div class="exam-countdown-badge">JLPT N2</div>
+      <div class="exam-countdown-main">
+        <span class="exam-countdown-days" id="examCountdownDays">—</span>
+        <span class="exam-countdown-unit">ngày nữa</span>
+      </div>
+      <div class="exam-countdown-date" id="examCountdownDate">05/07 · がんばって！</div>
+      <div class="exam-countdown-bar"><div class="exam-countdown-bar-fill" id="examCountdownBarFill"></div></div>
     </div>
 
     <nav class="nav" id="navList">
@@ -177,8 +189,8 @@
       </div>
       <div class="card-stage" id="srsStage">
         <div class="card" id="srsCard">
-          <div class="card-face card-front" id="srsFront"><div class="card-face-content" id="srsFrontContent"></div></div>
-          <div class="card-face card-back" id="srsBack"><div class="card-face-content" id="srsBackContent"></div></div>
+          <div class="card-face card-front" id="srsFront"><button class="flash-star-btn srs-star-btn" title="Đánh dấu sao">☆</button><div class="card-face-content" id="srsFrontContent"></div></div>
+          <div class="card-face card-back" id="srsBack"><button class="flash-star-btn srs-star-btn" title="Đánh dấu sao">☆</button><div class="card-face-content" id="srsBackContent"></div></div>
         </div>
       </div>
       <div class="rate-row" id="srsRateRow">
@@ -278,8 +290,6 @@
           <button class="icon-btn exam-nav-btn" id="btnExamPrev" title="Xem câu trước">← Câu trước</button>
           <span class="exam-progress-text">Câu <span id="examPos">0</span>/<span id="examQueueTotal">0</span></span>
           <button class="icon-btn exam-nav-btn" id="btnExamNext" title="Xem câu sau / quay lại câu hiện tại">Câu sau →</button>
-          <button class="icon-btn choukai-flag-btn" id="btnExamFlag" title="Đánh dấu để xem lại">🚩</button>
-          <button class="icon-btn choukai-unsure-btn" id="btnExamUnsure" title="Đánh dấu phân vân">❓</button>
           <span class="exam-retry-note" id="examRetryNote"></span>
           <span class="exam-per-question-timer hidden" id="examPerQuestionTimerWrap">
             ⏱ <span id="examPerQuestionTimer">30</span>s
@@ -291,7 +301,6 @@
         </div>
         <div class="quiz-question exam-question" id="examQuestion"></div>
         <div class="quiz-options" id="examOptions"></div>
-        <div class="exam-secondguess-box hidden" id="examSecondGuessBox"></div>
         <div class="exam-history-note hidden" id="examHistoryNote"></div>
         <div class="exam-explain-row hidden" id="examExplainRow">
           <button class="ghost-btn" id="btnExamShowExplain">💡 Xem giải thích đáp án</button>
@@ -456,7 +465,7 @@
           <span class="exam-progress-text" id="choukaiProgressText">Câu 1/5 · Mondai 1</span>
           <button class="icon-btn exam-nav-btn" id="btnChoukaiNext">Câu sau →</button>
           <button class="icon-btn choukai-flag-btn" id="btnChoukaiFlag" title="Đánh dấu để xem lại">🚩</button>
-          <button class="icon-btn choukai-unsure-btn" id="btnChoukaiUnsure" title="Đánh dấu phân vân">❓</button>
+          <span class="choukai-unsure-hint" title="Bấm 🤔 ở góc mỗi đáp án để đánh dấu đáp án phân vân (suýt chọn)">🤔 phân vân: bấm trên từng đáp án</span>
           <button class="ghost-btn exam-exit-early-btn hidden" id="btnChoukaiExitEarly">🚪 Thoát & xem kết quả</button>
         </div>
 
@@ -723,14 +732,14 @@
      README.md để biết module nào phụ trách phần nào. -->
 <script src="js/core.js?v=6"></script>
 <script src="js/scoring.js?v=1"></script>
-<script src="js/stats-weakness.js?v=6"></script>
+<script src="js/stats-weakness.js?v=5"></script>
 <script src="js/config-focus.js?v=1"></script>
 <script src="js/loader-nav.js?v=6"></script>
 <script src="js/flashcard-edit.js?v=3"></script>
-<script src="js/table-srs-typing.js?v=2"></script>
+<script src="js/table-srs-typing.js?v=3"></script>
 <script src="js/quiz-match.js?v=2"></script>
-<script src="js/exam.js?v=9"></script>
-<script src="js/choukai.js?v=6"></script>
+<script src="js/exam.js?v=6"></script>
+<script src="js/choukai.js?v=7"></script>
 <script src="js/grammar-groups.js?v=2"></script>
 <script src="js/init.js?v=11"></script>
 </body>

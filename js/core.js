@@ -11,9 +11,11 @@ const App = {
   srsComboActive: false, // true khi đang học SRS gộp nhiều bộ ngữ pháp cùng lúc (xem startComboSrs())
   choukaiDraftIndex: null, // đáp án đang chọn NHÁP (chưa xác nhận) của câu đề nghe hiện tại
   choukaiFlagged: new Set(), // các câu đề nghe đã đánh dấu cờ để xem lại (key choukaiKeyFor)
-  choukaiUnsure: new Set(), // các câu đề nghe đã đánh dấu phân vân
-  examFlagged: new Set(), // các câu đề thi chữ đã đánh dấu cờ (key = qIndex, dùng theo App.currentExamId)
-  examUnsure: new Set(), // các câu đề thi chữ đã đánh dấu phân vân
+  // ĐÁNH DẤU PHÂN VÂN — nay theo TỪNG ĐÁP ÁN, không phải cả câu:
+  // key (choukaiKeyFor) -> mảng các optionIndex mình phân vân (ngoài đáp án đã chọn).
+  // Dùng để sau khi chấm biết mình "suýt chọn" đáp án nào; nếu đáp án phân vân đó
+  // lại chính là đáp án đúng thì cảnh báo mạnh ("trực giác đúng mà bỏ qua").
+  choukaiUnsureOptions: {},
   currentDeckId: null,
   currentDeckType: null, // "TUVUNG" | "NGUPHAP"
   currentWords: [],

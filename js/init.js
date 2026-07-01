@@ -16,12 +16,55 @@ document.addEventListener("visibilitychange", () => {
   }
 });
 
+// Đếm ngược tới ngày thi JLPT N2 (đọc data-exam-date trên #examCountdown).
+// Thanh tiến độ lấy mốc 90 ngày trước ngày thi làm điểm bắt đầu để tạo cảm giác
+// "kim đồng hồ đang chạy" — càng gần ngày thi thanh càng đầy.
+function initExamCountdown() {
+  const el = document.getElementById("examCountdown");
+  if (!el) return;
+  const examDate = new Date((el.dataset.examDate || "2026-07-05") + "T00:00:00");
+  const RUNWAY_DAYS = 90;
+
+  function render() {
+    const now = new Date();
+    const msPerDay = 24 * 60 * 60 * 1000;
+    const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const days = Math.round((examDate - startOfToday) / msPerDay);
+    const daysEl = document.getElementById("examCountdownDays");
+    const dateEl = document.getElementById("examCountdownDate");
+    const fill = document.getElementById("examCountdownBarFill");
+
+    el.classList.remove("is-urgent", "is-today", "is-past");
+    if (days > 0) {
+      daysEl.textContent = days;
+      dateEl.textContent = "05/07 · がんばって！";
+      if (days <= 7) el.classList.add("is-urgent");
+    } else if (days === 0) {
+      daysEl.textContent = "0";
+      dateEl.textContent = "Hôm nay thi — 頑張れ！💪";
+      el.classList.add("is-today");
+    } else {
+      daysEl.textContent = "✓";
+      dateEl.textContent = "Đã thi xong — お疲れ様！";
+      el.classList.add("is-past");
+    }
+    if (fill) {
+      const pct = Math.max(0, Math.min(100, ((RUNWAY_DAYS - days) / RUNWAY_DAYS) * 100));
+      fill.style.width = pct + "%";
+    }
+  }
+  render();
+  // Cập nhật lại lúc nửa đêm (hoặc khi tab được mở lại lâu) — không cần chính xác từng giây.
+  setInterval(render, 60 * 1000);
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
   loadFieldConfig();
   loadEditPatches();
   loadStarredItems();
   loadShuffleConfig();
   ensureVoicesLoaded();
+  initExamCountdown();
 
   App.decks = await loadDecks();
   buildGrammarIndex();
@@ -259,6 +302,18 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("srsCard").addEventListener("click", () => {
     flipSrsCard();
   });
+  // Nút ★ ngay trên thẻ SRS — đánh dấu sao trực tiếp khi đang ôn, không lật thẻ.
+  document.querySelectorAll(".srs-star-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (App.srsComboActive) return; // combo gộp bộ: không đánh dấu sao (xem renderSrsStarButtons)
+      const w = App.srsQueue[App.srsIndex];
+      if (!w) return;
+      toggleStar(App.currentDeckId, w._id);
+      renderSrsStarButtons(w);
+      renderTable();
+    });
+  });
   document.getElementById("btnSrsFlip").addEventListener("click", (e) => {
     e.stopPropagation();
     flipSrsCard();
@@ -400,8 +455,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
   document.getElementById("btnExamPrev").addEventListener("click", examGoPrev);
   document.getElementById("btnExamNext").addEventListener("click", examGoNext);
-  document.getElementById("btnExamFlag").addEventListener("click", toggleExamFlag);
-  document.getElementById("btnExamUnsure").addEventListener("click", toggleExamUnsure);
   document.getElementById("btnExamExitEarly").addEventListener("click", () => {
     if (confirm("Dừng làm các câu sai còn lại và xem kết quả ngay với những gì đã làm?")) {
       exitExamEarlyAndShowResult();
@@ -445,7 +498,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("btnChoukaiContinue").addEventListener("click", choukaiGoNext);
   document.getElementById("btnChoukaiConfirm").addEventListener("click", confirmChoukaiAnswer);
   document.getElementById("btnChoukaiFlag").addEventListener("click", toggleChoukaiFlag);
-  document.getElementById("btnChoukaiUnsure").addEventListener("click", toggleChoukaiUnsure);
+  // (Phân vân nay đánh dấu theo TỪNG đáp án qua badge 🤔 trên mỗi lựa chọn —
+  //  không còn nút toggle cả-câu ở thanh công cụ.)
   document.getElementById("btnChoukaiPlay").addEventListener("click", () => {
     const el = document.getElementById("choukaiAudioEl");
     if (el.src) { el.currentTime = 0; el.play().catch(() => {}); }

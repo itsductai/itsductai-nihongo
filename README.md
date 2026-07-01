@@ -46,7 +46,7 @@ itsductai-nihongo/
 │   └── *.json                   (8 file hiện có)
 ├── dethi-choukai/                (đề luyện nghe — xem mục 19)
 │   ├── index.json
-│   └── choukai-NN.json           (hiện có choukai-01, 02, 12, 16, 18, 19)
+│   └── choukai-NN.json           (hiện có choukai-01, 02, 18, 19)
 └── file-nghe/                     (audio .m4a/.mp3 cho phần luyện nghe — Zane tự upload,
                                      KHÔNG đi qua Claude. Tên file phải khớp 100% với field
                                      audioFile/audioFiles trong từng choukai-NN.json)
@@ -570,16 +570,14 @@ Các file giáo trình Mimi (`mimi-n2-unit1`, `unit2`, `unit3-adj`, `unit4`, `un
 **⚠️ Trùng nội dung đã xử lý (không cần làm lại):** Unit 6 (phó từ/liên từ) đã rà soát kỹ — phần liên từ logic (だから/しかし/ところが...) trùng ~100% với `mimi-n2-tunoi-photu.json` nên KHÔNG đưa vào Unit 6, chỉ giữ phần phó từ mức độ/thời gian/trạng thái thực sự mới (59 từ).
 
 ### `dethi/` (8 file — đề thi trắc nghiệm chữ)
-11 đề tự soạn đầy đủ Mondai 1-9 (có giải thích chuẩn): `n2-2021-07`, `n2-2021-12`, `n2-2022-07`, `n2-2022-12`, `n2-2023-07`, `n2-2024-07`, `n2-2024-12`, `n2-2025-07`, `n2-2025-12` (format mới, 51 câu: M3=3, M4=7, M9=4); `n2-2018-07` (format cũ, 54 câu: M3=5, M4=7, M9=5), `n2-2018-12` (format cũ, 52 câu: M3=5, M4=5, M9=5 — đề này lệch chuẩn cũ một chút ở M4, đã đối chiếu kỹ theo đúng heading 問題X trong tài liệu gốc). 1 đề mẫu nhỏ (`mondai1-mau-2023-12`, 3 câu). `n2-2019-12`, `n2-2020-12`, `n2-2023-12` — 30/51 câu (chỉ Mondai 1-6) — **đã có đủ `giai_thich` cho cả 30 câu** mỗi đề.
+4 đề tự soạn đầy đủ (51 câu, có giải thích + gạch chân kanji): `n2-2024-07`, `n2-2024-12`, `n2-2025-07`, `n2-2025-12`. 1 đề mẫu nhỏ (`mondai1-mau-2023-12`, 3 câu). **3 đề CHƯA hoàn chỉnh:** `n2-2019-12`, `n2-2020-12`, `n2-2023-12` — mới có 30/51 câu (chỉ Mondai 1-6, THIẾU Mondai 7-9: ghép câu ★, đoạn văn), và **chưa có `giai_thich`** cho câu nào.
 
 ### `dethi-choukai/` (đề luyện nghe — MỚI, đang xây)
 - `choukai-01.json` — 31 câu, đầy đủ script+dịch+tip, audioMode `combined`. **CHƯA có** `startSec`/`lineTimestamps`.
 - `choukai-02.json` — 32 câu, đầy đủ, audioMode `split`. **CHƯA có** `startSec`/`lineTimestamps`.
-- `choukai-12.json` — 30 câu (JLPT N2 2023/12), đầy đủ script+dịch, audioMode `split`. **CHƯA có** `startSec`/`lineTimestamps`. Đúng 3 quy tắc hình thức: M1/M2/M5-câu2 có in đáp án thật; M3/M4/M5-câu1 KHÔNG in gì (chỉ "1,2,3..."), toàn bộ câu hỏi + đáp án nói dồn vào `script`.
-- `choukai-16.json` — 30 câu (JLPT N2 2019/12), đầy đủ script+dịch, audioMode `split`. **ĐÃ CÓ** `startSec`/`lineTimestamps` (203 dòng, khớp trực tiếp 79.3% bằng thuật toán so khớp mờ `align_timestamps.py` với file `choukai_16_time.docx`, phần còn lại nội suy tuyến tính giữa 2 mốc gần nhất). File mốc giờ đề này có ĐỊNH DẠNG KHÁC bản 18/19 (timestamp kèm "話者 N" trên cùng dòng, tên audio đuôi `.mp3` thay vì `.m4a`) — đã sửa `align_timestamps.py` để đọc được cả 2 định dạng. Cùng quy tắc hình thức như choukai-12.
 - **`choukai-18.json` — XONG, ĐÃ CÓ timestamp** (32 câu, đầy đủ script+dịch+tip+keywords, audioMode `split`). Transcribe đúng 100% từ `聴解 18.docx` gốc. Tên file audio (`聴解 18 1.m4a`...`5.m4a`) đã xác nhận đúng từ file `choukai_18_time.docx` (transcript tự động kèm mốc giờ mà Zane gửi) — KHÔNG còn là đoán theo mẫu nữa. `startSec`/`lineTimestamps` đã gán bằng thuật toán so khớp mờ (`align_timestamps.py`) giữa script chính thức và mốc giờ trong file transcript tự động — xem mục 19 để biết quy trình + lưu ý độ chính xác.
 - **`choukai-19.json` — XONG, ĐÃ CÓ timestamp** (32 câu — Zane tự soạn sẵn theo đúng schema, gửi lại để Claude không cần làm lại script/dịch/tip). Claude chỉ thêm `startSec`/`lineTimestamps` từ file `choukai_19_time.docx` bằng quy trình giống đề 18. Tên file audio (`聴解 19 1.m4a`...`5.m4a`) đã có sẵn đúng trong file Zane gửi.
-- **CHƯA LÀM: đề 03-11, 13-15, 17** (14 đề) — đã có sẵn file script gốc `聴解 N.docx`, cấu trúc xác nhận ổn định (Mondai1≈5-6 câu, Mondai2=5-6 câu, Mondai3=5 câu, Mondai4=11-12 câu, Mondai5=2-4 điểm) — chỉ cần transcribe + dịch + viết tip theo đúng quy trình mục 19. Nếu Zane gửi kèm file `_time.docx` tương ứng, Claude sẽ gán `startSec`/`lineTimestamps` luôn trong cùng lần làm.
+- **CHƯA LÀM: đề 03-17** (15 đề) — đã có sẵn file script gốc `聴解 N.docx` (N=3..17), cấu trúc xác nhận ổn định (Mondai1≈5-6 câu, Mondai2=6 câu, Mondai3=5 câu, Mondai4=11-12 câu, Mondai5=3-4 điểm) — chỉ cần transcribe + dịch + viết tip theo đúng quy trình mục 19. Nếu Zane gửi kèm file `_time.docx` tương ứng, Claude sẽ gán `startSec`/`lineTimestamps` luôn trong cùng lần làm.
 - **`file-nghe/` (audio thật)**: Zane tự upload trực tiếp lên GitHub, KHÔNG đi qua Claude. Đề 18, 19 đã xác nhận đúng tên+đuôi `.m4a` qua file transcript tự động kèm mốc giờ — các đề 01, 02 (đuôi `.m4a`/`.mp3` theo ảnh chụp cũ) và các đề sẽ làm sau vẫn cần đối chiếu cẩn thận như quy tắc cũ.
 
 ---
