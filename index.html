@@ -278,6 +278,8 @@
           <button class="icon-btn exam-nav-btn" id="btnExamPrev" title="Xem câu trước">← Câu trước</button>
           <span class="exam-progress-text">Câu <span id="examPos">0</span>/<span id="examQueueTotal">0</span></span>
           <button class="icon-btn exam-nav-btn" id="btnExamNext" title="Xem câu sau / quay lại câu hiện tại">Câu sau →</button>
+          <button class="icon-btn choukai-flag-btn" id="btnExamFlag" title="Đánh dấu để xem lại">🚩</button>
+          <button class="icon-btn choukai-unsure-btn" id="btnExamUnsure" title="Đánh dấu phân vân">❓</button>
           <span class="exam-retry-note" id="examRetryNote"></span>
           <span class="exam-per-question-timer hidden" id="examPerQuestionTimerWrap">
             ⏱ <span id="examPerQuestionTimer">30</span>s
@@ -289,6 +291,7 @@
         </div>
         <div class="quiz-question exam-question" id="examQuestion"></div>
         <div class="quiz-options" id="examOptions"></div>
+        <div class="exam-secondguess-box hidden" id="examSecondGuessBox"></div>
         <div class="exam-history-note hidden" id="examHistoryNote"></div>
         <div class="exam-explain-row hidden" id="examExplainRow">
           <button class="ghost-btn" id="btnExamShowExplain">💡 Xem giải thích đáp án</button>
@@ -718,17 +721,17 @@
      load SAU CÙNG vì nó chạy code thực thi ngay (DOMContentLoaded) cần mọi hàm
      ở các module khác đã được định nghĩa xong. Xem mục cấu trúc file trong
      README.md để biết module nào phụ trách phần nào. -->
-<script src="js/core.js?v=5"></script>
+<script src="js/core.js?v=6"></script>
 <script src="js/scoring.js?v=1"></script>
-<script src="js/stats-weakness.js?v=5"></script>
+<script src="js/stats-weakness.js?v=6"></script>
 <script src="js/config-focus.js?v=1"></script>
 <script src="js/loader-nav.js?v=6"></script>
 <script src="js/flashcard-edit.js?v=3"></script>
 <script src="js/table-srs-typing.js?v=2"></script>
 <script src="js/quiz-match.js?v=2"></script>
-<script src="js/exam.js?v=6"></script>
+<script src="js/exam.js?v=9"></script>
 <script src="js/choukai.js?v=6"></script>
 <script src="js/grammar-groups.js?v=2"></script>
-<script src="js/init.js?v=10"></script>
+<script src="js/init.js?v=11"></script>
 </body>
 </html>

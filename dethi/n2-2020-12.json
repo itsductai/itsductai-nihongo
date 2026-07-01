@@ -2,104 +2,164 @@
   "title": "Đề thi JLPT N2 2020-12",
   "questions": [
     {
-      "de_bai": "問題1 の言葉の読み方として最もよいものを、1、2、3、4から一つ選びなさい。\n\"倒さない\"ように気をつけてください。",
+      "de_bai": "問題1 の言葉の読み方として最もよいものを、1、2、3、4から一つ選びなさい。\n\"<u>倒さない</u>\"ように気をつけてください。",
       "options": [
         "くずさない",
         "たおさない",
         "こわさない",
         "つぶさない"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「くずさない」(không làm sụp/vỡ) không phải cách đọc của 「倒さない」.",
+        "Đúng. 「倒さない」đọc là 「たおさない」, nghĩa là 'không làm đổ/ngã' — chú ý đừng làm đổ.",
+        "Sai. 「こわさない」(không làm hỏng) không phải cách đọc của 「倒さない」.",
+        "Sai. 「つぶさない」(không làm bẹp/nát) không phải cách đọc của 「倒さない」."
+      ]
     },
     {
-      "de_bai": "問題1 の言葉の読み方として最もよいものを、1、2、3、4から一つ選びなさい。\n今回の件での\"損害\"は数千万円にのぼった。",
+      "de_bai": "問題1 の言葉の読み方として最もよいものを、1、2、3、4から一つ選びなさい。\n今回の件での\"<u>損害</u>\"は数千万円にのぼった。",
       "options": [
         "ひかい",
         "そんかい",
         "そんがい",
         "ひがい"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. Không có cách đọc 「ひかい」cho từ này.",
+        "Sai. Không có cách đọc 「そんかい」cho từ này.",
+        "Đúng. 「損害」đọc là 「そんがい」, nghĩa là thiệt hại (vụ việc lần này thiệt hại lên đến hàng chục triệu yên).",
+        "Sai. 「ひがい」là cách đọc của từ khác (被害 - bị thiệt hại do bên ngoài), không phải 損害."
+      ]
     },
     {
-      "de_bai": "問題1 の言葉の読み方として最もよいものを、1、2、3、4から一つ選びなさい。\n思ったより\"険しい\"山道だった。",
+      "de_bai": "問題1 の言葉の読み方として最もよいものを、1、2、3、4から一つ選びなさい。\n思ったより\"<u>険しい</u>\"山道だった。",
       "options": [
         "くるしい",
         "さびしい",
         "はげしい",
         "けわしい"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「くるしい」(đau khổ/khó chịu) không phải cách đọc của 「険しい」.",
+        "Sai. 「さびしい」(cô đơn) không phải cách đọc của 「険しい」.",
+        "Sai. 「はげしい」(mãnh liệt/dữ dội) không phải cách đọc của 「険しい」.",
+        "Đúng. 「険しい」đọc là 「けわしい」, nghĩa là hiểm trở, dốc đứng — đường núi hiểm trở hơn dự kiến."
+      ]
     },
     {
-      "de_bai": "問題1 の言葉の読み方として最もよいものを、1、2、3、4から一つ選びなさい。\nこの辺りは\"比較的\"人通りが少ない。",
+      "de_bai": "問題1 の言葉の読み方として最もよいものを、1、2、3、4から一つ選びなさい。\nこの辺りは\"<u>比較的</u>\"人通りが少ない。",
       "options": [
         "ひこうてい",
         "ひこてき",
         "ひかくてき",
         "ひかてき"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. Không có cách đọc 「ひこうてい」cho từ này.",
+        "Sai. Không có cách đọc 「ひこてき」cho từ này.",
+        "Đúng. 「比較的」đọc là 「ひかくてき」, nghĩa là 'tương đối' — khu vực này tương đối ít người qua lại.",
+        "Sai. Không có cách đọc 「ひかてき」cho từ này."
+      ]
     },
     {
-      "de_bai": "問題1 の言葉の読み方として最もよいものを、1、2、3、4から一つ選びなさい。\n飛行機は\"下降\"を始めた。",
+      "de_bai": "問題1 の言葉の読み方として最もよいものを、1、2、3、4から一つ選びなさい。\n飛行機は\"<u>下降</u>\"を始めた。",
       "options": [
         "かこう",
         "かくう",
         "げこう",
         "げくう"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「下降」đọc là 「かこう」, nghĩa là hạ xuống — máy bay bắt đầu hạ cánh.",
+        "Sai. Không có cách đọc 「かくう」cho từ này.",
+        "Sai. Không có cách đọc 「げこう」cho từ này.",
+        "Sai. Không có cách đọc 「げくう」cho từ này."
+      ]
     },
     {
-      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1、2、3、4から一つ選びなさい。\n鈴木さんは\"あざやかな\"色のシャツを着ていた。",
+      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1、2、3、4から一つ選びなさい。\n鈴木さんは\"<u>あざやか</u>な\"色のシャツを着ていた。",
       "options": [
         "鮮やか",
         "美やか",
         "清やか",
         "純やか"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「鮮やか」đọc là 「あざやか」, nghĩa là rực rỡ, tươi sáng (màu áo).",
+        "Sai. 「美やか」không phải từ tồn tại trong tiếng Nhật.",
+        "Sai. 「清やか」không phải từ tồn tại trong tiếng Nhật.",
+        "Sai. 「純やか」không phải từ tồn tại trong tiếng Nhật."
+      ]
     },
     {
-      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1、2、3、4から一つ選びなさい。\n今年の夏休みは\"きせい\"の予定はありません。",
+      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1、2、3、4から一つ選びなさい。\n今年の夏休みは\"<u>きせい</u>\"の予定はありません。",
       "options": [
         "帰勢",
         "帰斉",
         "帰省",
         "帰成"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「帰勢」không tồn tại trong tiếng Nhật.",
+        "Sai. 「帰斉」không tồn tại trong tiếng Nhật.",
+        "Đúng. 「帰省」đọc là 「きせい」, nghĩa là về quê (thăm nhà) — không có kế hoạch về quê kỳ nghỉ hè này.",
+        "Sai. 「帰成」không tồn tại trong tiếng Nhật."
+      ]
     },
     {
-      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1、2、3、4から一つ選びなさい。\nもう少し\"ちぢめて\"ください。",
+      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1、2、3、4から一つ選びなさい。\nもう少し\"<u>ちぢめて</u>\"ください。",
       "options": [
         "薄めて",
         "納めて",
         "貯めて",
         "縮めて"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「薄めて」(làm nhạt/pha loãng) không phải cách viết của 「ちぢめて」.",
+        "Sai. 「納めて」(nộp/cất) không phải cách viết của 「ちぢめて」.",
+        "Sai. 「貯めて」(để dành/tiết kiệm) không phải cách viết của 「ちぢめて」.",
+        "Đúng. 「縮めて」đọc là 「ちぢめて」, nghĩa là làm ngắn/rút ngắn lại."
+      ]
     },
     {
-      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1、2、3、4から一つ選びなさい。\nこれからさまざまことを\"じっせん\"していきたい。",
+      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1、2、3、4から一つ選びなさい。\nこれからさまざまことを\"<u>じっせん</u>\"していきたい。",
       "options": [
         "実施",
         "実践",
         "実桟",
         "実旋"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「実施」(thực thi, đọc là じっし) gần giống nhưng SAI cách đọc — đề bài yêu cầu じっせん.",
+        "Đúng. 「実践」đọc là 「じっせん」, nghĩa là thực hành, áp dụng vào thực tế.",
+        "Sai. 「実桟」không tồn tại trong tiếng Nhật.",
+        "Sai. 「実旋」không tồn tại trong tiếng Nhật."
+      ]
     },
     {
-      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1、2、3、4から一つ選びなさい。\n西村氏の作品の中ではこの小説は、かなり\"いしょく\"だ。",
+      "de_bai": "問題2 の言葉を漢字で書くとき、最もよいものを1、2、3、4から一つ選びなさい。\n西村氏の作品の中ではこの小説は、かなり\"<u>いしょく</u>\"だ。",
       "options": [
         "異色",
         "違色",
         "異食",
         "違食"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「異色」đọc là 「いしょく」, nghĩa là 'khác biệt, độc đáo (so với phong cách thường thấy)' — tiểu thuyết này khá khác biệt trong các tác phẩm của tác giả.",
+        "Sai. 「違色」không tồn tại trong tiếng Nhật.",
+        "Sai. 「異食」(đọc giống nhưng nghĩa là ăn vật lạ, một dạng rối loạn ăn uống) không hợp ngữ cảnh này.",
+        "Sai. 「違食」không tồn tại trong tiếng Nhật."
+      ]
     },
     {
       "de_bai": "問題3 ( )に入れるのに最もよいものを、1、2、3、4から一つ選びなさい。\n宿題を( )提出するよう、先生に言われた。",
@@ -109,7 +169,13 @@
         "再",
         "補"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「復提出」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Sai. 「改提出」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Đúng. 「再提出」nghĩa là 'nộp lại lần nữa' — được giáo viên yêu cầu nộp lại bài tập.",
+        "Sai. 「補提出」không phải cách ghép tự nhiên trong tiếng Nhật."
+      ]
     },
     {
       "de_bai": "問題3 ( )に入れるのに最もよいものを、1、2、3、4から一つ選びなさい。\nあの人は都会( )だ。",
@@ -119,7 +185,13 @@
         "始まり",
         "生き"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「都会育ち」nghĩa là 'sinh ra và lớn lên ở thành phố' — cách nói chuẩn để chỉ nơi một người được nuôi dưỡng.",
+        "Sai. 「都会過ごし」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Sai. 「都会始まり」không phải cách ghép tự nhiên trong tiếng Nhật.",
+        "Sai. 「都会生き」không phải cách ghép tự nhiên trong tiếng Nhật."
+      ]
     },
     {
       "de_bai": "問題3 ( )に入れるのに最もよいものを、1、2、3、4から一つ選びなさい。\n( )仕事終わったので、休憩しょう。",
@@ -129,7 +201,13 @@
         "小",
         "一"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「半仕事」không phải từ tồn tại trong tiếng Nhật.",
+        "Sai. 「短仕事」không phải từ tồn tại trong tiếng Nhật.",
+        "Sai. 「小仕事」không phải cách nói tự nhiên trong ngữ cảnh này.",
+        "Đúng. 「一仕事」là cụm cố định nghĩa là 'một việc, một khoảng công việc' — vừa xong một việc thì nghỉ ngơi thôi."
+      ]
     },
     {
       "de_bai": "問題4 ( )に入れるのに最もよいものを、1、2、3、4から一つ選びなさい。\n彼の演技はとても個人的で、見る人の( )が大きく分かれる。",
@@ -139,7 +217,13 @@
         "信頼",
         "測定"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「考慮」(xem xét, cân nhắc) không hợp ngữ cảnh 'người xem có ý kiến khác nhau'.",
+        "Đúng. 「評価」nghĩa là 'đánh giá' — diễn xuất rất cá nhân nên đánh giá của người xem chia rẽ nhiều.",
+        "Sai. 「信頼」(tin tưởng) không hợp ngữ cảnh này.",
+        "Sai. 「測定」(đo lường, dùng cho số liệu vật lý) không hợp ngữ cảnh đánh giá diễn xuất."
+      ]
     },
     {
       "de_bai": "問題4 ( )に入れるのに最もよいものを、1、2、3、4から一つ選びなさい。\n話し合いでは、相手の意見を( )し、よく聞くことが大切だ。",
@@ -149,7 +233,13 @@
         "提案",
         "尊重"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「ゴール」(mục tiêu/đích) không hợp ngữ cảnh tôn trọng ý kiến người khác.",
+        "Sai. 「信仰」(tín ngưỡng, niềm tin tôn giáo) không hợp ngữ cảnh này.",
+        "Sai. 「提案」(đề xuất) không hợp — câu cần động từ thể hiện THÁI ĐỘ với ý kiến người khác, không phải đưa ra đề xuất.",
+        "Đúng. 「尊重」nghĩa là 'tôn trọng' — trong thảo luận, tôn trọng và lắng nghe kỹ ý kiến đối phương là quan trọng."
+      ]
     },
     {
       "de_bai": "問題4 ( )に入れるのに最もよいものを、1、2、3、4から一つ選びなさい。\nこの商品は、健康を気にする40代から50代の人を( )に開発しました。",
@@ -159,7 +249,13 @@
         "アピール",
         "ターゲット"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「発揮」(phát huy, dùng cho năng lực) không hợp ngữ cảnh phát triển sản phẩm hướng tới nhóm khách hàng.",
+        "Sai. 「インパクト」(ảnh hưởng/tác động) không hợp ngữ cảnh này.",
+        "Sai. 「アピール」(thu hút, kêu gọi) không hợp ngữ cảnh 'phát triển SẢN PHẨM HƯỚNG TỚI ai'.",
+        "Đúng. 「ターゲット」nghĩa là 'đối tượng mục tiêu' — phát triển sản phẩm hướng tới nhóm khách 40-50 tuổi quan tâm sức khỏe."
+      ]
     },
     {
       "de_bai": "問題4 ( )に入れるのに最もよいものを、1、2、3、4から一つ選びなさい。\n佐藤さんは服装や髪形が個性的で、他の人とは違う( )の雰囲気がある。",
@@ -169,7 +265,13 @@
         "独特",
         "区別"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「定着」(định hình, ổn định) không hợp ngữ cảnh phong cách cá nhân khác biệt.",
+        "Sai. 「専用」(dùng riêng, chuyên dụng) không hợp ngữ cảnh không khí/phong cách một người.",
+        "Đúng. 「独特」nghĩa là 'độc đáo, riêng biệt' — phong cách ăn mặc và tóc tạo nên không khí riêng biệt khác mọi người.",
+        "Sai. 「区別」(phân biệt) không hợp ngữ cảnh miêu tả không khí một người."
+      ]
     },
     {
       "de_bai": "問題4 ( )に入れるのに最もよいものを、1、2、3、4から一つ選びなさい。\n前回の大会では、あの二人は最後まで優勝を( )していた。",
@@ -179,7 +281,13 @@
         "奪って",
         "破って"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「戦って」(chiến đấu, đánh nhau theo nghĩa xung đột/quân sự) không hợp ngữ cảnh thi đấu giành chức vô địch.",
+        "Đúng. 「争って」nghĩa là 'tranh giành, cạnh tranh' — 2 người đó tranh nhau chức vô địch đến cuối giải trước.",
+        "Sai. 「奪って」(cướp, giành lấy bằng vũ lực/thủ đoạn) không hợp sắc thái trung lập của câu.",
+        "Sai. 「破って」(phá vỡ, đánh bại — thường đi với đối tượng cụ thể như 'phá vỡ kỷ lục') không hợp ngữ cảnh này."
+      ]
     },
     {
       "de_bai": "問題4 ( )に入れるのに最もよいものを、1、2、3、4から一つ選びなさい。\n高橋さんの家を訪ねたが、みんな出かけているようで、人の( )がなかった。",
@@ -189,7 +297,13 @@
         "気配",
         "状態"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「動作」(động tác, cử chỉ) không hợp ngữ cảnh 'không cảm nhận được gì cả'.",
+        "Sai. 「実感」(cảm nhận thực tế) không hợp về mặt ngữ pháp/ngữ cảnh này.",
+        "Đúng. 「気配」nghĩa là 'dấu hiệu, hơi hướng (có ai đó)' — đến nhà nhưng không có dấu hiệu có người ở nhà.",
+        "Sai. 「状態」(trạng thái) không hợp ngữ cảnh 'không cảm nhận được dấu hiệu có người'."
+      ]
     },
     {
       "de_bai": "問題4 ( )に入れるのに最もよいものを、1、2、3、4から一つ選びなさい。\n彼は自分で決めたルールも守らない、( )人だ。",
@@ -199,57 +313,93 @@
         "大まかな",
         "いいかげんな"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「不規則な」(không theo quy tắc, dùng cho lịch trình/nhịp sinh hoạt) không hợp miêu tả TÍNH CÁCH người không giữ lời.",
+        "Sai. 「あやふやな」(mơ hồ, không rõ ràng) không hợp ngữ cảnh người không tuân theo quy tắc do MÌNH đặt ra.",
+        "Sai. 「大まかな」(đại khái, không chi tiết) không hợp ngữ cảnh này.",
+        "Đúng. 「いいかげんな」nghĩa là 'tùy tiện, qua loa, vô trách nhiệm' — người không tuân thủ cả quy tắc do mình đặt ra."
+      ]
     },
     {
-      "de_bai": "問題5 の言葉に意味が最も近いものを、1、2、3、4から一つ選びなさい。\nボランティアで町の名所を\"ガイドして\"いる。",
+      "de_bai": "問題5 の言葉に意味が最も近いものを、1、2、3、4から一つ選びなさい。\nボランティアで町の名所を\"<u>ガイドして</u>\"いる。",
       "options": [
         "案内して",
         "宣伝して",
         "調査して",
         "記録して"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「ガイドして」nghĩa là 'hướng dẫn, dẫn đường' — gần nghĩa với 「案内して」(hướng dẫn/chỉ đường).",
+        "Sai. 「宣伝して」(quảng cáo, tuyên truyền) không sát nghĩa của ガイド.",
+        "Sai. 「調査して」(điều tra, khảo sát) không sát nghĩa của ガイド.",
+        "Sai. 「記録して」(ghi chép, ghi lại) không sát nghĩa của ガイド."
+      ]
     },
     {
-      "de_bai": "問題5 の言葉に意味が最も近いものを、1、2、3、4から一つ選びなさい。\n山口さんも\"真剣に\"作っていた。",
+      "de_bai": "問題5 の言葉に意味が最も近いものを、1、2、3、4から一つ選びなさい。\n山口さんも\"<u>真剣に</u>\"作っていた。",
       "options": [
         "上手に",
         "自由に",
         "積極的に",
         "まじめに"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「上手に」(khéo, giỏi) không sát nghĩa của 真剣に (vốn nói về THÁI ĐỘ chứ không phải KỸ NĂNG).",
+        "Sai. 「自由に」(tự do) không sát nghĩa của 真剣に.",
+        "Sai. 「積極的に」(tích cực, chủ động) gần nhưng không sát nghĩa bằng まじめに.",
+        "Đúng. 「真剣に」nghĩa là 'nghiêm túc, hết mình' — gần nghĩa với 「まじめに」(một cách nghiêm túc/chăm chỉ)."
+      ]
     },
     {
-      "de_bai": "問題5 の言葉に意味が最も近いものを、1、2、3、4から一つ選びなさい。\n彼女のような歌手は\"まれだ\"と思う。",
+      "de_bai": "問題5 の言葉に意味が最も近いものを、1、2、3、4から一つ選びなさい。\n彼女のような歌手は\"<u>まれだ</u>\"と思う。",
       "options": [
         "あまりいない",
         "人気が出ない",
         "人気が出る",
         "たくさんいる"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「まれだ」nghĩa là 'hiếm, ít có' — gần nghĩa với 「あまりいない」(không có nhiều).",
+        "Sai. 「人気が出ない」(không nổi tiếng) không sát nghĩa của まれだ.",
+        "Sai. 「人気が出る」(trở nên nổi tiếng) không sát nghĩa của まれだ.",
+        "Sai. 「たくさんいる」(có nhiều) ngược nghĩa với まれだ."
+      ]
     },
     {
-      "de_bai": "問題5 の言葉に意味が最も近いものを、1、2、3、4から一つ選びなさい。\nこの道は\"終日\"通行止めです。",
+      "de_bai": "問題5 の言葉に意味が最も近いものを、1、2、3、4から一つ選びなさい。\nこの道は\"<u>終日</u>\"通行止めです。",
       "options": [
         "週末",
         "夜間",
         "一日中",
         "今日まで"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「週末」(cuối tuần) không sát nghĩa của 終日.",
+        "Sai. 「夜間」(ban đêm) không sát nghĩa của 終日.",
+        "Đúng. 「終日」nghĩa là 'suốt cả ngày' — gần nghĩa với 「一日中」(cả ngày).",
+        "Sai. 「今日まで」(đến hôm nay) không sát nghĩa của 終日."
+      ]
     },
     {
-      "de_bai": "問題5 の言葉に意味が最も近いものを、1、2、3、4から一つ選びなさい。\n青木さんは髪を\"いじって\"いた。",
+      "de_bai": "問題5 の言葉に意味が最も近いものを、1、2、3、4から一つ選びなさい。\n青木さんは髪を\"<u>いじって</u>\"いた。",
       "options": [
         "切って",
         "触って",
         "洗って",
         "乾かして"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「切って」(cắt) không sát nghĩa của いじって trong ngữ cảnh này.",
+        "Đúng. 「いじって」nghĩa là 'mân mê, nghịch' — gần nghĩa với 「触って」(sờ/chạm vào, vd nghịch tóc).",
+        "Sai. 「洗って」(gội/rửa) không sát nghĩa của いじって.",
+        "Sai. 「乾かして」(làm khô/sấy) không sát nghĩa của いじって."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1、2、3、4から一つ選びなさい。\n「初期」",
@@ -259,7 +409,13 @@
         "池田選手は、試合の初期では負けていたが、最後には勝つことができた。",
         "今日は朝から雲に覆われ、初期は雨だったが、途中から雪に変わった。"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「曲の初期の部分」không tự nhiên — phần đầu bài hát nên dùng 「始め/最初」, không dùng 初期 (vốn dùng cho GIAI ĐOẠN dài như thời đại/quá trình).",
+        "Đúng. 「明治時代の初期」là cách dùng chuẩn — 初期 nghĩa là 'thời kỳ đầu' của một GIAI ĐOẠN/THỜI ĐẠI dài.",
+        "Sai. 「試合の初期」không tự nhiên — giai đoạn đầu của 1 trận đấu ngắn nên dùng 「序盤」, không dùng 初期.",
+        "Sai. 「今日は…初期は雨だった」không tự nhiên — phần đầu của 1 NGÀY nên dùng 「はじめ」, không dùng 初期 (vốn cho giai đoạn dài hơn)."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1、2、3、4から一つ選びなさい。\n「打ち明ける」",
@@ -269,7 +425,13 @@
         "大事な情報はすぐに上司に打ち明けましょう。",
         "ずっと秘密にしていたことを友達に打ち明けた。"
       ],
-      "dap_an_dung": 3
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「彼が何でも打ち明けてくれます」không hợp nghĩa — 打ち明ける nghĩa là THỔ LỘ bí mật của CHÍNH MÌNH, không phải 'giải thích giúp người khác'.",
+        "Sai. 「伝言を打ち明けておいて」không hợp — nhắn lại lời nhắn thì dùng 「伝えておいて」, không dùng 打ち明ける.",
+        "Sai. 「上司に打ち明けましょう」ở đây không hợp hoàn toàn — báo cáo thông tin công việc thì dùng 「報告しましょう」, 打ち明ける chỉ dùng cho việc thổ lộ bí mật riêng tư mang tính cá nhân.",
+        "Đúng. 「秘密を友達に打ち明けた」là cách dùng chuẩn — 打ち明ける nghĩa là 'thổ lộ, tiết lộ' bí mật/tâm sự của bản thân."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1、2、3、4から一つ選びなさい。\n「欠陥」",
@@ -279,7 +441,13 @@
         "先月発表された車のブレーキに欠陥が見つかり、販売が中止された。",
         "このサービスを利用することの欠陥は費用が非常にかかることだ。"
       ],
-      "dap_an_dung": 2
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「あの人の欠陥」không tự nhiên khi nói về tính xấu trong tính cách người — nên dùng 「欠点」, 欠陥 thường dùng cho SẢN PHẨM/THIẾT BỊ kỹ thuật.",
+        "Sai. 「レンズに欠陥がついてしまった」không hợp — vết bẩn/xước do lau thì dùng 「傷」, không dùng 欠陗.",
+        "Đúng. 「ブレーキに欠陥が見つかり」là cách dùng chuẩn — 欠陥 nghĩa là 'lỗi/khiếm khuyết kỹ thuật' của sản phẩm.",
+        "Sai. 「サービスの欠陥」ở đây không hợp tự nhiên bằng — chi phí cao là NHƯỢC ĐIỂM nên dùng 「欠点」thay vì 欠陥."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1、2、3、4から一つ選びなさい。\n「引退」",
@@ -289,7 +457,13 @@
         "この書店はもうすぐ商店街から引退し、駅前のビルの中で店を始めるらしい。",
         "中村選手は前大会でのけがが回復せず、次の試合への出場を引退した。"
       ],
-      "dap_an_dung": 1
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「大学を引退」không hợp — rời khỏi trường học thì dùng 「退学」, 引退 chỉ dùng cho việc RÚT LUI khỏi một NGHỀ NGHIỆP/SỰ NGHIỆP.",
+        "Đúng. 「監督が…引退することを発表した」là cách dùng chuẩn — 引退 nghĩa là 'giải nghệ, từ giã sự nghiệp' (sau khi để lại nhiều thành tựu).",
+        "Sai. 「商店街から引退」không hợp — rời khỏi khu phố để mở tiệm khác thì không dùng 引退, từ này không hợp với việc CHUYỂN ĐỊA ĐIỂM kinh doanh.",
+        "Sai. 「出場を引退した」không hợp về ngữ pháp — bỏ lỡ 1 trận đấu cụ thể do chấn thương dùng 「欠場した」, không dùng 引退 (vốn là từ bỏ HẲN sự nghiệp)."
+      ]
     },
     {
       "de_bai": "問題6 次の言葉の使い方として最もよいものを、1、2、3、4から一つ選びなさい。\n「ぎっしり」",
@@ -299,7 +473,13 @@
         "少し太ったせいで、ズボンがぎっしりしている。",
         "朝の電車はいつも人でぎっしりしている。"
       ],
-      "dap_an_dung": 0
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「本がぎっしり詰まっている」là cách dùng chuẩn — ぎっしり nghĩa là 'chật cứng, đầy ních' (vật cứng xếp khít vào nhau).",
+        "Sai. 「ジュースがぎっしり入っている」không hợp — ぎっしり dùng cho VẬT RẮN xếp chặt, không hợp với CHẤT LỎNG như nước trái cây.",
+        "Sai. 「ズボンがぎっしりしている」không hợp — quần bó sát do béo lên thì dùng 「きつい」, không dùng ぎっしり.",
+        "Sai. 「電車はいつも人でぎっしりしている」ít tự nhiên hơn — đông người trên tàu thường dùng 「ぎゅうぎゅう」hoặc 「いっぱい」, ぎっしり nghiêng về vật xếp khít hơn là người chen chúc."
+      ]
     }
   ],
   "mondai_breakdown": [

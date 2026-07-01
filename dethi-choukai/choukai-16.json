@@ -1,0 +1,837 @@
+{
+  "id": "choukai-16",
+  "title": "聴解 16 (JLPT N2 2019/12)",
+  "year": "2019/12",
+  "audioMode": "split",
+  "audioFiles": {
+    "1": "聴解 16 1.mp3",
+    "2": "聴解 16 2.mp3",
+    "3": "聴解 16 3.mp3",
+    "4": "聴解 16 4.mp3",
+    "5": "聴解 16 5.mp3"
+  },
+  "mondai": [
+    {
+      "number": 1,
+      "name": "課題理解",
+      "instruction": "問題1では、まず質問を聞いてください。それから話を聞いて、問題用紙の1から4の中から、最もよいものを一つ選んでください。",
+      "questions": [
+        {
+          "qnum": 1,
+          "prompt": "アパートで女の人と管理人が話しています。女の人は壊れたパソコンをどうしますか。",
+          "isDualQuestion": false,
+          "script": "アパートで女の人と管理人が話しています。女の人は壊れたパソコンをどうしますか。\n女:すみません。管理人さん、壊れたパソコンは、粗大ごみの申し込みをして、アパートの指定の場所に出せば、収集してくれるんでしたっけ。 薄いノートパソコンなんですけど。\n男: パソコンはメーカーに回収してもらうか、パソコンを買ったお店に持っていくかしないと、粗大ごみとして出せないんでね。\n女:そうなんですか。十何年も前のものなので、どこで買ったか。\n男: でしたら、メーカーに連絡すれば、専用の伝票を送ってくれますから、それを梱包したパソコンに貼って、郵送すればいいんですよ。\n女:意外と簡単な手続きなんですね。\n男: 大きい自治体だと、市役所とか公共施設に回収箱が設置されていて、そこに入れればパソコンも回収してくれるんですけど。この地域はないですよね。\n女:そうですか。 女の人は壊れたパソコンをどうしますか。",
+          "scriptVi": "Người nữ và quản lý nói chuyện ở chung cư. Người nữ sẽ xử lý chiếc máy tính hỏng thế nào?\nNữ: Xin lỗi, chú quản lý ơi, máy tính hỏng nếu đăng ký rác cồng kềnh rồi để ở chỗ quy định của chung cư thì có được thu gom không ạ? Là laptop mỏng thôi.\nNam: Máy tính phải nhờ hãng sản xuất thu hồi, hoặc mang đến cửa hàng đã mua, chứ không thể bỏ như rác cồng kềnh được.\nNữ: Vậy ạ. Mua từ hơn chục năm trước rồi nên không nhớ mua ở đâu...\nNam: Vậy thì liên hệ hãng sản xuất, họ sẽ gửi phiếu chuyên dụng, dán lên gói máy tính rồi gửi bưu điện là được.\nNữ: Thủ tục đơn giản hơn tôi tưởng nhỉ.\nNam: Ở khu tự trị lớn thì có hộp thu gom đặt ở tòa thị chính hay cơ sở công cộng, bỏ vào đó cũng được thu. Nhưng khu này thì không có.\nNữ: Vậy ạ.\nNgười nữ sẽ xử lý chiếc máy tính hỏng thế nào?",
+          "options": [
+            "アパートの指定場所に出す",
+            "メーカーに送る",
+            "買った店に持っていく",
+            "市のかいしゅう箱に入れる"
+          ],
+          "correctIndex": 1,
+          "tip": "",
+          "keywords": [],
+          "startSec": 35.0,
+          "lineTimestamps": [
+            35.0,
+            46.0,
+            59.0,
+            69.0,
+            74.0,
+            83.0,
+            86.0,
+            104.0
+          ]
+        },
+        {
+          "qnum": 2,
+          "prompt": "会社で部長と事務の女の人が話しています。女の人はこの後、 何をしなければなりませんか。",
+          "isDualQuestion": false,
+          "script": "会社で部長と事務の女の人が話しています。女の人はこの後、 何をしなければなりませんか。\n男: ちょっといいかな、北山食品からのプラスチック容器の注文のことなんだけど、この請求書を作成したのって。\n女:ああ、部長、作ったのは私です。何か間違いがありましたか。\n男: いいや、これ、中村君に頼まれて作成したんだよね。営業担当は中村君だから。\n女:はい。\n男: 注文の数がこれまでよりずいぶん減ってるから、その理由が知りたいんだけど、中村君外出中みたいで、何か聞いてない?\n女:いいえ。何も。\n男: そうか。悪いけど、わたし今から会議だから、中村君戻ったらこの件について、わたしのところに説明にくるよう伝えといてもらえるかな。5時には会議終って戻るから、特に報告受けてなかったものだから、気になっちゃってね。\n女:わかりました。\n女の人はこの後、何をしなければなりませんか。",
+          "scriptVi": "Trưởng phòng và nhân viên nữ nói chuyện ở công ty. Người nữ sau đây phải làm gì?\nNam: Cho hỏi chút, về đơn hàng hộp nhựa của thực phẩm Kitayama, hóa đơn này ai làm vậy?\nNữ: À, trưởng phòng, tôi làm đấy ạ. Có sai sót gì không ạ?\nNam: Không, cái này Nakamura nhờ làm đúng không? Vì phụ trách kinh doanh là Nakamura.\nNữ: Vâng.\nNam: Số lượng đặt hàng giảm nhiều so với trước nên tôi muốn biết lý do, nhưng Nakamura có vẻ đang ra ngoài, có nghe gì không?\nNữ: Không, không nghe gì cả.\nNam: Vậy à. Phiền chị nhắn lại Nakamura khi về thì đến giải thích chỗ tôi nhé, vì tôi giờ phải đi họp. 5 giờ họp xong sẽ về, vì chưa nhận được báo cáo gì nên hơi để ý.\nNữ: Tôi hiểu rồi.\nNgười nữ sau đây phải làm gì?",
+          "options": [
+            "中村さんに伝言をする",
+            "せいきゅう書の間違いを直す",
+            "会議に出席する",
+            "注文数について部長に報告する"
+          ],
+          "correctIndex": 0,
+          "tip": "",
+          "keywords": [],
+          "startSec": 122.0,
+          "lineTimestamps": [
+            122.0,
+            140.0,
+            147.0,
+            153.0,
+            156.5,
+            160.0,
+            170.0,
+            172.0,
+            190.0,
+            199.0
+          ]
+        },
+        {
+          "qnum": 3,
+          "prompt": "日本語のクラスで先生が留学生に話しています。留学生は主に商店街の何についてインタビューのプランを立てますか。",
+          "isDualQuestion": false,
+          "script": "日本語のクラスで先生が留学生に話しています。留学生は主に商店街の何についてインタビューのプランを立てますか。\n女:来週の授業では、さくら商店街にいって、グループごとに二軒ずつ古くから続く商店を回って、お店の人にインタビューをします。ええ、さくら商店街は最近では魚のコロッケなどの人気商品で知られ、新しいことに次々とチャレンジしていますが、県内で最も長く続く商店街なんです!そこで商店街全体がこれまでどのように困難を乗り越え、変化、発展してきたのか、話を伺います。今日はこのテーマに基づいてグループごとにインタビューのプランを立てましょう。今から、各グループに店のリストを配ります。\n留学生は主に商店街の何についてインタビューのプランを立てますか。",
+          "scriptVi": "Giáo viên nói với lưu học sinh trong lớp tiếng Nhật. Lưu học sinh chủ yếu lên kế hoạch phỏng vấn về điều gì của khu phố buôn bán?\nNữ: Buổi học tuần sau chúng ta sẽ đến khu phố Sakura, mỗi nhóm đi 2 cửa hàng lâu đời để phỏng vấn chủ tiệm. Khu Sakura gần đây nổi tiếng với món croquette cá, liên tục thử thách điều mới, nhưng đây cũng là khu phố buôn bán tồn tại lâu nhất tỉnh! Vì vậy chúng ta sẽ hỏi xem cả khu phố đã vượt qua khó khăn, thay đổi, phát triển thế nào suốt thời gian qua. Hôm nay hãy lên kế hoạch phỏng vấn theo nhóm dựa trên chủ đề này. Giờ tôi phát danh sách cửa hàng cho từng nhóm.\nLưu học sinh chủ yếu lên kế hoạch phỏng vấn về điều gì của khu phố buôn bán?",
+          "options": [
+            "最近人気のある商品",
+            "これからのチャレンジ",
+            "店が困っていること",
+            "はってんのれきし"
+          ],
+          "correctIndex": 3,
+          "tip": "",
+          "keywords": [],
+          "startSec": 208.0,
+          "lineTimestamps": [
+            208.0,
+            217.0,
+            226.0
+          ]
+        },
+        {
+          "qnum": 4,
+          "prompt": "大学の事務所で学生と事務所の人が話しています。学生はこの後、まず何をしますか。",
+          "isDualQuestion": false,
+          "script": "大学の事務所で学生と事務所の人が話しています。学生はこの後、まず何をしますか。\n男: すみません。先週インフルエンザで経済学の学期末試験を休んでしまったんですが、病気の場合は、もう一度試験が受けられると聞きまして。\n女: 経済学は西山先生ですね。まずは先生に試験が受けられるか確認して、受けられるということなら、こちらの申請書を書いて、医師の診断書 と一緒に出してください。申請、今日までだから、急いで西山先生に確認してくださいね。\n男:あっ、先生には許可をいただきました。あのう、診断書が必要って知らなくて、病院でもらって来なかったんですけど。\n女:病気の場合は診断書がないと。\n男:今日は病院が休みで、明日書いてもらって必ず持ってきますので、\n女:ううん、仕方ないですね。じゃあ、今日は申請書だけで、試験の詳細は来週掲示板に出ますから、自分で確認するようにしてくださいね。\n男:はい、ありがとうございます。\n学生はこの後、まず何をしますか。",
+          "scriptVi": "Sinh viên và nhân viên văn phòng nói chuyện ở văn phòng đại học. Sinh viên trước tiên phải làm gì sau đây?\nNam: Xin lỗi, tuần trước tôi bị cúm nên đã nghỉ thi cuối kỳ môn kinh tế học, nghe nói nếu ốm thì có thể thi lại.\nNữ: Kinh tế học là thầy Nishiyama đúng không. Trước tiên hãy xác nhận với thầy xem có được thi lại không, nếu được thì viết đơn này, nộp kèm giấy chẩn đoán của bác sĩ. Đăng ký hạn đến hôm nay, nên hãy nhanh xác nhận với thầy Nishiyama nhé.\nNam: À, tôi đã được thầy cho phép rồi ạ. Ừm, tôi không biết cần giấy chẩn đoán nên chưa lấy ở bệnh viện.\nNữ: Trường hợp ốm thì phải có giấy chẩn đoán.\nNam: Hôm nay bệnh viện nghỉ, mai tôi sẽ xin và chắc chắn mang đến.\nNữ: Ừm, đành vậy. Vậy hôm nay chỉ cần đơn đăng ký thôi, chi tiết kỳ thi tuần sau sẽ dán ở bảng thông báo, hãy tự kiểm tra nhé.\nNam: Vâng, cảm ơn cô.\nSinh viên trước tiên phải làm gì sau đây?",
+          "options": [
+            "西山先生に相談する",
+            "しんせい書をていしゅつする",
+            "病院にしんだん書をもらいに行く",
+            "けいじ板をかくにんする"
+          ],
+          "correctIndex": 1,
+          "tip": "",
+          "keywords": [],
+          "startSec": 308.0,
+          "lineTimestamps": [
+            308.0,
+            321.0,
+            335.0,
+            351.0,
+            362.0,
+            364.0,
+            370.0,
+            381.0,
+            388.0
+          ]
+        },
+        {
+          "qnum": 5,
+          "prompt": "男の人と女の人が話しています。女の人は、パーティーの日に何をしますか。",
+          "isDualQuestion": false,
+          "script": "男の人と女の人が話しています。女の人は、パーティーの日に何をしますか。\n男:山下さん、来月、松田君の結婚パーティーをレストランでやることになったんだけど、手伝ってくれない。\n女:もちろん、なんでも言って、\n男:ありがとう。じゃあ、受付をお願いできないかな。会費制でやるから、会費の受け取りをしてほしいんだけど。\n女:わかった。\n男:ねえ、もう一つ、会場の音楽担当か、ビデオ撮影の担当も頼めない?音楽係は事前に松田君と相談して曲を選んで、当日かけてほしいんだ。ダンスの曲とか、撮影係は動画の編集までやってもらいたいんだけど、\n女:わたし、動画作るの、得意。\n男: 本当。じゃあ、決まりだね。だけど、受付お願いするとなると、時間ギリギリに来場する人がいたら、撮影開始が遅れちゃうか。カメラを最初だけほかの人に任せるとしても、なんか慌ただしいしな。やっぱり、山下さんには受付やめて、会場の飾り付けのグループに入ってもらおうかな、当日2時間前に来られる?\n女:うん、大丈夫。\n男:じゃあ、係をふたつお願いすることになるけど、よろしくね。\n女の人は、パーティーの日に何をしますか。",
+          "scriptVi": "Người nam và người nữ nói chuyện. Người nữ sẽ làm gì vào ngày tiệc?\nNam: Yamashita, tháng sau tiệc cưới của Matsuda tổ chức ở nhà hàng, giúp tớ với nhé?\nNữ: Tất nhiên, cứ nói đi.\nNam: Cảm ơn. Vậy nhờ cậu phụ trách lễ tân nhé. Vì làm theo kiểu thu phí nên cần thu tiền.\nNữ: Được.\nNam: À, còn 1 việc nữa, phụ trách âm nhạc hội trường hoặc quay video được không? Phụ trách âm nhạc thì bàn trước với Matsuda chọn bài, hôm đó mở nhạc, nhạc khiêu vũ gì đó, còn phụ trách quay thì phải dựng video luôn.\nNữ: Tớ làm video khá giỏi đó.\nNam: Vậy à! Vậy quyết rồi nhé. Nhưng nếu nhờ cậu lễ tân thì nếu có người đến sát giờ, việc quay sẽ bị trễ. Dù giao máy quay cho người khác lúc đầu thì cũng hơi cập rập. Thôi, Yamashita bỏ lễ tân, vào nhóm trang trí hội trường đi, đến trước 2 tiếng được không?\nNữ: Ừ, được.\nNam: Vậy nhờ cậu 2 việc luôn nhé.\nNgười nữ sẽ làm gì vào ngày tiệc?",
+          "options": [
+            "アウ",
+            "ア エ",
+            "イ ウ",
+            "イ エ"
+          ],
+          "correctIndex": 3,
+          "tip": "",
+          "keywords": [],
+          "startSec": 408.0,
+          "lineTimestamps": [
+            408.0,
+            418.0,
+            426.0,
+            428.0,
+            435.0,
+            437.0,
+            456.0,
+            458.0,
+            485.0,
+            487.0,
+            496.0
+          ]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "name": "ポイント理解",
+      "instruction": "問題2では、まず質問を聞いてください。そのあと、問題用紙の選択肢を読んでください。読む時間があります。それから話を聞いて、問題用紙の1から4の中から、最もよいものを一つ選んでください。",
+      "questions": [
+        {
+          "qnum": 1,
+          "prompt": "大学で、女の学生と男の学生が卒業論文について話しています。男の学生は女の学生にどんな方法を勧めましたか。",
+          "isDualQuestion": false,
+          "script": "大学で、女の学生と男の学生が卒業論文について話しています。男の学生は女の学生にどんな方法を勧めましたか。\n女:卒業論文もう始めなきゃ間に合わないのに、なかなか取り掛かる気になれなくて、\n男: 僕は先月から始めたけど、やっぱり始めるまでに時間かかったよ。とりあえず資料を集めるとか、簡単なことからやってみれば? そうするうちに、だんだん集中してくと思うよ。\n女:そっか。まずはやるべきことがイメージできるよう、長期的な計画を立ててみようかなと思ってたけど、私の場合、それで満足して終わっちゃいそうだから、そのほうがいいかも。\n男:去年卒業した先輩からは、いい論文が書けたっていう成功をイメージするといいよってアドバイスを受けたけど、完成まであまりに遠いから、イメージしづらくてね。\n女:確かにね。なんか相談したらやる気出てきた。少し進んだら報告するから。また相談に乗ってね。\n男の学生は女の学生にどんな方法を勧めましたか。",
+          "scriptVi": "Sinh viên nữ và sinh viên nam nói về luận văn tốt nghiệp ở đại học. Sinh viên nam khuyên sinh viên nữ phương pháp gì?\nNữ: Luận văn tốt nghiệp phải bắt đầu rồi mà không kịp, nhưng vẫn chưa có động lực bắt tay vào.\nNam: Tớ tháng trước mới bắt đầu, cũng mất thời gian mới bắt đầu được. Cứ thử làm việc đơn giản trước như thu thập tài liệu đi? Làm vậy rồi dần dần sẽ tập trung hơn.\nNữ: Vậy à. Tớ định lập kế hoạch dài hạn để hình dung việc cần làm, nhưng chắc làm vậy xong sẽ thấy hài lòng rồi dừng lại mất, nên cách kia có khi hợp hơn.\nNam: Đàn anh năm ngoái tốt nghiệp khuyên nên hình dung thành công viết được luận văn hay, nhưng vì còn xa lắm nên khó hình dung quá.\nNữ: Đúng vậy nhỉ. Bàn xong thấy có động lực hơn rồi. Tiến triển chút sẽ báo cáo. Lại nhờ cậu tư vấn nhé.\nSinh viên nam khuyên sinh viên nữ phương pháp gì?",
+          "options": [
+            "簡単な作業から始める",
+            "長期的な計画を立てる",
+            "せいこうをイメージする",
+            "進み具合を友人と報告し合う"
+          ],
+          "correctIndex": 0,
+          "tip": "",
+          "keywords": [],
+          "startSec": 44.0,
+          "lineTimestamps": [
+            44.0,
+            84.0,
+            90.0,
+            104.0,
+            116.0,
+            128.0,
+            144.0
+          ]
+        },
+        {
+          "qnum": 2,
+          "prompt": "女の人と男の人が就職試験の結果について話しています。男の人はどうして合格した会社に入らないと言っていますか。",
+          "isDualQuestion": false,
+          "script": "女の人と男の人が就職試験の結果について話しています。男の人はどうして合格した会社に入らないと言っていますか。\n女:先週、就職試験の最終面接だったでしょう。結果、どうだった?\n男:採用通知もらったよ。でも、辞退することにしたんだ。\n女:せっかく合格したのに?\n男:うん、自分の専門が生かせそうな会社だったんだけど、入社後三年以内に少なくとも五年は東京じゃなくて、地方の支店に転勤してもらうことになるだろうって、面接で言われて、家庭の事情もあって、東京勤務以外は考えられないんだ。\n女:そっか。\n男: オフィスを見学したとき、活気があって、雰囲気も自分に合いそうだったから、すごく悩んだんだけど、提示された給料も自分の予想を超えてたしね。結局悩んだ末、辞退することにしたんだ。専門が生かせる仕事はほかにもあると思うから、頑張って探してみるよ。\n男の人はどうして合格した会社に入らないと言っていますか。",
+          "scriptVi": "Người nữ và người nam nói về kết quả thi tuyển việc làm. Tại sao người nam nói không vào công ty đã đậu?\nNữ: Tuần trước phỏng vấn cuối cùng đúng không, kết quả sao rồi?\nNam: Tớ nhận thông báo trúng tuyển rồi. Nhưng tớ quyết định từ chối.\nNữ: Đậu rồi mà?\nNam: Ừ, công ty đó có vẻ phát huy được chuyên môn của tớ, nhưng phỏng vấn họ nói trong 3 năm đầu vào công ty ít nhất 5 năm sẽ chuyển không phải Tokyo mà về chi nhánh địa phương, vì hoàn cảnh gia đình nên tớ chỉ nghĩ đến làm việc ở Tokyo thôi.\nNữ: Vậy à.\nNam: Lúc tham quan văn phòng thấy sôi động, không khí cũng hợp với tớ nên đã rất băn khoăn, mà lương đề xuất cũng vượt dự đoán nữa. Cuối cùng băn khoăn mãi vẫn quyết định từ chối. Tớ nghĩ vẫn còn nơi khác phát huy được chuyên môn nên sẽ cố gắng tìm tiếp.\nTại sao người nam nói không vào công ty đã đậu?",
+          "options": [
+            "専門を生かした仕事ができないから",
+            "地方に勤める可能性があるから",
+            "会社のふんいきが合わなそうだから",
+            "給料が自分の予想より低かったから"
+          ],
+          "correctIndex": 1,
+          "tip": "",
+          "keywords": [],
+          "startSec": 172.5,
+          "lineTimestamps": [
+            172.5,
+            201.0,
+            207.0,
+            212.0,
+            215.0,
+            224.5,
+            234.0,
+            261.0
+          ]
+        },
+        {
+          "qnum": 3,
+          "prompt": "会社で男の人と女の人が防災について話しています。女の人は自分のうちでは今後何をする必要があると言っていますか。",
+          "isDualQuestion": false,
+          "script": "会社で男の人と女の人が防災について話しています。女の人は自分のうちでは今後何をする必要があると言っていますか。\n男: この間、家族で防災センターに見学に行ったんですけど、もしもの時、うちは何も準備ができてないなって思って、災害への備え、何かしてますか。\n女:うちは本棚とか、冷蔵庫とか家具が倒れないように固定したり、それから、家族で近くの避難所まで安全な行き方を確認しながら行ってみたり、\n男:防災意識高いですね。\n女:まあ、そうですね。非常時にどうやって連絡取り合うかも家族で話して決めてありますし、携帯電話がつながりにくくなることがあるって聞いて、\n男:うちなんて、食料と飲料を常備してるぐらいですよ。\n女:それも大事ですよ。うちもやってはいるですけど、家族で三日分ぐらいしかなくて、一週間分は置いとかなきゃって思ってるとこです。\n男:そうですか。うちももう少し家族で意識高めないとなあ。\n女の人は自分のうちでは今後何をする必要があると言っていますか。",
+          "scriptVi": "Người nam và người nữ nói về phòng chống thiên tai ở công ty. Người nữ nói nhà mình sắp tới cần làm gì?\nNam: Hôm trước cả nhà đi tham quan trung tâm phòng chống thiên tai, mới nghĩ nhà mình chưa chuẩn bị gì cả, chị có làm gì để phòng bị thiên tai không?\nNữ: Nhà tôi thì cố định kệ sách, tủ lạnh, đồ đạc để không đổ, rồi cả nhà thử đi xác nhận đường an toàn đến nơi tránh nạn gần nhất.\nNam: Ý thức phòng chống cao nhỉ.\nNữ: Ừm, cũng tạm. Cách liên lạc lúc khẩn cấp cũng đã bàn và quyết định với gia đình rồi, vì nghe nói điện thoại di động có thể khó liên lạc.\nNam: Nhà tôi thì chỉ dự trữ thực phẩm và nước uống thôi.\nNữ: Cái đó cũng quan trọng đấy. Nhà tôi cũng có làm nhưng chỉ đủ 3 ngày cho gia đình, đang nghĩ phải để đủ 1 tuần mới được.\nNam: Vậy à. Nhà tôi cũng phải nâng ý thức gia đình lên nữa.\nNgười nữ nói nhà mình sắp tới cần làm gì?",
+          "options": [
+            "家具がたおれないように固定する",
+            "ひなん所までの行き方をかくにんする",
+            "非常時のれんらく方法を決める",
+            "食べ物と飲み物を十分にたくわえる"
+          ],
+          "correctIndex": 3,
+          "tip": "",
+          "keywords": [],
+          "startSec": 290.5,
+          "lineTimestamps": [
+            290.5,
+            320.0,
+            332.0,
+            343.0,
+            348.0,
+            356.0,
+            360.0,
+            369.0,
+            380.0
+          ]
+        },
+        {
+          "qnum": 4,
+          "prompt": "女の学生と男の学生が話しています。女の学生は交渉について、授業でどんなことを習ったと言っていますか。",
+          "isDualQuestion": false,
+          "script": "女の学生と男の学生が話しています。女の学生は交渉について、授業でどんなことを習ったと言っていますか。\n女:今日、経済学の授業で、交渉について習ったんだ。\n男:交渉って、自分の希望通りにいくように、相手と話をするあの交渉?買い物で値引きしてもらう時なんかの?\n女:そう。特に値引き交渉なんかはどうやったらこっちの思い通りになるかって、相手を負かそうとするでしょう。でもね、ちゃんとお互いの利益になるよう歩み寄って、交渉を通して、より高い価値を生み出すっていうが賢い交渉なんだって。\n男:へえ。女:お互いが得をするようなやり方が望ましいってこと。もちろん互いに譲れない交渉となると、厳しいやり取りが求められると思うけどね。\n女の学生は交渉について、授業でどんなことを習ったと言っていますか。",
+          "scriptVi": "Sinh viên nữ và sinh viên nam nói chuyện. Sinh viên nữ nói đã học được gì về đàm phán trong giờ học?\nNữ: Hôm nay giờ kinh tế học học về đàm phán đó.\nNam: Đàm phán là kiểu nói chuyện với đối phương để đạt được điều mình muốn đó hả? Như lúc mua sắm thương lượng giảm giá ấy?\nNữ: Đúng vậy. Đặc biệt đàm phán giảm giá thường nghĩ làm sao để bên mình thắng, cố đánh bại đối phương đúng không. Nhưng mà, biết nhường nhịn để cả 2 bên cùng có lợi, qua đàm phán tạo ra giá trị cao hơn mới là đàm phán khôn ngoan đó.\nNam: Ồ.\nNữ: Tức là cách làm sao cả 2 bên cùng có lợi mới là điều nên hướng tới. Tất nhiên nếu cả 2 bên đều không nhường thì chắc sẽ phải đàm phán gay gắt hơn.\nSinh viên nữ nói đã học được gì về đàm phán trong giờ học?",
+          "options": [
+            "どう、こうしょうすれば、物が安く買えるか",
+            "こうしょうを通して、何が学べるか",
+            "理想的なこうしょうとは、どういうものか",
+            "どうやって、相手にこうしょうをもとめるか"
+          ],
+          "correctIndex": 2,
+          "tip": "",
+          "keywords": [],
+          "startSec": 492.0,
+          "lineTimestamps": [
+            492.0,
+            492.0,
+            492.0,
+            492.0,
+            492.0,
+            492.0
+          ]
+        },
+        {
+          "qnum": 5,
+          "prompt": "セミナーで専門家が話しています。専門家はサービスについて、どのようにしていく必要があると言っていますか。",
+          "isDualQuestion": false,
+          "script": "セミナーで専門家が話しています。専門家はサービスについて、どのようにしていく必要があると言っていますか。\n女:これまで製造業においては、物を作り出す技術、あるいは生産性を高めるための様々な研究が進められてきました。一方、サービスについてはどうでしょう。今だ経験や勘に頼るところが大きく、例えば、サービスの質と価格の関係をデータから分析したり、効果を測定し評価するなど、科学的なアプローチによる研究が十分に行われてきたとは言えません。サービス業は国内で労働者の6割が従事し、大きな利益を生んでいる重要な産業なのですから、その必要性を強く感じるわけです。\n専門家はサービスについて、どのようにしていく必要があると言っていますか。",
+          "scriptVi": "Chuyên gia nói trong hội thảo. Chuyên gia nói cần làm gì với dịch vụ?\nNữ: Trong ngành sản xuất, đã có nhiều nghiên cứu về kỹ thuật tạo ra sản phẩm hay nâng cao năng suất. Còn về dịch vụ thì sao? Hiện vẫn chủ yếu dựa vào kinh nghiệm, trực giác, ví dụ phân tích quan hệ giữa chất lượng dịch vụ và giá cả từ dữ liệu, đo lường đánh giá hiệu quả bằng phương pháp khoa học vẫn chưa được nghiên cứu đầy đủ. Ngành dịch vụ chiếm 6 phần 10 lao động trong nước, là ngành quan trọng tạo ra lợi nhuận lớn, nên tôi cảm thấy mạnh mẽ sự cần thiết đó.\nChuyên gia nói cần làm gì với dịch vụ?",
+          "options": [
+            "より経験をじゅうしする",
+            "科学的に研究する。",
+            "りえきを追いもとめる",
+            "国内の主要産業にする"
+          ],
+          "correctIndex": 1,
+          "tip": "",
+          "keywords": [],
+          "startSec": 513.0,
+          "lineTimestamps": [
+            513.0,
+            548.0,
+            594.0
+          ]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "name": "概要理解",
+      "instruction": "問題3では、問題用紙に何も印刷されていません。この問題は、全体としてどんな内容かを聞く問題です。話の前に質問はありません。まず話を聞いてください。それから、質問とせんたくしを聞いて、1から4の中から、最もよいものを一つ選んでください。",
+      "questions": [
+        {
+          "qnum": 1,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "テレビでレポーターが男の人にインタビューをしています。\n女:私は今アニメのイベント会場に来ています。こちらのイベントを毎年開催している山本さんにお話を伺います。\n男: このイベントでは新作アニメの紹介やアニメグッズの販売、ゲーム、コンサートなどを行っています。年に一度のこの機会にぜひ、新たなお気に入りのアニメを見つけたり、ファン同士の交流を深めたりして、皆さんに楽しんでもらいたいと思います。日本のアニメは海外でも人気で、アニメファンはもちろんですが、友達にこのイベントに連れて来られて興味を持つようになったという外国の方も多いんです。\n女:そうですか。\n男: アニメを通して、日本のことをもっと知って、好きになってもらいたいので、このイベントがそういうきっかけになるようにと思ってます。\n男の人は何について話していますか。\n1.このイベントを開催する目的\n2.このイベントで一番人気のコーナー\n3.このイベントを外国で行う計画\n4.このイベントを始めたきっかけ",
+          "scriptVi": "Trên TV, phóng viên đang phỏng vấn người nam.\nNữ: Tôi hiện đang ở khu vực sự kiện anime. Xin hỏi anh Yamamoto, người tổ chức sự kiện này hàng năm.\nNam: Sự kiện này có giới thiệu anime mới, bán đồ lưu niệm anime, trò chơi, hòa nhạc. Tôi mong mọi người tận dụng cơ hội mỗi năm 1 lần này để tìm anime yêu thích mới và giao lưu giữa các fan với nhau. Anime Nhật cũng nổi tiếng ở nước ngoài, không chỉ fan anime mà nhiều người nước ngoài được bạn rủ đến sự kiện này rồi trở nên hứng thú.\nNữ: Vậy ạ.\nNam: Tôi mong qua anime mọi người hiểu thêm và yêu thích nước Nhật hơn, mong sự kiện này trở thành cơ hội như vậy.\nNgười nam đang nói về điều gì?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correctIndex": 0,
+          "tip": "",
+          "keywords": [],
+          "startSec": 98.0,
+          "lineTimestamps": [
+            98.0,
+            98.0,
+            108.0,
+            139.0,
+            140.0,
+            157.0,
+            163.0,
+            163.0,
+            174.7,
+            186.3
+          ]
+        },
+        {
+          "qnum": 2,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "ラジオで女の人が話しています。\nある高齢者介護施設では、わざと施設内に階段や段差を設置しているそうです。えっと思われるかもしれませんが、あえて不便にすることで、体力や体の機能の低下を防ごうとするものなんです。パソコンの普及で漢字が書けなくなったなんてよく聞きますが、昔は何でも手書きで手間はかかるけど、おかげで漢字を忘れずに済んだわけですよね。そういえば、先日うちの掃除機が壊れて、家中箒で掃いたんですけど、日ごろの運動不足が解消された気が......これも同じことかなあ。\n女の人が言いたいことは何ですか。\n1.介護には苦労が多い\n2.不便さにも利点がある\n3.生活はもっと便利になる\n4.お年寄りの知恵は素晴らしい",
+          "scriptVi": "Trên radio, người nữ đang nói.\nMột cơ sở chăm sóc người già nghe nói cố tình lắp đặt cầu thang, bậc thềm trong cơ sở. Có thể bạn nghĩ là lạ, nhưng việc cố tình làm bất tiện là để ngăn suy giảm thể lực và chức năng cơ thể. Hay nghe nói máy tính phổ biến làm người ta quên cách viết Hán tự, nhưng ngày xưa viết tay tốn công nhưng nhờ vậy không quên Hán tự. Nói vậy chứ, hôm trước máy hút bụi nhà tôi hỏng, phải quét cả nhà bằng chổi, cảm giác vận động thiếu hụt hàng ngày được giải tỏa... chắc cũng tương tự vậy nhỉ.\nNgười nữ muốn nói điều gì?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correctIndex": 1,
+          "tip": "",
+          "keywords": [],
+          "startSec": 198.0,
+          "lineTimestamps": [
+            198.0,
+            204.0,
+            253.0,
+            253.0,
+            259.5,
+            266.0,
+            266.0
+          ]
+        },
+        {
+          "qnum": 3,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "テレビで動物園の職員が話しています。\n動物園というと、一般的には、遠足やデートなどで訪れるレクリエーションの場というイメージをお持ちかもしれませんが。動物の生態や自然環境について学ぶ機会を提供する場でもあるんです。また、近年、自然環境の悪化などにより、野生動物の生活範囲が狭くなってきていて、住む場所を失ったり、数が著しく減少してしまったりしている動物たちがいます。動物園には、そうした動物を保護し、守るという一面もあるんです。\n職員は何について話しています。\n1.動物園の抱える問題点\n2.動物園の設備の改善\n3.動物園が減っている現状\n4.動物園が果たす役割",
+          "scriptVi": "Trên TV, nhân viên sở thú đang nói.\nNói đến sở thú, có lẽ mọi người hình dung là nơi giải trí để đi dã ngoại, hẹn hò, nhưng đây cũng là nơi cung cấp cơ hội học về sinh thái và môi trường tự nhiên của động vật. Gần đây do môi trường tự nhiên xấu đi, phạm vi sống của động vật hoang dã thu hẹp lại, có những loài mất nơi ở hoặc số lượng giảm đáng kể. Sở thú cũng có mặt bảo vệ những động vật như vậy.\nNhân viên đang nói về điều gì?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correctIndex": 3,
+          "tip": "",
+          "keywords": [],
+          "startSec": 282.5,
+          "lineTimestamps": [
+            282.5,
+            299.0,
+            339.0,
+            339.0,
+            349.0,
+            359.0,
+            369.0
+          ]
+        },
+        {
+          "qnum": 4,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "会社で上司と女の人が残業時間を制限することについて話しています。\n男:中野さん、今社内で残業を週10時間以内に制限するっていう話が出てるんだけど、中野さんはチームリーダとしてどう思う?\n女:そうですね。確かに会社全体で無駄な残業をなくすのは必要なことですが、なんでも時間で区切ってしまうというのは。うちは商品開発部という性質上、アイディアを膨らませたり、企画を練ったり退社時間を気にせず、集中したいっていう時がありますから。\n男: 現場としては、そうなんだね。\n女の人が言いたいことは何ですか。\n1.会社が残業時間に制限をかけるべきだ\n2.残業が多いのは能率が悪いからだ\n3.残業しても結局疲れて集中できない\n4.仕事内容によっては残業が必要とされる",
+          "scriptVi": "Ở công ty, cấp trên và người nữ nói về việc giới hạn giờ làm thêm.\nNam: Nakano, trong công ty đang có chuyện giới hạn làm thêm trong tuần dưới 10 tiếng, là trưởng nhóm, chị nghĩ sao?\nNữ: Đúng là loại bỏ làm thêm vô ích trên toàn công ty là cần thiết, nhưng cắt cứng theo thời gian thì... Bên tôi là phòng phát triển sản phẩm, có lúc cần nảy ý tưởng, mài giũa kế hoạch, muốn tập trung không lo giờ tan làm.\nNam: Đứng từ góc độ thực tế thì vậy à.\nNgười nữ muốn nói điều gì?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correctIndex": 3,
+          "tip": "",
+          "keywords": [],
+          "startSec": 379.0,
+          "lineTimestamps": [
+            379.0,
+            389.0,
+            399.0,
+            419.0,
+            427.0,
+            427.0,
+            441.0,
+            441.0,
+            456.0
+          ]
+        },
+        {
+          "qnum": 5,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "セミナーで林業の専門家が話しています。\n日本は昔から、木の文化と言われていますが、近年では、木造住宅の建築に、外国の木材が多く使われています。価格が安く、種類も豊富な輸入木材に、国産が押されているわけです。しかし、雨が多い日本で育った木は、梅雨の時期や高温で湿度の高い夏でも腐らず、冬の乾燥でも変形しないなど、日本の気候に非常によく合っていて、長く使うことができるんです。百年前の木造の家だって、手入れすればまだ住めるほどです。もう一度、見直してもらいたいですね。\n専門家は何について話していますか。\n1.日本人が木を好む理由\n2.木造の家の現象\n3.国産の木材の強み\n4.日本の森林の変化",
+          "scriptVi": "Chuyên gia lâm nghiệp nói trong hội thảo.\nNhật Bản từ xưa được gọi là văn hóa gỗ, nhưng gần đây xây nhà gỗ dùng nhiều gỗ nhập khẩu. Giá rẻ, chủng loại phong phú nên gỗ nhập khẩu lấn át gỗ nội địa. Nhưng gỗ lớn lên ở Nhật mưa nhiều thì mùa mưa hay mùa hè nóng ẩm không bị mục, mùa đông khô không bị biến dạng, rất hợp khí hậu Nhật, dùng được lâu dài. Nhà gỗ 100 năm trước nếu bảo trì vẫn ở được. Mong mọi người nhìn nhận lại lần nữa.\nChuyên gia đang nói về điều gì?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correctIndex": 2,
+          "tip": "",
+          "keywords": [],
+          "startSec": 471.0,
+          "lineTimestamps": [
+            471.0,
+            479.0,
+            525.0,
+            531.0,
+            531.0,
+            531.0,
+            532.0
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "name": "即時応答",
+      "instruction": "問題4では、問題用紙に何も印刷されていません。まず文を聞いてください。それから、それに対する返事を聞いて、1から3の中から、最もよいものを一つ選んでください。",
+      "questions": [
+        {
+          "qnum": 1,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "さっき、先輩に何言われたか知らないけど、気にすることないよ。\n1.それは教えられない。\n2.心配してくれて、ありがとう。\n3.言われたこと、気にしてないの?",
+          "scriptVi": "Lúc nãy, không biết tiền bối nói gì với cậu, nhưng đừng để ý nhé.\n1. Cái đó không thể nói được.\n2. Cảm ơn cậu đã lo cho tớ.\n3. Bị nói vậy, cậu không để ý à?",
+          "options": [
+            "1",
+            "2",
+            "3"
+          ],
+          "correctIndex": 1,
+          "tip": "",
+          "keywords": [],
+          "startSec": 48.0,
+          "lineTimestamps": [
+            48.0,
+            56.0,
+            56.0,
+            68.5
+          ]
+        },
+        {
+          "qnum": 2,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "このラーメン、結構辛いね。見た目に反して。\n1.そうは見えないのにね。\n2.ほんとう辛そうだもんね。\n3.見た目からしてすごいよね。",
+          "scriptVi": "Mì ramen này cay khá đó, ngược hẳn với vẻ ngoài.\n1. Đúng là trông không có vẻ vậy nhỉ.\n2. Đúng là cay thật nhỉ.\n3. Nhìn vẻ ngoài là biết ngay rồi.",
+          "options": [
+            "1",
+            "2",
+            "3"
+          ],
+          "correctIndex": 0,
+          "tip": "",
+          "keywords": [],
+          "startSec": 81.0,
+          "lineTimestamps": [
+            81.0,
+            88.0,
+            88.0,
+            100.0
+          ]
+        },
+        {
+          "qnum": 3,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "社長がお呼びですので、至急お越しいただけますか。\n1.じゃ、すぐ社長を呼んできます。\n2.えっ? なんだろう。すぐ行きます。\n3.すぐに電話するようにします。",
+          "scriptVi": "Giám đốc đang gọi anh, anh đến gấp được không?\n1. Vậy để tôi gọi giám đốc đến ngay.\n2. Hả? Có chuyện gì vậy nhỉ. Tôi đến ngay đây.\n3. Tôi sẽ gọi điện ngay.",
+          "options": [
+            "1",
+            "2",
+            "3"
+          ],
+          "correctIndex": 1,
+          "tip": "",
+          "keywords": [],
+          "startSec": 112.0,
+          "lineTimestamps": [
+            112.0,
+            119.0,
+            119.0,
+            133.5
+          ]
+        },
+        {
+          "qnum": 4,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "あっ、お久しぶりです。こんなところでお会いするとは。\n1.ほんとう偶然ですね。\n2.会いに来てくれたんですね。\n3.それなら、ほかのところにしましょう。",
+          "scriptVi": "A, lâu rồi không gặp. Không ngờ lại gặp ở đây.\n1. Đúng là tình cờ thật nhỉ.\n2. Anh đến gặp tôi à.\n3. Vậy thì chọn chỗ khác đi.",
+          "options": [
+            "1",
+            "2",
+            "3"
+          ],
+          "correctIndex": 0,
+          "tip": "",
+          "keywords": [],
+          "startSec": 148.0,
+          "lineTimestamps": [
+            148.0,
+            152.0,
+            152.0,
+            164.5
+          ]
+        },
+        {
+          "qnum": 5,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "道、渋滞してますね。新幹線の時間、間に合えばいいですけど。\n1.間に合ったんだから、いいですよ。\n2.新幹線、行っちゃったんですか。\n3.ぎりぎりかもしれませんね。",
+          "scriptVi": "Đường tắc quá nhỉ. Mong kịp giờ tàu Shinkansen.\n1. Kịp rồi thì tốt quá.\n2. Tàu chạy mất rồi à?\n3. Có khi sát nút đó.",
+          "options": [
+            "1",
+            "2",
+            "3"
+          ],
+          "correctIndex": 2,
+          "tip": "",
+          "keywords": [],
+          "startSec": 177.0,
+          "lineTimestamps": [
+            177.0,
+            185.0,
+            185.0,
+            197.5
+          ]
+        },
+        {
+          "qnum": 6,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "ねえ、田中君が、大学やめるなんて、ほんとううそみたいだよね。\n1.わたしも驚いた。\n2.よかった。やめないんだね。\n3.田中君がうそついたの。",
+          "scriptVi": "Này, Tanaka nghỉ học đại học, đúng là như nói dối vậy nhỉ.\n1. Tớ cũng bất ngờ.\n2. May quá, không nghỉ à.\n3. Tanaka nói dối à?",
+          "options": [
+            "1",
+            "2",
+            "3"
+          ],
+          "correctIndex": 0,
+          "tip": "",
+          "keywords": [],
+          "startSec": 210.0,
+          "lineTimestamps": [
+            210.0,
+            214.5,
+            219.0,
+            219.0
+          ]
+        },
+        {
+          "qnum": 7,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "ゼミの松田君、留学に備えて、毎日語学学校通ってるんだってよ。\n1.留学のあともずっと? すごいね。\n2.ちゃんと留学の準備してて、えらいね。\n3.留学中、毎日勉強してるんだね。",
+          "scriptVi": "Matsuda trong seminar, để chuẩn bị du học, nghe nói đi học trường ngoại ngữ mỗi ngày đó.\n1. Sau khi du học cũng vậy luôn à? Giỏi thật.\n2. Chuẩn bị du học cẩn thận thế, giỏi quá.\n3. Trong lúc du học học mỗi ngày nhỉ.",
+          "options": [
+            "1",
+            "2",
+            "3"
+          ],
+          "correctIndex": 1,
+          "tip": "",
+          "keywords": [],
+          "startSec": 242.0,
+          "lineTimestamps": [
+            242.0,
+            252.0,
+            252.0,
+            264.5
+          ]
+        },
+        {
+          "qnum": 8,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "プレゼンの内容、これでいいか。このあと、課長にも見てもらわないとね。\n1.じゃ、わたしが課長に確認しておきます。\n2.どうして課長に見てもらえないですか。\n3.よかった。課長もこれでいいんですね。",
+          "scriptVi": "Nội dung thuyết trình thế này được chưa nhỉ. Sau này còn phải cho trưởng phòng xem nữa.\n1. Vậy để tôi xác nhận với trưởng phòng.\n2. Sao lại không cho trưởng phòng xem được?\n3. May quá, trưởng phòng cũng đồng ý với cái này rồi nhỉ.",
+          "options": [
+            "1",
+            "2",
+            "3"
+          ],
+          "correctIndex": 0,
+          "tip": "",
+          "keywords": [],
+          "startSec": 277.0,
+          "lineTimestamps": [
+            277.0,
+            285.0,
+            285.0,
+            298.5
+          ]
+        },
+        {
+          "qnum": 9,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "昨日、転職した元同僚に会ったんだけど、なんか生き生きしてたよ。\n1.ああ、また会社に戻ってくるってこと?\n2.何で迷ってたの?\n3.充実してるってことじゃない。",
+          "scriptVi": "Hôm qua gặp đồng nghiệp cũ vừa chuyển việc, trông có vẻ sống động hẳn ra.\n1. À, ý là sẽ quay lại công ty cũ à?\n2. Sao lại phân vân vậy?\n3. Ý là cuộc sống ý nghĩa hơn đúng không.",
+          "options": [
+            "1",
+            "2",
+            "3"
+          ],
+          "correctIndex": 2,
+          "tip": "",
+          "keywords": [],
+          "startSec": 312.0,
+          "lineTimestamps": [
+            312.0,
+            320.0,
+            328.3,
+            336.7
+          ]
+        },
+        {
+          "qnum": 10,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "最近、社長が何でも新しいことやりたがるから、困るよね。\n1.えっ、だから、社長困ってるの?\n2.次から次へじゃ、大変だよね。\n3.もっとチャレンジしてほしいのにね。",
+          "scriptVi": "Gần đây giám đốc cái gì cũng muốn làm mới, mệt thật đấy.\n1. Hả, vậy là giám đốc đang gặp khó à?\n2. Hết cái này đến cái khác thì mệt thật nhỉ.\n3. Mong giám đốc thử thách nhiều hơn nữa ấy chứ.",
+          "options": [
+            "1",
+            "2",
+            "3"
+          ],
+          "correctIndex": 1,
+          "tip": "",
+          "keywords": [],
+          "startSec": 345.0,
+          "lineTimestamps": [
+            345.0,
+            353.0,
+            353.0,
+            365.5
+          ]
+        },
+        {
+          "qnum": 11,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "味もボリュームも、ステーキはこの店に限るね。\n1.それじゃ、ほかの店にしようか。\n2.ああ、ステーキは限定メニューなんだね。\n3.やっぱりここのステーキじゃないとね。",
+          "scriptVi": "Vị ngon, lượng nhiều, steak thì chỉ có quán này thôi.\n1. Vậy thì chuyển sang quán khác đi.\n2. À, steak là món giới hạn nhỉ.\n3. Đúng là phải steak ở đây mới được.",
+          "options": [
+            "1",
+            "2",
+            "3"
+          ],
+          "correctIndex": 2,
+          "tip": "",
+          "keywords": [],
+          "startSec": 378.0,
+          "lineTimestamps": [
+            378.0,
+            385.0,
+            385.0,
+            386.0
+          ]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "name": "統合理解",
+      "instruction": "問題5では、長めの話を聞きます。この問題には練習はありません。問題用紙にメモをとってもかまいません。1番、2番問題用紙に何も印刷されていません。まず話を聞いてください。それから、質問とせんたくしを聞いて、1から4の中から、最もよいものを一つ選んでください。",
+      "questions": [
+        {
+          "qnum": 1,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "男の留学生と女の学生が話しています。\n男:ねえ、松本さん、松本さんって、観光ガイドのアルバイトをしてるよね。\n女:うん。\n男:来週、家族が日本に来るんだけど、何か、日本らしい体験ができるところない?両親の希望は、記念のものが手元に残って、日中は観光したいから、タ方4時以降がいいって、8歳の弟も一緒だから、子どもが飽きないのがいいんだけど。\n女:それなら、陶芸教室は?茶碗とか、お皿とか作るの。陶器は焼くのに2、3週間かかるけど、後で国に送ってくれるよ。それから、布を染める教室もお勧めスカーフを染めるんだけど、日本の伝統的な色を使うから、日本らしいお土産になるし、その日に持ち帰れるよ。\n男:弟は工作が得意だから、茶碗とか作るの、好きそうだけど、布はどうかな。前に国でそういうのをやったとき、退屈してた記憶が...\n女:そっか、どっちも4時半開始だけど、陶器を作る教室は、郊外の桜町だから、行くまでに時間かかるんだよね。\n男:桜町に4時半か。間に合わないだろうな。\n女:それと、観光センターに行けば、日本料理と、それから茶道の教室も体験できるよ。\n男:弟、日本料理、大好きだよ。\n女:だけど、料理は今昼間しかやってないんだ。お寿司とか作れて楽しいし、箸に名前を入れてプレゼントしてくれるから、すごく人気なんだけど、茶道のほうは、夜7時まで、1時間ごとに好きな時間で予約できるよ、お土産に和菓子もらえるけど、食べたら残らないね。四つの教室のどれかにするなら、私が予約するよ。\n男:ありがとう。昼は無理だし、手元に何か残るっていう希望は聞いてあげなきゃ。弟が好みそうなほうだと、時間が心配だけど、まあ、その日だけ少し早く観光を切り上げてもらおう。\n男の留学生はどの体験を選びましたか。\n1.陶器を作る\n2.布を染める\n3.日本料理を作る\n4.茶道をする",
+          "scriptVi": "Lưu học sinh nam và sinh viên nữ nói chuyện.\nNam: Này Matsumoto, cậu làm thêm hướng dẫn viên du lịch đúng không?\nNữ: Ừ.\nNam: Tuần sau gia đình tớ sang Nhật, có chỗ nào trải nghiệm kiểu Nhật không? Bố mẹ tớ muốn có gì đó kỷ niệm mang về, ban ngày muốn đi tham quan nên từ 4 giờ chiều trở đi là tốt, em trai 8 tuổi cũng đi cùng nên cần thứ không làm trẻ con chán.\nNữ: Vậy thì lớp gốm sứ thì sao? Làm bát đĩa. Gốm phải nung 2-3 tuần nhưng sau đó gửi về nước được. Hoặc lớp nhuộm vải cũng hay, nhuộm khăn quàng, dùng màu truyền thống Nhật nên thành quà lưu niệm rất Nhật, lại mang về ngay trong ngày được.\nNam: Em tớ giỏi thủ công nên chắc thích làm bát, nhưng vải thì không biết sao. Trước ở nước tớ làm cái đó nó chán lắm...\nNữ: Vậy à, cả 2 đều bắt đầu 4 rưỡi, nhưng lớp làm gốm ở Sakuramachi ngoại ô, đi mất thời gian đó.\nNam: Sakuramachi 4 rưỡi à. Chắc không kịp đâu.\nNữ: Còn nếu đến trung tâm du lịch thì có thể trải nghiệm cả nấu ăn Nhật và trà đạo.\nNam: Em tớ rất thích món Nhật.\nNữ: Nhưng nấu ăn chỉ có buổi trưa thôi. Làm sushi vui lắm, lại được khắc tên lên đũa tặng nên rất được ưa chuộng, còn trà đạo thì đến 7 giờ tối, đặt theo giờ tùy thích mỗi tiếng 1 lần, quà là bánh ngọt Nhật nhưng ăn rồi thì không còn lại gì.\nNam: Cảm ơn cậu. Nếu cậu đặt giúp 1 trong 4 lớp thì tốt quá.\nNữ: Trưa thì không được, mà nguyện vọng có gì đó mang về thì phải nghe theo chứ. Nếu là cái em tớ thích thì lo về thời gian, thôi để hôm đó rút ngắn tham quan chút vậy.\nLưu học sinh nam đã chọn trải nghiệm nào?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correctIndex": 0,
+          "tip": "",
+          "keywords": [],
+          "startSec": 53.0,
+          "lineTimestamps": [
+            53.0,
+            61.0,
+            65.5,
+            70.0,
+            86.0,
+            110.0,
+            121.0,
+            131.0,
+            136.0,
+            144.0,
+            146.0,
+            173.0,
+            193.0,
+            200.2,
+            207.4,
+            214.6,
+            221.8
+          ]
+        },
+        {
+          "qnum": 2,
+          "prompt": null,
+          "isDualQuestion": false,
+          "script": "食品会社で、部下2人と課長が話しています。\n男:課長、リンさん、すみません。ちょっといいでしょうか。今日3時から1時間ほど、課長とリンさんと私とで、北海道食品店の打ち合わせをすることになっていますが、\n課長:ええ、中山さん、どうかしました?\n男:あの、あした予定していた青木商事への納品が、急遽先方の都合で、今日になってしまいまして、それで、午後一番で青木商事に行かなければならないので、ちょっと3時までに戻るのは厳しいかと、遅くとも、3時半には戻れると思うんですが。\n課長:そう、じゃ、打ち合わせ、4時からにしましょうか。\n女:あっ、すみません。4時半からちょっと別件がありまして、15分前には出ないといけないんです。打ち合わせ、明日以降では、遅いでしょうか。\n課長:それが、わたしが明日から急な出張で、一週間ほど留守にするんですよ。\n女:それじゃ、今日中にしないと、1週間近く企画が止まってしまいますね。中山さん、納品の時間って、早められないんですか。\n男:日程が1日繰り上がったので、これ以上早めると、準備が間に合いません。それに、先方から納品が遅くならないように言われてますので、後ろにずらすことも...\n課長:じゃ、元の3時にして、中山さんは社に戻り次第、加わるってことでどう?\n女:はい、中山さんがいない間、私の方から、現時点での作業状況とか、中山さんの担当の分もまとめて、課長に報告しておきます。\n男:助かります。\n課長:じゃ、そういうことでよろしく、\n三人での打ち合わせの日時はどうなりましたか。\n1.予定通りの日時で行われる\n2.今日時間を変えて行われる\n3.明日の同じ時間に延期される\n4.一週間後の同じ時間に延期される",
+          "scriptVi": "Ở công ty thực phẩm, 2 nhân viên cấp dưới và trưởng phòng nói chuyện.\nNam: Trưởng phòng, Lin, xin lỗi, cho hỏi chút được không. Hôm nay 3 giờ trong 1 tiếng, trưởng phòng, Lin và tôi sẽ họp bàn với cửa hàng thực phẩm Hokkaido,\nTrưởng phòng: Ừ, Nakayama, có chuyện gì vậy?\nNam: Dạ, việc giao hàng cho thương sự Aoki dự định mai, do phía bên kia đột xuất đổi thành hôm nay, nên tôi phải đến Aoki ngay đầu giờ chiều, e là khó về kịp trước 3 giờ, muộn nhất chắc 3 rưỡi mới về được.\nTrưởng phòng: Vậy thì đổi họp sang 4 giờ nhé?\nNữ: À, xin lỗi. 4 rưỡi tôi có việc khác, phải ra trước 15 phút. Họp để mai trở đi thì có muộn không ạ?\nTrưởng phòng: Vấn đề là mai tôi đi công tác gấp, vắng mặt khoảng 1 tuần.\nNữ: Vậy phải họp trong hôm nay chứ, không kế hoạch sẽ trì hoãn gần 1 tuần mất. Nakayama, giờ giao hàng không đẩy sớm được à?\nNam: Lịch bị đẩy sớm 1 ngày rồi nên đẩy thêm thì không kịp chuẩn bị. Với cả bên kia dặn không được giao trễ nên dời sau cũng...\nTrưởng phòng: Vậy giữ nguyên 3 giờ, Nakayama về đến công ty lúc nào thì tham gia lúc đó, được không?\nNữ: Vâng, lúc Nakayama vắng mặt, tôi sẽ báo cáo tình hình công việc hiện tại và phần Nakayama phụ trách cho trưởng phòng.\nNam: Cảm ơn nhiều.\nTrưởng phòng: Vậy quyết vậy nhé.\nCuộc họp 3 người diễn ra vào ngày giờ nào?",
+          "options": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "correctIndex": 0,
+          "tip": "",
+          "keywords": [],
+          "startSec": 229.0,
+          "lineTimestamps": [
+            229.0,
+            237.0,
+            249.0,
+            261.0,
+            273.0,
+            277.0,
+            288.0,
+            293.0,
+            303.0,
+            316.0,
+            321.0,
+            331.0,
+            332.0,
+            339.0,
+            345.0,
+            351.0,
+            351.0,
+            351.0
+          ]
+        },
+        {
+          "qnum": 3,
+          "prompt": null,
+          "isDualQuestion": true,
+          "script": "ラジオを聞いたあと、男の学生と女の留学生が話しています。\nラジオ：毎年各地で開催されるちょっと変わったマラソン大会を四つご紹介します。お米の産地、北町の大会では、給水ポイントで、水だけでなく、おいしいおにぎりが味わえるそうです。ゴールしたときには、お腹いっぱいでしょうね。東町の大会はカレーです。こちらは食べながら走るのではなく、玉ねぎ、人参など、それぞれの畑を回って材料を収穫しながら、ゴールを目指すというものです。材料は持ち帰れるそうですよ。南町では、カメラをもって、海岸沿いの美しいコースを撮影しながら走ります。後で撮った写真のコンテストもあるそうです。最後は西町です。山道を走り、ゴールは山頂のお寺、500もの階段を登りきったところにあります。これは苦しそうですね。いずれの大会も、ただいま出場者募集中とのことです。\n男：ねえ、リンダさん、国に帰る前にどれか出てみたら？いい思い出になると思うよ。\n女：うん、楽しそう。\n男：リンダさんは、カメラが趣味だから、海岸沿いを走るのがいいんじゃない？走るほうはわからないけど、コンテスト優勝できるかもよ。\n女：カメラ持って走るなんて、落としたらいやだあ。わたし、足腰に自信があるから、階段を駆け上がるのにする。\n男：おっ、すごいね。じゃ、ぼくは、野菜を収穫するやつに出てみよう。大会のあとでごちそうするよ。腕に自信があるんだ。\n女：じゃ、その時はわたし、お米炊いて待ってるね。\n質問1 女の留学生はどこの大会に参加したいと言っていますか。\n質問2 男の学生はどこの大会に参加したいと言っていますか。",
+          "scriptVi": "Sau khi nghe radio, sinh viên nam và lưu học sinh nữ nói chuyện.\nRadio: Xin giới thiệu 4 giải marathon hơi khác lạ được tổ chức hàng năm ở các vùng. Giải ở Kitamachi, vùng trồng gạo, tại điểm tiếp nước không chỉ có nước mà còn có cả cơm nắm ngon. Về đích chắc no bụng luôn. Giải Higashimachi là về cà ri, không phải vừa chạy vừa ăn, mà đi qua từng ruộng hành tây, cà rốt... thu hoạch nguyên liệu trên đường về đích. Nguyên liệu được mang về. Ở Minamimachi, mang theo máy ảnh, vừa chạy vừa chụp con đường ven biển đẹp. Sau đó còn có cuộc thi ảnh đã chụp. Cuối cùng là Nishimachi. Chạy đường núi, đích là ngôi chùa trên đỉnh núi, sau khi leo hết 500 bậc thang. Nghe có vẻ vất vả nhỉ. Cả 4 giải hiện đang tuyển người tham gia.\nNam: Này Linda, trước khi về nước thử tham gia 1 cái xem? Tớ nghĩ sẽ là kỷ niệm đẹp.\nNữ: Ừ, nghe vui đấy.\nNam: Linda thích chụp ảnh nên chắc hợp giải chạy ven biển nhỉ? Phần chạy thì tớ không biết, nhưng biết đâu thắng giải ảnh đó.\nNữ: Cầm máy ảnh mà chạy, lỡ làm rơi thì ghét lắm. Tớ tự tin chân tay nên chọn leo bậc thang vậy.\nNam: Ồ, giỏi nhỉ. Vậy tớ thử cái thu hoạch rau vậy. Sau giải sẽ mời cậu ăn. Tớ tự tin tay nghề lắm.\nNữ: Vậy lúc đó tớ nấu cơm đợi cậu nhé.\nCâu hỏi 1: Lưu học sinh nữ nói muốn tham gia giải nào?\nCâu hỏi 2: Sinh viên nam nói muốn tham gia giải nào?",
+          "subQuestions": [
+            {
+              "label": "質問1",
+              "promptVi": "Lưu học sinh nữ nói muốn tham gia giải nào?",
+              "options": [
+                "北町",
+                "東町",
+                "南町",
+                "西町"
+              ],
+              "correctIndex": 3
+            },
+            {
+              "label": "質問2",
+              "promptVi": "Sinh viên nam nói muốn tham gia giải nào?",
+              "options": [
+                "北町",
+                "東町",
+                "南町",
+                "西町"
+              ],
+              "correctIndex": 1
+            }
+          ],
+          "tip": "",
+          "keywords": [],
+          "startSec": 414.0,
+          "lineTimestamps": [
+            414.0,
+            423.0,
+            485.0,
+            491.0,
+            493.0,
+            503.0,
+            511.0,
+            522.0,
+            532.0,
+            532.0
+          ]
+        }
+      ]
+    }
+  ],
+  "mondai_breakdown": [
+    {
+      "mondai": 1,
+      "ten": "Hiểu đề tài",
+      "so_cau": 5
+    },
+    {
+      "mondai": 2,
+      "ten": "Hiểu điểm chính",
+      "so_cau": 5
+    },
+    {
+      "mondai": 3,
+      "ten": "Hiểu bao quát",
+      "so_cau": 5
+    },
+    {
+      "mondai": 4,
+      "ten": "Phản hồi tức thời",
+      "so_cau": 11
+    },
+    {
+      "mondai": 5,
+      "ten": "Hiểu tổng hợp",
+      "so_cau": 3
+    }
+  ]
+}
