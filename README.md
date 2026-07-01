@@ -157,6 +157,8 @@ JavaScript chạy trong trình duyệt **không có cách nào tự liệt kê f
 | `nguphap-pham-vi-b-m11-dokkai.json` | 19 | 0 |
 | `nguphap-top40-mimitry.json` | 3 | 0 |
 | `nguphap-pham-vi-a-m789.json` | 0 | 0 |
+| `mimi-n2-unit12.json` | 0 | 140 (điền thêm 02/07/2026) |
+| `mimi-n2-unit13.json` | 0 | 82 (điền thêm 02/07/2026) |
 
 **→ TODO còn tồn đọng:** ~826 mục đang ở format cũ, cần bổ sung cách đọc + nghĩa Việt để nâng cấp lên format mới. Đây là việc **tốn nhiều thời gian** (phải tra/xác nhận đúng cách đọc+nghĩa từng từ, không thể tự suy đoán đại trà vì dễ sai) — nên làm DẦN theo từng file khi có nhu cầu thực tế, không cố làm 1 lần. **Không phải lỗi/bug** — app vẫn chạy đúng, chỉ là card sẽ hiện "thiếu thông tin phụ" (chỉ thấy kanji, không thấy cách đọc+nghĩa của từ đồng/trái nghĩa đó).
 
