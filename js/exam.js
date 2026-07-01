@@ -596,7 +596,6 @@ function renderExamQuestionContent(q, qIndex, isLive) {
   App.examCurrentQIndex = qIndex;
   document.getElementById("btnExamFlag").classList.toggle("is-active", App.examFlagged.has(qIndex));
   document.getElementById("btnExamUnsure").classList.toggle("is-active", App.examUnsure.has(qIndex));
-  document.getElementById("examSecondGuessBox").classList.add("hidden");
 
   const optsDiv = document.getElementById("examOptions");
   optsDiv.innerHTML = "";
@@ -645,6 +644,26 @@ function renderExamQuestionContent(q, qIndex, isLive) {
 
     optsDiv.appendChild(btn);
   });
+
+  // Quay lại xem 1 câu đã trả lời SAI và đã chọn đáp án thứ 2 đang phân vân
+  // trước đó (instant mode) — phải VẼ LẠI hộp + viền đáp án thứ 2, nếu không sẽ
+  // bị MẤT trạng thái khi điều hướng Câu trước/Câu sau (chỉ lưu trong examHistory,
+  // không tự re-render như màu đúng/sai bình thường).
+  document.getElementById("examSecondGuessBox").classList.add("hidden");
+  if (!isLive && lastAttempt && App.examScoreMode !== "review" && !lastAttempt.correct
+      && history && history.secondGuessIdx != null) {
+    const box = document.getElementById("examSecondGuessBox");
+    const isSecondCorrect = history.secondGuessIdx === q.dap_an_dung;
+    const secondText = q.options[history.secondGuessIdx];
+    box.innerHTML = `<div class="exam-secondguess-label">🤔 Bạn đã phân vân với đáp án khác:</div>
+      <div class="exam-secondguess-opts">
+        <button class="exam-secondguess-opt ${isSecondCorrect ? "is-second-correct" : "is-second-wrong"}" disabled>${secondText}</button>
+      </div>`;
+    box.classList.remove("hidden");
+    optsDiv.querySelectorAll(".quiz-opt").forEach((o) => {
+      if (o.textContent === secondText) o.classList.add(isSecondCorrect ? "is-second-correct-ring" : "is-second-wrong-ring");
+    });
+  }
 
   // Hiện ghi chú lịch sử nếu câu này đã từng bị sai trước đây (kể cả khi xem live lại sau khi đã trả lời)
   const histNote = document.getElementById("examHistoryNote");
