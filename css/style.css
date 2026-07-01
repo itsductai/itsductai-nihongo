@@ -1430,3 +1430,7 @@ mark.exam-note-mark {
 .exam-secondguess-opt:disabled { cursor: default; }
 .quiz-opt.is-second-correct-ring { box-shadow: inset 0 0 0 2px #2e7d32; }
 .quiz-opt.is-second-wrong-ring { box-shadow: inset 0 0 0 2px var(--bad); }
+
+/* Tag 🚩/❓/🤔 trong lưới "nhiều lần làm" (attempts-grid) — đọc từ dữ liệu đã
+   lưu vĩnh viễn, hiện được cả sau khi Nhập file tiến độ từ máy khác. */
+.attempts-grid-dot-tag { font-size: 8px; margin-left: 1px; vertical-align: middle; }
