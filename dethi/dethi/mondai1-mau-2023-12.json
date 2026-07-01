@@ -1,0 +1,60 @@
+{
+  "title": "Mondai 1 - Đọc kanji (mẫu N2 2023-12)",
+  "questions": [
+    {
+      "de_bai": "次の文の＿＿＿の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n会議の内容を<u>簡潔</u>にまとめてください。",
+      "options": [
+        "かんせつ",
+        "かんけつ",
+        "かんきつ",
+        "かんかつ"
+      ],
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「かんせつ」là cách đọc của 「間接」(gián tiếp) hoặc 「関節」(khớp xương) — không phải cách đọc của 「簡潔」.",
+        "Đúng. 「簡潔」đọc là 「かんけつ」, nghĩa là ngắn gọn, súc tích — đúng nghĩa với câu 'tóm tắt nội dung cuộc họp một cách ngắn gọn'.",
+        "Sai. 「かんきつ」là cách đọc của 「柑橘」(họ cam quýt) — hoàn toàn không liên quan tới chữ 「簡潔」.",
+        "Sai. 「かんかつ」là cách đọc của 「管轄」(quản hạt, quyền quản lý) — không phải cách đọc của 「簡潔」."
+      ]
+    },
+    {
+      "de_bai": "次の文の＿＿＿の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n彼の発言には<u>賛否</u>が分かれた。",
+      "options": [
+        "さんぴ",
+        "ざんぴ",
+        "さんび",
+        "ざんび"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「賛否」đọc là 「さんぴ」, nghĩa là tán thành hay phản đối — đúng nghĩa với câu 'phát ngôn của anh ấy gây chia rẽ ý kiến tán thành/phản đối'.",
+        "Sai. Âm đầu 「賛」đọc là 「さん」(âm trong, không phải âm đục 「ざん」) — 「ざんぴ」không phải cách đọc đúng.",
+        "Sai. Âm sau 「否」đọc là 「ぴ」(không phải 「び」) vì đây là âm bán trọc (handakuten) đi theo quy tắc ghép âm, không phải âm đục thường.",
+        "Sai. Sai cả 2 âm: 「ざん」(phải là さん) và 「び」(phải là ぴ)."
+      ]
+    },
+    {
+      "de_bai": "次の文の＿＿＿の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\nこの薬は<u>症状</u>を抑える効果がある。",
+      "options": [
+        "しょうじょう",
+        "しょうしょう",
+        "じょうじょう",
+        "じょうしょう"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「症状」đọc là 「しょうじょう」, nghĩa là triệu chứng — đúng nghĩa với câu 'loại thuốc này có hiệu quả làm giảm triệu chứng'.",
+        "Sai. 「しょうしょう」là cách đọc của 「少々」(một chút) — âm thứ 2 phải đọc 「じょう」(âm đục) không phải 「しょう」(âm trong).",
+        "Sai. Âm đầu phải là 「しょう」(âm trong), không phải 「じょう」(âm đục) — đảo ngược thứ tự âm trong/đục so với cách đọc đúng.",
+        "Sai. 「じょうしょう」là cách đọc của 「上昇」(thượng thăng, tăng lên) — hoàn toàn khác nghĩa và khác chữ với 「症状」."
+      ]
+    }
+  ],
+  "mondai_breakdown": [
+    {
+      "mondai": 1,
+      "ten": "Đọc Hán tự",
+      "so_cau": 3
+    }
+  ]
+}

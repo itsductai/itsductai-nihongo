@@ -1,0 +1,315 @@
+/* =====================================================================
+   theme-plus.css — LỚP TRÙNG TU GIAO DIỆN (nạp SAU style.css nên đè lên)
+   Mục tiêu: giữ nguyên bố cục + bản sắc "study lab" tối sẵn có, chỉ nâng cấp
+   phần "nhan sắc": tinh chỉnh token màu, ẩn thanh cuộn, sidebar/nav sống động
+   hơn, nút & thẻ có chiều sâu, thêm widget đếm ngược ngày thi tạo động lực.
+   KHÔNG đổi cấu trúc HTML/JS — thuần thẩm mỹ, an toàn để deploy sát ngày thi.
+   ===================================================================== */
+
+/* ---- 1. Tinh chỉnh token: đổi ở 1 chỗ, cả app tự cập nhật ---- */
+:root {
+  --bg-0: #141518;
+  --bg-1: #1b1d21;
+  --bg-2: #23262c;
+  --bg-3: #2c3038;
+  --bg-hover: #343943;
+  --border: #33373f;
+  --border-soft: #2a2e35;
+  --text-0: #eceef2;
+  --text-1: #bcc0c8;
+  --text-2: #888e98;
+  --accent: #6b93ff;
+  --accent-2: #a98bff;         /* đầu kia của gradient nhấn (tím) */
+  --accent-soft: #24304d;
+  --good: #48c98c;
+  --good-soft: #163a2d;
+  --bad: #f0555a;
+  --bad-soft: #3d2226;
+  --warn: #f7ad2c;
+  --warn-soft: #3d3520;
+  --purple: #a98bff;
+  --purple-soft: #2c2748;
+  --choon: #ff7a7a;
+  --gold: #ffd15c;             /* màu sao ★ đã đánh dấu */
+  --radius: 13px;
+  --radius-sm: 9px;
+  --shadow: 0 10px 30px rgba(0,0,0,0.42);
+  --shadow-soft: 0 4px 16px rgba(0,0,0,0.28);
+  --ring: 0 0 0 3px rgba(107,147,255,0.35);
+}
+
+/* ---- 2. Nền có chiều sâu: 2 vầng sáng mờ tạo không khí, không gắt ---- */
+body {
+  background:
+    radial-gradient(1100px 620px at 12% -8%, rgba(107,147,255,0.10), transparent 60%),
+    radial-gradient(900px 560px at 100% 108%, rgba(169,139,255,0.09), transparent 62%),
+    var(--bg-0);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---- 3. ẨN THANH CUỘN toàn trang (vẫn cuộn được bằng lăn/kéo) ---- */
+* { scrollbar-width: none; -ms-overflow-style: none; }
+*::-webkit-scrollbar { width: 0; height: 0; display: none; }
+
+/* ---- 4. SIDEBAR: nền chuyển sắc dọc + viền mảnh sáng ---- */
+.sidebar {
+  background: linear-gradient(180deg, #1d1f24 0%, #17181c 100%);
+  border-right: 1px solid var(--border-soft);
+  box-shadow: inset -1px 0 0 rgba(255,255,255,0.02);
+  padding: 16px 12px;
+}
+.brand { border-bottom: 1px solid var(--border-soft); }
+.brand-mark {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 6px 18px rgba(107,147,255,0.38);
+  border-radius: 10px;
+}
+.brand-title {
+  letter-spacing: 0.01em;
+  background: linear-gradient(90deg, #fff, #c9d4ff);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* ---- 5. NAV: item bo tròn, hover trượt nhẹ, active có thanh nhấn trái ---- */
+.nav-item {
+  position: relative;
+  border-radius: 10px;
+  padding: 9px 12px 9px 14px;
+  transition: background .16s ease, color .16s ease, transform .12s ease;
+}
+.nav-item::before {
+  content: ""; position: absolute; left: 4px; top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  width: 3px; height: 60%; border-radius: 3px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  transition: transform .18s ease;
+}
+.nav-item:hover { transform: translateX(2px); }
+.nav-item.active {
+  background: linear-gradient(90deg, var(--accent-soft), rgba(36,48,77,0.35));
+  color: #cddaff;
+}
+.nav-item.active::before { transform: translateY(-50%) scaleY(1); }
+.nav-icon { opacity: .95; }
+.nav-section-label { color: var(--text-2); }
+
+/* ---- 6. WIDGET ĐẾM NGƯỢC NGÀY THI (điểm nhấn tạo động lực) ---- */
+.exam-countdown {
+  margin: 4px 4px 12px;
+  padding: 13px 14px 12px;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(169,139,255,0.16), transparent 55%),
+    linear-gradient(135deg, #23273a, #1c1e28);
+  border: 1px solid rgba(107,147,255,0.22);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+.exam-countdown-badge {
+  display: inline-block;
+  font-size: 10px; font-weight: 800; letter-spacing: 0.08em;
+  color: #cdd7ff; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 999px;
+  background: rgba(107,147,255,0.16);
+  border: 1px solid rgba(107,147,255,0.28);
+}
+.exam-countdown-main { display: flex; align-items: baseline; gap: 6px; margin: 8px 0 2px; }
+.exam-countdown-days {
+  font-size: 34px; font-weight: 800; line-height: 1;
+  background: linear-gradient(120deg, #8fb0ff, #c4acff);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-variant-numeric: tabular-nums;
+}
+.exam-countdown-unit { font-size: 12px; color: var(--text-1); font-weight: 600; }
+.exam-countdown-date { font-size: 11px; color: var(--text-2); margin-bottom: 9px; }
+.exam-countdown-bar {
+  height: 6px; border-radius: 999px; background: rgba(255,255,255,0.07);
+  overflow: hidden;
+}
+.exam-countdown-bar-fill {
+  height: 100%; width: 0%; border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  box-shadow: 0 0 12px rgba(107,147,255,0.5);
+  transition: width .6s cubic-bezier(.2,.7,.2,1);
+}
+/* Sát ngày thi: chuyển tông cảnh báo + nhịp thở nhẹ để "kích" */
+.exam-countdown.is-urgent {
+  border-color: rgba(247,173,44,0.4);
+  animation: countdownPulse 2.4s ease-in-out infinite;
+}
+.exam-countdown.is-urgent .exam-countdown-days {
+  background: linear-gradient(120deg, #ffce6b, #ff9f6b);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.exam-countdown.is-urgent .exam-countdown-bar-fill {
+  background: linear-gradient(90deg, var(--warn), #ff8a5c);
+  box-shadow: 0 0 12px rgba(247,173,44,0.55);
+}
+.exam-countdown.is-today { border-color: rgba(72,201,140,0.45); }
+.exam-countdown.is-today .exam-countdown-days {
+  background: linear-gradient(120deg, #74e0a8, #48c98c);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.exam-countdown.is-past { opacity: .8; }
+@keyframes countdownPulse {
+  0%, 100% { box-shadow: var(--shadow-soft); }
+  50% { box-shadow: 0 0 0 1px rgba(247,173,44,0.28), 0 8px 26px rgba(247,173,44,0.18); }
+}
+
+/* ---- 7. NÚT: ghost/primary/icon có chiều sâu & phản hồi hover ---- */
+.ghost-btn, .filter-select, .search-input, .deck-select select {
+  border-radius: var(--radius-sm);
+  transition: background .15s, border-color .15s, box-shadow .15s, transform .1s;
+}
+.ghost-btn:hover { border-color: rgba(107,147,255,0.35); }
+.ghost-btn:active { transform: translateY(1px); }
+
+.primary-btn {
+  background: linear-gradient(135deg, var(--accent), #6f79ff) !important;
+  border: none !important;
+  box-shadow: 0 6px 18px rgba(107,147,255,0.32);
+  border-radius: var(--radius-sm);
+  transition: transform .12s ease, box-shadow .15s ease, filter .15s ease;
+}
+.primary-btn:hover { transform: translateY(-1px); filter: brightness(1.06); box-shadow: 0 9px 24px rgba(107,147,255,0.42); }
+.primary-btn:active { transform: translateY(0); }
+
+.icon-btn {
+  border-radius: var(--radius-sm);
+  transition: background .15s, color .15s, border-color .15s, transform .1s;
+}
+.icon-btn:hover { transform: translateY(-1px); }
+.icon-btn.is-active {
+  background: var(--accent-soft);
+  color: #cddaff;
+  border-color: rgba(107,147,255,0.4);
+}
+
+/* Ô nhập/select focus: viền sáng theo accent */
+.filter-select:focus, .search-input:focus, .deck-select select:focus,
+input[type="text"]:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--ring);
+}
+
+/* ---- 8. THẺ học: bo tròn hơn, đổ bóng, nhấc nhẹ khi hover ---- */
+.card {
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.card-stage:hover .card { box-shadow: 0 16px 40px rgba(0,0,0,0.5); }
+.card-face { border-radius: 18px; }
+
+/* ---- 9. NÚT SAO ★ (flashcard + SRS + bảng): sáng, có ánh vàng khi bật ---- */
+.flash-star-btn, .srs-star-btn {
+  transition: transform .14s ease, color .14s ease, text-shadow .14s ease;
+}
+.flash-star-btn:hover, .srs-star-btn:hover { transform: scale(1.18) rotate(6deg); }
+.flash-star-btn.is-starred, .srs-star-btn.is-starred, .table-star-btn.is-starred {
+  color: var(--gold) !important;
+  text-shadow: 0 0 12px rgba(255,209,92,0.6);
+}
+.table-star-btn { transition: transform .12s ease, color .12s ease; }
+.table-star-btn:hover { transform: scale(1.15); }
+
+/* ---- 10. NÚT ĐÁNH GIÁ (rate-row) mượt hơn ---- */
+.rate-btn {
+  border-radius: var(--radius-sm);
+  transition: transform .12s ease, filter .14s ease, box-shadow .14s ease;
+}
+.rate-btn:hover { transform: translateY(-2px); filter: brightness(1.07); }
+.rate-btn:active { transform: translateY(0); }
+
+/* ---- 11. Ô đáp án trắc nghiệm: hover rõ ràng, bo mềm ---- */
+.quiz-opt {
+  border-radius: var(--radius-sm);
+  transition: background .14s, border-color .14s, transform .1s;
+}
+.quiz-opt:not(.disabled):hover {
+  border-color: rgba(107,147,255,0.45);
+  transform: translateX(2px);
+}
+
+/* ---- 12. PHÂN VÂN THEO TỪNG ĐÁP ÁN (choukai) ---- */
+/* Badge 🤔 nhỏ ở góc mỗi đáp án nghe */
+.choukai-opt { position: relative; display: flex; align-items: center; gap: 8px; padding-right: 40px; }
+.choukai-opt-text { flex: 1; }
+.choukai-opt-unsure {
+  position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+  width: 26px; height: 26px; border-radius: 8px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 14px; cursor: pointer; user-select: none;
+  opacity: 0.32; filter: grayscale(1);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid transparent;
+  transition: opacity .14s, filter .14s, background .14s, border-color .14s, transform .1s;
+}
+.choukai-opt-unsure:hover { opacity: 0.75; filter: grayscale(0.2); transform: translateY(-50%) scale(1.08); }
+.choukai-opt-unsure.is-on {
+  opacity: 1; filter: none;
+  background: rgba(247,173,44,0.16);
+  border-color: rgba(247,173,44,0.45);
+}
+/* Đáp án đã đánh dấu phân vân: viền đứt vàng cam để nổi bật lúc xem lại */
+.quiz-opt.is-unsure-opt {
+  border: 1px dashed rgba(247,173,44,0.6) !important;
+  box-shadow: inset 0 0 0 1px rgba(247,173,44,0.12);
+}
+.exam-detail-opt.is-unsure-opt { border: 1px dashed rgba(247,173,44,0.55); }
+/* Cảnh báo mạnh: đáp án ĐÚNG lại là cái mình phân vân mà không chọn */
+.quiz-opt.is-unsure-was-right {
+  animation: unsureMissedGlow 1.6s ease-in-out 2;
+}
+@keyframes unsureMissedGlow {
+  0%, 100% { box-shadow: inset 0 0 0 1px rgba(247,173,44,0.2); }
+  50% { box-shadow: 0 0 0 2px rgba(247,173,44,0.55), 0 0 18px rgba(247,173,44,0.3); }
+}
+.exam-detail-tag.is-unsure-tag {
+  background: rgba(247,173,44,0.16);
+  color: var(--warn);
+  border: 1px solid rgba(247,173,44,0.4);
+}
+/* Dòng nhắc phân vân trên thanh công cụ nghe */
+.choukai-unsure-hint {
+  font-size: 11px; color: var(--text-2);
+  padding: 4px 8px; border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  border: 1px dashed var(--border);
+  white-space: nowrap;
+}
+
+/* ---- 13. Modal & overlay: nền mờ có blur, hộp nổi hơn ---- */
+.modal-overlay { backdrop-filter: blur(4px); background: rgba(8,9,11,0.62); }
+.modal-box { border-radius: 16px; box-shadow: var(--shadow); }
+
+/* ---- 14. Bảng thống kê / donut: viền mềm ---- */
+.stats-section, .exam-result-grid, .srs-summary {
+  border-radius: var(--radius);
+}
+
+/* ---- 15. Chuyển view vào mượt (entrance) ---- */
+.view:not(.hidden) { animation: viewIn .28s ease both; }
+@keyframes viewIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- 16. Tôn trọng "giảm chuyển động" của hệ điều hành ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
+
+/* ---- 17. Mobile: sidebar & countdown gọn lại ---- */
+@media (max-width: 820px) {
+  .exam-countdown { margin: 4px 6px 10px; }
+  .exam-countdown-days { font-size: 30px; }
+}

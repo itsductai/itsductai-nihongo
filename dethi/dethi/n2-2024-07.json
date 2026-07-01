@@ -1,0 +1,868 @@
+{
+  "title": "JLPT N2 - 2024-07 (Mondai 1-9: Từ vựng & Ngữ pháp)",
+  "questions": [
+    {
+      "de_bai": "次の___の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n状況を<u>詳細</u>に書いてください。",
+      "options": [
+        "そうざい",
+        "そうさい",
+        "しょうざい",
+        "しょうさい"
+      ],
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. Âm đầu phải là 「しょう」(âm trong), không phải 「そう」.",
+        "Sai. Sai cả âm đầu và âm sau so với cách đọc đúng.",
+        "Sai. Âm cuối phải là 「さい」(âm trong), không phải 「ざい」(âm đục).",
+        "Đúng. 「詳細」đọc là 「しょうさい」, nghĩa là chi tiết, tỉ mỉ — đúng nghĩa 'hãy viết tình huống một cách chi tiết'."
+      ]
+    },
+    {
+      "de_bai": "次の___の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n<u>分析</u>には少し時間がかかります。",
+      "options": [
+        "ぶんせき",
+        "ぶんかい",
+        "ぶんせつ",
+        "ぶんかつ"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「分析」đọc là 「ぶんせき」, nghĩa là phân tích — đúng nghĩa 'việc phân tích sẽ tốn một chút thời gian'.",
+        "Sai. 「ぶんかい」là cách đọc của 「分解」(phân giải, tháo rời), không phải 「分析」.",
+        "Sai. Không có cách đọc 「ぶんせつ」cho 「分析」.",
+        "Sai. 「ぶんかつ」là cách đọc của 「分割」(phân chia, chia cắt), không phải 「分析」."
+      ]
+    },
+    {
+      "de_bai": "次の___の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\n髪の毛が<u>絡まって</u>しまった。",
+      "options": [
+        "はさまって",
+        "からまって",
+        "つまって",
+        "たまって"
+      ],
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「はさまって」là cách đọc của 「挟まって」(bị kẹp vào), không phải 「絡まって」.",
+        "Đúng. 「絡まって」đọc là 「からまって」, nghĩa là bị vướng, bị rối (như tóc, dây) — đúng nghĩa 'tóc bị rối lại'.",
+        "Sai. 「つまって」là cách đọc của 「詰まって」(bị nghẹt, tắc), không phải 「絡まって」.",
+        "Sai. 「たまって」là cách đọc của 「溜まって」(bị tích tụ, dồn lại), không phải 「絡まって」."
+      ]
+    },
+    {
+      "de_bai": "次の___の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\nここでは<u>農薬</u>をまったく使わずに野菜を栽培している。",
+      "options": [
+        "のんやく",
+        "のうやく",
+        "のうらく",
+        "のんらく"
+      ],
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. Âm đầu phải là 「のう」(có trường âm), không phải 「のん」.",
+        "Đúng. 「農薬」đọc là 「のうやく」, nghĩa là thuốc trừ sâu, nông dược — đúng nghĩa 'ở đây trồng rau mà hoàn toàn không dùng thuốc trừ sâu'.",
+        "Sai. Âm cuối phải là 「やく」, không phải 「らく」.",
+        "Sai. Sai cả 2 âm so với cách đọc đúng."
+      ]
+    },
+    {
+      "de_bai": "次の___の言葉の読み方として最もよいものを、1・2・3・4から一つ選びなさい。\nとても<u>鮮やか</u>だったことを覚えています。",
+      "options": [
+        "おだやか",
+        "さわやか",
+        "あざやか",
+        "なごやか"
+      ],
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「おだやか」là cách đọc của 「穏やか」(êm dịu, điềm tĩnh), không phải 「鮮やか」.",
+        "Sai. 「さわやか」là cách đọc của 「爽やか」(sảng khoái, trong lành), không phải 「鮮やか」.",
+        "Đúng. 「鮮やか」đọc là 「あざやか」, nghĩa là tươi sáng, rực rỡ, sắc nét — đúng nghĩa 'tôi nhớ là nó rất rực rỡ/sắc nét'.",
+        "Sai. 「なごやか」là cách đọc của 「和やか」(hòa nhã, ấm áp), không phải 「鮮やか」."
+      ]
+    },
+    {
+      "de_bai": "次の___の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\nこの会社を<u>しぼう</u>した理由を教えてください。",
+      "options": [
+        "希望",
+        "志望",
+        "指望",
+        "貴望"
+      ],
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「希望」(きぼう) nghĩa là hy vọng, mong muốn (nói chung) — đọc khác và sai nghĩa cụ thể với 「志望」(nguyện vọng ứng tuyển).",
+        "Đúng. 「志望」đọc là 「しぼう」, nghĩa là nguyện vọng (ứng tuyển, theo đuổi) — đúng nghĩa 'xin hãy cho biết lý do bạn ứng tuyển vào công ty này'.",
+        "Sai. Không có từ 「指望」trong tiếng Nhật chuẩn.",
+        "Sai. Không có từ 「貴望」trong tiếng Nhật chuẩn."
+      ]
+    },
+    {
+      "de_bai": "次の___の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\nあの作家の<u>たんぺん</u>小説は、とても面白い。",
+      "options": [
+        "短編",
+        "単編",
+        "短遍",
+        "単遍"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「短編」đọc là 「たんぺん」, nghĩa là truyện ngắn — đúng nghĩa 'truyện ngắn của nhà văn đó rất thú vị'.",
+        "Sai. 「単」(đơn) không khớp nghĩa — phải dùng 「短」(ngắn) cho thể loại truyện ngắn.",
+        "Sai. 「遍」không phải chữ đúng — phải là 「編」(biên, tập truyện).",
+        "Sai. Sai cả 2 chữ so với cách viết đúng 「短編」."
+      ]
+    },
+    {
+      "de_bai": "次の___の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\n桜の花が<u>ちって</u>いくのを眺める。",
+      "options": [
+        "消って",
+        "去って",
+        "散って",
+        "失って"
+      ],
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. Không có động từ 「消って」trong tiếng Nhật chuẩn theo dạng này (động từ gốc 消える/消す đọc khác).",
+        "Sai. 「去って」đọc là 「さって」(rời đi, qua đi), không phải 「ちって」.",
+        "Đúng. 「散って」đọc là 「ちって」, nghĩa là (hoa) rụng, tàn — đúng nghĩa 'ngắm nhìn hoa sakura rụng dần'.",
+        "Sai. 「失って」đọc là 「うしなって」(đã mất đi), không phải 「ちって」."
+      ]
+    },
+    {
+      "de_bai": "次の___の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\nこのセーターにはとても<u>やわらかい</u>毛糸が使われている。",
+      "options": [
+        "伸らかい",
+        "軽らかい",
+        "暖らかい",
+        "柔らかい"
+      ],
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. Không có tính từ 「伸らかい」trong tiếng Nhật chuẩn.",
+        "Sai. Không có tính từ 「軽らかい」trong tiếng Nhật chuẩn (có 軽い nhưng đọc khác dạng này).",
+        "Sai. Không có tính từ 「暖らかい」trong tiếng Nhật chuẩn (có 暖かい nhưng đọc khác, nghĩa là ấm áp không phải mềm).",
+        "Đúng. 「柔らかい」đọc là 「やわらかい」, nghĩa là mềm, mềm mại — đúng nghĩa 'áo len này được làm từ sợi len rất mềm'."
+      ]
+    },
+    {
+      "de_bai": "次の___の言葉を漢字で書くとき、最もよいものを1・2・3・4から一つ選びなさい。\n最近あまり体調がよくないのは、<u>ひろう</u>のせいだろう。",
+      "options": [
+        "疲労",
+        "病労",
+        "疲老",
+        "病老"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「疲労」đọc là 「ひろう」, nghĩa là mệt mỏi, mỏi mệt — đúng nghĩa 'gần đây thể trạng không tốt chắc là do mệt mỏi'.",
+        "Sai. Không có từ 「病労」trong tiếng Nhật chuẩn.",
+        "Sai. Không có từ 「疲老」trong tiếng Nhật chuẩn.",
+        "Sai. Không có từ 「病老」trong tiếng Nhật chuẩn."
+      ]
+    },
+    {
+      "de_bai": "次の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\nしょうゆの（　）原料は大豆です。",
+      "options": [
+        "主原料",
+        "要原料",
+        "正原料",
+        "本原料"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「主原料」(しゅげんりょう) nghĩa là nguyên liệu chính — đúng nghĩa 'nguyên liệu chính của nước tương là đậu nành'.",
+        "Sai. 「要」không ghép thành từ tự nhiên với 「原料」theo nghĩa 'chính, chủ yếu' (要 thường dùng độc lập là 'điểm quan trọng').",
+        "Sai. 「正」không ghép thành từ tự nhiên với 「原料」theo nghĩa này.",
+        "Sai. 「本」không ghép thành từ tự nhiên với 「原料」theo nghĩa 'chính' (本 ghép kiểu khác như 本来)."
+      ]
+    },
+    {
+      "de_bai": "次の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n子どもたちの読書（　）が進んでいるらしい。",
+      "options": [
+        "読書抜け",
+        "読書逃げ",
+        "読書別れ",
+        "読書離れ"
+      ],
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「抜け」không ghép thành từ tự nhiên với 「読書」theo nghĩa 'xa lánh, từ bỏ'.",
+        "Sai. 「逃げ」không ghép thành từ tự nhiên với 「読書」theo nghĩa này.",
+        "Sai. 「別れ」không ghép thành từ tự nhiên với 「読書」theo nghĩa này (別れ thường dùng cho chia ly giữa người với người).",
+        "Đúng. 「読書離れ」(どくしょばなれ) nghĩa là xu hướng xa lánh việc đọc sách — đúng nghĩa 'nghe nói xu hướng trẻ em xa lánh việc đọc sách đang tiến triển'."
+      ]
+    },
+    {
+      "de_bai": "次の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n経営の方針については、社長が決定（　）を持っている。",
+      "options": [
+        "決定任",
+        "決定手",
+        "決定権",
+        "決定裁"
+      ],
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「任」không ghép thành từ tự nhiên với 「決定」theo nghĩa 'quyền quyết định'.",
+        "Sai. 「手」không ghép thành từ tự nhiên với 「決定」theo nghĩa này.",
+        "Đúng. 「決定権」(けっていけん) nghĩa là quyền quyết định — đúng nghĩa 'về phương hướng kinh doanh, giám đốc có quyền quyết định'.",
+        "Sai. 「裁」không ghép thành từ tự nhiên với 「決定」theo cách này (裁 thường ghép thành 裁定 riêng)."
+      ]
+    },
+    {
+      "de_bai": "次の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n両親はおいしい料理で客を（　）のが好きだ。",
+      "options": [
+        "もてなす",
+        "おだてる",
+        "許す",
+        "救う"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「もてなす」nghĩa là tiếp đón, đãi khách (bằng món ăn, sự chu đáo) — đúng nghĩa 'cha mẹ tôi thích đãi khách bằng những món ăn ngon'.",
+        "Sai. 「おだてる」nghĩa là tán dương, tâng bốc (ai đó) — không khớp ngữ cảnh đãi khách bằng món ăn.",
+        "Sai. 「許す」nghĩa là tha thứ, cho phép — không khớp ngữ cảnh.",
+        "Sai. 「救う」nghĩa là cứu giúp — không khớp ngữ cảnh đãi khách."
+      ]
+    },
+    {
+      "de_bai": "次の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\nその駅は各駅停車の電車は止まりますが、急行電車は（　）。",
+      "options": [
+        "温厚",
+        "直進",
+        "通過",
+        "横断"
+      ],
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「温厚」(おんこう) nghĩa là hiền hậu, ôn hòa (tính cách người) — không liên quan ngữ cảnh tàu chạy qua trạm.",
+        "Sai. 「直進」(ちょくしん) nghĩa là đi thẳng — không khớp chính xác nghĩa 'chạy qua không dừng'.",
+        "Đúng. 「通過」(つうか) nghĩa là chạy qua, đi qua (không dừng) — đúng nghĩa 'tàu thường thì dừng ở trạm đó, nhưng tàu tốc hành thì chạy qua luôn'.",
+        "Sai. 「横断」(おうだん) nghĩa là cắt ngang, vượt ngang qua (đường) — không khớp ngữ cảnh tàu chạy qua trạm."
+      ]
+    },
+    {
+      "de_bai": "次の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n見た人の記憶に残るような（　）のあるポスターにしたい。",
+      "options": [
+        "インパクト",
+        "プレッシャー",
+        "チャージ",
+        "ショック"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「インパクト」nghĩa là sự gây ấn tượng mạnh, tác động — đúng nghĩa 'muốn làm áp phích có tác động gây ấn tượng để người xem nhớ lâu'.",
+        "Sai. 「プレッシャー」nghĩa là áp lực (tâm lý) — không khớp ngữ cảnh thiết kế áp phích.",
+        "Sai. 「チャージ」nghĩa là nạp (tiền, pin) — không khớp ngữ cảnh.",
+        "Sai. 「ショック」nghĩa là sốc, gây chấn động (thường mang nghĩa tiêu cực) — không khớp tự nhiên với ngữ cảnh tích cực 'để lại ấn tượng tốt'."
+      ]
+    },
+    {
+      "de_bai": "次の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n地元の選手がオリンピックでメダルを獲得したことがテレビで（　）された。",
+      "options": [
+        "通信",
+        "普及",
+        "伝言",
+        "報道"
+      ],
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「通信」(つうしん) nghĩa là thông tin liên lạc, viễn thông — không khớp ngữ cảnh đưa tin.",
+        "Sai. 「普及」(ふきゅう) nghĩa là phổ biến, lan rộng (sản phẩm, công nghệ) — không khớp ngữ cảnh.",
+        "Sai. 「伝言」(でんごん) nghĩa là lời nhắn, truyền lời — không khớp ngữ cảnh đưa tin trên truyền hình.",
+        "Đúng. 「報道」(ほうどう) nghĩa là đưa tin, báo chí đưa tin — đúng nghĩa 'việc vận động viên địa phương đạt huy chương Olympic đã được đưa tin trên truyền hình'."
+      ]
+    },
+    {
+      "de_bai": "次の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n台風で電車が運休になり、通勤や通学で利用する人に（　）影響を与えた。",
+      "options": [
+        "大まかな",
+        "偉大な",
+        "大げさな",
+        "多大な"
+      ],
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「大まかな」nghĩa là sơ sài, đại khái — không khớp ngữ cảnh mức độ ảnh hưởng.",
+        "Sai. 「偉大な」nghĩa là vĩ đại (thường tả con người/thành tựu) — không khớp ngữ cảnh ảnh hưởng tiêu cực.",
+        "Sai. 「大げさな」nghĩa là phóng đại, thái quá — không khớp ngữ cảnh.",
+        "Đúng. 「多大な」nghĩa là rất lớn, đáng kể (mức độ ảnh hưởng) — đúng nghĩa 'bão khiến tàu ngừng chạy, gây ảnh hưởng đáng kể tới người đi làm/đi học'."
+      ]
+    },
+    {
+      "de_bai": "次の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n西川さんは転校してきたばかりだが、友達もできて、もうすっかりクラスに（　）ている。",
+      "options": [
+        "当てはまって",
+        "溶け込んで",
+        "結びついて",
+        "触れ合って"
+      ],
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「当てはまって」nghĩa là phù hợp, khớp đúng (quy tắc, điều kiện) — không khớp ngữ cảnh hòa nhập với lớp.",
+        "Đúng. 「溶け込んで」nghĩa là hòa nhập, hòa mình vào (môi trường, nhóm) — đúng nghĩa 'Nishikawa mới chuyển trường nhưng đã có bạn, đã hoàn toàn hòa nhập vào lớp'.",
+        "Sai. 「結びついて」nghĩa là liên kết, gắn kết với (mối quan hệ nhân quả/logic) — không khớp tự nhiên ngữ cảnh hòa nhập xã hội.",
+        "Sai. 「触れ合って」nghĩa là tiếp xúc, giao lưu (tình cảm) — không khớp chính xác nghĩa 'hòa nhập hoàn toàn'."
+      ]
+    },
+    {
+      "de_bai": "次の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n私は（　）性格なので、時々財布を持たずに買い物に出かけてしまうことがある。",
+      "options": [
+        "あつかましい",
+        "うっとうしい",
+        "そそっかしい",
+        "さわがしい"
+      ],
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「あつかましい」nghĩa là trơ trẽn, vô liêm sỉ — không khớp ngữ cảnh tính hay quên/bất cẩn.",
+        "Sai. 「うっとうしい」nghĩa là khó chịu, bực bội (thời tiết, cảm giác) — không khớp ngữ cảnh tính cách.",
+        "Đúng. 「そそっかしい」nghĩa là hấp tấp, hay quên, bất cẩn — đúng nghĩa 'tôi có tính hấp tấp nên đôi khi đi mua sắm mà quên mang ví'.",
+        "Sai. 「さわがしい」nghĩa là ồn ào, náo động — không khớp ngữ cảnh tính cách cá nhân."
+      ]
+    },
+    {
+      "de_bai": "次の___の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n出張の日程は<u>おおよそ</u>決まりました。",
+      "options": [
+        "だいたい",
+        "すべて",
+        "やっと",
+        "もう"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「おおよそ」nghĩa là đại khái, đại thể — tương đương 「だいたい」(đại khái, gần như).",
+        "Sai. 「すべて」nghĩa là toàn bộ, tất cả — không tương đương nghĩa 'đại khái'.",
+        "Sai. 「やっと」nghĩa là cuối cùng, rốt cuộc — không tương đương nghĩa 'đại khái'.",
+        "Sai. 「もう」nghĩa là đã, rồi — không tương đương nghĩa 'đại khái'."
+      ]
+    },
+    {
+      "de_bai": "次の___の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n彼女はとても<u>行儀</u>がいい。",
+      "options": [
+        "アイデア",
+        "サービス",
+        "マナー",
+        "イメージ"
+      ],
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「アイデア」nghĩa là ý tưởng — không tương đương nghĩa 'cách cư xử, lễ nghĩa'.",
+        "Sai. 「サービス」nghĩa là dịch vụ — không tương đương nghĩa lễ nghĩa.",
+        "Đúng. 「行儀」nghĩa là cách cư xử, lễ nghĩa, phép tắc — tương đương 「マナー」(manner, phong cách ứng xử).",
+        "Sai. 「イメージ」nghĩa là hình ảnh, ấn tượng — không tương đương nghĩa lễ nghĩa."
+      ]
+    },
+    {
+      "de_bai": "次の___の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n中西さんはいつも<u>威張っている</u>。",
+      "options": [
+        "眠そうにして",
+        "偉そうにして",
+        "暇そうにして",
+        "嫌そうにして"
+      ],
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「眠そうにして」nghĩa là tỏ ra buồn ngủ — không tương đương nghĩa 'tỏ ra ta đây, kiêu ngạo'.",
+        "Đúng. 「威張っている」nghĩa là tỏ ra kiêu ngạo, ra vẻ ta đây — tương đương 「偉そうにして」(tỏ ra ta đây, làm cao).",
+        "Sai. 「暇そうにして」nghĩa là tỏ ra rảnh rỗi — không tương đương nghĩa kiêu ngạo.",
+        "Sai. 「嫌そうにして」nghĩa là tỏ ra khó chịu/không thích — không tương đương nghĩa kiêu ngạo."
+      ]
+    },
+    {
+      "de_bai": "次の___の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n使わない物は、ここに<u>収納して</u>ください。",
+      "options": [
+        "並べて",
+        "捨てて",
+        "預けて",
+        "しまって"
+      ],
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「並べて」nghĩa là xếp hàng, bày ra — không tương đương nghĩa 'cất, lưu trữ'.",
+        "Sai. 「捨てて」nghĩa là vứt bỏ — không tương đương nghĩa cất giữ.",
+        "Sai. 「預けて」nghĩa là gửi (cho ai giữ) — không tương đương chính xác nghĩa tự cất vào nơi nào đó.",
+        "Đúng. 「収納する」nghĩa là cất, lưu trữ vào (tủ, kho) — tương đương 「しまって」(cất vào, để vào)."
+      ]
+    },
+    {
+      "de_bai": "次の___の言葉に意味が最も近いものを、1・2・3・4から一つ選びなさい。\n横山さんは<u>不平</u>を言うことが多い。",
+      "options": [
+        "冗談",
+        "文句",
+        "うそ",
+        "わがまま"
+      ],
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「冗談」nghĩa là nói đùa — không tương đương nghĩa 'lời phàn nàn, bất bình'.",
+        "Đúng. 「不平」nghĩa là sự bất bình, phàn nàn — tương đương 「文句」(lời phàn nàn, kêu ca).",
+        "Sai. 「うそ」nghĩa là lời nói dối — không tương đương nghĩa phàn nàn.",
+        "Sai. 「わがまま」nghĩa là ích kỷ, đỏng đảnh — không tương đương nghĩa phàn nàn."
+      ]
+    },
+    {
+      "de_bai": "次の言葉の使い方として最も近いものを、1・2・3・4から一つ選びなさい。\n共有",
+      "options": [
+        "市民ボランティアの共有で、留学生のスピーチコンテストが行われた。",
+        "大学と企業が共有で新しい技術の研究を行っている。",
+        "これらの事件には、発生場所に共有の特徴があることが分かった。",
+        "結婚してから購入した物は、夫婦の共有の財産になる。"
+      ],
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. Hoạt động hợp tác tổ chức sự kiện phải dùng từ như 「協力」, không dùng 「共有」(sở hữu chung, thường dùng cho vật/thông tin).",
+        "Sai. Hợp tác nghiên cứu giữa 2 bên phải dùng từ như 「共同」, không dùng 「共有」.",
+        "Sai. Đặc điểm chung giữa các vụ việc phải dùng từ như 「共通」, không dùng 「共有」.",
+        "Đúng. 「共有」đúng nghĩa khi tả tài sản/sở hữu chung giữa 2 hay nhiều người — 'tài sản mua sau khi kết hôn trở thành tài sản chung của vợ chồng'."
+      ]
+    },
+    {
+      "de_bai": "次の言葉の使い方として最も近いものを、1・2・3・4から一つ選びなさい。\n鋭い",
+      "options": [
+        "動物たちが自然界で生きていくためには、鋭い感覚が必要だ。",
+        "弟は記憶が鋭くて、本に載っているたくさんの国名や国旗をすぐに覚えた。",
+        "赤ちゃんの肌は鋭いから、少しの刺激で赤くなってしまう。",
+        "運動の能力が鋭い人は、どんなスポーツでもすぐに上達する。"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「鋭い」đúng nghĩa khi tả giác quan sắc bén, nhạy — 'để động vật sinh tồn trong tự nhiên, chúng cần có giác quan sắc bén'.",
+        "Sai. Trí nhớ tốt phải dùng từ như 「いい」, không dùng 「鋭い」cho khả năng ghi nhớ.",
+        "Sai. Da nhạy cảm (dễ kích ứng) phải dùng từ như 「敏感」, không dùng 「鋭い」cho da.",
+        "Sai. Năng lực thể thao tốt phải dùng từ như 「優れている」, không dùng 「鋭い」cho năng lực vận động nói chung."
+      ]
+    },
+    {
+      "de_bai": "次の言葉の使い方として最も近いものを、1・2・3・4から一つ選びなさい。\nはきはき",
+      "options": [
+        "よく眠ったので、今日は頭がはきはきとしている。",
+        "ビルの屋上から、遠くの山がはきはきと見える。",
+        "その学生は、聞かれたことにはきはきと答えた。",
+        "ミスの原因をはきはきとさせるために、調査が行われた。"
+      ],
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. Đầu óc tỉnh táo phải dùng từ như 「すっきり、はっきり」, không dùng 「はきはき」(thường tả cách nói/trả lời).",
+        "Sai. Nhìn thấy rõ núi xa phải dùng từ như 「はっきり」, không dùng 「はきはき」.",
+        "Đúng. 「はきはき」đúng nghĩa khi tả cách trả lời/nói rõ ràng, dứt khoát, mạnh dạn — 'học sinh đó đã trả lời câu hỏi một cách rõ ràng, dứt khoát'.",
+        "Sai. Làm rõ nguyên nhân lỗi phải dùng từ như 「明らかに」, không dùng 「はきはき」."
+      ]
+    },
+    {
+      "de_bai": "次の言葉の使い方として最も近いものを、1・2・3・4から一つ選びなさい。\n鑑賞",
+      "options": [
+        "学校の授業で、工場へ行って自動車を組み立てる様子を鑑賞した。",
+        "中学生のとき、市のコンサートホールでクラシック音楽を鑑賞した。",
+        "資料を読んで、自然を守るための国の活動について鑑賞した。",
+        "レストランで、素材の良さを生かした料理を舌でじっくり鑑賞した。"
+      ],
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. Quan sát quy trình lắp ráp ô tô (mang tính học hỏi kỹ thuật) phải dùng từ như 「見学」, không dùng 「鑑賞」(thưởng thức nghệ thuật).",
+        "Đúng. 「鑑賞」đúng nghĩa khi tả việc thưởng thức tác phẩm nghệ thuật (âm nhạc, tranh, phim) — 'khi học cấp 2, tôi đã thưởng thức nhạc cổ điển tại hội trường hòa nhạc của thành phố'.",
+        "Sai. Đọc tài liệu để tìm hiểu hoạt động bảo vệ môi trường phải dùng từ như 「調べる」, không dùng 「鑑賞」.",
+        "Sai. Thưởng thức món ăn bằng vị giác (lưỡi) phải dùng từ như 「味わう」, không dùng 「鑑賞」(thường dùng cho thị giác/thính giác khi xem nghệ thuật)."
+      ]
+    },
+    {
+      "de_bai": "次の言葉の使い方として最も近いものを、1・2・3・4から一つ選びなさい。\n着々",
+      "options": [
+        "ベランダが着々と古くなって危険なので、修理することにした。",
+        "ゲームに夢中になっていたら、時間が着々とたっていた。",
+        "来週のパーティーの準備は着々と進んでいるようだ。",
+        "夕方になって、外は着々と涼しくなって生きている。"
+      ],
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. Sự xuống cấp dần theo thời gian (tự nhiên, không có ý chí) phải dùng từ như 「徐々に」, không dùng 「着々」(thường tả việc làm có kế hoạch, chủ đích đang tiến triển tốt).",
+        "Sai. Thời gian trôi qua mà không hay biết phải dùng từ như 「いつのまにか」, không dùng 「着々」.",
+        "Đúng. 「着々と」đúng nghĩa khi tả công việc/kế hoạch đang tiến triển đều đặn, chắc chắn theo đúng dự định — 'việc chuẩn bị tiệc tuần sau có vẻ đang tiến triển đều đặn, thuận lợi'.",
+        "Sai. Sự thay đổi thời tiết tự nhiên (trở nên mát hơn) phải dùng từ như 「だんだん」, không dùng 「着々」."
+      ]
+    },
+    {
+      "de_bai": "次の文の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n卓球クラブの山谷さんは大きな大会で何度も優勝しているのに「私（　）まだまだですよ」といつも言っている。",
+      "options": [
+        "まで",
+        "さえ",
+        "ばかり",
+        "なんか"
+      ],
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「まで」(cho đến, kể cả) không khớp ngữ pháp khiêm tốn ở đây.",
+        "Sai. 「さえ」(thậm chí cả) không khớp hoàn toàn sắc thái tự ti khiêm tốn cần có.",
+        "Sai. 「ばかり」(chỉ, toàn là) không khớp ngữ pháp ở đây.",
+        "Đúng. 「なんか」(loại như, kiểu như - mang sắc thái khiêm tốn/hạ thấp bản thân) đúng nghĩa 'dù vô địch nhiều giải lớn, anh Yamatani vẫn luôn nói “tôi kiểu này thì vẫn còn kém lắm”'."
+      ]
+    },
+    {
+      "de_bai": "次の文の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n携帯電話を一人一台持つのは当たり前と言われる現代で、私のように携帯電話なしで生活している人は（　）いるのだろうか。",
+      "options": [
+        "どうも",
+        "どれほど",
+        "どうしても",
+        "どんなに"
+      ],
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「どうも」(thế nào đó, có cảm giác) không khớp ngữ pháp hỏi về số lượng.",
+        "Đúng. 「どれほど」nghĩa là 'khoảng bao nhiêu, mức nào' — đúng nghĩa 'trong thời đại mà ai cũng có điện thoại, liệu có khoảng bao nhiêu người sống không cần điện thoại như tôi?'.",
+        "Sai. 「どうしても」(dù thế nào cũng, nhất định) không khớp ngữ pháp hỏi số lượng.",
+        "Sai. 「どんなに」(dù có... thế nào) thường đi với động từ diễn tả mức độ hành động, không khớp ngữ pháp hỏi số lượng người ở đây."
+      ]
+    },
+    {
+      "de_bai": "次の文の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n花山市では、きゅうりやトマト なす（　）夏の野菜が多く生産されている。",
+      "options": [
+        "とする",
+        "に関する",
+        "といった",
+        "にそった"
+      ],
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「とする」(coi là, giả định là) không khớp ngữ pháp liệt kê ví dụ ở đây.",
+        "Sai. 「に関する」(liên quan đến) không khớp ngữ pháp liệt kê ví dụ cụ thể theo cách này.",
+        "Đúng. 「といった」nghĩa là 'như là, kiểu như' (liệt kê ví dụ điển hình) — đúng nghĩa 'ở thành phố Hanayama sản xuất nhiều loại rau mùa hè như dưa chuột, cà chua, cà tím'.",
+        "Sai. 「にそった」(theo, dọc theo - hướng/đường đi) không khớp ngữ pháp liệt kê ví dụ ở đây."
+      ]
+    },
+    {
+      "de_bai": "次の文の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n彼とは数年前に先輩の結婚式で（　）、ずっと会っていなかった。",
+      "options": [
+        "会ったきりだ",
+        "会ったばかりか",
+        "会っただけに",
+        "合ったところ"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「会ったきりだ」nghĩa là 'chỉ gặp đúng 1 lần đó (rồi không gặp lại nữa)' — đúng nghĩa 'tôi chỉ gặp anh ấy đúng 1 lần tại đám cưới của tiền bối vài năm trước, sau đó không gặp lại'.",
+        "Sai. 「ばかりか」(không chỉ... mà còn) không khớp ngữ pháp ở đây.",
+        "Sai. 「だけに」(chính vì... nên) không khớp ngữ pháp diễn tả 'chỉ gặp 1 lần duy nhất' ở đây.",
+        "Sai. 「合ったところ」sai từ vựng (phải là 会った không phải 合った) và sai ngữ pháp."
+      ]
+    },
+    {
+      "de_bai": "次の文の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n家の近所に子供向けのダンススクールができるらしい。オープンしたら、娘を体験レッスンに（　）と話している。",
+      "options": [
+        "参加してみようか",
+        "参加させてみようか",
+        "参加してみてよかった",
+        "参加させてみてよかった"
+      ],
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「してみようか」(tự mình thử tham gia) sai chủ thể — câu nói về việc CHO con tham gia, không phải bản thân người nói tham gia.",
+        "Đúng. 「させてみようか」nghĩa là 'thử cho (con) tham gia xem' — đúng nghĩa 'nghe nói sắp có trường dạy múa cho trẻ em gần nhà, khi mở thì (tôi) đang nói chuyện về việc thử cho con gái tham gia buổi học trải nghiệm'.",
+        "Sai. 「してみてよかった」(đã thử và thấy tốt - thì quá khứ, đã xảy ra) không khớp ngữ cảnh đang lên kế hoạch cho tương lai.",
+        "Sai. 「させてみてよかった」tương tự sai thời điểm như đáp án C."
+      ]
+    },
+    {
+      "de_bai": "次の文の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n（カメラ屋で）\n客：「カメラを海に落としてしまって、電源が入らないんです。中に水が入ってしまったようなのですが...」。\n店員：「海水が入った（　）、修理は難しいかもしれませんが、一応見てみますね」",
+      "options": [
+        "のであれば",
+        "ことであれば",
+        "のであって",
+        "ことであって"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「のであれば」nghĩa là 'nếu (đúng là) trường hợp đó thì...' — đúng nghĩa 'nếu đúng là nước biển đã vào trong máy, thì việc sửa có thể sẽ khó, nhưng tôi cứ kiểm tra thử xem'.",
+        "Sai. 「ことであれば」không khớp ngữ pháp tự nhiên ở đây (thường 「の」dùng cho việc xác nhận tình huống cụ thể hơn 「こと」).",
+        "Sai. 「のであって」(chính là vì...) mang tính khẳng định nguyên nhân, không khớp ngữ pháp giả định ở đây.",
+        "Sai. 「ことであって」tương tự không khớp ngữ pháp giả định cần có."
+      ]
+    },
+    {
+      "de_bai": "次の文の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n母：「引っ越しまでまだ時間はあるけど、直前になってあわてないように（　）。荷物の整理も進めておきなさい。」\n息子：「うん、分かった。」",
+      "options": [
+        "しだけでいいのに",
+        "少しだけならよくでも",
+        "少しずつやっておこう",
+        "少しだけならよくて"
+      ],
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「しだけでいいのに」không khớp ngữ pháp tự nhiên ở đây.",
+        "Sai. 「少しだけならよくでも」không khớp ngữ pháp tự nhiên ở đây.",
+        "Đúng. 「少しずつやっておこう」nghĩa là 'hãy làm dần từng chút một (chuẩn bị trước)' — đúng nghĩa lời mẹ khuyên con 'để không cuống lúc gần ngày, hãy làm dần từng chút từ giờ, sắp xếp đồ đạc trước đi'.",
+        "Sai. 「少しだけならよくて」không khớp ngữ pháp tự nhiên ở đây."
+      ]
+    },
+    {
+      "de_bai": "次の文の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n1896年の第1回オリンピックに参加した国と地域の数は14だったが、2004年には200を超える（　）。",
+      "options": [
+        "べきだった",
+        "つもりだった",
+        "ほかなかった",
+        "までになった"
+      ],
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「べきだった」(lẽ ra phải) mang tính khuyên răn quá khứ — không khớp ngữ cảnh miêu tả sự thay đổi số liệu thực tế.",
+        "Sai. 「つもりだった」(đã định làm) không khớp logic, vì số quốc gia tham gia tăng không phải là 'dự định' của ai.",
+        "Sai. 「ほかなかった」(không còn cách nào khác ngoài) không khớp ngữ cảnh.",
+        "Đúng. 「までになった」nghĩa là 'đã đạt tới mức (cao như vậy)' — đúng nghĩa 'số quốc gia/khu vực tham gia Olympic lần 1 năm 1896 là 14, nhưng đến năm 2004 đã tăng lên tới mức vượt quá 200'."
+      ]
+    },
+    {
+      "de_bai": "次の文の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\nチームでの仕事をスムーズに進めるには、メンバー同士の十分なコミュニケーション（　）。",
+      "options": [
+        "にすぎない",
+        "が欠かせない",
+        "のおかげだ",
+        "とのことだ"
+      ],
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「にすぎない」(chỉ là... mà thôi) mang tính hạ thấp/giảm nhẹ — không khớp ngữ cảnh nhấn mạnh sự cần thiết.",
+        "Đúng. 「が欠かせない」nghĩa là 'không thể thiếu' — đúng nghĩa 'để công việc nhóm diễn ra trôi chảy, sự giao tiếp đầy đủ giữa các thành viên là không thể thiếu'.",
+        "Sai. 「のおかげだ」(là nhờ vào) không khớp ngữ cảnh, vì câu đang nói về điều kiện CẦN CÓ, không phải kết quả nhờ vào điều gì.",
+        "Sai. 「とのことだ」(nghe nói là) dùng để truyền đạt thông tin gián tiếp — không khớp ngữ cảnh nhận định trực tiếp này."
+      ]
+    },
+    {
+      "de_bai": "次の文の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n昨日、新しくできた遊園地に行った。電車より車のほうが早いだろうと思って車で行ったら、ひどい渋滞でかえって時間がかかってしまった。やはり電車で（　）。",
+      "options": [
+        "行けばよかった",
+        "行くはずだった",
+        "行かなくて済んだ",
+        "行きたくてしかたがなかった"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「行けばよかった」nghĩa là 'lẽ ra nên đi bằng (tàu) thì tốt hơn' — diễn tả sự hối tiếc về lựa chọn đã làm — đúng nghĩa 'cuối cùng vẫn nên đi bằng tàu điện thì tốt hơn (hối tiếc vì đã đi xe và bị tắc đường)'.",
+        "Sai. 「行くはずだった」(lẽ ra phải đi - theo kế hoạch định trước) không khớp ngữ cảnh hối tiếc về lựa chọn.",
+        "Sai. 「行かなくて済んだ」(không cần phải đi cũng xong) sai logic, vì câu đang nói về việc ĐÃ đi bằng xe và hối tiếc, không phải về việc không cần đi.",
+        "Sai. 「行きたくてしかたがなかった」(muốn đi tới mức không chịu được) không khớp ngữ cảnh hối tiếc sau khi đã trải nghiệm tắc đường."
+      ]
+    },
+    {
+      "de_bai": "次の文の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n駅前に新しくできたカフェに友達を誘って行ってみたら、定休日だった。事前に確認しておく（　）。",
+      "options": [
+        "しかなかった",
+        "ほどではなかった",
+        "べきだった",
+        "せいだった"
+      ],
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「しかなかった」(không còn cách nào khác ngoài) không khớp ngữ cảnh hối tiếc về việc đã không làm.",
+        "Sai. 「ほどではなかった」(không tới mức) không khớp ngữ cảnh hối tiếc.",
+        "Đúng. 「べきだった」nghĩa là 'lẽ ra nên làm (nhưng đã không làm)' — đúng nghĩa 'mời bạn đi quán cafe mới mở trước trạm, nhưng hôm đó lại là ngày nghỉ định kỳ — lẽ ra nên xác nhận trước'.",
+        "Sai. 「せいだった」(là do, là lỗi của) không khớp ngữ pháp tự nhiên ở đây."
+      ]
+    },
+    {
+      "de_bai": "次の文の（　）に入れるのに最もよいものを、1・2・3・4から一つ選びなさい。\n（電話で）\nA：「お電話ありがとうございます。建設営業課でございます」\nB：「高橋さんはいらっしゃいますか。」\nA：「失礼ですが、お名前を（　）。」",
+      "options": [
+        "伺ったらいかがでしょうか",
+        "伺ってもよろしいでしょうか",
+        "お伝えしたらいかがでしょうか",
+        "お伝えしてもよろしいでしょうか"
+      ],
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「伺ったらいかがでしょうか」(nếu tôi hỏi thì thế nào) sai cấu trúc lịch sự tự nhiên khi xin phép hỏi tên người gọi.",
+        "Đúng. 「伺ってもよろしいでしょうか」là khiêm nhường ngữ + xin phép, nghĩa là 'tôi xin hỏi tên quý khách có được không' — đúng vai (nhân viên lễ tân xin phép hỏi tên người gọi điện) và đúng mức độ trang trọng.",
+        "Sai. 「お伝えしたら」(nếu tôi truyền đạt) sai động từ — ở đây cần hỏi TÊN người gọi (聞く/伺う), không phải truyền đạt thông tin (伝える).",
+        "Sai. 「お伝えしても」tương tự sai động từ như đáp án C."
+      ]
+    },
+    {
+      "de_bai": "「さわら」という魚は、漢字で「鰆」と書く___ ★ ___ ___ 魚の一つです。\n（選択肢：1 ように　2 わかる　3 ことから　4 春を代表する）",
+      "options": [
+        "ように",
+        "わかる",
+        "ことから",
+        "春を代表する"
+      ],
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「ように」đứng ở vị trí thứ 3 trong dãy 4 từ, không phải vị trí ★ (vị trí 2).",
+        "Đúng. Câu hoàn chỉnh: 「さわらという魚は、漢字で『鰆』と書くことからわかるように、春を代表する魚の一つです」(Cá saware, như có thể thấy rõ qua việc viết kanji là '鰆' [cá+xuân], là một trong những loài cá đại diện cho mùa xuân). Thứ tự: ことから(3)→わかる(2)→ように(1)→春を代表する(4). Vị trí ★ là từ thứ 2 trong dãy, ứng với 「わかる」(đáp án 2).",
+        "Sai. 「ことから」đứng đầu tiên trong dãy 4 từ, không phải vị trí ★ (vị trí 2).",
+        "Sai. 「春を代表する」đứng cuối cùng trong dãy 4 từ, không phải vị trí ★."
+      ]
+    },
+    {
+      "de_bai": "会議での西山さんのプレゼンは、普段はなかなか___ ___ ★ ___ 素晴らしかった。\n（選択肢：1 ぐらい　2 部長が　3 慰める　4 褒めることがない）",
+      "options": [
+        "ぐらい",
+        "部長が",
+        "慰める",
+        "褒めることがない"
+      ],
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「ぐらい」đứng cuối cùng trong dãy 4 từ, không phải vị trí ★.",
+        "Sai. 「部長が」đứng ở vị trí thứ 2, không phải vị trí ★ (vị trí 3).",
+        "Đúng. Câu hoàn chỉnh: 「会議での西山さんのプレゼンは、普段はなかなか褒めることがない部長が慰めるぐらい素晴らしかった」(Bài thuyết trình của Nishiyama tại cuộc họp xuất sắc tới mức cả trưởng phòng — người hiếm khi khen ngợi — cũng phải khen). Thứ tự: 褒めることがない(4)→部長が(2)→慰める(3)→ぐらい(1). Vị trí ★ là từ thứ 3, ứng với 「慰める」(đáp án 3).",
+        "Sai. 「褒めることがない」đứng đầu tiên trong dãy 4 từ, không phải vị trí ★."
+      ]
+    },
+    {
+      "de_bai": "同じ高温___ ___ ★ ___ は大きく変わる。\n（選択肢：1 感じ方　2 でも　3 温度や風の強さなど　4 によって）",
+      "options": [
+        "感じ方",
+        "でも",
+        "温度や風の強さなど",
+        "によって"
+      ],
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「感じ方」đứng cuối cùng trong dãy 4 từ, không phải vị trí ★.",
+        "Sai. 「でも」đứng ở vị trí đầu tiên (ngay sau 高温), không phải vị trí ★ (vị trí 3).",
+        "Sai. 「温度や風の強さなど」đứng ở vị trí thứ 2, không phải vị trí ★ (vị trí 3).",
+        "Đúng. Câu hoàn chỉnh: 「同じ高温でも温度や風の強さなどによって感じ方は大きく変わる」(Dù cùng là nhiệt độ cao, nhưng cách cảm nhận sẽ thay đổi lớn tùy theo nhiệt độ cụ thể và độ mạnh của gió). Thứ tự: でも(2)→温度や風の強さなど(3)→によって(4)→感じ方(1). Vị trí ★ là từ thứ 3 trong dãy, ứng với 「によって」(đáp án 4)."
+      ]
+    },
+    {
+      "de_bai": "「山川大学アニメ研究会」は___ ___ ★ ___ できた団体です。\n（選択肢：1 学生が　2 集まって　3 アニメが　4 好きでたまらないという）",
+      "options": [
+        "学生が",
+        "集まって",
+        "アニメが",
+        "好きでたまらないという"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. Câu hoàn chỉnh: 「山川大学アニメ研究会は、アニメが好きでたまらないという学生が集まってできた団体です」(Hội nghiên cứu Anime của đại học Yamakawa là một tổ chức được thành lập bởi những sinh viên mê anime tới mức không chịu được). Thứ tự: アニメが(3)→好きでたまらないという(4)→学生が(1)→集まって(2). Vị trí ★ là từ thứ 3, ứng với 「学生が」(đáp án 1).",
+        "Sai. 「集まって」đứng cuối cùng trong dãy 4 từ, không phải vị trí ★.",
+        "Sai. 「アニメが」đứng đầu tiên trong dãy 4 từ, không phải vị trí ★.",
+        "Sai. 「好きでたまらないという」đứng ở vị trí thứ 2, không phải vị trí ★ (vị trí 3)."
+      ]
+    },
+    {
+      "de_bai": "X会社の今井先輩は、自分はミスが多いといつも言っているが、___ ___ ★ ___ ように見える。\n（選択肢：1 新人で　2 何でも完璧にできている　3 私からすると　4 わからないことばかりの）",
+      "options": [
+        "新人で",
+        "何でも完璧にできている",
+        "私からすると",
+        "わからないことばかりの"
+      ],
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「新人で」đứng ở vị trí thứ 2, không phải vị trí ★ (vị trí 3).",
+        "Sai. 「何でも完璧にできている」đứng cuối cùng trong dãy 4 từ, không phải vị trí ★.",
+        "Đúng. Câu hoàn chỉnh: 「X会社の今井先輩は、自分はミスが多いといつも言っているが、わからないことばかりの新人で、私からすると何でも完璧にできているように見える」(Tiền bối Imai ở công ty X luôn nói mình hay sai sót — vì còn là người mới với nhiều điều chưa biết — nhưng theo tôi nhìn nhận thì anh ấy có vẻ làm gì cũng hoàn hảo). Thứ tự: わからないことばかりの(4)→新人で(1)→私からすると(3)→何でも完璧にできている(2). Vị trí ★ là từ thứ 3 trong dãy, ứng với 「私からすると」(đáp án 3).",
+        "Sai. 「わからないことばかりの」đứng đầu tiên trong dãy 4 từ, không phải vị trí ★."
+      ]
+    },
+    {
+      "de_bai": "以下は、留学生がスピーチのために書いた文章である。\n紅葉の異変　サリムソフィア\n\n私は日本の秋の景色が好きです。秋になって紅葉が始まり、緑だった葉が黄色やオレンジ、赤に変わると、とてもきれいです。秋の紅葉は、日本の四季の変化を感じさせてくれるものです。\n\n（48）ですが、先日テレビで、紅葉がピークを迎える時期が年々遅くなっているというニュースを見ました。中には、1月になってからピークを迎えたところもあるそうで、驚きました。温暖化によって平均気温が上昇していることが大きな原因だそうです。私は、夏が過ぎて気温が下がってくれば、必ず紅葉が始まると思っていました。（49）、そうではありませんでした。紅葉には、条件となる気温の変化がありました。\n\n葉の変色が始まるのは、1日の最低気温が大体8度以下になってからです。秋になっても、最低気温が一定の気温まで下がらなければ、紅葉は（50）。その後、さらに寒くなり、5～6度まで下がると、紅葉は一気に進みます。また、5度以下の日が続くと、最も美しい紅葉が見られるといわれています。\n\n紅葉に起きている異変を知り、このまま温暖化が進むと、日本の秋の景色が変わってしまう可能性もあるのではないかと思いました。もしかしたら、紅葉自体が見られなくなる日も来るかもしれません。紅葉を通して、温暖化が身近な問題であることをより強く（51）。\n\n（48）に入れるのに最もよいものを選びなさい。",
+      "options": [
+        "そこの紅葉",
+        "そんな紅葉",
+        "そちら",
+        "紅葉"
+      ],
+      "dap_an_dung": 1,
+      "giai_thich": [
+        "Sai. 「そこの紅葉」(lá đỏ ở đó) chỉ định 1 địa điểm cụ thể — không khớp mạch văn đang nói về紅葉 nói chung như 1 khái niệm.",
+        "Đúng. 「そんな紅葉」nghĩa là 'hiện tượng lá đỏ như vậy' — đúng mạch văn khi tổng kết lại ý vừa nói ở đoạn trước (về vẻ đẹp của lá đỏ mùa thu) trước khi chuyển sang ý mới (tin tức về sự thay đổi thời điểm).",
+        "Sai. 「そちら」(phía đó, hướng đó) không khớp ngữ pháp/ngữ nghĩa khi muốn nhắc lại chủ đề 紅葉 đã nói.",
+        "Sai. 「紅葉」(không có từ chỉ định) thiếu sắc thái liên kết với đoạn văn trước, không tự nhiên khi mở đầu đoạn mới bằng cách nhắc lại ý cũ."
+      ]
+    },
+    {
+      "de_bai": "以下は、留学生がスピーチのために書いた文章である。\n紅葉の異変　サリムソフィア\n\n私は日本の秋の景色が好きです。秋になって紅葉が始まり、緑だった葉が黄色やオレンジ、赤に変わると、とてもきれいです。秋の紅葉は、日本の四季の変化を感じさせてくれるものです。\n\n（48）ですが、先日テレビで、紅葉がピークを迎える時期が年々遅くなっているというニュースを見ました。中には、1月になってからピークを迎えたところもあるそうで、驚きました。温暖化によって平均気温が上昇していることが大きな原因だそうです。私は、夏が過ぎて気温が下がってくれば、必ず紅葉が始まると思っていました。（49）、そうではありませんでした。紅葉には、条件となる気温の変化がありました。\n\n葉の変色が始まるのは、1日の最低気温が大体8度以下になってからです。秋になっても、最低気温が一定の気温まで下がらなければ、紅葉は（50）。その後、さらに寒くなり、5～6度まで下がると、紅葉は一気に進みます。また、5度以下の日が続くと、最も美しい紅葉が見られるといわれています。\n\n紅葉に起きている異変を知り、このまま温暖化が進むと、日本の秋の景色が変わってしまう可能性もあるのではないかと思いました。もしかしたら、紅葉自体が見られなくなる日も来るかもしれません。紅葉を通して、温暖化が身近な問題であることをより強く（51）。\n\n（49）に入れるのに最もよいものを選びなさい。",
+      "options": [
+        "結局",
+        "確かに",
+        "しかし",
+        "つまり"
+      ],
+      "dap_an_dung": 2,
+      "giai_thich": [
+        "Sai. 「結局」(rốt cuộc) không khớp mạch văn logic phản bác lại suy nghĩ ban đầu của tác giả.",
+        "Sai. 「確かに」(quả thực là) dùng để thừa nhận 1 phần ý trước — không khớp vì câu sau hoàn toàn phản bác ý nghĩ trước đó của tác giả ('không phải vậy').",
+        "Đúng. 「しかし」(nhưng, tuy nhiên) đúng mạch văn khi phản bác lại suy nghĩ ban đầu của tác giả ('tôi từng nghĩ là... NHƯNG thực tế không phải vậy').",
+        "Sai. 「つまり」(nói cách khác, tức là) dùng để diễn giải lại ý đã nói — không khớp mạch văn phản bác hoàn toàn."
+      ]
+    },
+    {
+      "de_bai": "以下は、留学生がスピーチのために書いた文章である。\n紅葉の異変　サリムソフィア\n\n私は日本の秋の景色が好きです。秋になって紅葉が始まり、緑だった葉が黄色やオレンジ、赤に変わると、とてもきれいです。秋の紅葉は、日本の四季の変化を感じさせてくれるものです。\n\n（48）ですが、先日テレビで、紅葉がピークを迎える時期が年々遅くなっているというニュースを見ました。中には、1月になってからピークを迎えたところもあるそうで、驚きました。温暖化によって平均気温が上昇していることが大きな原因だそうです。私は、夏が過ぎて気温が下がってくれば、必ず紅葉が始まると思っていました。（49）、そうではありませんでした。紅葉には、条件となる気温の変化がありました。\n\n葉の変色が始まるのは、1日の最低気温が大体8度以下になってからです。秋になっても、最低気温が一定の気温まで下がらなければ、紅葉は（50）。その後、さらに寒くなり、5～6度まで下がると、紅葉は一気に進みます。また、5度以下の日が続くと、最も美しい紅葉が見られるといわれています。\n\n紅葉に起きている異変を知り、このまま温暖化が進むと、日本の秋の景色が変わってしまう可能性もあるのではないかと思いました。もしかしたら、紅葉自体が見られなくなる日も来るかもしれません。紅葉を通して、温暖化が身近な問題であることをより強く（51）。\n\n（50）に入れるのに最もよいものを選びなさい。",
+      "options": [
+        "始まらないのです",
+        "始まらないためです",
+        "始まらないのでしょうか",
+        "始まらないためでしょうか"
+      ],
+      "dap_an_dung": 0,
+      "giai_thich": [
+        "Đúng. 「始まらないのです」nghĩa là 'sẽ không bắt đầu (hiện tượng đổi màu lá)' — đúng mạch văn khẳng định trực tiếp điều kiện cần (nhiệt độ phải xuống dưới mức nhất định thì lá mới đổi màu).",
+        "Sai. 「始まらないためです」(vì để không bắt đầu) sai logic ngữ nghĩa — không khớp mạch văn đang giải thích NGUYÊN NHÂN/điều kiện, không phải MỤC ĐÍCH.",
+        "Sai. 「始まらないのでしょうか」(liệu có phải sẽ không bắt đầu không?) mang tính nghi vấn — không khớp mạch văn đang khẳng định sự thật khoa học.",
+        "Sai. 「始まらないためでしょうか」kết hợp sai cả về mục đích và nghi vấn, không khớp mạch văn."
+      ]
+    },
+    {
+      "de_bai": "以下は、留学生がスピーチのために書いた文章である。\n紅葉の異変　サリムソフィア\n\n私は日本の秋の景色が好きです。秋になって紅葉が始まり、緑だった葉が黄色やオレンジ、赤に変わると、とてもきれいです。秋の紅葉は、日本の四季の変化を感じさせてくれるものです。\n\n（48）ですが、先日テレビで、紅葉がピークを迎える時期が年々遅くなっているというニュースを見ました。中には、1月になってからピークを迎えたところもあるそうで、驚きました。温暖化によって平均気温が上昇していることが大きな原因だそうです。私は、夏が過ぎて気温が下がってくれば、必ず紅葉が始まると思っていました。（49）、そうではありませんでした。紅葉には、条件となる気温の変化がありました。\n\n葉の変色が始まるのは、1日の最低気温が大体8度以下になってからです。秋になっても、最低気温が一定の気温まで下がらなければ、紅葉は（50）。その後、さらに寒くなり、5～6度まで下がると、紅葉は一気に進みます。また、5度以下の日が続くと、最も美しい紅葉が見られるといわれています。\n\n紅葉に起きている異変を知り、このまま温暖化が進むと、日本の秋の景色が変わってしまう可能性もあるのではないかと思いました。もしかしたら、紅葉自体が見られなくなる日も来るかもしれません。紅葉を通して、温暖化が身近な問題であることをより強く（51）。\n\n（51）に入れるのに最もよいものを選びなさい。",
+      "options": [
+        "感じているからだと思います",
+        "感じられるところだと思います",
+        "感じさせることができました",
+        "感じるようになりました"
+      ],
+      "dap_an_dung": 3,
+      "giai_thich": [
+        "Sai. 「感じているからだと思います」(tôi nghĩ là vì đang cảm nhận...) sai cấu trúc logic — câu cần diễn tả sự THAY ĐỔI nhận thức của bản thân tác giả qua trải nghiệm này, không phải giải thích lý do.",
+        "Sai. 「感じられるところだと思います」(tôi nghĩ đó là điểm có thể cảm nhận được) không khớp mạch văn kết luận về sự thay đổi nhận thức cá nhân.",
+        "Sai. 「感じさせることができました」(đã có thể làm cho [người khác] cảm nhận được) sai chủ thể — câu đang nói về việc CHÍNH TÁC GIẢ cảm nhận sâu sắc hơn, không phải làm người khác cảm nhận.",
+        "Đúng. 「感じるようになりました」nghĩa là 'đã trở nên cảm nhận được (rõ hơn)' — đúng mạch văn kết luận của bài viết, diễn tả sự thay đổi trong nhận thức của tác giả sau khi biết về hiện tượng bất thường của lá đỏ: 'qua việc tìm hiểu về lá đỏ, tôi đã cảm nhận rõ hơn rằng nóng lên toàn cầu là vấn đề gần gũi'."
+      ]
+    }
+  ],
+  "mondai_breakdown": [
+    {
+      "mondai": 1,
+      "ten": "Đọc Hán tự",
+      "so_cau": 5
+    },
+    {
+      "mondai": 2,
+      "ten": "Viết Hán tự",
+      "so_cau": 5
+    },
+    {
+      "mondai": 3,
+      "ten": "Tiền/hậu tố",
+      "so_cau": 3
+    },
+    {
+      "mondai": 4,
+      "ten": "Tìm từ phù hợp văn cảnh",
+      "so_cau": 7
+    },
+    {
+      "mondai": 5,
+      "ten": "Từ đồng nghĩa",
+      "so_cau": 5
+    },
+    {
+      "mondai": 6,
+      "ten": "Cách dùng từ",
+      "so_cau": 5
+    },
+    {
+      "mondai": 7,
+      "ten": "Ngữ pháp câu",
+      "so_cau": 12
+    },
+    {
+      "mondai": 8,
+      "ten": "Sắp xếp câu (★)",
+      "so_cau": 5
+    },
+    {
+      "mondai": 9,
+      "ten": "Ngữ pháp đoạn văn",
+      "so_cau": 4
+    }
+  ]
+}

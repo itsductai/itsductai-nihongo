@@ -1,0 +1,4740 @@
+/* ===== N2 Vocab Lab v2 — main app logic ===== */
+
+const App = {
+  decks: [],
+  exams: [],
+  currentDeckId: null,
+  currentDeckType: null, // "TUVUNG" | "NGUPHAP"
+  currentWords: [],
+  progress: {},
+
+  // Cấu hình hiển thị mặt thẻ flashcard, theo từng TYPE riêng (lưu localStorage)
+  fieldConfig: {
+    TUVUNG: { front: ["kanji"], back: ["doc", "han_viet", "nghia", "vi_du", "dong_nghia", "trai_nghia"] },
+    NGUPHAP: { front: ["cautruc"], back: ["nghia", "cau_truc_ngu_phap", "vi_du", "dong_nghia", "trai_nghia", "so_sanh_de_nham"] },
+  },
+  visibleCols: {
+    TUVUNG: ["kanji", "doc", "han_viet", "nghia", "vi_du", "dong_nghia", "trai_nghia", "status"],
+    NGUPHAP: ["cautruc", "nghia", "muc_do", "vi_du", "dong_nghia", "trai_nghia", "status"],
+  },
+  // Cột nào đang ở trạng thái "ẩn để tự kiểm tra" (peek khi hover) — riêng biệt với việc ẩn/hiện cả cột
+  peekCols: {
+    TUVUNG: [],
+    NGUPHAP: [],
+  },
+
+  flashQueue: [],            // hàng đợi itemId xoay vòng trong phiên học hiện tại
+  flashRememberedCount: 0,   // số từ đã bấm "Đã nhớ" trong phiên này
+  flashTotalCount: 0,        // tổng số từ ban đầu của phiên (để tính % progress)
+  flashRestrictToIds: null,  // nếu học giới hạn theo 1 danh sách _id cụ thể (ví dụ "chỉ học từ yếu")
+
+  srsQueue: [],
+  srsIndex: 0,
+
+  typingOrder: [],
+  typingIndex: 0,
+  typingScore: 0,
+  typingPool: [],
+  typingCurrentTarget: "", // hiragana raw cần nhớ và gõ ra
+  typingCurrentWord: null,
+  typingRevealedCount: 0,
+  typingAnswered: false,
+
+  quizQuestions: [],
+  quizIndex: 0,
+  quizDirection: "kanji_nghia", // "kanji_nghia" | "kanji_hira" | "hira_nghia" (chỉ TUVUNG)
+  weaknessTab: "deck", // "deck" | "exam" — tab đang xem ở trang Điểm yếu
+  quizScore: 0,
+  quizAnswering: false, // chặn double-click khi đang xử lý 1 câu trả lời
+  quizTimerHandle: null,
+  quizStartTime: null,
+  quizNeedsReset: false,
+
+  matchPairs: 0,
+  matchTotalPairs: 0,
+  matchTimerHandle: null,
+  matchStartTime: null,
+  matchSelected: [],
+  matchLocked: false,
+  matchNeedsReset: false,
+
+  currentExamId: null,
+  examQueue: [],     // mảng index câu hỏi còn phải làm (FIFO, câu sai bị đẩy xuống cuối)
+  examOriginalTotal: 0,
+  examScore: 0,
+  examAnswered: new Set(), // index câu đã trả lời đúng (để không cộng điểm trùng)
+
+  // Lịch sử trả lời TỪNG câu trong đề đang làm — dùng để: quay lại xem câu trước,
+  // biết câu nào sai ở lần đầu, câu nào sai nhiều lần. Cấu trúc:
+  // { [qIndex]: { attempts: [{chosenIdx, correct, atMs}], firstTryCorrect: bool|null } }
+  examHistory: {},
+  // Vị trí đang xem trong danh sách "đã từng hiện ra" (theo thứ tự xuất hiện thật,
+  // không phải theo qIndex gốc) — dùng cho nút quay lại/tiến tới xem lại câu đã làm.
+  examSeenOrder: [],   // mảng qIndex theo đúng thứ tự đã hiện ra cho người học
+  examNavPos: -1,       // vị trí hiện tại trong examSeenOrder; -1 = đang ở câu mới nhất (live)
+  examReviewMode: false, // true khi đang xem lại câu cũ (không phải câu đang chờ trả lời)
+
+  // Chế độ luyện tốc độ (mojigoi/ngữ pháp): đếm 30s mỗi câu, đo tổng thời gian làm cả đề
+  examSpeedMode: false,
+  examScoreMode: "instant", // "instant" (chấm ngay) | "review" (chấm sửa cuối bài)
+  examPendingExamId: null,  // examId đang chờ chọn chế độ chấm qua modal, trước khi thực sự startExam
+
+  // ===== CHOUKAI (luyện nghe) =====
+  choukaiTests: [],
+  currentChoukaiId: null,
+  choukaiMondaiFilter: "all", // "all" | 1 | 2 | 3 | 4 | 5
+  choukaiQueue: [],          // [{mIndex, qIndex, subIndex|null}]
+  choukaiPos: 0,
+  choukaiScoreMode: "instant",
+  choukaiAnswers: {},        // key "m{M}q{Q}" hoặc "m{M}q{Q}s{S}" -> {chosenIndex, correct}
+  choukaiScore: 0,
+  choukaiHintEnabled: false,
+  choukaiReviewTab: "script",
+  choukaiPendingTestId: null,
+  choukaiCurrentAudioSrc: null, // theo dõi file audio đang load, tránh load lại không cần thiết
+  choukaiAnswering: false,      // chặn bấm thêm lựa chọn sau khi đã trả lời câu hiện tại
+  // Các listener "timeupdate" karaoke đang gắn, theo từng nơi dùng (key: "shadow",
+  // "reviewScript", "reviewVi", "detailScript"...) — gỡ đúng cái CŨ trước khi gắn
+  // MỚI để tránh nhiều listener cộng dồn trên cùng 1 thẻ <audio> qua mỗi lần đổi câu.
+  karaokeHandlers: {},
+  examLastAnswerCorrect: null, // kết quả lượt vừa chấm (chế độ instant), dùng khi bấm "Tiếp tục"
+  examLastAnsweredQIndex: null,
+  examPerQTimerHandle: null,
+  examPerQSecondsLeft: 30,
+  examPerQStartedAt: null,
+  examTotalTimerHandle: null,
+  examTotalStartTime: null,
+  examQuestionTimeLog: [], // mảng { qIndex, seconds, overTime, isRetry } ghi lại thời gian mỗi lần trả lời
+
+  // 2 mốc thời gian riêng biệt theo yêu cầu: mốc 1 = làm hết lượt đầu (mỗi câu gặp đúng 1 lần
+  // theo thứ tự gốc), mốc 2 = từ khi bắt đầu pha sửa lại các câu đã sai cho tới khi xong hẳn.
+  examFirstPassStartTime: null,
+  examFirstPassEndTime: null,
+  examFirstPassDone: false, // đã đi hết lượt đầu (mọi câu gốc đã được hỏi ít nhất 1 lần) chưa
+  examRetryStartTime: null,
+
+  // Các sửa tạm (qua nút "Sửa") áp đè lên dữ liệu gốc, lưu localStorage.
+  // Cấu trúc: { [deckId]: { [_id]: { ...field đã sửa } } }
+  editPatches: {},
+
+  soundEnabled: true,
+  speechEnabled: true, // phát âm tự động khi lật thẻ sang mặt sau
+
+  // Bật/tắt học theo thứ tự ngẫu nhiên, riêng cho Flashcard và SRS (mặc định bật cả 2)
+  shuffleEnabled: { flash: true, srs: true },
+
+  // Đánh dấu sao (kiểu Quizlet): { [deckId]: [itemId, itemId, ...] }
+  starredItems: {},
+};
+
+/* ---------- Field metadata (nhãn hiển thị + cách render) ---------- */
+
+const FIELD_META = {
+  TUVUNG: {
+    kanji: { label: "Kanji", render: (w) => `<div class="cf-kanji">${w.kanji}</div>` },
+    doc: { label: "Hiragana (trường âm đỏ)", render: (w) => `<div class="cf-doc">${renderChoon(w.doc_marked || w.doc)}</div>` },
+    han_viet: { label: "Hán Việt", render: (w) => `<div class="cf-hanviet">${w.han_viet}</div>` },
+    nghia: { label: "Nghĩa tiếng Việt", render: (w) => `<div class="cf-nghia">${w.nghia}</div>` },
+    vi_du: { label: "Ví dụ (furigana)", render: (w) => `<div class="cf-vidu">${renderExampleSentences(w.vi_du_ruby || w.vi_du)}</div>` },
+    dong_nghia: {
+      label: "Từ đồng nghĩa",
+      render: (w) => (w.dong_nghia && w.dong_nghia.length
+        ? `<div class="cf-block-label">Đồng nghĩa</div><div class="cf-synonyms">${renderSynonymList(w.dong_nghia)}</div>` : ""),
+    },
+    trai_nghia: {
+      label: "Từ trái nghĩa",
+      render: (w) => (w.trai_nghia && w.trai_nghia.length
+        ? `<div class="cf-block-label">Trái nghĩa</div><div class="cf-antonyms">${renderSynonymList(w.trai_nghia)}</div>` : ""),
+    },
+  },
+  NGUPHAP: {
+    cautruc: { label: "Cấu trúc", render: (w) => `<div class="cf-cautruc">${w.cautruc}</div>` },
+    nghia: { label: "Ý nghĩa", render: (w) => `<div class="cf-nghia">${w.nghia}</div>` },
+    muc_do: { label: "Mức độ trang trọng", render: (w) => (w.muc_do ? `<div class="cf-mucdo">${w.muc_do}</div>` : "") },
+    cau_truc_ngu_phap: { label: "Công thức ngữ pháp", render: (w) => (w.cau_truc_ngu_phap ? `<div class="cf-ngphap-structure">${w.cau_truc_ngu_phap}</div>` : "") },
+    vi_du: { label: "Ví dụ (furigana)", render: (w) => `<div class="cf-vidu">${renderExampleSentences(w.vi_du)}</div>` },
+    so_sanh_de_nham: {
+      label: "So sánh cấu trúc dễ nhầm",
+      render: (w) => {
+        if (!w.so_sanh_de_nham || !w.so_sanh_de_nham.length) return "";
+        const items = w.so_sanh_de_nham
+          .map((s) => `<div class="cf-sosanh-item"><span class="cf-sosanh-tag">${s.cautruc}</span> — ${s.khac_biet}</div>`)
+          .join("");
+        return `<div class="cf-block-label">So sánh dễ nhầm</div>${items}`;
+      },
+    },
+    dong_nghia: {
+      label: "Cấu trúc đồng nghĩa",
+      render: (w) => (w.dong_nghia && w.dong_nghia.length
+        ? `<div class="cf-block-label">Đồng nghĩa</div><div class="cf-synonyms">${renderSynonymList(w.dong_nghia)}</div>` : ""),
+    },
+    trai_nghia: {
+      label: "Cấu trúc trái nghĩa",
+      render: (w) => (w.trai_nghia && w.trai_nghia.length
+        ? `<div class="cf-block-label">Trái nghĩa</div><div class="cf-antonyms">${renderSynonymList(w.trai_nghia)}</div>` : ""),
+    },
+  },
+};
+
+/* ---------- Field nào cho phép sửa qua modal, loại input gì ---------- */
+
+const EDIT_FIELD_META = {
+  TUVUNG: [
+    { key: "kanji", label: "Kanji", type: "text" },
+    { key: "doc", label: "Cách đọc (raw, dùng để so khớp gõ chữ — không chứa **)", type: "text" },
+    { key: "doc_marked", label: "Cách đọc có đánh dấu trường âm", type: "choon-editor" },
+    { key: "han_viet", label: "Hán Việt", type: "text" },
+    { key: "nghia", label: "Nghĩa tiếng Việt", type: "text" },
+    { key: "vi_du", label: "Ví dụ (tiếng Nhật + dịch)", type: "textarea" },
+    { key: "vi_du_ruby", label: "Ví dụ có furigana (dùng <ruby>kanji<rt>đọc</rt></ruby>)", type: "ruby-editor" },
+    { key: "dong_nghia", label: "Từ đồng nghĩa (cách nhau bằng dấu phẩy)", type: "list" },
+    { key: "trai_nghia", label: "Từ trái nghĩa (cách nhau bằng dấu phẩy)", type: "list" },
+  ],
+  NGUPHAP: [
+    { key: "cautruc", label: "Cấu trúc", type: "text" },
+    { key: "nghia", label: "Ý nghĩa", type: "text" },
+    { key: "muc_do", label: "Mức độ trang trọng", type: "text" },
+    { key: "cau_truc_ngu_phap", label: "Công thức ngữ pháp", type: "text" },
+    { key: "vi_du", label: "Ví dụ (dùng <ruby>kanji<rt>đọc</rt></ruby> để thêm furigana)", type: "ruby-editor" },
+    { key: "dong_nghia", label: "Cấu trúc đồng nghĩa (cách nhau bằng dấu phẩy)", type: "list" },
+    { key: "trai_nghia", label: "Cấu trúc trái nghĩa (cách nhau bằng dấu phẩy)", type: "list" },
+  ],
+};
+
+const TABLE_COL_META = {
+  TUVUNG: {
+    kanji: { label: "Kanji", canPeek: false },
+    doc: { label: "Đọc", canPeek: true },
+    han_viet: { label: "Hán Việt", canPeek: true },
+    nghia: { label: "Nghĩa", canPeek: true },
+    vi_du: { label: "Ví dụ", canPeek: true },
+    dong_nghia: { label: "Đồng nghĩa", canPeek: false },
+    trai_nghia: { label: "Trái nghĩa", canPeek: false },
+    status: { label: "Trạng thái", canPeek: false },
+  },
+  NGUPHAP: {
+    cautruc: { label: "Cấu trúc", canPeek: false },
+    nghia: { label: "Ý nghĩa", canPeek: true },
+    muc_do: { label: "Mức độ", canPeek: true },
+    vi_du: { label: "Ví dụ", canPeek: true },
+    dong_nghia: { label: "Đồng nghĩa", canPeek: false },
+    trai_nghia: { label: "Trái nghĩa", canPeek: false },
+    status: { label: "Trạng thái", canPeek: false },
+  },
+};
+
+/* ---------- Render trường âm: chuyển **xxx** -> <span class="choon">xxx</span> ---------- */
+
+function renderChoon(text) {
+  if (!text) return "";
+  return text.replace(/\*\*(.+?)\*\*/g, '<span class="choon">$1</span>');
+}
+
+// Tách 1 chuỗi vi_du/vi_du_ruby chứa NHIỀU câu ví dụ viết liền nhau (cách nhau
+// bằng khoảng trắng sau dấu ")") thành từng dòng riêng — chỉ xử lý ở tầng hiển
+// thị, KHÔNG cần sửa lại cấu trúc dữ liệu JSON gốc đã có. An toàn với câu chỉ
+// có 1 ví dụ (không có gì để tách) và với các thẻ <ruby> bên trong.
+function renderExampleSentences(text) {
+  if (!text) return "";
+  const sentences = text.split(/(?<=\)) +(?=\S)/).filter(Boolean);
+  if (sentences.length <= 1) return renderChoon(text);
+  return sentences.map((s) => `<div class="cf-vidu-line">${renderChoon(s)}</div>`).join("");
+}
+
+function stripChoonMarks(text) {
+  if (!text) return "";
+  return text.replace(/\*\*/g, "");
+}
+
+// Render 1 mục đồng/trái nghĩa, hỗ trợ cả 2 format dữ liệu:
+// - Format cũ (chuỗi thuần): "低下"  -> chỉ hiện kanji, không furigana/nghĩa
+// - Format mới (object): {kanji, doc, nghia} -> hiện furigana nhỏ trên kanji + nghĩa kèm theo
+// Giữ cả 2 để không phải sửa toàn bộ dữ liệu JSON cũ ngay lập tức.
+function renderSynonymItem(item) {
+  if (typeof item === "string") {
+    return `<span class="syn-item">${item}</span>`;
+  }
+  if (item && typeof item === "object") {
+    const kanjiWithFurigana = item.doc
+      ? `<ruby>${item.kanji}<rt>${item.doc}</rt></ruby>`
+      : item.kanji;
+    const nghiaPart = item.nghia ? `<span class="syn-nghia">（${item.nghia}）</span>` : "";
+    return `<span class="syn-item">${kanjiWithFurigana}${nghiaPart}</span>`;
+  }
+  return "";
+}
+
+function renderSynonymList(list) {
+  if (!list || !list.length) return "";
+  return list.map(renderSynonymItem).join("、");
+}
+
+/* ---------- Utilities ---------- */
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function wordId(deckId, word, idx) {
+  // Dùng nội dung (kanji/cautruc) làm khóa chính để _id ổn định ngay cả khi
+  // thêm/xóa từ khác làm dịch chuyển vị trí trong mảng. idx chỉ dùng làm fallback
+  // khi từ không có kanji/cautruc (hiếm), và cộng thêm để tránh trùng nếu 2 từ
+  // trong cùng bộ có kanji/cautruc giống nhau y hệt.
+  const key = word.kanji || word.cautruc || `item${idx}`;
+  return `${deckId}::${key}`;
+}
+
+function fmtTime(sec) {
+  const m = Math.floor(sec / 60).toString().padStart(2, "0");
+  const s = Math.floor(sec % 60).toString().padStart(2, "0");
+  return `${m}:${s}`;
+}
+
+/* ---------- Âm thanh phản hồi nhẹ (đúng/sai), dùng Web Audio API, không cần file mp3 ---------- */
+
+let audioCtx = null;
+function getAudioCtx() {
+  if (!audioCtx) {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (AC) audioCtx = new AC();
+  }
+  return audioCtx;
+}
+
+function playTone(freq, durationMs, type = "sine", volume = 0.12) {
+  if (!App.soundEnabled) return;
+  const ctx = getAudioCtx();
+  if (!ctx) return;
+  try {
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = type;
+    osc.frequency.value = freq;
+    gain.gain.value = volume;
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    const now = ctx.currentTime;
+    gain.gain.setValueAtTime(volume, now);
+    gain.gain.exponentialRampToValueAtTime(0.001, now + durationMs / 1000);
+    osc.start(now);
+    osc.stop(now + durationMs / 1000);
+  } catch (e) { /* ignore audio errors silently */ }
+}
+
+function playCorrectSound() {
+  playTone(880, 110, "sine", 0.1);
+  setTimeout(() => playTone(1320, 130, "sine", 0.09), 70);
+}
+
+function playWrongSound() {
+  playTone(220, 180, "sine", 0.12);
+}
+
+/* ---------- Phát âm tiếng Nhật bằng Web Speech API (miễn phí, có sẵn trong trình duyệt) ---------- */
+
+/* ---------- Phát âm tiếng Nhật bằng Web Speech API (miễn phí, có sẵn trong trình duyệt) ----------
+   Lưu ý quan trọng cho mobile (đặc biệt iOS Safari/Chrome):
+   - speechSynthesis.getVoices() có thể trả về RỖNG ngay lúc trang vừa load, danh sách
+     giọng chỉ có sau khi browser bắn event 'voiceschanged'. Nếu gọi speak() trước khi
+     có giọng, một số máy sẽ ÂM THẦM không phát ra gì (không lỗi, không tiếng).
+   - Một số máy mobile không có giọng "ja-JP" cụ thể, chỉ có giọng chung; cần dò tìm
+     theo prefix "ja" thay vì so khớp chính xác "ja-JP".
+   - speechSynthesis.speak() PHẢI được gọi trong cùng 1 user-gesture (click/tap) —
+     không qua setTimeout/Promise delay — nếu không iOS sẽ chặn im lặng. Code gọi
+     speakWord() hiện tại đều gọi trực tiếp trong handler click, không qua async, OK.
+*/
+
+let cachedJapaneseVoice = null;
+let voicesLoadAttempted = false;
+
+function pickJapaneseVoice() {
+  if (!("speechSynthesis" in window)) return null;
+  const voices = window.speechSynthesis.getVoices();
+  if (!voices || !voices.length) return null;
+  // Ưu tiên khớp chính xác "ja-JP", sau đó bất kỳ giọng có lang bắt đầu bằng "ja"
+  return (
+    voices.find((v) => v.lang === "ja-JP") ||
+    voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("ja")) ||
+    null
+  );
+}
+
+function ensureVoicesLoaded() {
+  if (!("speechSynthesis" in window) || voicesLoadAttempted) return;
+  voicesLoadAttempted = true;
+  cachedJapaneseVoice = pickJapaneseVoice();
+  if (!cachedJapaneseVoice && "onvoiceschanged" in window.speechSynthesis) {
+    window.speechSynthesis.onvoiceschanged = () => {
+      cachedJapaneseVoice = pickJapaneseVoice();
+    };
+  }
+}
+
+function speakJapanese(text) {
+  if (!App.speechEnabled) return;
+  if (!text) return;
+  if (!("speechSynthesis" in window)) return; // trình duyệt không hỗ trợ -> bỏ qua êm, không lỗi
+  try {
+    window.speechSynthesis.cancel(); // hủy câu đang đọc trước đó (nếu có) tránh xếp hàng dồn lại
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = "ja-JP";
+    utter.rate = 0.95;
+    // Cố gắng dùng giọng Nhật cụ thể nếu tìm được, để tránh trường hợp browser
+    // chọn giọng mặc định không đọc được tiếng Nhật (im lặng hoặc đọc sai âm)
+    const voice = cachedJapaneseVoice || pickJapaneseVoice();
+    if (voice) utter.voice = voice;
+    window.speechSynthesis.speak(utter);
+  } catch (e) { /* ignore lỗi phát âm, không làm ảnh hưởng trải nghiệm học */ }
+}
+
+// Đọc đúng cách đọc thật (doc, không phải doc_marked có dấu **) hoặc cautruc cho ngữ pháp
+function speakWord(w) {
+  if (!w) return;
+  const text = w.doc || w.cautruc || w.kanji;
+  speakJapanese(text);
+}
+
+/* ===================================================================
+   THỐNG KÊ ĐIỂM YẾU — tự động ghi nhận số lần đúng/sai cho mỗi từ/câu,
+   áp dụng cho cả 3 mảng: từ vựng, ngữ pháp (theo deckId thật), và đề thi
+   (dùng deckId giả "__exam__" để tách riêng khỏi namespace từ vựng/ngữ pháp).
+   Lưu trong localStorage, không phụ thuộc server.
+=================================================================== */
+
+const WEAKNESS_STORAGE_KEY = "n2vocab_weakness_stats";
+
+function loadWeaknessStats() {
+  try {
+    const raw = localStorage.getItem(WEAKNESS_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveWeaknessStats(stats) {
+  localStorage.setItem(WEAKNESS_STORAGE_KEY, JSON.stringify(stats));
+}
+
+// deckId: tên bộ thật, hoặc "__exam__" cho câu hỏi đề thi
+// itemId: _id của từ/cấu trúc, hoặc "examId::qIndex" cho câu đề thi
+// correct: true/false
+// label: (tùy chọn) nội dung ngắn để hiển thị trong bảng thống kê mà không cần tra lại data gốc
+function recordWeaknessResult(deckId, itemId, correct, label) {
+  const stats = loadWeaknessStats();
+  if (!stats[deckId]) stats[deckId] = {};
+  if (!stats[deckId][itemId]) {
+    stats[deckId][itemId] = { correctCount: 0, wrongCount: 0, lastLabel: "", lastResultAt: 0 };
+  }
+  const entry = stats[deckId][itemId];
+  if (correct) entry.correctCount++; else entry.wrongCount++;
+  if (label) entry.lastLabel = label;
+  entry.lastResultAt = Date.now();
+  saveWeaknessStats(stats);
+}
+
+// "Điểm yếu" = đã sai ít nhất 1 lần, VÀ (nếu đã làm ≥3 lần thì tỷ lệ sai phải ≥40%
+// để tránh báo nhầm các từ đã từng sai nhưng sau đó học tốt hẳn lên). Với số lần làm
+// ít (1-2 lần), chỉ cần có sai là đủ để hiện ra ngay — để người mới dùng tính năng
+// này thấy kết quả ngay, không phải làm rất nhiều lần mới thấy gì.
+function getWeaknessListForDeck(deckId) {
+  const stats = loadWeaknessStats();
+  const deckStats = stats[deckId] || {};
+  const list = Object.keys(deckStats).map((itemId) => ({ itemId, ...deckStats[itemId] }));
+  return list
+    .filter((e) => {
+      if (e.wrongCount < 1) return false;
+      const total = e.wrongCount + e.correctCount;
+      if (total < 3) return true; // chưa đủ dữ liệu để xét tỷ lệ -> cứ hiện nếu có sai
+      return e.wrongCount / total >= 0.4;
+    })
+    .sort((a, b) => {
+      const totalA = a.wrongCount + a.correctCount;
+      const totalB = b.wrongCount + b.correctCount;
+      return (b.wrongCount / totalB) - (a.wrongCount / totalA);
+    });
+}
+
+function getWeaknessSummaryAcrossAll() {
+  const stats = loadWeaknessStats();
+  const summary = [];
+  Object.keys(stats).forEach((deckId) => {
+    const weakList = getWeaknessListForDeck(deckId);
+    if (weakList.length > 0) {
+      summary.push({ deckId, count: weakList.length });
+    }
+  });
+  return summary;
+}
+
+/* ===================================================================
+   LỊCH SỬ ĐỀ THI — lưu riêng trong localStorage, KHÔNG đụng tới file JSON
+   gốc trong dethi/ (chỉ đọc câu hỏi từ đó, không bao giờ ghi gì lên đó).
+   Cấu trúc: { [examId]: { totalCompletions, lastScore, lastTotal,
+   lastSeconds, lastFirstTryWrongCount, lastCompletedAt } }
+=================================================================== */
+
+const EXAM_HISTORY_STORAGE_KEY = "n2vocab_exam_history";
+
+function loadExamHistoryStats() {
+  try {
+    const raw = localStorage.getItem(EXAM_HISTORY_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveExamHistoryStats(stats) {
+  localStorage.setItem(EXAM_HISTORY_STORAGE_KEY, JSON.stringify(stats));
+}
+
+// ---------- Lưu CHI TIẾT từng câu của lần làm gần nhất (khác với loadExamHistoryStats
+// chỉ lưu điểm số tổng) — đây là dữ liệu nuôi lưới kết quả (.exam-result-dot) + popup
+// chi tiết từng câu. TRƯỚC ĐÂY dữ liệu này CHỈ tồn tại trong App.examHistory (biến tạm
+// trong RAM), bị xóa mỗi khi chọn lại đề / tải lại trang / KHÔNG được export — đây
+// chính là lý do Zane làm đề trên máy tính, export, nhập vào điện thoại nhưng không
+// thấy dữ liệu chi tiết đề thi (chỉ có điểm số tổng ở trang Thống kê, không có lưới
+// kết quả). Nay lưu lại để xem lại được trên mọi máy sau khi nhập tiến độ.
+const EXAM_DETAIL_HISTORY_STORAGE_KEY = "n2vocab_exam_detail_history";
+
+function loadExamDetailHistoryStats() {
+  try {
+    const raw = localStorage.getItem(EXAM_DETAIL_HISTORY_STORAGE_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function saveExamDetailHistoryStats(stats) {
+  localStorage.setItem(EXAM_DETAIL_HISTORY_STORAGE_KEY, JSON.stringify(stats));
+}
+
+// Gọi mỗi khi 1 đề thi hoàn thành — ghi đè snapshot chi tiết của examId này bằng
+// lần làm VỪA XONG (chỉ giữ lần gần nhất, không cộng dồn, vì đây là ảnh chụp trạng
+// thái để xem lại, không phải bộ đếm tích lũy).
+function saveExamDetailSnapshot(examId, examHistory) {
+  const stats = loadExamDetailHistoryStats();
+  stats[examId] = { examHistory, savedAt: Date.now() };
+  saveExamDetailHistoryStats(stats);
+}
+
+// Gọi đúng 1 lần khi 1 đề thi hoàn thành hẳn (finishExam). Cộng dồn totalCompletions
+// (vì đây là bộ đếm tích lũy — làm thêm 1 lần thì +1, không phải trạng thái để ghi đè),
+// còn các field "lần gần nhất" luôn lấy giá trị của lần vừa hoàn thành này.
+function recordExamCompletion(examId, { score, total, seconds, firstTryWrongCount }) {
+  const stats = loadExamHistoryStats();
+  if (!stats[examId]) {
+    stats[examId] = { totalCompletions: 0, lastScore: 0, lastTotal: 0, lastSeconds: 0, lastFirstTryWrongCount: 0, lastCompletedAt: 0 };
+  }
+  const entry = stats[examId];
+  entry.totalCompletions += 1;
+  entry.lastScore = score;
+  entry.lastTotal = total;
+  entry.lastSeconds = seconds;
+  entry.lastFirstTryWrongCount = firstTryWrongCount;
+  entry.lastCompletedAt = Date.now();
+  saveExamHistoryStats(stats);
+}
+
+/* ---------- Weakness mode UI (cho từ vựng/ngữ pháp) ---------- */
+
+let currentWeaknessIds = [];
+
+function renderWeaknessMode() {
+  document.getElementById("btnWeaknessTabDeck").classList.toggle("is-active", App.weaknessTab === "deck");
+  document.getElementById("btnWeaknessTabExam").classList.toggle("is-active", App.weaknessTab === "exam");
+  document.getElementById("btnWeaknessTabChoukai").classList.toggle("is-active", App.weaknessTab === "choukai");
+
+  if (App.weaknessTab === "exam") {
+    renderExamWeaknessTab();
+  } else if (App.weaknessTab === "choukai") {
+    renderChoukaiWeaknessTab();
+  } else {
+    renderDeckWeaknessTab();
+  }
+}
+
+function renderDeckWeaknessTab() {
+  document.getElementById("weaknessTitle").textContent = "Các từ/cấu trúc bạn hay sai nhất trong bộ này";
+  document.getElementById("weaknessActionRow").classList.remove("hidden");
+  document.getElementById("weaknessExamHint").classList.add("hidden");
+
+  const weakList = getWeaknessListForDeck(App.currentDeckId);
+  currentWeaknessIds = weakList.map((e) => e.itemId);
+
+  const empty = document.getElementById("weaknessEmpty");
+  const listWrap = document.getElementById("weaknessListWrap");
+
+  if (weakList.length === 0) {
+    document.getElementById("weaknessEmptyText").textContent =
+      "Chưa phát hiện điểm yếu nào trong bộ này. Cứ tiếp tục học!";
+    empty.classList.remove("hidden");
+    listWrap.classList.add("hidden");
+    return;
+  }
+  empty.classList.add("hidden");
+  listWrap.classList.remove("hidden");
+
+  const listDiv = document.getElementById("weaknessList");
+  listDiv.innerHTML = "";
+
+  weakList.forEach((e) => {
+    const w = App.currentWords.find((cw) => cw._id === e.itemId);
+    const title = w ? (w.kanji || w.cautruc) : e.lastLabel || e.itemId;
+    const subtitle = w ? w.nghia : "";
+
+    const row = document.createElement("div");
+    row.className = "weakness-row";
+    row.innerHTML = `
+      <div class="weakness-row-main">
+        <div class="weakness-row-title">${title}</div>
+        <div class="weakness-row-sub">${subtitle}</div>
+      </div>
+      <div class="weakness-row-stats">
+        <span class="weakness-wrong-count">✕ ${e.wrongCount} lần sai</span>
+        <span class="weakness-correct-count">✓ ${e.correctCount} lần đúng</span>
+      </div>
+    `;
+    listDiv.appendChild(row);
+  });
+}
+
+// Tab "Đề thi" — gộp câu sai của TẤT CẢ đề thi đã làm (deckId giả "__exam__"),
+// itemId có dạng "examId::qN". Bấm vào 1 dòng sẽ mở lại đúng popup chi tiết
+// (đề bài + đáp án + giải thích) đã dùng ở lưới kết quả, không cần làm lại đề.
+// Đây là giải pháp Zane đã CHỦ ĐỘNG CHỌN (đơn giản hơn ý tưởng ban đầu "tự động
+// tạo bộ flashcard từ câu sai") — chỉ cần xem lại được để tự ôn tập, không cần
+// tự động hóa hoàn toàn thành flashcard.
+function renderExamWeaknessTab() {
+  document.getElementById("weaknessTitle").textContent = "Các câu bạn hay sai nhất trong mọi đề thi";
+  document.getElementById("weaknessActionRow").classList.add("hidden");
+
+  const weakList = getWeaknessListForDeck("__exam__");
+
+  const empty = document.getElementById("weaknessEmpty");
+  const listWrap = document.getElementById("weaknessListWrap");
+
+  if (weakList.length === 0) {
+    document.getElementById("weaknessEmptyText").textContent =
+      "Chưa phát hiện câu nào hay sai trong các đề thi đã làm. Cứ tiếp tục luyện!";
+    empty.classList.remove("hidden");
+    listWrap.classList.add("hidden");
+    return;
+  }
+  empty.classList.add("hidden");
+  listWrap.classList.remove("hidden");
+  document.getElementById("weaknessExamHint").classList.remove("hidden");
+
+  const listDiv = document.getElementById("weaknessList");
+  listDiv.innerHTML = "";
+
+  weakList.forEach((e) => {
+    // itemId dạng "examId::qN" — examId có thể chứa dấu "-" nhưng không chứa "::"
+    const sepPos = e.itemId.indexOf("::q");
+    const examId = sepPos >= 0 ? e.itemId.slice(0, sepPos) : null;
+    const qIndex = sepPos >= 0 ? parseInt(e.itemId.slice(sepPos + 3), 10) : null;
+    const exam = examId ? App.exams.find((ex) => ex.id === examId) : null;
+    const examTitle = exam ? exam.title : (examId || "?");
+    const qLabel = qIndex !== null && !Number.isNaN(qIndex) ? `Câu ${qIndex + 1}` : "";
+
+    const row = document.createElement("div");
+    row.className = "weakness-row weakness-row-clickable";
+    row.innerHTML = `
+      <div class="weakness-row-main">
+        <div class="weakness-row-title">${examTitle} — ${qLabel}</div>
+        <div class="weakness-row-sub">${(e.lastLabel || "").replace(/\n/g, " ")}</div>
+      </div>
+      <div class="weakness-row-stats">
+        <span class="weakness-wrong-count">✕ ${e.wrongCount} lần sai</span>
+        <span class="weakness-correct-count">✓ ${e.correctCount} lần đúng</span>
+      </div>
+    `;
+    if (examId !== null && qIndex !== null && !Number.isNaN(qIndex)) {
+      row.addEventListener("click", () => openExamDetailFromWeakness(examId, qIndex));
+    }
+    listDiv.appendChild(row);
+  });
+}
+
+// Tab "Nghe" — câu sai trong các đề luyện nghe, itemId dạng "testId::m{M}q{Q}[s{S}]"
+function renderChoukaiWeaknessTab() {
+  document.getElementById("weaknessTitle").textContent = "Các câu bạn hay sai nhất trong mọi đề nghe";
+  document.getElementById("weaknessActionRow").classList.add("hidden");
+
+  const weakList = getWeaknessListForDeck("__choukai__");
+
+  const empty = document.getElementById("weaknessEmpty");
+  const listWrap = document.getElementById("weaknessListWrap");
+
+  if (weakList.length === 0) {
+    document.getElementById("weaknessEmptyText").textContent =
+      "Chưa phát hiện câu nào hay sai trong các đề nghe đã làm. Cứ tiếp tục luyện!";
+    empty.classList.remove("hidden");
+    listWrap.classList.add("hidden");
+    return;
+  }
+  empty.classList.add("hidden");
+  listWrap.classList.remove("hidden");
+  document.getElementById("weaknessExamHint").classList.remove("hidden");
+
+  const listDiv = document.getElementById("weaknessList");
+  listDiv.innerHTML = "";
+
+  weakList.forEach((e) => {
+    const sepPos = e.itemId.indexOf("::m");
+    const testId = sepPos >= 0 ? e.itemId.slice(0, sepPos) : null;
+    const key = sepPos >= 0 ? e.itemId.slice(sepPos + 2) : null;
+    const test = testId ? getChoukaiTest(testId) : null;
+    const testTitle = test ? test.title : (testId || "?");
+
+    const row = document.createElement("div");
+    row.className = "weakness-row weakness-row-clickable";
+    row.innerHTML = `
+      <div class="weakness-row-main">
+        <div class="weakness-row-title">${testTitle}</div>
+        <div class="weakness-row-sub">${(e.lastLabel || "").replace(/\n/g, " ")}</div>
+      </div>
+      <div class="weakness-row-stats">
+        <span class="weakness-wrong-count">✕ ${e.wrongCount} lần sai</span>
+        <span class="weakness-correct-count">✓ ${e.correctCount} lần đúng</span>
+      </div>
+    `;
+    if (testId && key) {
+      row.addEventListener("click", () => openChoukaiDetailFromWeakness(testId, key));
+    }
+    listDiv.appendChild(row);
+  });
+}
+
+// Mở popup chi tiết 1 câu đề thi TỪ TAB ĐIỂM YẾU (không nhất thiết là đề đang mở
+// trong session hiện tại) — ưu tiên dùng snapshot CHI TIẾT đã lưu lần làm gần
+// nhất (saveExamDetailSnapshot) để có đủ "đáp án đã chọn" hiển thị trong popup.
+// Dùng tham số override của openExamDetailModal — KHÔNG đụng tới App.currentExamId /
+// App.examHistory toàn cục, để không ảnh hưởng 1 đề khác đang làm giữa chừng.
+function openExamDetailFromWeakness(examId, qIndex) {
+  const exam = App.exams.find((ex) => ex.id === examId);
+  if (!exam) return;
+  const detailStats = loadExamDetailHistoryStats();
+  const saved = detailStats[examId];
+  // Nếu đúng là đề đang mở trong session hiện tại, ưu tiên dùng App.examHistory
+  // sống (mới hơn snapshot lưu, ví dụ vừa trả lời xong nhưng chưa finishExam()).
+  const examHistory = App.currentExamId === examId ? App.examHistory : (saved ? saved.examHistory : {});
+  openExamDetailModal(qIndex, { examId, examHistory });
+}
+
+function startWeaknessReview() {
+  if (!currentWeaknessIds.length) return;
+  setMode("flash");
+  // Ôn từ yếu là giới hạn khác (không phải ★), nên tắt trạng thái toggle ★ để
+  // tránh hiện sai là "đang lọc theo ★" trong khi thực ra đang lọc theo điểm yếu.
+  setFlashStarOnlyState(false);
+  initFlashMode(currentWeaknessIds);
+}
+
+/* ===================================================================
+   STATS MODE — trang thống kê tổng quan toàn hệ thống (từ vựng, ngữ
+   pháp, đề thi). Chỉ ĐỌC dữ liệu đã có (SRS, weakness, exam history),
+   không tạo thêm state riêng nào — luôn tính lại tươi mỗi lần mở trang.
+=================================================================== */
+
+// Tính số liệu đầy đủ cho 1 bộ: known/learning/fresh (để vẽ thanh 3 màu),
+// due (đến hạn ôn ngay) và % đã thuộc — dùng progress riêng của bộ đó
+// (không phải App.progress hiện tại), vì bảng tổng quan hiện MỌI bộ cùng lúc.
+function computeDeckStats(deck) {
+  const progress = SRS.loadProgress(deck.id);
+  let known = 0, learning = 0, fresh = 0, due = 0, mastered = 0;
+  deck.words.forEach((w) => {
+    const entry = SRS.getEntry(progress, w._id);
+    const st = SRS.status(entry);
+    // "mastered" (đánh dấu thủ công "Đã thuộc") được TÍNH VÀO known cho thanh % —
+    // về bản chất đây cũng là trạng thái "đã thuộc", chỉ khác cách đạt tới đó.
+    // Đếm riêng "mastered" thêm để có thể hiển thị huy hiệu ⭐ riêng nếu cần.
+    if (st === "known") known++;
+    else if (st === "mastered") { known++; mastered++; }
+    else if (st === "learning") learning++;
+    else fresh++;
+    if (entry.seen && SRS.isDue(entry)) due++;
+  });
+  const total = deck.words.length || 1;
+  const pctKnown = Math.round((known / total) * 100);
+  const pctLearning = Math.round((learning / total) * 100);
+  const pctFresh = 100 - pctKnown - pctLearning;
+  return { known, learning, fresh, due, mastered, total: deck.words.length, pctKnown, pctLearning, pctFresh };
+}
+
+function renderStatsMode() {
+  renderStatsOverviewTable();
+  renderStatsExamHistory();
+  renderStatsChoukaiHistory();
+}
+
+// Vẽ 1 biểu đồ tròn (donut) thuần SVG — không phụ thuộc thư viện ngoài (app
+// vẫn là HTML/CSS/JS thuần). Nhận mảng segments [{value, color, label}] và vẽ
+// các cung nối tiếp nhau bằng kỹ thuật stroke-dasharray/dashoffset, bắt đầu từ
+// vị trí 12 giờ (xoay -90°). Trả về chuỗi HTML (SVG + chữ % ở giữa).
+function buildDonutSvg(segments, centerLabel, centerSub) {
+  const size = 120, r = 48, cx = size / 2, cy = size / 2;
+  const circumference = 2 * Math.PI * r;
+  const total = segments.reduce((sum, s) => sum + s.value, 0) || 1;
+  let cumulative = 0;
+  const circles = segments.map((s) => {
+    const frac = s.value / total;
+    const length = frac * circumference;
+    const dasharray = `${length} ${circumference - length}`;
+    const dashoffset = circumference - cumulative;
+    cumulative += length;
+    if (s.value <= 0) return "";
+    return `<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${s.color}" stroke-width="16"
+      stroke-dasharray="${dasharray}" stroke-dashoffset="${dashoffset}" />`;
+  }).join("");
+  // Vòng nền xám mờ (trường hợp total=0, hoặc làm khung viền nhẹ phía dưới các cung màu)
+  return `
+    <svg viewBox="0 0 ${size} ${size}" width="${size}" height="${size}" class="stats-donut-svg">
+      <circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="var(--bg-3)" stroke-width="16" />
+      <g transform="rotate(-90 ${cx} ${cy})">${circles}</g>
+      <text x="${cx}" y="${cy - 2}" text-anchor="middle" class="stats-donut-center-num">${centerLabel}</text>
+      <text x="${cx}" y="${cy + 16}" text-anchor="middle" class="stats-donut-center-sub">${centerSub}</text>
+    </svg>
+  `;
+}
+
+// Render 1 nhóm (Mimi hoặc Khác): donut tổng quan + bảng từng bộ, sắp theo %
+// đã thuộc tăng dần (bộ yếu nhất lên đầu).
+function renderStatsGroup(decks, donutRowId, tbodyId, accentLabel) {
+  const donutRow = document.getElementById(donutRowId);
+  const tbody = document.getElementById(tbodyId);
+  tbody.innerHTML = "";
+
+  if (decks.length === 0) {
+    donutRow.innerHTML = `<div class="stats-donut-empty">Chưa có bộ nào trong nhóm này.</div>`;
+    return;
+  }
+
+  const decksWithStats = decks.map((deck) => ({ deck, s: computeDeckStats(deck) }));
+
+  // Tổng hợp cả nhóm để vẽ donut tổng quan + vài số liệu nổi bật.
+  const agg = decksWithStats.reduce((acc, { s }) => {
+    acc.known += s.known; acc.learning += s.learning; acc.fresh += s.fresh; acc.total += s.total;
+    return acc;
+  }, { known: 0, learning: 0, fresh: 0, total: 0 });
+  const aggPct = agg.total ? Math.round((agg.known / agg.total) * 100) : 0;
+  const bestDeck = decksWithStats.reduce((best, cur) => (cur.s.pctKnown > best.s.pctKnown ? cur : best), decksWithStats[0]);
+  const weakestDeck = decksWithStats.reduce((worst, cur) => (cur.s.pctKnown < worst.s.pctKnown ? cur : worst), decksWithStats[0]);
+
+  donutRow.innerHTML = `
+    <div class="stats-donut-box">
+      ${buildDonutSvg(
+        [
+          { value: agg.known, color: "var(--good)" },
+          { value: agg.learning, color: "var(--warn)" },
+          { value: agg.fresh, color: "var(--border)" },
+        ],
+        `${aggPct}%`,
+        "đã thuộc"
+      )}
+    </div>
+    <div class="stats-donut-summary">
+      <div class="stats-donut-summary-title">${accentLabel} — ${decks.length} bộ, ${agg.total} từ/cấu trúc</div>
+      <div class="stats-donut-summary-row"><i class="stats-dot stats-dot-known"></i> Đã thuộc: <b>${agg.known}</b></div>
+      <div class="stats-donut-summary-row"><i class="stats-dot stats-dot-learning"></i> Đang học: <b>${agg.learning}</b></div>
+      <div class="stats-donut-summary-row"><i class="stats-dot stats-dot-fresh"></i> Chưa học: <b>${agg.fresh}</b></div>
+      <div class="stats-donut-summary-highlight">🏆 Mạnh nhất: <b>${bestDeck.deck.title}</b> (${bestDeck.s.pctKnown}%)</div>
+      <div class="stats-donut-summary-highlight is-weak">⚠ Cần ưu tiên: <b>${weakestDeck.deck.title}</b> (${weakestDeck.s.pctKnown}%)</div>
+    </div>
+  `;
+
+  decksWithStats.sort((a, b) => a.s.pctKnown - b.s.pctKnown);
+  decksWithStats.forEach(({ deck, s }) => {
+    const tr = document.createElement("tr");
+    if (deck.id === App.currentDeckId) tr.classList.add("is-current-deck-row");
+
+    const dueNote = s.due > 0 ? `<span class="stats-due-badge">${s.due} cần ôn</span>` : "";
+    const typeTag = deck.type === "NGUPHAP" ? "Ngữ pháp" : "Từ vựng";
+
+    tr.innerHTML = `
+      <td class="stats-deck-name-cell">
+        <button class="stats-deck-link" data-jump-deck="${deck.id}">${deck.title}</button>
+        <span class="stats-deck-type-tag">${typeTag}</span>
+        ${deck.id === App.currentDeckId ? '<span class="stats-current-tag">(đang mở)</span>' : ""}
+        ${dueNote}
+      </td>
+      <td class="stats-bar-cell">
+        <div class="stats-hbar" title="Đã thuộc: ${s.known} · Đang học: ${s.learning} · Chưa học: ${s.fresh}">
+          <div class="stats-hbar-seg stats-hbar-known" style="width:${s.pctKnown}%"></div>
+          <div class="stats-hbar-seg stats-hbar-learning" style="width:${s.pctLearning}%"></div>
+          <div class="stats-hbar-seg stats-hbar-fresh" style="width:${s.pctFresh}%"></div>
+        </div>
+        <div class="stats-hbar-legend">
+          <span><i class="stats-dot stats-dot-known"></i>${s.known} thuộc</span>
+          <span><i class="stats-dot stats-dot-learning"></i>${s.learning} đang học</span>
+          <span><i class="stats-dot stats-dot-fresh"></i>${s.fresh} chưa học</span>
+        </div>
+      </td>
+      <td class="stats-pct-cell">${s.pctKnown}%</td>
+    `;
+    tbody.appendChild(tr);
+  });
+
+  tbody.querySelectorAll("[data-jump-deck]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const deckId = btn.dataset.jumpDeck;
+      if (deckId !== App.currentDeckId) {
+        switchDeck(deckId);
+      }
+      setMode("srs");
+    });
+  });
+}
+
+// Bảng tổng quan: tách riêng nhóm "Mimi" (giáo trình chính) khỏi các bộ khác —
+// đồng bộ với cách nhóm ở dropdown sidebar (mục populateDeckPicker). Mỗi nhóm
+// có 1 biểu đồ tròn (donut) tổng quan + bảng chi tiết từng bộ riêng.
+function renderStatsOverviewTable() {
+  const mimiDecks = App.decks.filter((d) => d.series === "mimi");
+  const otherDecks = App.decks.filter((d) => d.series !== "mimi");
+  document.querySelector(".stats-group-mimi").classList.toggle("hidden", mimiDecks.length === 0);
+  renderStatsGroup(mimiDecks, "statsDonutRowMimi", "statsOverviewBodyMimi", "Mimi N2");
+  renderStatsGroup(otherDecks, "statsDonutRowOther", "statsOverviewBodyOther", "Tài liệu khác");
+}
+
+// Bảng đề thi: liệt kê TẤT CẢ đề có trong hệ thống, kể cả CHƯA làm lần nào
+// (để biết rõ đề nào còn thiếu, không chỉ đề đã làm). Nhấn tên đề -> nhảy
+// thẳng sang trang Làm đề thi và tự chọn đúng đề đó.
+function renderStatsExamHistory() {
+  const stats = loadExamHistoryStats();
+  const listDiv = document.getElementById("statsExamList");
+  document.getElementById("statsExamEmpty").classList.add("hidden");
+
+  if (!App.exams.length) {
+    document.getElementById("statsExamEmpty").classList.remove("hidden");
+    listDiv.innerHTML = "";
+    return;
+  }
+
+  // Đề chưa làm lên trước (ưu tiên nhìn thấy ngay), đề đã làm sắp theo điểm thấp nhất trước
+  const examsWithStats = App.exams.map((exam) => ({ exam, s: stats[exam.id] || null }));
+  examsWithStats.sort((a, b) => {
+    if (!a.s && !b.s) return 0;
+    if (!a.s) return -1;
+    if (!b.s) return 1;
+    return (a.s.lastScore / a.s.lastTotal) - (b.s.lastScore / b.s.lastTotal);
+  });
+
+  const rows = examsWithStats.map(({ exam, s }) => {
+    if (!s) {
+      return `
+        <div class="stats-exam-row is-not-done">
+          <button class="stats-deck-link stats-exam-row-title" data-jump-exam="${exam.id}">${exam.title}</button>
+          <div class="stats-exam-row-stats">
+            <span class="stats-exam-not-done-badge">Chưa làm</span>
+          </div>
+        </div>
+      `;
+    }
+    const pct = s.lastTotal ? Math.round((s.lastScore / s.lastTotal) * 100) : 0;
+    const dateLabel = s.lastCompletedAt ? new Date(s.lastCompletedAt).toLocaleString("vi-VN") : "—";
+    const timeLabel = s.lastSeconds ? fmtTime(s.lastSeconds) : "—";
+    return `
+      <div class="stats-exam-row">
+        <button class="stats-deck-link stats-exam-row-title" data-jump-exam="${exam.id}">${exam.title}</button>
+        <div class="stats-hbar stats-hbar-score" title="${s.lastScore}/${s.lastTotal} điểm">
+          <div class="stats-hbar-seg stats-hbar-known" style="width:${pct}%"></div>
+        </div>
+        <div class="stats-exam-row-stats">
+          <span class="stats-exam-stat">Đã làm <b>${s.totalCompletions}</b> lần</span>
+          <span class="stats-exam-stat">Gần nhất: <b>${s.lastScore}/${s.lastTotal}</b> điểm</span>
+          <span class="stats-exam-stat">Sai lần 1: <b>${s.lastFirstTryWrongCount}</b> câu</span>
+          <span class="stats-exam-stat">Thời gian: <b>${timeLabel}</b></span>
+          <span class="stats-exam-stat-date">${dateLabel}</span>
+        </div>
+      </div>
+    `;
+  }).join("");
+  listDiv.innerHTML = rows;
+
+  listDiv.querySelectorAll("[data-jump-exam]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const examId = btn.dataset.jumpExam;
+      document.getElementById("examPicker").value = examId;
+      startExam(examId);
+      setMode("exam");
+    });
+  });
+}
+
+// Bảng đề nghe — cùng pattern với renderStatsExamHistory, liệt kê TẤT CẢ đề
+// nghe có trong hệ thống, đề chưa làm lên trước.
+function renderStatsChoukaiHistory() {
+  const stats = loadChoukaiHistoryStats();
+  const listDiv = document.getElementById("statsChoukaiList");
+  document.getElementById("statsChoukaiEmpty").classList.add("hidden");
+
+  if (!App.choukaiTests.length) {
+    document.getElementById("statsChoukaiEmpty").classList.remove("hidden");
+    listDiv.innerHTML = "";
+    return;
+  }
+
+  const testsWithStats = App.choukaiTests.map((test) => ({ test, s: stats[test.id] || null }));
+  testsWithStats.sort((a, b) => {
+    if (!a.s && !b.s) return 0;
+    if (!a.s) return -1;
+    if (!b.s) return 1;
+    return (a.s.lastScore / a.s.lastTotal) - (b.s.lastScore / b.s.lastTotal);
+  });
+
+  const rows = testsWithStats.map(({ test, s }) => {
+    if (!s) {
+      return `
+        <div class="stats-exam-row is-not-done">
+          <button class="stats-deck-link stats-exam-row-title" data-jump-choukai="${test.id}">${test.title}</button>
+          <div class="stats-exam-row-stats">
+            <span class="stats-exam-not-done-badge">Chưa làm</span>
+          </div>
+        </div>
+      `;
+    }
+    const pct = s.lastTotal ? Math.round((s.lastScore / s.lastTotal) * 100) : 0;
+    const dateLabel = s.lastCompletedAt ? new Date(s.lastCompletedAt).toLocaleString("vi-VN") : "—";
+    const timeLabel = s.lastSeconds ? fmtTime(s.lastSeconds) : "—";
+    return `
+      <div class="stats-exam-row">
+        <button class="stats-deck-link stats-exam-row-title" data-jump-choukai="${test.id}">${test.title}</button>
+        <div class="stats-hbar stats-hbar-score" title="${s.lastScore}/${s.lastTotal} điểm">
+          <div class="stats-hbar-seg stats-hbar-known" style="width:${pct}%"></div>
+        </div>
+        <div class="stats-exam-row-stats">
+          <span class="stats-exam-stat">Đã làm <b>${s.totalCompletions}</b> lần</span>
+          <span class="stats-exam-stat">Gần nhất: <b>${s.lastScore}/${s.lastTotal}</b> điểm</span>
+          <span class="stats-exam-stat">Thời gian: <b>${timeLabel}</b></span>
+          <span class="stats-exam-stat-date">${dateLabel}</span>
+        </div>
+      </div>
+    `;
+  }).join("");
+  listDiv.innerHTML = rows;
+
+  listDiv.querySelectorAll("[data-jump-choukai]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const testId = btn.dataset.jumpChoukai;
+      document.getElementById("choukaiPicker").value = testId;
+      openChoukaiModeModal(testId);
+      setMode("choukai");
+    });
+  });
+}
+
+/* ---------- Focus mode: phóng to toàn màn hình, ẩn sidebar + điều khiển thừa ---------- */
+
+function enterFocusMode() {
+  // Riêng exam: nếu chưa chọn đề thi (sidebar ẩn sẽ không bấm lại được dropdown chọn đề),
+  // không cho vào focus mode, nhắc người dùng chọn đề trước.
+  const examView = document.getElementById("view-exam");
+  const isExamViewActive = examView && !examView.classList.contains("hidden");
+  if (isExamViewActive && !App.currentExamId) {
+    alert("Hãy chọn một đề thi ở sidebar trước khi phóng to toàn màn hình.");
+    return;
+  }
+  // Riêng phần nghe: tương tự, cần đã chọn đề nghe trước.
+  const choukaiView = document.getElementById("view-choukai");
+  const isChoukaiViewActive = choukaiView && !choukaiView.classList.contains("hidden");
+  if (isChoukaiViewActive && !App.currentChoukaiId) {
+    alert("Hãy chọn một đề nghe ở trên trước khi phóng to toàn màn hình.");
+    return;
+  }
+  // Riêng "Luyện nghe câu" (shadow mode): cần đã chọn đề + câu cụ thể trước.
+  const shadowView = document.getElementById("view-choukai-shadow");
+  const isShadowViewActive = shadowView && !shadowView.classList.contains("hidden");
+  if (isShadowViewActive && document.getElementById("choukaiShadowBody").classList.contains("hidden")) {
+    alert("Hãy chọn đề nghe + câu cụ thể ở trên trước khi phóng to toàn màn hình.");
+    return;
+  }
+  document.getElementById("app").classList.add("focus-mode");
+  document.getElementById("btnExitFocus").classList.remove("hidden");
+
+  // Bật Fullscreen API THẬT của trình duyệt — che luôn cả thanh tab/địa chỉ trên
+  // PC/laptop, không chỉ phóng to trong trang. Một số trình duyệt/khung nhúng
+  // (vd iframe không có allow="fullscreen") sẽ TỪ CHỐI lời gọi này — bắt lỗi để
+  // app vẫn hoạt động bình thường ở chế độ "phóng to trong trang" (CSS) như cũ,
+  // không bị crash hay kẹt màn hình.
+  const el = document.documentElement;
+  const req = el.requestFullscreen || el.webkitRequestFullscreen || el.msRequestFullscreen;
+  if (req) {
+    try {
+      const p = req.call(el);
+      if (p && p.catch) p.catch(function () { /* trình duyệt từ chối — vẫn giữ focus-mode CSS, không sao */ });
+    } catch (e) { /* bỏ qua, giữ nguyên chế độ phóng to bằng CSS */ }
+  }
+}
+
+function exitFocusMode() {
+  document.getElementById("app").classList.remove("focus-mode");
+  document.getElementById("btnExitFocus").classList.add("hidden");
+
+  // Thoát Fullscreen API thật nếu đang ở fullscreen do app bật (không gọi nếu
+  // không phải app bật, để không ảnh hưởng fullscreen của trang khác/người dùng
+  // tự bật F11 riêng).
+  const isInFullscreen = document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
+  if (isInFullscreen) {
+    const exit = document.exitFullscreen || document.webkitExitFullscreen || document.msExitFullscreen;
+    if (exit) {
+      try {
+        const p = exit.call(document);
+        if (p && p.catch) p.catch(function () { /* bỏ qua */ });
+      } catch (e) { /* bỏ qua */ }
+    }
+  }
+}
+
+function loadFieldConfig() {
+  try {
+    const raw = localStorage.getItem("n2vocab_fieldconfig");
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      Object.assign(App.fieldConfig, parsed);
+    }
+  } catch (e) { /* ignore */ }
+  try {
+    const raw2 = localStorage.getItem("n2vocab_colconfig");
+    if (raw2) {
+      const parsed2 = JSON.parse(raw2);
+      Object.assign(App.visibleCols, parsed2);
+    }
+  } catch (e) { /* ignore */ }
+  try {
+    const raw3 = localStorage.getItem("n2vocab_peekcols");
+    if (raw3) {
+      const parsed3 = JSON.parse(raw3);
+      Object.assign(App.peekCols, parsed3);
+    }
+  } catch (e) { /* ignore */ }
+  try {
+    const raw4 = localStorage.getItem("n2vocab_sound_enabled");
+    if (raw4 !== null) App.soundEnabled = raw4 === "true";
+  } catch (e) { /* ignore */ }
+  try {
+    const raw5 = localStorage.getItem("n2vocab_speech_enabled");
+    if (raw5 !== null) App.speechEnabled = raw5 === "true";
+  } catch (e) { /* ignore */ }
+}
+
+function saveSoundConfig() {
+  localStorage.setItem("n2vocab_sound_enabled", String(App.soundEnabled));
+}
+
+function saveSpeechConfig() {
+  localStorage.setItem("n2vocab_speech_enabled", String(App.speechEnabled));
+}
+
+function loadShuffleConfig() {
+  try {
+    const raw = localStorage.getItem("n2vocab_shuffle_enabled");
+    if (raw) Object.assign(App.shuffleEnabled, JSON.parse(raw));
+  } catch (e) { /* ignore */ }
+}
+
+function saveShuffleConfig() {
+  localStorage.setItem("n2vocab_shuffle_enabled", JSON.stringify(App.shuffleEnabled));
+}
+
+function saveFieldConfig() {
+  localStorage.setItem("n2vocab_fieldconfig", JSON.stringify(App.fieldConfig));
+}
+
+function saveColConfig() {
+  localStorage.setItem("n2vocab_colconfig", JSON.stringify(App.visibleCols));
+}
+
+/* ---------- Patch sửa tạm: lưu các chỉnh sửa từ vựng/ngữ pháp, áp đè lên dữ liệu gốc ---------- */
+
+function loadEditPatches() {
+  try {
+    const raw = localStorage.getItem("n2vocab_editpatches");
+    if (raw) App.editPatches = JSON.parse(raw);
+  } catch (e) { App.editPatches = {}; }
+}
+
+function saveEditPatches() {
+  localStorage.setItem("n2vocab_editpatches", JSON.stringify(App.editPatches));
+}
+
+// Áp các patch đã lưu lên 1 danh sách words (gọi ngay sau khi load deck từ file JSON gốc)
+function applyPatchesToWords(deckId, words) {
+  const patchesForDeck = App.editPatches[deckId];
+  if (!patchesForDeck) return words;
+  return words.map((w) => {
+    const patch = patchesForDeck[w._id];
+    return patch ? { ...w, ...patch } : w;
+  });
+}
+
+// Lưu 1 sửa tạm cho 1 từ cụ thể trong 1 bộ, rồi áp dụng ngay vào App.currentWords đang hiển thị
+function saveWordEdit(deckId, wordId_, changedFields) {
+  if (!App.editPatches[deckId]) App.editPatches[deckId] = {};
+  App.editPatches[deckId][wordId_] = { ...App.editPatches[deckId][wordId_], ...changedFields };
+  saveEditPatches();
+
+  // Áp ngay vào dữ liệu đang dùng trong session, không cần tải lại trang
+  const deck = App.decks.find((d) => d.id === deckId);
+  if (deck) {
+    deck.words = deck.words.map((w) => (w._id === wordId_ ? { ...w, ...changedFields } : w));
+    if (App.currentDeckId === deckId) {
+      App.currentWords = deck.words;
+    }
+  }
+}
+
+function clearAllEditPatches() {
+  App.editPatches = {};
+  localStorage.removeItem("n2vocab_editpatches");
+}
+
+/* ---------- Đánh dấu sao (kiểu Quizlet): { [deckId]: [itemId, ...] } ---------- */
+
+function loadStarredItems() {
+  try {
+    const raw = localStorage.getItem("n2vocab_starred");
+    App.starredItems = raw ? JSON.parse(raw) : {};
+  } catch (e) {
+    App.starredItems = {};
+  }
+}
+
+function saveStarredItems() {
+  localStorage.setItem("n2vocab_starred", JSON.stringify(App.starredItems));
+}
+
+function isStarred(deckId, itemId) {
+  return !!(App.starredItems[deckId] && App.starredItems[deckId].includes(itemId));
+}
+
+function toggleStar(deckId, itemId) {
+  if (!App.starredItems[deckId]) App.starredItems[deckId] = [];
+  const list = App.starredItems[deckId];
+  const idx = list.indexOf(itemId);
+  if (idx === -1) {
+    list.push(itemId);
+  } else {
+    list.splice(idx, 1);
+  }
+  saveStarredItems();
+}
+
+function getStarredIdsForDeck(deckId) {
+  return App.starredItems[deckId] || [];
+}
+
+
+function savePeekConfig() {
+  localStorage.setItem("n2vocab_peekcols", JSON.stringify(App.peekCols));
+}
+
+/* ---------- Loading decks & exams ---------- */
+
+async function loadDecks() {
+  const res = await fetch("tailieu/index.json");
+  const idx = await res.json();
+  const decks = [];
+  for (const filename of idx.files) {
+    try {
+      const r = await fetch(`tailieu/${filename}`);
+      const data = await r.json();
+      const id = filename.replace(/\.json$/, "");
+      const type = data.type === "NGUPHAP" ? "NGUPHAP" : "TUVUNG";
+
+      // Tạo _id ổn định theo nội dung; nếu phát hiện trùng (hiếm, ví dụ 2 từ
+      // đồng âm được liệt kê riêng để học 2 nghĩa), thêm hậu tố #2, #3... để
+      // đảm bảo _id luôn duy nhất trong cùng 1 bộ.
+      const seenIds = {};
+      let words = data.words.map((w, i) => {
+        let baseId = wordId(id, w, i);
+        if (seenIds[baseId] !== undefined) {
+          seenIds[baseId] += 1;
+          baseId = `${baseId}#${seenIds[baseId]}`;
+        } else {
+          seenIds[baseId] = 0;
+        }
+        return { ...w, _id: baseId };
+      });
+      words = applyPatchesToWords(id, words);
+      // "series" (vd "mimi") — field tùy chọn để nhóm các bộ thuộc cùng 1 giáo
+      // trình lại với nhau trong dropdown, tách khỏi các bộ lẻ khác. Không có
+      // field này thì coi như thuộc nhóm "khác" (không ảnh hưởng bộ cũ).
+      decks.push({ id, title: data.title || filename, type, series: data.series || null, words });
+    } catch (e) {
+      console.error("Lỗi tải bộ", filename, e);
+    }
+  }
+  // Sắp theo tên hiển thị A-Z (so sánh kiểu tiếng Việt, có dấu đúng thứ tự)
+  // — áp dụng ngay tại đây để MỌI nơi dùng App.decks (dropdown, sửa tạm reload...)
+  // đều tự động theo đúng thứ tự, không cần sort lặp lại ở từng nơi hiển thị.
+  // numeric:true giúp so sánh hiểu ĐÚNG các số nằm trong tên (vd "Unit 10" phải
+  // đứng SAU "Unit 3", không phải đứng trước như so sánh ký tự thường — so sánh
+  // ký tự thường sẽ thấy '1' < '3' nên xếp "Unit 10","Unit 11" lên TRƯỚC "Unit 3",
+  // "Unit 4", nhìn vào tưởng sai thứ tự dù về mặt chuỗi vẫn đúng A-Z.
+  decks.sort((a, b) => a.title.localeCompare(b.title, "vi", { numeric: true }));
+  return decks;
+}
+
+async function loadExams() {
+  try {
+    const res = await fetch("dethi/index.json");
+    const idx = await res.json();
+    const exams = [];
+    for (const filename of idx.files) {
+      try {
+        const r = await fetch(`dethi/${filename}`);
+        const data = await r.json();
+        const id = filename.replace(/\.json$/, "");
+        exams.push({ id, title: data.title || filename, questions: data.questions || [] });
+      } catch (e) {
+        console.error("Lỗi tải đề thi", filename, e);
+      }
+    }
+    // Cùng quy tắc với loadDecks(): sắp A-Z theo tên đề, hiểu số (numeric:true)
+    // để các đề có số năm/tháng trong tên không bị xếp sai kiểu so sánh ký tự.
+    exams.sort((a, b) => a.title.localeCompare(b.title, "vi", { numeric: true }));
+    return exams;
+  } catch (e) {
+    console.warn("Không có thư mục đề thi hoặc index.json lỗi", e);
+    return [];
+  }
+}
+
+async function loadChoukaiTests() {
+  try {
+    const res = await fetch("dethi-choukai/index.json");
+    const idx = await res.json();
+    const tests = [];
+    for (const filename of idx.files) {
+      try {
+        const r = await fetch(`dethi-choukai/${filename}`);
+        const data = await r.json();
+        tests.push(data);
+      } catch (e) {
+        console.error("Lỗi tải đề nghe", filename, e);
+      }
+    }
+    tests.sort((a, b) => a.title.localeCompare(b.title, "vi", { numeric: true }));
+    return tests;
+  } catch (e) {
+    console.warn("Không có thư mục đề nghe hoặc index.json lỗi", e);
+    return [];
+  }
+}
+
+function populateDeckPicker() {
+  const picker = document.getElementById("deckPicker");
+  picker.innerHTML = "";
+
+  // Nhóm riêng "Mimi" (giáo trình chính) khỏi các bộ khác — yêu cầu mục 21
+  // README. Bộ nào có "series": "mimi" trong file JSON sẽ rơi vào optgroup
+  // Mimi, đứng ĐẦU dropdown; còn lại giữ nguyên optgroup "Tài liệu khác".
+  // Thứ tự A-Z trong từng nhóm vẫn giữ nguyên (App.decks đã được sort sẵn).
+  const mimiDecks = App.decks.filter((d) => d.series === "mimi");
+  const otherDecks = App.decks.filter((d) => d.series !== "mimi");
+
+  const renderGroup = (label, decks) => {
+    if (decks.length === 0) return;
+    const group = document.createElement("optgroup");
+    group.label = label;
+    decks.forEach((d) => {
+      const opt = document.createElement("option");
+      opt.value = d.id;
+      const typeLabel = d.type === "NGUPHAP" ? "Ngữ pháp" : "Từ vựng";
+      opt.textContent = `[${typeLabel}] ${d.title} (${d.words.length})`;
+      group.appendChild(opt);
+    });
+    picker.appendChild(group);
+  };
+
+  renderGroup("📘 Mimi N2 (giáo trình chính)", mimiDecks);
+  renderGroup("Tài liệu khác", otherDecks);
+
+  picker.value = App.currentDeckId;
+}
+
+function populateExamPicker() {
+  const picker = document.getElementById("examPicker");
+  picker.innerHTML = '<option value="">— chọn đề thi —</option>';
+  App.exams.forEach((ex) => {
+    const opt = document.createElement("option");
+    opt.value = ex.id;
+    opt.textContent = `${ex.title} (${ex.questions.length} câu)`;
+    picker.appendChild(opt);
+  });
+}
+
+/* ---------- Navigation: nav items thay đổi theo TYPE ---------- */
+
+const NAV_ITEMS_BY_TYPE = {
+  TUVUNG: [
+    { mode: "flash", icon: "▤", label: "Flashcard" },
+    { mode: "table", icon: "☰", label: "Bảng danh sách" },
+    { mode: "srs", icon: "◷", label: "Ôn tập (SRS)" },
+    { mode: "typing", icon: "⌨", label: "Gõ hiragana" },
+    { mode: "quiz", icon: "✓", label: "Trắc nghiệm nghĩa" },
+    { mode: "match", icon: "▦", label: "Ghép thẻ" },
+    { mode: "weakness", icon: "⚠", label: "Điểm yếu" },
+    { mode: "stats", icon: "📊", label: "Thống kê" },
+  ],
+  NGUPHAP: [
+    { mode: "flash", icon: "▤", label: "Flashcard" },
+    { mode: "table", icon: "☰", label: "Bảng danh sách" },
+    { mode: "srs", icon: "◷", label: "Ôn tập (SRS)" },
+    { mode: "quiz", icon: "✓", label: "Trắc nghiệm ý nghĩa" },
+    { mode: "weakness", icon: "⚠", label: "Điểm yếu" },
+    { mode: "stats", icon: "📊", label: "Thống kê" },
+  ],
+  EXAM: [
+    { mode: "exam", icon: "▤", label: "Làm đề thi" },
+  ],
+};
+
+function renderNav() {
+  const nav = document.getElementById("navList");
+  nav.innerHTML = "";
+
+  const label = document.createElement("div");
+  label.className = "nav-section-label";
+  label.textContent = App.currentDeckType === "NGUPHAP" ? "Học ngữ pháp" : "Học từ vựng";
+  nav.appendChild(label);
+
+  const items = NAV_ITEMS_BY_TYPE[App.currentDeckType] || NAV_ITEMS_BY_TYPE.TUVUNG;
+  items.forEach((item) => {
+    const btn = document.createElement("button");
+    btn.className = "nav-item";
+    btn.dataset.mode = item.mode;
+    btn.innerHTML = `<span class="nav-icon">${item.icon}</span> <span>${item.label}</span>`;
+    btn.addEventListener("click", () => setMode(item.mode));
+    nav.appendChild(btn);
+  });
+
+  if (App.exams.length > 0) {
+    const examLabel = document.createElement("div");
+    examLabel.className = "nav-section-label";
+    examLabel.textContent = "Đề thi thật";
+    nav.appendChild(examLabel);
+
+    const examBtn = document.createElement("button");
+    examBtn.className = "nav-item";
+    examBtn.dataset.mode = "exam";
+    examBtn.innerHTML = `<span class="nav-icon">▤</span> <span>Làm đề thi</span>`;
+    examBtn.addEventListener("click", () => setMode("exam"));
+    nav.appendChild(examBtn);
+  }
+
+  if (App.choukaiTests.length > 0) {
+    const choukaiLabel = document.createElement("div");
+    choukaiLabel.className = "nav-section-label";
+    choukaiLabel.textContent = "Luyện nghe (聴解)";
+    nav.appendChild(choukaiLabel);
+
+    const choukaiBtn = document.createElement("button");
+    choukaiBtn.className = "nav-item";
+    choukaiBtn.dataset.mode = "choukai";
+    choukaiBtn.innerHTML = `<span class="nav-icon">🎧</span> <span>Luyện nghe theo đề</span>`;
+    choukaiBtn.addEventListener("click", () => setMode("choukai"));
+    nav.appendChild(choukaiBtn);
+
+    const shadowBtn = document.createElement("button");
+    shadowBtn.className = "nav-item";
+    shadowBtn.dataset.mode = "choukai-shadow";
+    shadowBtn.innerHTML = `<span class="nav-icon">🔁</span> <span>Luyện nghe câu</span>`;
+    shadowBtn.addEventListener("click", () => setMode("choukai-shadow"));
+    nav.appendChild(shadowBtn);
+  }
+
+  // Re-apply active state for current mode if any nav-item matches
+  const current = document.querySelector(".view:not(.hidden)");
+  if (current) {
+    const mode = current.id.replace("view-", "");
+    document.querySelectorAll(".nav-item").forEach((b) => b.classList.toggle("active", b.dataset.mode === mode));
+  }
+}
+
+function switchDeck(deckId) {
+  const deck = App.decks.find((d) => d.id === deckId);
+  if (!deck) return;
+  App.currentDeckId = deckId;
+  App.currentDeckType = deck.type;
+  App.currentWords = deck.words;
+  App.progress = SRS.loadProgress(deckId);
+  document.getElementById("deckName").textContent = deck.title;
+  document.getElementById("mobileTopbarTitle").textContent = deck.title;
+
+  if (App.quizTimerHandle) clearInterval(App.quizTimerHandle);
+  if (App.matchTimerHandle) clearInterval(App.matchTimerHandle);
+
+  // Đổi bộ học khác -> luôn bắt đầu lại ở trạng thái học toàn bộ (tắt chế độ chỉ ★)
+  setFlashStarOnlyState(false);
+  setSrsStarOnlyState(false);
+
+  renderNav();
+  buildFieldConfigPanel();
+  buildColConfigPanel();
+  initFlashMode();
+  renderTable();
+  initSrsMode();
+
+  App.quizNeedsReset = true;
+  App.matchNeedsReset = true;
+
+  // Mặc định mở Flashcard sau khi đổi bộ
+  setMode("flash");
+}
+
+function setMode(mode) {
+  // Thoát focus mode khi chuyển sang chức năng khác, tránh kẹt UI vì sidebar đang ẩn
+  exitFocusMode();
+
+  // Dừng timer đề thi khi rời khỏi exam mode (nếu đang làm bài giữa lúc bật luyện tốc độ)
+  if (mode !== "exam") {
+    clearInterval(App.examPerQTimerHandle);
+    clearInterval(App.examTotalTimerHandle);
+  }
+
+  // Tự dừng audio đang phát khi rời khỏi 2 tab luyện nghe — trước đây audio vẫn
+  // chạy nền dù đã chuyển qua chức năng khác, gây khó chịu/lẫn âm thanh.
+  if (mode !== "choukai") {
+    const el = document.getElementById("choukaiAudioEl");
+    if (el && !el.paused) el.pause();
+  }
+  if (mode !== "choukai-shadow") {
+    const elShadow = document.getElementById("choukaiShadowAudioEl");
+    if (elShadow && !elShadow.paused) elShadow.pause();
+  }
+
+  document.querySelectorAll(".nav-item").forEach((b) => {
+    b.classList.toggle("active", b.dataset.mode === mode);
+  });
+  document.querySelectorAll(".view").forEach((v) => v.classList.add("hidden"));
+  const view = document.getElementById(`view-${mode}`);
+  if (view) view.classList.remove("hidden");
+
+  if (mode === "table") renderTable();
+  if (mode === "srs") initSrsMode();
+  if (mode === "typing") initTypingMode();
+
+  if (mode === "quiz" && (App.quizNeedsReset || !App.quizQuestions.length)) {
+    initQuizMode();
+    App.quizNeedsReset = false;
+  }
+  if (mode === "match" && (App.matchNeedsReset || App.matchTotalPairs === 0)) {
+    initMatchMode();
+    App.matchNeedsReset = false;
+  }
+  if (mode === "exam") renderExamPickerState();
+  if (mode === "choukai") renderChoukaiPickerState();
+  if (mode === "choukai-shadow") renderChoukaiShadowPickerState();
+  if (mode === "weakness") renderWeaknessMode();
+  if (mode === "stats") renderStatsMode();
+}
+
+/* ===================================================================
+   FIELD CONFIG PANEL (chọn field cho mặt trước / mặt sau flashcard)
+=================================================================== */
+
+function buildFieldConfigPanel() {
+  const type = App.currentDeckType;
+  const meta = FIELD_META[type];
+  const config = App.fieldConfig[type];
+
+  const frontDiv = document.getElementById("frontFieldOptions");
+  const backDiv = document.getElementById("backFieldOptions");
+  frontDiv.innerHTML = "";
+  backDiv.innerHTML = "";
+
+  Object.keys(meta).forEach((key) => {
+    // Mặt trước: chọn 1 field duy nhất (radio)
+    const frontLabel = document.createElement("label");
+    const frontRadio = document.createElement("input");
+    frontRadio.type = "radio";
+    frontRadio.name = "frontField";
+    frontRadio.value = key;
+    frontRadio.checked = config.front.includes(key);
+    frontRadio.addEventListener("change", () => {
+      App.fieldConfig[type].front = [key];
+      saveFieldConfig();
+      renderFlashCard();
+      renderSrsCard();
+    });
+    frontLabel.appendChild(frontRadio);
+    frontLabel.appendChild(document.createTextNode(meta[key].label));
+    frontDiv.appendChild(frontLabel);
+
+    // Mặt sau: chọn nhiều (checkbox)
+    const backLabel = document.createElement("label");
+    const backCheck = document.createElement("input");
+    backCheck.type = "checkbox";
+    backCheck.value = key;
+    backCheck.checked = config.back.includes(key);
+    backCheck.addEventListener("change", () => {
+      const cur = new Set(App.fieldConfig[type].back);
+      if (backCheck.checked) cur.add(key); else cur.delete(key);
+      App.fieldConfig[type].back = Array.from(cur);
+      saveFieldConfig();
+      renderFlashCard();
+      renderSrsCard();
+    });
+    backLabel.appendChild(backCheck);
+    backLabel.appendChild(document.createTextNode(meta[key].label));
+    backDiv.appendChild(backLabel);
+  });
+}
+
+function buildColConfigPanel() {
+  const type = App.currentDeckType;
+  const meta = TABLE_COL_META[type];
+  const visible = App.visibleCols[type];
+  const peeking = App.peekCols[type];
+
+  const colDiv = document.getElementById("colOptions");
+  colDiv.innerHTML = "";
+
+  Object.keys(meta).forEach((key) => {
+    const row = document.createElement("div");
+    row.className = "col-config-row";
+
+    // Checkbox: hiện / ẩn hẳn cột này khỏi bảng
+    const nameLabel = document.createElement("label");
+    nameLabel.className = "col-name";
+    const check = document.createElement("input");
+    check.type = "checkbox";
+    check.checked = visible.includes(key);
+    check.addEventListener("change", () => {
+      const cur = new Set(App.visibleCols[type]);
+      if (check.checked) cur.add(key); else cur.delete(key);
+      App.visibleCols[type] = Array.from(cur);
+      saveColConfig();
+      renderTable();
+    });
+    nameLabel.appendChild(check);
+    nameLabel.appendChild(document.createTextNode(meta[key].label));
+    row.appendChild(nameLabel);
+
+    // Switch riêng: "ẩn để tự kiểm tra" (chỉ cho cột canPeek=true)
+    if (meta[key].canPeek) {
+      const switchWrap = document.createElement("label");
+      switchWrap.className = "mini-switch";
+      const peekInput = document.createElement("input");
+      peekInput.type = "checkbox";
+      peekInput.checked = peeking.includes(key);
+      peekInput.addEventListener("change", () => {
+        const cur = new Set(App.peekCols[type]);
+        if (peekInput.checked) cur.add(key); else cur.delete(key);
+        App.peekCols[type] = Array.from(cur);
+        savePeekConfig();
+        renderTable();
+      });
+      const track = document.createElement("span");
+      track.className = "mini-switch-track";
+      switchWrap.appendChild(peekInput);
+      switchWrap.appendChild(track);
+
+      const peekLabelText = document.createElement("span");
+      peekLabelText.className = "col-config-peek-label";
+      peekLabelText.textContent = "ẩn để tự kiểm tra";
+
+      const peekGroup = document.createElement("div");
+      peekGroup.style.display = "flex";
+      peekGroup.style.alignItems = "center";
+      peekGroup.style.gap = "6px";
+      peekGroup.appendChild(peekLabelText);
+      peekGroup.appendChild(switchWrap);
+      row.appendChild(peekGroup);
+    }
+
+    colDiv.appendChild(row);
+  });
+}
+
+function renderCardFace(containerEl, word, fieldKeys) {
+  const type = App.currentDeckType;
+  const meta = FIELD_META[type];
+  const html = fieldKeys
+    .map((key) => (meta[key] ? meta[key].render(word) : ""))
+    .filter(Boolean)
+    .join("");
+  containerEl.innerHTML = html || '<div class="cf-nghia">(chưa chọn field hiển thị)</div>';
+}
+
+/* ===================================================================
+   EDIT MODAL — sửa tạm 1 từ/cấu trúc, áp đè ngay + lưu vào editPatches
+=================================================================== */
+
+let editModalCurrentWordId = null;
+
+function openEditModal(wordId_) {
+  const w = App.currentWords.find((cw) => cw._id === wordId_);
+  if (!w) return;
+  editModalCurrentWordId = wordId_;
+
+  const type = App.currentDeckType;
+  const fields = EDIT_FIELD_META[type];
+  const body = document.getElementById("editModalBody");
+  body.innerHTML = "";
+
+  fields.forEach((f) => {
+    const wrap = document.createElement("div");
+    wrap.className = "edit-field-row";
+
+    const label = document.createElement("label");
+    label.className = "edit-field-label";
+    label.textContent = f.label;
+    wrap.appendChild(label);
+
+    if (f.type === "text") {
+      const input = document.createElement("input");
+      input.type = "text";
+      input.className = "edit-field-input";
+      input.dataset.fieldKey = f.key;
+      input.value = w[f.key] || "";
+      wrap.appendChild(input);
+    } else if (f.type === "textarea") {
+      const textarea = document.createElement("textarea");
+      textarea.className = "edit-field-input edit-field-textarea";
+      textarea.dataset.fieldKey = f.key;
+      textarea.value = w[f.key] || "";
+      wrap.appendChild(textarea);
+    } else if (f.type === "list") {
+      const input = document.createElement("input");
+      input.type = "text";
+      input.className = "edit-field-input";
+      input.dataset.fieldKey = f.key;
+      input.dataset.fieldType = "list";
+      input.value = (w[f.key] || []).join(", ");
+      wrap.appendChild(input);
+    } else if (f.type === "choon-editor") {
+      const input = document.createElement("input");
+      input.type = "text";
+      input.className = "edit-field-input choon-input";
+      input.dataset.fieldKey = f.key;
+      input.value = w[f.key] || w.doc || "";
+      wrap.appendChild(input);
+
+      const choonBtnRow = document.createElement("div");
+      choonBtnRow.className = "choon-btn-row";
+
+      const markBtn = document.createElement("button");
+      markBtn.type = "button";
+      markBtn.className = "ghost-btn choon-mark-btn";
+      markBtn.textContent = "Đánh dấu trường âm (đỏ)";
+      markBtn.addEventListener("click", () => applyChoonMark(input));
+      choonBtnRow.appendChild(markBtn);
+
+      const clearBtn = document.createElement("button");
+      clearBtn.type = "button";
+      clearBtn.className = "ghost-btn choon-clear-btn";
+      clearBtn.textContent = "Xóa hết đánh dấu";
+      clearBtn.addEventListener("click", () => {
+        input.value = stripChoonMarks(input.value);
+      });
+      choonBtnRow.appendChild(clearBtn);
+
+      wrap.appendChild(choonBtnRow);
+
+      const preview = document.createElement("div");
+      preview.className = "choon-preview";
+      preview.id = "choonPreview";
+      wrap.appendChild(preview);
+
+      const updatePreview = () => {
+        preview.innerHTML = "Xem trước: " + renderChoon(input.value);
+      };
+      input.addEventListener("input", updatePreview);
+      updatePreview();
+    } else if (f.type === "ruby-editor") {
+      const textarea = document.createElement("textarea");
+      textarea.className = "edit-field-input edit-field-textarea";
+      textarea.dataset.fieldKey = f.key;
+      textarea.value = w[f.key] || "";
+      wrap.appendChild(textarea);
+
+      const rubyBtnRow = document.createElement("div");
+      rubyBtnRow.className = "choon-btn-row";
+
+      const rubyBtn = document.createElement("button");
+      rubyBtn.type = "button";
+      rubyBtn.className = "ghost-btn choon-mark-btn";
+      rubyBtn.textContent = "Thêm furigana cho đoạn bôi đen";
+      rubyBtn.addEventListener("click", () => applyRubyTag(textarea));
+      rubyBtnRow.appendChild(rubyBtn);
+
+      wrap.appendChild(rubyBtnRow);
+
+      const hint = document.createElement("div");
+      hint.className = "ruby-hint";
+      hint.textContent = "Bôi đen 1 kanji hoặc cụm kanji trong câu, bấm nút trên, nhập cách đọc khi được hỏi.";
+      wrap.appendChild(hint);
+    }
+
+    body.appendChild(wrap);
+  });
+
+  document.getElementById("editModalOverlay").classList.remove("hidden");
+}
+
+// Bọc đoạn text đang bôi đen (selection) trong <ruby>...<rt>...</rt></ruby>,
+// dùng để thêm furigana cho TỪNG kanji riêng lẻ trong câu ví dụ (không chỉ từ
+// chính đang học) — vì cách đọc của 1 kanji phụ thuộc ngữ cảnh nên không thể
+// tự động đoán đúng 100%, cần người học tự xác nhận cách đọc khi thêm.
+function applyRubyTag(textarea) {
+  const start = textarea.selectionStart;
+  const end = textarea.selectionEnd;
+  if (start === end) {
+    alert("Hãy bôi đen (chọn) đoạn kanji cần thêm furigana trước.");
+    return;
+  }
+  const value = textarea.value;
+  const selected = value.slice(start, end);
+  const reading = prompt(`Nhập cách đọc (hiragana) cho "${selected}":`, "");
+  if (!reading) return;
+  const newValue = value.slice(0, start) + `<ruby>${selected}<rt>${reading}</rt></ruby>` + value.slice(end);
+  textarea.value = newValue;
+}
+
+// Bọc phần text đang được bôi đen (selection) trong ô input bằng **...** để đánh dấu trường âm
+function applyChoonMark(input) {
+  const start = input.selectionStart;
+  const end = input.selectionEnd;
+  if (start === end) {
+    alert("Hãy bôi đen (chọn) đoạn ký tự cần đánh dấu trường âm trước.");
+    return;
+  }
+  const value = input.value;
+  const selected = value.slice(start, end);
+  const newValue = value.slice(0, start) + "**" + selected + "**" + value.slice(end);
+  input.value = newValue;
+  input.dispatchEvent(new Event("input"));
+  // Đặt lại con trỏ sau đoạn vừa đánh dấu
+  const newPos = end + 4;
+  input.setSelectionRange(newPos, newPos);
+  input.focus();
+}
+
+function closeEditModal() {
+  document.getElementById("editModalOverlay").classList.add("hidden");
+  editModalCurrentWordId = null;
+}
+
+function saveEditModal() {
+  if (!editModalCurrentWordId) return;
+  const body = document.getElementById("editModalBody");
+  const changed = {};
+
+  body.querySelectorAll("[data-field-key]").forEach((el) => {
+    const key = el.dataset.fieldKey;
+    if (el.dataset.fieldType === "list") {
+      changed[key] = el.value.split(",").map((s) => s.trim()).filter(Boolean);
+    } else {
+      changed[key] = el.value;
+    }
+  });
+
+  // Nếu sửa doc_marked, đồng bộ luôn doc (raw, bỏ dấu **) để gõ chữ vẫn so khớp đúng
+  if (changed.doc_marked !== undefined) {
+    changed.doc = stripChoonMarks(changed.doc_marked);
+  }
+
+  saveWordEdit(App.currentDeckId, editModalCurrentWordId, changed);
+
+  closeEditModal();
+  renderFlashCard();
+  renderTable();
+  renderSrsCard();
+}
+
+/* ===================================================================
+   FLASHCARD MODE — kiểu Quizlet: hàng đợi xoay vòng trong 1 phiên học.
+   3 nút: Chưa nhớ (quay lại sớm, ~3 thẻ sau) / Khó (quay lại muộn hơn,
+   ~7 thẻ sau) / Đã nhớ (ra khỏi hàng đợi). Học hết hàng đợi -> màn hình
+   hoàn thành, gợi ý học lại toàn bộ hoặc chỉ học các từ đã ★.
+   Đây KHÔNG đụng đến lịch SRS theo phút/giờ (đó là việc của mode SRS).
+=================================================================== */
+
+const FLASHCARD_REINSERT_NOT_REMEMBERED = 3; // "Chưa nhớ" -> chèn lại sau ~3 thẻ
+const FLASHCARD_REINSERT_HARD = 7;            // "Khó" -> chèn lại sau ~7 thẻ (muộn hơn)
+
+function initFlashMode(restrictToIds) {
+  let pool;
+  if (restrictToIds && restrictToIds.length) {
+    pool = App.currentWords.filter((w) => restrictToIds.includes(w._id));
+  } else {
+    pool = App.currentWords;
+  }
+  const ids = pool.map((w) => w._id);
+  App.flashQueue = App.shuffleEnabled.flash ? shuffle(ids) : ids;
+  App.flashRememberedCount = 0;
+  App.flashTotalCount = App.flashQueue.length;
+  App.flashRestrictToIds = restrictToIds || null;
+
+  document.getElementById("flashResultScreen").classList.add("hidden");
+  document.getElementById("flashLearnArea").classList.remove("hidden");
+
+  renderFlashCard();
+}
+
+function getCurrentFlashWord() {
+  if (!App.flashQueue.length) return null;
+  const itemId = App.flashQueue[0];
+  return App.currentWords.find((w) => w._id === itemId) || null;
+}
+
+// Lật thẻ Flashcard. Khi lật SANG mặt sau (xem đáp án), tự phát âm cách đọc
+// thật của từ đang học (nếu bật phát âm) — đây là thời điểm hợp lý nhất để
+// đọc, vì người học vừa xem đáp án và muốn nghe cách đọc đúng ngay lúc đó.
+function flipFlashCard() {
+  const card = document.getElementById("flashCard");
+  card.classList.toggle("flipped");
+  if (card.classList.contains("flipped")) {
+    speakWord(getCurrentFlashWord());
+  }
+}
+
+function renderFlashCard() {
+  const card = document.getElementById("flashCard");
+  card.classList.remove("flipped");
+
+  if (App.flashQueue.length === 0) {
+    showFlashCompletionScreen();
+    return;
+  }
+
+  const w = getCurrentFlashWord();
+  if (!w) {
+    // Trường hợp hiếm: itemId không tìm thấy (ví dụ đã bị xóa khỏi bộ) -> bỏ qua
+    App.flashQueue.shift();
+    renderFlashCard();
+    return;
+  }
+  const type = App.currentDeckType;
+
+  renderCardFace(document.getElementById("flashFrontContent"), w, App.fieldConfig[type].front);
+  renderCardFace(document.getElementById("flashBackContent"), w, App.fieldConfig[type].back);
+  renderFlashStarButtons(w);
+
+  // Luôn cuộn về đầu nội dung mỗi khi đổi sang thẻ mới — tránh tình trạng thẻ
+  // mới hiện ra nhưng còn giữ nguyên vị trí cuộn cũ của thẻ trước (gây mất chữ
+  // đầu dòng vì người học chưa cuộn lên mà đã thấy giữa/cuối nội dung).
+  document.getElementById("flashFront").scrollTop = 0;
+  document.getElementById("flashBack").scrollTop = 0;
+
+  // Thẻ X/Y (số thứ tự trong hàng đợi hiện tại, bao gồm cả từ chưa nhớ đang chờ)
+  const queuePos = App.flashTotalCount - App.flashQueue.length + 1;
+  document.getElementById("flashQueuePos").textContent = queuePos;
+  document.getElementById("flashQueueTotal").textContent = App.flashTotalCount;
+  // Đã nhớ A/B (số từ thực sự đã hoàn thành / tổng số từ ban đầu)
+  document.getElementById("flashPos").textContent = App.flashRememberedCount;
+  document.getElementById("flashTotal").textContent = App.flashTotalCount;
+  const pct = (App.flashRememberedCount / App.flashTotalCount) * 100;
+  document.getElementById("flashBar").style.width = `${pct}%`;
+}
+
+function renderFlashStarButtons(w) {
+  const starred = isStarred(App.currentDeckId, w._id);
+  document.querySelectorAll(".flash-star-btn").forEach((btn) => {
+    btn.classList.toggle("is-starred", starred);
+    btn.textContent = starred ? "★" : "☆";
+  });
+}
+
+// Chèn lại 1 itemId vào hàng đợi, cách vị trí đầu (đã shift ra) khoảng `offset` thẻ.
+// Nếu hàng đợi còn lại ngắn hơn offset, chèn xuống cuối.
+function reinsertIntoFlashQueue(itemId, offset) {
+  const insertPos = Math.min(offset, App.flashQueue.length);
+  App.flashQueue.splice(insertPos, 0, itemId);
+}
+
+function flashMarkResult(result) {
+  // result: "not_remembered" | "hard" | "remembered"
+  if (!App.flashQueue.length) return;
+  const itemId = App.flashQueue.shift();
+
+  if (result === "remembered") {
+    // Chỉ cập nhật SRS khi từ thực sự "tốt nghiệp" khỏi hàng đợi phiên này, để
+    // tránh gọi SRS.rate() nhiều lần liên tiếp trong vài giây (do hàng đợi xoay
+    // vòng) làm nhiễu ease factor — SRS chỉ nên phản ánh đánh giá sau cùng.
+    SRS.rate(App.progress, itemId, "easy");
+    SRS.saveProgress(App.currentDeckId, App.progress);
+    recordWeaknessResult(App.currentDeckId, itemId, true);
+    App.flashRememberedCount++;
+  } else if (result === "not_remembered") {
+    recordWeaknessResult(App.currentDeckId, itemId, false);
+    reinsertIntoFlashQueue(itemId, FLASHCARD_REINSERT_NOT_REMEMBERED);
+  } else if (result === "hard") {
+    recordWeaknessResult(App.currentDeckId, itemId, false);
+    reinsertIntoFlashQueue(itemId, FLASHCARD_REINSERT_HARD);
+  }
+
+  renderFlashCard();
+}
+
+function showFlashCompletionScreen() {
+  document.getElementById("flashLearnArea").classList.add("hidden");
+  const screen = document.getElementById("flashResultScreen");
+  screen.classList.remove("hidden");
+
+  document.getElementById("flashCompletionCount").textContent = App.flashTotalCount;
+
+  const starredCount = getStarredIdsForDeck(App.currentDeckId).length;
+  const btnStarredOnly = document.getElementById("btnFlashRestartStarredOnly");
+  if (starredCount > 0) {
+    btnStarredOnly.classList.remove("hidden");
+    btnStarredOnly.textContent = `Chỉ học các từ đã ★ đánh dấu (${starredCount})`;
+  } else {
+    btnStarredOnly.classList.add("hidden");
+  }
+}
+
+// Cập nhật trạng thái nút toggle "★ Học/Ôn từ đã sao" — dùng chung cho mọi nơi
+// kích hoạt/tắt chế độ này (không chỉ nút bấm trực tiếp), để class CSS và text
+// trên nút luôn đồng bộ đúng với trạng thái thật.
+function setFlashStarOnlyState(active) {
+  const btn = document.getElementById("btnFlashStarOnly");
+  btn.classList.toggle("is-active", active);
+  btn.textContent = active ? "★ Đang học từ đã sao (bấm để tắt)" : "★ Học từ đã sao";
+}
+
+function setSrsStarOnlyState(active) {
+  const btn = document.getElementById("btnSrsStarOnly");
+  btn.classList.toggle("is-active", active);
+  btn.textContent = active ? "★ Đang ôn từ đã sao (bấm để tắt)" : "★ Ôn từ đã sao";
+}
+
+function flashRestartFull() {
+  // "Học lại toàn bộ" phải luôn học hết bộ, không giữ giới hạn ★ của phiên trước
+  setFlashStarOnlyState(false);
+  initFlashMode(null);
+}
+
+function flashRestartStarredOnly() {
+  const starredIds = getStarredIdsForDeck(App.currentDeckId);
+  setFlashStarOnlyState(true);
+  initFlashMode(starredIds);
+}
+
+/* ===================================================================
+   TABLE MODE
+=================================================================== */
+
+function renderTable() {
+  const type = App.currentDeckType;
+  const meta = TABLE_COL_META[type];
+  const cols = App.visibleCols[type].filter((c) => meta[c]);
+
+  const thead = document.getElementById("tableHead");
+  thead.innerHTML = `<tr><th class="col-star-head"></th>${cols.map((c) => `<th>${meta[c].label}</th>`).join("")}<th class="col-edit-head"></th></tr>`;
+
+  const tbody = document.getElementById("tableBody");
+  const search = (document.getElementById("tableSearch").value || "").toLowerCase();
+  const filter = document.getElementById("tableFilter").value;
+  const starredIds = getStarredIdsForDeck(App.currentDeckId);
+
+  tbody.innerHTML = "";
+
+  App.currentWords.forEach((w) => {
+    const entry = SRS.getEntry(App.progress, w._id);
+    const st = SRS.status(entry);
+    const starred = starredIds.includes(w._id);
+
+    if (filter === "starred") {
+      if (!starred) return;
+    } else if (filter !== "all" && st !== filter) {
+      return;
+    }
+
+    const searchKeys = type === "NGUPHAP"
+      ? [w.cautruc, w.nghia, w.muc_do]
+      : [w.kanji, w.doc, w.han_viet, w.nghia];
+    const haystack = searchKeys.join(" ").toLowerCase();
+    if (search && !haystack.includes(search)) return;
+
+    const tr = document.createElement("tr");
+    const starCell = `<td class="col-star-cell"><button class="table-star-btn ${starred ? "is-starred" : ""}" data-star-word-id="${w._id}" title="Đánh dấu sao">${starred ? "★" : "☆"}</button></td>`;
+    const cells = cols.map((col) => {
+      if (col === "status") {
+        const statusLabel = { new: "Chưa học", learning: "Đang học", known: "Đã thuộc", mastered: "⭐ Đã thuộc" }[st];
+        return `<td><span class="status-pill status-${st}">${statusLabel}</span></td>`;
+      }
+      const colMeta = meta[col];
+      let raw = w[col] || "";
+      if (col === "doc") raw = renderChoon(w.doc_marked || w.doc);
+      if (col === "vi_du") raw = renderExampleSentences(w.vi_du_ruby || w.vi_du);
+      if (col === "dong_nghia" || col === "trai_nghia") {
+        raw = w[col] && w[col].length ? renderSynonymList(w[col]) : "";
+      }
+      const cssClass = col === "kanji" || col === "cautruc" ? "cell-kanji" : (col === "vi_du" ? "cell-vidu" : "");
+      const isPeeking = colMeta.canPeek && App.peekCols[type].includes(col);
+
+      if (isPeeking) {
+        return `<td>
+          <span class="cell-peek-wrap is-peeking">
+            <span class="cell-real-content ${cssClass}">${raw}</span>
+            <span class="peek-overlay"><span class="peek-dots">• • •</span></span>
+          </span>
+        </td>`;
+      }
+      return `<td class="${cssClass}">${raw}</td>`;
+    });
+    cells.unshift(starCell);
+    cells.push(`<td class="col-edit-cell"><button class="table-edit-btn" data-edit-word-id="${w._id}" title="Sửa">✎</button></td>`);
+    tr.innerHTML = cells.join("");
+    tbody.appendChild(tr);
+  });
+
+  document.querySelectorAll(".table-edit-btn").forEach((btn) => {
+    btn.addEventListener("click", () => openEditModal(btn.dataset.editWordId));
+  });
+  document.querySelectorAll(".table-star-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      toggleStar(App.currentDeckId, btn.dataset.starWordId);
+      renderTable();
+    });
+  });
+
+  SRS.saveProgress(App.currentDeckId, App.progress);
+}
+
+/* ===================================================================
+   SRS REVIEW MODE
+=================================================================== */
+
+function initSrsMode(restrictToIds) {
+  const wordPool = restrictToIds && restrictToIds.length
+    ? App.currentWords.filter((w) => restrictToIds.includes(w._id))
+    : App.currentWords;
+
+  const due = [];
+  const newWords = [];
+  let mastered = 0;
+
+  wordPool.forEach((w) => {
+    const entry = SRS.getEntry(App.progress, w._id);
+    const st = SRS.status(entry);
+    // Tính cả 2 loại "đã thuộc": tự nhiên qua SRS (known) VÀ đánh dấu tay (mastered) —
+    // trước đây chỉ tính "known" nên từ đánh dấu "Đã thuộc" bị thiếu khỏi số đếm này.
+    if (st === "known" || st === "mastered") mastered++;
+    if (!entry.seen) {
+      newWords.push(w);
+    } else if (SRS.isDue(entry)) {
+      due.push(w);
+    }
+  });
+
+  document.getElementById("srsDueCount").textContent = due.length;
+  document.getElementById("srsNewCount").textContent = newWords.length;
+  document.getElementById("srsMasteredCount").textContent = mastered;
+
+  const shuffleOn = App.shuffleEnabled.srs;
+  const orderedNew = shuffleOn ? shuffle(newWords) : newWords;
+  const orderedDue = shuffleOn ? shuffle(due) : due;
+  const newSlice = orderedNew.slice(0, 10);
+  App.srsQueue = orderedDue.concat(newSlice);
+  App.srsIndex = 0;
+
+  SRS.saveProgress(App.currentDeckId, App.progress);
+
+  const empty = document.getElementById("srsEmpty");
+  const stage = document.getElementById("srsStage");
+  const rateRow = document.getElementById("srsRateRow");
+
+  if (App.srsQueue.length === 0) {
+    empty.classList.remove("hidden");
+    stage.classList.add("hidden");
+    rateRow.classList.add("hidden");
+  } else {
+    empty.classList.add("hidden");
+    stage.classList.remove("hidden");
+    rateRow.classList.remove("hidden");
+    renderSrsCard();
+  }
+}
+
+function renderSrsCard() {
+  const card = document.getElementById("srsCard");
+  card.classList.remove("flipped");
+  const w = App.srsQueue[App.srsIndex];
+  if (!w) return;
+  const type = App.currentDeckType;
+
+  renderCardFace(document.getElementById("srsFrontContent"), w, App.fieldConfig[type].front);
+  renderCardFace(document.getElementById("srsBackContent"), w, App.fieldConfig[type].back);
+
+  // Luôn cuộn về đầu nội dung mỗi khi đổi thẻ — cùng lý do như Flashcard.
+  document.getElementById("srsFront").scrollTop = 0;
+  document.getElementById("srsBack").scrollTop = 0;
+
+  updateSrsRateTimePreviews(w);
+}
+
+function flipSrsCard() {
+  const card = document.getElementById("srsCard");
+  card.classList.toggle("flipped");
+  if (card.classList.contains("flipped")) {
+    speakWord(App.srsQueue[App.srsIndex]);
+  }
+}
+
+function updateSrsRateTimePreviews(w) {
+  if (!w) return;
+  document.getElementById("rtAgainSrs").textContent = SRS.previewLabel(App.progress, w._id, "again");
+  document.getElementById("rtHardSrs").textContent = SRS.previewLabel(App.progress, w._id, "hard");
+  document.getElementById("rtEasySrs").textContent = SRS.previewLabel(App.progress, w._id, "easy");
+}
+
+function rateCurrentSrsWord(rating) {
+  const w = App.srsQueue[App.srsIndex];
+  if (!w) return;
+  SRS.rate(App.progress, w._id, rating);
+  SRS.saveProgress(App.currentDeckId, App.progress);
+
+  // Ghi nhận vào thống kê điểm yếu chung: "Quên" = sai, "Khó"/"Dễ" = đúng
+  // (đã nhớ được, chỉ khác mức độ dễ/khó khi nhớ lại).
+  recordWeaknessResult(App.currentDeckId, w._id, rating !== "again");
+
+  App.srsIndex++;
+  if (App.srsIndex >= App.srsQueue.length) {
+    initSrsMode();
+  } else {
+    renderSrsCard();
+  }
+}
+
+/* ===================================================================
+   TYPING MODE — gõ tự luận: nhìn kanji + nghĩa, KHÔNG hiện khung target.
+   Người học tự nhớ và gõ ra cách đọc hiragana, kiểm tra toàn bộ khi bấm
+   "Kiểm tra". Có nút "Gợi ý" (hiện thêm 1 ký tự tiếp theo) và "Xem đáp án"
+   (hiện full, tính là chưa nhớ -> xếp ôn lại theo SRS).
+=================================================================== */
+
+function initTypingMode() {
+  // Chỉ áp dụng cho TUVUNG (ngữ pháp không có khái niệm "đọc kanji")
+  const pool = App.currentWords.filter((w) => w.kanji && w.doc);
+  App.typingPool = pool;
+  App.typingOrder = shuffle(pool.map((_, i) => i));
+  App.typingIndex = 0;
+  App.typingScore = 0;
+  App.typingRevealedCount = 0; // số ký tự đã "gợi ý" lộ ra cho từ hiện tại
+  App.typingAnswered = false;  // đã kiểm tra/xem đáp án cho từ hiện tại chưa
+  document.getElementById("typingScore").textContent = "0";
+  document.getElementById("typingTotal").textContent = App.typingOrder.length;
+  renderTypingCard();
+}
+
+function renderTypingCard() {
+  if (App.typingIndex >= App.typingOrder.length) {
+    document.getElementById("typingKanji").textContent = "🎉";
+    document.getElementById("typingNghia").textContent = `Hoàn thành! Đúng ${App.typingScore}/${App.typingOrder.length}`;
+    document.getElementById("typingRevealRow").innerHTML = "";
+    document.getElementById("typingResultLine").textContent = "";
+    document.getElementById("typingActionRow").classList.add("hidden");
+    document.getElementById("typingFreeInput").classList.add("hidden");
+    return;
+  }
+  const pool = App.typingPool;
+  const w = pool[App.typingOrder[App.typingIndex]];
+
+  App.typingCurrentTarget = stripChoonMarks(w.doc); // raw hiragana cần nhớ và gõ ra
+  App.typingCurrentWord = w;
+  App.typingRevealedCount = 0;
+  App.typingAnswered = false;
+
+  document.getElementById("typingKanji").textContent = w.kanji;
+  document.getElementById("typingNghia").textContent = w.nghia;
+  document.getElementById("typingPos").textContent = App.typingIndex + 1;
+  const pct = (App.typingIndex / App.typingOrder.length) * 100;
+  document.getElementById("typingBar").style.width = `${pct}%`;
+  document.getElementById("typingFreeInput").classList.remove("hidden");
+  document.getElementById("typingActionRow").classList.remove("hidden");
+  document.getElementById("typingResultLine").textContent = "";
+  document.getElementById("typingResultLine").className = "typing-result-line";
+
+  const input = document.getElementById("typingFreeInput");
+  input.value = "";
+  input.disabled = false;
+  input.focus();
+  renderTypingRevealRow();
+}
+
+// Hiện dòng gợi ý phía dưới (chỉ hiện số ký tự đã được "Gợi ý" mở khoá, còn lại là dấu chấm)
+function renderTypingRevealRow() {
+  const target = App.typingCurrentTarget;
+  const revealed = App.typingRevealedCount;
+  let html = "";
+  for (let i = 0; i < target.length; i++) {
+    if (i < revealed) {
+      html += `<span class="typing-reveal-char">${target[i]}</span>`;
+    } else {
+      html += `<span class="typing-reveal-dot">•</span>`;
+    }
+  }
+  document.getElementById("typingRevealRow").innerHTML = html;
+}
+
+function typingShowHint() {
+  if (App.typingAnswered) return;
+  if (App.typingRevealedCount < App.typingCurrentTarget.length) {
+    App.typingRevealedCount++;
+    renderTypingRevealRow();
+  }
+}
+
+function typingShowAnswer() {
+  if (App.typingAnswered) return;
+  App.typingAnswered = true;
+  const w = App.typingCurrentWord;
+  const target = App.typingCurrentTarget;
+
+  document.getElementById("typingFreeInput").disabled = true;
+  App.typingRevealedCount = target.length;
+  renderTypingRevealRow();
+
+  const resultLine = document.getElementById("typingResultLine");
+  resultLine.textContent = `Đáp án: ${target}`;
+  resultLine.className = "typing-result-line is-wrong";
+
+  // Xem đáp án = coi như chưa nhớ được, xếp ôn lại sớm hơn
+  SRS.rate(App.progress, w._id, "again");
+  SRS.saveProgress(App.currentDeckId, App.progress);
+  recordWeaknessResult(App.currentDeckId, w._id, false);
+
+  setTimeout(() => {
+    App.typingIndex++;
+    renderTypingCard();
+  }, 1400);
+}
+
+function typingCheckAnswer() {
+  if (App.typingAnswered) return;
+  const rawValue = document.getElementById("typingFreeInput").value.trim();
+  const target = App.typingCurrentTarget;
+  const w = App.typingCurrentWord;
+  const resultLine = document.getElementById("typingResultLine");
+
+  App.typingAnswered = true;
+  document.getElementById("typingFreeInput").disabled = true;
+  App.typingRevealedCount = target.length;
+  renderTypingRevealRow();
+
+  if (rawValue === target) {
+    resultLine.textContent = "Chính xác!";
+    resultLine.className = "typing-result-line is-correct";
+    App.typingScore++;
+    document.getElementById("typingScore").textContent = App.typingScore;
+    SRS.rate(App.progress, w._id, "easy");
+    playCorrectSound();
+    recordWeaknessResult(App.currentDeckId, w._id, true);
+  } else {
+    resultLine.textContent = `Chưa đúng. Đáp án: ${target}`;
+    resultLine.className = "typing-result-line is-wrong";
+    SRS.rate(App.progress, w._id, "again");
+    playWrongSound();
+    recordWeaknessResult(App.currentDeckId, w._id, false);
+  }
+  SRS.saveProgress(App.currentDeckId, App.progress);
+
+  setTimeout(() => {
+    App.typingIndex++;
+    renderTypingCard();
+  }, 1200);
+}
+
+function typingHandleKeydown(e) {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    typingCheckAnswer();
+  }
+}
+/* ===================================================================
+   QUIZ MODE — trắc nghiệm ý nghĩa (TUVUNG: kanji->nghĩa; NGUPHAP: cấu trúc->ý nghĩa)
+=================================================================== */
+
+// direction (chỉ áp dụng cho TUVUNG, NGUPHAP luôn cố định cautruc->nghia):
+// "kanji_nghia"  : hỏi Kanji, đáp án là Nghĩa (mặc định, kiểu cũ)
+// "kanji_hira"   : hỏi Kanji, đáp án là cách đọc Hiragana
+// "hira_nghia"   : hỏi cách đọc Hiragana, đáp án là Nghĩa
+function getQuizPromptAndAnswer(w, direction) {
+  const type = App.currentDeckType;
+  if (type === "NGUPHAP") {
+    return { prompt: w.cautruc, answer: w.nghia };
+  }
+  const dir = direction || "kanji_nghia";
+  if (dir === "kanji_hira") {
+    return { prompt: w.kanji, answer: w.doc };
+  }
+  if (dir === "hira_nghia") {
+    return { prompt: w.doc, answer: w.nghia };
+  }
+  return { prompt: w.kanji, answer: w.nghia };
+}
+
+function buildQuizQuestions() {
+  const pool = App.currentWords;
+  const qs = shuffle(pool).map((w) => {
+    const wrongPool = shuffle(pool.filter((x) => x._id !== w._id)).slice(0, 3);
+    const options = shuffle([w, ...wrongPool]);
+    return { word: w, options };
+  });
+  return qs;
+}
+
+function initQuizMode() {
+  const directionPicker = document.getElementById("quizDirectionPicker");
+  if (App.currentDeckType === "NGUPHAP") {
+    directionPicker.classList.add("hidden");
+  } else {
+    directionPicker.classList.remove("hidden");
+    directionPicker.value = App.quizDirection;
+  }
+
+  App.quizQuestions = buildQuizQuestions();
+  App.quizIndex = 0;
+  App.quizScore = 0;
+  App.quizStartTime = Date.now();
+
+  document.getElementById("quizResult").classList.add("hidden");
+  document.getElementById("quizBody").classList.remove("hidden");
+  document.getElementById("quizTotal").textContent = App.quizQuestions.length;
+  document.getElementById("quizScore").textContent = "0";
+
+  if (App.quizTimerHandle) clearInterval(App.quizTimerHandle);
+  App.quizTimerHandle = setInterval(() => {
+    const sec = (Date.now() - App.quizStartTime) / 1000;
+    document.getElementById("quizTimer").textContent = fmtTime(sec);
+  }, 500);
+
+  renderQuizQuestion();
+}
+
+function renderQuizQuestion() {
+  App.quizAnswering = false;
+  const q = App.quizQuestions[App.quizIndex];
+  const { prompt } = getQuizPromptAndAnswer(q.word, App.quizDirection);
+  document.getElementById("quizPos").textContent = App.quizIndex + 1;
+  document.getElementById("quizQuestion").textContent = prompt;
+
+  const optsDiv = document.getElementById("quizOptions");
+  optsDiv.innerHTML = "";
+  q.options.forEach((opt) => {
+    const { answer } = getQuizPromptAndAnswer(opt, App.quizDirection);
+    const btn = document.createElement("button");
+    btn.className = "quiz-opt";
+    btn.textContent = answer;
+    btn.addEventListener("click", () => handleQuizAnswer(btn, opt, q));
+    optsDiv.appendChild(btn);
+  });
+}
+
+function handleQuizAnswer(btn, chosen, q) {
+  if (App.quizAnswering) return; // chặn double-click vì giờ .disabled không còn pointer-events:none
+  App.quizAnswering = true;
+
+  document.querySelectorAll(".quiz-opt").forEach((b) => b.classList.add("disabled"));
+  const correct = chosen._id === q.word._id;
+  btn.classList.add(correct ? "correct" : "wrong");
+  const { answer: correctAnswer } = getQuizPromptAndAnswer(q.word, App.quizDirection);
+
+  if (correct) {
+    App.quizScore++;
+    document.getElementById("quizScore").textContent = App.quizScore;
+    SRS.rate(App.progress, q.word._id, "easy");
+    playCorrectSound();
+    recordWeaknessResult(App.currentDeckId, q.word._id, true);
+  } else {
+    document.querySelectorAll(".quiz-opt").forEach((b) => {
+      if (b.textContent === correctAnswer) b.classList.add("correct");
+    });
+    SRS.rate(App.progress, q.word._id, "again");
+    playWrongSound();
+    recordWeaknessResult(App.currentDeckId, q.word._id, false);
+  }
+  SRS.saveProgress(App.currentDeckId, App.progress);
+
+  setTimeout(() => {
+    App.quizIndex++;
+    if (App.quizIndex >= App.quizQuestions.length) {
+      finishQuiz();
+    } else {
+      renderQuizQuestion();
+    }
+  }, 750);
+}
+
+function finishQuiz() {
+  clearInterval(App.quizTimerHandle);
+  const totalSec = (Date.now() - App.quizStartTime) / 1000;
+  document.getElementById("quizBody").classList.add("hidden");
+  document.getElementById("quizResult").classList.remove("hidden");
+  document.getElementById("quizFinalScore").textContent =
+    `${App.quizScore}/${App.quizQuestions.length} đúng — thời gian ${fmtTime(totalSec)}`;
+}
+
+/* ===================================================================
+   MATCH GAME MODE
+=================================================================== */
+
+function initMatchMode() {
+  const PAIR_COUNT = Math.min(8, App.currentWords.length);
+  const chosen = shuffle(App.currentWords).slice(0, PAIR_COUNT);
+
+  App.matchTotalPairs = chosen.length;
+  App.matchPairs = 0;
+  App.matchSelected = [];
+  App.matchLocked = false;
+  App.matchStartTime = Date.now();
+
+  document.getElementById("matchPairs").textContent = "0";
+  document.getElementById("matchTotalPairs").textContent = chosen.length;
+
+  if (App.matchTimerHandle) clearInterval(App.matchTimerHandle);
+  App.matchTimerHandle = setInterval(() => {
+    const sec = (Date.now() - App.matchStartTime) / 1000;
+    document.getElementById("matchTimer").textContent = fmtTime(sec);
+  }, 500);
+
+  const cells = [];
+  chosen.forEach((w) => {
+    const { prompt, answer } = getQuizPromptAndAnswer(w);
+    cells.push({ pairId: w._id, type: "prompt", label: prompt, word: w });
+    cells.push({ pairId: w._id, type: "answer", label: answer, word: w });
+  });
+  const shuffled = shuffle(cells);
+
+  const grid = document.getElementById("matchGrid");
+  grid.innerHTML = "";
+  shuffled.forEach((cell) => {
+    const div = document.createElement("div");
+    div.className = "match-card" + (cell.type === "prompt" ? " kanji-card" : "");
+    div.textContent = cell.label;
+    div.dataset.pairId = cell.pairId;
+    div.addEventListener("click", () => handleMatchClick(div, cell));
+    grid.appendChild(div);
+  });
+}
+
+function handleMatchClick(div, cell) {
+  if (App.matchLocked) return;
+  if (div.classList.contains("matched") || div.classList.contains("flipped-sel")) return;
+
+  div.classList.add("flipped-sel");
+  App.matchSelected.push({ div, cell });
+
+  if (App.matchSelected.length === 2) {
+    App.matchLocked = true;
+    const [a, b] = App.matchSelected;
+    const isMatch = a.cell.pairId === b.cell.pairId && a.cell.type !== b.cell.type;
+
+    if (isMatch) {
+      playCorrectSound();
+      setTimeout(() => {
+        a.div.classList.remove("flipped-sel");
+        b.div.classList.remove("flipped-sel");
+        a.div.classList.add("matched");
+        b.div.classList.add("matched");
+        App.matchPairs++;
+        document.getElementById("matchPairs").textContent = App.matchPairs;
+        SRS.rate(App.progress, a.cell.word._id, "easy");
+        SRS.saveProgress(App.currentDeckId, App.progress);
+        recordWeaknessResult(App.currentDeckId, a.cell.word._id, true);
+        App.matchSelected = [];
+        App.matchLocked = false;
+        if (App.matchPairs >= App.matchTotalPairs) {
+          clearInterval(App.matchTimerHandle);
+        }
+      }, 350);
+    } else {
+      playWrongSound();
+      a.div.classList.add("wrong-flash");
+      b.div.classList.add("wrong-flash");
+      setTimeout(() => {
+        a.div.classList.remove("flipped-sel", "wrong-flash");
+        b.div.classList.remove("flipped-sel", "wrong-flash");
+        App.matchSelected = [];
+        App.matchLocked = false;
+      }, 650);
+    }
+  }
+}
+
+/* ===================================================================
+   EXAM MODE — làm đề thi trắc nghiệm thật
+   - Random thứ tự đáp án mỗi lần hiện câu (tránh học vị trí đáp án)
+   - Câu sai bị đẩy xuống cuối hàng đợi, làm lại đến khi đúng
+   - Tính điểm: 1 câu đúng (lần đầu) = 1 điểm, không cộng điểm khi làm lại câu sai
+=================================================================== */
+
+function renderExamPickerState() {
+  const empty = document.getElementById("examEmpty");
+  const body = document.getElementById("examBody");
+  const result = document.getElementById("examResult");
+
+  if (!App.currentExamId) {
+    empty.classList.remove("hidden");
+    body.classList.add("hidden");
+    result.classList.add("hidden");
+    document.getElementById("examTitleLabel").textContent = "Chưa chọn đề";
+    return;
+  }
+  empty.classList.add("hidden");
+
+  // Nếu đang giữa 1 đề thi (chưa hoàn thành) và speed mode đang bật, đếm lại
+  // timer cho câu hiện tại (không ảnh hưởng điểm số, chỉ làm mới đồng hồ hiển thị)
+  const isMidExam = !body.classList.contains("hidden") && App.examQueue.length > 0;
+  if (isMidExam && App.examSpeedMode) {
+    startExamPerQuestionTimer();
+    startExamTotalTimer();
+  }
+}
+
+// Hiện modal hỏi chế độ chấm điểm (chấm ngay / chấm cuối bài) mỗi khi chọn 1 đề
+// thi mới từ dropdown. Lưu examId vào App.examPendingExamId, chỉ thực sự
+// startExam() sau khi người dùng đã xác nhận chọn 1 trong 2 chế độ.
+function openExamModeModal(examId) {
+  App.examPendingExamId = examId;
+  const detailStats = loadExamDetailHistoryStats();
+  const saved = detailStats[examId];
+  const viewSavedBtn = document.getElementById("btnExamViewSavedResult");
+  if (saved) {
+    viewSavedBtn.classList.remove("hidden");
+    const correctCount = Object.values(saved.examHistory).filter((h) => h.firstTryCorrect === true).length;
+    const total = Object.keys(saved.examHistory).length;
+    const d = new Date(saved.savedAt);
+    const dateStr = `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
+    document.getElementById("examSavedResultDesc").textContent =
+      `Lần làm gần nhất (${dateStr}): ${correctCount}/${total} câu đúng ngay lần đầu. Xem lại lưới đúng/sai và giải thích từng câu — không cần làm lại.`;
+  } else {
+    viewSavedBtn.classList.add("hidden");
+  }
+  document.getElementById("examModeModalOverlay").classList.remove("hidden");
+}
+
+// Xem lại kết quả CHI TIẾT của lần làm gần nhất đã lưu (không làm lại đề).
+// Dùng cho trường hợp: đã làm đề trên máy khác, nhập (import) tiến độ vào máy này,
+// muốn xem lại lưới đúng/sai + giải thích từng câu mà không cần làm lại từ đầu.
+function viewSavedExamResult(examId) {
+  document.getElementById("examModeModalOverlay").classList.add("hidden");
+  const exam = App.exams.find((e) => e.id === examId);
+  const detailStats = loadExamDetailHistoryStats();
+  const saved = detailStats[examId];
+  if (!exam || !saved) return;
+
+  App.currentExamId = examId;
+  App.examHistory = saved.examHistory;
+  App.examOriginalTotal = exam.questions.length;
+  App.examQueue = [];
+  App.examReviewMode = false;
+
+  document.getElementById("examTitleLabel").textContent = exam.title;
+  document.getElementById("examEmpty").classList.add("hidden");
+  document.getElementById("examBody").classList.add("hidden");
+  document.getElementById("examResult").classList.remove("hidden");
+
+  const correctCount = Object.values(App.examHistory).filter((h) => h.firstTryCorrect === true).length;
+  document.getElementById("examFinalScore").textContent =
+    `${correctCount}/${exam.questions.length} điểm (kết quả đã lưu, lần làm gần nhất)`;
+  document.getElementById("examTimeSummary").innerHTML = "";
+  document.getElementById("examSpeedSummary").classList.add("hidden");
+
+  renderExamResultGrid();
+}
+
+function confirmExamMode(mode) {
+  document.getElementById("examModeModalOverlay").classList.add("hidden");
+  App.examScoreMode = mode;
+  if (App.examPendingExamId) {
+    startExam(App.examPendingExamId);
+    App.examPendingExamId = null;
+  }
+}
+
+function startExam(examId) {
+  const exam = App.exams.find((e) => e.id === examId);
+  if (!exam) return;
+
+  App.currentExamId = examId;
+  App.examOriginalTotal = exam.questions.length;
+  App.examQueue = exam.questions.map((_, i) => i); // hàng đợi chứa index câu hỏi gốc
+  App.examScore = 0;
+  App.examAnswered = new Set();
+  App.examHistory = {};
+  App.examSeenOrder = [];
+  App.examNavPos = -1;
+  App.examReviewMode = false;
+  App.examQuestionTimeLog = [];
+
+  App.examSpeedMode = document.getElementById("examSpeedMode").checked;
+  App.examTotalStartTime = null;
+  App.examFirstPassStartTime = null;
+  App.examFirstPassEndTime = null;
+  App.examFirstPassDone = false;
+  App.examRetryStartTime = null;
+
+  document.getElementById("examTitleLabel").textContent = exam.title;
+  document.getElementById("examScore").textContent = "0";
+  document.getElementById("examTotal").textContent = exam.questions.length;
+  document.getElementById("examResult").classList.add("hidden");
+  document.getElementById("examBody").classList.remove("hidden");
+  document.getElementById("examEmpty").classList.add("hidden");
+  // Nút "Thoát & xem kết quả" chỉ có ý nghĩa ở chế độ chấm ngay (vì đó là chế độ
+  // có vòng lặp làm-lại-câu-sai có thể kéo dài) — chấm cuối bài đã đi tuần tự
+  // hết đề 1 lượt rồi nên không cần "thoát sớm".
+  document.getElementById("btnExamExitEarly").classList.toggle("hidden", App.examScoreMode !== "instant");
+
+  startExamTotalTimer();
+  renderExamQuestion();
+}
+
+function startExamTotalTimer() {
+  clearInterval(App.examTotalTimerHandle);
+  const wrap = document.getElementById("examTotalTimerWrap");
+  if (!App.examSpeedMode) {
+    wrap.classList.add("hidden");
+    return;
+  }
+  wrap.classList.remove("hidden");
+  // Chỉ đặt mốc bắt đầu nếu chưa có (tránh reset về 0 khi rời rồi quay lại giữa đề)
+  if (!App.examTotalStartTime) {
+    App.examTotalStartTime = Date.now();
+  }
+  App.examTotalTimerHandle = setInterval(() => {
+    const sec = (Date.now() - App.examTotalStartTime) / 1000;
+    document.getElementById("examTotalTimer").textContent = fmtTime(sec);
+  }, 500);
+}
+
+function startExamPerQuestionTimer() {
+  clearInterval(App.examPerQTimerHandle);
+  const wrap = document.getElementById("examPerQuestionTimerWrap");
+  const timerEl = document.getElementById("examPerQuestionTimer");
+
+  if (!App.examSpeedMode || App.examReviewMode) {
+    wrap.classList.add("hidden");
+    return;
+  }
+  wrap.classList.remove("hidden");
+  App.examPerQSecondsLeft = 30;
+  App.examPerQStartedAt = Date.now();
+  timerEl.textContent = "30";
+  wrap.classList.remove("is-warning", "is-overtime");
+
+  App.examPerQTimerHandle = setInterval(() => {
+    App.examPerQSecondsLeft--;
+    if (App.examPerQSecondsLeft >= 0) {
+      timerEl.textContent = App.examPerQSecondsLeft;
+    } else {
+      // Quá 30s: vẫn cho làm tiếp, hiển thị số giây đã vượt quá dạng "+N"
+      timerEl.textContent = `+${Math.abs(App.examPerQSecondsLeft)}`;
+      wrap.classList.add("is-overtime");
+    }
+    if (App.examPerQSecondsLeft <= 10 && App.examPerQSecondsLeft > 0) {
+      wrap.classList.add("is-warning");
+    }
+  }, 1000);
+}
+
+// Bật/tắt luyện tốc độ NGAY LẬP TỨC mà không cần đổi đề (sửa bug cũ: trước đây
+// examSpeedMode chỉ đọc 1 lần lúc startExam(), nên phải đổi đề mới re-trigger).
+function toggleExamSpeedMode(enabled) {
+  App.examSpeedMode = enabled;
+  if (!App.currentExamId) return; // chưa chọn đề, chỉ lưu trạng thái checkbox, chưa cần làm gì thêm
+  startExamTotalTimer();
+  startExamPerQuestionTimer();
+}
+
+// Helper: đã đi hết lượt đầu chưa — tức mọi câu gốc (0..examOriginalTotal-1) đã
+// xuất hiện trong examSeenOrder ít nhất 1 lần.
+function checkFirstPassDone() {
+  if (App.examFirstPassDone) return true;
+  const seenSet = new Set(App.examSeenOrder);
+  for (let i = 0; i < App.examOriginalTotal; i++) {
+    if (!seenSet.has(i)) return false;
+  }
+  return true;
+}
+
+function renderExamQuestion() {
+  if (App.examQueue.length === 0) {
+    finishExam();
+    return;
+  }
+  App.examReviewMode = false;
+  App.examNavPos = -1; // -1 nghĩa là đang ở câu "live" (đang chờ trả lời), không phải xem lại
+
+  const exam = App.exams.find((e) => e.id === App.currentExamId);
+  const qIndex = App.examQueue[0];
+  const q = exam.questions[qIndex];
+
+  // Ghi nhận vào thứ tự đã-từng-thấy nếu đây là lần đầu thấy câu này trong phiên
+  if (!App.examSeenOrder.includes(qIndex) || App.examSeenOrder[App.examSeenOrder.length - 1] !== qIndex) {
+    App.examSeenOrder.push(qIndex);
+  }
+
+  // Số thứ tự câu LUÔN hiển thị đúng vị trí gốc của câu đang xem (qIndex+1) —
+  // KHÔNG phải số câu đã trả lời đúng. Trước đây dùng App.examAnswered.size+1
+  // (đếm số câu ĐÚNG) khiến số nhảy sai lệch hẳn so với câu đang hiện ra mỗi khi
+  // có câu làm lại (chế độ chấm ngay) hoặc câu sai (chế độ chấm cuối bài).
+  document.getElementById("examPos").textContent = qIndex + 1;
+  document.getElementById("examQueueTotal").textContent = App.examOriginalTotal;
+
+  const note = document.getElementById("examRetryNote");
+  // Ghi chú "câu làm lại trong hàng đợi" CHỈ có ý nghĩa ở chế độ chấm ngay (vì
+  // chỉ chế độ đó mới đẩy câu sai về cuối hàng đợi để làm lại). Chế độ chấm cuối
+  // bài đi đúng 1 lượt, không có khái niệm "làm lại" — phép tính cũ
+  // (dựa trên examAnswered chỉ tăng khi ĐÚNG) sẽ ra số âm vô nghĩa ở chế độ này.
+  if (App.examScoreMode === "instant") {
+    const remainingUnanswered = App.examOriginalTotal - App.examAnswered.size;
+    const retryCount = App.examQueue.length - remainingUnanswered;
+    note.textContent = retryCount > 0 ? `(có ${retryCount} câu làm lại trong hàng đợi)` : "";
+  } else {
+    note.textContent = "";
+  }
+
+  document.getElementById("examReviewBanner").classList.add("hidden");
+  document.getElementById("examHistoryNote").classList.add("hidden");
+  renderExamQuestionContent(q, qIndex, true);
+
+  startExamPerQuestionTimer();
+
+  // Bắt đầu mốc thời gian "mốc 2: sửa lại câu sai" ngay khi pha lượt-đầu kết thúc
+  // và bắt đầu gặp lại 1 câu đã từng sai (retryCount > 0 từ thời điểm này).
+  if (!App.examFirstPassDone && checkFirstPassDone()) {
+    App.examFirstPassDone = true;
+    App.examFirstPassEndTime = Date.now();
+    if (App.examQueue.length > 0) {
+      App.examRetryStartTime = Date.now();
+    }
+  }
+}
+
+// Render nội dung câu hỏi (dùng chung cho cả câu "live" đang chờ trả lời và khi xem lại).
+// isLive=true: câu đang chờ trả lời thật, gắn click handler bình thường.
+// isLive=false: đang xem lại câu cũ qua nút Câu trước/Câu sau, hiện lại lựa chọn đã chọn,
+// không cho chọn lại (chỉ xem), không tính giờ.
+function renderExamQuestionContent(q, qIndex, isLive) {
+  // dùng innerHTML (không phải textContent) để cho phép thẻ <u> gạch chân đúng
+  // từ kanji/từ được hỏi trong câu — dữ liệu de_bai do hệ thống tự kiểm soát,
+  // không phải input người dùng nên an toàn khi render trực tiếp.
+  document.getElementById("examQuestion").innerHTML = q.de_bai;
+  App.examAnswering = false;
+  App.examCurrentQuestion = q;
+  App.examCurrentQIndex = qIndex;
+
+  const optsDiv = document.getElementById("examOptions");
+  optsDiv.innerHTML = "";
+
+  const history = App.examHistory[qIndex];
+  const lastAttempt = history && history.attempts.length ? history.attempts[history.attempts.length - 1] : null;
+
+  // Random thứ tự đáp án khi là câu live; khi xem lại giữ nguyên thứ tự đã hiện lúc đó
+  // (lưu trong history để tránh đáp án nhảy lộn xộn khi quay lại xem)
+  let optionIndices;
+  if (isLive) {
+    optionIndices = shuffle(q.options.map((_, i) => i));
+    if (!App.examHistory[qIndex]) {
+      App.examHistory[qIndex] = { attempts: [], firstTryCorrect: null, optionOrder: optionIndices };
+    } else {
+      App.examHistory[qIndex].optionOrder = optionIndices;
+    }
+  } else {
+    optionIndices = (history && history.optionOrder) || q.options.map((_, i) => i);
+  }
+
+  optionIndices.forEach((optIdx) => {
+    const btn = document.createElement("button");
+    btn.className = "quiz-opt";
+    btn.textContent = q.options[optIdx];
+
+    if (!isLive && lastAttempt) {
+      if (App.examScoreMode === "review") {
+        // Chấm cuối bài: cho phép SỬA lại đáp án khi quay lại xem câu đã làm —
+        // đúng với logic làm bài thật (được sửa đáp án tự do trước khi "nộp bài"
+        // ở cuối). KHÔNG tô đúng/sai (vẫn giữ nguyên tinh thần "không biết kết quả
+        // giữa lúc làm" của chế độ này), chỉ tô nhẹ ô đang được chọn.
+        if (optIdx === lastAttempt.chosenIdx) btn.classList.add("was-chosen-neutral");
+        btn.addEventListener("click", () => handleExamAnswerEditReview(btn, optIdx, qIndex, q));
+      } else {
+        // Chấm ngay: đã xem đáp án đúng/sai + giải thích rồi nên chỉ xem lại,
+        // không cho sửa (sửa sau khi đã biết đáp án thì không còn ý nghĩa).
+        btn.classList.add("disabled");
+        if (optIdx === q.dap_an_dung) btn.classList.add("correct");
+        if (optIdx === lastAttempt.chosenIdx && !lastAttempt.correct) btn.classList.add("wrong");
+        if (optIdx === lastAttempt.chosenIdx) btn.classList.add("was-chosen");
+      }
+    } else if (isLive) {
+      btn.addEventListener("click", () => handleExamAnswer(btn, optIdx, qIndex, q));
+    }
+
+    optsDiv.appendChild(btn);
+  });
+
+  // Hiện ghi chú lịch sử nếu câu này đã từng bị sai trước đây (kể cả khi xem live lại sau khi đã trả lời)
+  const histNote = document.getElementById("examHistoryNote");
+  if (history && history.attempts.length > 0) {
+    const wrongCount = history.attempts.filter((a) => !a.correct).length;
+    if (wrongCount > 0) {
+      histNote.classList.remove("hidden");
+      histNote.textContent = `⚠ Câu này đã sai ${wrongCount} lần trong đề này`;
+    } else {
+      histNote.classList.add("hidden");
+    }
+  } else {
+    histNote.classList.add("hidden");
+  }
+
+  // Nút "Xem giải thích" chỉ hiện khi: câu này CÓ field giai_thich trong dữ liệu,
+  // ĐÃ từng được trả lời ít nhất 1 lần (không cho xem giải thích trước khi tự
+  // làm), VÀ không phải đang ở chế độ "Chấm sửa cuối bài" trong lúc đề còn dang
+  // dở (chế độ đó chỉ tiết lộ đúng/sai/giải thích ở trang kết quả cuối cùng).
+  const explainRow = document.getElementById("examExplainRow");
+  const explainBox = document.getElementById("examExplainBox");
+  explainBox.classList.add("hidden");
+  explainBox.innerHTML = "";
+  document.getElementById("btnExamContinue").classList.add("hidden");
+  const hasAnswered = history && history.attempts.length > 0;
+  const allowExplainNow = App.examScoreMode !== "review";
+  if (q.giai_thich && q.giai_thich.length && hasAnswered && allowExplainNow) {
+    explainRow.classList.remove("hidden");
+  } else {
+    explainRow.classList.add("hidden");
+  }
+}
+
+// Hiện/ẩn khu vực giải thích đáp án cho câu đang xem (cả live và review đều dùng được,
+// vì đều cùng dựa vào App.examCurrentQuestion/QIndex đã lưu lúc render câu).
+function toggleExamExplain() {
+  const box = document.getElementById("examExplainBox");
+  const isHidden = box.classList.contains("hidden");
+  if (!isHidden) {
+    box.classList.add("hidden");
+    return;
+  }
+
+  const q = App.examCurrentQuestion;
+  if (!q || !q.giai_thich) return;
+
+  const optionIndices = q.options.map((_, i) => i); // hiện theo thứ tự gốc trong giải thích, không random
+  const rows = optionIndices.map((optIdx) => {
+    const isCorrect = optIdx === q.dap_an_dung;
+    const explainText = q.giai_thich[optIdx] || "";
+    return `
+      <div class="exam-explain-item ${isCorrect ? "is-correct" : "is-wrong"}">
+        <div class="exam-explain-item-head">
+          <span class="exam-explain-mark">${isCorrect ? "✓" : "✕"}</span>
+          <span class="exam-explain-opt-text">${q.options[optIdx]}</span>
+        </div>
+        <div class="exam-explain-item-body">${explainText}</div>
+      </div>
+    `;
+  }).join("");
+
+  box.innerHTML = rows;
+  box.classList.remove("hidden");
+}
+
+// Sửa lại đáp án của 1 câu ĐÃ làm, khi đang quay lại xem qua nút "Câu trước/Câu
+// sau" — CHỈ dùng cho chế độ chấm cuối bài (xem renderExamQuestionContent()).
+// Không tô đúng/sai, không tự chuyển câu — chỉ cập nhật lựa chọn rồi để người
+// học tự bấm điều hướng tiếp khi sẵn sàng, giống hệt cách làm bài thi giấy thật
+// (sửa đáp án tự do, không có phản hồi gì cho tới lúc nộp bài).
+function handleExamAnswerEditReview(btn, chosenIdx, qIndex, q) {
+  const correct = chosenIdx === q.dap_an_dung;
+  const hist = App.examHistory[qIndex];
+  const wasCorrect = hist.firstTryCorrect;
+
+  hist.attempts.push({ chosenIdx, correct, atMs: Date.now() });
+  hist.firstTryCorrect = correct; // chấm cuối bài: đáp án MỚI NHẤT mới là đáp án chính thức để chấm
+
+  // Điều chỉnh điểm + tập hợp examAnswered nếu đúng/sai có thay đổi so với trước
+  if (wasCorrect !== correct) {
+    if (correct) {
+      App.examScore++;
+      App.examAnswered.add(qIndex);
+    } else {
+      App.examScore--;
+      App.examAnswered.delete(qIndex);
+    }
+    document.getElementById("examScore").textContent = App.examScore;
+  }
+
+  recordWeaknessResult("__exam__", `${App.currentExamId}::q${qIndex}`, correct, q.de_bai.slice(0, 60));
+
+  // Chỉ cập nhật lại highlight ô đang chọn, không render lại toàn bộ (giữ nguyên
+  // vị trí xem lại hiện tại, không tự nhảy đi đâu).
+  document.querySelectorAll("#examOptions .quiz-opt").forEach((b) => b.classList.remove("was-chosen-neutral"));
+  btn.classList.add("was-chosen-neutral");
+}
+
+function handleExamAnswer(btn, chosenIdx, qIndex, q) {
+  if (App.examAnswering) return; // chặn double-click
+  App.examAnswering = true;
+
+  clearInterval(App.examPerQTimerHandle);
+
+  const correct = chosenIdx === q.dap_an_dung;
+
+  let secondsUsed = null;
+  if (App.examSpeedMode && App.examPerQStartedAt) {
+    secondsUsed = (Date.now() - App.examPerQStartedAt) / 1000;
+    const isRetry = App.examAnswered.size > 0 && App.examHistory[qIndex] && App.examHistory[qIndex].attempts.length > 0;
+    App.examQuestionTimeLog.push({ qIndex, seconds: secondsUsed, overTime: secondsUsed > 30, isRetry });
+  }
+
+  // Ghi vào lịch sử CHI TIẾT của câu này (mọi lượt trả lời, không chỉ lượt cuối)
+  if (!App.examHistory[qIndex]) {
+    App.examHistory[qIndex] = { attempts: [], firstTryCorrect: null, optionOrder: null };
+  }
+  const hist = App.examHistory[qIndex];
+  hist.attempts.push({ chosenIdx, correct, atMs: Date.now() });
+  if (hist.firstTryCorrect === null) {
+    hist.firstTryCorrect = correct;
+  }
+
+  const examWeaknessKey = `${App.currentExamId}::q${qIndex}`;
+  recordWeaknessResult("__exam__", examWeaknessKey, correct, q.de_bai.slice(0, 60));
+
+  if (App.examScoreMode === "review") {
+    // Chấm sửa cuối bài: KHÔNG tô đúng/sai, KHÔNG phát âm thanh, KHÔNG cho xem
+    // giải thích ngay — chỉ ghi nhận lựa chọn rồi chuyển câu kế tiếp NGAY LẬP
+    // TỨC, và mỗi câu chỉ đi qua đúng 1 lần theo thứ tự gốc (không đẩy lại câu
+    // sai vào hàng đợi), vì mục đích là làm hết cả đề trước khi biết kết quả.
+    document.querySelectorAll("#examOptions .quiz-opt").forEach((b) => b.classList.add("disabled"));
+    btn.classList.add("was-chosen-neutral");
+    App.examQueue.shift();
+    if (correct && !App.examAnswered.has(qIndex)) {
+      App.examScore++;
+      App.examAnswered.add(qIndex);
+      document.getElementById("examScore").textContent = App.examScore;
+    }
+    renderExamQuestion();
+    return;
+  }
+
+  // Chấm ngay tại chỗ (instant): tô đúng/sai, phát âm thanh, hiện nút giải thích,
+  // và KHÔNG tự động chuyển câu — chờ người học tự bấm "Tiếp tục →".
+  document.querySelectorAll("#examOptions .quiz-opt").forEach((b) => b.classList.add("disabled"));
+  btn.classList.add(correct ? "correct" : "wrong");
+
+  if (correct) {
+    playCorrectSound();
+  } else {
+    playWrongSound();
+    document.querySelectorAll("#examOptions .quiz-opt").forEach((b) => {
+      if (b.textContent === q.options[q.dap_an_dung]) b.classList.add("correct");
+    });
+  }
+
+  if (correct) {
+    if (!App.examAnswered.has(qIndex)) {
+      App.examScore++;
+      App.examAnswered.add(qIndex);
+      document.getElementById("examScore").textContent = App.examScore;
+    }
+  }
+  // Lưu lại đúng/sai của lượt này để btnExamContinue biết phải làm gì khi bấm tiếp
+  App.examLastAnswerCorrect = correct;
+  App.examLastAnsweredQIndex = qIndex;
+
+  if (q.giai_thich && q.giai_thich.length) {
+    document.getElementById("examExplainRow").classList.remove("hidden");
+  }
+  document.getElementById("btnExamContinue").classList.remove("hidden");
+}
+
+// Bấm "Tiếp tục →" sau khi đã chấm ngay 1 câu (chế độ instant) — đây là lúc
+// thật sự đẩy câu sai về cuối hàng đợi và chuyển sang câu kế tiếp.
+function examContinueAfterInstantAnswer() {
+  document.getElementById("btnExamContinue").classList.add("hidden");
+  document.getElementById("examExplainBox").classList.add("hidden");
+  document.getElementById("examExplainRow").classList.add("hidden");
+
+  const qIndex = App.examLastAnsweredQIndex;
+  App.examQueue.shift();
+  if (!App.examLastAnswerCorrect) {
+    App.examQueue.push(qIndex);
+  }
+  renderExamQuestion();
+}
+
+// ----- Điều hướng xem lại câu trước / câu sau -----
+// QUAN TRỌNG: examSeenOrder[length-1] LUÔN là vị trí của câu "live" hiện tại
+// (được push vào ngay khi câu đó trở thành câu đang chờ trả lời, xem renderExamQuestion()).
+// Mọi vị trí TRƯỚC đó chắc chắn đã có lịch sử trả lời (vì phải trả lời xong mới
+// qua câu kế). Vì vậy điều hướng KHÔNG được bao giờ gọi showExamReviewAt() cho
+// chính vị trí live đó — phải luôn quay lại qua backToLiveExamQuestion() để câu
+// đó được render đúng ở trạng thái "live" (có thể bấm chọn được), không phải
+// trạng thái "xem lại" (vốn chỉ dành cho câu ĐÃ có lịch sử).
+function examGoPrev() {
+  // Không có câu nào để xem lại trước vị trí live hiện tại
+  if (App.examSeenOrder.length <= 1) return;
+  if (App.examNavPos === -1) {
+    // Đang ở câu live -> lùi về câu liền trước (bỏ qua chính vị trí live ở cuối)
+    App.examNavPos = App.examSeenOrder.length - 2;
+  } else {
+    App.examNavPos = Math.max(0, App.examNavPos - 1);
+  }
+  showExamReviewAt(App.examNavPos);
+}
+
+function examGoNext() {
+  if (App.examNavPos === -1) return; // đã ở câu live, không có gì để "tiến" thêm
+  const nextPos = App.examNavPos + 1;
+  // Trước đây dùng "navPos >= length-1" để quyết định quay về live, nhưng kiểm
+  // tra đó chạy SAU KHI đã tăng navPos, nên lần bấm đầu tiên từ vị trí length-2
+  // sẽ tăng lên đúng length-1 (vị trí live) rồi mới showExamReviewAt() cho vị trí
+  // ĐÓ — hiện sai vì câu live chưa có lịch sử trả lời, nút bấm rơi vào trạng thái
+  // vừa không bị khóa vừa không gắn sự kiện click (không disabled, không listener)
+  // — phải bấm "Câu sau" THÊM 1 LẦN NỮA mới thực sự về lại được câu live qua
+  // nhánh backToLiveExamQuestion(). Sửa: kiểm tra TRƯỚC khi tăng, nếu vị trí kế
+  // tiếp sẽ là vị trí live (length-1) thì đi thẳng về live ngay từ lần bấm đầu.
+  if (nextPos >= App.examSeenOrder.length - 1) {
+    backToLiveExamQuestion();
+    return;
+  }
+  App.examNavPos = nextPos;
+  showExamReviewAt(App.examNavPos);
+}
+
+function showExamReviewAt(pos) {
+  const qIndex = App.examSeenOrder[pos];
+  if (qIndex === undefined) return;
+  const exam = App.exams.find((e) => e.id === App.currentExamId);
+  const q = exam.questions[qIndex];
+
+  App.examReviewMode = true;
+  clearInterval(App.examPerQTimerHandle);
+  document.getElementById("examPerQuestionTimerWrap").classList.add("hidden");
+  document.getElementById("examReviewBanner").classList.remove("hidden");
+  // Hiện đúng số thứ tự GỐC của câu (qIndex+1), không phải vị trí trong lịch sử
+  // đã-từng-thấy (pos+1) — 2 con số này có thể khác nhau khi đã có câu làm lại.
+  document.getElementById("examPos").textContent = qIndex + 1;
+
+  renderExamQuestionContent(q, qIndex, false);
+}
+
+function backToLiveExamQuestion() {
+  App.examReviewMode = false;
+  App.examNavPos = -1;
+  document.getElementById("examReviewBanner").classList.add("hidden");
+
+  if (App.examQueue.length === 0) {
+    finishExam();
+    return;
+  }
+  const exam = App.exams.find((e) => e.id === App.currentExamId);
+  const qIndex = App.examQueue[0];
+  const q = exam.questions[qIndex];
+  document.getElementById("examPos").textContent = qIndex + 1;
+  renderExamQuestionContent(q, qIndex, true);
+  startExamPerQuestionTimer();
+}
+
+// "Thoát & xem kết quả" (chỉ chế độ chấm ngay) — Zane bấm khi lười làm lại hết
+// các câu sai còn đang nằm trong hàng đợi retry. Dừng ngay, chấm điểm với những
+// gì đã làm được, các câu CHƯA TỪNG làm sẽ hiện riêng biệt là "chưa làm" (không
+// tính là sai) trong lưới kết quả — finishExam() vẫn dùng được nguyên vì nó
+// không phụ thuộc việc hàng đợi đã rỗng hay chưa.
+function exitExamEarlyAndShowResult() {
+  App.examQueue = [];
+  finishExam();
+}
+
+function finishExam() {
+  clearInterval(App.examPerQTimerHandle);
+  clearInterval(App.examTotalTimerHandle);
+
+  if (!App.examFirstPassDone) {
+    App.examFirstPassDone = true;
+    App.examFirstPassEndTime = Date.now();
+  }
+
+  document.getElementById("examBody").classList.add("hidden");
+  document.getElementById("examResult").classList.remove("hidden");
+
+  document.getElementById("examFinalScore").textContent =
+    `${App.examScore}/${App.examOriginalTotal} điểm`;
+
+  // Lưu vào lịch sử lâu dài (riêng biệt khỏi state phiên hiện tại, không mất khi rời trang)
+  const totalSeconds = App.examTotalStartTime ? (Date.now() - App.examTotalStartTime) / 1000 : 0;
+  const firstTryWrongCount = Object.values(App.examHistory).filter((h) => h.firstTryCorrect === false).length;
+  recordExamCompletion(App.currentExamId, {
+    score: App.examScore,
+    total: App.examOriginalTotal,
+    seconds: totalSeconds,
+    firstTryWrongCount,
+  });
+  // Lưu chi tiết từng câu (đáp án đã chọn, đúng/sai) để xem lại lưới kết quả +
+  // popup giải thích sau này, kể cả sau khi tải lại trang hoặc nhập tiến độ từ máy khác.
+  saveExamDetailSnapshot(App.currentExamId, App.examHistory);
+
+  if (App.examSpeedMode) {
+    if (App.examScoreMode === "instant") {
+      renderExamTimeSummary();
+    } else {
+      // Chấm cuối bài: KHÔNG có khái niệm "lượt đầu / sửa lại câu sai" — mỗi câu
+      // chỉ đi qua đúng 1 lần theo thứ tự gốc, không có vòng làm lại nào cả. Trước
+      // đây vẫn gọi renderExamTimeSummary() ở đây nên hiện nhầm cả khối "Mốc 2 —
+      // Sửa lại câu sai" dù chế độ này không hề có pha sửa lại nào. Giờ chỉ hiện
+      // tổng thời gian làm bài đơn giản.
+      document.getElementById("examTimeSummary").innerHTML = `
+        <div class="exam-time-summary-block">
+          <div class="exam-time-summary-title">Thời gian làm bài</div>
+          <div class="exam-time-stats-row">
+            <div class="exam-speed-stat"><div class="exam-speed-stat-num">${fmtTime(totalSeconds)}</div><div class="exam-speed-stat-label">tổng thời gian</div></div>
+          </div>
+        </div>
+      `;
+    }
+    renderExamSpeedSummary();
+  } else {
+    document.getElementById("examTimeSummary").innerHTML = "";
+    document.getElementById("examSpeedSummary").classList.add("hidden");
+  }
+
+  renderExamResultGrid();
+}
+
+// Lưới kết quả dạng ô tròn nhỏ — mỗi ô là 1 câu, xanh/đỏ = đúng/sai, bấm vào để
+// xem chi tiết qua popup (đề bài, đáp án đã chọn, đáp án đúng, giải thích).
+// Dùng chung cho cả 2 chế độ chấm (instant/review) — không cần phân biệt UI khác.
+function renderExamResultGrid() {
+  const exam = App.exams.find((e) => e.id === App.currentExamId);
+  const grid = document.getElementById("examResultGrid");
+
+  // 3 trạng thái: đúng / sai / CHƯA LÀM (chưa có lượt nào — quan trọng từ khi có
+  // nút "Thoát & xem kết quả", vì giờ hoàn toàn có thể có câu chưa từng được làm).
+  const cells = exam.questions.map((q, qIndex) => {
+    const hist = App.examHistory[qIndex];
+    let stateClass = "is-not-done";
+    if (hist && hist.attempts.length) {
+      stateClass = hist.firstTryCorrect ? "is-correct" : "is-wrong";
+    }
+    return `<button class="exam-result-dot ${stateClass}" data-qindex="${qIndex}">${qIndex + 1}</button>`;
+  }).join("");
+
+  grid.innerHTML = cells;
+
+  grid.querySelectorAll(".exam-result-dot").forEach((dot) => {
+    dot.addEventListener("click", () => openExamDetailModal(parseInt(dot.dataset.qindex, 10)));
+  });
+}
+
+// Popup chi tiết 1 câu: đề bài, đáp án đã chọn (lần đầu), đáp án đúng, giải thích
+// ngắn gọn cho TỪNG đáp án (không chỉ đáp án đúng/sai đã chọn).
+// opts.examId / opts.examHistory (tùy chọn): dùng khi mở popup từ NGOÀI session
+// đang làm đề hiện tại (ví dụ từ tab "Đề thi" ở trang Điểm yếu) — tránh phải
+// ghi đè App.currentExamId / App.examHistory toàn cục, có thể phá dữ liệu của
+// 1 đề khác đang làm giữa chừng.
+function openExamDetailModal(qIndex, opts) {
+  const examId = (opts && opts.examId) || App.currentExamId;
+  const historySource = (opts && opts.examHistory) || App.examHistory;
+  const exam = App.exams.find((e) => e.id === examId);
+  const q = exam.questions[qIndex];
+  const hist = historySource[qIndex];
+  const firstAttempt = hist ? hist.attempts[0] : null;
+  const chosenIdx = firstAttempt ? firstAttempt.chosenIdx : null;
+  const correct = firstAttempt ? firstAttempt.correct : false;
+  const notDone = !firstAttempt;
+
+  document.getElementById("examDetailModalTitle").textContent = notDone
+    ? `Câu ${qIndex + 1} — Chưa làm`
+    : `Câu ${qIndex + 1} — ${correct ? "✓ Đúng" : "✕ Sai"}`;
+
+  const optionsHtml = q.options.map((opt, idx) => {
+    const isCorrectAnswer = idx === q.dap_an_dung;
+    const isChosen = idx === chosenIdx;
+    const explainText = (q.giai_thich && q.giai_thich[idx]) || "";
+    const tags = [];
+    if (isCorrectAnswer) tags.push('<span class="exam-detail-tag is-correct-tag">Đáp án đúng</span>');
+    if (isChosen && !isCorrectAnswer) tags.push('<span class="exam-detail-tag is-chosen-tag">Bạn đã chọn</span>');
+    if (isChosen && isCorrectAnswer) tags.push('<span class="exam-detail-tag is-chosen-tag">Bạn đã chọn</span>');
+    return `
+      <div class="exam-detail-opt ${isCorrectAnswer ? "is-correct" : ""} ${isChosen && !isCorrectAnswer ? "is-wrong-chosen" : ""}">
+        <div class="exam-detail-opt-head">
+          <span class="exam-detail-opt-text">${opt}</span>
+          ${tags.join("")}
+        </div>
+        ${explainText ? `<div class="exam-detail-opt-explain">${explainText}</div>` : ""}
+      </div>
+    `;
+  }).join("");
+
+  document.getElementById("examDetailModalBody").innerHTML = `
+    <div class="exam-detail-question">${q.de_bai}</div>
+    <div class="exam-detail-opts">${optionsHtml}</div>
+  `;
+
+  document.getElementById("examDetailModalOverlay").classList.remove("hidden");
+}
+
+function closeExamDetailModal() {
+  document.getElementById("examDetailModalOverlay").classList.add("hidden");
+}
+
+/* ===================================================================
+   CHOUKAI MODE — Luyện nghe (聴解) theo đề thật, theo từng Mondai 1-5.
+   Tái dùng nhiều pattern từ EXAM MODE (mode chấm ngay/cuối bài, lưu chi
+   tiết từng câu, lưới kết quả, modal chi tiết, ghi điểm yếu) nhưng đây là
+   1 hệ thống RIÊNG vì câu hỏi gắn với audio + script/dịch/mẹo thay vì
+   4 lựa chọn giải thích từng đáp án như exam mode.
+=================================================================== */
+
+const CHOUKAI_HISTORY_KEY = "n2vocab_choukai_history";          // điểm tổng từng đề (giống EXAM_HISTORY_STORAGE_KEY)
+const CHOUKAI_DETAIL_HISTORY_KEY = "n2vocab_choukai_detail_history"; // chi tiết từng câu lần làm gần nhất
+
+function loadChoukaiHistoryStats() {
+  try { return JSON.parse(localStorage.getItem(CHOUKAI_HISTORY_KEY)) || {}; } catch (e) { return {}; }
+}
+function saveChoukaiHistoryStats(stats) {
+  localStorage.setItem(CHOUKAI_HISTORY_KEY, JSON.stringify(stats));
+}
+function loadChoukaiDetailHistoryStats() {
+  try { return JSON.parse(localStorage.getItem(CHOUKAI_DETAIL_HISTORY_KEY)) || {}; } catch (e) { return {}; }
+}
+function saveChoukaiDetailHistoryStats(stats) {
+  localStorage.setItem(CHOUKAI_DETAIL_HISTORY_KEY, JSON.stringify(stats));
+}
+function recordChoukaiCompletion(testId, info) {
+  const stats = loadChoukaiHistoryStats();
+  const prev = stats[testId] || { totalCompletions: 0 };
+  stats[testId] = {
+    totalCompletions: prev.totalCompletions + 1,
+    lastScore: info.score,
+    lastTotal: info.total,
+    lastSeconds: info.seconds,
+    lastCompletedAt: Date.now(),
+  };
+  saveChoukaiHistoryStats(stats);
+}
+function saveChoukaiDetailSnapshot(testId, answers) {
+  const stats = loadChoukaiDetailHistoryStats();
+  stats[testId] = { answers: answers, savedAt: Date.now() };
+  saveChoukaiDetailHistoryStats(stats);
+}
+
+// Mỗi câu trả lời được định danh bằng key duy nhất trong 1 đề:
+// "m{mondaiNumber}q{qnum}" hoặc thêm "s{subIndex}" cho câu có 2 câu hỏi con (Mondai 5).
+function choukaiKeyFor(mNum, qnum, subIndex) {
+  return (subIndex === undefined || subIndex === null) ? ("m" + mNum + "q" + qnum) : ("m" + mNum + "q" + qnum + "s" + subIndex);
+}
+
+function populateChoukaiPicker() {
+  const picker = document.getElementById("choukaiPicker");
+  picker.innerHTML = '<option value="">— chọn đề nghe —</option>';
+  App.choukaiTests.forEach(function (t) {
+    const opt = document.createElement("option");
+    opt.value = t.id;
+    let totalQ = 0;
+    t.mondai.forEach(function (m) {
+      m.questions.forEach(function (q) {
+        totalQ += q.isDualQuestion ? q.subQuestions.length : 1;
+      });
+    });
+    opt.textContent = t.title + " (" + totalQ + " câu)";
+    picker.appendChild(opt);
+  });
+}
+
+function renderChoukaiPickerState() {
+  const picker = document.getElementById("choukaiPicker");
+  if (picker.options.length <= 1) populateChoukaiPicker();
+  const hasResultShown = !document.getElementById("choukaiResult").classList.contains("hidden");
+  document.getElementById("choukaiEmpty").classList.toggle("hidden", !!App.currentChoukaiId);
+  document.getElementById("choukaiBody").classList.toggle("hidden", !App.currentChoukaiId || hasResultShown);
+}
+
+function getChoukaiTest(testId) {
+  return App.choukaiTests.find(function (t) { return t.id === testId; });
+}
+
+// Mở modal chọn Mondai cụ thể (hoặc cả đề) rồi chọn chế độ chấm.
+function openChoukaiModeModal(testId) {
+  App.choukaiPendingTestId = testId;
+  const test = getChoukaiTest(testId);
+  const mondaiPicker = document.getElementById("choukaiMondaiPicker");
+  mondaiPicker.innerHTML = '<option value="all">Luyện cả đề (Mondai 1→5)</option>';
+  test.mondai.forEach(function (m) {
+    const opt = document.createElement("option");
+    opt.value = String(m.number);
+    opt.textContent = "Chỉ Mondai " + m.number + " (" + m.name + ")";
+    mondaiPicker.appendChild(opt);
+  });
+  mondaiPicker.classList.remove("hidden");
+  mondaiPicker.value = "all";
+
+  const detailStats = loadChoukaiDetailHistoryStats();
+  const saved = detailStats[testId];
+  const viewSavedBtn = document.getElementById("btnChoukaiViewSavedResult");
+  if (saved) {
+    viewSavedBtn.classList.remove("hidden");
+    const correctCount = Object.values(saved.answers).filter(function (a) { return a.correct; }).length;
+    const total = Object.keys(saved.answers).length;
+    const d = new Date(saved.savedAt);
+    document.getElementById("choukaiSavedResultDesc").textContent =
+      "Lần làm gần nhất (" + d.getDate() + "/" + (d.getMonth() + 1) + "): " + correctCount + "/" + total + " câu đúng. Xem lại không cần làm lại.";
+  } else {
+    viewSavedBtn.classList.add("hidden");
+  }
+  document.getElementById("choukaiModeModalOverlay").classList.remove("hidden");
+}
+
+function confirmChoukaiMode(mode) {
+  document.getElementById("choukaiModeModalOverlay").classList.add("hidden");
+  App.choukaiScoreMode = mode;
+  const mondaiVal = document.getElementById("choukaiMondaiPicker").value;
+  App.choukaiMondaiFilter = mondaiVal === "all" ? "all" : parseInt(mondaiVal, 10);
+  startChoukai(App.choukaiPendingTestId);
+}
+
+// Xây hàng đợi câu hỏi dạng phẳng từ cấu trúc mondai lồng nhau — câu có
+// isDualQuestion (Mondai 5, câu cuối) sẽ tách thành 2 mục riêng trong hàng đợi
+// (subIndex 0 và 1) nhưng vẫn dùng chung audio/script.
+function buildChoukaiQueue(test, mondaiFilter) {
+  const queue = [];
+  test.mondai.forEach(function (m, mIndex) {
+    if (mondaiFilter !== "all" && m.number !== mondaiFilter) return;
+    m.questions.forEach(function (q, qIndex) {
+      if (q.isDualQuestion) {
+        q.subQuestions.forEach(function (sub, subIndex) {
+          queue.push({ mIndex: mIndex, qIndex: qIndex, subIndex: subIndex });
+        });
+      } else {
+        queue.push({ mIndex: mIndex, qIndex: qIndex, subIndex: null });
+      }
+    });
+  });
+  return queue;
+}
+
+function startChoukai(testId) {
+  const test = getChoukaiTest(testId);
+  if (!test) return;
+  App.currentChoukaiId = testId;
+  App.choukaiQueue = buildChoukaiQueue(test, App.choukaiMondaiFilter);
+  App.choukaiPos = 0;
+  App.choukaiAnswers = {};
+  App.choukaiScore = 0;
+  App.choukaiHintEnabled = false;
+  App.choukaiStartTime = Date.now();
+  App.choukaiCurrentAudioSrc = null;
+  App.choukaiAnswering = false;
+
+  document.getElementById("choukaiEmpty").classList.add("hidden");
+  document.getElementById("choukaiResult").classList.add("hidden");
+  document.getElementById("choukaiBody").classList.remove("hidden");
+  document.getElementById("btnChoukaiExitEarly").classList.toggle("hidden", App.choukaiScoreMode !== "instant");
+  document.getElementById("choukaiHintToggle").checked = false;
+
+  renderChoukaiQuestion();
+}
+
+function getChoukaiCurrentItem() {
+  const test = getChoukaiTest(App.currentChoukaiId);
+  const pos = App.choukaiQueue[App.choukaiPos];
+  if (!test || !pos) return null;
+  const mondai = test.mondai[pos.mIndex];
+  const q = mondai.questions[pos.qIndex];
+  const sub = pos.subIndex !== null ? q.subQuestions[pos.subIndex] : null;
+  return { test: test, mondai: mondai, q: q, sub: sub, pos: pos };
+}
+
+function getChoukaiAudioSrc(test, mondai) {
+  if (test.audioMode === "combined") return "file-nghe/" + test.audioFile;
+  const fname = test.audioFiles && test.audioFiles[String(mondai.number)];
+  return fname ? "file-nghe/" + fname : null;
+}
+
+function renderChoukaiQuestion() {
+  const item = getChoukaiCurrentItem();
+  if (!item) { finishChoukai(); return; }
+  const test = item.test, mondai = item.mondai, q = item.q, sub = item.sub;
+
+  App.choukaiAnswering = false; // mở khóa lựa chọn cho câu mới
+  document.getElementById("choukaiReviewPanel").classList.add("hidden");
+  document.getElementById("choukaiProgressText").textContent =
+    "Câu " + (App.choukaiPos + 1) + "/" + App.choukaiQueue.length + " · Mondai " + mondai.number + " (" + mondai.name + ")";
+  document.getElementById("choukaiMondaiInstruction").textContent = mondai.instruction;
+
+  const audioSrc = getChoukaiAudioSrc(test, mondai);
+  const audioEl = document.getElementById("choukaiAudioEl");
+  const hint = document.getElementById("choukaiAudioHint");
+  if (audioSrc) {
+    // CHỈ load lại file khi file thật sự đổi (sang Mondai khác dùng file khác).
+    // Trước đây set audioEl.src mỗi lần render khiến audio bị TẢI LẠI TỪ ĐẦU mỗi
+    // khi qua câu kế trong CÙNG 1 Mondai (dùng chung 1 file) — làm gián đoạn nghe
+    // liên tục dù câu 1→5 của 1 Mondai vốn nằm trong 1 file audio duy nhất.
+    //
+    // "startSec" (tùy chọn, số giây) trong JSON câu hỏi: nếu file JSON CÓ field
+    // này, app tự seek audio tới đúng đoạn của câu khi chuyển câu (kể cả khi vẫn
+    // dùng chung 1 file audio như cũ). Nếu KHÔNG có field này (file cũ chưa cập
+    // nhật), app giữ nguyên hành vi cũ — không tự seek, người học tự kéo thanh
+    // thời gian như trước, KHÔNG lỗi/crash gì cả.
+    const seekToStart = function () {
+      if (typeof q.startSec === "number") {
+        try { audioEl.currentTime = q.startSec; } catch (e) { /* bỏ qua nếu chưa sẵn sàng */ }
+      }
+    };
+    if (App.choukaiCurrentAudioSrc !== audioSrc) {
+      audioEl.src = audioSrc;
+      App.choukaiCurrentAudioSrc = audioSrc;
+      if (typeof q.startSec === "number") {
+        audioEl.addEventListener("loadedmetadata", seekToStart, { once: true });
+      }
+    } else {
+      // Cùng file (cùng Mondai) — chỉ seek nếu câu mới có khai báo startSec.
+      seekToStart();
+    }
+    hint.textContent = test.audioMode === "combined"
+      ? "⚠ Đề này dùng 1 file audio chung cho cả đề — tự kéo thanh thời gian tới đúng đoạn."
+      : "";
+  } else {
+    audioEl.removeAttribute("src");
+    App.choukaiCurrentAudioSrc = null;
+    hint.textContent = "⚠ Chưa có file audio cho Mondai này.";
+  }
+
+  const promptText = sub ? (sub.promptVi || "") : (q.prompt || "");
+  document.getElementById("choukaiPrompt").textContent = promptText;
+
+  const options = sub ? sub.options : q.options;
+  const correctIndexForRender = sub ? sub.correctIndex : q.correctIndex;
+  const key = choukaiKeyFor(mondai.number, q.qnum, item.pos.subIndex);
+  const existingAnswer = App.choukaiAnswers[key];
+
+  const optWrap = document.getElementById("choukaiOptions");
+  optWrap.innerHTML = "";
+  options.forEach(function (opt, idx) {
+    const btn = document.createElement("button");
+    btn.className = "quiz-opt";
+    btn.textContent = opt;
+    if (existingAnswer) {
+      // Câu này đã trả lời rồi (quay lại bằng nút "Câu trước") — khóa lại, không
+      // cho trả lời lần 2 (tránh lặp lại lỗi cộng điểm 2 lần), chỉ hiển thị lại
+      // trạng thái đã chọn.
+      btn.classList.add("disabled");
+      if (idx === correctIndexForRender) btn.classList.add("correct");
+      else if (idx === existingAnswer.chosenIndex) btn.classList.add("wrong");
+    } else {
+      btn.addEventListener("click", function () { handleChoukaiAnswer(idx); });
+    }
+    optWrap.appendChild(btn);
+  });
+  if (existingAnswer) {
+    App.choukaiAnswering = true;
+    if (App.choukaiScoreMode === "instant") showChoukaiReviewPanel(existingAnswer.correct);
+  }
+
+  // Gợi ý từ khóa — chỉ Mondai 3 & 5
+  const hintRow = document.getElementById("choukaiHintRow");
+  const showHintRow = (mondai.number === 3 || mondai.number === 5) && q.keywords && q.keywords.length;
+  hintRow.classList.toggle("hidden", !showHintRow);
+  const kwBox = document.getElementById("choukaiKeywords");
+  if (showHintRow && App.choukaiHintEnabled) {
+    kwBox.classList.remove("hidden");
+    kwBox.innerHTML = q.keywords.map(function (k) { return '<span class="choukai-keyword-chip">' + k + '</span>'; }).join("");
+  } else {
+    kwBox.classList.add("hidden");
+  }
+
+  document.getElementById("btnChoukaiPrev").disabled = App.choukaiPos === 0;
+}
+
+function handleChoukaiAnswer(chosenIndex) {
+  if (App.choukaiAnswering) return; // chặn bấm thêm lần nữa sau khi đã trả lời câu này
+  const item = getChoukaiCurrentItem();
+  if (!item) return;
+  App.choukaiAnswering = true;
+
+  const mondai = item.mondai, q = item.q, sub = item.sub, pos = item.pos;
+  const correctIndex = sub ? sub.correctIndex : q.correctIndex;
+  const correct = chosenIndex === correctIndex;
+  const key = choukaiKeyFor(mondai.number, q.qnum, pos.subIndex);
+
+  App.choukaiAnswers[key] = { chosenIndex: chosenIndex, correctIndex: correctIndex, correct: correct };
+  if (correct) App.choukaiScore++;
+
+  // Khóa toàn bộ lựa chọn ngay sau khi trả lời — trước đây các nút vẫn bấm được
+  // dưới panel review, bấm thêm sẽ GHI ĐÈ đáp án + cộng điểm thêm lần nữa, khiến
+  // điểm "câu đúng" bị đẩy lên gần bằng tổng số câu đã làm. Đây là lỗi đã sửa.
+  document.querySelectorAll("#choukaiOptions .quiz-opt").forEach(function (b, idx) {
+    b.classList.add("disabled");
+    if (idx === correctIndex) b.classList.add("correct");
+    else if (idx === chosenIndex) b.classList.add("wrong");
+  });
+
+  // Ghi vào hệ thống điểm yếu chung (deckId giả "__choukai__"), tái dùng
+  // recordWeaknessResult đã có sẵn cho exam mode.
+  const label = (sub ? sub.promptVi : q.prompt) || (q.script || "").slice(0, 50);
+  recordWeaknessResult("__choukai__", App.currentChoukaiId + "::" + key, correct, "M" + mondai.number + " - " + label);
+
+  if (App.choukaiScoreMode === "instant") {
+    showChoukaiReviewPanel(correct);
+  } else {
+    choukaiGoNext();
+  }
+}
+
+function showChoukaiReviewPanel(correct) {
+  const panel = document.getElementById("choukaiReviewPanel");
+  panel.classList.remove("hidden");
+  const resultEl = document.getElementById("choukaiReviewResult");
+  resultEl.textContent = correct ? "✓ Đúng!" : "✕ Sai";
+  resultEl.className = "choukai-review-result " + (correct ? "is-correct" : "is-wrong");
+  App.choukaiReviewTab = "script";
+  document.querySelectorAll(".choukai-review-tab").forEach(function (b) {
+    b.classList.toggle("is-active", b.dataset.tab === "script");
+  });
+  renderChoukaiReviewContent();
+}
+
+function clearKaraokeHandler(handlerKey) {
+  const h = App.karaokeHandlers[handlerKey];
+  if (h) {
+    if (h.audioEl && h.fn) h.audioEl.removeEventListener("timeupdate", h.fn);
+    if (h.scrollEl && h.onScroll) h.scrollEl.removeEventListener("scroll", h.onScroll);
+    if (h.jumpBtn && h.jumpBtn.parentNode) h.jumpBtn.parentNode.removeChild(h.jumpBtn);
+  }
+  App.karaokeHandlers[handlerKey] = null;
+}
+
+// Tìm khung CUỘN ĐƯỢC gần nhất bao quanh 1 phần tử — dùng để biết nên lắng
+// nghe sự kiện "scroll" ở đâu (vd panel xem đáp án cuộn riêng trong khung nhỏ,
+// còn "Luyện nghe câu" full trang thì cuộn ở `.main`). Fallback về `.main` nếu
+// không tìm thấy khung cuộn riêng nào (đây luôn là khung cuộn chính của app).
+function findScrollParent(el) {
+  // Kiểm tra CHÍNH phần tử được truyền vào trước (vd panel xem đáp án —
+  // #choukaiReviewContent CHÍNH là khung cuộn riêng, không phải cha của nó),
+  // sau đó mới đi lên các cha — vd "Luyện nghe câu" không có khung cuộn riêng,
+  // nên đi lên tới `.main` (khung cuộn chính của app).
+  let node = el;
+  while (node && node !== document.body) {
+    const cs = getComputedStyle(node);
+    if ((cs.overflowY === "auto" || cs.overflowY === "scroll") && node.scrollHeight > node.clientHeight) {
+      return node;
+    }
+    node = node.parentElement;
+  }
+  return document.querySelector(".main");
+}
+
+/* Gắn hành vi karaoke (bôi sáng dòng đang phát + tự cuộn dòng đó vào GIỮA màn
+ * hình + bấm dòng để phát lại) cho 1 danh sách phần tử dòng ĐÃ render sẵn —
+ * dùng CHUNG cho cả "Luyện nghe câu" và panel xem đáp án.
+ *
+ * Hành vi cuộn theo yêu cầu: trong lúc audio đang phát, dòng đang nghe TỰ ĐỘNG
+ * được cuộn ra giữa khung nhìn. Nếu người dùng tự kéo cuộn (muốn xem các dòng
+ * khác trong script) thì NGỪNG tự cuộn để người dùng tự do xem — chỉ tính là
+ * "tự kéo" khi việc cuộn đó KHÔNG phải do chính app gây ra (phân biệt bằng cờ
+ * isAutoScrolling). Khi đó hiện nút "⬇ Về dòng đang nghe" — bấm vào sẽ nhảy
+ * lại đúng dòng hiện tại ra giữa màn hình VÀ bật lại chế độ tự cuộn theo audio
+ * như cũ. */
+function attachKaraokeBehavior(lineEls, lineTimestamps, audioEl, handlerKey, container) {
+  clearKaraokeHandler(handlerKey);
+  if (!Array.isArray(lineTimestamps) || lineTimestamps.length !== lineEls.length || !audioEl) return;
+
+  lineEls.forEach(function (el, i) {
+    el.addEventListener("click", function () {
+      try {
+        audioEl.currentTime = lineTimestamps[i];
+        const p = audioEl.play();
+        if (p && p.catch) p.catch(function () {});
+      } catch (e) { /* bỏ qua */ }
+    });
+  });
+
+  const scrollEl = findScrollParent(container);
+  const state = { follow: true, activeIdx: -1, isAutoScrolling: false, autoScrollTimer: null };
+
+  const jumpBtn = document.createElement("button");
+  jumpBtn.className = "karaoke-jump-btn hidden";
+  jumpBtn.innerHTML = "⬇ Về dòng đang nghe";
+  jumpBtn.addEventListener("click", function () {
+    state.follow = true;
+    jumpBtn.classList.add("hidden");
+    scrollActiveIntoView();
+  });
+  container.insertAdjacentElement("afterend", jumpBtn);
+
+  function scrollActiveIntoView() {
+    const el = lineEls[state.activeIdx];
+    if (!el) return;
+    // Đặt cờ TRƯỚC khi cuộn, và chỉ tắt cờ sau khi cuộn smooth chắc đã xong —
+    // để sự kiện "scroll" do CHÍNH lệnh cuộn này gây ra không bị hiểu lầm
+    // thành người dùng tự kéo (tránh vừa tự cuộn xong lại tự ngắt theo dõi).
+    state.isAutoScrolling = true;
+    el.scrollIntoView({ block: "center", behavior: "smooth" });
+    clearTimeout(state.autoScrollTimer);
+    state.autoScrollTimer = setTimeout(function () { state.isAutoScrolling = false; }, 700);
+  }
+
+  const onScroll = function () {
+    if (state.isAutoScrolling) return; // cuộn này là do app tự làm, bỏ qua
+    if (state.follow) {
+      state.follow = false;
+      jumpBtn.classList.remove("hidden");
+    }
+  };
+  scrollEl.addEventListener("scroll", onScroll);
+
+  const handlerFn = function () {
+    const t = audioEl.currentTime;
+    let activeIdx = -1;
+    for (let i = 0; i < lineTimestamps.length; i++) {
+      if (t >= lineTimestamps[i]) activeIdx = i; else break;
+    }
+    if (activeIdx !== state.activeIdx) {
+      state.activeIdx = activeIdx;
+      lineEls.forEach(function (el, i) { el.classList.toggle("is-current-line", i === activeIdx); });
+      if (state.follow) scrollActiveIntoView();
+    }
+  };
+  App.karaokeHandlers[handlerKey] = { audioEl: audioEl, fn: handlerFn, scrollEl: scrollEl, onScroll: onScroll, jumpBtn: jumpBtn };
+  audioEl.addEventListener("timeupdate", handlerFn);
+}
+
+function renderChoukaiReviewContent() {
+  const item = getChoukaiCurrentItem();
+  if (!item) return;
+  const q = item.q;
+  const box = document.getElementById("choukaiReviewContent");
+  if (App.choukaiReviewTab === "tip") {
+    clearKaraokeHandler("reviewScript");
+    clearKaraokeHandler("reviewVi");
+    box.textContent = q.tip || "(chưa có mẹo cho câu này)";
+    return;
+  }
+  // Script & Dịch: hiện theo từng dòng, có karaoke highlight + bấm dòng để phát
+  // lại audio đúng đoạn đó NẾU câu này có "lineTimestamps". Không có thì vẫn
+  // hiện đúng nội dung như cũ, chỉ là không bôi sáng/không bấm được — không lỗi.
+  const jpLines = (q.script || "").split("\n").filter(Boolean);
+  const viLines = (q.scriptVi || "").split("\n").filter(Boolean);
+  const lineTimestamps = Array.isArray(q.lineTimestamps) && q.lineTimestamps.length === jpLines.length
+    ? q.lineTimestamps
+    : null;
+  const audioEl = document.getElementById("choukaiAudioEl");
+  if (App.choukaiReviewTab === "script") {
+    clearKaraokeHandler("reviewVi"); // đang xem tab khác — dọn handler của tab Dịch
+    if (!jpLines.length) { box.textContent = "(không có script)"; return; }
+    renderKaraokeLines(box, jpLines, lineTimestamps, audioEl, "reviewScript");
+  } else {
+    clearKaraokeHandler("reviewScript"); // đang xem tab khác — dọn handler của tab Script
+    if (!viLines.length) { box.textContent = "(chưa có bản dịch)"; return; }
+    renderKaraokeLines(box, viLines, lineTimestamps, audioEl, "reviewVi");
+  }
+}
+
+function choukaiGoNext() {
+  if (App.choukaiPos < App.choukaiQueue.length - 1) {
+    App.choukaiPos++;
+    renderChoukaiQuestion();
+  } else {
+    finishChoukai();
+  }
+}
+
+function choukaiGoPrev() {
+  if (App.choukaiPos > 0) {
+    App.choukaiPos--;
+    renderChoukaiQuestion();
+  }
+}
+
+function exitChoukaiEarlyAndShowResult() {
+  finishChoukai();
+}
+
+function finishChoukai() {
+  const totalSeconds = App.choukaiStartTime ? Math.round((Date.now() - App.choukaiStartTime) / 1000) : 0;
+  recordChoukaiCompletion(App.currentChoukaiId, {
+    score: App.choukaiScore,
+    total: App.choukaiQueue.length,
+    seconds: totalSeconds,
+  });
+  saveChoukaiDetailSnapshot(App.currentChoukaiId, App.choukaiAnswers);
+
+  document.getElementById("choukaiBody").classList.add("hidden");
+  document.getElementById("choukaiResult").classList.remove("hidden");
+  document.getElementById("choukaiFinalScore").textContent =
+    App.choukaiScore + "/" + App.choukaiQueue.length + " câu đúng";
+
+  renderChoukaiMondaiBreakdown();
+  renderChoukaiResultGrid();
+}
+
+function renderChoukaiMondaiBreakdown() {
+  const test = getChoukaiTest(App.currentChoukaiId);
+  const box = document.getElementById("choukaiMondaiBreakdown");
+  const byMondai = {};
+  App.choukaiQueue.forEach(function (pos) {
+    const mondai = test.mondai[pos.mIndex];
+    const key = mondai.number;
+    if (!byMondai[key]) byMondai[key] = { correct: 0, total: 0 };
+    byMondai[key].total++;
+    const q = mondai.questions[pos.qIndex];
+    const k = choukaiKeyFor(mondai.number, q.qnum, pos.subIndex);
+    if (App.choukaiAnswers[k] && App.choukaiAnswers[k].correct) byMondai[key].correct++;
+  });
+  box.innerHTML = Object.keys(byMondai).sort().map(function (mNum) {
+    return '<div class="choukai-mondai-breakdown-item"><span class="num">' + byMondai[mNum].correct + '/' + byMondai[mNum].total + '</span>Mondai ' + mNum + '</div>';
+  }).join("");
+}
+
+function renderChoukaiResultGrid() {
+  const test = getChoukaiTest(App.currentChoukaiId);
+  const grid = document.getElementById("choukaiResultGrid");
+  grid.innerHTML = App.choukaiQueue.map(function (pos, flatIdx) {
+    const mondai = test.mondai[pos.mIndex];
+    const q = mondai.questions[pos.qIndex];
+    const key = choukaiKeyFor(mondai.number, q.qnum, pos.subIndex);
+    const ans = App.choukaiAnswers[key];
+    const stateClass = !ans ? "is-not-done" : (ans.correct ? "is-correct" : "is-wrong");
+    return '<button class="exam-result-dot ' + stateClass + '" data-flat="' + flatIdx + '">' + (flatIdx + 1) + '</button>';
+  }).join("");
+  grid.querySelectorAll(".exam-result-dot").forEach(function (dot) {
+    dot.addEventListener("click", function () { openChoukaiDetailModal(parseInt(dot.dataset.flat, 10)); });
+  });
+}
+
+// opts.testId/opts.queue/opts.answers (tùy chọn) cho phép mở từ tab Điểm yếu
+// (đề khác đề đang chạy trong session) — giống pattern openExamDetailModal.
+function openChoukaiDetailModal(flatIdx, opts) {
+  const testId = (opts && opts.testId) || App.currentChoukaiId;
+  const queue = (opts && opts.queue) || App.choukaiQueue;
+  const answers = (opts && opts.answers) || App.choukaiAnswers;
+  const test = getChoukaiTest(testId);
+  const pos = queue[flatIdx];
+  if (!test || !pos) return;
+  const mondai = test.mondai[pos.mIndex];
+  const q = mondai.questions[pos.qIndex];
+  const sub = pos.subIndex !== null ? q.subQuestions[pos.subIndex] : null;
+  const key = choukaiKeyFor(mondai.number, q.qnum, pos.subIndex);
+  const ans = answers[key];
+  const options = sub ? sub.options : q.options;
+  const correctIndex = sub ? sub.correctIndex : q.correctIndex;
+
+  document.getElementById("choukaiDetailModalTitle").textContent =
+    "Câu " + (flatIdx + 1) + " (Mondai " + mondai.number + ") — " + (!ans ? "Chưa làm" : (ans.correct ? "✓ Đúng" : "✕ Sai"));
+
+  const optsHtml = options.map(function (opt, idx) {
+    const isCorrect = idx === correctIndex;
+    const isChosen = ans && ans.chosenIndex === idx;
+    let cls = "exam-detail-opt";
+    if (isCorrect) cls += " is-correct";
+    else if (isChosen) cls += " is-wrong-chosen";
+    const tags = [];
+    if (isCorrect) tags.push('<span class="exam-detail-tag is-correct-tag">Đáp án đúng</span>');
+    if (isChosen) tags.push('<span class="exam-detail-tag is-chosen-tag">Bạn đã chọn</span>');
+    return '<div class="' + cls + '"><div class="exam-detail-opt-head"><span class="exam-detail-opt-text">' + opt + '</span>' + tags.join("") + '</div></div>';
+  }).join("");
+
+  document.getElementById("choukaiDetailModalBody").innerHTML =
+    '<div class="choukai-review-tabs">' +
+    '<button class="choukai-review-tab is-active" data-detailtab="script">Script</button>' +
+    '<button class="choukai-review-tab" data-detailtab="vi">Dịch</button>' +
+    '<button class="choukai-review-tab" data-detailtab="tip">💡 Mẹo nghe</button>' +
+    '</div>' +
+    '<div class="choukai-review-content" id="choukaiDetailReviewContent" style="margin-bottom:16px;">' + (q.script || "") + '</div>' +
+    '<div class="exam-detail-opts">' + optsHtml + '</div>';
+
+  document.querySelectorAll('[data-detailtab]').forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      document.querySelectorAll('[data-detailtab]').forEach(function (b) { b.classList.toggle("is-active", b === btn); });
+      const tab = btn.dataset.detailtab;
+      const content = tab === "script" ? q.script : (tab === "vi" ? q.scriptVi : q.tip);
+      document.getElementById("choukaiDetailReviewContent").textContent = content || "(chưa có dữ liệu)";
+    });
+  });
+
+  document.getElementById("choukaiDetailModalOverlay").classList.remove("hidden");
+}
+
+function closeChoukaiDetailModal() {
+  document.getElementById("choukaiDetailModalOverlay").classList.add("hidden");
+}
+
+// Xem lại kết quả lần làm gần nhất đã lưu — không cần làm lại đề.
+function viewSavedChoukaiResult(testId) {
+  document.getElementById("choukaiModeModalOverlay").classList.add("hidden");
+  const test = getChoukaiTest(testId);
+  const detailStats = loadChoukaiDetailHistoryStats();
+  const saved = detailStats[testId];
+  if (!test || !saved) return;
+
+  const mondaiVal = document.getElementById("choukaiMondaiPicker").value;
+  const mondaiFilter = mondaiVal === "all" ? "all" : parseInt(mondaiVal, 10);
+
+  App.currentChoukaiId = testId;
+  App.choukaiQueue = buildChoukaiQueue(test, mondaiFilter);
+  App.choukaiAnswers = saved.answers;
+  App.choukaiScore = Object.values(saved.answers).filter(function (a) { return a.correct; }).length;
+
+  document.getElementById("choukaiEmpty").classList.add("hidden");
+  document.getElementById("choukaiBody").classList.add("hidden");
+  document.getElementById("choukaiResult").classList.remove("hidden");
+  document.getElementById("choukaiFinalScore").textContent =
+    App.choukaiScore + "/" + App.choukaiQueue.length + " câu đúng (kết quả đã lưu, lần làm gần nhất)";
+  renderChoukaiMondaiBreakdown();
+  renderChoukaiResultGrid();
+}
+
+// Mở popup chi tiết câu nghe TỪ TAB ĐIỂM YẾU — itemId dạng "testId::m{M}q{Q}[s{S}]"
+function openChoukaiDetailFromWeakness(testId, key) {
+  const test = getChoukaiTest(testId);
+  if (!test) return;
+  const detailStats = loadChoukaiDetailHistoryStats();
+  const saved = detailStats[testId];
+  const answers = (App.currentChoukaiId === testId) ? App.choukaiAnswers : (saved ? saved.answers : {});
+  const queue = buildChoukaiQueue(test, "all");
+  const flatIdx = queue.findIndex(function (pos) {
+    const mondai = test.mondai[pos.mIndex];
+    const q = mondai.questions[pos.qIndex];
+    return choukaiKeyFor(mondai.number, q.qnum, pos.subIndex) === key;
+  });
+  if (flatIdx === -1) return;
+  openChoukaiDetailModal(flatIdx, { testId: testId, queue: queue, answers: answers });
+}
+
+/* ---------- CHOUKAI SHADOW MODE (luyện nghe câu, dịch mờ) ---------- */
+
+function populateChoukaiShadowPicker() {
+  const picker = document.getElementById("choukaiShadowPicker");
+  picker.innerHTML = '<option value="">— chọn đề nghe —</option>';
+  App.choukaiTests.forEach(function (t) {
+    const opt = document.createElement("option");
+    opt.value = t.id;
+    opt.textContent = t.title;
+    picker.appendChild(opt);
+  });
+}
+
+function renderChoukaiShadowPickerState() {
+  const picker = document.getElementById("choukaiShadowPicker");
+  if (picker.options.length <= 1) populateChoukaiShadowPicker();
+}
+
+function populateChoukaiShadowQuestionPicker(testId) {
+  const test = getChoukaiTest(testId);
+  const qPicker = document.getElementById("choukaiShadowQuestionPicker");
+  qPicker.innerHTML = "";
+  const queue = buildChoukaiQueue(test, "all");
+  queue.forEach(function (pos, flatIdx) {
+    const mondai = test.mondai[pos.mIndex];
+    const opt = document.createElement("option");
+    opt.value = String(flatIdx);
+    opt.textContent = "Mondai " + mondai.number + " — Câu " + (flatIdx + 1);
+    qPicker.appendChild(opt);
+  });
+  qPicker.classList.remove("hidden");
+}
+
+/* ---------- Helper chung: render script kiểu "karaoke" + bấm dòng để phát lại ----------
+   Dùng CHUNG cho cả "Luyện nghe câu" (shadow mode) và panel xem đáp án lúc làm đề
+   (choukaiReviewPanel) — tránh viết lặp code render dòng + gắn listener ở nhiều nơi.
+
+   - container: thẻ DOM sẽ chứa các dòng (1 dòng = 1 div.karaoke-line)
+   - lines: mảng string (mỗi dòng script HOẶC mỗi dòng dịch — gọi riêng cho từng loại)
+   - lineTimestamps: mảng số giây cùng độ dài với "lines", hoặc null nếu không có
+     dữ liệu mốc giờ — khi null, chỉ hiện chữ bình thường, không bôi sáng, không bấm
+     được (giữ nguyên hành vi cũ với các đề CHƯA có timestamp, không lỗi gì cả).
+   - audioEl: thẻ <audio> tương ứng để bấm dòng → nhảy tới đúng giây + play()
+   - handlerKey: khóa định danh DUY NHẤT cho audioEl + nơi gọi (vd "shadow",
+     "reviewScript", "reviewVi") để gỡ đúng listener "timeupdate" CŨ trước khi
+     gắn cái MỚI — tránh nhiều listener cộng dồn qua mỗi lần đổi câu/đổi tab. */
+function renderKaraokeLines(container, lines, lineTimestamps, audioEl, handlerKey) {
+  const hasTime = Array.isArray(lineTimestamps) && lineTimestamps.length === lines.length;
+  container.innerHTML = lines.map(function (line, i) {
+    const cls = "karaoke-line" + (hasTime ? " is-seekable" : "");
+    return '<div class="' + cls + '" data-idx="' + i + '">' + line + '</div>';
+  }).join("");
+
+  if (!hasTime) {
+    clearKaraokeHandler(handlerKey);
+    return;
+  }
+  const lineEls = Array.from(container.querySelectorAll(".karaoke-line"));
+  attachKaraokeBehavior(lineEls, lineTimestamps, audioEl, handlerKey, container);
+}
+
+function renderChoukaiShadowQuestion(testId, flatIdx) {
+  const test = getChoukaiTest(testId);
+  const queue = buildChoukaiQueue(test, "all");
+  const pos = queue[flatIdx];
+  const mondai = test.mondai[pos.mIndex];
+  const q = mondai.questions[pos.qIndex];
+
+  document.getElementById("choukaiShadowEmpty").classList.add("hidden");
+  document.getElementById("choukaiShadowBody").classList.remove("hidden");
+
+  const audioSrc = getChoukaiAudioSrc(test, mondai);
+  const audioEl = document.getElementById("choukaiShadowAudioEl");
+  if (audioSrc) audioEl.src = audioSrc;
+
+  // Tách script + dịch theo dòng (mỗi lượt nói = 1 dòng) để ghép cặp hiển thị.
+  const jpLines = (q.script || "").split("\n").filter(Boolean);
+  const viLines = (q.scriptVi || "").split("\n").filter(Boolean);
+  // "lineTimestamps" (tùy chọn, mảng số giây — TÍNH TỪ ĐẦU FILE AUDIO của cả
+  // Mondai, vì các câu trong 1 Mondai dùng chung 1 file): nếu file JSON CÓ mảng
+  // này (cùng số dòng với script), app tự bôi sáng kiểu karaoke đúng dòng đang
+  // phát, và cho bấm vào BẤT KỲ dòng nào (tiếng Nhật hoặc bản dịch) để nhảy audio
+  // tới đúng đoạn đó. Nếu KHÔNG có (file cũ/chưa làm timestamp), giữ nguyên hành
+  // vi cũ — chỉ hiện dòng + dịch, không bôi sáng, không bấm phát lại được.
+  const lineTimestamps = Array.isArray(q.lineTimestamps) && q.lineTimestamps.length === jpLines.length
+    ? q.lineTimestamps
+    : null;
+
+  // Có timestamp rồi thì không còn đúng nữa khi nói "không tách được theo từng
+  // dòng" — ẩn note cảnh báo cũ trong trường hợp này.
+  document.getElementById("choukaiShadowNote").classList.toggle("hidden", !!lineTimestamps);
+
+  // Bản dịch hiện trực tiếp luôn, KHÔNG làm mờ/cần bấm để hiện nữa (theo yêu cầu
+  // mới — trước đây có hiệu ứng blur, giờ bỏ để đọc song song dễ hơn).
+  const linesWrap = document.getElementById("choukaiShadowLines");
+  linesWrap.innerHTML = jpLines.map(function (jp, i) {
+    return '<div class="choukai-shadow-line" data-idx="' + i + '">' +
+      '<div class="choukai-shadow-line-jp">' + jp + '</div>' +
+      '<div class="choukai-shadow-line-vi">' + (viLines[i] || "") + '</div></div>';
+  }).join("");
+
+  // Gỡ listener karaoke CŨ trước khi gắn listener mới — tránh cộng dồn qua từng câu.
+  clearKaraokeHandler("shadow");
+
+  if (lineTimestamps) {
+    const lineEls = Array.from(linesWrap.querySelectorAll(".choukai-shadow-line"));
+    lineEls.forEach(function (el) { el.classList.add("is-seekable"); });
+    // Bấm vào dòng (CẢ tiếng Nhật và bản dịch) + bôi sáng + tự cuộn ra giữa màn
+    // hình theo audio — dùng chung hành vi với panel xem đáp án lúc làm đề.
+    attachKaraokeBehavior(lineEls, lineTimestamps, audioEl, "shadow", linesWrap);
+  }
+}
+
+// Bảng kết quả chi tiết từng câu — chỉ dùng cho chế độ "Chấm sửa cuối bài",
+// vì đó là lần DUY NHẤT người học biết đúng/sai của toàn bộ đề.
+// 2 mốc thời gian theo yêu cầu:
+// Mốc 1 = từ lúc bắt đầu đề tới khi đi hết LƯỢT ĐẦU (mỗi câu gốc đã được hỏi đúng 1 lần
+//         theo thứ tự, chưa tính làm lại câu sai) -> cho biết số câu đúng/sai ngay từ đầu.
+// Mốc 2 = từ lúc bắt đầu pha "sửa lại câu sai" cho tới khi mọi câu đều đã đúng (xong hẳn đề).
+function renderExamTimeSummary() {
+  const wrap = document.getElementById("examTimeSummary");
+  if (!App.examTotalStartTime || !App.examFirstPassEndTime) {
+    wrap.innerHTML = "";
+    return;
+  }
+
+  const firstPassSec = (App.examFirstPassEndTime - App.examTotalStartTime) / 1000;
+  const firstPassCorrect = Object.values(App.examHistory).filter((h) => h.firstTryCorrect === true).length;
+  const firstPassWrong = Object.values(App.examHistory).filter((h) => h.firstTryCorrect === false).length;
+
+  let retrySecLabel = "—";
+  if (App.examRetryStartTime) {
+    const retrySec = (Date.now() - App.examRetryStartTime) / 1000;
+    retrySecLabel = fmtTime(retrySec);
+  } else {
+    retrySecLabel = "0 giây (không có câu sai)";
+  }
+
+  wrap.innerHTML = `
+    <div class="exam-time-summary-block">
+      <div class="exam-time-summary-title">Mốc 1 — Lượt đầu (${App.examOriginalTotal} câu theo thứ tự gốc)</div>
+      <div class="exam-time-stats-row">
+        <div class="exam-speed-stat"><div class="exam-speed-stat-num">${fmtTime(firstPassSec)}</div><div class="exam-speed-stat-label">thời gian</div></div>
+        <div class="exam-speed-stat"><div class="exam-speed-stat-num" style="color:var(--good)">${firstPassCorrect}</div><div class="exam-speed-stat-label">đúng ngay lần 1</div></div>
+        <div class="exam-speed-stat ${firstPassWrong > 0 ? "is-warning" : ""}"><div class="exam-speed-stat-num">${firstPassWrong}</div><div class="exam-speed-stat-label">sai lần 1</div></div>
+      </div>
+    </div>
+    <div class="exam-time-summary-block">
+      <div class="exam-time-summary-title">Mốc 2 — Sửa lại câu sai</div>
+      <div class="exam-time-stats-row">
+        <div class="exam-speed-stat"><div class="exam-speed-stat-num">${retrySecLabel}</div><div class="exam-speed-stat-label">thời gian sửa lại</div></div>
+      </div>
+    </div>
+  `;
+}
+
+function renderExamSpeedSummary() {
+  const summaryDiv = document.getElementById("examSpeedSummary");
+  if (!App.examSpeedMode || App.examQuestionTimeLog.length === 0) {
+    summaryDiv.classList.add("hidden");
+    summaryDiv.innerHTML = "";
+    return;
+  }
+
+  const totalSec = App.examQuestionTimeLog.reduce((sum, e) => sum + e.seconds, 0);
+  const avgSec = totalSec / App.examQuestionTimeLog.length;
+  const overTimeCount = App.examQuestionTimeLog.filter((e) => e.overTime).length;
+
+  summaryDiv.classList.remove("hidden");
+  summaryDiv.innerHTML = `
+    <div class="exam-speed-summary-title">⚡ Kết quả luyện tốc độ (mọi lượt trả lời, kể cả làm lại)</div>
+    <div class="exam-speed-stats-row">
+      <div class="exam-speed-stat"><div class="exam-speed-stat-num">${fmtTime(totalSec)}</div><div class="exam-speed-stat-label">tổng thời gian trả lời</div></div>
+      <div class="exam-speed-stat"><div class="exam-speed-stat-num">${avgSec.toFixed(1)}s</div><div class="exam-speed-stat-label">trung bình/lượt</div></div>
+      <div class="exam-speed-stat ${overTimeCount > 0 ? "is-warning" : ""}"><div class="exam-speed-stat-num">${overTimeCount}</div><div class="exam-speed-stat-label">lượt quá 30s</div></div>
+    </div>
+  `;
+}
+
+// Liệt kê chi tiết câu nào sai ở lần 1, câu nào sai nhiều lần — theo đúng yêu cầu
+// "câu nào sai ở lần 1 và câu nào sai nhiều lần cho biết luôn".
+// (Đã thay bằng renderExamResultGrid() — xem định nghĩa gần finishExam())
+
+function restartCurrentExam() {
+  if (App.currentExamId) openExamModeModal(App.currentExamId);
+}
+
+/* ===================================================================
+   INIT — gắn toàn bộ event listener và khởi động app khi load trang
+=================================================================== */
+
+// Tự dừng audio luyện nghe khi người dùng chuyển sang TAB TRÌNH DUYỆT khác
+// (không chỉ chuyển chức năng trong app) — đúng yêu cầu "tự tắt nếu không còn
+// ở tab luyện nghe".
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    const el = document.getElementById("choukaiAudioEl");
+    if (el && !el.paused) el.pause();
+    const elShadow = document.getElementById("choukaiShadowAudioEl");
+    if (elShadow && !elShadow.paused) elShadow.pause();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", async () => {
+  loadFieldConfig();
+  loadEditPatches();
+  loadStarredItems();
+  loadShuffleConfig();
+  ensureVoicesLoaded();
+
+  App.decks = await loadDecks();
+  App.exams = await loadExams();
+  App.choukaiTests = await loadChoukaiTests();
+
+  if (App.decks.length === 0) {
+    document.getElementById("deckName").textContent = "Không tải được bộ học nào";
+    return;
+  }
+
+  populateDeckPicker();
+  populateExamPicker();
+
+  // ----- Focus mode (phóng to toàn màn hình) -----
+  document.querySelectorAll(".focus-toggle-btn").forEach((btn) => {
+    btn.addEventListener("click", enterFocusMode);
+  });
+  document.getElementById("btnExitFocus").addEventListener("click", exitFocusMode);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && document.getElementById("app").classList.contains("focus-mode")) {
+      exitFocusMode();
+    }
+  });
+  // Trình duyệt có thể tự thoát fullscreen (Esc, F11, vuốt xuống trên Mac...)
+  // mà KHÔNG đi qua nút X của app — lắng nghe sự kiện này để ẩn lại sidebar-hidden
+  // CSS đúng lúc, tránh app bị kẹt ở trạng thái "tưởng đang focus nhưng đã thoát
+  // fullscreen thật rồi".
+  ["fullscreenchange", "webkitfullscreenchange", "msfullscreenchange"].forEach((evt) => {
+    document.addEventListener(evt, () => {
+      const stillFullscreen = document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
+      if (!stillFullscreen && document.getElementById("app").classList.contains("focus-mode")) {
+        exitFocusMode();
+      }
+    });
+  });
+
+  // ----- Sidebar dạng drawer trên mobile (≤860px) -----
+  function openMobileSidebar() {
+    document.querySelector(".sidebar").classList.add("is-open");
+    document.getElementById("sidebarBackdrop").classList.add("is-visible");
+  }
+  function closeMobileSidebar() {
+    document.querySelector(".sidebar").classList.remove("is-open");
+    document.getElementById("sidebarBackdrop").classList.remove("is-visible");
+  }
+  document.getElementById("btnMobileMenu").addEventListener("click", openMobileSidebar);
+
+  // "Unlock" speechSynthesis trên iOS: phải gọi speak() ít nhất 1 lần ngay trong
+  // user-gesture đầu tiên (bất kỳ tap nào trên trang), nếu không các lệnh speak()
+  // gọi sau đó (kể cả trong gesture khác) có thể bị im lặng không phát ra tiếng.
+  // Dùng utterance với volume=0 để không phát tiếng thật, chỉ "mở khóa" engine.
+  let speechUnlocked = false;
+  function unlockSpeechOnce() {
+    if (speechUnlocked || !("speechSynthesis" in window)) return;
+    speechUnlocked = true;
+    try {
+      const unlockUtter = new SpeechSynthesisUtterance(" ");
+      unlockUtter.volume = 0;
+      window.speechSynthesis.speak(unlockUtter);
+    } catch (e) { /* ignore */ }
+    document.removeEventListener("touchstart", unlockSpeechOnce);
+    document.removeEventListener("click", unlockSpeechOnce);
+  }
+  document.addEventListener("touchstart", unlockSpeechOnce, { once: true });
+  document.addEventListener("click", unlockSpeechOnce, { once: true });
+  document.getElementById("sidebarBackdrop").addEventListener("click", closeMobileSidebar);
+  // Tự đóng sidebar sau khi chọn 1 mục trong nav, để vào ngay nội dung học (chỉ có
+  // tác dụng trên mobile vì trên desktop sidebar luôn cố định hiện, không có class is-open)
+  document.getElementById("navList").addEventListener("click", (e) => {
+    if (e.target.closest(".nav-item")) closeMobileSidebar();
+  });
+
+  // ----- Flashcard mode -----
+  document.getElementById("flashCard").addEventListener("click", () => {
+    flipFlashCard();
+  });
+  document.getElementById("btnFlip").addEventListener("click", (e) => {
+    e.stopPropagation();
+    flipFlashCard();
+  });
+  document.querySelectorAll("#flashRateRow [data-flash-result]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      flashMarkResult(btn.dataset.flashResult);
+    });
+  });
+  document.getElementById("btnFieldConfig").addEventListener("click", () => {
+    document.getElementById("fieldConfigPanel").classList.toggle("hidden");
+  });
+  document.getElementById("btnEditCurrentFlash").addEventListener("click", (e) => {
+    e.stopPropagation();
+    const w = getCurrentFlashWord();
+    if (w) openEditModal(w._id);
+  });
+  document.querySelectorAll(".flash-star-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const w = getCurrentFlashWord();
+      if (!w) return;
+      toggleStar(App.currentDeckId, w._id);
+      renderFlashStarButtons(w);
+      renderTable();
+    });
+  });
+  document.getElementById("btnFlashRestartFull").addEventListener("click", flashRestartFull);
+  document.getElementById("btnFlashRestartStarredOnly").addEventListener("click", flashRestartStarredOnly);
+
+  document.getElementById("btnFlashStarOnly").addEventListener("click", () => {
+    const isCurrentlyStarOnly = document.getElementById("btnFlashStarOnly").classList.contains("is-active");
+
+    if (isCurrentlyStarOnly) {
+      // Đang ở chế độ chỉ học ★ -> bấm lại để TẮT, quay về học toàn bộ bộ
+      setFlashStarOnlyState(false);
+      initFlashMode(null);
+      return;
+    }
+
+    const starredIds = getStarredIdsForDeck(App.currentDeckId);
+    if (!starredIds.length) {
+      alert("Chưa có từ nào được đánh dấu ★ trong bộ này. Bấm ☆ trên góc thẻ để đánh dấu.");
+      return;
+    }
+    setFlashStarOnlyState(true);
+    initFlashMode(starredIds);
+  });
+  document.getElementById("btnSrsStarOnly").addEventListener("click", () => {
+    const isCurrentlyStarOnly = document.getElementById("btnSrsStarOnly").classList.contains("is-active");
+
+    if (isCurrentlyStarOnly) {
+      // Đang ở chế độ chỉ ôn ★ -> bấm lại để TẮT, quay về ôn toàn bộ bộ
+      setSrsStarOnlyState(false);
+      initSrsMode(null);
+      return;
+    }
+
+    const starredIds = getStarredIdsForDeck(App.currentDeckId);
+    if (!starredIds.length) {
+      alert("Chưa có từ nào được đánh dấu ★ trong bộ này.");
+      return;
+    }
+    setSrsStarOnlyState(true);
+    initSrsMode(starredIds);
+  });
+
+  // Phím tắt ← ↑ ↓ → dùng chung cho Flashcard và SRS (Ôn tập):
+  // Flashcard: ← Chưa nhớ, ↑ Khó, ↓ Lật thẻ, → Đã nhớ
+  // SRS:       ← Quên,    ↑ Khó, ↓ Lật thẻ, → Dễ
+  document.addEventListener("keydown", (e) => {
+    const isEditModalOpen = !document.getElementById("editModalOverlay").classList.contains("hidden");
+    if (isEditModalOpen) return;
+    const tag = document.activeElement.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA") return;
+
+    const flashView = document.getElementById("view-flash");
+    const isFlashVisible = flashView && !flashView.classList.contains("hidden");
+    const learnAreaVisible = !document.getElementById("flashLearnArea").classList.contains("hidden");
+
+    const srsView = document.getElementById("view-srs");
+    const isSrsVisible = srsView && !srsView.classList.contains("hidden");
+    const srsStageVisible = !document.getElementById("srsStage").classList.contains("hidden");
+
+    if (isFlashVisible && learnAreaVisible) {
+      if (e.key === "ArrowLeft") { e.preventDefault(); flashMarkResult("not_remembered"); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); flashMarkResult("hard"); }
+      else if (e.key === "ArrowDown") { e.preventDefault(); flipFlashCard(); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); flashMarkResult("remembered"); }
+    } else if (isSrsVisible && srsStageVisible) {
+      if (e.key === "ArrowLeft") { e.preventDefault(); rateCurrentSrsWord("again"); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); rateCurrentSrsWord("hard"); }
+      else if (e.key === "ArrowDown") { e.preventDefault(); flipSrsCard(); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); rateCurrentSrsWord("easy"); }
+    }
+  });
+
+  // ----- Edit modal (dùng chung cho flashcard + bảng) -----
+  document.getElementById("btnEditModalClose").addEventListener("click", closeEditModal);
+  document.getElementById("btnEditCancel").addEventListener("click", closeEditModal);
+  document.getElementById("btnEditSave").addEventListener("click", saveEditModal);
+  document.getElementById("editModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "editModalOverlay") closeEditModal();
+  });
+
+  // ----- Weakness mode -----
+  document.getElementById("btnReviewWeakness").addEventListener("click", startWeaknessReview);
+  document.getElementById("btnWeaknessTabDeck").addEventListener("click", () => {
+    App.weaknessTab = "deck";
+    renderWeaknessMode();
+  });
+  document.getElementById("btnWeaknessTabExam").addEventListener("click", () => {
+    App.weaknessTab = "exam";
+    renderWeaknessMode();
+  });
+  document.getElementById("btnWeaknessTabChoukai").addEventListener("click", () => {
+    App.weaknessTab = "choukai";
+    renderWeaknessMode();
+  });
+
+  // ----- Sound toggle -----
+  const soundBtn = document.getElementById("btnToggleSound");
+  function refreshSoundBtnUI() {
+    soundBtn.textContent = App.soundEnabled ? "🔊" : "🔇";
+    soundBtn.classList.toggle("is-muted", !App.soundEnabled);
+  }
+  refreshSoundBtnUI();
+  soundBtn.addEventListener("click", () => {
+    App.soundEnabled = !App.soundEnabled;
+    saveSoundConfig();
+    refreshSoundBtnUI();
+    if (App.soundEnabled) playCorrectSound();
+  });
+
+  // ----- Speech (phát âm) toggle -----
+  const speechBtn = document.getElementById("btnToggleSpeech");
+  function refreshSpeechBtnUI() {
+    speechBtn.classList.toggle("is-muted", !App.speechEnabled);
+  }
+  refreshSpeechBtnUI();
+  speechBtn.addEventListener("click", () => {
+    App.speechEnabled = !App.speechEnabled;
+    saveSpeechConfig();
+    refreshSpeechBtnUI();
+    if (App.speechEnabled) speakJapanese("発音オン");
+  });
+
+  // ----- Table mode -----
+  document.getElementById("tableSearch").addEventListener("input", renderTable);
+  document.getElementById("tableFilter").addEventListener("change", renderTable);
+  document.getElementById("btnColConfig").addEventListener("click", () => {
+    document.getElementById("colConfigPanel").classList.toggle("hidden");
+  });
+
+  // ----- SRS mode -----
+  document.getElementById("srsCard").addEventListener("click", () => {
+    flipSrsCard();
+  });
+  document.getElementById("btnSrsFlip").addEventListener("click", (e) => {
+    e.stopPropagation();
+    flipSrsCard();
+  });
+  document.querySelectorAll("#srsRateRow [data-srs-rate], #btnSrsMastered").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      rateCurrentSrsWord(btn.dataset.srsRate);
+    });
+  });
+
+  // ----- Toggle "Học ngẫu nhiên" (dùng chung pattern cho Flashcard + SRS) -----
+  document.getElementById("flashShuffleToggle").checked = App.shuffleEnabled.flash;
+  document.getElementById("srsShuffleToggle").checked = App.shuffleEnabled.srs;
+
+  document.getElementById("flashShuffleToggle").addEventListener("change", (e) => {
+    App.shuffleEnabled.flash = e.target.checked;
+    saveShuffleConfig();
+    // Áp dụng ngay: nếu đang học flashcard, xáo trộn phần còn lại của queue
+    // (hoặc sắp lại theo thứ tự gốc) mà không reset tiến độ (flashRememberedCount giữ nguyên).
+    if (App.flashQueue.length > 0) {
+      if (App.shuffleEnabled.flash) {
+        App.flashQueue = shuffle(App.flashQueue);
+      } else {
+        // Sắp xếp lại theo thứ tự gốc của currentWords, chỉ giữ các _id còn trong queue
+        const queueSet = new Set(App.flashQueue);
+        App.flashQueue = App.currentWords
+          .map((w) => w._id)
+          .filter((id) => queueSet.has(id));
+      }
+      renderFlashCard();
+    }
+  });
+  document.getElementById("srsShuffleToggle").addEventListener("change", (e) => {
+    App.shuffleEnabled.srs = e.target.checked;
+    saveShuffleConfig();
+    // Áp dụng ngay: xáo trộn phần còn lại của srsQueue từ vị trí hiện tại trở đi
+    if (App.srsQueue.length > App.srsIndex + 1) {
+      const done = App.srsQueue.slice(0, App.srsIndex + 1);
+      const remaining = App.srsQueue.slice(App.srsIndex + 1);
+      App.srsQueue = done.concat(App.shuffleEnabled.srs ? shuffle(remaining) : remaining.sort((a, b) => {
+        const ia = App.currentWords.findIndex(w => w._id === a._id);
+        const ib = App.currentWords.findIndex(w => w._id === b._id);
+        return ia - ib;
+      }));
+    }
+  });
+
+  // ----- Typing mode -----
+  document.getElementById("typingFreeInput").addEventListener("keydown", typingHandleKeydown);
+  document.getElementById("btnTypingCheck").addEventListener("click", typingCheckAnswer);
+  document.getElementById("btnTypingHint").addEventListener("click", typingShowHint);
+  document.getElementById("btnTypingShowAnswer").addEventListener("click", typingShowAnswer);
+
+  // ----- Quiz mode -----
+  document.getElementById("btnQuizRestart").addEventListener("click", initQuizMode);
+  document.getElementById("quizDirectionPicker").addEventListener("change", (e) => {
+    App.quizDirection = e.target.value;
+    initQuizMode();
+  });
+
+  // ----- Match mode -----
+  document.getElementById("btnMatchRestart").addEventListener("click", initMatchMode);
+
+  // ----- Exam mode -----
+  document.getElementById("examPicker").addEventListener("change", (e) => {
+    if (e.target.value) openExamModeModal(e.target.value);
+  });
+  document.getElementById("btnExamModeInstant").addEventListener("click", () => {
+    confirmExamMode("instant");
+  });
+  document.getElementById("btnExamViewSavedResult").addEventListener("click", () => {
+    if (App.examPendingExamId) {
+      viewSavedExamResult(App.examPendingExamId);
+      App.examPendingExamId = null;
+    }
+  });
+  document.getElementById("btnExamModeReview").addEventListener("click", () => {
+    confirmExamMode("review");
+  });
+  document.getElementById("btnExamRestart").addEventListener("click", restartCurrentExam);
+  document.getElementById("btnExamDetailModalClose").addEventListener("click", closeExamDetailModal);
+  document.getElementById("examDetailModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "examDetailModalOverlay") closeExamDetailModal();
+  });
+  document.getElementById("examSpeedMode").addEventListener("change", (e) => {
+    toggleExamSpeedMode(e.target.checked);
+  });
+  document.getElementById("btnExamPrev").addEventListener("click", examGoPrev);
+  document.getElementById("btnExamNext").addEventListener("click", examGoNext);
+  document.getElementById("btnExamExitEarly").addEventListener("click", () => {
+    if (confirm("Dừng làm các câu sai còn lại và xem kết quả ngay với những gì đã làm?")) {
+      exitExamEarlyAndShowResult();
+    }
+  });
+  document.getElementById("btnExamShowExplain").addEventListener("click", toggleExamExplain);
+  document.getElementById("btnExamContinue").addEventListener("click", examContinueAfterInstantAnswer);
+
+  // ----- CHOUKAI mode listeners -----
+  document.getElementById("choukaiPicker").addEventListener("change", (e) => {
+    if (e.target.value) openChoukaiModeModal(e.target.value);
+  });
+  // Cho phép đổi Mondai NGAY GIỮA LÚC đang làm bài (không chỉ chọn trước khi bắt
+  // đầu) — đổi dropdown này khi đã đang trong session sẽ nhảy thẳng tới Mondai đó,
+  // không mất tiến độ các câu đã làm (đáp án vẫn lưu theo key riêng từng câu).
+  document.getElementById("choukaiMondaiPicker").addEventListener("change", (e) => {
+    const sessionActive = App.currentChoukaiId && !document.getElementById("choukaiBody").classList.contains("hidden");
+    if (!sessionActive) return; // đang ở modal chọn trước khi bắt đầu — để confirmChoukaiMode() đọc giá trị, không xử lý ở đây
+    const val = e.target.value;
+    App.choukaiMondaiFilter = val === "all" ? "all" : parseInt(val, 10);
+    const test = getChoukaiTest(App.currentChoukaiId);
+    App.choukaiQueue = buildChoukaiQueue(test, App.choukaiMondaiFilter);
+    App.choukaiPos = 0;
+    renderChoukaiQuestion();
+  });
+  document.getElementById("btnChoukaiModeInstant").addEventListener("click", () => confirmChoukaiMode("instant"));
+  document.getElementById("btnChoukaiModeReview").addEventListener("click", () => confirmChoukaiMode("review"));
+  document.getElementById("btnChoukaiViewSavedResult").addEventListener("click", () => {
+    if (App.choukaiPendingTestId) {
+      viewSavedChoukaiResult(App.choukaiPendingTestId);
+      App.choukaiPendingTestId = null;
+    }
+  });
+  document.getElementById("btnChoukaiPrev").addEventListener("click", choukaiGoPrev);
+  document.getElementById("btnChoukaiNext").addEventListener("click", choukaiGoNext);
+  document.getElementById("btnChoukaiExitEarly").addEventListener("click", () => {
+    if (confirm("Dừng làm các câu còn lại và xem kết quả ngay với những gì đã làm?")) {
+      exitChoukaiEarlyAndShowResult();
+    }
+  });
+  document.getElementById("btnChoukaiContinue").addEventListener("click", choukaiGoNext);
+  document.getElementById("btnChoukaiPlay").addEventListener("click", () => {
+    const el = document.getElementById("choukaiAudioEl");
+    if (el.src) { el.currentTime = 0; el.play().catch(() => {}); }
+  });
+  document.getElementById("choukaiHintToggle").addEventListener("change", (e) => {
+    App.choukaiHintEnabled = e.target.checked;
+    renderChoukaiQuestion();
+  });
+  document.querySelectorAll(".choukai-review-tab").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".choukai-review-tab").forEach((b) => b.classList.toggle("is-active", b === btn));
+      App.choukaiReviewTab = btn.dataset.tab;
+      renderChoukaiReviewContent();
+    });
+  });
+  document.getElementById("btnChoukaiRestart").addEventListener("click", () => {
+    document.getElementById("choukaiResult").classList.add("hidden");
+    openChoukaiModeModal(App.currentChoukaiId);
+  });
+  document.getElementById("btnChoukaiDetailModalClose").addEventListener("click", closeChoukaiDetailModal);
+  document.getElementById("choukaiDetailModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "choukaiDetailModalOverlay") closeChoukaiDetailModal();
+  });
+
+  // ----- CHOUKAI SHADOW mode listeners -----
+  document.getElementById("choukaiShadowPicker").addEventListener("change", (e) => {
+    const testId = e.target.value;
+    if (!testId) {
+      document.getElementById("choukaiShadowQuestionPicker").classList.add("hidden");
+      document.getElementById("choukaiShadowBody").classList.add("hidden");
+      document.getElementById("choukaiShadowEmpty").classList.remove("hidden");
+      return;
+    }
+    populateChoukaiShadowQuestionPicker(testId);
+    renderChoukaiShadowQuestion(testId, 0);
+  });
+  document.getElementById("choukaiShadowQuestionPicker").addEventListener("change", (e) => {
+    const testId = document.getElementById("choukaiShadowPicker").value;
+    if (testId && e.target.value !== "") renderChoukaiShadowQuestion(testId, parseInt(e.target.value, 10));
+  });
+  document.getElementById("btnChoukaiShadowPlay").addEventListener("click", () => {
+    const el = document.getElementById("choukaiShadowAudioEl");
+    if (el.src) { el.currentTime = 0; el.play().catch(() => {}); }
+  });
+
+  // ----- Deck picker -----
+  document.getElementById("deckPicker").addEventListener("change", (e) => {
+    switchDeck(e.target.value);
+    closeMobileSidebar();
+  });
+
+  // ----- Export / Import progress (toàn bộ lịch sử học + cấu hình + sửa tạm) -----
+  document.getElementById("btnExport").addEventListener("click", () => {
+    const exportPayload = {
+      exportedAt: new Date().toISOString(),
+      version: 6,
+      srsProgress: SRS.exportAll(),
+      fieldConfig: App.fieldConfig,
+      visibleCols: App.visibleCols,
+      peekCols: App.peekCols,
+      editPatches: App.editPatches,
+      starredItems: App.starredItems,
+      weaknessStats: loadWeaknessStats(),
+      examHistory: loadExamHistoryStats(),
+      examDetailHistory: loadExamDetailHistoryStats(),
+      choukaiHistory: loadChoukaiHistoryStats(),
+      choukaiDetailHistory: loadChoukaiDetailHistoryStats(),
+      shuffleEnabled: App.shuffleEnabled,
+      soundEnabled: App.soundEnabled,
+      speechEnabled: App.speechEnabled,
+    };
+    const blob = new Blob([JSON.stringify(exportPayload, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `n2vocab-progress-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+  document.getElementById("btnImport").addEventListener("change", (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const data = JSON.parse(reader.result);
+
+        // Hỗ trợ cả file export cũ (chỉ có srsProgress trực tiếp, không có wrapper)
+        const srsData = data.srsProgress || data;
+        SRS.importAll(srsData);
+
+        if (data.fieldConfig) {
+          Object.assign(App.fieldConfig, data.fieldConfig);
+          saveFieldConfig();
+        }
+        if (data.visibleCols) {
+          Object.assign(App.visibleCols, data.visibleCols);
+          saveColConfig();
+        }
+        if (data.peekCols) {
+          Object.assign(App.peekCols, data.peekCols);
+          savePeekConfig();
+        }
+        if (data.editPatches) {
+          // Gộp patch nhập vào với patch hiện có (patch nhập đè lên nếu trùng key)
+          Object.keys(data.editPatches).forEach((deckId) => {
+            App.editPatches[deckId] = { ...App.editPatches[deckId], ...data.editPatches[deckId] };
+          });
+          saveEditPatches();
+          // Áp lại patch lên toàn bộ deck đang có trong session
+          App.decks.forEach((deck) => {
+            deck.words = applyPatchesToWords(deck.id, deck.words);
+          });
+          const curDeck = App.decks.find((d) => d.id === App.currentDeckId);
+          if (curDeck) App.currentWords = curDeck.words;
+        }
+        if (data.starredItems) {
+          // Gộp danh sách ★ đã đánh dấu (không trùng lặp) theo từng bộ
+          Object.keys(data.starredItems).forEach((deckId) => {
+            const merged = new Set([...(App.starredItems[deckId] || []), ...data.starredItems[deckId]]);
+            App.starredItems[deckId] = Array.from(merged);
+          });
+          saveStarredItems();
+        }
+        if (data.weaknessStats) {
+          // Gộp số liệu đúng/sai (CỘNG DỒN, không đè) — vì đây là số liệu tích lũy theo
+          // thời gian, đè thẳng sẽ làm mất lịch sử đã có sẵn trên máy hiện tại.
+          const currentStats = loadWeaknessStats();
+          Object.keys(data.weaknessStats).forEach((deckId) => {
+            if (!currentStats[deckId]) currentStats[deckId] = {};
+            Object.keys(data.weaknessStats[deckId]).forEach((itemId) => {
+              const incoming = data.weaknessStats[deckId][itemId];
+              const existing = currentStats[deckId][itemId];
+              if (!existing) {
+                currentStats[deckId][itemId] = { ...incoming };
+              } else {
+                existing.correctCount += incoming.correctCount || 0;
+                existing.wrongCount += incoming.wrongCount || 0;
+                if (incoming.lastResultAt > existing.lastResultAt) {
+                  existing.lastLabel = incoming.lastLabel || existing.lastLabel;
+                  existing.lastResultAt = incoming.lastResultAt;
+                }
+              }
+            });
+          });
+          saveWeaknessStats(currentStats);
+        }
+        if (data.examHistory) {
+          // totalCompletions CỘNG DỒN (giống weaknessStats — đếm tích lũy, mỗi máy
+          // có thể đã làm thêm số lần riêng, không máy nào "đúng hơn" máy nào).
+          // Các field "lần gần nhất" lấy theo bản có lastCompletedAt LỚN HƠN (mới hơn),
+          // vì đây là trạng thái snapshot của 1 lần làm cụ thể, không phải số đếm.
+          const currentExamStats = loadExamHistoryStats();
+          Object.keys(data.examHistory).forEach((examId) => {
+            const incoming = data.examHistory[examId];
+            const existing = currentExamStats[examId];
+            if (!existing) {
+              currentExamStats[examId] = { ...incoming };
+            } else {
+              existing.totalCompletions = (existing.totalCompletions || 0) + (incoming.totalCompletions || 0);
+              if ((incoming.lastCompletedAt || 0) > (existing.lastCompletedAt || 0)) {
+                existing.lastScore = incoming.lastScore;
+                existing.lastTotal = incoming.lastTotal;
+                existing.lastSeconds = incoming.lastSeconds;
+                existing.lastFirstTryWrongCount = incoming.lastFirstTryWrongCount;
+                existing.lastCompletedAt = incoming.lastCompletedAt;
+              }
+            }
+          });
+          saveExamHistoryStats(currentExamStats);
+        }
+        if (data.examDetailHistory) {
+          // Đây là dữ liệu CHI TIẾT từng câu (lưới đúng/sai + giải thích) — khác
+          // examHistory ở trên (chỉ có điểm số tổng). Lấy theo savedAt MỚI HƠN
+          // (vì đây là ảnh chụp 1 lần làm cụ thể, không phải bộ đếm tích lũy).
+          const currentDetailStats = loadExamDetailHistoryStats();
+          Object.keys(data.examDetailHistory).forEach((examId) => {
+            const incoming = data.examDetailHistory[examId];
+            const existing = currentDetailStats[examId];
+            if (!existing || (incoming.savedAt || 0) > (existing.savedAt || 0)) {
+              currentDetailStats[examId] = incoming;
+            }
+          });
+          saveExamDetailHistoryStats(currentDetailStats);
+        }
+        if (data.choukaiHistory) {
+          const currentChoukaiStats = loadChoukaiHistoryStats();
+          Object.keys(data.choukaiHistory).forEach((testId) => {
+            const incoming = data.choukaiHistory[testId];
+            const existing = currentChoukaiStats[testId];
+            if (!existing) {
+              currentChoukaiStats[testId] = { ...incoming };
+            } else {
+              existing.totalCompletions = (existing.totalCompletions || 0) + (incoming.totalCompletions || 0);
+              if ((incoming.lastCompletedAt || 0) > (existing.lastCompletedAt || 0)) {
+                existing.lastScore = incoming.lastScore;
+                existing.lastTotal = incoming.lastTotal;
+                existing.lastSeconds = incoming.lastSeconds;
+                existing.lastCompletedAt = incoming.lastCompletedAt;
+              }
+            }
+          });
+          saveChoukaiHistoryStats(currentChoukaiStats);
+        }
+        if (data.choukaiDetailHistory) {
+          const currentChoukaiDetailStats = loadChoukaiDetailHistoryStats();
+          Object.keys(data.choukaiDetailHistory).forEach((testId) => {
+            const incoming = data.choukaiDetailHistory[testId];
+            const existing = currentChoukaiDetailStats[testId];
+            if (!existing || (incoming.savedAt || 0) > (existing.savedAt || 0)) {
+              currentChoukaiDetailStats[testId] = incoming;
+            }
+          });
+          saveChoukaiDetailHistoryStats(currentChoukaiDetailStats);
+        }
+        if (data.shuffleEnabled) {
+          Object.assign(App.shuffleEnabled, data.shuffleEnabled);
+          saveShuffleConfig();
+          document.getElementById("flashShuffleToggle").checked = App.shuffleEnabled.flash;
+          document.getElementById("srsShuffleToggle").checked = App.shuffleEnabled.srs;
+        }
+        if (data.soundEnabled !== undefined) {
+          App.soundEnabled = data.soundEnabled;
+          saveSoundConfig();
+        }
+        if (data.speechEnabled !== undefined) {
+          App.speechEnabled = data.speechEnabled;
+          saveSpeechConfig();
+        }
+
+        App.progress = SRS.loadProgress(App.currentDeckId);
+        buildColConfigPanel();
+        buildFieldConfigPanel();
+        renderTable();
+        initSrsMode();
+        renderFlashCard();
+        alert("Đã nhập tiến độ, cấu hình và các sửa tạm thành công.");
+      } catch (err) {
+        alert("File không hợp lệ.");
+      }
+    };
+    reader.readAsText(file);
+  });
+
+  document.getElementById("btnClearPatches").addEventListener("click", () => {
+    const confirmed = confirm(
+      "Xóa toàn bộ các sửa tạm đã lưu trên máy này? Hành động này không ảnh hưởng tiến độ học (SRS), chỉ xóa các chỉnh sửa từ vựng/ngữ pháp bạn đã sửa qua nút ✎ Sửa."
+    );
+    if (!confirmed) return;
+    clearAllEditPatches();
+    // Tải lại deck từ file gốc (không còn patch) để phản ánh ngay
+    loadDecks().then((decks) => {
+      App.decks = decks;
+      const stillExists = decks.find((d) => d.id === App.currentDeckId);
+      switchDeck(stillExists ? App.currentDeckId : decks[0].id);
+      alert("Đã xóa toàn bộ các sửa tạm.");
+    });
+  });
+
+  // ----- Bắt đầu với bộ đầu tiên -----
+  switchDeck(App.decks[0].id);
+});

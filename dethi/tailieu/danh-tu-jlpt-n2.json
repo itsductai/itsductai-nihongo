@@ -1,0 +1,1905 @@
+{
+  "type": "TUVUNG",
+  "title": "Danh từ thiết yếu JLPT N2",
+  "words": [
+    {
+      "kanji": "欠点",
+      "doc": "けってん",
+      "doc_marked": "けってん",
+      "han_viet": "KHUYẾT ĐIỂM",
+      "nghia": "khuyết điểm, nhược điểm",
+      "vi_du": "自分の欠点を認めて改善することが大切だ。(Việc thừa nhận và cải thiện khuyết điểm của bản thân là quan trọng.) この商品の最大の欠点は価格が高いことだ。(Khuyết điểm lớn nhất của sản phẩm này là giá cả đắt đỏ.)",
+      "vi_du_ruby": "自分の<ruby>欠点<rt>けってん</rt></ruby>を<ruby>認<rt>みと</rt></ruby>めて<ruby>改善<rt>かいぜん</rt></ruby>することが大切だ。(Việc thừa nhận và cải thiện khuyết điểm của bản thân là quan trọng.) この<ruby>商品<rt>しょうひん</rt></ruby>の最大の<ruby>欠点<rt>けってん</rt></ruby>は<ruby>価格<rt>かかく</rt></ruby>が高いことだ。(Khuyết điểm lớn nhất của sản phẩm này là giá cả đắt đỏ.)",
+      "dong_nghia": [
+        {
+          "kanji": "弱点",
+          "doc": "じゃくてん",
+          "nghia": "điểm yếu"
+        },
+        {
+          "kanji": "短所",
+          "doc": "たんしょ",
+          "nghia": "sở đoản"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "利点",
+          "doc": "りてん",
+          "nghia": "điểm có lợi"
+        },
+        {
+          "kanji": "長所",
+          "doc": "ちょうしょ",
+          "nghia": "sở trường"
+        }
+      ]
+    },
+    {
+      "kanji": "利点",
+      "doc": "りてん",
+      "doc_marked": "りてん",
+      "han_viet": "LỢI ĐIỂM",
+      "nghia": "ưu điểm, lợi ích",
+      "vi_du": "この方法の利点は時間を節約できることだ。(Ưu điểm của phương pháp này là tiết kiệm được thời gian.) テレワークには通勤ストレスが減るという利点がある。(Làm việc từ xa có ưu điểm là giảm bớt căng thẳng đi lại.)",
+      "vi_du_ruby": "この方法の<ruby>利点<rt>りてん</rt></ruby>は時間を<ruby>節約<rt>せつやく</rt></ruby>できることだ。(Ưu điểm của phương pháp này là tiết kiệm được thời gian.) テレワークには<ruby>通勤<rt>つうきん</rt></ruby>ストレスが減るという<ruby>利点<rt>りてん</rt></ruby>がある。(Làm việc từ xa có ưu điểm là giảm bớt căng thẳng đi lại.)",
+      "dong_nghia": [
+        {
+          "kanji": "長所",
+          "doc": "ちょうしょ",
+          "nghia": "sở trường"
+        },
+        {
+          "kanji": "メリット",
+          "doc": "めりっと",
+          "nghia": "lợi ích"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "欠点",
+          "doc": "けってん",
+          "nghia": "khuyết điểm"
+        },
+        {
+          "kanji": "デメリット",
+          "doc": "でめりっと",
+          "nghia": "bất lợi"
+        }
+      ]
+    },
+    {
+      "kanji": "課題",
+      "doc": "かだい",
+      "doc_marked": "かだい",
+      "han_viet": "KHÓA ĐỀ",
+      "nghia": "vấn đề cần giải quyết, bài tập",
+      "vi_du": "現代社会が抱える課題を考える。(Suy nghĩ về những vấn đề mà xã hội hiện đại đang phải đối mặt.) 少子高齢化は日本にとって大きな課題だ。(Già hóa dân số và tỷ lệ sinh giảm là một vấn đề lớn đối với Nhật Bản.)",
+      "vi_du_ruby": "<ruby>現代社会<rt>げんだいしゃかい</rt></ruby>が<ruby>抱<rt>かか</rt></ruby>える<ruby>課題<rt>かだい</rt></ruby>を考える。(Suy nghĩ về những vấn đề mà xã hội hiện đại đang phải đối mặt.) <ruby>少子高齢化<rt>しょうしこうれいか</rt></ruby>は日本にとって大きな<ruby>課題<rt>かだい</rt></ruby>だ。(Già hóa dân số và tỷ lệ sinh giảm là một vấn đề lớn đối với Nhật Bản.)",
+      "dong_nghia": [
+        {
+          "kanji": "問題",
+          "doc": "もんだい",
+          "nghia": "vấn đề"
+        },
+        {
+          "kanji": "テーマ",
+          "doc": "てーま",
+          "nghia": "chủ đề"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "目標",
+      "doc": "もくひょう",
+      "doc_marked": "もくひ**ょう**",
+      "han_viet": "MỤC TIÊU",
+      "nghia": "mục tiêu",
+      "vi_du": "明確な目標を設定する。(Thiết lập mục tiêu rõ ràng.) 今年の目標はN2に合格することだ。(Mục tiêu năm nay là thi đỗ N2.)",
+      "vi_du_ruby": "<ruby>明確<rt>めいかく</rt></ruby>な<ruby>目標<rt>もくひょう</rt></ruby>を<ruby>設定<rt>せってい</rt></ruby>する。(Thiết lập mục tiêu rõ ràng.) 今年の<ruby>目標<rt>もくひょう</rt></ruby>はN2に<ruby>合格<rt>ごうかく</rt></ruby>することだ。(Mục tiêu năm nay là thi đỗ N2.)",
+      "dong_nghia": [
+        {
+          "kanji": "目的",
+          "doc": "もくてき",
+          "nghia": "mục đích"
+        },
+        {
+          "kanji": "ゴール",
+          "doc": "ごーる",
+          "nghia": "đích đến"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "目的",
+      "doc": "もくてき",
+      "doc_marked": "もくてき",
+      "han_viet": "MỤC ĐÍCH",
+      "nghia": "mục đích",
+      "vi_du": "この研究の目的を説明する。(Giải thích mục đích của nghiên cứu này.) 日本へ来た目的は日本語を勉強するためです。(Mục đích tôi đến Nhật là để học tiếng Nhật.)",
+      "vi_du_ruby": "この<ruby>研究<rt>けんきゅう</rt></ruby>の<ruby>目的<rt>もくてき</rt></ruby>を<ruby>説明<rt>せつめい</rt></ruby>する。(Giải thích mục đích của nghiên cứu này.) 日本へ来た<ruby>目的<rt>もくてき</rt></ruby>は日本語を勉強するためです。(Mục đích tôi đến Nhật là để học tiếng Nhật.)",
+      "dong_nghia": [
+        {
+          "kanji": "狙い",
+          "doc": "ねらい",
+          "nghia": "mục tiêu nhắm tới"
+        },
+        {
+          "kanji": "目標",
+          "doc": "もくひょう",
+          "nghia": "mục tiêu"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手段",
+      "doc": "しゅだん",
+      "doc_marked": "しゅだん",
+      "han_viet": "THỦ ĐOẠN",
+      "nghia": "phương tiện, cách thức",
+      "vi_du": "目的のために手段を選ばない。(Vì mục đích mà không từ thủ đoạn.) 解決のための有効な手段を見つける。(Tìm ra cách thức hữu hiệu để giải quyết.)",
+      "vi_du_ruby": "<ruby>目的<rt>もくてき</rt></ruby>のために<ruby>手段<rt>しゅだん</rt></ruby>を選ばない。(Vì mục đích mà không từ thủ đoạn.) <ruby>解決<rt>かいけつ</rt></ruby>のための<ruby>有効<rt>ゆうこう</rt></ruby>な<ruby>手段<rt>しゅだん</rt></ruby>を見つける。(Tìm ra cách thức hữu hiệu để giải quyết.)",
+      "dong_nghia": [
+        {
+          "kanji": "方法",
+          "doc": "ほうほう",
+          "nghia": "phương pháp"
+        },
+        {
+          "kanji": "やり方",
+          "doc": "やりかた",
+          "nghia": "cách làm"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "知識",
+      "doc": "ちしき",
+      "doc_marked": "ちしき",
+      "han_viet": "TRI THỨC",
+      "nghia": "kiến thức",
+      "vi_du": "専門知識を活かす。(Phát huy kiến thức chuyên môn.) 本を読んで知識を身につける。(Đọc sách để trang bị kiến thức.)",
+      "vi_du_ruby": "<ruby>専門知識<rt>せんもんちしき</rt></ruby>を<ruby>活<rt>い</rt></ruby>かす。(Phát huy kiến thức chuyên môn.) 本を読んで<ruby>知識<rt>ちしき</rt></ruby>を身につける。(Đọc sách để trang bị kiến thức.)",
+      "dong_nghia": [
+        {
+          "kanji": "教養",
+          "doc": "きょうよう",
+          "nghia": "giáo dưỡng"
+        },
+        {
+          "kanji": "学力",
+          "doc": "がくりょく",
+          "nghia": "học lực"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "能力",
+      "doc": "のうりょく",
+      "doc_marked": "**のう**りょく",
+      "han_viet": "NĂNG LỰC",
+      "nghia": "năng lực, khả năng",
+      "vi_du": "能力を最大限に発揮する。(Phát huy tối đa năng lực.) コミュニケーション能力が求められる。(Khả năng giao tiếp đang được đòi hỏi.)",
+      "vi_du_ruby": "<ruby>能力<rt>のうりょく</rt></ruby>を<ruby>最大限<rt>さいだいげん</rt></ruby>に<ruby>発揮<rt>はっき</rt></ruby>する。(Phát huy tối đa năng lực.) コミュニケーション<ruby>能力<rt>のうりょく</rt></ruby>が<ruby>求<rt>もと</rt></ruby>められる。(Khả năng giao tiếp đang được đòi hỏi.)",
+      "dong_nghia": [
+        {
+          "kanji": "スキル",
+          "doc": "すきる",
+          "nghia": "kỹ năng"
+        },
+        {
+          "kanji": "力",
+          "doc": "ちから",
+          "nghia": "sức lực"
+        },
+        {
+          "kanji": "才能",
+          "doc": "さいのう",
+          "nghia": "tài năng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "不安",
+      "doc": "ふあん",
+      "doc_marked": "ふあん",
+      "han_viet": "BẤT AN",
+      "nghia": "bất an, lo lắng",
+      "vi_du": "将来への不安を感じている。(Cảm thấy bất an về tương lai.) 初めての海外生活で不安がいっぱいだ。(Tràn ngập lo lắng trong lần đầu sống ở nước ngoài.)",
+      "vi_du_ruby": "<ruby>将来<rt>しょうらい</rt></ruby>への<ruby>不安<rt>ふあん</rt></ruby>を感じている。(Cảm thấy bất an về tương lai.) 初めての海外生活で<ruby>不安<rt>ふあん</rt></ruby>がいっぱいだ。(Tràn ngập lo lắng trong lần đầu sống ở nước ngoài.)",
+      "dong_nghia": [
+        {
+          "kanji": "心配",
+          "doc": "しんぱい",
+          "nghia": "lo lắng"
+        },
+        {
+          "kanji": "気がかり",
+          "doc": "きがかり",
+          "nghia": "bận tâm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "安心",
+          "doc": "あんしん",
+          "nghia": "an tâm"
+        }
+      ]
+    },
+    {
+      "kanji": "緊張",
+      "doc": "きんちょう",
+      "doc_marked": "きん**ちょう**",
+      "han_viet": "CĂNG THẲNG",
+      "nghia": "căng thẳng, hồi hộp",
+      "vi_du": "緊張しすぎると失敗する。(Quá căng thẳng thì sẽ thất bại.) 面接の前に緊張をほぐす。(Giải tỏa căng thẳng trước buổi phỏng vấn.)",
+      "vi_du_ruby": "<ruby>緊張<rt>きんちょう</rt></ruby>しすぎると<ruby>失敗<rt>しっぱい</rt></ruby>する。(Quá căng thẳng thì sẽ thất bại.) <ruby>面接<rt>めんせつ</rt></ruby>の前に<ruby>緊張<rt>きんちょう</rt></ruby>をほぐす。(Giải tỏa căng thẳng trước buổi phỏng vấn.)",
+      "dong_nghia": [
+        {
+          "kanji": "プレッシャー",
+          "doc": "ぷれっしゃー",
+          "nghia": "áp lực"
+        },
+        {
+          "kanji": "あがる",
+          "doc": "あがる",
+          "nghia": "hồi hộp"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "リラックス",
+          "doc": "りらっくす",
+          "nghia": "thư giãn"
+        },
+        {
+          "kanji": "くつろぐ",
+          "doc": "くつろぐ",
+          "nghia": "nghỉ ngơi"
+        }
+      ]
+    },
+    {
+      "kanji": "安心",
+      "doc": "あんしん",
+      "doc_marked": "あんしん",
+      "han_viet": "AN TÂM",
+      "nghia": "an tâm, yên tâm",
+      "vi_du": "安心して任せられる。(Có thể yên tâm giao phó.) 無事だと聞いて安心した。(Nghe tin bình an vô sự tôi đã an tâm.)",
+      "vi_du_ruby": "<ruby>安心<rt>あんしん</rt></ruby>して<ruby>任<rt>まか</rt></ruby>せられる。(Có thể yên tâm giao phó.) <ruby>無事<rt>ぶじ</rt></ruby>だと聞いて<ruby>安心<rt>あんしん</rt></ruby>した。(Nghe tin bình an vô sự tôi đã an tâm.)",
+      "dong_nghia": [
+        {
+          "kanji": "ホッとする",
+          "doc": "ほっとする",
+          "nghia": "nhẹ nhõm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "不安",
+          "doc": "ふあん",
+          "nghia": "bất an"
+        },
+        {
+          "kanji": "心配",
+          "doc": "しんぱい",
+          "nghia": "lo lắng"
+        }
+      ]
+    },
+    {
+      "kanji": "信頼",
+      "doc": "しんらい",
+      "doc_marked": "しんらい",
+      "han_viet": "TÍN LẠI",
+      "nghia": "tin tưởng, tin cậy",
+      "vi_du": "信頼関係を築くには時間がかかる。(Việc xây dựng quan hệ tin tưởng cần có thời gian.) 彼は上司から厚く信頼されている。(Anh ấy được cấp trên hết sức tin cậy.)",
+      "vi_du_ruby": "<ruby>信頼関係<rt>しんらいかんけい</rt></ruby>を<ruby>築<rt>きず</rt></ruby>くには時間がかかる。(Việc xây dựng quan hệ tin tưởng cần có thời gian.) 彼は<ruby>上司<rt>じょうし</rt></ruby>から<ruby>厚<rt>あつ</rt></ruby>く<ruby>信頼<rt>しんらい</rt></ruby>されている。(Anh ấy được cấp trên hết sức tin cậy.)",
+      "dong_nghia": [
+        {
+          "kanji": "信用",
+          "doc": "しんよう",
+          "nghia": "tín nhiệm"
+        },
+        {
+          "kanji": "頼り",
+          "doc": "たより",
+          "nghia": "chỗ dựa"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "疑う",
+          "doc": "うたがう",
+          "nghia": "nghi ngờ"
+        },
+        {
+          "kanji": "不信",
+          "doc": "ふしん",
+          "nghia": "bất tín"
+        }
+      ]
+    },
+    {
+      "kanji": "尊重",
+      "doc": "そんちょう",
+      "doc_marked": "そん**ちょう**",
+      "han_viet": "TÔN TRỌNG",
+      "nghia": "tôn trọng",
+      "vi_du": "相手の意見を尊重することが大切だ。(Việc tôn trọng ý kiến của đối phương là quan trọng.) 個人のプライバシーを尊重する。(Tôn trọng quyền riêng tư của cá nhân.)",
+      "vi_du_ruby": "相手の意見を<ruby>尊重<rt>そんちょう</rt></ruby>することが大切だ。(Việc tôn trọng ý kiến của đối phương là quan trọng.) <ruby>個人<rt>こじん</rt></ruby>のプライバシーを<ruby>尊重<rt>そんちょう</rt></ruby>する。(Tôn trọng quyền riêng tư của cá nhân.)",
+      "dong_nghia": [
+        {
+          "kanji": "尊敬",
+          "doc": "そんけい",
+          "nghia": "tôn kính"
+        },
+        {
+          "kanji": "重んじる",
+          "doc": "おもんじる",
+          "nghia": "coi trọng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "軽視",
+          "doc": "けいし",
+          "nghia": "khinh thường"
+        },
+        {
+          "kanji": "無視",
+          "doc": "むし",
+          "nghia": "phớt lờ"
+        }
+      ]
+    },
+    {
+      "kanji": "協力",
+      "doc": "きょうりょく",
+      "doc_marked": "き**ょう**りょく",
+      "han_viet": "HIỆP LỰC",
+      "nghia": "hợp tác, phối hợp",
+      "vi_du": "チームで協力して目標を達成した。(Hợp tác trong nhóm để đạt được mục tiêu.) 皆様のご協力をお願いいたします。(Rất mong nhận được sự hợp tác của mọi người.)",
+      "vi_du_ruby": "チームで<ruby>協力<rt>きょうりょく</rt></ruby>して<ruby>目標<rt>もくひょう</rt></ruby>を<ruby>達成<rt>たっせい</rt></ruby>した。(Hợp tác trong nhóm để đạt được mục tiêu.) 皆様の御<ruby>協力<rt>きょうりょく</rt></ruby>をお願いいたします。(Rất mong nhận được sự hợp tác của mọi người.)",
+      "dong_nghia": [
+        {
+          "kanji": "協調",
+          "doc": "きょうちょう",
+          "nghia": "hiệp lực"
+        },
+        {
+          "kanji": "援助",
+          "doc": "えんじょ",
+          "nghia": "viện trợ"
+        },
+        {
+          "kanji": "サポート",
+          "doc": "さぽーと",
+          "nghia": "hỗ trợ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "対立",
+          "doc": "たいりつ",
+          "nghia": "đối lập"
+        },
+        {
+          "kanji": "邪魔",
+          "doc": "じゃま",
+          "nghia": "cản trở"
+        }
+      ]
+    },
+    {
+      "kanji": "責任",
+      "doc": "せきにん",
+      "doc_marked": "せきにん",
+      "han_viet": "TRÁCH NHIỆM",
+      "nghia": "trách nhiệm",
+      "vi_du": "自分の行動に責任を持つことが大切だ。(Việc chịu trách nhiệm về hành động của mình là quan trọng.) 責任をとって辞任する。(Chịu trách nhiệm và từ chức.)",
+      "vi_du_ruby": "自分の<ruby>行動<rt>こうどう</rt></ruby>に<ruby>責任<rt>せきにん</rt></ruby>を持つことが大切だ。(Việc chịu trách nhiệm về hành động của mình là quan trọng.) <ruby>責任<rt>せきにん</rt></ruby>をとって<ruby>辞任<rt>じにん</rt></ruby>する。(Chịu trách nhiệm và từ chức.)",
+      "dong_nghia": [
+        {
+          "kanji": "義務",
+          "doc": "ぎむ",
+          "nghia": "nghĩa vụ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "無責任",
+          "doc": "むせきにん",
+          "nghia": "vô trách nhiệm"
+        }
+      ]
+    },
+    {
+      "kanji": "義務",
+      "doc": "ぎむ",
+      "doc_marked": "ぎむ",
+      "han_viet": "NGHĨA VỤ",
+      "nghia": "nghĩa vụ",
+      "vi_du": "納税は国民の義務だ。(Nộp thuế là nghĩa vụ của công dân.) 義務を果たす。(Hoàn thành nghĩa vụ.)",
+      "vi_du_ruby": "<ruby>納税<rt>のうぜい</rt></ruby>は<ruby>国民<rt>こくみん</rt></ruby>の<ruby>義務<rt>ぎむ</rt></ruby>だ。(Nộp thuế là nghĩa vụ của công dân.) <ruby>義務<rt>ぎむ</rt></ruby>を<ruby>果<rt>は</rt></ruby>たす。(Hoàn thành nghĩa vụ.)",
+      "dong_nghia": [
+        {
+          "kanji": "責任",
+          "doc": "せきにん",
+          "nghia": "trách nhiệm"
+        },
+        {
+          "kanji": "役目",
+          "doc": "やくめ",
+          "nghia": "vai trò"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "権利",
+          "doc": "けんり",
+          "nghia": "quyền lợi"
+        }
+      ]
+    },
+    {
+      "kanji": "権利",
+      "doc": "けんり",
+      "doc_marked": "けんり",
+      "han_viet": "QUYỀN LỢI",
+      "nghia": "quyền lợi, quyền",
+      "vi_du": "基本的な権利を守る。(Bảo vệ các quyền cơ bản.) 消費者の権利を主張する。(Chủ trương quyền lợi của người tiêu dùng.)",
+      "vi_du_ruby": "<ruby>基本的<rt>きほんてき</rt></ruby>な<ruby>権利<rt>けんり</rt></ruby>を守る。(Bảo vệ các quyền cơ bản.) <ruby>消費者<rt>しょうひしゃ</rt></ruby>の<ruby>権利<rt>けんり</rt></ruby>を<ruby>主張<rt>しゅちょう</rt></ruby>する。(Chủ trương quyền lợi của người tiêu dùng.)",
+      "dong_nghia": [
+        {
+          "kanji": "特権",
+          "doc": "とっけん",
+          "nghia": "đặc quyền"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "義務",
+          "doc": "ぎむ",
+          "nghia": "nghĩa vụ"
+        }
+      ]
+    },
+    {
+      "kanji": "価値",
+      "doc": "かち",
+      "doc_marked": "かち",
+      "han_viet": "GIÁ TRỊ",
+      "nghia": "giá trị",
+      "vi_du": "人はそれぞれ異なる価値観を持っている。(Mỗi người có quan niệm về giá trị khác nhau.) この絵は数億円の価値がある。(Bức tranh này có giá trị vài trăm triệu yên.)",
+      "vi_du_ruby": "人はそれぞれ<ruby>異<rt>こと</rt></ruby>なる<ruby>価値観<rt>かちかん</rt></ruby>を持っている。(Mỗi người có quan niệm về giá trị khác nhau.) この絵は<ruby>数億円<rt>すうおくえん</rt></ruby>の<ruby>価値<rt>かち</rt></ruby>がある。(Bức tranh này có giá trị vài trăm triệu yên.)",
+      "dong_nghia": [
+        {
+          "kanji": "値打ち",
+          "doc": "ねうち",
+          "nghia": "giá trị"
+        },
+        {
+          "kanji": "値",
+          "doc": "あたい",
+          "nghia": "giá trị"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "無価値",
+          "doc": "むかち",
+          "nghia": "vô giá trị"
+        }
+      ]
+    },
+    {
+      "kanji": "程度",
+      "doc": "ていど",
+      "doc_marked": "**てい**ど",
+      "han_viet": "TRÌNH ĐỘ",
+      "nghia": "mức độ, trình độ",
+      "vi_du": "ある程度の経験が必要だ。(Cần có kinh nghiệm ở một mức độ nào đó.) 冗談にも程度がある。(Đùa giỡn cũng phải có chừng mực.)",
+      "vi_du_ruby": "ある<ruby>程度<rt>ていど</rt></ruby>の<ruby>経験<rt>けいけん</rt></ruby>が必要だ。(Cần có kinh nghiệm ở một mức độ nào đó.) <ruby>冗談<rt>じょうだん</rt></ruby>にも<ruby>程度<rt>ていど</rt></ruby>がある。(Đùa giỡn cũng phải có chừng mực.)",
+      "dong_nghia": [
+        {
+          "kanji": "レベル",
+          "doc": "れべる",
+          "nghia": "mức độ"
+        },
+        {
+          "kanji": "くらい",
+          "doc": "くらい",
+          "nghia": "cỡ"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "基準",
+      "doc": "きじゅん",
+      "doc_marked": "きじゅん",
+      "han_viet": "CƠ CHUẨN",
+      "nghia": "tiêu chuẩn, chuẩn mực",
+      "vi_du": "安全基準を満たしている。(Đạt thỏa mãn tiêu chuẩn an toàn.) 評価の基準を明確にする。(Làm rõ tiêu chuẩn đánh giá.)",
+      "vi_du_ruby": "<ruby>安全基準<rt>あんぜんきじゅん</rt></ruby>を<ruby>満<rt>み</rt></ruby>たしている。(Đạt thỏa mãn tiêu chuẩn an toàn.) <ruby>評価<rt>ひょうか</rt></ruby>の<ruby>基準<rt>きじゅん</rt></ruby>を<ruby>明確<rt>めいかく</rt></ruby>にする。(Làm rõ tiêu chuẩn đánh giá.)",
+      "dong_nghia": [
+        {
+          "kanji": "標準",
+          "doc": "ひょうじゅん",
+          "nghia": "tiêu chuẩn"
+        },
+        {
+          "kanji": "目安",
+          "doc": "めやす",
+          "nghia": "mục tiêu / tiêu chuẩn"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "基礎",
+      "doc": "きそ",
+      "doc_marked": "きそ",
+      "han_viet": "CƠ SỞ",
+      "nghia": "cơ sở, nền tảng",
+      "vi_du": "基礎をしっかり身につける。(Trang bị nền tảng một cách vững chắc.) 何事も基礎が一番大切だ。(Việc gì thì nền tảng cũng là quan trọng nhất.)",
+      "vi_du_ruby": "<ruby>基礎<rt>きそ</rt></ruby>をしっかり身につける。(Trang bị nền tảng một cách vững chắc.) 何事も<ruby>基礎<rt>きそ</rt></ruby>が一番大切だ。(Việc gì thì nền tảng cũng là quan trọng nhất.)",
+      "dong_nghia": [
+        {
+          "kanji": "基本",
+          "doc": "きほん",
+          "nghia": "cơ bản"
+        },
+        {
+          "kanji": "土台",
+          "doc": "どだい",
+          "nghia": "nền tảng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "応用",
+          "doc": "おうよう",
+          "nghia": "ứng dụng"
+        }
+      ]
+    },
+    {
+      "kanji": "現状",
+      "doc": "げんじょう",
+      "doc_marked": "げん**じょう**",
+      "han_viet": "HIỆN TRẠNG",
+      "nghia": "hiện trạng, tình trạng hiện tại",
+      "vi_du": "現状を正確に把握する。(Nắm bắt hiện trạng một cách chính xác.) 現状を打破して新しいことに挑戦する。(Phá vỡ hiện trạng để thử thách những điều mới mẻ.)",
+      "vi_du_ruby": "<ruby>現状<rt>げんじょう</rt></ruby>を<ruby>正確<rt>せいかく</rt></ruby>に<ruby>把握<rt>はあく</rt></ruby>する。(Nắm bắt hiện trạng một cách chính xác.) <ruby>現状<rt>げんじょう</rt></ruby>を<ruby>打破<rt>だは</rt></ruby>して新しいことに<ruby>挑戦<rt>ちょうせん</rt></ruby>する。(Phá vỡ hiện trạng để thử thách những điều mới mẻ.)",
+      "dong_nghia": [
+        {
+          "kanji": "今の状況",
+          "doc": "いまのじょうきょう",
+          "nghia": "tình trạng hiện tại"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "現実",
+      "doc": "げんじつ",
+      "doc_marked": "げんじつ",
+      "han_viet": "HIỆN THỰC",
+      "nghia": "thực tế, hiện thực",
+      "vi_du": "現実を受け入れる。(Chấp nhận hiện thực.) 理想と現実のギャップに悩む。(Phiền não vì khoảng cách giữa lý tưởng và hiện thực.)",
+      "vi_du_ruby": "<ruby>現実<rt>げんじつ</rt></ruby>を受け入れる。(Chấp nhận hiện thực.) <ruby>理想<rt>りそう</rt></ruby>と<ruby>現実<rt>げんじつ</rt></ruby>のギャップに<ruby>悩<rt>なや</rt></ruby>む。(Phiền não vì khoảng cách giữa lý tưởng và hiện thực.)",
+      "dong_nghia": [
+        {
+          "kanji": "実際",
+          "doc": "じっさい",
+          "nghia": "thực tế"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "理想",
+          "doc": "りそう",
+          "nghia": "lý tưởng"
+        },
+        {
+          "kanji": "夢",
+          "doc": "ゆめ",
+          "nghia": "giấc mơ"
+        },
+        {
+          "kanji": "空想",
+          "doc": "くうそう",
+          "nghia": "không tưởng"
+        }
+      ]
+    },
+    {
+      "kanji": "事態",
+      "doc": "じたい",
+      "doc_marked": "じたい",
+      "han_viet": "SỰ THÁI",
+      "nghia": "tình trạng khẩn cấp, sự thể",
+      "vi_du": "深刻な事態を避ける。(Tránh một tình huống nghiêm trọng.) 事態は次第に悪化している。(Tình hình đang dần trở nên tồi tệ hơn.)",
+      "vi_du_ruby": "<ruby>深刻<rt>しんこく</rt></ruby>な<ruby>事態<rt>じたい</rt></ruby>を<ruby>避<rt>さ</rt></ruby>ける。(Tránh một tình huống nghiêm trọng.) <ruby>事態<rt>じたい</rt></ruby>は<ruby>次第に<rt>しだいに</rt></ruby><ruby>悪化<rt>あっか</rt></ruby>している。(Tình hình đang dần trở nên tồi tệ hơn.)",
+      "dong_nghia": [
+        {
+          "kanji": "状況",
+          "doc": "じょうきょう",
+          "nghia": "tình huống"
+        },
+        {
+          "kanji": "情勢",
+          "doc": "じょうせい",
+          "nghia": "tình hình"
+        },
+        {
+          "kanji": "局面",
+          "doc": "きょくめん",
+          "nghia": "cục diện"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "実態",
+      "doc": "じったい",
+      "doc_marked": "じったい",
+      "han_viet": "THỰC THÁI",
+      "nghia": "thực trạng",
+      "vi_du": "実態を調査する必要がある。(Cần phải điều tra thực trạng.) 経済の実態を把握する。(Nắm bắt thực trạng nền kinh tế.)",
+      "vi_du_ruby": "<ruby>実態<rt>じったい</rt></ruby>を<ruby>調査<rt>ちょうさ</rt></ruby>する必要がある。(Cần phải điều tra thực trạng.) <ruby>経済<rt>けいざい</rt></ruby>の<ruby>実態<rt>じったい</rt></ruby>を<ruby>把握<rt>はあく</rt></ruby>する。(Nắm bắt thực trạng nền kinh tế.)",
+      "dong_nghia": [
+        {
+          "kanji": "実際の状態",
+          "doc": "じっさいのじょうたい",
+          "nghia": "trạng thái thực tế"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "関心",
+      "doc": "かんしん",
+      "doc_marked": "かんしん",
+      "han_viet": "QUAN TÂM",
+      "nghia": "quan tâm, chú ý",
+      "vi_du": "環境問題への関心が高まっている。(Sự quan tâm đến vấn đề môi trường ngày càng tăng.) 政治に関心を持つ。(Có sự quan tâm đến chính trị.)",
+      "vi_du_ruby": "<ruby>環境問題<rt>かんきょうもんだい</rt></ruby>への<ruby>関心<rt>かんしん</rt></ruby>が高まっている。(Sự quan tâm đến vấn đề môi trường ngày càng tăng.) <ruby>政治<rt>せいじ</rt></ruby>に<ruby>関心<rt>かんしん</rt></ruby>を持つ。(Có sự quan tâm đến chính trị.)",
+      "dong_nghia": [
+        {
+          "kanji": "興味",
+          "doc": "きょうみ",
+          "nghia": "hứng thú"
+        },
+        {
+          "kanji": "関わり",
+          "doc": "かかわり",
+          "nghia": "liên quan"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "無関心",
+          "doc": "むかんしん",
+          "nghia": "không quan tâm"
+        }
+      ]
+    },
+    {
+      "kanji": "興味",
+      "doc": "きょうみ",
+      "doc_marked": "き**ょう**み",
+      "han_viet": "HỨNG VỊ",
+      "nghia": "hứng thú, quan tâm",
+      "vi_du": "新しいことへの興味が大切だ。(Hứng thú với những điều mới mẻ là rất quan trọng.) 彼は日本の歴史に深い興味を持っている。(Anh ấy có hứng thú sâu sắc với lịch sử Nhật Bản.)",
+      "vi_du_ruby": "新しいことへの<ruby>興味<rt>きょうみ</rt></ruby>が大切だ。(Hứng thú với những điều mới mẻ là rất quan trọng.) 彼は日本の<ruby>歴史<rt>れきし</rt></ruby>に深い<ruby>興味<rt>きょうみ</rt></ruby>を持っている。(Anh ấy có hứng thú sâu sắc với lịch sử Nhật Bản.)",
+      "dong_nghia": [
+        {
+          "kanji": "関心",
+          "doc": "かんしん",
+          "nghia": "quan tâm"
+        },
+        {
+          "kanji": "好奇心",
+          "doc": "こうきしん",
+          "nghia": "hiếu kỳ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "無関心",
+          "doc": "むかんしん",
+          "nghia": "không quan tâm"
+        }
+      ]
+    },
+    {
+      "kanji": "意欲",
+      "doc": "いよく",
+      "doc_marked": "いよく",
+      "han_viet": "Ý DỤC",
+      "nghia": "ý chí, động lực, ham muốn làm",
+      "vi_du": "学習意欲を高めるためにゲームを活用する。(Sử dụng trò chơi để nâng cao động lực học tập.) 働く意欲を失う。(Đánh mất đi động lực làm việc.)",
+      "vi_du_ruby": "<ruby>学習意欲<rt>がくしゅういよく</rt></ruby>を<ruby>高<rt>たか</rt></ruby>めるためにゲームを<ruby>活用<rt>かつよう</rt></ruby>する。(Sử dụng trò chơi để nâng cao động lực học tập.) 働く<ruby>意欲<rt>いよく</rt></ruby>を<ruby>失<rt>うしな</rt></ruby>う。(Đánh mất đi động lực làm việc.)",
+      "dong_nghia": [
+        {
+          "kanji": "やる気",
+          "doc": "やるき",
+          "nghia": "động lực"
+        },
+        {
+          "kanji": "意気込み",
+          "doc": "いきごみ",
+          "nghia": "nhiệt huyết"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "無気力",
+          "doc": "むきりょく",
+          "nghia": "mất động lực"
+        }
+      ]
+    },
+    {
+      "kanji": "動機",
+      "doc": "どうき",
+      "doc_marked": "**どう**き",
+      "han_viet": "ĐỘNG CƠ",
+      "nghia": "động cơ, lý do thúc đẩy",
+      "vi_du": "行動の動機を理解する。(Hiểu rõ động cơ của hành động.) 志望動機を面接で聞かれた。(Bị hỏi về động cơ (lý do) ứng tuyển trong buổi phỏng vấn.)",
+      "vi_du_ruby": "<ruby>行動<rt>こうどう</rt></ruby>の<ruby>動機<rt>どうき</rt></ruby>を<ruby>理解<rt>りかい</rt></ruby>する。(Hiểu rõ động cơ của hành động.) <ruby>志望動機<rt>しぼうどうき</rt></ruby>を<ruby>面接<rt>めんせつ</rt></ruby>で聞かれた。(Bị hỏi về động cơ (lý do) ứng tuyển trong buổi phỏng vấn.)",
+      "dong_nghia": [
+        {
+          "kanji": "きっかけ",
+          "doc": "きっかけ",
+          "nghia": "cơ duyên / lý do"
+        },
+        {
+          "kanji": "理由",
+          "doc": "りゆう",
+          "nghia": "lý do"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "原因",
+      "doc": "げんいん",
+      "doc_marked": "げんいん",
+      "han_viet": "NGUYÊN NHÂN",
+      "nghia": "nguyên nhân",
+      "vi_du": "問題の原因を特定する。(Xác định nguyên nhân của vấn đề.) 事故の原因は運転手の不注意だった。(Nguyên nhân tai nạn là do sự bất cẩn của tài xế.)",
+      "vi_du_ruby": "問題の<ruby>原因<rt>げんいん</rt></ruby>を<ruby>特定<rt>とくてい</rt></ruby>する。(Xác định nguyên nhân của vấn đề.) 事故の<ruby>原因<rt>げんいん</rt></ruby>は<ruby>運転手<rt>うんてんしゅ</rt></ruby>の<ruby>不注意<rt>ふちゅうい</rt></ruby>だった。(Nguyên nhân tai nạn là do sự bất cẩn của tài xế.)",
+      "dong_nghia": [
+        {
+          "kanji": "理由",
+          "doc": "りゆう",
+          "nghia": "lý do"
+        },
+        {
+          "kanji": "要因",
+          "doc": "よういん",
+          "nghia": "nguyên nhân chính"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "結果",
+          "doc": "けっか",
+          "nghia": "kết quả"
+        }
+      ]
+    },
+    {
+      "kanji": "適切",
+      "doc": "てきせつ",
+      "doc_marked": "てきせつ",
+      "han_viet": "THÍCH THIẾT",
+      "nghia": "thích hợp, phù hợp",
+      "vi_du": "状況に適切な判断をすることが大切だ。(Việc đưa ra phán đoán phù hợp với tình huống là quan trọng.) 適切なアドバイスをもらう。(Nhận được lời khuyên thích đáng.)",
+      "vi_du_ruby": "<ruby>状況<rt>じょうきょう</rt></ruby>に<ruby>適切<rt>てきせつ</rt></ruby>な<ruby>判断<rt>はんだん</rt></ruby>をすることが大切だ。(Việc đưa ra phán đoán phù hợp với tình huống là quan trọng.) <ruby>適切<rt>てきせつ</rt></ruby>なアドバイスをもらう。(Nhận được lời khuyên thích đáng.)",
+      "dong_nghia": [
+        {
+          "kanji": "適当",
+          "doc": "てきとう",
+          "nghia": "thích hợp"
+        },
+        {
+          "kanji": "ふさわしい",
+          "doc": "ふさわしい",
+          "nghia": "phù hợp"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "不適切",
+          "doc": "ふてきせつ",
+          "nghia": "không thích hợp"
+        }
+      ]
+    },
+    {
+      "kanji": "妥協",
+      "doc": "だきょう",
+      "doc_marked": "だき**ょう**",
+      "han_viet": "THỎA HIỆP",
+      "nghia": "thỏa hiệp, nhân nhượng",
+      "vi_du": "ときには妥協することも必要だ。(Đôi khi việc thỏa hiệp cũng là cần thiết.) 双方の意見を取り入れて妥協案を出す。(Tiếp thu ý kiến hai bên để đưa ra phương án thỏa hiệp.)",
+      "vi_du_ruby": "ときには<ruby>妥協<rt>だきょう</rt></ruby>することも必要だ。(Đôi khi việc thỏa hiệp cũng là cần thiết.) <ruby>双方<rt>そうほう</rt></ruby>の意見を取り入れて<ruby>妥協案<rt>だきょうあん</rt></ruby>を出す。(Tiếp thu ý kiến hai bên để đưa ra phương án thỏa hiệp.)",
+      "dong_nghia": [
+        {
+          "kanji": "譲り合い",
+          "doc": "ゆずりあい",
+          "nghia": "nhượng bộ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "対立",
+          "doc": "たいりつ",
+          "nghia": "đối lập"
+        },
+        {
+          "kanji": "強硬",
+          "doc": "きょうこう",
+          "nghia": "cứng rắn"
+        }
+      ]
+    },
+    {
+      "kanji": "納得",
+      "doc": "なっとく",
+      "doc_marked": "なっとく",
+      "han_viet": "NẠP ĐẮC",
+      "nghia": "thỏa mãn, hiểu thấu, đồng ý",
+      "vi_du": "説明を聞いてようやく納得した。(Sau khi nghe giải thích, cuối cùng tôi cũng đã bị thuyết phục / đồng ý.) 納得がいくまで話し合う。(Bàn bạc cho đến khi cả hai cùng thấu hiểu vấn đề.)",
+      "vi_du_ruby": "<ruby>説明<rt>せつめい</rt></ruby>を聞いてようやく<ruby>納得<rt>なっとく</rt></ruby>した。(Sau khi nghe giải thích, cuối cùng tôi cũng đã bị thuyết phục / đồng ý.) <ruby>納得<rt>なっとく</rt></ruby>がいくまで話し合う。(Bàn bạc cho đến khi cả hai cùng thấu hiểu vấn đề.)",
+      "dong_nghia": [
+        {
+          "kanji": "承知",
+          "doc": "しょうち",
+          "nghia": "chấp nhận"
+        },
+        {
+          "kanji": "同意",
+          "doc": "どうい",
+          "nghia": "đồng ý"
+        },
+        {
+          "kanji": "理解",
+          "doc": "りかい",
+          "nghia": "thấu hiểu"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "不服",
+          "doc": "ふふく",
+          "nghia": "không phục"
+        }
+      ]
+    },
+    {
+      "kanji": "価値観",
+      "doc": "かちかん",
+      "doc_marked": "かちかん",
+      "han_viet": "GIÁ TRỊ QUAN",
+      "nghia": "quan niệm về giá trị",
+      "vi_du": "人それぞれ価値観が違うことを理解する。(Hiểu rằng mỗi người có quan niệm về giá trị khác nhau.) 夫婦間で価値観のズレが生じる。(Phát sinh sự chệch nhịp về quan điểm giá trị giữa vợ chồng.)",
+      "vi_du_ruby": "人それぞれ<ruby>価値観<rt>かちかん</rt></ruby>が違うことを<ruby>理解<rt>りかい</rt></ruby>する。(Hiểu rằng mỗi người có quan niệm về giá trị khác nhau.) <ruby>夫婦間<rt>ふうふかん</rt></ruby>で<ruby>価値観<rt>かちかん</rt></ruby>のズレが<ruby>生<rt>しょう</rt></ruby>じる。(Phát sinh sự chệch nhịp về quan điểm giá trị giữa vợ chồng.)",
+      "dong_nghia": [
+        {
+          "kanji": "考え方",
+          "doc": "かんがえかた",
+          "nghia": "cách suy nghĩ"
+        },
+        {
+          "kanji": "思想",
+          "doc": "しそう",
+          "nghia": "tư tưởng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "刺激",
+      "doc": "しげき",
+      "doc_marked": "しげき",
+      "han_viet": "THÍCH KÍCH",
+      "nghia": "kích thích, thúc đẩy",
+      "vi_du": "新しいことに挑戦して刺激を受ける。(Thử thách với những điều mới mẻ để nhận lấy sự kích thích.) 競争相手がいることは良い刺激になる。(Việc có đối thủ cạnh tranh sẽ trở thành một sự thúc đẩy tốt.)",
+      "vi_du_ruby": "新しいことに<ruby>挑戦<rt>ちょうせん</rt></ruby>して<ruby>刺激<rt>しげき</rt></ruby>を受ける。(Thử thách với những điều mới mẻ để nhận lấy sự kích thích.) <ruby>競争相手<rt>きょうそうあいて</rt></ruby>がいることは良い<ruby>刺激<rt>しげき</rt></ruby>になる。(Việc có đối thủ cạnh tranh sẽ trở thành một sự thúc đẩy tốt.)",
+      "dong_nghia": [
+        {
+          "kanji": "インスピレーション",
+          "doc": "いんすぴれーしょん",
+          "nghia": "cảm hứng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "体験",
+      "doc": "たいけん",
+      "doc_marked": "たいけん",
+      "han_viet": "THỂ NGHIỆM",
+      "nghia": "trải nghiệm thực tế",
+      "vi_du": "本物の体験から学ぶことは多い。(Học được rất nhiều điều từ trải nghiệm thực tế.) 戦争の悲惨さを体験者が語る。(Người từng trải kể lại sự bi thảm của chiến tranh.)",
+      "vi_du_ruby": "<ruby>本物<rt>ほんもの</rt></ruby>の<ruby>体験<rt>たいけん</rt></ruby>から学ぶことは多い。(Học được rất nhiều điều từ trải nghiệm thực tế.) <ruby>戦争<rt>せんそう</rt></ruby>の<ruby>悲惨<rt>ひさん</rt></ruby>さを<ruby>体験者<rt>たいけんしゃ</rt></ruby>が<ruby>語<rt>かた</rt></ruby>る。(Người từng trải kể lại sự bi thảm của chiến tranh.)",
+      "dong_nghia": [
+        {
+          "kanji": "経験",
+          "doc": "けいけん",
+          "nghia": "kinh nghiệm"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "多様",
+      "doc": "たよう",
+      "doc_marked": "た**よう**",
+      "han_viet": "ĐA DẠNG",
+      "nghia": "đa dạng, phong phú",
+      "vi_du": "多様な意見を尊重する。(Tôn trọng những ý kiến đa dạng.) 現代社会では多様な働き方が求められている。(Xã hội hiện đại đang đòi hỏi những phong cách làm việc đa dạng.)",
+      "vi_du_ruby": "<ruby>多様<rt>たよう</rt></ruby>な意見を<ruby>尊重<rt>そんちょう</rt></ruby>する。(Tôn trọng những ý kiến đa dạng.) <ruby>現代社会<rt>げんだいしゃかい</rt></ruby>では<ruby>多様<rt>たよう</rt></ruby>な働き方が<ruby>求<rt>もと</rt></ruby>められている。(Xã hội hiện đại đang đòi hỏi những phong cách làm việc đa dạng.)",
+      "dong_nghia": [
+        {
+          "kanji": "さまざま",
+          "doc": "さまざま",
+          "nghia": "đa dạng"
+        },
+        {
+          "kanji": "種々",
+          "doc": "しゅじゅ",
+          "nghia": "nhiều loại"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "画一",
+          "doc": "かくいつ",
+          "nghia": "đồng nhất"
+        },
+        {
+          "kanji": "単一",
+          "doc": "たんいつ",
+          "nghia": "đơn nhất"
+        }
+      ]
+    },
+    {
+      "kanji": "情報",
+      "doc": "じょうほう",
+      "doc_marked": "**じょう****ほう**",
+      "han_viet": "THÔNG TIN",
+      "nghia": "thông tin, tin tức",
+      "vi_du": "正確な情報を集めることが大切だ。(Việc thu thập thông tin chính xác là điều quan trọng.) インターネットで情報を検索する。(Tìm kiếm thông tin trên internet.)",
+      "vi_du_ruby": "<ruby>正確<rt>せいかく</rt></ruby>な<ruby>情報<rt>じょうほう</rt></ruby>を集めることが大切だ。(Việc thu thập thông tin chính xác là điều quan trọng.) インターネットで<ruby>情報<rt>じょうほう</rt></ruby>を<ruby>検索<rt>けんさく</rt></ruby>する。(Tìm kiếm thông tin trên internet.)",
+      "dong_nghia": [
+        {
+          "kanji": "ニュース",
+          "doc": "にゅーす",
+          "nghia": "tin tức"
+        },
+        {
+          "kanji": "データ",
+          "doc": "でーた",
+          "nghia": "dữ liệu"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "関係",
+      "doc": "かんけい",
+      "doc_marked": "かん**けい**",
+      "han_viet": "QUAN HỆ",
+      "nghia": "mối quan hệ, liên quan",
+      "vi_du": "人間関係を大切にすることが大切だ。(Việc trân trọng mối quan hệ giữa người với người là quan trọng.) この事件と彼は全く関係がない。(Anh ta hoàn toàn không có liên quan gì tới vụ án này.)",
+      "vi_du_ruby": "<ruby>人間関係<rt>にんげんかんけい</rt></ruby>を大切にすることが大切だ。(Việc trân trọng mối quan hệ giữa người với người là quan trọng.) この<ruby>事件<rt>じけん</rt></ruby>と彼は全く<ruby>関係<rt>かんけい</rt></ruby>がない。(Anh ta hoàn toàn không có liên quan gì tới vụ án này.)",
+      "dong_nghia": [
+        {
+          "kanji": "繋がり",
+          "doc": "つながり",
+          "nghia": "kết nối"
+        },
+        {
+          "kanji": "関連",
+          "doc": "かんれん",
+          "nghia": "liên quan"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "無関係",
+          "doc": "むかんけい",
+          "nghia": "không liên quan"
+        }
+      ]
+    },
+    {
+      "kanji": "結果",
+      "doc": "けっか",
+      "doc_marked": "けっか",
+      "han_viet": "KẾT QUẢ",
+      "nghia": "kết quả",
+      "vi_du": "努力した結果、試験に合格した。(Nhờ nỗ lực, kết quả là tôi đã thi đỗ.) 結果が全てではなく、過程も重要だ。(Kết quả không phải là tất cả, quá trình cũng rất quan trọng.)",
+      "vi_du_ruby": "<ruby>努力<rt>どりょく</rt></ruby>した<ruby>結果<rt>けっか</rt></ruby>、試験に<ruby>合格<rt>ごうかく</rt></ruby>した。(Nhờ nỗ lực, kết quả là tôi đã thi đỗ.) <ruby>結果<rt>けっか</rt></ruby>が<ruby>全て<rt>すべ</rt></ruby>ではなく、<ruby>過程<rt>かてい</rt></ruby>も<ruby>重要<rt>じゅうよう</rt></ruby>だ。(Kết quả không phải là tất cả, quá trình cũng rất quan trọng.)",
+      "dong_nghia": [
+        {
+          "kanji": "結末",
+          "doc": "けつまつ",
+          "nghia": "kết cục"
+        },
+        {
+          "kanji": "成果",
+          "doc": "せいか",
+          "nghia": "thành quả"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "原因",
+          "doc": "げんいん",
+          "nghia": "nguyên nhân"
+        },
+        {
+          "kanji": "発端",
+          "doc": "ほったん",
+          "nghia": "khởi đoan"
+        }
+      ]
+    },
+    {
+      "kanji": "社会",
+      "doc": "しゃかい",
+      "doc_marked": "しゃかい",
+      "han_viet": "XÃ HỘI",
+      "nghia": "xã hội",
+      "vi_du": "社会に貢献できる人になりたい。(Tôi muốn trở thành người có thể cống hiến cho xã hội.) 学校を卒業して社会に出る。(Tốt nghiệp trường học và bước ra ngoài xã hội.)",
+      "vi_du_ruby": "<ruby>社会<rt>しゃかい</rt></ruby>に<ruby>貢献<rt>こうけん</rt></ruby>できる人になりたい。(Tôi muốn trở thành người có thể cống hiến cho xã hội.) 学校を<ruby>卒業<rt>そつぎょう</rt></ruby>して<ruby>社会<rt>しゃかい</rt></ruby>に出る。(Tốt nghiệp trường học và bước ra ngoài xã hội.)",
+      "dong_nghia": [
+        {
+          "kanji": "世間",
+          "doc": "せけん",
+          "nghia": "thế gian"
+        },
+        {
+          "kanji": "世の中",
+          "doc": "よのなか",
+          "nghia": "thế giới / xã hội"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "生活",
+      "doc": "せいかつ",
+      "doc_marked": "**せい**かつ",
+      "han_viet": "SINH HOẠT",
+      "nghia": "cuộc sống, sinh hoạt hàng ngày",
+      "vi_du": "健康的な生活を送ることが大切だ。(Việc duy trì một cuộc sống lành mạnh là điều quan trọng.) 日本での生活にもすっかり慣れた。(Tôi cũng đã hoàn toàn quen với cuộc sống ở Nhật Bản.)",
+      "vi_du_ruby": "<ruby>健康的<rt>けんこうてき</rt></ruby>な<ruby>生活<rt>せいかつ</rt></ruby>を送ることが大切だ。(Việc duy trì một cuộc sống lành mạnh là điều quan trọng.) 日本での<ruby>生活<rt>せいかつ</rt></ruby>にもすっかり慣れた。(Tôi cũng đã hoàn toàn quen với cuộc sống ở Nhật Bản.)",
+      "dong_nghia": [
+        {
+          "kanji": "暮らし",
+          "doc": "くらし",
+          "nghia": "cuộc sống"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "重要",
+      "doc": "じゅうよう",
+      "doc_marked": "**じゅう****よう**",
+      "han_viet": "TRỌNG YẾU",
+      "nghia": "quan trọng",
+      "vi_du": "コミュニケーションはとても重要だ。(Việc giao tiếp là vô cùng quan trọng.) この書類は極めて重要なので、大切に保管してください。(Tài liệu này cực kỳ quan trọng nên hãy bảo quản cẩn thận.)",
+      "vi_du_ruby": "コミュニケーションはとても<ruby>重要<rt>じゅうよう</rt></ruby>だ。(Việc giao tiếp là vô cùng quan trọng.) この<ruby>書類<rt>しょるい</rt></ruby>は<ruby>極<rt>きわ</rt></ruby>めて<ruby>重要<rt>じゅうよう</rt></ruby>なので、大切に<ruby>保管<rt>ほかん</rt></ruby>してください。(Tài liệu này cực kỳ quan trọng nên hãy bảo quản cẩn thận.)",
+      "dong_nghia": [
+        {
+          "kanji": "大切",
+          "doc": "たいせつ",
+          "nghia": "quan trọng"
+        },
+        {
+          "kanji": "重大",
+          "doc": "じゅうだい",
+          "nghia": "trọng đại"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "些細",
+          "doc": "ささい",
+          "nghia": "nhỏ nhặt"
+        },
+        {
+          "kanji": "軽微",
+          "doc": "けいび",
+          "nghia": "nhẹ / không đáng kể"
+        }
+      ]
+    },
+    {
+      "kanji": "行動",
+      "doc": "こうどう",
+      "doc_marked": "**こう****どう**",
+      "han_viet": "HÀNH ĐỘNG",
+      "nghia": "hành động, hành vi",
+      "vi_du": "言葉より行動が大切だ。(Hành động quan trọng hơn lời nói.) 怪しい行動をとる人物を警察がマークしている。(Cảnh sát đang để mắt tới nhân vật có hành tung đáng ngờ.)",
+      "vi_du_ruby": "言葉より<ruby>行動<rt>こうどう</rt></ruby>が大切だ。(Hành động quan trọng hơn lời nói.) <ruby>怪<rt>あや</rt></ruby>しい<ruby>行動<rt>こうどう</rt></ruby>をとる<ruby>人物<rt>じんぶつ</rt></ruby>を警察がマークしている。(Cảnh sát đang để mắt tới nhân vật có hành tung đáng ngờ.)",
+      "dong_nghia": [
+        {
+          "kanji": "振る舞い",
+          "doc": "ふるまい",
+          "nghia": "hành xử"
+        },
+        {
+          "kanji": "行い",
+          "doc": "おこない",
+          "nghia": "hành động"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "説明",
+      "doc": "せつめい",
+      "doc_marked": "せつ**めい**",
+      "han_viet": "THUYẾT MINH",
+      "nghia": "giải thích, thuyết minh",
+      "vi_du": "分かりやすく説明してください。(Xin hãy giải thích một cách dễ hiểu.) 製品の使い方を取扱説明書で確認する。(Xác nhận cách sử dụng sản phẩm qua sách hướng dẫn.)",
+      "vi_du_ruby": "分かりやすく<ruby>説明<rt>せつめい</rt></ruby>してください。(Xin hãy giải thích một cách dễ hiểu.) <ruby>製品<rt>せいひん</rt></ruby>の使い方を<ruby>取扱説明書<rt>とりあつかいせつめいしょ</rt></ruby>で<ruby>確認<rt>かくにん</rt></ruby>する。(Xác nhận cách sử dụng sản phẩm qua sách hướng dẫn.)",
+      "dong_nghia": [
+        {
+          "kanji": "解説",
+          "doc": "かいせつ",
+          "nghia": "giải thích"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "経験",
+      "doc": "けいけん",
+      "doc_marked": "**けい**けん",
+      "han_viet": "KINH NGHIỆM",
+      "nghia": "kinh nghiệm, trải nghiệm",
+      "vi_du": "海外での経験が人生を豊かにする。(Kinh nghiệm ở nước ngoài làm cho cuộc đời phong phú hơn.) 営業の経験を活かして新しい職場で頑張りたい。(Tôi muốn nỗ lực ở chỗ làm mới bằng cách phát huy kinh nghiệm làm sale.)",
+      "vi_du_ruby": "海外での<ruby>経験<rt>けいけん</rt></ruby>が人生を<ruby>豊<rt>ゆた</rt></ruby>かにする。(Kinh nghiệm ở nước ngoài làm cho cuộc đời phong phú hơn.) <ruby>営業<rt>えいぎょう</rt></ruby>の<ruby>経験<rt>けいけん</rt></ruby>を<ruby>活<rt>い</rt></ruby>かして新しい<ruby>職場<rt>しょくば</rt></ruby>で頑張りたい。(Tôi muốn nỗ lực ở chỗ làm mới bằng cách phát huy kinh nghiệm làm sale.)",
+      "dong_nghia": [
+        {
+          "kanji": "体験",
+          "doc": "たいけん",
+          "nghia": "trải nghiệm"
+        },
+        {
+          "kanji": "キャリア",
+          "doc": "きゃりあ",
+          "nghia": "sự nghiệp"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "技術",
+      "doc": "ぎじゅつ",
+      "doc_marked": "ぎじゅつ",
+      "han_viet": "KỸ THUẬT",
+      "nghia": "kỹ thuật, công nghệ",
+      "vi_du": "技術の進歩が社会を変えている。(Sự tiến bộ của công nghệ đang thay đổi xã hội.) 高度な医療技術によって多くの命が救われた。(Rất nhiều sinh mạng được cứu sống nhờ vào kỹ thuật y tế cao cấp.)",
+      "vi_du_ruby": "<ruby>技術<rt>ぎじゅつ</rt></ruby>の<ruby>進歩<rt>しんぽ</rt></ruby>が社会を変えている。(Sự tiến bộ của công nghệ đang thay đổi xã hội.) <ruby>高度<rt>こうど</rt></ruby>な<ruby>医療技術<rt>いりょうぎじゅつ</rt></ruby>によって多くの<ruby>命<rt>いのち</rt></ruby>が<ruby>救<rt>すく</rt></ruby>われた。(Rất nhiều sinh mạng được cứu sống nhờ vào kỹ thuật y tế cao cấp.)",
+      "dong_nghia": [
+        {
+          "kanji": "テクノロジー",
+          "doc": "てくのろじー",
+          "nghia": "công nghệ"
+        },
+        {
+          "kanji": "テクニック",
+          "doc": "てくにっく",
+          "nghia": "kỹ năng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "環境",
+      "doc": "かんきょう",
+      "doc_marked": "かんき**ょう**",
+      "han_viet": "HOÀN CẢNH",
+      "nghia": "môi trường, hoàn cảnh",
+      "vi_du": "環境問題は現代社会の課題だ。(Vấn đề môi trường là vấn đề của xã hội hiện đại.) 子供が育つ環境としてはここが最適だ。(Làm môi trường để nuôi dạy trẻ con thì nơi đây là thích hợp nhất.)",
+      "vi_du_ruby": "<ruby>環境問題<rt>かんきょうもんだい</rt></ruby>は<ruby>現代社会<rt>げんだいしゃかい</rt></ruby>の<ruby>課題<rt>かだい</rt></ruby>だ。(Vấn đề môi trường là vấn đề của xã hội hiện đại.) 子供が<ruby>育<rt>そだ</rt></ruby>つ<ruby>環境<rt>かんきょう</rt></ruby>としてはここが<ruby>最適<rt>さいてき</rt></ruby>だ。(Làm môi trường để nuôi dạy trẻ con thì nơi đây là thích hợp nhất.)",
+      "dong_nghia": [
+        {
+          "kanji": "周囲",
+          "doc": "しゅうい",
+          "nghia": "xung quanh"
+        },
+        {
+          "kanji": "状況",
+          "doc": "じょうきょう",
+          "nghia": "tình hình"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "文化",
+      "doc": "ぶんか",
+      "doc_marked": "ぶんか",
+      "han_viet": "VĂN HÓA",
+      "nghia": "văn hóa",
+      "vi_du": "異文化を理解することが大切だ。(Việc thấu hiểu các nền văn hóa khác nhau là điều quan trọng.) 日本の伝統文化を世界に発信する。(Truyền bá văn hóa truyền thống của Nhật Bản ra thế giới.)",
+      "vi_du_ruby": "<ruby>異文化<rt>いぶんか</rt></ruby>を<ruby>理解<rt>りかい</rt></ruby>することが大切だ。(Việc thấu hiểu các nền văn hóa khác nhau là điều quan trọng.) 日本の<ruby>伝統文化<rt>でんとうぶんか</rt></ruby>を世界に<ruby>発信<rt>はっしん</rt></ruby>する。(Truyền bá văn hóa truyền thống của Nhật Bản ra thế giới.)",
+      "dong_nghia": [
+        {
+          "kanji": "カルチャー",
+          "doc": "かるちゃー",
+          "nghia": "văn hóa"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "健康",
+      "doc": "けんこう",
+      "doc_marked": "けん**こう**",
+      "han_viet": "KIỆN KHANG",
+      "nghia": "sức khỏe, khỏe mạnh",
+      "vi_du": "規則正しい生活が健康につながる。(Cuộc sống sinh hoạt điều độ sẽ dẫn đến một sức khỏe tốt.) 健康のために毎日ジョギングをしている。(Tôi chạy bộ mỗi ngày vì sức khỏe.)",
+      "vi_du_ruby": "<ruby>規則<rt>きそく</rt></ruby>正しい生活が<ruby>健康<rt>けんこう</rt></ruby>につながる。(Cuộc sống sinh hoạt điều độ sẽ dẫn đến một sức khỏe tốt.) <ruby>健康<rt>けんこう</rt></ruby>のために毎日ジョギングをしている。(Tôi chạy bộ mỗi ngày vì sức khỏe.)",
+      "dong_nghia": [
+        {
+          "kanji": "ヘルシー",
+          "doc": "へるしー",
+          "nghia": "lành mạnh"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "不健康",
+          "doc": "ふけんこう",
+          "nghia": "không khỏe"
+        },
+        {
+          "kanji": "病気",
+          "doc": "びょうき",
+          "nghia": "ốm đau"
+        }
+      ]
+    },
+    {
+      "kanji": "安全",
+      "doc": "あんぜん",
+      "doc_marked": "あんぜん",
+      "han_viet": "AN TOÀN",
+      "nghia": "an toàn",
+      "vi_du": "交通安全に気をつけましょう。(Hãy cùng chú ý đến an toàn giao thông.) このシステムはセキュリティが高く安全だ。(Hệ thống này có tính bảo mật cao và rất an toàn.)",
+      "vi_du_ruby": "<ruby>交通安全<rt>こうつうあんぜん</rt></ruby>に気をつけましょう。(Hãy cùng chú ý đến an toàn giao thông.) このシステムはセキュリティが高く<ruby>安全<rt>あんぜん</rt></ruby>だ。(Hệ thống này có tính bảo mật cao và rất an toàn.)",
+      "dong_nghia": [
+        {
+          "kanji": "無事",
+          "doc": "ぶじ",
+          "nghia": "vô sự"
+        },
+        {
+          "kanji": "セーフ",
+          "doc": "せーふ",
+          "nghia": "an toàn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "危険",
+          "doc": "きけん",
+          "nghia": "nguy hiểm"
+        }
+      ]
+    },
+    {
+      "kanji": "感情",
+      "doc": "かんじょう",
+      "doc_marked": "かん**じょう**",
+      "han_viet": "CẢM TÌNH",
+      "nghia": "cảm xúc, tình cảm",
+      "vi_du": "感情をうまくコントロールする。(Kiểm soát cảm xúc một cách khéo léo.) 彼は感情を顔に出さないタイプだ。(Anh ấy là kiểu người không bộc lộ cảm xúc ra nét mặt.)",
+      "vi_du_ruby": "<ruby>感情<rt>かんじょう</rt></ruby>をうまくコントロールする。(Kiểm soát cảm xúc một cách khéo léo.) 彼は<ruby>感情<rt>かんじょう</rt></ruby>を顔に出さないタイプだ。(Anh ấy là kiểu người không bộc lộ cảm xúc ra nét mặt.)",
+      "dong_nghia": [
+        {
+          "kanji": "気持ち",
+          "doc": "きもち",
+          "nghia": "tâm trạng"
+        },
+        {
+          "kanji": "思い",
+          "doc": "おもい",
+          "nghia": "suy nghĩ / tình cảm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "理性",
+          "doc": "りせい",
+          "nghia": "lý trí"
+        }
+      ]
+    },
+    {
+      "kanji": "印象",
+      "doc": "いんしょう",
+      "doc_marked": "いん**しょう**",
+      "han_viet": "ẤN TƯỢNG",
+      "nghia": "ấn tượng",
+      "vi_du": "第一印象はとても大切だ。(Ấn tượng đầu tiên rất quan trọng.) 面接官に良い印象を与えるように振る舞う。(Cư xử sao cho mang lại ấn tượng tốt với người phỏng vấn.)",
+      "vi_du_ruby": "<ruby>第一印象<rt>だいいちいんしょう</rt></ruby>はとても大切だ。(Ấn tượng đầu tiên rất quan trọng.) <ruby>面接官<rt>めんせつかん</rt></ruby>に良い<ruby>印象<rt>いんしょう</rt></ruby>を<ruby>与<rt>あた</rt></ruby>えるように<ruby>振<rt>ふ</rt></ruby>る<ruby>舞<rt>ま</rt></ruby>う。(Cư xử sao cho mang lại ấn tượng tốt với người phỏng vấn.)",
+      "dong_nghia": [
+        {
+          "kanji": "イメージ",
+          "doc": "いめーじ",
+          "nghia": "hình ảnh"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "存在",
+      "doc": "そんざい",
+      "doc_marked": "そんざい",
+      "han_viet": "TỒN TẠI",
+      "nghia": "tồn tại, sự hiện diện",
+      "vi_du": "彼はチームにとって重要な存在だ。(Anh ấy là một sự hiện diện quan trọng đối với đội bóng.) 宇宙人の存在を信じますか。(Bạn có tin vào sự tồn tại của người ngoài hành tinh không?)",
+      "vi_du_ruby": "彼はチームにとって重要な<ruby>存在<rt>そんざい</rt></ruby>だ。(Anh ấy là một sự hiện diện quan trọng đối với đội bóng.) <ruby>宇宙人<rt>うちゅうじん</rt></ruby>の<ruby>存在<rt>そんざい</rt></ruby>を信じますか。(Bạn có tin vào sự tồn tại của người ngoài hành tinh không?)",
+      "dong_nghia": [
+        {
+          "kanji": "あること",
+          "doc": "あること",
+          "nghia": "sự tồn tại"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "人生",
+      "doc": "じんせい",
+      "doc_marked": "じん**せい**",
+      "han_viet": "NHÂN SINH",
+      "nghia": "cuộc đời, cuộc sống",
+      "vi_du": "人生で大切なことは何かを考える。(Suy nghĩ xem điều gì là quan trọng nhất trong cuộc đời.) 彼女との出会いが私の人生を変えた。(Việc gặp gỡ cô ấy đã làm thay đổi cuộc đời tôi.)",
+      "vi_du_ruby": "<ruby>人生<rt>じんせい</rt></ruby>で大切なことは何かを考える。(Suy nghĩ xem điều gì là quan trọng nhất trong cuộc đời.) 彼女との<ruby>出会<rt>であ</rt></ruby>いが私の<ruby>人生<rt>じんせい</rt></ruby>を変えた。(Việc gặp gỡ cô ấy đã làm thay đổi cuộc đời tôi.)",
+      "dong_nghia": [
+        {
+          "kanji": "一生",
+          "doc": "いっしょう",
+          "nghia": "một đời"
+        },
+        {
+          "kanji": "生涯",
+          "doc": "しょうがい",
+          "nghia": "sinh nhai"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "自由",
+      "doc": "じゆう",
+      "doc_marked": "じ**ゆう**",
+      "han_viet": "TỰ DO",
+      "nghia": "tự do",
+      "vi_du": "自由に意見を言える環境が大切だ。(Môi trường có thể tự do phát biểu ý kiến là rất quan trọng.) 休日くらいは誰にも干渉されず自由に過ごしたい。(Ít nhất là vào ngày nghỉ, tôi muốn được trải qua một cách tự do không bị ai can thiệp.)",
+      "vi_du_ruby": "<ruby>自由<rt>じゆう</rt></ruby>に意見を言える<ruby>環境<rt>かんきょう</rt></ruby>が大切だ。(Môi trường có thể tự do phát biểu ý kiến là rất quan trọng.) <ruby>休日<rt>きゅうじつ</rt></ruby>くらいは誰にも<ruby>干渉<rt>かんしょう</rt></ruby>されず<ruby>自由<rt>じゆう</rt></ruby>に過ごしたい。(Ít nhất là vào ngày nghỉ, tôi muốn được trải qua một cách tự do không bị ai can thiệp.)",
+      "dong_nghia": [
+        {
+          "kanji": "フリー",
+          "doc": "ふりー",
+          "nghia": "tự do"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "束縛",
+          "doc": "そくばく",
+          "nghia": "trói buộc"
+        },
+        {
+          "kanji": "制限",
+          "doc": "せいげん",
+          "nghia": "hạn chế"
+        },
+        {
+          "kanji": "不自由",
+          "doc": "ふじゆう",
+          "nghia": "mất tự do"
+        }
+      ]
+    },
+    {
+      "kanji": "自然",
+      "doc": "しぜん",
+      "doc_marked": "しぜん",
+      "han_viet": "TỰ NHIÊN",
+      "nghia": "tự nhiên, thiên nhiên",
+      "vi_du": "自然の大切さを学ぶ。(Học về sự quan trọng của thiên nhiên.) 田舎に引っ越して、自然に囲まれた生活を送る。(Chuyển về vùng quê để sống một cuộc đời được bao bọc bởi thiên nhiên.)",
+      "vi_du_ruby": "<ruby>自然<rt>しぜん</rt></ruby>の大切さを学ぶ。(Học về sự quan trọng của thiên nhiên.) <ruby>田舎<rt>いなか</rt></ruby>に<ruby>引<rt>ひ</rt></ruby>っ<ruby>越<rt>こ</rt></ruby>して、<ruby>自然<rt>しぜん</rt></ruby>に囲まれた生活を送る。(Chuyển về vùng quê để sống một cuộc đời được bao bọc bởi thiên nhiên.)",
+      "dong_nghia": [
+        {
+          "kanji": "天然",
+          "doc": "てんねん",
+          "nghia": "thiên nhiên"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "人工",
+          "doc": "じんこう",
+          "nghia": "nhân tạo"
+        },
+        {
+          "kanji": "不自然",
+          "doc": "ふしぜん",
+          "nghia": "mất tự nhiên"
+        }
+      ]
+    },
+    {
+      "kanji": "実際",
+      "doc": "じっさい",
+      "doc_marked": "じっさい",
+      "han_viet": "THỰC TẾ",
+      "nghia": "thực tế, thực ra",
+      "vi_du": "実際に試してみることが大切だ。(Việc thử nghiệm trong thực tế là quan trọng.) 頭で考えるだけでなく、実際の行動に移す。(Không chỉ nghĩ trong đầu mà phải chuyển thành hành động thực tế.)",
+      "vi_du_ruby": "<ruby>実際<rt>じっさい</rt></ruby>に<ruby>試<rt>ため</rt></ruby>してみることが大切だ。(Việc thử nghiệm trong thực tế là quan trọng.) 頭で考えるだけでなく、<ruby>実際<rt>じっさい</rt></ruby>の行動に<ruby>移<rt>うつ</rt></ruby>す。(Không chỉ nghĩ trong đầu mà phải chuyển thành hành động thực tế.)",
+      "dong_nghia": [
+        {
+          "kanji": "現実",
+          "doc": "げんじつ",
+          "nghia": "hiện thực"
+        },
+        {
+          "kanji": "リアル",
+          "doc": "りある",
+          "nghia": "thực tế"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "想像",
+          "doc": "そうぞう",
+          "nghia": "tưởng tượng"
+        },
+        {
+          "kanji": "空想",
+          "doc": "くうそう",
+          "nghia": "viển vông"
+        }
+      ]
+    },
+    {
+      "kanji": "機会",
+      "doc": "きかい",
+      "doc_marked": "きかい",
+      "han_viet": "CƠ HỘI",
+      "nghia": "cơ hội, dịp",
+      "vi_du": "この機会を逃さないようにする。(Cố gắng để không bỏ lỡ cơ hội này.) またとない良い機会に恵まれた。(May mắn có được một cơ hội tốt hiếm có.)",
+      "vi_du_ruby": "この<ruby>機会<rt>きかい</rt></ruby>を<ruby>逃<rt>のが</rt></ruby>さないようにする。(Cố gắng để không bỏ lỡ cơ hội này.) またとない良い<ruby>機会<rt>きかい</rt></ruby>に<ruby>恵<rt>めぐ</rt></ruby>まれた。(May mắn có được một cơ hội tốt hiếm có.)",
+      "dong_nghia": [
+        {
+          "kanji": "チャンス",
+          "doc": "ちゃんす",
+          "nghia": "cơ hội"
+        },
+        {
+          "kanji": "折",
+          "doc": "おり",
+          "nghia": "dịp"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "理由",
+      "doc": "りゆう",
+      "doc_marked": "り**ゆう**",
+      "han_viet": "LÝ DO",
+      "nghia": "lý do",
+      "vi_du": "遅刻した理由を説明してください。(Xin hãy giải thích lý do đi muộn.) 会社を辞めた最大の理由は人間関係だ。(Lý do lớn nhất khiến tôi nghỉ việc là mối quan hệ con người.)",
+      "vi_du_ruby": "<ruby>遅刻<rt>ちこく</rt></ruby>した<ruby>理由<rt>りゆう</rt></ruby>を説明してください。(Xin hãy giải thích lý do đi muộn.) 会社を辞めた最大の<ruby>理由<rt>りゆう</rt></ruby>は人間関係だ。(Lý do lớn nhất khiến tôi nghỉ việc là mối quan hệ con người.)",
+      "dong_nghia": [
+        {
+          "kanji": "原因",
+          "doc": "げんいん",
+          "nghia": "nguyên nhân"
+        },
+        {
+          "kanji": "わけ",
+          "doc": "わけ",
+          "nghia": "lý do"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "他人",
+      "doc": "たにん",
+      "doc_marked": "たにん",
+      "han_viet": "THA NHÂN",
+      "nghia": "người khác, người dưng",
+      "vi_du": "他人の意見を尊重することが大切だ。(Việc tôn trọng ý kiến của người khác là quan trọng.) お金に関しては親兄弟でも他人のように厳しい。(Riêng về chuyện tiền bạc thì dù là cha mẹ anh em cũng nghiêm khắc hệt như người dưng.)",
+      "vi_du_ruby": "<ruby>他人<rt>たにん</rt></ruby>の意見を<ruby>尊重<rt>そんちょう</rt></ruby>することが大切だ。(Việc tôn trọng ý kiến của người khác là quan trọng.) お金に関しては親兄弟でも<ruby>他人<rt>たにん</rt></ruby>のように<ruby>厳<rt>きび</rt></ruby>しい。(Riêng về chuyện tiền bạc thì dù là cha mẹ anh em cũng nghiêm khắc hệt như người dưng.)",
+      "dong_nghia": [
+        {
+          "kanji": "第三者",
+          "doc": "だいさんしゃ",
+          "nghia": "người thứ ba"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "自分",
+          "doc": "じぶん",
+          "nghia": "bản thân"
+        },
+        {
+          "kanji": "身内",
+          "doc": "みうち",
+          "nghia": "người thân"
+        }
+      ]
+    },
+    {
+      "kanji": "作品",
+      "doc": "さくひん",
+      "doc_marked": "さくひん",
+      "han_viet": "TÁC PHẨM",
+      "nghia": "tác phẩm, sản phẩm sáng tạo",
+      "vi_du": "この作品は世界中で高く評価された。(Tác phẩm này được đánh giá cao trên toàn thế giới.) 展示会には学生たちの優秀な作品が並んでいる。(Tại buổi triển lãm có trưng bày các tác phẩm xuất sắc của học sinh.)",
+      "vi_du_ruby": "この<ruby>作品<rt>さくひん</rt></ruby>は世界中で高く<ruby>評価<rt>ひょうか</rt></ruby>された。(Tác phẩm này được đánh giá cao trên toàn thế giới.) <ruby>展示会<rt>てんじかい</rt></ruby>には学生たちの<ruby>優秀<rt>ゆうしゅう</rt></ruby>な<ruby>作品<rt>さくひん</rt></ruby>が並んでいる。(Tại buổi triển lãm có trưng bày các tác phẩm xuất sắc của học sinh.)",
+      "dong_nghia": [
+        {
+          "kanji": "創作物",
+          "doc": "そうさくぶつ",
+          "nghia": "vật sáng tác"
+        },
+        {
+          "kanji": "アート",
+          "doc": "あーと",
+          "nghia": "nghệ thuật"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "感覚",
+      "doc": "かんかく",
+      "doc_marked": "かんかく",
+      "han_viet": "CẢM GIÁC",
+      "nghia": "cảm giác, giác quan",
+      "vi_du": "彼は独特の感覚を持つ芸術家だ。(Anh ấy là một nghệ sĩ mang những cảm quan độc đáo.) 寒さで手足の感覚がなくなった。(Vì quá lạnh nên tôi đã mất đi cảm giác ở chân tay.)",
+      "vi_du_ruby": "彼は<ruby>独特<rt>どくとく</rt></ruby>の<ruby>感覚<rt>かんかく</rt></ruby>を持つ<ruby>芸術家<rt>げいじゅつか</rt></ruby>だ。(Anh ấy là một nghệ sĩ mang những cảm quan độc đáo.) 寒さで手足の<ruby>感覚<rt>かんかく</rt></ruby>がなくなった。(Vì quá lạnh nên tôi đã mất đi cảm giác ở chân tay.)",
+      "dong_nghia": [
+        {
+          "kanji": "フィーリング",
+          "doc": "ふぃーりんぐ",
+          "nghia": "cảm giác"
+        },
+        {
+          "kanji": "センス",
+          "doc": "せんす",
+          "nghia": "gu / cảm quan"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "現代",
+      "doc": "げんだい",
+      "doc_marked": "げんだい",
+      "han_viet": "HIỆN ĐẠI",
+      "nghia": "hiện đại, thời đại hiện nay",
+      "vi_du": "現代社会のストレスは深刻だ。(Stress trong xã hội hiện đại rất nghiêm trọng.) この小説は現代の若者の悩みをリアルに描いている。(Cuốn tiểu thuyết này miêu tả một cách chân thực những nỗi phiền muộn của giới trẻ thời hiện đại.)",
+      "vi_du_ruby": "<ruby>現代社会<rt>げんだいしゃかい</rt></ruby>のストレスは<ruby>深刻<rt>しんこく</rt></ruby>だ。(Stress trong xã hội hiện đại rất nghiêm trọng.) この<ruby>小説<rt>しょうせつ</rt></ruby>は<ruby>現代<rt>げんだい</rt></ruby>の若者の<ruby>悩<rt>なや</rt></ruby>みをリアルに<ruby>描<rt>えが</rt></ruby>いている。(Cuốn tiểu thuyết này miêu tả một cách chân thực những nỗi phiền muộn của giới trẻ thời hiện đại.)",
+      "dong_nghia": [
+        {
+          "kanji": "現代社会",
+          "doc": "げんだいしゃかい",
+          "nghia": "xã hội hiện đại"
+        },
+        {
+          "kanji": "今",
+          "doc": "いま",
+          "nghia": "bây giờ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "過去",
+          "doc": "かこ",
+          "nghia": "quá khứ"
+        },
+        {
+          "kanji": "古代",
+          "doc": "こだい",
+          "nghia": "cổ đại"
+        }
+      ]
+    },
+    {
+      "kanji": "担当",
+      "doc": "たんとう",
+      "doc_marked": "たん**とう**",
+      "han_viet": "ĐẢM ĐƯƠNG",
+      "nghia": "phụ trách, người phụ trách",
+      "vi_du": "このプロジェクトの担当者は誰ですか。(Người phụ trách dự án này là ai?) 私は営業部で新製品のPRを担当しています。(Tôi đang phụ trách việc PR sản phẩm mới ở phòng kinh doanh.)",
+      "vi_du_ruby": "このプロジェクトの<ruby>担当者<rt>たんとうしゃ</rt></ruby>は誰ですか。(Người phụ trách dự án này là ai?) 私は<ruby>営業部<rt>えいぎょうぶ</rt></ruby>で新製品のPRを<ruby>担当<rt>たんとう</rt></ruby>しています。(Tôi đang phụ trách việc PR sản phẩm mới ở phòng kinh doanh.)",
+      "dong_nghia": [
+        {
+          "kanji": "受け持ち",
+          "doc": "うけもち",
+          "nghia": "phụ trách"
+        },
+        {
+          "kanji": "係",
+          "doc": "かかり",
+          "nghia": "người chịu trách nhiệm"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "社員",
+      "doc": "しゃいん",
+      "doc_marked": "しゃいん",
+      "han_viet": "XÃ VIÊN",
+      "nghia": "nhân viên công ty",
+      "vi_du": "社員の意見を積極的に取り入れる。(Tích cực tiếp thu ý kiến của nhân viên.) 優秀な社員を育成するための研修を行う。(Tổ chức buổi thực tập nhằm đào tạo những nhân viên ưu tú.)",
+      "vi_du_ruby": "<ruby>社員<rt>しゃいん</rt></ruby>の意見を<ruby>積極的<rt>せっきょくてき</rt></ruby>に取り入れる。(Tích cực tiếp thu ý kiến của nhân viên.) <ruby>優秀<rt>ゆうしゅう</rt></ruby>な<ruby>社員<rt>しゃいん</rt></ruby>を<ruby>育成<rt>いくせい</rt></ruby>するための<ruby>研修<rt>けんしゅう</rt></ruby>を行う。(Tổ chức buổi thực tập nhằm đào tạo những nhân viên ưu tú.)",
+      "dong_nghia": [
+        {
+          "kanji": "従業員",
+          "doc": "じゅうぎょういん",
+          "nghia": "nhân viên"
+        },
+        {
+          "kanji": "スタッフ",
+          "doc": "すたっふ",
+          "nghia": "nhân viên"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "社長",
+          "doc": "しゃちょう",
+          "nghia": "giám đốc"
+        },
+        {
+          "kanji": "役員",
+          "doc": "やくいん",
+          "nghia": "cán bộ"
+        }
+      ]
+    },
+    {
+      "kanji": "資料",
+      "doc": "しりょう",
+      "doc_marked": "しり**ょう**",
+      "han_viet": "TƯ LIỆU",
+      "nghia": "tài liệu, dữ liệu",
+      "vi_du": "会議の前にプレゼンの資料を準備する。(Chuẩn bị tài liệu thuyết trình trước cuộc họp.) インターネットでレポートのための資料を集める。(Thu thập tài liệu cho bài báo cáo trên internet.)",
+      "vi_du_ruby": "会議の前にプレゼンの<ruby>資料<rt>しりょう</rt></ruby>を<ruby>準備<rt>じゅんび</rt></ruby>する。(Chuẩn bị tài liệu thuyết trình trước cuộc họp.) インターネットでレポートのための<ruby>資料<rt>しりょう</rt></ruby>を集める。(Thu thập tài liệu cho bài báo cáo trên internet.)",
+      "dong_nghia": [
+        {
+          "kanji": "データ",
+          "doc": "でーた",
+          "nghia": "dữ liệu"
+        },
+        {
+          "kanji": "書類",
+          "doc": "しょるい",
+          "nghia": "giấy tờ"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "製品",
+      "doc": "せいひん",
+      "doc_marked": "**せい**ひん",
+      "han_viet": "CHẾ PHẨM",
+      "nghia": "sản phẩm, hàng hóa",
+      "vi_du": "日本のメーカーは品質のよい製品を作る。(Các nhà sản xuất Nhật Bản chế tạo ra những sản phẩm có chất lượng tốt.) 新製品の開発には多額の費用がかかる。(Việc phát triển sản phẩm mới tốn rất nhiều chi phí.)",
+      "vi_du_ruby": "日本のメーカーは<ruby>品質<rt>ひんしつ</rt></ruby>のよい<ruby>製品<rt>せいひん</rt></ruby>を作る。(Các nhà sản xuất Nhật Bản chế tạo ra những sản phẩm có chất lượng tốt.) <ruby>新製品<rt>しんせいひん</rt></ruby>の<ruby>開発<rt>かいはつ</rt></ruby>には<ruby>多額<rt>たがく</rt></ruby>の<ruby>費用<rt>ひよう</rt></ruby>がかかる。(Việc phát triển sản phẩm mới tốn rất nhiều chi phí.)",
+      "dong_nghia": [
+        {
+          "kanji": "商品",
+          "doc": "しょうひん",
+          "nghia": "hàng hóa"
+        },
+        {
+          "kanji": "プロダクト",
+          "doc": "ぷろだくと",
+          "nghia": "sản phẩm"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "成長",
+      "doc": "せいちょう",
+      "doc_marked": "**せい****ちょう**",
+      "han_viet": "THÀNH TRƯỞNG",
+      "nghia": "trưởng thành, phát triển",
+      "vi_du": "子どもの成長を見守る。(Dõi theo sự trưởng thành của con cái.) 会社の売り上げが順調に成長している。(Doanh thu của công ty đang phát triển thuận lợi.)",
+      "vi_du_ruby": "子どもの<ruby>成長<rt>せいちょう</rt></ruby>を見守る。(Dõi theo sự trưởng thành của con cái.) 会社の<ruby>売上<rt>うりあげ</rt></ruby>が<ruby>順調<rt>じゅんちょう</rt></ruby>に<ruby>成長<rt>せいちょう</rt></ruby>している。(Doanh thu của công ty đang phát triển thuận lợi.)",
+      "dong_nghia": [
+        {
+          "kanji": "発達",
+          "doc": "はったつ",
+          "nghia": "phát triển"
+        },
+        {
+          "kanji": "進歩",
+          "doc": "しんぽ",
+          "nghia": "tiến bộ"
+        },
+        {
+          "kanji": "伸び",
+          "doc": "のび",
+          "nghia": "tăng trưởng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "衰退",
+          "doc": "すいたい",
+          "nghia": "suy thoái"
+        },
+        {
+          "kanji": "後退",
+          "doc": "こうたい",
+          "nghia": "tụt hậu"
+        }
+      ]
+    },
+    {
+      "kanji": "上司",
+      "doc": "じょうし",
+      "doc_marked": "**じょう**し",
+      "han_viet": "THƯỢNG TY",
+      "nghia": "cấp trên, sếp",
+      "vi_du": "上司との良好な関係を保つ。(Duy trì mối quan hệ tốt đẹp với cấp trên.) トラブルが発生したら、すぐに上司に報告すべきだ。(Nếu có rắc rối phát sinh thì phải báo cáo ngay cho sếp.)",
+      "vi_du_ruby": "<ruby>上司<rt>じょうし</rt></ruby>との<ruby>良好<rt>りょうこう</rt></ruby>な関係を<ruby>保<rt>たも</rt></ruby>つ。(Duy trì mối quan hệ tốt đẹp với cấp trên.) トラブルが<ruby>発生<rt>はっせい</rt></ruby>したら、すぐに<ruby>上司<rt>じょうし</rt></ruby>に<ruby>報告<rt>ほうこく</rt></ruby>すべきだ。(Nếu có rắc rối phát sinh thì phải báo cáo ngay cho sếp.)",
+      "dong_nghia": [
+        {
+          "kanji": "目上",
+          "doc": "めうえ",
+          "nghia": "cấp trên"
+        },
+        {
+          "kanji": "ボス",
+          "doc": "ぼす",
+          "nghia": "sếp"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "部下",
+          "doc": "ぶか",
+          "nghia": "cấp dưới"
+        },
+        {
+          "kanji": "後輩",
+          "doc": "こうはい",
+          "nghia": "hậu bối"
+        }
+      ]
+    },
+    {
+      "kanji": "苦手",
+      "doc": "にがて",
+      "doc_marked": "にがて",
+      "han_viet": "KHỔ THỦ",
+      "nghia": "kém, không giỏi, sợ",
+      "vi_du": "数学が苦手だが毎日練習している。(Dù kém môn Toán nhưng ngày nào tôi cũng luyện tập.) 私は人前で話すのが苦手だ。(Tôi rất kém / sợ việc phải nói chuyện trước đám đông.)",
+      "vi_du_ruby": "<ruby>数学<rt>すうがく</rt></ruby>が<ruby>苦手<rt>にがて</rt></ruby>だが毎日練習している。(Dù kém môn Toán nhưng ngày nào tôi cũng luyện tập.) 私は<ruby>人前<rt>ひとまえ</rt></ruby>で話すのが<ruby>苦手<rt>にがて</rt></ruby>だ。(Tôi rất kém / sợ việc phải nói chuyện trước đám đông.)",
+      "dong_nghia": [
+        {
+          "kanji": "下手",
+          "doc": "へた",
+          "nghia": "dở"
+        },
+        {
+          "kanji": "不得意",
+          "doc": "ふとくい",
+          "nghia": "không giỏi"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "得意",
+          "doc": "とくい",
+          "nghia": "giỏi"
+        },
+        {
+          "kanji": "上手",
+          "doc": "じょうず",
+          "nghia": "giỏi"
+        }
+      ]
+    },
+    {
+      "kanji": "間違",
+      "doc": "まちがい",
+      "doc_marked": "まちがい",
+      "han_viet": "GIAN VI",
+      "nghia": "sai lầm, lỗi",
+      "vi_du": "間違いを恐れずに挑戦することが大切だ。(Việc không sợ phạm sai lầm mà cứ tiến lên thử thách là quan trọng.) 計算に間違いがないか、もう一度確認しよう。(Hãy xác nhận lại một lần nữa xem có sai sót gì trong tính toán không nhé.)",
+      "vi_du_ruby": "<ruby>間違<rt>まちが</rt></ruby>いを<ruby>恐<rt>おそ</rt></ruby>れずに<ruby>挑戦<rt>ちょうせん</rt></ruby>することが大切だ。(Việc không sợ phạm sai lầm mà cứ tiến lên thử thách là quan trọng.) <ruby>計算<rt>けいさん</rt></ruby>に<ruby>間違<rt>まちが</rt></ruby>いがないか、もう一度確認しよう。(Hãy xác nhận lại một lần nữa xem có sai sót gì trong tính toán không nhé.)",
+      "dong_nghia": [
+        {
+          "kanji": "ミス",
+          "doc": "みす",
+          "nghia": "lỗi"
+        },
+        {
+          "kanji": "誤り",
+          "doc": "あやまり",
+          "nghia": "sai lầm"
+        },
+        {
+          "kanji": "エラー",
+          "doc": "えらー",
+          "nghia": "lỗi"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "正解",
+          "doc": "せいかい",
+          "nghia": "chính xác"
+        },
+        {
+          "kanji": "正当",
+          "doc": "せいとう",
+          "nghia": "chính đáng"
+        }
+      ]
+    },
+    {
+      "kanji": "言い訳",
+      "doc": "いいわけ",
+      "doc_marked": "いいわけ",
+      "han_viet": "NGÔN DỊCH",
+      "nghia": "bào chữa, lý do biện hộ",
+      "vi_du": "言い訳をせずに素直に反省する。(Không viện lý do bào chữa mà cứ ngoan ngoãn tự kiểm điểm bản thân.) 遅刻した言い訳を考える。(Nghĩ sẵn lý do bào chữa cho việc đi trễ.)",
+      "vi_du_ruby": "<ruby>言い訳<rt>いいわけ</rt></ruby>をせずに<ruby>素直<rt>すなお</rt></ruby>に<ruby>反省<rt>はんせい</rt></ruby>する。(Không viện lý do bào chữa mà cứ ngoan ngoãn tự kiểm điểm bản thân.) <ruby>遅刻<rt>ちこく</rt></ruby>した<ruby>言い訳<rt>いいわけ</rt></ruby>を考える。(Nghĩ sẵn lý do bào chữa cho việc đi trễ.)",
+      "dong_nghia": [
+        {
+          "kanji": "弁解",
+          "doc": "べんかい",
+          "nghia": "biện minh"
+        },
+        {
+          "kanji": "口実",
+          "doc": "こうじつ",
+          "nghia": "viện cớ"
+        }
+      ],
+      "trai_nghia": []
+    }
+  ]
+}

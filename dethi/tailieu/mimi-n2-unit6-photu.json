@@ -1,0 +1,714 @@
+{
+  "type": "TUVUNG",
+  "series": "mimi",
+  "title": "Mimi UNIT 6 - Phó từ & Liên từ (mức độ, thời gian, trạng thái)",
+  "words": [
+    {
+      "kanji": "最も",
+      "doc": "もっとも",
+      "doc_marked": "もっとも",
+      "han_viet": "TỐI",
+      "nghia": "nhất, vô cùng (≠ もっとも=tuy nhiên, khác kanji/nghĩa, chỉ trùng âm đọc)",
+      "vi_du": "世界で最も面積の広い国はロシアである。(Trên thế giới đất nước có diện tích lớn nhất là nước Nga.)",
+      "vi_du_ruby": "世界で<ruby>最<rt>もっと</rt></ruby>も面積の広い国はロシアである。(Trên thế giới đất nước có diện tích lớn nhất là nước Nga.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ほぼ",
+      "doc": "ほぼ",
+      "doc_marked": "ほぼ",
+      "han_viet": "",
+      "nghia": "gần như, hầu như",
+      "vi_du": "新しいビルはほぼ完成した。(Tòa nhà mới đã gần như xây xong.) イベント会場の準備はほぼ終わった。(Chuẩn bị cho hội trường sự kiện gần như đã xong.) 式はほぼ予定通りに進行している。(Lễ nghi đang tiến triển gần như theo dự định.) 客席はほぼ満員だった。(Khách hàng gần như đã đến đầy đủ.)",
+      "vi_du_ruby": "新しいビルはほぼ完成した。(Tòa nhà mới đã gần như xây xong.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "相当",
+      "doc": "そうとう",
+      "doc_marked": "**そう****とう**",
+      "han_viet": "TƯƠNG ĐƯƠNG",
+      "nghia": "đáng kể",
+      "vi_du": "彼の表情からすると、相当強く叱られたようだ。(Từ biểu cảm của anh ấy, chắc đã bị mắng xối xả.) 今期は相当な赤字になりそうだ。(Kì này có vẻ khá thâm hụt.)",
+      "vi_du_ruby": "彼の表情からすると、<ruby>相当<rt>そうとう</rt></ruby>強く叱られたようだ。(Từ biểu cảm của anh ấy, chắc đã bị mắng xối xả.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "割に(割と・割合に)",
+      "doc": "わりに",
+      "doc_marked": "わりに",
+      "han_viet": "CÁT",
+      "nghia": "tương đối",
+      "vi_du": "道が込んでいるかと思ったら、わりにすいていた。(Cứ nghĩ đường sẽ đông lắm nhưng lại khá vắng.) 今回のレポートは割合よく書けたと思う。(Tôi nghĩ bài báo cáo lần này viết tương đối tốt.)",
+      "vi_du_ruby": "道が込んでいるかと思ったら、わりにすいていた。(Cứ nghĩ đường sẽ đông lắm nhưng lại khá vắng.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "多少",
+      "doc": "たしょう",
+      "doc_marked": "た**しょう**",
+      "han_viet": "ĐA THIỂU",
+      "nghia": "một chút",
+      "vi_du": "寒い日が続いているが、今日は多少暖かい。(Trải qua những ngày lạnh giá, hôm nay trời đã ấm hơn chút ít.) まだ子供なのだから、多少のことは大目に見てやらなくちゃ。(Vì vẫn là trẻ con nên những việc làm với nó hãy nhìn bằng ánh mắt hào hiệp hơn.) お買い上げ商品の多少にかかわらず、無料でお届けします。(Không quan tâm sản phẩm đã mua nhiều hay ít, chúng tôi sẽ chuyển đến nhà miễn phí.)",
+      "vi_du_ruby": "寒い日が続いているが、今日は<ruby>多少<rt>たしょう</rt></ruby>暖かい。(Trải qua những ngày lạnh giá, hôm nay trời đã ấm hơn chút ít.)",
+      "dong_nghia": [
+        "少々"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "少々",
+      "doc": "しょうしょう",
+      "doc_marked": "**しょう****しょう**",
+      "han_viet": "THIỂU THIỂU",
+      "nghia": "một chút; một lát",
+      "vi_du": "魚は水気を取り、塩を少々振っておきます。(Rắc một ít muối để cá không bị ẩm.) 最近信じられないような事件が多いので、少々のことでは驚かなかった。(Dạo gần đây xảy ra nhiều chuyện không thể tin được nên không thấy bất ngờ với chuyện nhỏ nhặt.) 少々お待ちください。(Xin vui lòng đợi chút ạ.)",
+      "vi_du_ruby": "魚は水気を取り、塩を<ruby>少々<rt>しょうしょう</rt></ruby>振っておきます。(Rắc một ít muối để cá không bị ẩm.)",
+      "dong_nghia": [
+        "多少"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "全て",
+      "doc": "すべて",
+      "doc_marked": "すべて",
+      "han_viet": "TOÀN",
+      "nghia": "mọi thứ",
+      "vi_du": "問題はすべて解決した。(Vấn đề đã giải quyết hoàn toàn.) すべて観客が立ち上がって拍手した。(Tất cả khán giả đã đứng dậy và vỗ tay.) 会議出席者のすべてがその案に賛成した。(Những người tham gia hội nghị hoàn toàn đồng ý với dự án đó.) 日本に来たばかりのころは、見る物すべてが珍しかった。(Lúc mới đầu đến Nhật Bản, nhìn thứ gì cũng hiếm lạ cả.)",
+      "vi_du_ruby": "問題はすべて解決した。(Vấn đề đã giải quyết hoàn toàn.)",
+      "dong_nghia": [
+        "何もかも"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "何もかも",
+      "doc": "なにもかも",
+      "doc_marked": "なにもかも",
+      "han_viet": "",
+      "nghia": "toàn bộ, mọi thứ",
+      "vi_du": "何もかも捨てて人生をやり直したい。(Muốn vứt bỏ mọi thứ để làm lại cuộc sống.) 火事で何もかも失った。(Vì trận hỏa hoạn mà đã mất hết tất cả.) 来日したばかりのころは、何もかもが新鮮だった。(Lúc vừa mới sang Nhật, mọi thứ đều mới lạ.)",
+      "vi_du_ruby": "<ruby>何<rt>なに</rt></ruby>もかも捨てて人生をやり直したい。(Muốn vứt bỏ mọi thứ để làm lại cuộc sống.)",
+      "dong_nghia": [
+        "全て"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "たっぷり",
+      "doc": "たっぷり",
+      "doc_marked": "たっぷり",
+      "han_viet": "",
+      "nghia": "đủ, nhiều",
+      "vi_du": "時間がたっぷりあるから、急がなくてもいい。(Có đủ thời gian nên không cần phải vội vàng đâu.) たっぷり寝たら、疲れが取れた。(Nếu ngủ đủ giấc thì sẽ trút hết mệt mỏi.) 栄養たっぷりの料理。(Thức ăn đầy đủ chất dinh dưỡng.) うちから駅までどんなに急いでも、たっぷり15分はかかる。(Từ nhà đến nhà ga dù có vội vàng đến đâu cũng mất tối thiểu 15 phút.)",
+      "vi_du_ruby": "時間がたっぷりあるから、急がなくてもいい。(Có đủ thời gian nên không cần phải vội vàng đâu.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "出来るだけ",
+      "doc": "できるだけ",
+      "doc_marked": "できるだけ",
+      "han_viet": "XUẤT LAI",
+      "nghia": "trong khả năng có thể, càng ~ càng",
+      "vi_du": "できるだけ早くお返事ください。(Nếu được thì hãy trả lời sớm cho tôi.) 子供には、できるだけのことはしてやりたい。(Tôi muốn làm cho con cái những gì tôi có thể làm.)",
+      "vi_du_ruby": "できるだけ早くお返事ください。(Nếu được thì hãy trả lời sớm cho tôi.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "次第に",
+      "doc": "しだいに",
+      "doc_marked": "しだいに",
+      "han_viet": "THỨ ĐỆ",
+      "nghia": "dần dần",
+      "vi_du": "冬至を過ぎると、日が次第に長くなる。(Qua đông chí thì ngày trở nên dài hơn.) 景気は次第に良くなっているようだ。(Kinh tế đang có vẻ dần dần tốt hơn.)",
+      "vi_du_ruby": "冬至を過ぎると、日が<ruby>次第<rt>しだい</rt></ruby>に長くなる。(Qua đông chí thì ngày trở nên dài hơn.)",
+      "dong_nghia": [
+        "徐々に"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "徐々に",
+      "doc": "じょじょに",
+      "doc_marked": "じょじょに",
+      "han_viet": "TỪ TỪ",
+      "nghia": "dần dần, từ từ, từng chút một",
+      "vi_du": "車は徐々にスピードを落とし、やがて止まった。(Ô tô hạ tốc độ dần dần và cuối cùng dừng lại.) 病人は徐々に回復に向かっている。(Bệnh nhân đang có chiều hướng hồi phục dần dần.) 新しい生活にも徐々に慣れてきた。(Tôi đã dần dần quen với cuộc sống mới.)",
+      "vi_du_ruby": "車は<ruby>徐々<rt>じょじょ</rt></ruby>にスピードを落とし、やがて止まった。(Ô tô hạ tốc độ dần dần và cuối cùng dừng lại.)",
+      "dong_nghia": [
+        "次第に"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "一層",
+      "doc": "いっそう",
+      "doc_marked": "いっ**そう**",
+      "han_viet": "NHẤT TẰNG",
+      "nghia": "hơn nữa, thêm, tăng lên",
+      "vi_du": "夜になって、風雨は一層激しくなった。(Đến tối mưa gió sẽ trở nên mạnh hơn.) 今後の一層の努力を期待します。(Tôi kì vọng lần sau sẽ nỗ lực nhiều hơn.)",
+      "vi_du_ruby": "夜になって、風雨は<ruby>一層<rt>いっそう</rt></ruby>激しくなった。(Đến tối mưa gió sẽ trở nên mạnh hơn.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "一段と",
+      "doc": "いちだんと",
+      "doc_marked": "いちだんと",
+      "han_viet": "NHẤT ĐOẠN",
+      "nghia": "hơn rất nhiều, hơn 1 bậc",
+      "vi_du": "1月になると、寒さは一段と厳しくなった。(Bước vào tháng 1, cái lạnh sẽ khắc nghiệt hơn nhiều.) 今日はまた、一段とお美しいですね。(Hôm nay, chị lại đẹp hơn nữa nhỉ.)",
+      "vi_du_ruby": "1月になると、寒さは<ruby>一段<rt>いちだん</rt></ruby>と厳しくなった。(Bước vào tháng 1, cái lạnh sẽ khắc nghiệt hơn nhiều.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "より",
+      "doc": "より",
+      "doc_marked": "より",
+      "han_viet": "",
+      "nghia": "hơn, hơn nữa",
+      "vi_du": "より良い未来を築くために、みんなで力を合わせましょう。(Mọi người hãy cùng chung sức với nhau để xây dựng một tương lai tốt đẹp hơn.) 子供が生まれて、夫婦の愛情がより深まった。(Sau khi sinh con, tình cảm vợ chồng càng trở nên sâu đậm.)",
+      "vi_du_ruby": "より良い未来を築くために、みんなで力を合わせましょう。(Mọi người hãy cùng chung sức với nhau để xây dựng một tương lai tốt đẹp hơn.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "結局",
+      "doc": "けっきょく",
+      "doc_marked": "けっきょく",
+      "han_viet": "KẾT CỤC",
+      "nghia": "kết cuộc, rốt cuộc",
+      "vi_du": "いろいろ考えて、結局断ることにした。(Tôi đã suy nghĩ rất nhiều và quyết định từ chối.) 結局のところ、何が言いたいのですか。(Rốt cuộc thì cậu muốn nói điều gì?)",
+      "vi_du_ruby": "いろいろ考えて、<ruby>結局<rt>けっきょく</rt></ruby>断ることにした。(Tôi đã suy nghĩ rất nhiều và quyết định từ chối.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "再び",
+      "doc": "ふたたび",
+      "doc_marked": "ふたたび",
+      "han_viet": "TÁI",
+      "nghia": "lại, lần nữa",
+      "vi_du": "1年目は不合格だったので、翌年再び受験し、今度は合格した。(Năm thứ nhất thi trượt, năm sau thi lần nữa và đã đỗ.) 彼女が再び故郷に戻ったのは、10年後だった。(Lần mà cô ấy trở lại cố hương là 10 năm sau.)",
+      "vi_du_ruby": "1年目は不合格だったので、翌年<ruby>再<rt>ふたた</rt></ruby>び受験し、今度は合格した。(Năm thứ nhất thi trượt, năm sau thi lần nữa và đã đỗ.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "忽ち",
+      "doc": "たちまち",
+      "doc_marked": "たちまち",
+      "han_viet": "HỐT",
+      "nghia": "ngay lập tức, đột nhiên",
+      "vi_du": "空が暗くなったかと思うと、たちまち雨が降り始めた。(Bầu trời tối lại, ngay lập tức trời bắt đầu mưa.) コンサートのチケットはたちまちのうちに売り切れた。(Vé của buổi hòa nhạc ngay lập tức đã được bán hết.)",
+      "vi_du_ruby": "空が暗くなったかと思うと、たちまち雨が降り始めた。(Bầu trời tối lại, ngay lập tức trời bắt đầu mưa.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "今度",
+      "doc": "こんど",
+      "doc_marked": "こんど",
+      "han_viet": "KIM ĐỘ",
+      "nghia": "lần tới, lần sau, lần này",
+      "vi_du": "今度できたレストランは、味がいいと評判だ。(Nhà hàng vừa mới mở được đánh giá là ngon đấy.) 今度のクラスはレベルが高いので勉強が大変だ。(Cấp độ lớp học lần này cao quá nên học hành rất vất vả.) 今度は失敗したが、次は成功させて見せる。(Lần này thất bại nhưng lần sau mình sẽ quyết thành công.)",
+      "vi_du_ruby": "<ruby>今度<rt>こんど</rt></ruby>できたレストランは、味がいいと評判だ。(Nhà hàng vừa mới mở được đánh giá là ngon đấy.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "後に",
+      "doc": "あとに",
+      "doc_marked": "あとに",
+      "han_viet": "HẬU",
+      "nghia": "sau đó, tương lai",
+      "vi_du": "松本さんは文学部を卒業した後に、医学部に入り直したそうだ。(Matsumoto sau khi tốt nghiệp ngành văn học sẽ vào học lại ngành y đấy.) 二人が結婚したのは、出会って3年の後だった。(Sau khi hẹn hò 3 năm hai người đã kết hôn.) 相対性理論はのちの世に大きな影響を与えた。(Thuyết tương đối đã để lại một ảnh hưởng lớn đến xã hội sau này.)",
+      "vi_du_ruby": "松本さんは文学部を卒業した<ruby>後<rt>あと</rt></ruby>に、医学部に入り直したそうだ。(Matsumoto sau khi tốt nghiệp ngành văn học sẽ vào học lại ngành y đấy.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "間も無く",
+      "doc": "まもなく",
+      "doc_marked": "まもなく",
+      "han_viet": "GIAN VÔ",
+      "nghia": "sắp; chẳng bao lâu nữa; sắp sửa",
+      "vi_du": "まもなく開演です。お席にお着きになってお待ちください。(Buổi biểu diễn sắp bắt đầu, quý khách vui lòng ổn định chỗ ngồi và chờ xem.) リンさんから、帰国してまもなく、就職が決まったというメールが来た。(Không lâu sau khi Rin về nước, tôi đã nhận được tin nhắn tìm được việc từ cô ấy.)",
+      "vi_du_ruby": "まもなく開演です。お席にお着きになってお待ちください。(Buổi biểu diễn sắp bắt đầu, quý khách vui lòng ổn định chỗ ngồi và chờ xem.)",
+      "dong_nghia": [
+        "そのうち(に)",
+        "やがて"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "そのうち(に)",
+      "doc": "そのうちに",
+      "doc_marked": "そ**のう**ちに",
+      "han_viet": "",
+      "nghia": "sớm muộn cũng, chẳng mấy chốc, nhanh chóng",
+      "vi_du": "そんなめちゃくちゃな生活をしていたら、そのうち病気になるよ。(Sống cuộc sống bừa bãi như thế có ngày bị bệnh đó.) 来日当初は日本の習慣に驚くことが多かったが、そのうちに慣れた。(Vừa mới đến Nhật tôi đã bị sốc nhiều về tập quán của nước này, nhưng sau đó thì đã quen.)",
+      "vi_du_ruby": "そんなめちゃくちゃな生活をしていたら、そのうち病気になるよ。(Sống cuộc sống bừa bãi như thế có ngày bị bệnh đó.)",
+      "dong_nghia": [
+        "間も無く"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "先ほど",
+      "doc": "さきほど",
+      "doc_marked": "さきほど",
+      "han_viet": "TIÊN",
+      "nghia": "mới lúc trước",
+      "vi_du": "先ほど、無事到着したとの連絡があった。(Vừa rồi có liên lạc rằng đã đến nơi an toàn.) 田中様が先ほどからお待ちです。(Khách Tanaka đã đợi từ hồi nãy.)",
+      "vi_du_ruby": "<ruby>先<rt>さき</rt></ruby>ほど、無事到着したとの連絡があった。(Vừa rồi có liên lạc rằng đã đến nơi an toàn.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "疾っくに",
+      "doc": "とっくに",
+      "doc_marked": "とっくに",
+      "han_viet": "TẬT",
+      "nghia": "rồi, lâu rồi",
+      "vi_du": "松井さんは？とっくに帰ったよ。(Matsui đâu? Về lâu rồi.)",
+      "vi_du_ruby": "松井さんは？とっくに帰ったよ。(Matsui đâu? Về lâu rồi.)",
+      "dong_nghia": [
+        "既に"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "既に",
+      "doc": "すでに",
+      "doc_marked": "すでに",
+      "han_viet": "KÝ",
+      "nghia": "đã; đã rồi",
+      "vi_du": "私が駅に着いたとき、終電はすでに出た後だった。(Khi tôi đến nhà ga thì chuyến tàu cuối cùng đã chạy rồi.) 彼女が出会ったとき、彼はすでに結婚していたそうだ。(Khi gặp cô ấy, nghe nói anh ấy đã kết hôn rồi.)",
+      "vi_du_ruby": "私が駅に着いたとき、終電はすでに出た後だった。(Khi tôi đến nhà ga thì chuyến tàu cuối cùng đã chạy rồi.)",
+      "dong_nghia": [
+        "疾っくに"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "事前に",
+      "doc": "じぜんに",
+      "doc_marked": "じぜんに",
+      "han_viet": "SỰ TIỀN",
+      "nghia": "trước",
+      "vi_du": "インタビューの相手に、事前に質問を伝えておいた。(Đã truyền tải câu hỏi trước cho người được phỏng vấn.) 何事も、事前の準備が大切だ。(Dù bất cứ việc gì, chuẩn bị trước vẫn là quan trọng.)",
+      "vi_du_ruby": "インタビューの相手に、<ruby>事前<rt>じぜん</rt></ruby>に質問を伝えておいた。(Đã truyền tải câu hỏi trước cho người được phỏng vấn.)",
+      "dong_nghia": [],
+      "trai_nghia": [
+        "当日"
+      ]
+    },
+    {
+      "kanji": "当日",
+      "doc": "とうじつ",
+      "doc_marked": "**とう**じつ",
+      "han_viet": "ĐƯƠNG NHẬT",
+      "nghia": "ngày đó",
+      "vi_du": "入試当日、熱を出してしまった。(Vào ngày thi thì lại bị ốm.) 決勝戦は1週間後だ。当日は朝から応援に行くつもりだ。(Trận chung kết sau một tuần nữa, hôm đó định đi cổ vũ từ sáng.)",
+      "vi_du_ruby": "入試<ruby>当日<rt>とうじつ</rt></ruby>、熱を出してしまった。(Vào ngày thi thì lại bị ốm.)",
+      "dong_nghia": [],
+      "trai_nghia": [
+        "事前に"
+      ]
+    },
+    {
+      "kanji": "当時",
+      "doc": "とうじ",
+      "doc_marked": "**とう**じ",
+      "han_viet": "ĐƯƠNG THỜI",
+      "nghia": "thời đó",
+      "vi_du": "私は京都出身だが、当時住んでいた家はもうない。(Tôi xuất thân ở Kyoto nhưng ngôi nhà sống thời gian đó đã không còn nữa.) 来日当時は、日本語は全くできなかった。(Vào thời gian sang Nhật, tôi hoàn toàn không thể nói được tiếng Nhật.) この部屋は父が生きていた当時のままにしてある。(Căn nhà này vẫn còn lưu lại như thời kì mà bố còn sống.)",
+      "vi_du_ruby": "私は京都出身だが、<ruby>当時<rt>とうじ</rt></ruby>住んでいた家はもうない。(Tôi xuất thân ở Kyoto nhưng ngôi nhà sống thời gian đó đã không còn nữa.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "一時",
+      "doc": "いちじ",
+      "doc_marked": "いちじ",
+      "han_viet": "NHẤT THỜI",
+      "nghia": "nhất thời, có lúc",
+      "vi_du": "子供のころ、一時アメリカに住んでいたことがある。(Lúc tôi còn nhỏ, tôi đã từng sống ở Mỹ một thời gian.) 大雨のため、新幹線は一時ストップした。(Do mưa lớn nên tàu Shinkansen tạm thời dừng.) 一時の感情で大切なことを決めないほうがいい。(Không nên quyết định điều quan trọng bằng cảm xúc nhất thời.)",
+      "vi_du_ruby": "子供のころ、<ruby>一時<rt>いちじ</rt></ruby>アメリカに住んでいたことがある。(Lúc tôi còn nhỏ, tôi đã từng sống ở Mỹ một thời gian.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "至急",
+      "doc": "しきゅう",
+      "doc_marked": "し**きゅう**",
+      "han_viet": "CHÍ CẤP",
+      "nghia": "khẩn cấp",
+      "vi_du": "この患者は至急病院へ運ぶ必要がある。(Bệnh nhân này cần được chuyển đến bệnh viện khẩn cấp.) 至急おいでください。(Vui lòng tới ngay lập tức.)",
+      "vi_du_ruby": "この患者は<ruby>至急<rt>しきゅう</rt></ruby>病院へ運ぶ必要がある。(Bệnh nhân này cần được chuyển đến bệnh viện khẩn cấp.)",
+      "dong_nghia": [
+        "直ちに"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "直ちに",
+      "doc": "ただちに",
+      "doc_marked": "ただちに",
+      "han_viet": "TRỰC",
+      "nghia": "trực tiếp, ngay lập tức, tức thì",
+      "vi_du": "事故の情報は直ちに社長に伝えられた。(Thông tin của vụ tai nạn ngay lập tức đã được lan truyền đến giám đốc.) 全員直ちに集合せよ。(Tất cả mọi người ngay lập tức tập hợp.)",
+      "vi_du_ruby": "事故の情報は<ruby>直<rt>ただ</rt></ruby>ちに社長に伝えられた。(Thông tin của vụ tai nạn ngay lập tức đã được lan truyền đến giám đốc.)",
+      "dong_nghia": [
+        "至急"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "早速",
+      "doc": "さっそく",
+      "doc_marked": "さっそく",
+      "han_viet": "TẢO TỐC",
+      "nghia": "nhanh chóng",
+      "vi_du": "新しいレストランができたので、さっそく行ってみた。(Quán mới vừa mở nên đã nhanh chóng đến xem thử.) ボーナスが出たので、さっそく新しい靴とスーツを買った。(Tiền thưởng vừa có tôi liền mua giày và bộ vét mới.)",
+      "vi_du_ruby": "新しいレストランができたので、さっそく行ってみた。(Quán mới vừa mở nên đã nhanh chóng đến xem thử.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "行き成り",
+      "doc": "いきなり",
+      "doc_marked": "いきなり",
+      "han_viet": "HÀNH THÀNH",
+      "nghia": "bất ngờ, tình lình, đột ngột",
+      "vi_du": "ノックもせずにいきなり部屋に入るのは失礼だ。(Không gõ cửa mà bất thình lình vào phòng là bất lịch sự.) いきなり道に飛び出すと、危ない。(Đột nhiên lao ra đường là nguy hiểm.) いきなり質問されて答えられなかった。(Bị hỏi bất ngờ nên không thể trả lời được.)",
+      "vi_du_ruby": "ノックもせずにいきなり部屋に入るのは失礼だ。(Không gõ cửa mà bất thình lình vào phòng là bất lịch sự.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "常に",
+      "doc": "つねに",
+      "doc_marked": "つねに",
+      "han_viet": "THƯỜNG",
+      "nghia": "thường xuyên",
+      "vi_du": "鈴木さんは常に努力を怠らない、素晴らしい学生だ。(Suzuki lúc nào cũng không sao lãng việc nỗ lực, đúng là học sinh tuyệt vời.) お客様には常に笑顔で接するように注意してください。(Hãy luôn chú ý tiếp đón khách hàng bằng nụ cười niềm nở.)",
+      "vi_du_ruby": "鈴木さんは<ruby>常<rt>つね</rt></ruby>に努力を怠らない、素晴らしい学生だ。(Suzuki lúc nào cũng không sao lãng việc nỗ lực, đúng là học sinh tuyệt vời.)",
+      "dong_nghia": [
+        "絶えず"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "絶えず",
+      "doc": "たえず",
+      "doc_marked": "たえず",
+      "han_viet": "TUYỆT",
+      "nghia": "liên tục",
+      "vi_du": "妹は体が弱くて、絶えず風邪を引いている。(Em gái tôi gầy yếu nên bị cảm liên tục.) うちの前の道路は絶えず車が走っている。(Con đường trước nhà tôi luôn có xe ô tô chạy.)",
+      "vi_du_ruby": "妹は体が弱くて、<ruby>絶<rt>た</rt></ruby>えず風邪を引いている。(Em gái tôi gầy yếu nên bị cảm liên tục.)",
+      "dong_nghia": [
+        "常に"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "屡々",
+      "doc": "しばしば",
+      "doc_marked": "しばしば",
+      "han_viet": "LŨ",
+      "nghia": "rất thường xuyên",
+      "vi_du": "年のせいか、しばしば物忘れをするようになった。(Không biết có phải do tuổi cao hay không mà bắt đầu hay quên đồ.) 私はいたずらっ子で、先生に怒られることもしばしばだった。(Tôi là một đứa trẻ nghịch ngợm nên thường làm cô giáo nổi nóng.)",
+      "vi_du_ruby": "年のせいか、しばしば物忘れをするようになった。(Không biết có phải do tuổi cao hay không mà bắt đầu hay quên đồ.)",
+      "dong_nghia": [
+        "度々",
+        "しょっちゅう"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "度々",
+      "doc": "たびたび",
+      "doc_marked": "たびたび",
+      "han_viet": "ĐỘ",
+      "nghia": "hay, nhiều lần, thường xuyên",
+      "vi_du": "田中さんとは仕事以外でもたびたび会うようになった。(Cũng thường hay gặp anh Tanaka kể cả lúc ngoài công việc.) 弟は失敗して落ち込むのはたびたびのことだ。(Em trai tôi thất bại và suy sụp là một chuyện thường xuyên.)",
+      "vi_du_ruby": "田中さんとは仕事以外でもたびたび会うようになった。(Cũng thường hay gặp anh Tanaka kể cả lúc ngoài công việc.)",
+      "dong_nghia": [
+        "屡々",
+        "しょっちゅう"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "しょっちゅう",
+      "doc": "しょっちゅう",
+      "doc_marked": "しょっ**ちゅう**",
+      "han_viet": "",
+      "nghia": "luôn luôn, thường xuyên",
+      "vi_du": "この道路のバスはしょっちゅう遅れるから困る。(Xe buýt đường này thường xuyên đến trễ thật rắc rối.)",
+      "vi_du_ruby": "この道路のバスはしょっちゅう遅れるから困る。(Xe buýt đường này thường xuyên đến trễ thật rắc rối.)",
+      "dong_nghia": [
+        "屡々",
+        "度々"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "偶に",
+      "doc": "たまに",
+      "doc_marked": "たまに",
+      "han_viet": "NGẪU",
+      "nghia": "thỉnh thoảng",
+      "vi_du": "最近運動不足なので、たまにたくさん歩くと疲れる。(Gần đây ít vận động nên thỉnh thoảng vận động nhiều chút là lại mệt.) この辺りは、雪はたまにしか降らない。(Ở vùng này, tuyết có lúc không rơi.) たまにはゆっくり話しましょう。(Thi thoảng hãy nói chuyện thong thả với nhau.) たまの休みにはゆっくりしたい。(Tôi muốn thư giãn ở dịp nghỉ thi thoảng này.)",
+      "vi_du_ruby": "最近運動不足なので、たまにたくさん歩くと疲れる。(Gần đây ít vận động nên thỉnh thoảng vận động nhiều chút là lại mệt.)",
+      "dong_nghia": [],
+      "trai_nghia": [
+        "滅多に"
+      ]
+    },
+    {
+      "kanji": "滅多に",
+      "doc": "めったに",
+      "doc_marked": "めったに",
+      "han_viet": "DIỆT ĐA",
+      "nghia": "hiếm khi",
+      "vi_du": "この辺りでは、雪はめったに降らない。(Ở vùng này tuyết hiếm khi rơi.) 彼が休むことはめったにない。(Anh ấy hiếm khi nghỉ.)",
+      "vi_du_ruby": "この辺りでは、雪はめったに降らない。(Ở vùng này tuyết hiếm khi rơi.)",
+      "dong_nghia": [],
+      "trai_nghia": [
+        "偶に"
+      ]
+    },
+    {
+      "kanji": "にこにこ・にっこり",
+      "doc": "にこにこ",
+      "doc_marked": "にこにこ",
+      "han_viet": "",
+      "nghia": "mỉm cười, cười mỉm",
+      "vi_du": "あの人はいつも愛想よく、にこにこしている。(Người đó dễ gần, lúc nào cũng cười tươi.) 彼女はにっこりと微笑んだ。(Cô ấy mỉm cười dịu dàng.)",
+      "vi_du_ruby": "あの人はいつも愛想よく、にこにこしている。(Người đó dễ gần, lúc nào cũng cười tươi.)",
+      "dong_nghia": [],
+      "trai_nghia": [
+        "にやにや・にやりと"
+      ]
+    },
+    {
+      "kanji": "にやにや・にやりと",
+      "doc": "にやにや",
+      "doc_marked": "にやにや",
+      "han_viet": "",
+      "nghia": "cười khỉnh, cười nham hiểm",
+      "vi_du": "何をニヤニヤしているんだ。気持ち悪い。(Cười khỉnh cái gì vậy, ghê quá.) 悪事が成功したときのことを想像して、彼はにやりと笑った。(Tưởng tượng đến chuyện việc ác sẽ thành công, anh ta cười nhếch mép.)",
+      "vi_du_ruby": "何をニヤニヤしているんだ。気持ち悪い。(Cười khỉnh cái gì vậy, ghê quá.)",
+      "dong_nghia": [],
+      "trai_nghia": [
+        "にこにこ・にっこり"
+      ]
+    },
+    {
+      "kanji": "どきどき・どきりと",
+      "doc": "どきどき",
+      "doc_marked": "どきどき",
+      "han_viet": "",
+      "nghia": "hồi hộp",
+      "vi_du": "緊張で胸がどきどきする。(Hồi hộp làm tim đập thình thịch.) 隠していたことを指摘されて、どきりとした。(Hồi hộp vì bị chỉ trích chuyện đã giấu diếm.)",
+      "vi_du_ruby": "緊張で胸がどきどきする。(Hồi hộp làm tim đập thình thịch.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "はらはら",
+      "doc": "はらはら",
+      "doc_marked": "はらはら",
+      "han_viet": "",
+      "nghia": "lo lắng, hồi hộp, xào xạc (tiếng lá rơi)",
+      "vi_du": "桜の花びらがはらはらと散った。(Những cánh hoa anh đào run rẫy rơi xuống.) 少女ははらはらと涙を流した。(Thiếu nữ run rẫy nước mắt tuôn ra.) 綱渡りを見ながらはらはらした。(Vừa nhìn đi trên dây vừa lo sợ.)",
+      "vi_du_ruby": "桜の花びらがはらはらと散った。(Những cánh hoa anh đào run rẫy rơi xuống.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "かんかん",
+      "doc": "かんかん",
+      "doc_marked": "かんかん",
+      "han_viet": "",
+      "nghia": "bực mình, nổi cáu, phát điên, điên tiết",
+      "vi_du": "お父さん、怒ってる？かんかんだよ。(Bố đang giận à? Ầm ầm lên đấy!) かんかんになって怒る。(Nổi giận ầm ầm.) 真夏の太陽がかんかん照り付ける。(Mặt trời giữa mùa hè thiêu đốt khốc liệt.)",
+      "vi_du_ruby": "お父さん、怒ってる？かんかんだよ。(Bố đang giận à? Ầm ầm lên đấy!)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "びしょびしょ・びっしょり",
+      "doc": "びしょびしょ",
+      "doc_marked": "びしょびしょ",
+      "han_viet": "",
+      "nghia": "ẩm ướt",
+      "vi_du": "洗面台の周りがびしょびしょだ。(Xung quanh bồn rửa ướt sũng.) にわか雨に降られ、びっしょりぬれてしまった。(Bị cơn mưa bất chợt làm ướt như chuột lột.) 私は暑がりなので、ちょっと運動しただけで汗びっしょりになる。(Tôi là người mẫn cảm với cái nóng nên vận động một chút thôi là đẫm mồ hôi rồi.)",
+      "vi_du_ruby": "洗面台の周りがびしょびしょだ。(Xung quanh bồn rửa ướt sũng.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "うろうろ",
+      "doc": "うろうろ",
+      "doc_marked": "う**ろう**ろ",
+      "han_viet": "",
+      "nghia": "vòng vòng; đi đi lại lại; quanh quẩn, lảng vảng",
+      "vi_du": "友人の家の場所が分からず、30分もうろうろ歩き回った。(Không biết nhà bạn ở đâu nên đi lòng vòng mất 30 phút.) 怪しい男が家の周りをうろうろしている。(Người đàn ông lạ đáng nghi cứ đi lòng vòng quanh nhà.)",
+      "vi_du_ruby": "友人の家の場所が分からず、30分もうろうろ歩き回った。(Không biết nhà bạn ở đâu nên đi lòng vòng mất 30 phút.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "のろのろ",
+      "doc": "のろのろ",
+      "doc_marked": "のろのろ",
+      "han_viet": "",
+      "nghia": "chậm rãi, chậm như sên",
+      "vi_du": "渋滞で、車はのろのろとしか進まなかった。(Do tắc nghẽn nên ô tô chỉ tiến chậm rãi.) 老人はのろのろ立ち上がった。(Người già đứng lên chầm chậm.) 時間はのろのろ過ぎていった。(Thời gian trôi chầm chậm.)",
+      "vi_du_ruby": "渋滞で、車はのろのろとしか進まなかった。(Do tắc nghẽn nên ô tô chỉ tiến chậm rãi.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ふらふら",
+      "doc": "ふらふら",
+      "doc_marked": "ふらふら",
+      "han_viet": "",
+      "nghia": "chóng mặt, khập khiễng, lung lay, dao động",
+      "vi_du": "熱で頭がふらふらする。(Do cảm nên đầu choáng váng.) 向こうから、ふらふら人が歩いてくる。(Từ phía trước một người đi khập khễnh đang tiến tới.) 彼は考え方がふらふらしていて、ちょっと信用できない。(Cách suy nghĩ anh ấy khập khễnh, có chút không thể tin được.) 空腹のあまり、ついふらふらと万引きしてしまった。(Do bụng đói, nên đã lỡ ăn cắp ở cửa hàng.)",
+      "vi_du_ruby": "熱で頭がふらふらする。(Do cảm nên đầu choáng váng.)",
+      "dong_nghia": [
+        "ぶらぶら"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ぶらぶら",
+      "doc": "ぶらぶら",
+      "doc_marked": "ぶらぶら",
+      "han_viet": "",
+      "nghia": "đung đưa, quanh quẩn, ngồi không",
+      "vi_du": "折れた木の枝がぶらぶら揺れている。(Cành cây bị gãy đang đong đưa.) 暇だったので、近所をぶらぶらした。(Rảnh rỗi nên đi lòng vòng quanh xóm.) 先月失業し、今は家でぶらぶらしている。(Tháng trước thất nghiệp nên bây giờ ở nhà ăn không ngồi rồi.)",
+      "vi_du_ruby": "折れた木の枝がぶらぶら揺れている。(Cành cây bị gãy đang đong đưa.)",
+      "dong_nghia": [
+        "ふらふら"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "だが",
+      "doc": "だが",
+      "doc_marked": "だが",
+      "han_viet": "",
+      "nghia": "tuy nhiên",
+      "vi_du": "必死に勉強した。だが、不合格だった。(Quyết tâm học vậy mà vẫn trượt.) あの歌手は声はいい。だが、歌はあまり上手ではない。(Ca sĩ này giọng hay nhưng hát không hay lắm.)",
+      "vi_du_ruby": "必死に勉強した。だが、不合格だった。(Quyết tâm học vậy mà vẫn trượt.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "然も",
+      "doc": "しかも",
+      "doc_marked": "しかも",
+      "han_viet": "NHIÊN",
+      "nghia": "hơn nữa, ngoài ra",
+      "vi_du": "この辺りの夏は気温が高く、しかも湿度も高い。(Mùa hè vùng này nhiệt độ rất cao, hơn nữa độ ẩm cũng cao.) 彼女は18歳で司法試験に合格した。しかも、1回で。(Cô ấy đỗ kì thi tư pháp khi 18 tuổi, hơn nữa chỉ cần 1 lần thi.)",
+      "vi_du_ruby": "この辺りの夏は気温が高く、しかも湿度も高い。(Mùa hè vùng này nhiệt độ rất cao, hơn nữa độ ẩm cũng cao.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "すると",
+      "doc": "すると",
+      "doc_marked": "すると",
+      "han_viet": "",
+      "nghia": "lập tức thì; ngay, thế mà, vậy mà",
+      "vi_du": "カーテンを開けた。すると、目の前に海が見えた。(Mở rèm cửa ra, ngay lập tức có thể nhìn thấy biển trước mắt.) その時間には、家で寝ていました。すると、事件現場にはいなかったわけですね。(\"Vào thời gian đó, nhà tôi đang ngủ.\" \"Như vậy, không có mặt tại hiện trường vụ tai nạn đúng không.\")",
+      "vi_du_ruby": "カーテンを開けた。すると、目の前に海が見えた。(Mở rèm cửa ra, ngay lập tức có thể nhìn thấy biển trước mắt.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "だって",
+      "doc": "だって",
+      "doc_marked": "だって",
+      "han_viet": "",
+      "nghia": "bởi vì; chả là",
+      "vi_du": "どうして食べないの？だって、嫌いなんだもん。(\"Tại sao lại không ăn?\" \"Tại em không thích\") どうして喧嘩したんだ？だって、あいつ、人の嫌がることばっかりするんだ。(\"Tại sao lại cãi nhau\" \"Tại nó cứ làm những chuyện người khác ghét\")",
+      "vi_du_ruby": "どうして食べないの？だって、嫌いなんだもん。(\"Tại sao lại không ăn?\" \"Tại em không thích\")",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "或は",
+      "doc": "あるいは",
+      "doc_marked": "あるいは",
+      "han_viet": "HOẶC",
+      "nghia": "hoặc, có lẽ",
+      "vi_du": "この書類にはサイン、あるいは印鑑が必要だ。(Tài liệu này cần có chữ kí hay con dấu.) 犯人はAあるいはBであると思われる。(Tội phạm được nghĩ là A hoặc B.) この揺れは、あるいは大地震の前兆かもしれない。(Cơn rung này có thể là điềm báo cho trận động đất lớn.)",
+      "vi_du_ruby": "この書類にはサイン、あるいは印鑑が必要だ。(Tài liệu này cần có chữ kí hay con dấu.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "さて",
+      "doc": "さて",
+      "doc_marked": "さて",
+      "han_viet": "",
+      "nghia": "và bây giờ; và sau đây, vậy",
+      "vi_du": "これで文法の説明を終わります。さて、次は聴解です。(Kết thúc phần giải thích ngữ pháp, tiếp theo là nghe.)",
+      "vi_du_ruby": "これで文法の説明を終わります。さて、次は聴解です。(Kết thúc phần giải thích ngữ pháp, tiếp theo là nghe.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "では",
+      "doc": "では",
+      "doc_marked": "では",
+      "han_viet": "",
+      "nghia": "thế thì, trong trường hợp đó",
+      "vi_du": "皆さん、お集まりですね。では出発しましょう！(Mọi người đã tập hợp đông đủ rồi nhỉ, thế thì chúng ta xuất phát thôi.) 今日のテーマは江戸時代の文化についてです。では、佐藤先生、お願いします。(Chủ đề hôm nay là về văn hóa thời kì Edo, xin mời cô Satou.)",
+      "vi_du_ruby": "皆さん、お集まりですね。では出発しましょう！(Mọi người đã tập hợp đông đủ rồi nhỉ, thế thì chúng ta xuất phát thôi.)",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "所で",
+      "doc": "ところで",
+      "doc_marked": "ところで",
+      "han_viet": "SỞ",
+      "nghia": "thế còn, nhân tiện",
+      "vi_du": "今日はお疲れ様でした。ところで、今晩の予定は？(Cảm ơn em đã vất vả hôm nay, nhân tiện dự định tối nay là gì?)",
+      "vi_du_ruby": "今日はお疲れ様でした。ところで、今晩の予定は？(Cảm ơn em đã vất vả hôm nay, nhân tiện dự định tối nay là gì?)",
+      "dong_nghia": [
+        "そう言えば"
+      ],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "そう言えば",
+      "doc": "そういえば",
+      "doc_marked": "**そう**いえば",
+      "han_viet": "NGÔN",
+      "nghia": "nghĩ kỹ thì, nói mới nhớ",
+      "vi_du": "同窓会の場所、予約しました。ありがとう、そういえば、山口先生が本を出されたそうですよ。知ってました？(Mình đặt chỗ cho buổi tiệc cùng lớp rồi. Cảm ơn nhé, à nói vậy thầy Yamaguchi đã ra sách rồi đấy, đã biết chưa?)",
+      "vi_du_ruby": "同窓会の場所、予約しました。ありがとう、そういえば、山口先生が本を出されたそうですよ。知ってました？(Mình đặt chỗ cho buổi tiệc cùng lớp rồi. Cảm ơn nhé, à nói vậy thầy Yamaguchi đã ra sách rồi đấy, đã biết chưa?)",
+      "dong_nghia": [
+        "所で"
+      ],
+      "trai_nghia": []
+    }
+  ]
+}

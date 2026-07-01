@@ -1,0 +1,48 @@
+{
+  "type": "NGUPHAP",
+  "title": "Mẫu ngữ pháp N2 (demo cấu trúc)",
+  "words": [
+    {
+      "cautruc": "～にもかかわらず",
+      "doc": "～にもかかわらず",
+      "han_viet": "(không có)",
+      "nghia": "mặc dù..., dù... vẫn (nhấn mạnh sự bất ngờ/đối nghịch hơn のに)",
+      "muc_do": "Trang trọng (văn viết, văn bản chính thức)",
+      "cau_truc_ngu_phap": "N / Vる・Vた / Aい / Aな + にもかかわらず",
+      "vi_du": "<ruby>悪天候<rt>あくてんこう</rt></ruby>にもかかわらず、試合は行われた。(Mặc dù thời tiết xấu, trận đấu vẫn được diễn ra.)",
+      "so_sanh_de_nham": [
+        {"cautruc": "～のに", "khac_biet": "のに mang sắc thái cảm xúc cá nhân (bất mãn, ngạc nhiên) nhiều hơn, dùng cả văn nói; にもかかわらず khách quan, trang trọng hơn, hay dùng văn viết."}
+      ],
+      "dong_nghia": ["～ものの"],
+      "trai_nghia": []
+    },
+    {
+      "cautruc": "～ものの",
+      "doc": "～ものの",
+      "han_viet": "(không có)",
+      "nghia": "tuy... nhưng..., mặc dù... (vế sau thường là kết quả không như mong đợi)",
+      "muc_do": "Trung lập, dùng được cả văn nói lịch sự và văn viết",
+      "cau_truc_ngu_phap": "Vる・Vた / Aい / Aな(である) / Nである + ものの",
+      "vi_du": "<ruby>合格<rt>ごうかく</rt></ruby>したものの、まだ実感がない。(Tuy đã đỗ rồi nhưng vẫn chưa cảm thấy thực sự.)",
+      "so_sanh_de_nham": [
+        {"cautruc": "～にもかかわらず", "khac_biet": "ものの thiên về cảm giác cá nhân của người nói về một kết quả chưa trọn vẹn; にもかかわらず khách quan và trang trọng hơn."}
+      ],
+      "dong_nghia": ["～にもかかわらず", "～が"],
+      "trai_nghia": []
+    },
+    {
+      "cautruc": "～さえ～ば",
+      "doc": "～さえ～ば",
+      "han_viet": "(không có)",
+      "nghia": "chỉ cần... thì... (nhấn mạnh điều kiện tối thiểu, đủ để dẫn đến kết quả)",
+      "muc_do": "Trung lập, dùng phổ biến cả văn nói và văn viết",
+      "cau_truc_ngu_phap": "N + さえ + Vば / Aければ / Aなら",
+      "vi_du": "あなたが<ruby>来<rt>き</rt></ruby>てくれさえすれば、私は安心です。(Chỉ cần bạn đến thì tôi sẽ yên tâm.)",
+      "so_sanh_de_nham": [
+        {"cautruc": "～だけで", "khac_biet": "さえば nhấn mạnh điều kiện tối thiểu cần và đủ; だけで chỉ đơn thuần nói về phạm vi/mức độ, không nhấn điều kiện giả định."}
+      ],
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

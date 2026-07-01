@@ -1,0 +1,573 @@
+{
+  "id": "choukai-01",
+  "title": "聴解 1 (JLPT N2 2011/07)",
+  "year": "2011/07",
+  "audioMode": "combined",
+  "audioFile": "聴解 1.m4a",
+  "audioFiles": null,
+  "mondai": [
+    {
+      "number": 1,
+      "name": "課題理解",
+      "instruction": "Nghe câu hỏi trước, sau đó nghe đoạn hội thoại, chọn hành động ĐÚNG cần làm tiếp theo trong 4 lựa chọn.",
+      "questions": [
+        {
+          "qnum": 1,
+          "prompt": "女の人はこれから何をしますか。",
+          "options": [
+            "しりょうをじゅんびする",
+            "パンフレットを用意する",
+            "めいしを注文する",
+            "電子じしょを買う"
+          ],
+          "correctIndex": 1,
+          "script": "会社で女の人と男の人が話しています。女の人はこれから何をしますか。\n女:先輩、来週、海外出張なんですが、特に知っておいたほうがいいことってありますか。\n男:会議の資料の準備はできてるんだよね。\n女:はい。\n男:会社のパンフレット、持った?\n女:あっ、そうだ、うっかりしてました。\n男:それと、名刺は多めに持って行ったほうがいいよ。前に足りなくなって、慌てて向こうでコピーしたことがあるから。\n女:あっ、それは、私も一度失敗したことがあるので、今回はばっちりです。\n男:後、電子辞書はもってたよね。\n女:はい、大丈夫です。\n女の人はこれから何をしますか。",
+          "scriptVi": "Hai người đang nói chuyện ở công ty. Cô gái sắp tới phải làm gì?\nNữ: Anh ơi, tuần sau em đi công tác nước ngoài, có gì cần lưu ý đặc biệt không anh?\nNam: Tài liệu họp chuẩn bị xong rồi chứ?\nNữ: Rồi anh.\nNam: Tờ rơi giới thiệu công ty mang chưa?\nNữ: Ấy, đúng rồi, em quên mất.\nNam: Với cả nên mang nhiều danh thiếp một chút, trước có lần anh bị thiếu, phải vội vàng photo ở bên đó.\nNữ: À cái đó thì em từng thất bại một lần rồi nên lần này chuẩn bị kỹ rồi.\nNam: Còn từ điển điện tử mang chưa?\nNữ: Có rồi anh, không sao.\nCô gái sắp tới phải làm gì?",
+          "tip": "Bẫy: cô gái nói \"chuẩn bị tài liệu rồi\", \"danh thiếp đã chuẩn bị kỹ\", \"từ điển có rồi\" — tất cả đều ĐÃ XONG. Chỉ có pamphlet (パンフレット) là cô vừa nhớ ra MÌNH CHƯA LÀM (うっかりしてました). Nghe kỹ phần phản ứng \"あっ、そうだ\" — đó là tín hiệu chốt đáp án."
+        },
+        {
+          "qnum": 2,
+          "prompt": "男の学生は最初に何をしなければなりませんか。",
+          "options": [
+            "先生の都合を聞く",
+            "論文をコピーする",
+            "勉強会の日を決める",
+            "教室を予約する"
+          ],
+          "correctIndex": 2,
+          "script": "大学で、女の学生と男の学生が話しています。男の学生は最初に何をしなければなりませんか。\n女:夏休み中、ゼミないけど、休みの間も、引き続きみんなで集まって勉強しない?先生は出張でいらっしゃらないから。ゼミの学生だけで、論文を読んだりしましょう?\n男:はい、ぜひ、みんなもやりたいって言ってました。ええーと、論文はどうしましょうか。\n女:まずは、先週先生が紹介してくださった論文を読みましょうよ。それでいいなら、私、もう持って出てるから、大丈夫。\n男:コピーしたりするのは、僕、やります。\n女:コピーは人数が決まってからでいいから、それより日程を調整して?\n男:はい、分かりました。みんなにメールしてみます。\n女:うん、よろしく。で、日程が固まり次第、教室確保しておいてもらえる?\n男:はい、分かりました。\n男の学生は最初に何をしなければなりませんか。",
+          "scriptVi": "Hai sinh viên đang nói chuyện ở trường. Nam sinh phải làm gì TRƯỚC TIÊN?\nNữ: Nghỉ hè không có buổi seminar, nhưng trong lúc nghỉ mình có muốn tiếp tục tụ tập học nhóm không? Thầy đi công tác không có ở đây, chỉ có sinh viên trong nhóm tự đọc luận văn với nhau thôi.\nNam: Vâng, mọi người cũng muốn làm vậy đó. Luận văn thì mình tính sao đây?\nNữ: Trước tiên đọc luận văn thầy giới thiệu tuần trước đi. Nếu được vậy thì mình đã mang theo rồi, không cần lo.\nNam: Việc photo để em làm.\nNữ: Photo thì để khi nào biết số người rồi làm cũng được, quan trọng hơn là sắp xếp ngày họp đi?\nNam: Vâng, em hiểu rồi. Em sẽ gửi mail cho mọi người.\nNữ: Ừ, nhờ em nhé. Khi nào chốt được ngày thì giữ phòng học giúp luôn nha.\nNam: Vâng, em hiểu rồi.\nNam sinh phải làm gì trước tiên?",
+          "tip": "Câu hỏi hỏi việc làm ĐẦU TIÊN — có 3 việc được nhắc tới (copy, hẹn ngày, đặt phòng) nhưng nữ sinh chốt rõ \"それより日程を調整して\" (quan trọng hơn là chốt ngày trước) — copy để sau, đặt phòng để sau khi có ngày. Dạng bài này luôn có nhiều việc bị nhắc tới, phải tìm đúng thứ tự ưu tiên qua từ như \"まず/それより/その前に\"."
+        },
+        {
+          "qnum": 3,
+          "prompt": "留学生はこの後、何をしなければなりませんか。",
+          "options": [
+            "げんこうに自分の経験を入れる",
+            "早く話す練習をする",
+            "げんこうを短くする",
+            "げんこうの表現をやさしくする"
+          ],
+          "correctIndex": 2,
+          "script": "男の先生と中学生が話しています。留学生はこの後、何をしなければなりませんか。\n先生:この間、出してもらったスピーチコンテストの原稿だけどね。\n学生:あっ、はい、どうでしたか。\n先生:うん、「地球を守るためにできること」っていうテーマは面白いね。自分の経験から話し始めるのはなかなかいいと思うよ。\n学生:ありがとうございます。\n先生:でも、スピーチは五分だったよね。\n学生:はい。\n先生:じゃ、よほど早口で話さないと無理だよ。やっぱり長すぎるなあ。\n学生:あぁ、そうですか。じゃ、書き直してみます。あのう、文法、自信なかったんですけど。\n先生:うん。特に、目に付く間違いなかったんですね。まあ、少し硬い表現もあるけど。このぐらいはいいね。\n留学生はこの後、何をしなければなりませんか。",
+          "scriptVi": "Thầy giáo và học sinh đang nói chuyện. Du học sinh phải làm gì tiếp theo?\nThầy: Bài bản thảo thi hùng biện em nộp hôm trước.\nHS: Vâng, thầy thấy sao?\nThầy: Ừ, đề tài \"Những điều có thể làm để bảo vệ Trái Đất\" hay đó. Bắt đầu bằng kinh nghiệm bản thân cũng khá tốt.\nHS: Em cảm ơn thầy.\nThầy: Nhưng bài nói chỉ có 5 phút đúng không?\nHS: Vâng.\nThầy: Vậy thì phải nói rất nhanh mới kịp đấy. Đúng là dài quá rồi.\nHS: À, vậy ạ. Em sẽ viết lại. À thầy, ngữ pháp em không tự tin lắm...\nThầy: Ừ, không có lỗi nào nổi bật đặc biệt đâu. Có vài cách diễn đạt hơi cứng nhưng mức này được rồi.\nDu học sinh phải làm gì tiếp theo?",
+          "tip": "Thầy chê bài nói \"dài quá\" (長すぎる) — đây là vấn đề CHÍNH cần sửa. Ngữ pháp thầy nói \"mức này ổn rồi\" (このぐらいはいいね) tức là KHÔNG cần sửa ngữ pháp — đáp án 4 là bẫy. Phần kinh nghiệm bản thân được khen \"khá tốt\" nên giữ nguyên, không phải bỏ."
+        },
+        {
+          "qnum": 4,
+          "prompt": "女の人は全部でいくら支払いますか。",
+          "options": [
+            "2500円",
+            "3000円",
+            "3500円",
+            "4000円"
+          ],
+          "correctIndex": 1,
+          "script": "映画館の窓口で、女の人は料金について聞いています。女の人は全部でいくら支払いますか。\n女:すみません、大人二人、子供二人なんですが、あのう、チケットで、いくらですか。\n男:大人が一枚千円、四歳以上、十五歳以下のお子様は大人の半額になります。\n女:じゃあ、上の子は六歳だから、五百円ですね。下の子は三歳なので無料ですか。\n男:はい、四歳未満のお子様でお席をご使用にならない場合はチケットは必要ございません。お席をお使いになる場合は子供料金をいただいております。\n女:膝に乗せていればいいってことですね。\n男:はい、そうです。\n女:ずうっとだっこしているのはちょっとつらいかなあ、いいや、五百円だし、この子の分もお願いします。\n男:はい。かしこまりました。では、チケットは全部で四枚ですね。\n女:はい。それは...\n女の人は全部でいくら支払いますか。",
+          "scriptVi": "Ở quầy rạp chiếu phim, người phụ nữ hỏi về giá vé. Cô phải trả tổng cộng bao nhiêu tiền?\nNữ: Cho hỏi, 2 người lớn 2 trẻ em, vé giá bao nhiêu vậy?\nNam: Người lớn 1000 yên/vé, trẻ từ 4-15 tuổi được giảm nửa giá.\nNữ: Vậy bé lớn 6 tuổi là 500 yên đúng không. Bé nhỏ 3 tuổi thì miễn phí?\nNam: Vâng, trẻ dưới 4 tuổi nếu không ngồi ghế riêng thì không cần vé. Nếu ngồi ghế riêng thì tính giá trẻ em.\nNữ: Tức là bế trên đùi thì được phải không?\nNam: Vâng, đúng vậy.\nNữ: Bế suốt cũng mệt đấy... thôi, 500 yên thôi, cho bé này một vé luôn.\nNam: Vâng. Vậy tổng cộng 4 vé.\nNữ: Vâng. À mà...\nCô phải trả tổng cộng bao nhiêu tiền?",
+          "tip": "Bẫy số học: 2 người lớn = 2000y, bé 6 tuổi = 500y (nửa giá người lớn). Bé 3 tuổi LẼ RA miễn phí (dưới 4 tuổi không cần vé) NHƯNG cô quyết định mua vé cho bé luôn để có ghế riêng = thêm 500y. Tổng: 2000+500+500 = 3000y. Phải nghe tới câu cuối cùng \"この子の分もお願いします\" mới ra đáp án đúng — nếu dừng nghe sớm sẽ chọn nhầm 2500y."
+        },
+        {
+          "qnum": 5,
+          "prompt": "女の人はこの後まず何をしなければなりませんか。",
+          "options": [
+            "しりょうをかくにんする",
+            "メールでしりょうを送る",
+            "けいたい電話にれんらくする",
+            "会議に出席する"
+          ],
+          "correctIndex": 0,
+          "script": "会社で男の人と女の人が話しています。女の人はこの後まず何をしなければなりませんか。\n男:あしたの東事務所との打ち合わせのことなんけれど、僕、その前に別の会議が入ってて、少し遅れるかもしれないんだ。その時は、悪いけど、先に話を進めといてくれないかな。\n女:あっ、はい、この前の続きからということでよろしいでしょうか。\n男:うん。メールで資料が届いてたんだけど、特に変更点なんかはなかったね。でも確認はしといて。\n女:えっ、私のところにはメール、届いてませんけど。\n男:えっ、そうなの?じゃあ、急いで送るよ。\n女:お願いします。すぐ見ておきますよ。\n男:そんなに遅くなることはないと思うけど。何かあったら、携帯のほうに連絡して。じゃよろしくね。\n女の人はこの後まず何をしなければなりませんか。",
+          "scriptVi": "Hai người nói chuyện ở công ty. Cô gái phải làm gì TRƯỚC TIÊN sau đây?\nNam: Về buổi họp với văn phòng Đông ngày mai, anh có cuộc họp khác trước đó nên có thể sẽ trễ một chút. Lúc đó em chịu khó tiến hành phần trước giúp anh nhé.\nNữ: À vâng, tiếp tục từ lần trước đúng không anh?\nNam: Ừ. Tài liệu đã gửi qua mail rồi, không có gì thay đổi đặc biệt, nhưng em xác nhận lại giúp anh.\nNữ: Ơ, em chưa nhận được mail nào cả.\nNam: Ơ, thật á? Vậy anh gửi gấp luôn đây.\nNữ: Vâng, em sẽ xem ngay khi nhận được.\nNam: Anh nghĩ không trễ lắm đâu. Có gì thì liên lạc qua điện thoại anh nhé.\nCô gái phải làm gì trước tiên?",
+          "tip": "Thứ tự thật: anh gửi lại mail → cô NHẬN mail → cô XÁC NHẬN tài liệu. Việc \"gửi mail\" là do NAM làm, không phải nữ — đáp án 2 sai chủ thể. Hành động ĐẦU TIÊN của cô (sau khi nhận mail) là kiểm tra/xác nhận tài liệu (確認はしといて)."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "name": "ポイント理解",
+      "instruction": "Nghe câu hỏi trước, có thời gian đọc 4 lựa chọn, sau đó nghe hội thoại rồi chọn đúng điểm/lý do được hỏi.",
+      "questions": [
+        {
+          "qnum": 1,
+          "prompt": "男の学生はどうしてきのう隣の部屋の人に怒られたと言っていますか。",
+          "options": [
+            "音楽がうるさかったから",
+            "ドアの音が大きかったから",
+            "話し声がうるさかったから",
+            "テレビの音が大きかったから"
+          ],
+          "correctIndex": 1,
+          "script": "男の学生と女の学生が話しています。男の学生はどうしてきのう隣の部屋の人に怒られたと言っていますか。\n男:きのう、アパートの隣の部屋の人に怒られちゃったんだよ。\n女:えっ、どうして?大きな音で音楽でも聴いてたの?\n男:いや、ドアの音だね。きのうは帰りは遅くなっちゃったから、注意して閉めたつもりだったんだけど。隣、赤ちゃんがいるんだよね。\n女:そうなんだ。\n男:遅い時間には、特に気をつけているんだ。テレビの音だって小さめにするようにしているんだよね。友達が来た時なんかも話し声が大きくなりすぎないようにしているし。\n女:そう。きのうはきっと何かタイミング悪かったんでしょうね。\n男の学生はどうしてきのう隣の部屋の人に怒られたと言っていますか。",
+          "scriptVi": "Hai sinh viên nói chuyện. Vì sao nam sinh nói hôm qua bị người phòng bên cạnh giận?\nNam: Hôm qua tôi bị người phòng bên cạnh ở chung cư giận đó.\nNữ: Ơ, sao vậy? Nghe nhạc to à?\nNam: Không, là tiếng đóng cửa. Hôm qua về trễ nên tôi tưởng mình đã đóng cẩn thận rồi. Bên đó có em bé nữa.\nNữ: Vậy à.\nNam: Tôi luôn cẩn thận lúc khuya. TV cũng để nhỏ, lúc bạn tới chơi cũng để ý không nói chuyện to.\nNữ: Vậy hôm qua chắc tại thời điểm không may thôi.\nVì sao nam sinh nói hôm qua bị giận?",
+          "tip": "Các lựa chọn nhạc/TV/nói chuyện to đều bị nam sinh PHỦ NHẬN rõ (luôn cẩn thận những việc đó). Chỉ có tiếng đóng cửa (ドアの音) là việc XẢY RA thật hôm qua dù anh tưởng đã cẩn thận. Mẹo: khi 1 câu liệt kê nhiều khả năng rồi lần lượt phủ định gần hết, đáp án thường là cái còn lại chưa bị phủ định."
+        },
+        {
+          "qnum": 2,
+          "prompt": "男の学生はどうしてこの美容院が気に入っていますか。",
+          "options": [
+            "店が便利な場所にあるから",
+            "店員が話し上手だから",
+            "店員がうるさく話しかけないから",
+            "店員がかみを切るのがうまいから"
+          ],
+          "correctIndex": 2,
+          "script": "女の学生と男の学生が美容院について話しています。男の学生はどうしてこの美容院が気に入っていますか。\n女:吉田君、駅前の美容院に行ってるって言ってたよね。\n男:うん。\n女:私も行ってみようかなと思ってるんだけど。どう?\n男:俺は気に入ってるよ。でも、駅前にあるからか、いつも込んでて結構待つよ。あ、後なんか店員が無口で冷たい感じがするって嫌がる人もいるみたいだね。\n女:そうなんだ。じゃ、吉田君はどうしてあの店がいいの?\n男:うーん。美容院ってたいていどこでも髪切ってる間、お店の人がいろいろと話しかけてくるだろう?俺、あれ、苦手なんだよね。一人で本でも読んでるほうが気楽なんだ。話好きな店員がいるとこは、なんか疲れちゃうんだよ。\n女:ふうーん。私もお店の人とのお喋り、好きだな。最近の流行の話も聞けるし。\n男:そっか。じゃあ、ほかの店のほうがいいかもしれない。あそこ、特別うまいってわけでもないよ。\n男の学生はどうしてこの美容院が気に入っていますか。",
+          "scriptVi": "Hai sinh viên nói về tiệm cắt tóc. Vì sao nam sinh thích tiệm cắt tóc này?\nNữ: Yoshida nói là đi tiệm trước nhà ga đúng không?\nNam: Ừ.\nNữ: Tôi cũng đang định thử đi, sao vậy?\nNam: Tôi thích đó. Nhưng vì gần nhà ga nên lúc nào cũng đông, phải đợi lâu. Có người ghét vì nhân viên ít nói, có cảm giác lạnh lùng.\nNữ: Vậy à. Sao Yoshida lại thích tiệm đó?\nNam: Ừm, tiệm cắt tóc nào cũng vậy, trong lúc cắt nhân viên hay bắt chuyện đúng không? Tôi ngại cái đó. Một mình đọc sách thoải mái hơn. Tiệm nào có nhân viên hay nói chuyện làm tôi mệt.\nNữ: Ồ, tôi lại thích nói chuyện với nhân viên đó, nghe được chuyện thời sự nữa.\nNam: Vậy à. Thì có khi tiệm khác hợp với bạn hơn. Tiệm đó cũng không phải cắt đặc biệt giỏi gì đâu.\nVì sao nam sinh thích tiệm này?",
+          "tip": "Câu cuối nam sinh tự nói rõ \"あそこ、特別うまいってわけでもない\" (tiệm đó cắt KHÔNG đặc biệt giỏi) → loại ngay đáp án 4. Lý do chính được nói dài nhất: anh không thích bị bắt chuyện, thích sự im lặng → đáp án 3."
+        },
+        {
+          "qnum": 3,
+          "prompt": "パーティーの会場が変更になった理由は何ですか。",
+          "options": [
+            "料理の味がよくないから",
+            "ふんいきがよくないから",
+            "料金が高いから",
+            "会場がせまいから"
+          ],
+          "correctIndex": 3,
+          "script": "会社で女の人と男の人が話しています。パーティーの会場が変更になった理由は何ですか。\n女:田中先生の出版記念パーティーの会場、レストランはやめて、ホテルに変更したんだって。\n男:そうなんだ。\n女:あのレストラン、田中先生のお気に入りじゃなかった?\n男:うん。味も雰囲気もいいしね。できれば、あの店にしたかったんだけど。\n女:えっ、予算オーバーしちゃったの。\n男:いや、お店の人がだいぶ値引してくれて、予算内になんとか収まったんだ。でも、結局参加者が増えて、百人超えちゃったんだ。\n女:それじゃあ、あのレストランじゃ。\n男:そうなんだよ。入れないことはないんだけど、ぎゅうぎゅうになっちゃうから。\n女:まあ、せっかくのお祝いだから、大きいところで派手にやったほうがいいよね。それにあのホテル、料理もなかなか評判がいいしね。\nパーティーの会場が変更になった理由は何ですか。",
+          "scriptVi": "Hai người nói chuyện ở công ty. Vì sao địa điểm tiệc bị đổi?\nNữ: Nghe nói tiệc ra mắt sách của thầy Tanaka đổi từ nhà hàng sang khách sạn rồi.\nNam: Vậy à.\nNữ: Nhà hàng đó không phải thầy Tanaka thích sao?\nNam: Ừ, vị ngon, không khí cũng tốt. Nếu được thì vẫn muốn chọn quán đó.\nNữ: Ơ, vượt ngân sách à?\nNam: Không, quán đó giảm giá nhiều nên vẫn nằm trong ngân sách. Nhưng cuối cùng số người tham gia tăng, vượt quá 100 người.\nNữ: Vậy thì nhà hàng đó...\nNam: Đúng vậy đó. Không phải không chứa được, nhưng sẽ rất chật chội.\nNữ: Thôi, dù sao cũng là tiệc mừng, làm ở chỗ rộng cho hoành tráng cũng tốt. Khách sạn đó món ăn cũng được đánh giá khá tốt.\nVì sao địa điểm tiệc bị đổi?",
+          "tip": "Giá cả KHÔNG vượt ngân sách (đã được giảm giá) → loại đáp án 3. Vị và không khí được khen tốt → loại 1,2. Lý do thật: số khách vượt 100 người, nhà hàng cũ sẽ \"ぎゅうぎゅう\" (chật chội) → đáp án 4 (せまい = chật/nhỏ)."
+        },
+        {
+          "qnum": 4,
+          "prompt": "男の学生の今日の体調はどうですか。",
+          "options": [
+            "熱が高い",
+            "せきが出る",
+            "頭が痛い",
+            "はきけがする"
+          ],
+          "correctIndex": 1,
+          "script": "電話で女の学生と男の学生が話しています。男の学生の今日の体調はどうですか。\n女:もしもし、池田君、おはよう。\n男:おはよう。\n女:風邪の具合はどう?きょうは、授業、出られそう?\n男:うん、きのうの夜にはもう熱が下がったんだけど。まだ二三日は人に移る可能性があるからってお医者さんに言われたんだ。\n女:そう?\n男:僕自身はもう元気だから、早く学校に行きたいんだけどね。まだせきが残っているんだ。結構風邪はつらかったから。みんなに移したら悪いと思って。\n女:そうなんだ。\n男:うん。頭が痛いし、吐き気はするし。風邪の症状を一通り全部やったって感じだったよ。\n女:たいへんだったね。授業のノートは取っとくから、心配しなくてもいいよ。じゃ、お大事に。\n男の学生の今日の体調はどうですか。",
+          "scriptVi": "Hai sinh viên nói chuyện qua điện thoại. Tình trạng sức khỏe HÔM NAY của nam sinh thế nào?\nNữ: Alo, Ikeda, chào buổi sáng.\nNam: Chào.\nNữ: Cảm cúm sao rồi? Hôm nay đi học được không?\nNam: Ừ, tối qua hạ sốt rồi, nhưng bác sĩ nói 2-3 ngày nữa vẫn có thể lây cho người khác.\nNữ: Vậy hả?\nNam: Bản thân tôi thì khỏe rồi, muốn đi học sớm lắm, nhưng vẫn còn ho. Lúc bị thì khổ lắm. Sợ lây cho mọi người nên thôi.\nNữ: Vậy à.\nNam: Ừ, lúc đó đau đầu, buồn nôn nữa, đủ hết triệu chứng cảm luôn.\nNữ: Vất vả thật. Tôi sẽ ghi chép bài giúp, đừng lo. Giữ gìn sức khỏe nhé.\nTình trạng HÔM NAY của nam sinh thế nào?",
+          "tip": "Bẫy thời gian: sốt/đau đầu/buồn nôn đều là triệu chứng CỦA LÚC TRƯỚC (\"thuở đó\", đã hết — \"風邪の症状を一通り全部やった\" là kể lại quá khứ). HÔM NAY chỉ còn lại đúng 1 triệu chứng: ho (まだせきが残っている) — câu hỏi luôn nhấn từ \"今日\" (hôm nay), phải tách rõ triệu chứng cũ vs còn lại."
+        },
+        {
+          "qnum": 5,
+          "prompt": "男の人がこの店の何がいいと言っていますか。",
+          "options": [
+            "一人でゆっくり食べられること",
+            "おいしい料理が食べられること",
+            "他の客と話しながら食べられること",
+            "仕事の情報が得られること"
+          ],
+          "correctIndex": 2,
+          "script": "男の人と女の人がある店について話しています。男の人がこの店の何がいいと言っていますか。\n男:最近、面白い店見つけたんだ。駅の近くの食堂なんだけど。\n女:どんな店?\n男:夕飯とか一人で食べに入ることあるじゃない?普通なら、空いてるテーブルに案内されて一人で食べるでしょう。でも、そこは仮に空いているテーブルがあっても、もう誰かいるところに案内されるんだ。\n女:ええー、変わってるね。それって知らない人と向かい合って食べるってことでしょう。緊張しない?\n男:僕も最初そう思ったけど。意外と楽しんだよね。初めての人でも結構しゃべれちゃうし。食べながらだから、リラックスして話せるのかな。\n女:へえー、で、何喋るの?会社話とか?\n男:いや、料理の味はどうかとか。天気がどうとか。ちょっとした話なんだけどね。\n女:そうなんだ。\n男の人がこの店の何がいいと言っていますか。",
+          "scriptVi": "Hai người nói về một quán ăn. Nam khen quán này điểm gì?\nNam: Gần đây tôi tìm được quán hay lắm, quán ăn gần nhà ga.\nNữ: Quán sao vậy?\nNam: Có lúc đi ăn tối một mình đúng không? Thường thì sẽ được dẫn tới bàn trống ngồi một mình. Nhưng quán đó, dù có bàn trống, vẫn dẫn mình tới ngồi cùng người khác.\nNữ: Ơ, lạ vậy. Vậy là ngồi đối diện người lạ ăn luôn? Không ngại à?\nNam: Lúc đầu tôi cũng nghĩ vậy, nhưng lại vui bất ngờ. Người lần đầu gặp cũng nói chuyện được. Vì vừa ăn vừa nói nên thấy thoải mái.\nNữ: Ồ, vậy nói chuyện gì? Chuyện công việc à?\nNam: Không, chỉ chuyện vặt như món ăn ngon không, thời tiết thế nào thôi.\nVì sao nam thích quán này?",
+          "tip": "Điểm hay không phải là MÓN NGON (không nhắc tới vị ngon là điểm mạnh) mà là kiểu bàn ghép chung khiến được NÓI CHUYỆN với khách lạ trong lúc ăn — đáp án 1 (ăn một mình yên tĩnh) ngược hẳn với nội dung thật."
+        },
+        {
+          "qnum": 6,
+          "prompt": "二人はこの仕事をいつ終わらせる予定ですか。",
+          "options": [
+            "4時ごろ",
+            "5時ごろ",
+            "6時ごろ",
+            "明日の朝"
+          ],
+          "correctIndex": 1,
+          "script": "会社で女の人と男の人が話しています。二人はこの仕事をいつ終わらせる予定ですか。\n女:佐藤君、今朝お願いした入力の仕事、終わった?\n男:あっ、課長、もう四時ですか。あのう、まだ。\n女:ああ、そう?\n男:あのう、この仕事、あしたの朝まで終わればいいんですよね。\n女:うーん、ただこのデータ、ちょっと気になる点が出てきて、今日中に見ておきたいのよね。申し訳ないけど、なるべく早くしてもらえるかな。\n男:そうなんですか。それでは、急いで仕上げます。\n女:ありがとう。助かるわ。後どれぐらいかかりそう?\n男:えっと、そうですね。後二時間ぐらいはかかりそうです。\n女:二時間かな。私は半分手伝ったら、時間も半分ね。じゃあ、二人で頑張りましょうか。\n男:あっ、ありがとうございます。\n二人はこの仕事をいつ終わらせる予定ですか。",
+          "scriptVi": "Hai người nói chuyện ở công ty. Họ định khi nào xong việc này?\nNữ: Sato, việc nhập liệu nhờ sáng nay xong chưa?\nNam: À, trưởng phòng, đã 4 giờ rồi sao? Dạ, chưa xong.\nNữ: Vậy hả?\nNam: Việc này xong trước sáng mai là được đúng không?\nNữ: Ừm, nhưng dữ liệu này có điểm cần xem lại, tôi muốn xem trong hôm nay. Xin lỗi nhưng làm nhanh giúp được không?\nNam: Vậy ạ. Vậy em sẽ làm gấp.\nNữ: Cảm ơn, đỡ tôi nhiều. Còn khoảng bao lâu nữa?\nNam: Dạ, khoảng 2 giờ nữa.\nNữ: 2 giờ à. Nếu tôi phụ một nửa thì thời gian giảm một nửa. Vậy 2 người cùng làm nhé.\nNam: Vâng, cảm ơn chị.\nHọ định khi nào xong việc này?",
+          "tip": "Phép tính: hiện tại 4 giờ, một mình cần 2 giờ nữa (xong 6h), nhưng 2 người làm chung thì thời gian giảm MỘT NỬA → còn 1 giờ → xong lúc 5 giờ. Bẫy: nếu chỉ nghe \"còn 2 giờ\" mà quên tính phần 2 người làm chung sẽ chọn nhầm 6 giờ."
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "name": "概要理解",
+      "instruction": "KHÔNG có lựa chọn in sẵn, KHÔNG có câu hỏi trước. Nghe toàn bộ đoạn, sau đó mới nghe câu hỏi + 4 lựa chọn. Cần nắm Ý CHÍNH/CHỦ ĐỀ của cả đoạn.",
+      "questions": [
+        {
+          "qnum": 1,
+          "prompt": null,
+          "options": [
+            "みかんをあげるため",
+            "みかんを売るため",
+            "みかんの感想を言うため",
+            "ジュースの作り方を教えるため"
+          ],
+          "correctIndex": 0,
+          "script": "女の人と男の人が玄関で話しています。\n女:はーい。\n男:こんにちは。\n女:あっ、どうもこんにちは。\n男:あのう、みかんお好きですか。たくさんもらったんで、よろしければ。\n女:まあ、みかん。大好きだから、嬉しいわ、最近高いのよ。\n男:よかった。ただ、ちょっとすっぱいんですけど。もしすっぱいのがお好きじゃなかったら、ジュースにでもしてください。\n女:ジュース?\n男:ええ、搾ったものに少し蜂蜜を加えるんで、ホットでもおいしいですよ。\n女:へえー。おいしそうね。\n男の人は何をしに来ましたか。",
+          "scriptVi": "Hai người nói chuyện ở cửa nhà.\nNữ: Vâng?\nNam: Chào chị.\nNữ: À, chào anh.\nNam: Chị có thích quýt không? Tôi được cho nhiều quá, nếu chị không ngại thì...\nNữ: Ôi, quýt à. Tôi thích lắm, vui quá, gần đây đắt lắm đó.\nNam: May rồi. Nhưng nó hơi chua. Nếu chị không thích chua thì có thể làm nước ép.\nNữ: Nước ép?\nNam: Vâng, vắt ra rồi thêm chút mật ong, uống nóng cũng ngon lắm.\nNữ: Ồ, nghe ngon đó.\nNgười nam tới đây để làm gì?",
+          "tip": "Câu mở đầu \"みかんお好きですか。たくさんもらったんで\" (tôi được cho nhiều quýt) đã lộ mục đích: ĐEM CHO. Phần nói về vị chua/cách làm nước ép chỉ là THÔNG TIN THÊM đi kèm, không phải lý do anh ta tới.",
+          "keywords": [
+            "みかんお好きですか",
+            "たくさんもらったんで",
+            "よろしければ"
+          ]
+        },
+        {
+          "qnum": 2,
+          "prompt": null,
+          "options": [
+            "子供の視力の低下",
+            "目の治療にかかる時間",
+            "目の検査の必要性",
+            "目を疲れさせない方法"
+          ],
+          "correctIndex": 3,
+          "script": "テレビで医者がインタービューに答えています。\n女:先生、最近目の不調を訴える人が増えているようですが。\n男:ええ、そうですね。現代はテレビやパソコンゲームのように目を疲れさせるのがたくさんありますからね。楽しいから、つい時間を忘れてしまうんですよね。でも、目の健康を考えれば、出来る限り目に負担のかからない生活をする必要があります。たとえば、パソコンを使う時間を決めるとか、暗いところで画面を見ないなど、普段から気をつけることが大切です。\n医者は何の話をしていますか。",
+          "scriptVi": "Bác sĩ trả lời phỏng vấn trên TV.\nNữ: Bác sĩ, gần đây có vẻ nhiều người kêu mắt khó chịu hơn.\nNam: Vâng, đúng vậy. Thời nay có nhiều thứ làm mỏi mắt như TV, game trên máy tính. Vì vui nên quên cả thời gian. Nhưng nếu nghĩ tới sức khỏe mắt thì cần sống sao cho ít gây áp lực cho mắt nhất có thể. Ví dụ như quy định thời gian dùng máy tính, không nhìn màn hình ở nơi tối — chú ý những điều này hàng ngày là rất quan trọng.\nBác sĩ đang nói về chuyện gì?",
+          "tip": "Toàn bài chỉ toàn lời KHUYÊN cách phòng tránh mỏi mắt (quy định giờ dùng máy, không nhìn màn hình nơi tối) — không hề nói về khám mắt, điều trị, hay trẻ em cụ thể. Khi cả đoạn chỉ liệt kê các \"cách làm\", đáp án thường là \"phương pháp\" tổng quát đó.",
+          "keywords": [
+            "目を疲れさせる",
+            "負担のかからない",
+            "普段から気をつける"
+          ]
+        },
+        {
+          "qnum": 3,
+          "prompt": null,
+          "options": [
+            "新鮮なものが一番いい",
+            "値段が安いものが一番いい",
+            "匂いや味が濃いものがいい",
+            "自分で作ったものがいい"
+          ],
+          "correctIndex": 2,
+          "script": "レポーターが女の人に野菜について聞いています。\n男:こんにちは。こちらの店でよく野菜を買われるんですね。\n女:ええ、このお店の野菜は味が濃いんですよ。匂いもね、その野菜らしいしっかりとした匂いがするんです。このトマトの匂いを嗅ぐと、子供のころに畑で取ってその場で食べたその様子まで思い出すんです。\n男:へえ、そうなんですか。\n女:最近は野菜独特の匂いとか味が薄くなっていて、食べやすいと思う人もいるんでしょうけど。わたしにはちょっと物足りないんです。その点、このお店の野菜は昔ながらの方法で作られているそうで、味もいいし、安心だし。\n男:でも、値段はちょっと高めのようですね。\n女:ええ、でも、こういう野菜らしい野菜を孫にも食べさせたいと思って、つい来てしまうんです。\n女の人は野菜について、どう思っていますか。",
+          "scriptVi": "Phóng viên hỏi người phụ nữ về rau củ.\nNam: Chào chị, chị thường mua rau ở quán này nhé.\nNữ: Vâng, rau ở quán này vị đậm đà lắm. Mùi cũng có cái mùi rau thật sự. Ngửi mùi cà chua này là tôi nhớ tới lúc nhỏ hái ở ruộng ăn ngay tại chỗ.\nNam: Ồ, vậy à.\nNữ: Gần đây rau mất đi mùi và vị đặc trưng, có người thấy dễ ăn hơn, nhưng với tôi thì thấy thiếu thiếu gì đó. Rau ở quán này được làm theo cách truyền thống, vị ngon mà cũng an tâm.\nNam: Nhưng giá có hơi cao một chút.\nNữ: Vâng, nhưng tôi muốn cho cháu ăn loại rau \"đúng chất rau\" như vậy nên vẫn tới mua.\nNgười phụ nữ nghĩ thế nào về rau củ?",
+          "tip": "Giá cao nhưng cô VẪN chấp nhận mua (đáp án giá rẻ bị loại). Tươi/tự trồng không được nhắc làm tiêu chí chính. Từ khóa lặp lại nhiều lần: \"味が濃い\"/\"匂いがしっかり\" (vị và mùi đậm đà) → đáp án 3.",
+          "keywords": [
+            "味が濃い",
+            "匂いがしっかり",
+            "物足りない",
+            "安心"
+          ]
+        },
+        {
+          "qnum": 4,
+          "prompt": null,
+          "options": [
+            "試合に出られなかったが、いいこともあった",
+            "試合に出られず、いいことはなかった",
+            "試合に出たが、活躍できなかった",
+            "試合に出て、充実した毎日だった"
+          ],
+          "correctIndex": 0,
+          "script": "テレビでサッカー選手が今シーズンを振り返って話しています。\n男:シーズン前に怪我をして手術を受けたので、今シーズンはずっと回復に向けてトレーニングの毎日でした。テレビなどで仲間やライバルが活躍する姿を見ると、焦りと悔しい思いでいっぱいでした。でも、専門的な本を読んだりして、トレーニング方法を客観的に見直すこともできて、それなりに充実していました。それに、久しぶりに家族ともゆったりした時間を持つこともできましたね。\nこの選手は今シーズンはどうだったと言っていますか。",
+          "scriptVi": "Cầu thủ bóng đá trả lời TV nhìn lại mùa giải.\nNam: Trước mùa giải tôi bị chấn thương phải phẫu thuật, nên cả mùa này chỉ tập luyện để hồi phục. Xem đồng đội, đối thủ tỏa sáng trên TV tôi vừa sốt ruột vừa tiếc nuối. Nhưng tôi đọc sách chuyên môn, nhìn lại phương pháp tập luyện một cách khách quan, cũng thấy khá ý nghĩa. Với cả lâu rồi mới có thời gian thư thái với gia đình.\nCầu thủ nói mùa giải này thế nào?",
+          "tip": "Không thi đấu được (chấn thương) — phần đầu buồn (焦り、悔しい), NHƯNG sau đó dùng \"でも\" để chuyển ý: vẫn có điều tốt (đọc sách, xem lại phương pháp, có thời gian với gia đình) → \"không thi đấu nhưng cũng có điều tốt\" — luôn để ý chữ \"でも/しかし\" để bắt đúng ý chính sau khi đổi hướng.",
+          "keywords": [
+            "回復に向けて",
+            "焦りと悔しい",
+            "でも",
+            "充実"
+          ]
+        },
+        {
+          "qnum": 5,
+          "prompt": null,
+          "options": [
+            "体調に自信がないので、転勤したくない",
+            "お母さんのことが心配なので、転勤したくない",
+            "転勤してもいいが、店長にはなりたくない",
+            "転勤して、店長として頑張りたい"
+          ],
+          "correctIndex": 1,
+          "script": "会社で男の人と女の人が話しています。\n男:山田さん、ちょっといいですか。\n女:はい、部長。\n男:この間話した新しい店のことなんだけど。実は君をそこの店長にという話が出ているんだ。\n女:えっ?\n男:これまでの仕事が高く評価されててね。\n女:ありがとうございます。\n男:じゃあ、いいかな。転勤にはなるけどね。\n女:あ、あのう、ぜひ行かせていただきたいんですが、ただ、転勤となりますと...\n男:うん?\n女:あのう、実は、最近母の体調はよくないので、あまり遠く離れるのはちょっと...\n男:ああ、そう?でもせっかくのチャンスだよ。\n女:はい。評価していただいたことはたいへんうれしいですし、もし店長になったら、やってみたいことはたくさんあるんですが。申し訳ありません。また、次の機会に声をかけていただけるよう頑張ります。\n男:そうか。\n女の人は転勤についてどう思っていますか。",
+          "scriptVi": "Hai người nói chuyện ở công ty.\nNam: Yamada, có chút việc.\nNữ: Vâng, trưởng phòng.\nNam: Về cửa hàng mới hôm trước, thật ra có ý định đưa em làm quản lý ở đó.\nNữ: Ơ?\nNam: Công việc của em được đánh giá cao.\nNữ: Em cảm ơn.\nNam: Vậy được không? Tuy sẽ phải chuyển công tác.\nNữ: À, em rất muốn nhận, nhưng nếu phải chuyển công tác thì...\nNam: Ừ?\nNữ: Thật ra gần đây sức khỏe mẹ em không tốt, nên em không muốn đi xa quá...\nNam: À vậy à? Nhưng đây là cơ hội tốt đó.\nNữ: Vâng. Em rất vui vì được đánh giá cao, nếu làm quản lý em cũng có nhiều điều muốn thử, nhưng em xin lỗi. Em sẽ cố gắng để có cơ hội khác lần sau.\nCô nghĩ thế nào về việc chuyển công tác?",
+          "tip": "Cô từ chối KHÔNG phải vì sợ chức quản lý (cô nói rõ \"nếu làm quản lý có nhiều điều muốn thử\" = cô MUỐN làm) mà vì lo cho mẹ ở xa. Đáp án 3 dễ nhầm vì có nhắc \"chuyển công tác cũng được\" nhưng thực ra cô từ chối cả việc chuyển luôn, không phải chỉ từ chối chức vụ.",
+          "keywords": [
+            "母の体調",
+            "遠く離れる",
+            "申し訳ありません",
+            "次の機会"
+          ]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "name": "即時応答",
+      "instruction": "Nghe 1 câu nói ngắn, chọn ngay phản hồi phù hợp nhất trong 3 lựa chọn. KHÔNG có hội thoại dài, KHÔNG có lựa chọn in sẵn — phải phản xạ nhanh.",
+      "questions": [
+        {
+          "qnum": 1,
+          "prompt": null,
+          "script": "ねえ、映画が始まるまで、どっかで時間潰さない?",
+          "scriptVi": "Này, trước khi phim bắt đầu mình giết thời gian ở đâu đó không?",
+          "options": [
+            "ずいぶん忙しそうじゃない?",
+            "駅前の店にならあると思うけどな。",
+            "じゃ、コーヒーでも飲みに行こうか?"
+          ],
+          "optionsVi": [
+            "Có vẻ bận lắm nhỉ?",
+            "Chắc có ở tiệm trước nhà ga đó.",
+            "Vậy đi uống cà phê gì đó đi?"
+          ],
+          "correctIndex": 2,
+          "tip": "Câu hỏi mời rủ làm gì đó để \"giết thời gian\" (時間潰す) — phản hồi tự nhiên nhất là ĐỀ XUẤT 1 hoạt động cụ thể (đi uống cà phê), không phải nói về sự bận rộn hay chỉ đường."
+        },
+        {
+          "qnum": 2,
+          "prompt": null,
+          "script": "土曜日のハイキング、来ればよかったのに。",
+          "scriptVi": "Buổi leo núi thứ Bảy đó, đáng lẽ bạn nên đi mà.",
+          "options": [
+            "次の機会にはぜひ。",
+            "じゃ、ご一緒いたします。",
+            "いい天気になりそうですね。"
+          ],
+          "optionsVi": [
+            "Lần sau nhất định sẽ đi.",
+            "Vậy tôi sẽ đi cùng.",
+            "Có vẻ sẽ là ngày đẹp trời nhỉ."
+          ],
+          "correctIndex": 0,
+          "tip": "「来ればよかったのに」(đáng lẽ nên đến) là LỜI TIẾC NUỐI về việc ĐÃ QUA RỒI (thứ Bảy đã xảy ra), không phải lời mời cho tương lai — \"ご一緒します\" (sẽ đi cùng) sai vì việc đã xong. Phản hồi đúng là tỏ ý tiếc và hẹn lần sau."
+        },
+        {
+          "qnum": 3,
+          "prompt": null,
+          "script": "あのう、いま、お時間、よろしいでしょうか?",
+          "scriptVi": "Xin lỗi, bây giờ anh/chị có thời gian không?",
+          "options": [
+            "えーと、四時五分ですよ。",
+            "あいにく、私も時計がなくて。",
+            "十分ぐらいなら。"
+          ],
+          "optionsVi": [
+            "Để xem, 4 giờ 5 phút đó.",
+            "Tiếc là tôi cũng không có đồng hồ.",
+            "Khoảng 10 phút thì được."
+          ],
+          "correctIndex": 2,
+          "tip": "Bẫy: 「お時間よろしいでしょうか」nghĩa là \"có RẢNH không\" (xin chút thời gian), KHÔNG phải hỏi giờ hiện tại là mấy giờ — 2 đáp án đầu hiểu nhầm thành hỏi giờ. Phản hồi đúng là trả lời về việc có rảnh/được bao lâu."
+        },
+        {
+          "qnum": 4,
+          "prompt": null,
+          "script": "きのう、デパートでたまたま高校の時の先生に会ったんだ。",
+          "scriptVi": "Hôm qua tôi tình cờ gặp thầy giáo cấp 3 ở trung tâm thương mại đó.",
+          "options": [
+            "へえ、偶然だね。",
+            "時々だからね。",
+            "わざわざ会ったんだ。"
+          ],
+          "optionsVi": [
+            "Ồ, tình cờ thật nhỉ.",
+            "Vì là thỉnh thoảng mà.",
+            "Cố tình đi gặp đó."
+          ],
+          "correctIndex": 0,
+          "tip": "「たまたま」= tình cờ, ngẫu nhiên. Phản hồi tự nhiên là đồng cảm với sự tình cờ đó (\"đúng là ngẫu nhiên thật\"). \"わざわざ\" (cố tình) mâu thuẫn nghĩa với \"たまたま\" (tình cờ) nên sai."
+        },
+        {
+          "qnum": 5,
+          "prompt": null,
+          "script": "あーあー、またやっちゃったよ。うっかりしてたな。",
+          "scriptVi": "Ahh, lại làm rồi. Tôi lơ đễnh quá.",
+          "options": [
+            "ええー、何したの?",
+            "助かったよね。",
+            "やってみたら。"
+          ],
+          "optionsVi": [
+            "Ơ, làm gì vậy?",
+            "Đỡ thật nhỉ.",
+            "Thử làm xem."
+          ],
+          "correctIndex": 0,
+          "tip": "Người nói than về việc đã LÀM SAI/QUÊN gì đó (またやっちゃった = lại lỡ làm rồi) nhưng KHÔNG nói rõ là việc gì — phản hồi tự nhiên nhất là hỏi lại \"làm gì vậy?\" để biết chuyện gì xảy ra."
+        },
+        {
+          "qnum": 6,
+          "prompt": null,
+          "script": "そんな高いパソコン、無理して買うことないんじゃない?",
+          "scriptVi": "Cái máy tính đắt vậy, không cần cố mua làm gì đâu nhỉ?",
+          "options": [
+            "そうか、買うしかないわ。",
+            "少しでよかったら、貸そうか。",
+            "いや、どうしても必要なんだ。"
+          ],
+          "optionsVi": [
+            "Vậy à, chỉ còn cách mua thôi.",
+            "Nếu một chút cũng được thì tôi cho mượn nhé.",
+            "Không, tôi thực sự cần nó."
+          ],
+          "correctIndex": 2,
+          "tip": "Người nói đang KHUYÊN không nên mua (vì đắt, \"không cần cố mua\"). Phản hồi hợp lý nhất là GIẢI THÍCH LÝ DO vẫn cần mua, để phản bác lại lời khuyên đó một cách lịch sự — \"いや\" (không) ngay đầu câu báo hiệu đang phản bác ý kiến vừa nghe."
+        },
+        {
+          "qnum": 7,
+          "prompt": null,
+          "script": "あのう、ここはわたしに御馳走させていただけませんか。",
+          "scriptVi": "À, để tôi đãi bữa này được không?",
+          "options": [
+            "お料理、お上手ですね。",
+            "そうすればよかったですね。",
+            "いや、そういうわけには..."
+          ],
+          "optionsVi": [
+            "Bạn nấu ăn khéo nhỉ.",
+            "Lẽ ra nên làm vậy nhỉ.",
+            "Không, sao có thể như vậy được..."
+          ],
+          "correctIndex": 2,
+          "tip": "「御馳走させてください」là lời ngỏ ý MUỐN TRẢ TIỀN bữa ăn (mời/đãi), một cách lịch sự khách sáo. Phản hồi lịch sự tự nhiên là TỪ CHỐI khéo (không thể để bạn trả đâu) — \"いや、そういうわけには\" là cách từ chối lịch sự rất phổ biến trong tiếng Nhật."
+        },
+        {
+          "qnum": 8,
+          "prompt": null,
+          "script": "うちの山田君のプレゼンテーション、なかなかだったよね。",
+          "scriptVi": "Bài thuyết trình của Yamada bên tôi khá đấy nhỉ.",
+          "options": [
+            "あまり勉強してませんからね。",
+            "相当準備したようですよ。",
+            "ええ、かなりまずかったですね。"
+          ],
+          "optionsVi": [
+            "Vì không học mấy mà.",
+            "Có vẻ chuẩn bị khá kỹ đó.",
+            "Vâng, khá tệ đấy."
+          ],
+          "correctIndex": 1,
+          "tip": "「なかなかだった」= khá tốt/khá ổn (lời khen). Phản hồi phải PHÙ HỢP với lời khen đó, ví dụ giải thích lý do bài thuyết trình tốt (chuẩn bị kỹ) — đáp án 3 ngược nghĩa (chê tệ) nên sai, đáp án 1 cũng ngược (chê không học)."
+        },
+        {
+          "qnum": 9,
+          "prompt": null,
+          "script": "何落ち込んでるの?やれるだけのことはやったんでしょう。",
+          "scriptVi": "Sao buồn vậy? Bạn đã làm hết sức rồi mà.",
+          "options": [
+            "えっ?何か落ちてるの?",
+            "やれっていうならやるよ。",
+            "うん、頑張ったんだけどね。"
+          ],
+          "optionsVi": [
+            "Ơ? Có gì rơi à?",
+            "Nếu bảo làm thì tôi làm.",
+            "Ừ, tôi cũng đã cố gắng rồi mà."
+          ],
+          "correctIndex": 2,
+          "tip": "Bẫy đồng âm: 「落ち込む」(buồn/chán) khác hẳn 「落ちてる」(rơi/đánh rớt) — đáp án 1 hiểu nhầm sang nghĩa \"rơi\". Phản hồi đúng phải đồng tình với việc đã cố gắng hết sức mà câu hỏi nhắc tới."
+        },
+        {
+          "qnum": 10,
+          "prompt": null,
+          "script": "遅れてすみません。こちらの場所は覚えていたつもりだったんですが。",
+          "scriptVi": "Xin lỗi tôi đến trễ. Tôi tưởng mình nhớ đường tới đây rồi.",
+          "options": [
+            "ここ、わかりにくいですよね。",
+            "思い出さなくでもいいんですよ。",
+            "よかったです。まっすぐ来られて。"
+          ],
+          "optionsVi": [
+            "Ở đây khó tìm đúng không.",
+            "Không cần nhớ lại cũng được.",
+            "May quá, đến thẳng được luôn."
+          ],
+          "correctIndex": 0,
+          "tip": "Người nói xin lỗi vì trễ, lý do liên quan tới việc NHỚ ĐƯỜNG (tưởng nhớ rồi nhưng vẫn bị lạc/trễ). Phản hồi thông cảm tự nhiên là đồng tình rằng địa điểm khó tìm — đáp án 3 mâu thuẫn vì người nói rõ ràng KHÔNG \"đến thẳng được\" (đã trễ)."
+        },
+        {
+          "qnum": 11,
+          "prompt": null,
+          "script": "あのう、あした、田中先生がいらっしゃるかどうか分かりますか?",
+          "scriptVi": "Anh/chị có biết ngày mai thầy Tanaka có tới không?",
+          "options": [
+            "あしたは来ないつもりです。",
+            "お休みだと伺ってます。",
+            "ご存知です。"
+          ],
+          "optionsVi": [
+            "Ngày mai tôi định không tới.",
+            "Tôi nghe nói thầy nghỉ.",
+            "Thầy biết đó."
+          ],
+          "correctIndex": 1,
+          "tip": "Câu hỏi dùng kính ngữ 「いらっしゃる」hỏi về NGƯỜI KHÁC (thầy Tanaka) có tới không. Đáp án 1 trả lời như đang nói về BẢN THÂN mình (sai chủ thể). Đáp án đúng dùng khiêm nhường ngữ 「伺っています」(tôi nghe được rằng) để trả lời thông tin về thầy."
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "name": "統合理解",
+      "instruction": "Nghe đoạn hội thoại/đoạn nói DÀI hơn (có khi nhiều thông tin/lựa chọn được so sánh), sau đó nghe câu hỏi + lựa chọn. Câu cuối có 2 câu hỏi nhỏ dựa trên CÙNG 1 đoạn nghe.",
+      "questions": [
+        {
+          "qnum": 1,
+          "prompt": null,
+          "options": [
+            "一番の電子辞書",
+            "二番の電子辞書",
+            "三番の電子辞書",
+            "四番の電子辞書"
+          ],
+          "correctIndex": 2,
+          "script": "電子辞書売り場で留学生と販売員が話しています。\n女:あのう、電子辞書を探してるんですけど。なるべく安いもので、日本語の勉強に使いたいと思って。\n男:そうですか。えーと、それでは、こちらの一番の辞書がもっとも安い商品になっていますが、機能はあまり多くありません。こちらの二番は漢字字典に漢字認識機能が付いてて、人気があります。\n女:漢字の認識機能?\n男:はい。大体の形しか覚えていない漢字でも簡単に調べることができるんです。三番も同じ機能が付いていて、後、カタカナ語辞典も充実しているタイプですね。後は少し高くなりますけど、この四番はさらに単語の発音も聞けて、人気がありますよ。\n女:うん。漢字認識機能はよさそうですよね。発音は聞けなくてもいいんですけど。カタカナ語辞典あったら便利ですね。じゃ、これにします。\n留学生はどの電子辞書を買うことにしましたか。",
+          "scriptVi": "Du học sinh và nhân viên bán hàng nói chuyện ở quầy từ điển điện tử.\nNữ: Tôi đang tìm từ điển điện tử, muốn loại càng rẻ càng tốt để học tiếng Nhật.\nNam: Vậy à. Để xem, loại số 1 đây là rẻ nhất nhưng tính năng không nhiều. Loại số 2 có chức năng nhận diện chữ Hán trong từ điển Hán tự, rất được ưa chuộng.\nNữ: Chức năng nhận diện Hán tự?\nNam: Vâng, dù chỉ nhớ hình dạng đại khái của chữ Hán cũng tra được dễ dàng. Loại số 3 cũng có chức năng đó, thêm vào đó từ điển katakana cũng đầy đủ hơn. Còn loại số 4 thì giá cao hơn một chút nhưng nghe được cả cách phát âm từ, cũng rất được ưa chuộng.\nNữ: Ừm, chức năng nhận diện Hán tự nghe hay đó. Phát âm thì không nghe cũng được. Có từ điển katakana thì tiện đó. Vậy tôi lấy cái này.\nDu học sinh quyết định mua loại từ điển nào?",
+          "tip": "Dạng bài \"so sánh nhiều lựa chọn rồi chốt theo tiêu chí ưu tiên\" — cô gái cần: (1) có nhận diện Hán tự [loại 2,3,4 đều có] (2) KHÔNG cần nghe phát âm [loại trừ điểm mạnh riêng của loại 4] (3) muốn có từ điển katakana [chỉ loại 3 có]. Phải gạch bỏ từng tiêu chí không cần để ra đáp án 3.",
+          "keywords": [
+            "漢字認識機能",
+            "カタカナ語辞典",
+            "発音は聞けなくてもいい"
+          ]
+        },
+        {
+          "qnum": 2,
+          "prompt": null,
+          "options": [
+            "世話が大変なので、犬は飼わない",
+            "すでに金魚がいるので、犬は飼わない",
+            "子供が一緒に遊べるので、すぐに犬を飼う",
+            "子供に金魚の世話ができたら、犬を飼う"
+          ],
+          "correctIndex": 3,
+          "script": "家族三人がペットについて話しています。\n子:ねえねえ、僕、犬飼いたいんだ。飼ってもいい?\n父:うん。犬か?\n母:だめだめ。犬って家族と一緒なのよ。一度飼ったら、途中でやめるわけにはいかないよ。\n子:僕がちゃんと世話するから。\n母:でもね。前ほしいほしいって言って飼った金魚だって、結局今誰が餌をあげてる?\n子:お母さん。だって、金魚って、一緒に遊べないから。今度こそちゃんと世話するから。お願い。\n父:うん。まあ、お父さんは犬を飼うことには賛成だよ。遊び相手になってくれるだろうし。\n子:本当?\n父:うん。でも、一つ条件があるんだ。\n子:条件?\n父:うん。まず、金魚の世話をちゃんとすること。それができたら飼ってもいいよ。金魚の世話ができないのに、犬の世話ができるはずないからな。\n子:分かった。僕、頑張って世話するよ。それから。お母さんもいいでしょう。\n母:そうね。しょうがないわね。\n両親はどうすることに決めましたか。",
+          "scriptVi": "Một gia đình 3 người nói về việc nuôi thú cưng.\nCon: Mẹ ơi, con muốn nuôi chó. Được không mẹ?\nCha: Ừ, chó hả?\nMẹ: Không được. Chó là thành viên gia đình đó. Một khi đã nuôi rồi không thể bỏ giữa đường đâu.\nCon: Con sẽ chăm sóc thật tốt mà.\nMẹ: Nhưng trước đây con cũng đòi nuôi cá vàng, giờ ai cho ăn vậy?\nCon: Là mẹ. Vì cá vàng không chơi cùng được mà. Lần này con sẽ chăm sóc đàng hoàng. Mẹ cho con đi.\nCha: Ừm. Thật ra cha đồng ý nuôi chó. Nó sẽ làm bạn chơi cho con.\nCon: Thật hả cha?\nCha: Ừ. Nhưng có một điều kiện.\nCon: Điều kiện gì?\nCha: Trước tiên phải chăm sóc cá vàng đàng hoàng. Nếu làm được thì cho nuôi chó. Không chăm được cá vàng thì sao chăm được chó.\nCon: Con hiểu rồi, con sẽ cố gắng chăm sóc. Mẹ cũng đồng ý chứ?\nMẹ: Thôi được, không còn cách nào khác.\nHai vợ chồng quyết định thế nào?",
+          "tip": "Điều kiện CHA đặt ra rõ ràng: chăm tốt cá vàng TRƯỚC thì MỚI được nuôi chó — không phải \"nuôi ngay\" (đáp án 3 sai vì thêm điều kiện), không phải \"không nuôi\" (đáp án 1,2 sai vì cha đã đồng ý có điều kiện).",
+          "keywords": [
+            "金魚の世話",
+            "条件",
+            "犬を飼ってもいい"
+          ]
+        },
+        {
+          "qnum": 3,
+          "prompt": null,
+          "isDualQuestion": true,
+          "script": "ラジオでプレゼントするCDの紹介をしています。\n女:ええ、では、番組からの今日のプレゼントです。今日はCDを四枚ご用意しました。それぞれ一枚、四名の方にプレゼントします。今からご紹介しますので、ぜひご応募くださいね。ええ、一番目はクラシックの曲をピアノで演奏したものです。静かな曲が多いので、私は夜寝る前によく聞いてるんですよ。次、二番目は、世界の民族音楽をその地域の太鼓で力強く演奏したもので、聴いていると力が湧いてきます。三番目は年代別に流行った歌を集めたCDで、聴いていると、その時代を思い出しますね。そして、最後、四番目は、私が最近出したCDです。最近、子供が生まれたので、子供に歌って聞かせたい曲ばかりを集めて作ってみました。\n男:へえ、この人って、歌も歌うんだね。知らなかった。\n女:本当だね。私、応募してみようかな。\n男:えっ、この人の歌、聞いてみたいの?\n女:そうじゃなくて、私、最近夜、眠れないのよ。だから、この人も寝る前に聞いてるって言ってだし。\n男:ああ、そっちね。じゃ、僕も応募しようかな。カラオケでよく上司が歌ってる昔の歌っていい曲が多いんだよね。CDももらえるんだったら、聞いてみたいな。\n女:そうなんだ。太鼓習ってるから、そっちにすると思った。\n質問1 女の人はどのCDに応募したいと言っていますか。\n質問2 男の人はどのCDに応募したいと言っていますか。",
+          "scriptVi": "Trên radio đang giới thiệu CD tặng thưởng.\nNữ (MC): Vâng, đây là quà tặng hôm nay từ chương trình. Hôm nay chuẩn bị 4 đĩa CD, mỗi đĩa tặng cho 1 người (tổng 4 người). Tôi sẽ giới thiệu ngay, mọi người nhớ đăng ký tham gia nhé. Đĩa số 1 là nhạc cổ điển chơi bằng piano, nhiều bài nhạc nhẹ, tôi thường nghe trước khi ngủ. Đĩa số 2 là nhạc dân tộc các vùng trên thế giới chơi bằng trống mạnh mẽ, nghe vào là thấy có năng lượng liền. Đĩa số 3 là tuyển tập các bài hát nổi tiếng theo từng thời kỳ, nghe vào nhớ lại thời đó luôn. Và cuối cùng, đĩa số 4 là CD tôi mới ra gần đây. Vì mới sinh con nên tôi tuyển những bài muốn hát cho con nghe.\nNam: Ồ, người này còn hát nữa à, không biết đó.\nNữ: Đúng đó, tôi định đăng ký thử.\nNam: Ơ, em muốn nghe người đó hát à?\nNữ: Không phải, gần đây em khó ngủ, mà người đó cũng nói nghe trước khi ngủ.\nNam: À, ý đó. Vậy anh cũng đăng ký thử. Bài hát cũ mà sếp anh hay hát karaoke toàn bài hay không à. Có CD thì nghe thử cũng được.\nNữ: Vậy à. Em tưởng anh học trống nên sẽ chọn cái đó.\nCâu hỏi 1: Người vợ muốn đăng ký đĩa nào?\nCâu hỏi 2: Người chồng muốn đăng ký đĩa nào?",
+          "subQuestions": [
+            {
+              "label": "質問1",
+              "promptVi": "Người vợ muốn đăng ký đĩa nào?",
+              "options": [
+                "1番のCD",
+                "2番のCD",
+                "3番のCD",
+                "4番のCD"
+              ],
+              "correctIndex": 0
+            },
+            {
+              "label": "質問2",
+              "promptVi": "Người chồng muốn đăng ký đĩa nào?",
+              "options": [
+                "1番のCD",
+                "2番のCD",
+                "3番のCD",
+                "4番のCD"
+              ],
+              "correctIndex": 2
+            }
+          ],
+          "tip": "Dạng bài 2 câu hỏi: phải nhớ RIÊNG lý do của TỪNG người, đừng lẫn. Vợ chọn đĩa 1 KHÔNG phải vì thích bài hát của MC mà vì đó là nhạc ngủ ngon (cùng lý do với MC: nghe trước khi ngủ). Chồng chọn đĩa 3 (nhạc cũ giống sếp hát karaoke) — đáp án 2 (trống) là BẪY vì đó là điều VỢ đoán nhầm, không phải lựa chọn thật của chồng.",
+          "keywords": [
+            "一番目はクラシック",
+            "二番目は民族音楽",
+            "三番目は年代別",
+            "四番目は私が出したCD",
+            "夜寝る前",
+            "カラオケで上司が歌ってる"
+          ]
+        }
+      ]
+    }
+  ]
+}
