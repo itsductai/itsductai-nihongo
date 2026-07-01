@@ -106,7 +106,7 @@ body {
   border: 1px solid rgba(107,147,255,0.22);
   box-shadow: var(--shadow-soft);
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .exam-countdown-badge {
   display: inline-block;
