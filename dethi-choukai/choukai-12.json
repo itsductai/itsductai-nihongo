@@ -29,8 +29,14 @@
             "げんこうを暗記する"
           ],
           "correctIndex": 2,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Sinh viên nữ sắp tới phải làm gì trước tiên?\n1) Sắp xếp lại nội dung nói\n2) Thêm nội dung vào bản thảo\n3) Luyện nói chậm lại ✅\n4) Học thuộc bản thảo\n→ Senpai nói nội dung đã ổn, KHÔNG cần nhồi thêm — chỉ cần luyện nói CHẬM lại vì đọc bản thảo hay bị nhanh, người nghe không theo kịp. → đáp án 3.",
+          "keywords": [],
+          "optionsVi": [
+            "Sắp xếp lại nội dung nói",
+            "Thêm nội dung vào bản thảo",
+            "Luyện nói chậm lại",
+            "Học thuộc bản thảo"
+          ]
         },
         {
           "qnum": 2,
@@ -45,8 +51,14 @@
             "イウエ"
           ],
           "correctIndex": 1,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Người nữ đặt ghế Shinkansen thế nào?\n1) A-I-U\n2) A-I-E ✅\n3) A-U-E\n4) I-U-E\n→ Sếp muốn ghế cạnh cửa sổ (window seat); 2 người còn lại lấy 2 ghế trống còn lại (không cần ngồi sát nhau). Đối chiếu đúng vị trí trên sơ đồ chỗ trống (màu trắng) trong đề để chọn 3 ký hiệu ghế tương ứng.",
+          "keywords": [],
+          "optionsVi": [
+            "A-I-U",
+            "A-I-E",
+            "A-U-E",
+            "I-U-E"
+          ]
         },
         {
           "qnum": 3,
@@ -61,14 +73,20 @@
             "しりょう集めのぶんたん"
           ],
           "correctIndex": 1,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Du học sinh phải quyết định điều gì trong nhóm trước khi hết giờ học hôm nay?\n1) Chủ đề thuyết trình\n2) Nước sẽ tìm hiểu để thuyết trình ✅\n3) Vai trò trong nhóm\n4) Phân chia thu thập tài liệu\n→ Cô giáo nói vai trò nhóm (trưởng nhóm, thư ký...) đã phân chia TỪ TRƯỚC; hôm nay chỉ cần bàn và CHỌN 1 QUỐC GIA để làm chủ đề thuyết trình về xử lý rác. → đáp án 2.",
+          "keywords": [],
+          "optionsVi": [
+            "Chủ đề thuyết trình",
+            "Nước sẽ tìm hiểu để thuyết trình",
+            "Vai trò trong nhóm",
+            "Phân chia thu thập tài liệu"
+          ]
         },
         {
           "qnum": 4,
           "prompt": "大学で男の学生と女の学生が話しています。女の学生はこの後まず、何をしますか。",
           "isDualQuestion": false,
-          "script": "大学で男の学生と女の学生が話しています。女の学生はこの後まず、何をしますか。\n男：中村さん、青葉市の市民文化祭の事だけど、ステージ演奏の出演者募集に応募しようっていう話。\n\n女：二人でギター弾いて、歌おうって言ってたやつね。事前先行のための演奏動画の作成が締め切りに間に合わないって、諦めたよね。\n男：それ、僕の勘違いだったよ。ごめん！応募申請書と動画を同時に提出しなきゃいけないと思ってたんだけど、動画は申請書の締め切り後、一週間以内の提出だったんだ。\n女：えっ！そうだったの！私もホームページ見たのに、気が付かなかった。ごめんね！\n男：うん。間に合いそうだから、申し込もうよ！パソコンで申請書作ってくれたって言ってたけど、削除しちゃった？\n女：残してあるよ。\n男：じゃ、それ使えるね！締め切り明日だから、提出、任せるね。\n女：了解。\n男：動画作成もすぐに取り掛からなきゃ、応募する以上は絶対出たいからね。\n女の学生はこの後まず、何をしますか。",
+          "script": "大学で男の学生と女の学生が話しています。女の学生はこの後まず、何をしますか。\n男：中村さん、青葉市の市民文化祭の事だけど、ステージ演奏の出演者募集に応募しようっていう話。\n女：二人でギター弾いて、歌おうって言ってたやつね。事前先行のための演奏動画の作成が締め切りに間に合わないって、諦めたよね。\n男：それ、僕の勘違いだったよ。ごめん！応募申請書と動画を同時に提出しなきゃいけないと思ってたんだけど、動画は申請書の締め切り後、一週間以内の提出だったんだ。\n女：えっ！そうだったの！私もホームページ見たのに、気が付かなかった。ごめんね！\n男：うん。間に合いそうだから、申し込もうよ！パソコンで申請書作ってくれたって言ってたけど、削除しちゃった？\n女：残してあるよ。\n男：じゃ、それ使えるね！締め切り明日だから、提出、任せるね。\n女：了解。\n男：動画作成もすぐに取り掛からなきゃ、応募する以上は絶対出たいからね。\n女の学生はこの後まず、何をしますか。",
           "scriptVi": "Sinh viên nam và sinh viên nữ nói chuyện ở đại học. Sinh viên nữ trước tiên sẽ làm gì sau đây?\nNam: Nakamura, về lễ hội văn hóa thị dân Aoba, việc đăng ký tuyển người trình diễn sân khấu đó.\nNữ: Cái mà 2 đứa định chơi guitar và hát đó hả. Mình đã bỏ vì làm video diễn tập không kịp deadline mà.\nNam: Đó là tớ hiểu lầm. Xin lỗi! Tớ cứ nghĩ phải nộp đơn và video cùng lúc, nhưng video nộp trong vòng 1 tuần sau deadline đơn.\nNữ: Hả? Vậy á! Tớ cũng xem web rồi mà không để ý. Xin lỗi nha!\nNam: Có vẻ kịp nên đăng ký đi! Cậu đã làm đơn trên máy rồi, có xóa mất không?\nNữ: Tớ còn giữ.\nNam: Vậy dùng được! Deadline ngày mai, nộp đơn giao cho cậu nhé.\nNữ: Được.\nNam: Làm video cũng phải bắt tay ngay, đã đăng ký thì chắc chắn muốn tham gia rồi.\nSinh viên nữ trước tiên sẽ làm gì sau đây?",
           "options": [
             "えんそうの動画を作る",
@@ -77,8 +95,14 @@
             "応募の書類をていしゅつする"
           ],
           "correctIndex": 3,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Sinh viên nữ sắp tới sẽ làm gì trước tiên?\n1) Bàn với Nakamura về việc đăng ký\n2) Sửa lỗi trong đơn đăng ký\n3) Làm video biểu diễn\n4) Nộp đơn đăng ký ✅\n→ Nam nói deadline nộp ĐƠN là ngày mai và giao việc NỘP ĐƠN cho nữ ('締め切り明日だから、提出、任せるね' → 女：了解); còn video thì sau đó nam mới bắt tay làm. → việc trước tiên của nữ là NỘP ĐƠN ĐĂNG KÝ.",
+          "keywords": [],
+          "optionsVi": [
+            "Bàn với Nakamura về việc đăng ký",
+            "Sửa lỗi trong đơn đăng ký",
+            "Làm video biểu diễn",
+            "Nộp đơn đăng ký"
+          ]
         },
         {
           "qnum": 5,
@@ -93,8 +117,14 @@
             "別のはちにうえる"
           ],
           "correctIndex": 0,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Người nam trước tiên sẽ làm gì với cây?\n1) Chuyển cây ra gần cửa sổ có nắng ✅\n2) Tưới nước mỗi ngày\n3) Cắt bỏ cành yếu\n4) Thay chậu lớn hơn\n→ Nhân viên nói cây cần nhiều nắng nên phải CHUYỂN tới gần cửa sổ có nắng trước; tưới nước hiện tại đã đủ, không cần cắt cành, thay chậu chỉ làm SAU KHI cây khỏe lại. → đáp án 1.",
+          "keywords": [],
+          "optionsVi": [
+            "Chuyển cây ra gần cửa sổ có nắng",
+            "Tưới nước mỗi ngày",
+            "Cắt bỏ cành yếu",
+            "Thay chậu lớn hơn"
+          ]
         }
       ]
     },
@@ -116,8 +146,14 @@
             "インタビューで相手の話をうまく聞き出す点"
           ],
           "correctIndex": 2,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Người nam nói điểm nào của nữ MC này là tốt nhất?\n1) Cho ấn tượng gần gũi, dễ mến\n2) Có giọng nói dễ nghe\n3) Giỏi dẫn dắt chương trình khi làm MC ✅\n4) Khéo léo khai thác câu chuyện từ khách mời\n→ Nam nói ấn tượng/giọng nói là ưu điểm chung mọi người thấy, nhưng ĐIỀU NAM PHỤC NHẤT là CÁCH DẪN DẮT (進行の仕方) khi làm MC chương trình tranh luận — muốn học theo khi mình chủ trì họp. → đáp án 3.",
+          "keywords": [],
+          "optionsVi": [
+            "Cho ấn tượng gần gũi, dễ mến",
+            "Có giọng nói dễ nghe",
+            "Giỏi dẫn dắt chương trình khi làm MC",
+            "Khéo léo khai thác câu chuyện từ khách mời"
+          ]
         },
         {
           "qnum": 2,
@@ -132,8 +168,14 @@
             "安全面へのたいさくが不十分な点"
           ],
           "correctIndex": 0,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Kế hoạch của người nữ có vấn đề gì?\n1) Địa điểm không có bãi đỗ xe ✅\n2) Chi phí vượt ngân sách\n3) Đối tượng tham gia chưa rõ ràng\n4) Biện pháp an toàn chưa đủ\n→ Trưởng phòng chỉ ra: gần ga thì tốt, nhưng THIẾU bãi đỗ xe cho khách đi ô tô (có con nhỏ) — đây là điểm CẦN XEM LẠI. Việc vượt ngân sách do chi phí nhân sự thì trưởng phòng CHẤP NHẬN (an toàn cho trẻ nhỏ quan trọng hơn). → đáp án 1.",
+          "keywords": [],
+          "optionsVi": [
+            "Địa điểm không có bãi đỗ xe",
+            "Chi phí vượt ngân sách",
+            "Đối tượng tham gia chưa rõ ràng",
+            "Biện pháp an toàn chưa đủ"
+          ]
         },
         {
           "qnum": 3,
@@ -148,8 +190,14 @@
             "リサイクルショップに売る"
           ],
           "correctIndex": 2,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Người nữ nói cô ấy xử lý áo sơ mi không mặc nữa thế nào?\n1) Tặng người quen\n2) Sửa thành đồ cho trẻ em/thú cưng\n3) Cắt thành sợi để đan vỏ gối, lót bình hoa ✅\n4) Mang đến shop đồ cũ\n→ Người nữ nói RIÊNG BẢN THÂN mình ('私は') cắt thành sợi nhỏ để ĐAN vỏ gối/đồ lót dưới bình hoa — các cách khác (tặng, sửa đồ trẻ em, mang đồ cũ) là cô ấy nói NGƯỜI KHÁC làm. → đáp án 3.",
+          "keywords": [],
+          "optionsVi": [
+            "Tặng người quen",
+            "Sửa thành đồ cho trẻ em/thú cưng",
+            "Cắt thành sợi để đan vỏ gối, lót bình hoa",
+            "Mang đến shop đồ cũ"
+          ]
         },
         {
           "qnum": 4,
@@ -164,8 +212,14 @@
             "消しゴムで消して書き直せること"
           ],
           "correctIndex": 3,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Người nam thích điểm nào nhất khi vẽ tranh chỉ bằng bút chì đen?\n1) Không tốn chi phí\n2) Ai cũng vẽ được đẹp\n3) Có thể vẽ chân thực như ảnh\n4) Có thể tẩy xóa vẽ lại đến khi ưng ý ✅\n→ Nam nói ưu điểm ĐẶC BIỆT nhất là: bút chì có thể XÓA và VẼ LẠI nhiều lần cho tới khi bản thân ưng ý — điều mà dụng cụ khác không làm được. Chi phí thấp chỉ là lý do BẠN rủ đi học, không phải điều nam thích nhất. → đáp án 4.",
+          "keywords": [],
+          "optionsVi": [
+            "Không tốn chi phí",
+            "Ai cũng vẽ được đẹp",
+            "Có thể vẽ chân thực như ảnh",
+            "Có thể tẩy xóa vẽ lại đến khi ưng ý"
+          ]
         },
         {
           "qnum": 5,
@@ -180,8 +234,14 @@
             "かいがんのごみの問題を知らせるため"
           ],
           "correctIndex": 1,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Vì sao người nam thu thập đồ trôi dạt vào bờ biển (beachcombing)?\n1) Để nghiên cứu khoa học về vỏ sò\n2) Để làm đồ nội thất (bàn, ghế) từ cành cây trôi dạt ✅\n3) Để bán lại kiếm tiền\n4) Để làm phụ kiện trang sức\n→ Người nam nói TỰ MÌNH ('私自身は') nhặt cành cây trôi dạt để làm bàn/ghế; làm phụ kiện là NGƯỜI KHÁC hay làm, nghiên cứu vỏ sò là bạn của anh ta (nhà nghiên cứu). → đáp án 2.",
+          "keywords": [],
+          "optionsVi": [
+            "Để nghiên cứu khoa học về vỏ sò",
+            "Để làm đồ nội thất (bàn, ghế) từ cành cây trôi dạt",
+            "Để bán lại kiếm tiền",
+            "Để làm phụ kiện trang sức"
+          ]
         },
         {
           "qnum": 6,
@@ -196,8 +256,14 @@
             "対応できる段差が低い"
           ],
           "correctIndex": 3,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Máy hút bụi này có vấn đề gì so với sản phẩm hãng khác?\n1) Tiếng ồn to hơn\n2) Sạc lâu hơn\n3) Lực hút yếu hơn\n4) Không vượt được bậc thềm cao (chỉ 1cm, hãng khác 2cm+) ✅\n→ Bài nói khẳng định RÕ: về độ ồn/thời gian sạc/lực hút thì SP này ĐƯỢC KHEN tốt hơn; vấn đề DUY NHẤT là không vượt được bậc thềm cao như hãng khác (chỉ xử lý được 1cm, trong khi đối thủ xử lý được 2cm+). → đáp án 4.",
+          "keywords": [],
+          "optionsVi": [
+            "Tiếng ồn to hơn",
+            "Sạc lâu hơn",
+            "Lực hút yếu hơn",
+            "Không vượt được bậc thềm cao (chỉ 1cm, hãng khác 2cm+)"
+          ]
         }
       ]
     },
@@ -213,14 +279,20 @@
           "script": "テレビで動物病院の先生が話しています。\nいつも時代も、犬はペットとして大変人気がありますよね。市販されている犬用のご飯は栄養のバランスを考慮して改良され、動物医療も進歩し、犬の寿命は延びています。と同時に、生活習慣病にかかる犬も増えています。犬が元気に暮らすためには年齢に合った運動や食事をさせることが大切です。そうしていても、病気に なることはありますから、定期的に健康診断を受けることを強くお勧めします。\n動物病院の先生は何について話していますか。\n1.犬の健康に必要なこと。\n2.犬が人に与える影響。\n3.犬が最も多くかかる病気。\n4.犬専用の病院を新しく作ること。",
           "scriptVi": "Bác sĩ thú y nói trên TV.\nNgày nay chó vẫn rất được yêu thích làm vật nuôi. Thức ăn cho chó bán trên thị trường được cải tiến cân bằng dinh dưỡng, y học thú y cũng tiến bộ, tuổi thọ chó kéo dài hơn. Đồng thời, chó mắc bệnh lối sống cũng tăng. Để chó sống khỏe mạnh, vận động và ăn uống phù hợp tuổi là quan trọng. Dù vậy vẫn có thể mắc bệnh, nên tôi khuyên nên khám sức khỏe định kỳ.\nBác sĩ thú y nói về điều gì?\n1. Điều cần thiết cho sức khỏe của chó.\n2. Ảnh hưởng của chó đến con người.\n3. Bệnh chó hay mắc nhất.\n4. Việc xây bệnh viện mới dành riêng cho chó.",
           "options": [
-            "1",
-            "2",
-            "3",
-            "4"
+            "犬の健康に必要なこと。",
+            "犬が人に与える影響。",
+            "犬が最も多くかかる病気。",
+            "犬専用の病院を新しく作ること。"
           ],
           "correctIndex": 0,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Bác sĩ thú y đang nói về điều gì?\n1) Điều cần thiết cho sức khỏe của chó. ✅\n2) Ảnh hưởng của chó đến con người.\n3) Bệnh chó hay mắc nhất.\n4) Việc xây bệnh viện mới dành riêng cho chó.\n→ Toàn bài xoay quanh: vận động/ăn uống hợp độ tuổi + khám sức khỏe định kỳ — đều là ĐIỀU CẦN THIẾT để chó sống khỏe. → đáp án 1.",
+          "keywords": [],
+          "optionsVi": [
+            "Điều cần thiết cho sức khỏe của chó.",
+            "Ảnh hưởng của chó đến con người.",
+            "Bệnh chó hay mắc nhất.",
+            "Việc xây bệnh viện mới dành riêng cho chó."
+          ]
         },
         {
           "qnum": 2,
@@ -229,14 +301,20 @@
           "script": "テレビでレポーターの女の人と村の職員が話しています。\n女：今日は南村に来ています。大変自然が豊かですね。こちら南村は移住を希望する人の受け入れに力をいれているそうですね。\n男：はい、若い人が都会に出て、人口が減ってしまったので、その解決策として始めました。移住希望者のために、求人や空き家の紹介もしています。\n女：それはいいですね。\n男：それから、移住にかかる費用を一部補助しているんです。例えば、空き家をリフォームする費用や車を購入する際の費用です。お子さんがいる若い世代の方なら、他にも補助が受けられます。\n女：それは助かりますね。\n男：村での生活を体験できる施設もあるので、ぜひご利用ください。\n村の職員は南村の何について話していますか。\n1.移住希望者の世代の変化。\n2.移住を希望している人への支援。\n3.移住についての注意点。\n4.移住の費用を申請する方法。",
           "scriptVi": "Nữ phóng viên TV và nhân viên thôn nói chuyện.\nNữ: Hôm nay tôi đến thôn Minami. Thiên nhiên thật phong phú nhỉ. Thôn Minami đang nỗ lực tiếp nhận người muốn di cư đến đây phải không?\nNam: Đúng vậy, vì người trẻ ra thành phố làm dân số giảm, nên chúng tôi bắt đầu làm điều này như giải pháp. Chúng tôi giới thiệu việc làm và nhà bỏ trống cho người muốn di cư.\nNữ: Vậy tốt nhỉ.\nNam: Ngoài ra, chúng tôi hỗ trợ một phần chi phí di cư. Ví dụ chi phí sửa nhà bỏ trống hay mua xe. Gia đình trẻ có con còn được hỗ trợ thêm.\nNữ: Vậy giúp được nhiều nhỉ.\nNam: Cũng có cơ sở để trải nghiệm sống ở thôn, mời mọi người sử dụng.\nNhân viên thôn nói về điều gì của thôn Minami?\n1. Sự thay đổi thế hệ người muốn di cư.\n2. Hỗ trợ cho người muốn di cư.\n3. Lưu ý khi di cư.\n4. Cách đăng ký chi phí di cư.",
           "options": [
-            "1",
-            "2",
-            "3",
-            "4"
+            "移住希望者の世代の変化。",
+            "移住を希望している人への支援。",
+            "移住についての注意点。",
+            "移住の費用を申請する方法。"
           ],
           "correctIndex": 1,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Nhân viên thôn đang nói về điều gì của thôn Minami?\n1) Sự thay đổi thế hệ người muốn di cư.\n2) Hỗ trợ cho người muốn di cư. ✅\n3) Lưu ý khi di cư.\n4) Cách đăng ký chi phí di cư.\n→ Toàn bộ nội dung: hỗ trợ việc làm, nhà trống, trợ cấp chi phí chuyển đến, cơ sở trải nghiệm — tất cả đều là HỖ TRỢ cho người muốn di cư đến. → đáp án 2.",
+          "keywords": [],
+          "optionsVi": [
+            "Sự thay đổi thế hệ người muốn di cư.",
+            "Hỗ trợ cho người muốn di cư.",
+            "Lưu ý khi di cư.",
+            "Cách đăng ký chi phí di cư."
+          ]
         },
         {
           "qnum": 3,
@@ -245,14 +323,20 @@
           "script": "リンゴ農園で農園の人が見学に来た人に話しています。\nご覧いただいているリンゴの木、今収穫の時期を迎えています。木に備え付けてあるのは鳥の巣箱でフクロウが住んでいます。昔はフクロウは木に空いた穴に巣をつくって住み、リンゴの木を齧る鼠を退治してくれてました。でも、農作業の負担を軽くするために、リンゴの木が低く、細く改良されたことでフクロウが巣を作れなくなり、鼠による被害が増えてしまったんです。そこで、地元の農家と大学の農学部が共同で巣箱を設置したところ、フクロウが戻り、鼠の数を減らすことに成功しました。\n農園の人は何について話していますか。\n1.リンゴが収穫できる時期の変化。\n2.美味しいリンゴを作るための木の改良。\n3.リンゴを鳥から守る方法。\n4.鼠の被害を減らすための工夫。",
           "scriptVi": "Người làm việc ở vườn táo nói với khách tham quan.\nCây táo các vị đang xem đây đang vào mùa thu hoạch. Trên cây có gắn hộp làm ổ cho chim cú. Trước đây cú làm ổ trong lỗ hổng trên cây, diệt chuột gặm vỏ cây táo. Nhưng để giảm tải công việc nông nghiệp, cây táo được cải tiến thấp và mỏng hơn nên cú không làm ổ được nữa, thiệt hại do chuột tăng lên. Vì vậy nông dân địa phương và khoa nông học đại học hợp tác đặt hộp ổ, cú trở lại và đã giảm được số lượng chuột.\nNgười này nói về điều gì?\n1. Sự thay đổi thời điểm thu hoạch táo.\n2. Cải tiến cây để có táo ngon.\n3. Cách bảo vệ táo khỏi chim.\n4. Cách giảm thiệt hại do chuột.",
           "options": [
-            "1",
-            "2",
-            "3",
-            "4"
+            "リンゴが収穫できる時期の変化。",
+            "美味しいリンゴを作るための木の改良。",
+            "リンゴを鳥から守る方法。",
+            "鼠の被害を減らすための工夫。"
           ],
           "correctIndex": 3,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Người ở vườn táo đang nói về điều gì?\n1) Sự thay đổi thời điểm thu hoạch táo.\n2) Cải tiến cây để có táo ngon.\n3) Cách bảo vệ táo khỏi chim.\n4) Cách giảm thiệt hại do chuột. ✅\n→ Bài nói lý giải nguyên nhân chuột phá hoại tăng (cây táo cải tiến thấp hơn khiến cú không làm tổ được) và GIẢI PHÁP đặt hộp tổ cho cú quay lại để giảm chuột. → đáp án 4 (cách giảm thiệt hại do chuột).",
+          "keywords": [],
+          "optionsVi": [
+            "Sự thay đổi thời điểm thu hoạch táo.",
+            "Cải tiến cây để có táo ngon.",
+            "Cách bảo vệ táo khỏi chim.",
+            "Cách giảm thiệt hại do chuột."
+          ]
         },
         {
           "qnum": 4,
@@ -261,30 +345,42 @@
           "script": "医療器具の説明会で医療器具メーカーの人が話しています。\n日本では高齢化社会が進み、介護を受ける人が増えています。それに伴い、介護する人の負担が増えています。そこで、開発したのはこの車いすです。押す人の負担が減るよう、自動補助システム機能をつけました。また、こちらのロボットスーツは介護する人の動きを電動でサポートする機能がついています。これにより介護する人の腰や膝にかかる力を減らします。私達はこのような商品の開発に取り組んでいます。\n医療器具メーカーの人は何について話していますか。\n1.介護用ロボットの開発における苦労。\n2.介護用品の価格の上昇。\n3.介護する人の負担を減らす技術。\n4.車いすの使用で起きやすい事故。",
           "scriptVi": "Người ở hội thảo giới thiệu thiết bị y tế nói chuyện.\nỞ Nhật xã hội già hóa tiến triển, người được chăm sóc tăng lên. Kéo theo đó, gánh nặng người chăm sóc cũng tăng. Vì vậy chúng tôi phát triển xe lăn này. Để giảm gánh nặng người đẩy, chúng tôi gắn chức năng hệ thống hỗ trợ tự động. Ngoài ra, bộ đồ robot này có chức năng hỗ trợ điện cho động tác người chăm sóc, giảm lực tác động lên eo, đầu gối người chăm sóc. Chúng tôi đang phát triển các sản phẩm như vậy.\nNgười này nói về điều gì?\n1. Khó khăn khi phát triển robot chăm sóc.\n2. Giá đồ chăm sóc tăng.\n3. Công nghệ giảm gánh nặng người chăm sóc.\n4. Tai nạn dễ xảy ra khi dùng xe lăn.",
           "options": [
-            "1",
-            "2",
-            "3",
-            "4"
+            "介護用ロボットの開発における苦労。",
+            "介護用品の価格の上昇。",
+            "介護する人の負担を減らす技術。",
+            "車いすの使用で起きやすい事故。"
           ],
           "correctIndex": 2,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Người của hãng thiết bị y tế đang nói về điều gì?\n1) Khó khăn khi phát triển robot chăm sóc.\n2) Giá đồ chăm sóc tăng.\n3) Công nghệ giảm gánh nặng người chăm sóc. ✅\n4) Tai nạn dễ xảy ra khi dùng xe lăn.\n→ Bài nói giới thiệu xe lăn có hệ thống hỗ trợ tự động + áo robot hỗ trợ động tác — đều là CÔNG NGHỆ giúp giảm gánh nặng cho người chăm sóc (không nói về giá cả hay tai nạn). → đáp án 3.",
+          "keywords": [],
+          "optionsVi": [
+            "Khó khăn khi phát triển robot chăm sóc.",
+            "Giá đồ chăm sóc tăng.",
+            "Công nghệ giảm gánh nặng người chăm sóc.",
+            "Tai nạn dễ xảy ra khi dùng xe lăn."
+          ]
         },
         {
           "qnum": 5,
           "prompt": null,
           "isDualQuestion": false,
-          "script": "ラジオで和紙を作る職人が話しています。\n私は和紙、伝統的な日本の紙を作っています。和紙を作る職人になって10年になりますが、職人になる前は和紙について、特に興味はありませんでした。それが偶々見に行った明かりの展覧会で電球の周りを和紙で囲んだ明かりを見たんです。その時、和紙を通してみる光の柔らかさ、美しさに感動しました。和紙の持つ奥深さや可能性を感じました。それで、和紙作りの技術を一から学びたいと思いたくて和紙の職人を探し、地元にただ１人いた職人の方に弟子にしてもらったんです。\n職人は何について話していますか。\n\n1.和紙を作る職人を目指したきっかけ。\n2.和紙のいろいろな活用法。\n3.和紙を作る職人が減っている理由。\n4.和紙を作る技術を守ることの大切さ。",
+          "script": "ラジオで和紙を作る職人が話しています。\n私は和紙、伝統的な日本の紙を作っています。和紙を作る職人になって10年になりますが、職人になる前は和紙について、特に興味はありませんでした。それが偶々見に行った明かりの展覧会で電球の周りを和紙で囲んだ明かりを見たんです。その時、和紙を通してみる光の柔らかさ、美しさに感動しました。和紙の持つ奥深さや可能性を感じました。それで、和紙作りの技術を一から学びたいと思いたくて和紙の職人を探し、地元にただ１人いた職人の方に弟子にしてもらったんです。\n職人は何について話していますか。\n1.和紙を作る職人を目指したきっかけ。\n2.和紙のいろいろな活用法。\n3.和紙を作る職人が減っている理由。\n4.和紙を作る技術を守ることの大切さ。",
           "scriptVi": "Người thợ làm giấy Washi nói trên radio.\nTôi làm Washi, giấy truyền thống Nhật Bản. Tôi làm nghề này 10 năm, trước khi làm nghề tôi không đặc biệt hứng thú với Washi. Rồi tình cờ đi xem triển lãm ánh sáng, tôi thấy ánh đèn bao quanh bằng Washi. Lúc đó tôi cảm động bởi sự dịu dàng, đẹp đẽ của ánh sáng qua Washi. Tôi cảm nhận được sự sâu sắc và khả năng của Washi. Vì vậy tôi muốn học kỹ thuật làm Washi từ đầu, tìm thợ làm Washi và được người thợ duy nhất ở địa phương nhận làm học trò.\nNgười thợ nói về điều gì?\n1. Lý do trở thành thợ làm Washi.\n2. Các cách sử dụng Washi khác nhau.\n3. Lý do thợ làm Washi giảm.\n4. Sự quan trọng của việc bảo tồn kỹ thuật làm Washi.",
           "options": [
-            "1",
-            "2",
-            "3",
-            "4"
+            "和紙を作る職人を目指したきっかけ。",
+            "和紙のいろいろな活用法。",
+            "和紙を作る職人が減っている理由。",
+            "和紙を作る技術を守ることの大切さ。"
           ],
           "correctIndex": 0,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Người thợ đang nói về điều gì?\n1) Lý do trở thành thợ làm Washi. ✅\n2) Các cách sử dụng Washi khác nhau.\n3) Lý do thợ làm Washi giảm.\n4) Sự quan trọng của việc bảo tồn kỹ thuật làm Washi.\n→ Toàn bài kể lại QUÁ TRÌNH từ lúc không quan tâm washi, tình cờ thấy đèn làm từ washi rồi cảm động và quyết tâm học nghề — đây là LÝ DO/CƠ DUYÊN trở thành thợ làm washi. → đáp án 1.",
+          "keywords": [],
+          "optionsVi": [
+            "Lý do trở thành thợ làm Washi.",
+            "Các cách sử dụng Washi khác nhau.",
+            "Lý do thợ làm Washi giảm.",
+            "Sự quan trọng của việc bảo tồn kỹ thuật làm Washi."
+          ]
         }
       ]
     },
@@ -300,13 +396,18 @@
           "script": "森さん、明日もアルバイトに来てもらえると助かるんだけど。\n1 来られる人見つかったんですね。\n2 6 時以降なら、できますが。\n3 いえ、気にしないでください。",
           "scriptVi": "Anh Mori, nếu mai anh đến làm thêm nữa thì tốt quá.\n1. Đã tìm được người đến rồi sao.\n2. Sau 6 giờ thì được.\n3. Không, đừng để ý.",
           "options": [
-            "1",
-            "2",
-            "3"
+            "来られる人見つかったんですね。",
+            "6 時以降なら、できますが。",
+            "いえ、気にしないでください。"
           ],
           "correctIndex": 1,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: 森さん、明日もアルバイトに来てもらえると助かるんだけど。\n1) Đã tìm được người đến rồi sao.\n2) Sau 6 giờ thì được. ✅\n3) Không, đừng để ý.\n→ Câu hỏi ngầm nhờ vả '来てもらえると助かる' (nếu đến được thì tốt) cần phản hồi về KHẢ NĂNG đến — đáp án 2 trả lời đúng trọng tâm ('nếu sau 6 giờ thì được').",
+          "keywords": [],
+          "optionsVi": [
+            "Đã tìm được người đến rồi sao.",
+            "Sau 6 giờ thì được.",
+            "Không, đừng để ý."
+          ]
         },
         {
           "qnum": 2,
@@ -315,28 +416,38 @@
           "script": "さっきの映画、僕、泣かずにはいられなかったよ。\n1 本当、泣ける映画だったね。\n2 確かに泣くほどじゃなかったよね。\n3 へえ、泣いちゃえばよかったのに。",
           "scriptVi": "Bộ phim vừa rồi, tôi không thể không khóc.\n1. Đúng, phim làm khóc thật.\n2. Đúng là cũng không đến mức khóc.\n3. Ồ, lẽ ra nên khóc mới phải.",
           "options": [
-            "1",
-            "2",
-            "3"
+            "本当、泣ける映画だったね。",
+            "確かに泣くほどじゃなかったよね。",
+            "へえ、泣いちゃえばよかったのに。"
           ],
           "correctIndex": 0,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: さっきの映画、僕、泣かずにはいられなかったよ。\n1) Đúng, phim làm khóc thật. ✅\n2) Đúng là cũng không đến mức khóc.\n3) Ồ, lẽ ra nên khóc mới phải.\n→ '泣かずにはいられなかった' = không thể không khóc (đã khóc) → đáp án 1 đồng tình xác nhận đúng là phim làm khóc thật.",
+          "keywords": [],
+          "optionsVi": [
+            "Đúng, phim làm khóc thật.",
+            "Đúng là cũng không đến mức khóc.",
+            "Ồ, lẽ ra nên khóc mới phải."
+          ]
         },
         {
           "qnum": 3,
           "prompt": null,
           "isDualQuestion": false,
-          "script": "工場長、本日、本社から専務がお越しになると電話がありました。\n\n1 本社には 私が行くんですね。\n2 何時ごろ来ると言ってましたか。\n3 今日中に電話すればいいんですね。",
+          "script": "工場長、本日、本社から専務がお越しになると電話がありました。\n1 本社には 私が行くんですね。\n2 何時ごろ来ると言ってましたか。\n3 今日中に電話すればいいんですね。",
           "scriptVi": "Trưởng nhà máy, vừa có điện thoại báo hôm nay chuyên viên từ trụ sở chính sẽ đến.\n1. Vậy là tôi phải đến trụ sở chính đúng không.\n2. Họ nói khoảng mấy giờ đến?\n3. Vậy là hôm nay tôi gọi điện là được đúng không.",
           "options": [
-            "1",
-            "2",
-            "3"
+            "本社には 私が行くんですね。",
+            "何時ごろ来ると言ってましたか。",
+            "今日中に電話すればいいんですね。"
           ],
           "correctIndex": 1,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: 工場長、本日、本社から専務がお越しになると電話がありました。\n1) Vậy là tôi phải đến trụ sở chính đúng không.\n2) Họ nói khoảng mấy giờ đến? ✅\n3) Vậy là hôm nay tôi gọi điện là được đúng không.\n→ Thông báo cấp trên sắp đến, phản ứng tự nhiên nhất là hỏi THỜI GIAN cụ thể để chuẩn bị đón tiếp → đáp án 2.",
+          "keywords": [],
+          "optionsVi": [
+            "Vậy là tôi phải đến trụ sở chính đúng không.",
+            "Họ nói khoảng mấy giờ đến?",
+            "Vậy là hôm nay tôi gọi điện là được đúng không."
+          ]
         },
         {
           "qnum": 4,
@@ -345,13 +456,18 @@
           "script": "ねえ、佐藤さん、私達が受けた研修ちょっとものたりなくなかった？\n1 えっ！期待どおりだったってこと。\n2 そう？僕は あれぐらいで よかったけど。\n3 知らないことばかりで 勉強になったよね。",
           "scriptVi": "Này Sato, khóa đào tạo chúng ta vừa học không thấy thiếu thiếu gì à?\n1. Hả! Ý là đúng như mong đợi?\n2. Vậy hả? Tớ thì thấy như vậy là đủ rồi.\n3. Toàn điều chưa biết, học được nhiều nhỉ.",
           "options": [
-            "1",
-            "2",
-            "3"
+            "えっ！期待どおりだったってこと。",
+            "そう？僕は あれぐらいで よかったけど。",
+            "知らないことばかりで 勉強になったよね。"
           ],
           "correctIndex": 1,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: ねえ、佐藤さん、私達が受けた研修ちょっとものたりなくなかった？\n1) Hả! Ý là đúng như mong đợi?\n2) Vậy hả? Tớ thì thấy như vậy là đủ rồi. ✅\n3) Toàn điều chưa biết, học được nhiều nhỉ.\n→ 'ちょっと物足りなくなかった?' = có thấy hơi thiếu không? (ý chê ít/nhạt) → đáp án 2 phản bác nhẹ nhàng, cho là mức đó là đủ rồi (không đồng tình với 'thiếu').",
+          "keywords": [],
+          "optionsVi": [
+            "Hả! Ý là đúng như mong đợi?",
+            "Vậy hả? Tớ thì thấy như vậy là đủ rồi.",
+            "Toàn điều chưa biết, học được nhiều nhỉ."
+          ]
         },
         {
           "qnum": 5,
@@ -360,13 +476,18 @@
           "script": "中田さん、倉庫の電気つけっぱなしでしたよ。\n1 あ、つけてくださったんですね、ありがとうございます。\n2 あれ、つけたはずですが・・。\n3 あ、消しのを忘れました。すみません。",
           "scriptVi": "Anh Nakata, đèn kho vẫn để sáng kìa.\n1. À, anh đã tắt giúp rồi à, cảm ơn.\n2. Ơ, tôi tắt rồi mà...\n3. À, tôi quên tắt. Xin lỗi.",
           "options": [
-            "1",
-            "2",
-            "3"
+            "あ、つけてくださったんですね、ありがとうございます。",
+            "あれ、つけたはずですが・・。",
+            "あ、消しのを忘れました。すみません。"
           ],
           "correctIndex": 2,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: 中田さん、倉庫の電気つけっぱなしでしたよ。\n1) À, anh đã tắt giúp rồi à, cảm ơn.\n2) Ơ, tôi tắt rồi mà...\n3) À, tôi quên tắt. Xin lỗi. ✅\n→ Bị nhắc quên tắt đèn kho → phản ứng tự nhiên là NHẬN LỖI, xin lỗi vì quên tắt → đáp án 3.",
+          "keywords": [],
+          "optionsVi": [
+            "À, anh đã tắt giúp rồi à, cảm ơn.",
+            "Ơ, tôi tắt rồi mà...",
+            "À, tôi quên tắt. Xin lỗi."
+          ]
         },
         {
           "qnum": 6,
@@ -375,13 +496,18 @@
           "script": "すごく行きたかったイベントのチケット、抽選当たっちゃったよ。\n1 えっ！すごい、運がいいんだね！\n2 駄目だったんだ、残念だったね！\n3 当たったら、いいね！",
           "scriptVi": "Vé sự kiện tôi rất muốn đi đã trúng số rồi đó!\n1. Ồ, hay quá, may mắn thật nhỉ!\n2. Không được rồi, tiếc thật nhỉ!\n3. Trúng thì tốt nhỉ!",
           "options": [
-            "1",
-            "2",
-            "3"
+            "えっ！すごい、運がいいんだね！",
+            "駄目だったんだ、残念だったね！",
+            "当たったら、いいね！"
           ],
           "correctIndex": 0,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: すごく行きたかったイベントのチケット、抽選当たっちゃったよ。\n1) Ồ, hay quá, may mắn thật nhỉ! ✅\n2) Không được rồi, tiếc thật nhỉ!\n3) Trúng thì tốt nhỉ!\n→ Trúng vé số sự kiện rất muốn đi → phản hồi tự nhiên là chúc mừng, khen may mắn → đáp án 1.",
+          "keywords": [],
+          "optionsVi": [
+            "Ồ, hay quá, may mắn thật nhỉ!",
+            "Không được rồi, tiếc thật nhỉ!",
+            "Trúng thì tốt nhỉ!"
+          ]
         },
         {
           "qnum": 7,
@@ -390,13 +516,18 @@
           "script": "暗くなったので、今日の作業はこの辺で切り上げましょうか。\n1 作業最後まで終わりましたね。\n2 やはり、今日中にやらなきゃいけないんですね。\n3 今日はここまでですね。",
           "scriptVi": "Trời tối rồi, hôm nay làm đến đây thôi nhé.\n1. Công việc đã xong hết rồi nhỉ.\n2. Vậy là phải làm xong trong hôm nay đúng không.\n3. Hôm nay đến đây là được rồi.",
           "options": [
-            "1",
-            "2",
-            "3"
+            "作業最後まで終わりましたね。",
+            "やはり、今日中にやらなきゃいけないんですね。",
+            "今日はここまでですね。"
           ],
           "correctIndex": 2,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: 暗くなったので、今日の作業はこの辺で切り上げましょうか。\n1) Công việc đã xong hết rồi nhỉ.\n2) Vậy là phải làm xong trong hôm nay đúng không.\n3) Hôm nay đến đây là được rồi. ✅\n→ 'この辺で切り上げましょうか' = tạm dừng ở đây nhé (đề xuất kết thúc) → đáp án 3 đồng tình xác nhận hôm nay dừng ở đây.",
+          "keywords": [],
+          "optionsVi": [
+            "Công việc đã xong hết rồi nhỉ.",
+            "Vậy là phải làm xong trong hôm nay đúng không.",
+            "Hôm nay đến đây là được rồi."
+          ]
         },
         {
           "qnum": 8,
@@ -405,13 +536,18 @@
           "script": "東動物園へ行ったって、前言ってたよね。一日で回り切れる？\n1 一日あれば十分だよ。\n2 時間のことは考えなくていいんだね。\n3 すぐ見終わっちゃうってこと。",
           "scriptVi": "Anh từng nói đi sở thú Đông động vật viên rồi nhỉ. Đi 1 ngày xem hết được không?\n1. Một ngày là đủ rồi.\n2. Vậy là không cần nghĩ về thời gian nhỉ.\n3. Ý là xem xong nhanh lắm hả.",
           "options": [
-            "1",
-            "2",
-            "3"
+            "一日あれば十分だよ。",
+            "時間のことは考えなくていいんだね。",
+            "すぐ見終わっちゃうってこと。"
           ],
           "correctIndex": 0,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: 東動物園へ行ったって、前言ってたよね。一日で回り切れる？\n1) Một ngày là đủ rồi. ✅\n2) Vậy là không cần nghĩ về thời gian nhỉ.\n3) Ý là xem xong nhanh lắm hả.\n→ Hỏi 'một ngày có đi hết không?' → trả lời trực tiếp về ĐỦ THỜI GIAN hay không → đáp án 1 khẳng định một ngày là đủ.",
+          "keywords": [],
+          "optionsVi": [
+            "Một ngày là đủ rồi.",
+            "Vậy là không cần nghĩ về thời gian nhỉ.",
+            "Ý là xem xong nhanh lắm hả."
+          ]
         },
         {
           "qnum": 9,
@@ -420,13 +556,18 @@
           "script": "今日の花火大会は延期にしましょう。この雨じゃ、やむを得ないですね。\n1 まあ、延期はできないから、仕方ないですよね。\n2 やみそうにありませんからね。\n3 このまま、雨が止まなければ延期するんですね。",
           "scriptVi": "Lễ hội pháo hoa hôm nay hoãn lại nhé. Mưa này thì đành chịu thôi.\n1. À, không hoãn được nên đành chịu nhỉ.\n2. Có vẻ không tạnh được nhỉ.\n3. Cứ mưa thế này thì hoãn đúng không.",
           "options": [
-            "1",
-            "2",
-            "3"
+            "まあ、延期はできないから、仕方ないですよね。",
+            "やみそうにありませんからね。",
+            "このまま、雨が止まなければ延期するんですね。"
           ],
           "correctIndex": 1,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: 今日の花火大会は延期にしましょう。この雨じゃ、やむを得ないですね。\n1) À, không hoãn được nên đành chịu nhỉ.\n2) Có vẻ không tạnh được nhỉ. ✅\n3) Cứ mưa thế này thì hoãn đúng không.\n→ Đề xuất hoãn vì mưa, lý do 'không thể tránh được' (やむを得ない) → đáp án 2 đồng tình bổ sung lý do (mưa không có vẻ tạnh).",
+          "keywords": [],
+          "optionsVi": [
+            "À, không hoãn được nên đành chịu nhỉ.",
+            "Có vẻ không tạnh được nhỉ.",
+            "Cứ mưa thế này thì hoãn đúng không."
+          ]
         },
         {
           "qnum": 10,
@@ -435,13 +576,18 @@
           "script": "林さん、明日の会議、課長の代わりに進行役を務めてもらえませんか。\n1 かまいませんが、課長どうされたんですか。\n2 課長がやってくださるなら安心です。\n3 課長と２人でですか。",
           "scriptVi": "Anh Hayashi, cuộc họp ngày mai anh có thể làm người dẫn dắt thay trưởng phòng được không?\n1. Được thôi, nhưng trưởng phòng sao vậy?\n2. Trưởng phòng làm thì tôi an tâm hơn.\n3. Với trưởng phòng 2 người làm à?",
           "options": [
-            "1",
-            "2",
-            "3"
+            "かまいませんが、課長どうされたんですか。",
+            "課長がやってくださるなら安心です。",
+            "課長と２人でですか。"
           ],
           "correctIndex": 0,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: 林さん、明日の会議、課長の代わりに進行役を務めてもらえませんか。\n1) Được thôi, nhưng trưởng phòng sao vậy? ✅\n2) Trưởng phòng làm thì tôi an tâm hơn.\n3) Với trưởng phòng 2 người làm à?\n→ Được nhờ làm người điều hành cuộc họp thay trưởng phòng → phản ứng tự nhiên là hỏi LÝ DO trưởng phòng vắng mặt → đáp án 1.",
+          "keywords": [],
+          "optionsVi": [
+            "Được thôi, nhưng trưởng phòng sao vậy?",
+            "Trưởng phòng làm thì tôi an tâm hơn.",
+            "Với trưởng phòng 2 người làm à?"
+          ]
         },
         {
           "qnum": 11,
@@ -450,13 +596,18 @@
           "script": "先日、ご依頼いただいた件ですが、私どもではお引き受けしかねます。\n1 いつ頃お返事いただけるんでしょうか。\n2 お引き受けいただけてよかったです。\n3 あのう・・どこが問題でしょうか。",
           "scriptVi": "Việc anh đã nhờ hôm trước, chúng tôi xin từ chối nhận.\n1. Khi nào tôi có thể nhận được câu trả lời?\n2. May là anh đã nhận lời.\n3. À... chỗ nào có vấn đề vậy?",
           "options": [
-            "1",
-            "2",
-            "3"
+            "いつ頃お返事いただけるんでしょうか。",
+            "お引き受けいただけてよかったです。",
+            "あのう・・どこが問題でしょうか。"
           ],
           "correctIndex": 2,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: 先日、ご依頼いただいた件ですが、私どもではお引き受けしかねます。\n1) Khi nào tôi có thể nhận được câu trả lời?\n2) May là anh đã nhận lời.\n3) À... chỗ nào có vấn đề vậy? ✅\n→ 'お引き受けしかねます' = xin phép từ chối (khiêm nhường, khó nhận) → phản ứng tự nhiên là hỏi VẤN ĐỀ Ở ĐÂU khiến bị từ chối → đáp án 3.",
+          "keywords": [],
+          "optionsVi": [
+            "Khi nào tôi có thể nhận được câu trả lời?",
+            "May là anh đã nhận lời.",
+            "À... chỗ nào có vấn đề vậy?"
+          ]
         }
       ]
     },
@@ -469,7 +620,7 @@
           "qnum": 1,
           "prompt": null,
           "isDualQuestion": false,
-          "script": "市民センターで上司と職員２人が子供向けのイベントの企画について話しています。\n上司：今年の秋、小学生向けのイベントを行うことになりました。場所はうちの大ホールで子供達がみて楽しめる物にしたいと思います。初めての試みですが、何かいいアイディアはありますか。\n職員１：子供むけのクラシックコンサートはどうですか。前に見たことがあるんですが・・。市民オーケストラが楽器を紹介もしながら演奏してくれるんですよ。何人か舞台にあげて楽器の体験もさせてくれました。\n上司：面白そうですね。\n職員２：あとは最近人気の手品ショーを呼びのもいいと思います。手品を見せてくれた後、２、3人の子供と一緒に舞台の上で手品をしたらするそうですよ。\n上司：でも、どちらも舞台に上がりたい子が皆上がれるわけじゃないですよね。人形劇はどうですか。会場の子供達とやり取りしたり、皆で一緒に歌ったりする人形劇をやっている団体がありますよ。あ、全員が劇に参加できるんですね。それか、市内のバレー団に来てもらうのはどうですか。普段、なかなか見られないんですよね。私子供の時に見て感動したんです。\n職員１：うーん、僕も子供の時にみましたが、セリフがないから、そんなに興味が持てなかったです。\n上司：そういう子も結構いるかもしれませんね。うーん、そうですね。一部の子供だけ舞台に上がるより客席から皆が声を出して参加できるっていうのがいいですね。そこに連絡してみましょう。\n今年のイベントとしてどの企画を進めることにしましたか。\n1.ラシックコンサート\n2.手品\n3.人形劇\n4.バレー\n\n**2番 まず話を聞いてください。それから、二つの質問を聞いて、それぞれ問題用紙の1から4の中から、最もよいものを一つ選んでください。**\n\n**質問1**\n\n正解:　1) タイプ1 　\n\n2) タイプ2 　\n\n3) タイプ3 　\n\n4) タイプ4　\n\n**質問2**\n\n1) タイプ1 　\n\n2) タイプ2 　\n\n3) タイプ3 　\n\n正解:　4) タイプ4　\n\nTham khảo: 大学で海外語学研修の説明を聞いて、研修する学生二人が話しています。\n夏休みの研修では、皆さん、大学の同じプログラムに参加しますが、宿泊施設は4つの中から選べます。タイプ１は大学の学内にある寮です。部屋は4人部屋で、キッチンやシャワーなども共同で利用します。宿泊費は4 つの中で最も安いです。タイプ２は一般家庭でのホームステイです。大学から遠い場合もありますが、生活や文化を体験するには最適ですし、宿泊費も寮の次に安いです。タイプ３と４は、大学近くのアパートです。タイプ３はバス、トイレ、シャワー付きの１人用のアパートです。宿泊費は他よりかかりますが、プライバシーが保ってます。タイプ４は他の学生と共同でアパートを利用します。キッチンなどは共同で利用しますが、部屋は1人部屋です。宿泊費は１人用のアパートよりは抑えられます。\n女：どうしようかな・・佐藤君はどうするの？\n男：僕はせっかくだし、現地の一般の家庭で過ごしたいけど・・\n女：いい経験になりそうだよね、でも、大学から遠い所になったら、ちょっと大変そう。\n男：それは平気なんだけど、ただ今回は宿泊費が一番抑えられるのにするよ。\n女：そうか。私は大学に近くて、あと自分の部屋がちゃんとあって、プライバシーが守られるのがいいなぁ。部屋で一人になれればいいから、キッチンとかは共同っていうのにする。\n質問１、男の学生はどのタイプがいいと言っていますか。\n質問２、女の学生はどのタイプがいいと言っていますか。",
+          "script": "市民センターで上司と職員２人が子供向けのイベントの企画について話しています。\n上司：今年の秋、小学生向けのイベントを行うことになりました。場所はうちの大ホールで子供達がみて楽しめる物にしたいと思います。初めての試みですが、何かいいアイディアはありますか。\n職員１：子供むけのクラシックコンサートはどうですか。前に見たことがあるんですが・・。市民オーケストラが楽器を紹介もしながら演奏してくれるんですよ。何人か舞台にあげて楽器の体験もさせてくれました。\n上司：面白そうですね。\n職員２：あとは最近人気の手品ショーを呼びのもいいと思います。手品を見せてくれた後、２、3人の子供と一緒に舞台の上で手品をしたらするそうですよ。\n上司：でも、どちらも舞台に上がりたい子が皆上がれるわけじゃないですよね。人形劇はどうですか。会場の子供達とやり取りしたり、皆で一緒に歌ったりする人形劇をやっている団体がありますよ。あ、全員が劇に参加できるんですね。それか、市内のバレー団に来てもらうのはどうですか。普段、なかなか見られないんですよね。私子供の時に見て感動したんです。\n職員１：うーん、僕も子供の時にみましたが、セリフがないから、そんなに興味が持てなかったです。\n上司：そういう子も結構いるかもしれませんね。うーん、そうですね。一部の子供だけ舞台に上がるより客席から皆が声を出して参加できるっていうのがいいですね。そこに連絡してみましょう。\n今年のイベントとしてどの企画を進めることにしましたか。\n1.ラシックコンサート\n2.手品\n3.人形劇\n4.バレー",
           "scriptVi": "Cấp trên và 2 nhân viên trung tâm thị dân nói về kế hoạch sự kiện cho trẻ em. Cuối cùng quyết định tiến hành kế hoạch nào cho sự kiện năm nay?\nCấp trên: Mùa thu năm nay, chúng ta sẽ làm sự kiện cho học sinh tiểu học. Địa điểm là hội trường lớn của ta, muốn làm gì đó trẻ con xem vui được. Lần đầu thử nghiệm, có ý gì hay không?\nNV1: Buổi hòa nhạc cổ điển cho trẻ em thì sao? Tôi từng xem rồi... Dàn nhạc thị dân vừa giới thiệu nhạc cụ vừa diễn, còn cho vài trẻ lên sân khấu trải nghiệm nhạc cụ.\nCấp trên: Nghe hay đó.\nNV2: Hoặc gọi show ảo thuật đang hot gần đây cũng tốt. Sau khi biểu diễn ảo thuật, nghe nói còn cho 2-3 trẻ lên sân khấu cùng làm ảo thuật.\nCấp trên: Nhưng cả 2 cái đều không phải trẻ nào muốn lên sân khấu cũng lên được nhỉ. Kịch rối thì sao? Có đoàn kịch rối tương tác với trẻ dưới khán đài, cùng hát chung. À, vậy mọi trẻ đều tham gia được kịch. Hoặc gọi đoàn ballet trong thành phố đến thì sao? Bình thường khó xem được. Tôi hồi nhỏ xem rồi rất cảm động.\nNV1: Ừm, tôi cũng xem hồi nhỏ, nhưng vì không có lời nên không hứng thú lắm.\nCấp trên: Có thể nhiều trẻ như vậy. Ừm, vậy nhỉ. So với chỉ vài trẻ lên sân khấu, để mọi trẻ ở khán đài cùng tham gia bằng tiếng nói thì tốt hơn. Hãy liên hệ chỗ đó thử.\nCuối cùng quyết định tiến hành kế hoạch nào cho sự kiện năm nay?\n1. Hòa nhạc cổ điển\n2. Ảo thuật\n3. Kịch rối\n4. Ballet",
           "options": [
             "1",
@@ -478,15 +629,21 @@
             "4"
           ],
           "correctIndex": 2,
-          "tip": "",
-          "keywords": []
+          "tip": "Câu hỏi: Cuối cùng quyết định tiến hành kế hoạch nào cho sự kiện năm nay?\n1) Nhạc cổ điển\n2) Ảo thuật\n3) Kịch rối ✅\n4) Ballet\n→ Nhạc cổ điển & ảo thuật đều chỉ cho VÀI trẻ lên sân khấu — không công bằng. Kịch rối cho TẤT CẢ trẻ tham gia bằng tiếng nói từ khán đài — cấp trên chốt phương án này vì ai cũng tham gia được. → đáp án 3 (kịch rối).",
+          "keywords": [],
+          "optionsVi": [
+            "Nhạc cổ điển",
+            "Ảo thuật",
+            "Kịch rối",
+            "Ballet"
+          ]
         },
         {
           "qnum": 2,
           "prompt": null,
           "isDualQuestion": true,
           "script": "大学で海外語学研修の説明を聞いて、研修する学生二人が話しています。\n夏休みの研修では、皆さん、大学の同じプログラムに参加しますが、宿泊施設は4つの中から選べます。タイプ１は大学の学内にある寮です。部屋は4人部屋で、キッチンやシャワーなども共同で利用します。宿泊費は4つの中で最も安いです。タイプ２は一般家庭でのホームステイです。大学から遠い場合もありますが、生活や文化を体験するには最適ですし、宿泊費も寮の次に安いです。タイプ３と４は、大学近くのアパートです。タイプ３はバス、トイレ、シャワー付きの１人用のアパートです。宿泊費は他よりかかりますが、プライバシーが保ってます。タイプ４は他の学生と共同でアパートを利用します。キッチンなどは共同で利用しますが、部屋は1人部屋です。宿泊費は１人用のアパートよりは抑えられます。\n女:どうしようかな・・佐藤君はどうするの?\n男:僕はせっかくだし、現地の一般の家庭で過ごしたいけど・・\n女:いい経験になりそうだよね、でも、大学から遠い所になったら、ちょっと大変そう。\n男:それは平気なんだけど、ただ今回は宿泊費が一番抑えられるのにするよ。\n女:そうか。私は大学に近くて、あと自分の部屋がちゃんとあって、プライバシーが守られるのがいいなぁ。部屋で一人になれればいいから、キッチンとかは共同っていうのにする。\n質問1 男の学生はどのタイプがいいと言っていますか。\n質問2 女の学生はどのタイプがいいと言っていますか。",
-          "scriptVi": "2 sinh viên sắp đi tu nghiệp ngôn ngữ nước ngoài nói chuyện sau khi nghe giải thích ở trường. Mùa hè tu nghiệp, mọi người tham gia cùng chương trình đại học, nhưng cơ sở lưu trú có thể chọn trong 4 loại. Loại 1 là ký túc xá trong trường, phòng 4 người, bếp/vòi sen dùng chung, chi phí rẻ nhất trong 4 loại. Loại 2 là homestay nhà dân, có thể xa trường nhưng trải nghiệm sinh hoạt/văn hóa tốt nhất, chi phí rẻ thứ 2. Loại 3 và 4 là căn hộ gần trường. Loại 3 là căn hộ 1 người có bồn tắm/toilet/vòi sen riêng, chi phí cao hơn nhưng giữ được riêng tư. Loại 4 dùng chung căn hộ với sinh viên khác, bếp dùng chung nhưng phòng riêng 1 người. Chi phí thấp hơn căn hộ 1 người.\nNữ: Làm sao đây... Sato thì sao?\nNam: Tớ thì nhân tiện muốn ở nhà dân địa phương...\nNữ: Có vẻ là kinh nghiệm tốt nhỉ, nhưng nếu xa trường thì cũng hơi vất vả.\nNam: Cái đó tớ không sao, nhưng lần này tớ chọn loại rẻ nhất.\nNữ: Vậy à. Tớ thì muốn gần trường, có phòng riêng giữ được riêng tư. Chỉ cần 1 mình trong phòng nên bếp dùng chung cũng được.\nCâu hỏi 1: Sinh viên nam nói muốn loại nào?\nCâu hỏi 2: Sinh viên nữ nói muốn loại nào?",
+          "scriptVi": "2 sinh viên sắp đi tu nghiệp ngôn ngữ nước ngoài nói chuyện sau khi nghe giải thích ở trường. Mùa hè tu nghiệp, mọi người tham gia cùng chương trình đại học, nhưng cơ sở lưu trú có thể chọn trong 4 loại. Loại 1 là ký túc xá trong trường, phòng 4 người, bếp/vòi sen dùng chung, chi phí rẻ nhất trong 4 loại. Loại 2 là homestay nhà dân, có thể xa trường nhưng trải nghiệm sinh hoạt/văn hóa tốt nhất, chi phí rẻ thứ 2. Loại 3 và 4 là căn hộ gần trường. Loại 3 là căn hộ 1 người có bồn tắm/toilet/vòi sen riêng, chi phí cao hơn nhưng giữ được riêng tư. Loại 4 dùng chung căn hộ với sinh viên khác, bếp dùng chung nhưng phòng riêng 1 người. Chi phí thấp hơn căn hộ 1 người.\nTrong kỳ tu nghiệp mùa hè, mọi người sẽ tham gia cùng chương trình của trường, nhưng có thể chọn 1 trong 4 loại chỗ ở. Loại 1 là ký túc xá trong khuôn viên trường, phòng 4 người, dùng chung bếp và phòng tắm — chi phí rẻ nhất trong 4 loại. Loại 2 là homestay ở nhà dân, có thể xa trường nhưng phù hợp để trải nghiệm cuộc sống và văn hóa, chi phí rẻ thứ nhì. Loại 3 và 4 là căn hộ gần trường. Loại 3 là căn hộ 1 người có bồn tắm/toilet/vòi sen riêng, chi phí cao hơn nhưng đảm bảo riêng tư. Loại 4 ở chung căn hộ với sinh viên khác, dùng chung bếp nhưng phòng riêng, chi phí thấp hơn loại căn hộ 1 người.\nNữ: Làm sao đây... Sato thì sao?\nNam: Tớ thì nhân tiện muốn ở nhà dân địa phương...\nNữ: Có vẻ là kinh nghiệm tốt nhỉ, nhưng nếu xa trường thì cũng hơi vất vả.\nNam: Cái đó tớ không sao, nhưng lần này tớ chọn loại rẻ nhất.\nNữ: Vậy à. Tớ thì muốn gần trường, có phòng riêng giữ được riêng tư. Chỉ cần 1 mình trong phòng nên bếp dùng chung cũng được.\nCâu hỏi 1: Sinh viên nam nói muốn loại nào?\nCâu hỏi 2: Sinh viên nữ nói muốn loại nào?",
           "subQuestions": [
             {
               "label": "質問1",
@@ -497,7 +654,13 @@
                 "タイプ3",
                 "タイプ4"
               ],
-              "correctIndex": 1
+              "correctIndex": 1,
+              "optionsVi": [
+                "Loại 1 (ký túc xá)",
+                "Loại 2 (homestay)",
+                "Loại 3 (căn hộ 1 người)",
+                "Loại 4 (căn hộ chung, phòng riêng)"
+              ]
             },
             {
               "label": "質問2",
@@ -508,10 +671,16 @@
                 "タイプ3",
                 "タイプ4"
               ],
-              "correctIndex": 2
+              "correctIndex": 2,
+              "optionsVi": [
+                "Loại 1 (ký túc xá)",
+                "Loại 2 (homestay)",
+                "Loại 3 (căn hộ 1 người)",
+                "Loại 4 (căn hộ chung, phòng riêng)"
+              ]
             }
           ],
-          "tip": "",
+          "tip": "Câu hỏi 1: Sinh viên nam nói muốn chọn loại nào?\nCâu hỏi 2: Sinh viên nữ nói muốn chọn loại nào?\n1) Loại 1 (ký túc xá) 2) Loại 2 (homestay) 3) Loại 3 (căn hộ 1 người, riêng tư) 4) Loại 4 (căn hộ chung bếp, phòng riêng)\n→ Nam: muốn ở nhà dân địa phương (loại 2) nhưng CHỌN loại rẻ nhất trong 4 loại = Loại 1 (ký túc xá). Nữ: muốn gần trường + phòng riêng (không cần bếp riêng) = Loại 4 (căn hộ chung bếp, phòng riêng).",
           "keywords": []
         }
       ]
