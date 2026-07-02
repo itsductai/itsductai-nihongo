@@ -106,7 +106,7 @@ body {
   border: 1px solid rgba(107,147,255,0.22);
   box-shadow: var(--shadow-soft);
   position: relative;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .exam-countdown-badge {
   display: inline-block;
@@ -282,6 +282,28 @@ input[type="text"]:focus, textarea:focus {
   border: 1px dashed var(--border);
   white-space: nowrap;
 }
+
+/* Mondai 3 & 4 — nút "mù": chỉ hiện số thứ tự, không in chữ đáp án (đề thật chỉ
+   đọc qua audio, không in sẵn lựa chọn nào cả) */
+.choukai-opt-blind { justify-content: center; padding-right: 12px; }
+.choukai-opt-blind .choukai-opt-text {
+  font-size: 20px; font-weight: 800; text-align: center; flex: none;
+  width: 100%;
+}
+.choukai-opt-blind .choukai-opt-unsure { position: static; transform: none; margin-left: auto; }
+
+/* Panel xem lại — khối "Các lựa chọn đã đọc qua audio" (chỉ M3/M4) */
+.choukai-review-options-heading {
+  margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--border);
+  font-size: 12px; font-weight: 700; color: var(--text-1);
+}
+.choukai-review-options-list { margin-top: 6px; display: flex; flex-direction: column; gap: 6px; }
+.choukai-review-options-item {
+  padding: 8px 10px; border-radius: 8px;
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border-soft);
+  font-size: 13.5px; line-height: 1.5;
+}
+.choukai-review-options-missing { margin-top: 6px; font-size: 12px; color: var(--bad); font-style: italic; }
 
 /* ---- 13. Modal & overlay: nền mờ có blur, hộp nổi hơn ---- */
 .modal-overlay { backdrop-filter: blur(4px); background: rgba(8,9,11,0.62); }
