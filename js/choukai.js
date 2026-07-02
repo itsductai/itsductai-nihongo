@@ -226,15 +226,21 @@ function renderChoukaiQuestion() {
   document.getElementById("btnChoukaiFlag").classList.toggle("is-active", App.choukaiFlagged.has(key));
 
   const unsureSet = getChoukaiUnsureSet(key);
+  // MONDAI 3 (概要理解) & MONDAI 4 (即時応答): đề thật KHÔNG in sẵn lựa chọn nào cả —
+  // toàn bộ 3-4 phương án chỉ được ĐỌC qua audio, người thi chọn thuần bằng tai.
+  // Vì vậy nút bấm ở 2 dạng này CHỈ hiện số thứ tự, tuyệt đối không in chữ đáp án
+  // (dù đã trả lời hay chưa) — nội dung đầy đủ (JP+dịch) chỉ hiện lại ở panel
+  // "Script/Dịch" SAU khi trả lời (xem renderChoukaiReviewContent).
+  const isBlindMondai = mondai.number === 3 || mondai.number === 4;
   const optWrap = document.getElementById("choukaiOptions");
   optWrap.innerHTML = "";
   options.forEach(function (opt, idx) {
     const btn = document.createElement("button");
-    btn.className = "quiz-opt choukai-opt";
+    btn.className = "quiz-opt choukai-opt" + (isBlindMondai ? " choukai-opt-blind" : "");
     // Nội dung đáp án bọc trong span riêng để badge 🤔 không bị đè lên chữ.
     const textSpan = document.createElement("span");
     textSpan.className = "choukai-opt-text";
-    textSpan.textContent = opt;
+    textSpan.textContent = isBlindMondai ? String(idx + 1) : opt;
     btn.appendChild(textSpan);
 
     // Badge 🤔 phân vân — đánh dấu RIÊNG cho đáp án này (đáp án mình lăn tăn,
@@ -510,6 +516,7 @@ function renderChoukaiReviewContent() {
   const item = getChoukaiCurrentItem();
   if (!item) return;
   const q = item.q;
+  const mondaiNum = item.mondai.number;
   const noteId = App.currentChoukaiId;
   const noteQKey = choukaiKeyFor(item.mondai.number, q.qnum, item.pos.subIndex);
   const box = document.getElementById("choukaiReviewContent");
@@ -533,12 +540,47 @@ function renderChoukaiReviewContent() {
     clearKaraokeHandler("reviewVi"); // đang xem tab khác — dọn handler của tab Dịch
     if (!jpLines.length) { box.textContent = "(không có script)"; return; }
     renderKaraokeLines(box, jpLines, lineTimestamps, audioEl, "reviewScript");
+    appendBlindMondaiOptionsBlock(box, mondaiNum, q.options, null);
   } else {
     clearKaraokeHandler("reviewScript"); // đang xem tab khác — dọn handler của tab Script
     if (!viLines.length) { box.textContent = "(chưa có bản dịch)"; return; }
     renderKaraokeLines(box, viLines, lineTimestamps, audioEl, "reviewVi");
+    appendBlindMondaiOptionsBlock(box, mondaiNum, q.optionsVi, q.options);
   }
   applyNoteHighlights(box, "choukai", noteId, noteQKey);
+}
+
+// MONDAI 3 & 4: các lựa chọn KHÔNG in sẵn trên đề (chỉ đọc qua audio, xem cảnh
+// báo ở renderChoukaiQuestion) — nên phần script gốc của câu không tự chứa nội
+// dung 3-4 lựa chọn đó. Ở panel xem lại (SAU khi đã trả lời), phải bổ sung
+// NGUYÊN VẸN toàn bộ nội dung đã đọc (cả JP lẫn dịch) để ôn tập đầy đủ — đây là
+// khối TĨNH, không gắn karaoke/timestamp (audio không có mốc giờ riêng cho từng
+// lựa chọn), nối THÊM sau phần script/dịch chính, không chèn xen vào để không
+// làm lệch mảng lineTimestamps của phần script hội thoại.
+function appendBlindMondaiOptionsBlock(box, mondaiNum, list, fallbackJpList) {
+  if (mondaiNum !== 3 && mondaiNum !== 4) return;
+  const hasContent = Array.isArray(list) && list.some(function (s) { return s; });
+  const heading = document.createElement("div");
+  heading.className = "choukai-review-options-heading";
+  heading.textContent = "🔊 Các lựa chọn đã đọc qua audio:";
+  box.appendChild(heading);
+  if (!hasContent) {
+    const warn = document.createElement("div");
+    warn.className = "choukai-review-options-missing";
+    warn.textContent = "(chưa có nội dung — cần bổ sung optionsVi/options cho câu này)";
+    box.appendChild(warn);
+    return;
+  }
+  const wrap = document.createElement("div");
+  wrap.className = "choukai-review-options-list";
+  list.forEach(function (text, idx) {
+    if (!text) return;
+    const line = document.createElement("div");
+    line.className = "choukai-review-options-item";
+    line.textContent = (idx + 1) + ". " + text;
+    wrap.appendChild(line);
+  });
+  box.appendChild(wrap);
 }
 
 // Key ghi chú của câu ĐANG HIỆN (dùng cho bôi đen tạo ghi chú lúc làm đề nghe).
