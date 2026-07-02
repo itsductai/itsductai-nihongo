@@ -98,7 +98,7 @@ function renderTable() {
       const colMeta = meta[col];
       let raw = w[col] || "";
       if (col === "doc") raw = renderChoon(w.doc_marked || w.doc);
-      if (col === "vi_du") raw = renderExampleSentences(w.vi_du_ruby || w.vi_du);
+      if (col === "vi_du") raw = renderExampleSentencesForCard(w);
       if (col === "dong_nghia" || col === "trai_nghia") {
         raw = w[col] && w[col].length ? renderSynonymList(w[col]) : "";
       }

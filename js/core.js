@@ -179,7 +179,7 @@ const FIELD_META = {
     doc: { label: "Hiragana (trường âm đỏ)", render: (w) => `<div class="cf-doc">${renderChoon(w.doc_marked || w.doc)}</div>` },
     han_viet: { label: "Hán Việt", render: (w) => `<div class="cf-hanviet">${w.han_viet}</div>` },
     nghia: { label: "Nghĩa tiếng Việt", render: (w) => `<div class="cf-nghia">${w.nghia}</div>` },
-    vi_du: { label: "Ví dụ (furigana)", render: (w) => `<div class="cf-vidu">${renderExampleSentences(w.vi_du_ruby || w.vi_du)}</div>` },
+    vi_du: { label: "Ví dụ (furigana + dịch)", render: (w) => `<div class="cf-vidu">${renderExampleSentencesForCard(w)}</div>` },
     dong_nghia: {
       label: "Từ đồng nghĩa",
       render: (w) => (w.dong_nghia && w.dong_nghia.length
@@ -282,6 +282,30 @@ function renderExampleSentences(text) {
   if (!text) return "";
   const sentences = text.split(/(?<=\)) +(?=\S)/).filter(Boolean);
   if (sentences.length <= 1) return renderChoon(text);
+  return sentences.map((s) => `<div class="cf-vidu-line">${renderChoon(s)}</div>`).join("");
+}
+
+// FIX BUG: trước đây field "vi_du" (Flashcard + Bảng) ưu tiên vi_du_ruby khi có,
+// khiến MẤT hẳn phần dịch tiếng Việt — vì vi_du_ruby theo thiết kế (README mục 3)
+// CHỈ chứa câu ĐẦU TIÊN có furigana, KHÔNG kèm bản dịch. Hàm này ghép đúng: câu 1 =
+// vi_du_ruby (furigana) + phần dịch "(...)" tách từ vi_du gốc; câu 2 trở đi (nếu có)
+// lấy nguyên từ vi_du (đã có dịch sẵn, không furigana — đúng spec, chỉ câu 1 có ruby).
+function extractTranslationSuffix(sentenceText) {
+  const m = sentenceText.match(/\([^()]*\)\s*$/);
+  return m ? m[0] : "";
+}
+
+function renderExampleSentencesForCard(w) {
+  const full = w.vi_du || "";
+  const ruby = (w.vi_du_ruby || "").trim();
+  if (!full) return ruby ? renderChoon(ruby) : "";
+  if (!ruby) return renderExampleSentences(full);
+
+  const sentences = full.split(/(?<=\)) +(?=\S)/).filter(Boolean);
+  const firstTranslation = extractTranslationSuffix(sentences[0] || "");
+  sentences[0] = firstTranslation ? `${ruby} ${firstTranslation}` : ruby;
+
+  if (sentences.length <= 1) return renderChoon(sentences[0]);
   return sentences.map((s) => `<div class="cf-vidu-line">${renderChoon(s)}</div>`).join("");
 }
 
