@@ -1,0 +1,206 @@
+{
+  "id": "choukai-10",
+  "title": "聴解 10 (JLPT N2 2024/07)",
+  "year": "2024/07",
+  "audioMode": "split",
+  "audioFile": null,
+  "audioFiles": {
+    "4": "聴解 10 4.mp3"
+  },
+  "mondai": [
+    {
+      "number": 4,
+      "name": "即時応答",
+      "instruction": "Nghe câu nói ngắn, chọn phản hồi phù hợp nhất trong 3 lựa chọn (chỉ đọc qua audio, không in sẵn).",
+      "questions": [
+        {
+          "qnum": 1,
+          "options": [
+            "頑張ればできるんじゃない?",
+            "楽にできるって思ってるんだね",
+            "簡単に覚えられてすごいね"
+          ],
+          "optionsVi": [
+            "Cố gắng thì làm được mà?",
+            "Vậy là nghĩ dễ làm được nhỉ.",
+            "Thuộc dễ vậy giỏi thật."
+          ],
+          "correctIndex": 0,
+          "script": "今日中に漢字20個覚えるなんて、無理に決まってるよ。\n1. 頑張ればできるんじゃない?\n2. 楽にできるって思ってるんだね\n3. 簡単に覚えられてすごいね",
+          "scriptVi": "Học thuộc 20 chữ Hán trong hôm nay thì chắc chắn không thể rồi.\n1. Cố gắng thì làm được mà?\n2. Vậy là nghĩ dễ làm được nhỉ.\n3. Thuộc dễ vậy giỏi thật.",
+          "tip": "Câu hỏi: Học thuộc 20 chữ Hán trong hôm nay thì chắc chắn không thể rồi.\n1) Cố gắng thì làm được mà? ✅\n2) Vậy là nghĩ dễ làm được nhỉ.\n3) Thuộc dễ vậy giỏi thật.\n→ Bi quan khẳng định KHÔNG THỂ → phản bác động viên 'cố lên là làm được'."
+        },
+        {
+          "qnum": 2,
+          "options": [
+            "資料、見てくれるんですね",
+            "資料は私が作っておきますね",
+            "資料、見ておきます"
+          ],
+          "optionsVi": [
+            "Vậy là anh xem giúp nhỉ.",
+            "Tài liệu để tôi làm cho.",
+            "Tôi sẽ xem trước."
+          ],
+          "correctIndex": 2,
+          "script": "課長、明日の会議の資料ですが、ご覧いただけないでしょうか?\n1. 資料、見てくれるんですね\n2. 資料は私が作っておきますね\n3. 資料、見ておきます",
+          "scriptVi": "Trưởng phòng, tài liệu họp mai, anh xem giúp em được không ạ?\n1. Vậy là anh xem giúp nhỉ.\n2. Tài liệu để tôi làm cho.\n3. Tôi sẽ xem trước.",
+          "tip": "Câu hỏi: Trưởng phòng, tài liệu họp mai, anh xem giúp em được không ạ?\n1) Vậy là anh xem giúp nhỉ.\n2) Tài liệu để tôi làm cho.\n3) Tôi sẽ xem trước. ✅\n→ Được nhờ xem tài liệu → trả lời nhận lời 'tôi sẽ xem trước'."
+        },
+        {
+          "qnum": 3,
+          "options": [
+            "募集は経験が無い人だけなんだ",
+            "経験がなくてもいいんだね",
+            "やっぱり経験が無いといけないのか"
+          ],
+          "optionsVi": [
+            "Vậy chỉ tuyển người không có kinh nghiệm à.",
+            "Vậy là không cần kinh nghiệm cũng được nhỉ.",
+            "Đúng là phải có kinh nghiệm mới được à."
+          ],
+          "correctIndex": 1,
+          "script": "この会社、経験者に限らず応募できるって。\n1. 募集は経験が無い人だけなんだ\n2. 経験がなくてもいいんだね\n3. やっぱり経験が無いといけないのか",
+          "scriptVi": "Công ty này, không giới hạn người có kinh nghiệm mới ứng tuyển được đâu.\n1. Vậy chỉ tuyển người không có kinh nghiệm à.\n2. Vậy là không cần kinh nghiệm cũng được nhỉ.\n3. Đúng là phải có kinh nghiệm mới được à.",
+          "tip": "Câu hỏi: Công ty này, không giới hạn người có kinh nghiệm mới ứng tuyển được đâu.\n1) Vậy chỉ tuyển người không có kinh nghiệm à.\n2) Vậy là không cần kinh nghiệm cũng được nhỉ. ✅\n3) Đúng là phải có kinh nghiệm mới được à.\n→ 'Không giới hạn kinh nghiệm' = ai cũng ứng tuyển được → hiểu đúng 'không cần kinh nghiệm cũng được'."
+        },
+        {
+          "qnum": 4,
+          "options": [
+            "じゃ、やらないでおくね",
+            "忘れないようにするね",
+            "水、毎日やっちゃだめなんだね"
+          ],
+          "optionsVi": [
+            "Vậy thì tôi không làm nhé.",
+            "Tôi sẽ cố nhớ không quên.",
+            "Không được tưới nước mỗi ngày à."
+          ],
+          "correctIndex": 1,
+          "script": "僕が出張の間、庭の花の水やり、毎日欠かさないでね。\n1. じゃ、やらないでおくね\n2. 忘れないようにするね\n3. 水、毎日やっちゃだめなんだね",
+          "scriptVi": "Trong lúc tôi đi công tác, nhớ tưới hoa trong vườn mỗi ngày không được bỏ sót nhé.\n1. Vậy thì tôi không làm nhé.\n2. Tôi sẽ cố nhớ không quên.\n3. Không được tưới nước mỗi ngày à.",
+          "tip": "Câu hỏi: Trong lúc tôi đi công tác, nhớ tưới hoa trong vườn mỗi ngày không được bỏ sót nhé.\n1) Vậy thì tôi không làm nhé.\n2) Tôi sẽ cố nhớ không quên. ✅\n3) Không được tưới nước mỗi ngày à.\n→ Được dặn dò làm việc HÀNG NGÀY → nhận lời hứa không quên."
+        },
+        {
+          "qnum": 5,
+          "options": [
+            "間に合ってよかったね",
+            "遅れちゃったんだ",
+            "あと少しだったのにね"
+          ],
+          "optionsVi": [
+            "May kịp giờ nhỉ.",
+            "Trễ hạn rồi à.",
+            "Còn thiếu chút xíu nhỉ."
+          ],
+          "correctIndex": 0,
+          "script": "履歴書の提出、もう少しで締め切りに遅れるところだったよ。\n1. 間に合ってよかったね\n2. 遅れちゃったんだ\n3. あと少しだったのにね",
+          "scriptVi": "Nộp sơ yếu lý lịch, suýt nữa trễ hạn rồi.\n1. May kịp giờ nhỉ.\n2. Trễ hạn rồi à.\n3. Còn thiếu chút xíu nhỉ.",
+          "tip": "Câu hỏi: Nộp sơ yếu lý lịch, suýt nữa trễ hạn rồi.\n1) May kịp giờ nhỉ. ✅\n2) Trễ hạn rồi à.\n3) Còn thiếu chút xíu nhỉ.\n→ 'Suýt trễ' (nhưng vẫn kịp) → mừng vì 'kịp giờ' rồi."
+        },
+        {
+          "qnum": 6,
+          "options": [
+            "自由に話していいんですね",
+            "ここに書いてあるように話すんですね",
+            "パンフレットに関係なく話すんですね"
+          ],
+          "optionsVi": [
+            "Vậy là nói tự do cũng được nhỉ.",
+            "Vậy là nói đúng như ở đây viết nhỉ.",
+            "Vậy là nói không liên quan đến tờ rơi nhỉ."
+          ],
+          "correctIndex": 1,
+          "script": "前田さん、お客さまへの商品説明はこのパンフレットに沿って話してください。\n1. 自由に話していいんですね\n2. ここに書いてあるように話すんですね\n3. パンフレットに関係なく話すんですね",
+          "scriptVi": "Maeda, khi giải thích sản phẩm cho khách, hãy nói theo đúng tờ rơi này nhé.\n1. Vậy là nói tự do cũng được nhỉ.\n2. Vậy là nói đúng như ở đây viết nhỉ.\n3. Vậy là nói không liên quan đến tờ rơi nhỉ.",
+          "tip": "Câu hỏi: Maeda, khi giải thích sản phẩm cho khách, hãy nói theo đúng tờ rơi này nhé.\n1) Vậy là nói tự do cũng được nhỉ.\n2) Vậy là nói đúng như ở đây viết nhỉ. ✅\n3) Vậy là nói không liên quan đến tờ rơi nhỉ.\n→ Được yêu cầu nói THEO ĐÚNG tài liệu → xác nhận đúng ý đó."
+        },
+        {
+          "qnum": 7,
+          "options": [
+            "随分落ち着いてるんだね",
+            "そんなに緊張しなくても大丈夫だよ",
+            "少しは緊張感持たないとだめだよ"
+          ],
+          "optionsVi": [
+            "Trông cậu bình tĩnh lắm mà.",
+            "Không cần căng thẳng vậy đâu, ổn mà.",
+            "Cũng phải căng thẳng chút mới được chứ."
+          ],
+          "correctIndex": 1,
+          "script": "今日の午後、商品発表会で話すんだけど緊張のあまり食欲もないよ。\n1. 随分落ち着いてるんだね\n2. そんなに緊張しなくても大丈夫だよ\n3. 少しは緊張感持たないとだめだよ",
+          "scriptVi": "Chiều nay tôi phải phát biểu ở buổi ra mắt sản phẩm, căng thẳng đến mất cả cảm giác thèm ăn.\n1. Trông cậu bình tĩnh lắm mà.\n2. Không cần căng thẳng vậy đâu, ổn mà.\n3. Cũng phải căng thẳng chút mới được chứ.",
+          "tip": "Câu hỏi: Chiều nay tôi phải phát biểu ở buổi ra mắt sản phẩm, căng thẳng đến mất cả cảm giác thèm ăn.\n1) Trông cậu bình tĩnh lắm mà.\n2) Không cần căng thẳng vậy đâu, ổn mà. ✅\n3) Cũng phải căng thẳng chút mới được chứ.\n→ Bày tỏ QUÁ căng thẳng → an ủi trấn an 'không cần căng thẳng vậy đâu'."
+        },
+        {
+          "qnum": 8,
+          "options": [
+            "プレゼン、やらなくてよくなったの?",
+            "プレゼンできてうれしいんだね",
+            "そういうことなら、仕方ないね"
+          ],
+          "optionsVi": [
+            "Vậy là không cần thuyết trình nữa à?",
+            "Được thuyết trình thì vui nhỉ.",
+            "Vậy thì đành chịu thôi nhỉ."
+          ],
+          "correctIndex": 2,
+          "script": "今日の会議でのプレゼン、先輩が休みだから私がやらざるを得なくなって・・・。\n1. プレゼン、やらなくてよくなったの?\n2. プレゼンできてうれしいんだね\n3. そういうことなら、仕方ないね",
+          "scriptVi": "Bài thuyết trình họp hôm nay, vì tiền bối nghỉ nên tôi buộc phải làm...\n1. Vậy là không cần thuyết trình nữa à?\n2. Được thuyết trình thì vui nhỉ.\n3. Vậy thì đành chịu thôi nhỉ.",
+          "tip": "Câu hỏi: Bài thuyết trình họp hôm nay, vì tiền bối nghỉ nên tôi buộc phải làm...\n1) Vậy là không cần thuyết trình nữa à?\n2) Được thuyết trình thì vui nhỉ.\n3) Vậy thì đành chịu thôi nhỉ. ✅\n→ Giải thích lý do BUỘC PHẢI làm (không có lựa chọn) → thông cảm 'đành chịu thôi'."
+        },
+        {
+          "qnum": 9,
+          "options": [
+            "本当、お腹いっぱいになったね",
+            "そうそう、あれじゃ足りない人多いよね",
+            "確かに、量が少なめでちょうどよかったね"
+          ],
+          "optionsVi": [
+            "Đúng thật, no căng bụng luôn.",
+            "Đúng vậy, chắc nhiều người thấy thiếu đó.",
+            "Đúng là lượng hơi ít nhưng vừa đủ nhỉ."
+          ],
+          "correctIndex": 0,
+          "script": "今日のお昼の定食、食べ応えあったね。\n1. 本当、お腹いっぱいになったね\n2. そうそう、あれじゃ足りない人多いよね\n3. 確かに、量が少なめでちょうどよかったね",
+          "scriptVi": "Suất cơm trưa hôm nay, ăn no căng bụng luôn nhỉ.\n1. Đúng thật, no căng bụng luôn.\n2. Đúng vậy, chắc nhiều người thấy thiếu đó.\n3. Đúng là lượng hơi ít nhưng vừa đủ nhỉ.",
+          "tip": "Câu hỏi: Suất cơm trưa hôm nay, ăn no căng bụng luôn nhỉ.\n1) Đúng thật, no căng bụng luôn. ✅\n2) Đúng vậy, chắc nhiều người thấy thiếu đó.\n3) Đúng là lượng hơi ít nhưng vừa đủ nhỉ.\n→ Nhận xét PHẦN ĂN NHIỀU/no → đồng tình xác nhận 'no căng bụng luôn'."
+        },
+        {
+          "qnum": 10,
+          "options": [
+            "他の人を探さないとだめだね",
+            "山田さんに断られたか",
+            "じゃ、お願いしてみようかな"
+          ],
+          "optionsVi": [
+            "Vậy phải tìm người khác thôi.",
+            "Bị Yamada từ chối rồi à.",
+            "Vậy nhờ thử xem sao."
+          ],
+          "correctIndex": 2,
+          "script": "店長。山田さん、配達の仕事、頼まれたらやらないこともないって言ってました。\n1. 他の人を探さないとだめだね\n2. 山田さんに断られたか\n3. じゃ、お願いしてみようかな",
+          "scriptVi": "Quản lý, Yamada nói nếu được nhờ thì cũng không phải là không làm việc giao hàng đâu ạ.\n1. Vậy phải tìm người khác thôi.\n2. Bị Yamada từ chối rồi à.\n3. Vậy nhờ thử xem sao.",
+          "tip": "Câu hỏi: Quản lý, Yamada nói nếu được nhờ thì cũng không phải là không làm việc giao hàng đâu ạ.\n1) Vậy phải tìm người khác thôi.\n2) Bị Yamada từ chối rồi à.\n3) Vậy nhờ thử xem sao. ✅\n→ Yamada ngầm ĐỒNG Ý (nói giảm 'không phải không làm') → phản hồi hợp lý là THỬ NHỜ."
+        },
+        {
+          "qnum": 11,
+          "options": [
+            "いろいろ悩んだんだね",
+            "すぐに決められたんだね",
+            "少しは迷ったんだね"
+          ],
+          "optionsVi": [
+            "Đúng là đắn đo nhiều nhỉ.",
+            "Quyết định nhanh nhỉ.",
+            "Cũng hơi phân vân chút nhỉ."
+          ],
+          "correctIndex": 0,
+          "script": "来年からの入学先、迷った挙句(あげく)、初めに思ってたとこにしたよ\n1. いろいろ悩んだんだね\n2. すぐに決められたんだね\n3. 少しは迷ったんだね",
+          "scriptVi": "Trường nhập học năm sau, sau khi đắn đo mãi thì chọn đúng nơi ban đầu nghĩ đến.\n1. Đúng là đắn đo nhiều nhỉ.\n2. Quyết định nhanh nhỉ.\n3. Cũng hơi phân vân chút nhỉ.",
+          "tip": "Câu hỏi: Trường nhập học năm sau, sau khi đắn đo mãi thì chọn đúng nơi ban đầu nghĩ đến.\n1) Đúng là đắn đo nhiều nhỉ. ✅\n2) Quyết định nhanh nhỉ.\n3) Cũng hơi phân vân chút nhỉ.\n→ 'Đắn đo mãi' (rất lâu) → đồng tình nhấn mạnh 'đắn đo nhiều thật'."
+        }
+      ]
+    }
+  ]
+}

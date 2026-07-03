@@ -65,10 +65,10 @@ function getChoukaiTest(testId) {
   return App.choukaiTests.find(function (t) { return t.id === testId; });
 }
 
-// Mở modal chọn Mondai cụ thể (hoặc cả đề) rồi chọn chế độ chấm.
-function openChoukaiModeModal(testId) {
-  App.choukaiPendingTestId = testId;
-  const test = getChoukaiTest(testId);
+// Điền options cho dropdown "chọn Mondai" của 1 đề — dùng chung bởi modal chọn
+// chế độ (openChoukaiModeModal) và màn hình "Luyện riêng Mondai 4" (vào thẳng,
+// không qua modal) để tránh lặp code.
+function populateChoukaiMondaiPicker(test) {
   const mondaiPicker = document.getElementById("choukaiMondaiPicker");
   mondaiPicker.innerHTML = '<option value="all">Luyện cả đề (Mondai 1→5)</option>';
   test.mondai.forEach(function (m) {
@@ -78,7 +78,14 @@ function openChoukaiModeModal(testId) {
     mondaiPicker.appendChild(opt);
   });
   mondaiPicker.classList.remove("hidden");
-  mondaiPicker.value = "all";
+}
+
+// Mở modal chọn Mondai cụ thể (hoặc cả đề) rồi chọn chế độ chấm.
+function openChoukaiModeModal(testId) {
+  App.choukaiPendingTestId = testId;
+  const test = getChoukaiTest(testId);
+  populateChoukaiMondaiPicker(test);
+  document.getElementById("choukaiMondaiPicker").value = "all";
 
   const detailStats = loadChoukaiDetailHistoryStats();
   const saved = detailStats[testId];
@@ -94,6 +101,70 @@ function openChoukaiModeModal(testId) {
     viewSavedBtn.classList.add("hidden");
   }
   document.getElementById("choukaiModeModalOverlay").classList.remove("hidden");
+}
+
+// ===================================================================
+// LUYỆN RIÊNG MONDAI 4 — màn hình rút gọn: bỏ qua bước "chọn cả đề hay
+// mondai" (luôn cố định Mondai 4), bấm 1 phát vào thẳng bài luyện của đề đó.
+// Tái dùng 100% engine làm bài/chấm/xem lại của chế độ "choukai" thường —
+// chỉ khác ở bước chọn đề đầu vào.
+// ===================================================================
+function renderChoukaiM4PickerState() {
+  const list = document.getElementById("choukaiM4List");
+  const empty = document.getElementById("choukaiM4Empty");
+  list.innerHTML = "";
+
+  const testsWithM4 = App.choukaiTests.filter(function (t) {
+    return t.mondai.some(function (m) { return m.number === 4; });
+  });
+  empty.classList.toggle("hidden", testsWithM4.length > 0);
+  if (!testsWithM4.length) return;
+
+  const detailStats = loadChoukaiDetailHistoryStats();
+
+  testsWithM4.forEach(function (t) {
+    const m4 = t.mondai.find(function (m) { return m.number === 4; });
+    const totalQ = m4.questions.length;
+
+    const saved = detailStats[t.id];
+    let statusHtml = '<span class="choukai-m4-status is-new">Chưa làm</span>';
+    if (saved) {
+      const m4Answers = Object.keys(saved.answers).filter(function (k) { return k.indexOf("m4q") === 0; });
+      if (m4Answers.length) {
+        const correctCount = m4Answers.filter(function (k) { return saved.answers[k].correct; }).length;
+        statusHtml = '<span class="choukai-m4-status is-done">Đã làm: ' + correctCount + '/' + m4Answers.length + ' đúng</span>';
+      }
+    }
+
+    const card = document.createElement("button");
+    card.className = "choukai-m4-card";
+    card.innerHTML =
+      '<div class="choukai-m4-card-title">' + t.title + '</div>' +
+      '<div class="choukai-m4-card-meta">Mondai 4 · ' + totalQ + ' câu</div>' +
+      statusHtml;
+    card.addEventListener("click", function () { startChoukaiM4Quick(t.id); });
+    list.appendChild(card);
+  });
+}
+
+// Vào thẳng luyện Mondai 4 của 1 đề — set sẵn filter=4, bỏ qua modal chọn chế độ,
+// dùng luôn chế độ chấm đang lưu (mặc định "instant" — chấm ngay từng câu, đúng
+// tinh thần luyện cấp tốc).
+function startChoukaiM4Quick(testId) {
+  const test = getChoukaiTest(testId);
+  if (!test) return;
+  App.choukaiPendingTestId = testId;
+  App.choukaiMondaiFilter = 4;
+  App.choukaiScoreMode = App.choukaiScoreMode || "instant";
+
+  // Đồng bộ lại 2 dropdown ở tab "Luyện nghe theo đề" để nếu người dùng nhảy
+  // qua tab đó sau, trạng thái vẫn khớp (không bắt buộc nhưng tránh lệch UI).
+  document.getElementById("choukaiPicker").value = testId;
+  populateChoukaiMondaiPicker(test);
+  document.getElementById("choukaiMondaiPicker").value = "4";
+
+  setMode("choukai");
+  startChoukai(testId);
 }
 
 function confirmChoukaiMode(mode) {

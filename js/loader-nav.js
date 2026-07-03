@@ -215,6 +215,13 @@ function renderNav() {
     choukaiBtn.addEventListener("click", () => setMode("choukai"));
     nav.appendChild(choukaiBtn);
 
+    const choukaiM4Btn = document.createElement("button");
+    choukaiM4Btn.className = "nav-item";
+    choukaiM4Btn.dataset.mode = "choukai-m4";
+    choukaiM4Btn.innerHTML = `<span class="nav-icon">🎯</span> <span>Luyện riêng Mondai 4</span>`;
+    choukaiM4Btn.addEventListener("click", () => setMode("choukai-m4"));
+    nav.appendChild(choukaiM4Btn);
+
     const shadowBtn = document.createElement("button");
     shadowBtn.className = "nav-item";
     shadowBtn.dataset.mode = "choukai-shadow";
@@ -319,6 +326,7 @@ function setMode(mode) {
   }
   if (mode === "exam") renderExamPickerState();
   if (mode === "choukai") renderChoukaiPickerState();
+  if (mode === "choukai-m4") renderChoukaiM4PickerState();
   if (mode === "choukai-shadow") renderChoukaiShadowPickerState();
   if (mode === "weakness") renderWeaknessMode();
   if (mode === "stats") renderStatsMode();

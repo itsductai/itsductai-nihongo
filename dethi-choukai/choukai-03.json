@@ -1,0 +1,223 @@
+{
+  "id": "choukai-03",
+  "title": "聴解 3 (JLPT N2 2016/07)",
+  "year": "2016/07",
+  "audioMode": "split",
+  "audioFile": null,
+  "audioFiles": {
+    "4": "聴解 3 4.m4a"
+  },
+  "mondai": [
+    {
+      "number": 4,
+      "name": "即時応答",
+      "instruction": "Nghe câu nói ngắn, chọn phản hồi phù hợp nhất trong 3 lựa chọn (chỉ đọc qua audio, không in sẵn).",
+      "questions": [
+        {
+          "qnum": 1,
+          "options": [
+            "ではここで待っています。",
+            "すぐに社長を呼んできます。",
+            "はい、今すぐ行きます。"
+          ],
+          "optionsVi": [
+            "Vậy tôi đợi ở đây.",
+            "Tôi đi gọi giám đốc ngay đây.",
+            "Vâng, tôi đi ngay đây."
+          ],
+          "correctIndex": 2,
+          "script": "女:佐藤さん、社長がお呼びですよ。\n1. ではここで待っています。\n2. すぐに社長を呼んできます。\n3. はい、今すぐ行きます。",
+          "scriptVi": "Nữ: Satō, giám đốc đang gọi anh đó.\n1. Vậy tôi đợi ở đây.\n2. Tôi đi gọi giám đốc ngay đây.\n3. Vâng, tôi đi ngay đây.",
+          "tip": "Câu hỏi: Nữ: Satō, giám đốc đang gọi anh đó.\n1) Vậy tôi đợi ở đây.\n2) Tôi đi gọi giám đốc ngay đây.\n3) Vâng, tôi đi ngay đây. ✅\n→ Được thông báo cấp trên gọi → phản ứng tự nhiên nhất là ĐI NGAY."
+        },
+        {
+          "qnum": 2,
+          "options": [
+            "やっぱり練習不足ですよね。",
+            "そう言っていただけると嬉しいです。",
+            "あのう練習の成果出てませんでしたか。"
+          ],
+          "optionsVi": [
+            "Đúng là luyện chưa đủ nhỉ.",
+            "Được cô nói vậy tôi vui lắm.",
+            "Ơ, kết quả luyện tập không thể hiện ra à?"
+          ],
+          "correctIndex": 1,
+          "script": "女:林さん、林さんのスピーチ聞いたよ。練習したかいがあったね。\n1. やっぱり練習不足ですよね。\n2. そう言っていただけると嬉しいです。\n3. あのう練習の成果出てませんでしたか。",
+          "scriptVi": "Nữ: Hayashi, tôi nghe bài phát biểu của cậu rồi. Công sức luyện tập không uổng phí nhỉ.\n1. Đúng là luyện chưa đủ nhỉ.\n2. Được cô nói vậy tôi vui lắm.\n3. Ơ, kết quả luyện tập không thể hiện ra à?",
+          "tip": "Câu hỏi: Nữ: Hayashi, tôi nghe bài phát biểu của cậu rồi. Công sức luyện tập không uổng phí nhỉ.\n1) Đúng là luyện chưa đủ nhỉ.\n2) Được cô nói vậy tôi vui lắm. ✅\n3) Ơ, kết quả luyện tập không thể hiện ra à?\n→ Được khen ngợi → phản hồi tự nhiên là CẢM ƠN, vui vì được công nhận."
+        },
+        {
+          "qnum": 3,
+          "options": [
+            "そうか、チケットもう取れないんだ。",
+            "えー、今はまだ無理なの?",
+            "じゃ、急いで買わなきゃ。"
+          ],
+          "optionsVi": [
+            "À, vậy là không đặt được vé nữa.",
+            "Hả, bây giờ vẫn chưa được à?",
+            "Vậy phải mua gấp thôi."
+          ],
+          "correctIndex": 1,
+          "script": "夏の旅行の飛行機だけど、来月になってからでないとチケット取れないんだって\n1. そうか、チケットもう取れないんだ。\n2. えー、今はまだ無理なの?\n3. じゃ、急いで買わなきゃ。",
+          "scriptVi": "Vé máy bay đi du lịch hè, nghe nói phải sang tháng sau mới đặt được.\n1. À, vậy là không đặt được vé nữa.\n2. Hả, bây giờ vẫn chưa được à?\n3. Vậy phải mua gấp thôi.",
+          "tip": "Câu hỏi: Vé máy bay đi du lịch hè, nghe nói phải sang tháng sau mới đặt được.\n1) À, vậy là không đặt được vé nữa.\n2) Hả, bây giờ vẫn chưa được à? ✅\n3) Vậy phải mua gấp thôi.\n→ Thông tin là 'phải CHỜ tới tháng sau mới đặt được' → phản ứng ngạc nhiên hỏi lại 'giờ chưa được à?'."
+        },
+        {
+          "qnum": 4,
+          "options": [
+            "そんな気にすることないよ。",
+            "用事が終わったら、また来れば?",
+            "みんなは悪くないんじゃない?"
+          ],
+          "optionsVi": [
+            "Đừng bận tâm chuyện đó.",
+            "Xong việc thì quay lại được mà?",
+            "Đâu phải lỗi của mọi người đâu nhỉ?"
+          ],
+          "correctIndex": 0,
+          "script": "この間の食事会、用事でさきに帰っちゃったけど、みんなに悪かったかな。\n1. そんな気にすることないよ。\n2. 用事が終わったら、また来れば?\n3. みんなは悪くないんじゃない?",
+          "scriptVi": "Buổi ăn hôm trước, tôi có việc nên về sớm, không biết có làm mọi người phật lòng không nhỉ.\n1. Đừng bận tâm chuyện đó.\n2. Xong việc thì quay lại được mà?\n3. Đâu phải lỗi của mọi người đâu nhỉ?",
+          "tip": "Câu hỏi: Buổi ăn hôm trước, tôi có việc nên về sớm, không biết có làm mọi người phật lòng không nhỉ.\n1) Đừng bận tâm chuyện đó. ✅\n2) Xong việc thì quay lại được mà?\n3) Đâu phải lỗi của mọi người đâu nhỉ?\n→ Lo lắng làm phiền mọi người → an ủi 'đừng để ý' là phản hồi phù hợp nhất."
+        },
+        {
+          "qnum": 5,
+          "options": [
+            "あ、まだ出さなくてよろしいんですね?",
+            "すみません、もう少し待っていただけませんか。",
+            "分かりました、じゃお願いします。"
+          ],
+          "optionsVi": [
+            "À, vậy chưa cần nộp vội đúng không ạ?",
+            "Xin lỗi, anh đợi tôi thêm chút được không?",
+            "Tôi hiểu rồi, vậy nhờ anh nhé."
+          ],
+          "correctIndex": 1,
+          "script": "加藤さん、加藤さんにお願いしてたイベントの企画書、昨日のうちに私に提出してって言っといたよね?\n1. あ、まだ出さなくてよろしいんですね?\n2. すみません、もう少し待っていただけませんか。\n3. 分かりました、じゃお願いします。",
+          "scriptVi": "Katō, tôi có nhờ nộp bản kế hoạch sự kiện cho tôi trong hôm qua rồi mà nhỉ?\n1. À, vậy chưa cần nộp vội đúng không ạ?\n2. Xin lỗi, anh đợi tôi thêm chút được không?\n3. Tôi hiểu rồi, vậy nhờ anh nhé.",
+          "tip": "Câu hỏi: Katō, tôi có nhờ nộp bản kế hoạch sự kiện cho tôi trong hôm qua rồi mà nhỉ?\n1) À, vậy chưa cần nộp vội đúng không ạ?\n2) Xin lỗi, anh đợi tôi thêm chút được không? ✅\n3) Tôi hiểu rồi, vậy nhờ anh nhé.\n→ Bị nhắc trễ hạn nộp → phản hồi hợp lý là XIN LỖI + xin thêm thời gian."
+        },
+        {
+          "qnum": 6,
+          "options": [
+            "えっ、ないんですか。",
+            "どこで見つかったんですか。",
+            "まだ出来てないんですか。"
+          ],
+          "optionsVi": [
+            "Hả, không thấy à?",
+            "Tìm thấy ở đâu vậy?",
+            "Vẫn chưa làm xong à?"
+          ],
+          "correctIndex": 0,
+          "script": "おかしいな、今日の発表で配る資料、ここにおいといたはずなんだけどなあ。\n1. えっ、ないんですか。\n2. どこで見つかったんですか。\n3. まだ出来てないんですか。",
+          "scriptVi": "Lạ nhỉ, tài liệu phát cho buổi thuyết trình hôm nay, tôi nhớ để ở đây mà.\n1. Hả, không thấy à?\n2. Tìm thấy ở đâu vậy?\n3. Vẫn chưa làm xong à?",
+          "tip": "Câu hỏi: Lạ nhỉ, tài liệu phát cho buổi thuyết trình hôm nay, tôi nhớ để ở đây mà.\n1) Hả, không thấy à? ✅\n2) Tìm thấy ở đâu vậy?\n3) Vẫn chưa làm xong à?\n→ Người nói đang tìm đồ bị mất → phản ứng tự nhiên là hỏi lại 'không có thật à?'."
+        },
+        {
+          "qnum": 7,
+          "options": [
+            "なんか忙しいって言ってたよ。",
+            "すごい、そんなに練習してるんだ。",
+            "練習、一度も来てないの。"
+          ],
+          "optionsVi": [
+            "Nghe nói dạo này bận gì đó.",
+            "Giỏi thật, tập nhiều vậy sao.",
+            "Cậu ấy chưa từng đến tập buổi nào à."
+          ],
+          "correctIndex": 0,
+          "script": "ねえ、田中君、最近林君がテニスのサークルの練習休みがちなんだけど、何か知ってる?\n1. なんか忙しいって言ってたよ。\n2. すごい、そんなに練習してるんだ。\n3. 練習、一度も来てないの。",
+          "scriptVi": "Này Tanaka, dạo này Hayashi hay nghỉ tập tennis, cậu có biết gì không?\n1. Nghe nói dạo này bận gì đó.\n2. Giỏi thật, tập nhiều vậy sao.\n3. Cậu ấy chưa từng đến tập buổi nào à.",
+          "tip": "Câu hỏi: Này Tanaka, dạo này Hayashi hay nghỉ tập tennis, cậu có biết gì không?\n1) Nghe nói dạo này bận gì đó. ✅\n2) Giỏi thật, tập nhiều vậy sao.\n3) Cậu ấy chưa từng đến tập buổi nào à.\n→ Được hỏi lý do vắng mặt → trả lời trực tiếp lý do đã nghe được."
+        },
+        {
+          "qnum": 8,
+          "options": [
+            "部長と旅行の約束してたの?",
+            "へえー、そんなことあるんだ。",
+            "なんとか、うまく会えてよかったね。"
+          ],
+          "optionsVi": [
+            "Cậu có hẹn du lịch với trưởng phòng à?",
+            "Ồ, cũng có chuyện như vậy à.",
+            "May quá, gặp được nhau nhỉ."
+          ],
+          "correctIndex": 1,
+          "script": "この間旅行先でばったり部長と会っちゃって。\n1. 部長と旅行の約束してたの?\n2. へえー、そんなことあるんだ。\n3. なんとか、うまく会えてよかったね。",
+          "scriptVi": "Hôm trước đi du lịch, tôi tình cờ gặp trưởng phòng đó.\n1. Cậu có hẹn du lịch với trưởng phòng à?\n2. Ồ, cũng có chuyện như vậy à.\n3. May quá, gặp được nhau nhỉ.",
+          "tip": "Câu hỏi: Hôm trước đi du lịch, tôi tình cờ gặp trưởng phòng đó.\n1) Cậu có hẹn du lịch với trưởng phòng à?\n2) Ồ, cũng có chuyện như vậy à. ✅\n3) May quá, gặp được nhau nhỉ.\n→ Kể chuyện tình cờ gặp mặt → phản hồi tự nhiên là ngạc nhiên nhẹ 'cũng có chuyện vậy à'."
+        },
+        {
+          "qnum": 9,
+          "options": [
+            "そうかな、よく考えられてたと思わない?",
+            "文句があるなら、言ってみたら?",
+            "すごく説得力があったね。"
+          ],
+          "optionsVi": [
+            "Vậy à, cậu không thấy nó được chuẩn bị kỹ à?",
+            "Có gì phàn nàn thì cứ nói ra đi.",
+            "Đúng là rất thuyết phục nhỉ."
+          ],
+          "correctIndex": 2,
+          "script": "加藤さん、昨日の鈴木君のプレゼン、文句の付けようがなかったね。\n1. そうかな、よく考えられてたと思わない?\n2. 文句があるなら、言ってみたら?\n3. すごく説得力があったね。",
+          "scriptVi": "Katō, bài thuyết trình của Suzuki hôm qua, không chê vào đâu được nhỉ.\n1. Vậy à, cậu không thấy nó được chuẩn bị kỹ à?\n2. Có gì phàn nàn thì cứ nói ra đi.\n3. Đúng là rất thuyết phục nhỉ.",
+          "tip": "Câu hỏi: Katō, bài thuyết trình của Suzuki hôm qua, không chê vào đâu được nhỉ.\n1) Vậy à, cậu không thấy nó được chuẩn bị kỹ à?\n2) Có gì phàn nàn thì cứ nói ra đi.\n3) Đúng là rất thuyết phục nhỉ. ✅\n→ 'Không chê vào đâu được' = khen ngợi → đồng tình khen tiếp 'rất thuyết phục'."
+        },
+        {
+          "qnum": 10,
+          "options": [
+            "高くても行く価値はありそうだね。",
+            "そりゃ、やすければ、美味しくないに決まってるよ。",
+            "行こうかと思ってたけどやめとこう。"
+          ],
+          "optionsVi": [
+            "Đắt vậy chắc cũng đáng để đi nhỉ.",
+            "Thế thì, rẻ chắc chắn sẽ không ngon rồi.",
+            "Định đi thử mà thôi bỏ qua vậy."
+          ],
+          "correctIndex": 2,
+          "script": "駅前にできたレストラン値段が高い割に味はいまいちだったよ。\n1. 高くても行く価値はありそうだね。\n2. そりゃ、やすければ、美味しくないに決まってるよ。\n3. 行こうかと思ってたけどやめとこう。",
+          "scriptVi": "Nhà hàng mới mở trước ga, giá đắt mà vị lại không ngon lắm.\n1. Đắt vậy chắc cũng đáng để đi nhỉ.\n2. Thế thì, rẻ chắc chắn sẽ không ngon rồi.\n3. Định đi thử mà thôi bỏ qua vậy.",
+          "tip": "Câu hỏi: Nhà hàng mới mở trước ga, giá đắt mà vị lại không ngon lắm.\n1) Đắt vậy chắc cũng đáng để đi nhỉ.\n2) Thế thì, rẻ chắc chắn sẽ không ngon rồi.\n3) Định đi thử mà thôi bỏ qua vậy. ✅\n→ Được cảnh báo quán không ngon → phản hồi hợp lý là TỪ BỎ ý định đi."
+        },
+        {
+          "qnum": 11,
+          "options": [
+            "そんなに叱らないでよ。",
+            "うん、次があるよね。",
+            "え、企画通ったんだ。"
+          ],
+          "optionsVi": [
+            "Đừng mắng tôi dữ vậy chứ.",
+            "Ừ, còn có lần sau mà.",
+            "Hả, đề án được duyệt rồi à."
+          ],
+          "correctIndex": 1,
+          "script": "森さん、森さんの企画案が今回通らなかったからって、落ち込むことないよ。\n1. そんなに叱らないでよ。\n2. うん、次があるよね。\n3. え、企画通ったんだ。",
+          "scriptVi": "Mori, đề án của cậu lần này không được duyệt cũng đừng nản nhé.\n1. Đừng mắng tôi dữ vậy chứ.\n2. Ừ, còn có lần sau mà.\n3. Hả, đề án được duyệt rồi à.",
+          "tip": "Câu hỏi: Mori, đề án của cậu lần này không được duyệt cũng đừng nản nhé.\n1) Đừng mắng tôi dữ vậy chứ.\n2) Ừ, còn có lần sau mà. ✅\n3) Hả, đề án được duyệt rồi à.\n→ Được an ủi vì thất bại → phản hồi hợp lý là đồng tình lạc quan 'còn có lần sau'."
+        },
+        {
+          "qnum": 12,
+          "options": [
+            "じゃ、早速やってもらえるかな。",
+            "え、僕が全部直すの?",
+            "後でも良かったら、見とくよ。"
+          ],
+          "optionsVi": [
+            "Vậy nhờ cậu làm luôn nhé.",
+            "Hả, tôi phải sửa hết à?",
+            "Nếu để sau cũng được thì tôi sẽ xem."
+          ],
+          "correctIndex": 2,
+          "script": "先輩、ざっとでいいので、この書類に目を通していただけないでしょうか?\n1. じゃ、早速やってもらえるかな。\n2. え、僕が全部直すの?\n3. 後でも良かったら、見とくよ。",
+          "scriptVi": "Tiền bối, xem lướt qua giúp em tài liệu này được không ạ?\n1. Vậy nhờ cậu làm luôn nhé.\n2. Hả, tôi phải sửa hết à?\n3. Nếu để sau cũng được thì tôi sẽ xem.",
+          "tip": "Câu hỏi: Tiền bối, xem lướt qua giúp em tài liệu này được không ạ?\n1) Vậy nhờ cậu làm luôn nhé.\n2) Hả, tôi phải sửa hết à?\n3) Nếu để sau cũng được thì tôi sẽ xem. ✅\n→ Được nhờ xem tài liệu → phản hồi hợp lý là nhận lời với điều kiện thời gian."
+        }
+      ]
+    }
+  ]
+}

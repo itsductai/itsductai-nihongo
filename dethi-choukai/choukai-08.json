@@ -1,0 +1,206 @@
+{
+  "id": "choukai-08",
+  "title": "聴解 8 (JLPT N2 2022/07)",
+  "year": "2022/07",
+  "audioMode": "split",
+  "audioFile": null,
+  "audioFiles": {
+    "4": "聴解 8 4.mp3"
+  },
+  "mondai": [
+    {
+      "number": 4,
+      "name": "即時応答",
+      "instruction": "Nghe câu nói ngắn, chọn phản hồi phù hợp nhất trong 3 lựa chọn (chỉ đọc qua audio, không in sẵn).",
+      "questions": [
+        {
+          "qnum": 1,
+          "options": [
+            "全部覚えてるから、すごいね。",
+            "え、1つも覚えてないの?",
+            "多すぎておぼえるのは大変だよね。"
+          ],
+          "optionsVi": [
+            "Thuộc hết cả thì giỏi thật đó.",
+            "Hả, không thuộc chữ nào à?",
+            "Nhiều quá học thuộc cũng cực nhỉ."
+          ],
+          "correctIndex": 2,
+          "script": "明日漢字のテストなんだけど、全部は覚え切れないんだよね。\n1. 全部覚えてるから、すごいね。\n2. え、1つも覚えてないの?\n3. 多すぎておぼえるのは大変だよね。",
+          "scriptVi": "Mai thi Hán tự rồi mà tôi không thuộc hết được.\n1. Thuộc hết cả thì giỏi thật đó.\n2. Hả, không thuộc chữ nào à?\n3. Nhiều quá học thuộc cũng cực nhỉ.",
+          "tip": "Câu hỏi: Mai thi Hán tự rồi mà tôi không thuộc hết được.\n1) Thuộc hết cả thì giỏi thật đó.\n2) Hả, không thuộc chữ nào à?\n3) Nhiều quá học thuộc cũng cực nhỉ. ✅\n→ Than phiền không thuộc HẾT (do quá nhiều) → đồng cảm 'nhiều quá học cũng cực'."
+        },
+        {
+          "qnum": 2,
+          "options": [
+            "それは順調に進んでいることですね。",
+            "はい、雨で工事が遅れまして。",
+            "お陰様で、ありがとうございます。"
+          ],
+          "optionsVi": [
+            "Vậy là đang tiến triển thuận lợi nhỉ.",
+            "Vâng, vì mưa nên công trình bị chậm ạ.",
+            "Nhờ ơn anh, cảm ơn ạ."
+          ],
+          "correctIndex": 1,
+          "script": "森さん、森担当の桜川の橋の建設は計画通りにいってないだよね。\n1. それは順調に進んでいることですね。\n2. はい、雨で工事が遅れまして。\n3. お陰様で、ありがとうございます。",
+          "scriptVi": "Mori, công trình cầu Sakuragawa cậu phụ trách không theo đúng kế hoạch nhỉ.\n1. Vậy là đang tiến triển thuận lợi nhỉ.\n2. Vâng, vì mưa nên công trình bị chậm ạ.\n3. Nhờ ơn anh, cảm ơn ạ.",
+          "tip": "Câu hỏi: Mori, công trình cầu Sakuragawa cậu phụ trách không theo đúng kế hoạch nhỉ.\n1) Vậy là đang tiến triển thuận lợi nhỉ.\n2) Vâng, vì mưa nên công trình bị chậm ạ. ✅\n3) Nhờ ơn anh, cảm ơn ạ.\n→ Bị hỏi vì sao KHÔNG đúng kế hoạch → giải thích lý do (mưa làm chậm tiến độ)."
+        },
+        {
+          "qnum": 3,
+          "options": [
+            "そう、いつも混んでるんだね。",
+            "休日でもないのに、人が多かったね。",
+            "平日だったらもっと空いてたかもね。"
+          ],
+          "optionsVi": [
+            "Ừ, lúc nào cũng đông cả.",
+            "Không phải cuối tuần mà đông người thật.",
+            "Nếu là ngày thường chắc vắng hơn nhỉ."
+          ],
+          "correctIndex": 1,
+          "script": "映画館、平日の昼にしては混んでたね。\n1. そう、いつも混んでるんだね。\n2. 休日でもないのに、人が多かったね。\n3. 平日だったらもっと空いてたかもね。",
+          "scriptVi": "Rạp phim, so với buổi trưa ngày thường thì đông nhỉ.\n1. Ừ, lúc nào cũng đông cả.\n2. Không phải cuối tuần mà đông người thật.\n3. Nếu là ngày thường chắc vắng hơn nhỉ.",
+          "tip": "Câu hỏi: Rạp phim, so với buổi trưa ngày thường thì đông nhỉ.\n1) Ừ, lúc nào cũng đông cả.\n2) Không phải cuối tuần mà đông người thật. ✅\n3) Nếu là ngày thường chắc vắng hơn nhỉ.\n→ Nhận xét đông BẤT THƯỜNG (dù là ngày thường) → đồng tình nhấn mạnh 'không phải cuối tuần mà đông'."
+        },
+        {
+          "qnum": 4,
+          "options": [
+            "一日充実してたんだね",
+            "せっかくのお休みなので、忙しかったよね。",
+            "たまには何もしないのもいいんじゃない。"
+          ],
+          "optionsVi": [
+            "Vậy là một ngày ý nghĩa nhỉ.",
+            "Ngày nghỉ hiếm hoi mà lại bận rộn nhỉ.",
+            "Thỉnh thoảng không làm gì cũng tốt mà."
+          ],
+          "correctIndex": 2,
+          "script": "昨日の休みには、一日にだらだらしちゃったよ。\n1. 一日充実してたんだね\n2. せっかくのお休みなので、忙しかったよね。\n3. たまには何もしないのもいいんじゃない。",
+          "scriptVi": "Ngày nghỉ hôm qua tôi lười biếng cả ngày luôn.\n1. Vậy là một ngày ý nghĩa nhỉ.\n2. Ngày nghỉ hiếm hoi mà lại bận rộn nhỉ.\n3. Thỉnh thoảng không làm gì cũng tốt mà.",
+          "tip": "Câu hỏi: Ngày nghỉ hôm qua tôi lười biếng cả ngày luôn.\n1) Vậy là một ngày ý nghĩa nhỉ.\n2) Ngày nghỉ hiếm hoi mà lại bận rộn nhỉ.\n3) Thỉnh thoảng không làm gì cũng tốt mà. ✅\n→ Tự trách vì lười biếng cả ngày → an ủi 'thỉnh thoảng không làm gì cũng tốt'."
+        },
+        {
+          "qnum": 5,
+          "options": [
+            "何か追加で注文する?",
+            "満足してるの?",
+            "量が多いで、食べきれないよね。"
+          ],
+          "optionsVi": [
+            "Gọi thêm gì đó không?",
+            "Đủ no rồi à?",
+            "Nhiều quá ăn không hết nhỉ."
+          ],
+          "correctIndex": 0,
+          "script": "このコース料理、ちょっと物足りなくない?\n1. 何か追加で注文する?\n2. 満足してるの?\n3. 量が多いで、食べきれないよね。",
+          "scriptVi": "Set món này hơi thiếu thiếu nhỉ?\n1. Gọi thêm gì đó không?\n2. Đủ no rồi à?\n3. Nhiều quá ăn không hết nhỉ.",
+          "tip": "Câu hỏi: Set món này hơi thiếu thiếu nhỉ?\n1) Gọi thêm gì đó không? ✅\n2) Đủ no rồi à?\n3) Nhiều quá ăn không hết nhỉ.\n→ Nhận xét PHẦN ĂN chưa đủ → phản hồi hợp lý là đề xuất GỌI THÊM."
+        },
+        {
+          "qnum": 6,
+          "options": [
+            "あ、消してきたんだ。",
+            "エアコン、つかれたの?",
+            "え、一度帰って、消してくる?"
+          ],
+          "optionsVi": [
+            "À, tắt rồi mà.",
+            "Điều hòa hỏng à?",
+            "Ơ, hay về nhà tắt luôn đi?"
+          ],
+          "correctIndex": 2,
+          "script": "あ、アパートのエアコン、つけっぱなして、出できっちゃった。\n1. あ、消してきたんだ。\n2. エアコン、つかれたの?\n3. え、一度帰って、消してくる?",
+          "scriptVi": "À, điều hòa nhà quên tắt, tôi ra ngoài mất rồi.\n1. À, tắt rồi mà.\n2. Điều hòa hỏng à?\n3. Ơ, hay về nhà tắt luôn đi?",
+          "tip": "Câu hỏi: À, điều hòa nhà quên tắt, tôi ra ngoài mất rồi.\n1) À, tắt rồi mà.\n2) Điều hòa hỏng à?\n3) Ơ, hay về nhà tắt luôn đi? ✅\n→ Báo quên tắt điều hòa → đề xuất hợp lý là VỀ TẮT LUÔN."
+        },
+        {
+          "qnum": 7,
+          "options": [
+            "温泉に行かないの?",
+            "温泉は一番だよね。",
+            "温泉は苦手なんだね。"
+          ],
+          "optionsVi": [
+            "Không đi suối nước nóng à?",
+            "Suối nước nóng là số 1 nhỉ.",
+            "Không thích suối nước nóng à."
+          ],
+          "correctIndex": 1,
+          "script": "寒い時の旅行は温泉に限るのね。\n1. 温泉に行かないの?\n2. 温泉は一番だよね。\n3. 温泉は苦手なんだね。",
+          "scriptVi": "Du lịch mùa lạnh thì chỉ có suối nước nóng là nhất.\n1. Không đi suối nước nóng à?\n2. Suối nước nóng là số 1 nhỉ.\n3. Không thích suối nước nóng à.",
+          "tip": "Câu hỏi: Du lịch mùa lạnh thì chỉ có suối nước nóng là nhất.\n1) Không đi suối nước nóng à?\n2) Suối nước nóng là số 1 nhỉ. ✅\n3) Không thích suối nước nóng à.\n→ Khẳng định suối nước nóng LÀ NHẤT → đồng tình xác nhận."
+        },
+        {
+          "qnum": 8,
+          "options": [
+            "音楽はだめで、最後まで映画が楽しめだよね。",
+            "最後は、あの音楽じゃ、ちょっとね。",
+            "最後の音楽だけがよかったよね。"
+          ],
+          "optionsVi": [
+            "Nhạc dở nhưng phim vẫn xem vui đến cuối nhỉ.",
+            "Đoạn cuối, nhạc đó thì hơi tệ thật.",
+            "Chỉ có nhạc đoạn cuối là hay nhỉ."
+          ],
+          "correctIndex": 1,
+          "script": "さっきの映画、最後の音楽がすべてを台無しにしてたと思わない。\n1. 音楽はだめで、最後まで映画が楽しめだよね。\n2. 最後は、あの音楽じゃ、ちょっとね。\n3. 最後の音楽だけがよかったよね。",
+          "scriptVi": "Phim vừa xem, nhạc đoạn cuối làm hỏng hết cả phim, cậu không thấy vậy à?\n1. Nhạc dở nhưng phim vẫn xem vui đến cuối nhỉ.\n2. Đoạn cuối, nhạc đó thì hơi tệ thật.\n3. Chỉ có nhạc đoạn cuối là hay nhỉ.",
+          "tip": "Câu hỏi: Phim vừa xem, nhạc đoạn cuối làm hỏng hết cả phim, cậu không thấy vậy à?\n1) Nhạc dở nhưng phim vẫn xem vui đến cuối nhỉ.\n2) Đoạn cuối, nhạc đó thì hơi tệ thật. ✅\n3) Chỉ có nhạc đoạn cuối là hay nhỉ.\n→ Chê nhạc đoạn cuối phim → đồng tình xác nhận 'nhạc đó hơi tệ thật'."
+        },
+        {
+          "qnum": 9,
+          "options": [
+            "天気のことは考えなくていいですか?",
+            "あらかじめ決めておくと安心ですね。",
+            "雨になってから、考えればいいですね。"
+          ],
+          "optionsVi": [
+            "Không cần nghĩ đến thời tiết à?",
+            "Định trước như vậy thì yên tâm nhỉ.",
+            "Mưa rồi tính cũng được nhỉ."
+          ],
+          "correctIndex": 1,
+          "script": "山本さん、週末のみどり公園でのイベントですが、雨だった場合に備えて、ジョギングを設定しましょうか?\n1. 天気のことは考えなくていいですか?\n2. あらかじめ決めておくと安心ですね。\n3. 雨になってから、考えればいいですね。",
+          "scriptVi": "Yamamoto, sự kiện ở công viên Midori cuối tuần, để phòng trời mưa mình định sẵn phương án dự phòng nhé?\n1. Không cần nghĩ đến thời tiết à?\n2. Định trước như vậy thì yên tâm nhỉ.\n3. Mưa rồi tính cũng được nhỉ.",
+          "tip": "Câu hỏi: Yamamoto, sự kiện ở công viên Midori cuối tuần, để phòng trời mưa mình định sẵn phương án dự phòng nhé?\n1) Không cần nghĩ đến thời tiết à?\n2) Định trước như vậy thì yên tâm nhỉ. ✅\n3) Mưa rồi tính cũng được nhỉ.\n→ Đề xuất chuẩn bị phương án dự phòng TRƯỚC → đồng tình 'định trước thì yên tâm hơn'."
+        },
+        {
+          "qnum": 10,
+          "options": [
+            "経験なくていいから、応募してみようかな?",
+            "経験がないと、難しいだね。",
+            "え、どんな経験が必要?"
+          ],
+          "optionsVi": [
+            "Không cần kinh nghiệm thì thử ứng tuyển xem sao.",
+            "Không có kinh nghiệm thì khó nhỉ.",
+            "Ơ, cần kinh nghiệm gì vậy?"
+          ],
+          "correctIndex": 0,
+          "script": "アルバイトの募集、経験を問わずって書いてあるよ?\n1. 経験なくていいから、応募してみようかな?\n2. 経験がないと、難しいだね。\n3. え、どんな経験が必要?",
+          "scriptVi": "Tin tuyển làm thêm ghi là không hỏi kinh nghiệm đó.\n1. Không cần kinh nghiệm thì thử ứng tuyển xem sao.\n2. Không có kinh nghiệm thì khó nhỉ.\n3. Ơ, cần kinh nghiệm gì vậy?",
+          "tip": "Câu hỏi: Tin tuyển làm thêm ghi là không hỏi kinh nghiệm đó.\n1) Không cần kinh nghiệm thì thử ứng tuyển xem sao. ✅\n2) Không có kinh nghiệm thì khó nhỉ.\n3) Ơ, cần kinh nghiệm gì vậy?\n→ Tin tuyển KHÔNG YÊU CẦU kinh nghiệm → phản hồi hợp lý là muốn THỬ ứng tuyển."
+        },
+        {
+          "qnum": 11,
+          "options": [
+            "私達は勝つはずだって思ってる。",
+            "優勝できるとは、思わなかったよね。",
+            "そんなこと言わないで、頑張ろうよ!"
+          ],
+          "optionsVi": [
+            "Tôi tin là đội mình sẽ thắng.",
+            "Đúng là không nghĩ sẽ vô địch được nhỉ.",
+            "Đừng nói vậy chứ, cố gắng lên nào!"
+          ],
+          "correctIndex": 2,
+          "script": "うちのチームが優勝なんて、できっこないね。\n1. 私達は勝つはずだって思ってる。\n2. 優勝できるとは、思わなかったよね。\n3. そんなこと言わないで、頑張ろうよ!",
+          "scriptVi": "Đội mình mà vô địch thì chắc không thể đâu.\n1. Tôi tin là đội mình sẽ thắng.\n2. Đúng là không nghĩ sẽ vô địch được nhỉ.\n3. Đừng nói vậy chứ, cố gắng lên nào!",
+          "tip": "Câu hỏi: Đội mình mà vô địch thì chắc không thể đâu.\n1) Tôi tin là đội mình sẽ thắng.\n2) Đúng là không nghĩ sẽ vô địch được nhỉ.\n3) Đừng nói vậy chứ, cố gắng lên nào! ✅\n→ Bi quan về khả năng thắng → phản hồi động viên tích cực 'đừng nói vậy, cố lên'."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,223 @@
+{
+  "id": "choukai-04",
+  "title": "聴解 4 (JLPT N2 2017/07)",
+  "year": "2017/07",
+  "audioMode": "split",
+  "audioFile": null,
+  "audioFiles": {
+    "4": "聴解 4 4.mp3"
+  },
+  "mondai": [
+    {
+      "number": 4,
+      "name": "即時応答",
+      "instruction": "Nghe câu nói ngắn, chọn phản hồi phù hợp nhất trong 3 lựa chọn (chỉ đọc qua audio, không in sẵn).",
+      "questions": [
+        {
+          "qnum": 1,
+          "options": [
+            "あっ、新製品がまだ発表できないんです。",
+            "何時ごろ、お越しになれますか。",
+            "そうですか。会場はどちらですか。"
+          ],
+          "optionsVi": [
+            "À, sản phẩm mới vẫn chưa công bố được ạ.",
+            "Khoảng mấy giờ thì anh đến được ạ?",
+            "Vậy ạ. Địa điểm tổ chức ở đâu ạ?"
+          ],
+          "correctIndex": 2,
+          "script": "女:川野さん、来週の土曜日、うちの新製品の発表会をやるので、ぜひ、お越しください。\n1. あっ、新製品がまだ発表できないんです。\n2. 何時ごろ、お越しになれますか。\n3. そうですか。会場はどちらですか。",
+          "scriptVi": "Nữ: Kawano, thứ Bảy tuần sau công ty tôi tổ chức lễ ra mắt sản phẩm mới, mong anh đến tham dự.\n1. À, sản phẩm mới vẫn chưa công bố được ạ.\n2. Khoảng mấy giờ thì anh đến được ạ?\n3. Vậy ạ. Địa điểm tổ chức ở đâu ạ?",
+          "tip": "Câu hỏi: Nữ: Kawano, thứ Bảy tuần sau công ty tôi tổ chức lễ ra mắt sản phẩm mới, mong anh đến tham dự.\n1) À, sản phẩm mới vẫn chưa công bố được ạ.\n2) Khoảng mấy giờ thì anh đến được ạ?\n3) Vậy ạ. Địa điểm tổ chức ở đâu ạ? ✅\n→ Được mời tham dự sự kiện → phản hồi tự nhiên nhất là hỏi ĐỊA ĐIỂM tổ chức."
+        },
+        {
+          "qnum": 2,
+          "options": [
+            "もう一度、よく見て。",
+            "あれ、今日はコンサート行かないことにしたんだっけ。",
+            "そうか。かばんの中にあったんだ。"
+          ],
+          "optionsVi": [
+            "Xem lại kỹ lần nữa đi.",
+            "Ơ, hôm nay không đi concert nữa à?",
+            "À, có trong cặp rồi mà."
+          ],
+          "correctIndex": 0,
+          "script": "男:おかしいな。今日のコンサートのチケット、鞄にいれてきたつもりだったんだけど。\n1. もう一度、よく見て。\n2. あれ、今日はコンサート行かないことにしたんだっけ。\n3. そうか。かばんの中にあったんだ。",
+          "scriptVi": "Nam: Lạ nhỉ. Vé concert hôm nay, tôi tưởng đã bỏ vào cặp rồi mà.\n1. Xem lại kỹ lần nữa đi.\n2. Ơ, hôm nay không đi concert nữa à?\n3. À, có trong cặp rồi mà.",
+          "tip": "Câu hỏi: Nam: Lạ nhỉ. Vé concert hôm nay, tôi tưởng đã bỏ vào cặp rồi mà.\n1) Xem lại kỹ lần nữa đi. ✅\n2) Ơ, hôm nay không đi concert nữa à?\n3) À, có trong cặp rồi mà.\n→ Đang tìm đồ bị thất lạc → phản hồi hợp lý là gợi ý XEM LẠI KỸ."
+        },
+        {
+          "qnum": 3,
+          "options": [
+            "今忙しいから、明日でもかまわない?",
+            "読んでもらえて、助かったよ。",
+            "コメント、たくさんもらえたんだ"
+          ],
+          "optionsVi": [
+            "Giờ đang bận, để mai được không?",
+            "Được đọc giúp, tớ cảm ơn nhé.",
+            "Nhận được nhiều ý kiến ghê."
+          ],
+          "correctIndex": 0,
+          "script": "男:あのう、先輩、これ、卒業論文の概要なんです。コメントもらえるとありがたいんですが。\n1. 今忙しいから、明日でもかまわない?\n2. 読んでもらえて、助かったよ。\n3. コメント、たくさんもらえたんだ",
+          "scriptVi": "Nam: Tiền bối, đây là tóm tắt luận văn tốt nghiệp của em. Nếu được cho em xin ý kiến thì tốt quá ạ.\n1. Giờ đang bận, để mai được không?\n2. Được đọc giúp, tớ cảm ơn nhé.\n3. Nhận được nhiều ý kiến ghê.",
+          "tip": "Câu hỏi: Nam: Tiền bối, đây là tóm tắt luận văn tốt nghiệp của em. Nếu được cho em xin ý kiến thì tốt quá ạ.\n1) Giờ đang bận, để mai được không? ✅\n2) Được đọc giúp, tớ cảm ơn nhé.\n3) Nhận được nhiều ý kiến ghê.\n→ Được nhờ xem tài liệu → phản hồi hợp lý là xin dời sang lúc khác vì đang bận."
+        },
+        {
+          "qnum": 4,
+          "options": [
+            "カタログ、いつお見せしたらよろしいですか。",
+            "いや、ここ数日、何かと忙しかったもので。",
+            "もうご覧になったんですね"
+          ],
+          "optionsVi": [
+            "Catalogue thì khi nào tôi đưa xem là được ạ?",
+            "À không, mấy hôm nay bận nhiều việc quá.",
+            "Anh xem rồi à."
+          ],
+          "correctIndex": 1,
+          "script": "女:小林様、先日のコピー機のカタログ、ご覧いただけましたでしょうか。\n1. カタログ、いつお見せしたらよろしいですか。\n2. いや、ここ数日、何かと忙しかったもので。\n3. もうご覧になったんですね",
+          "scriptVi": "Nữ: Anh Kobayashi, catalogue máy photocopy hôm trước, anh xem chưa ạ?\n1. Catalogue thì khi nào tôi đưa xem là được ạ?\n2. À không, mấy hôm nay bận nhiều việc quá.\n3. Anh xem rồi à.",
+          "tip": "Câu hỏi: Nữ: Anh Kobayashi, catalogue máy photocopy hôm trước, anh xem chưa ạ?\n1) Catalogue thì khi nào tôi đưa xem là được ạ?\n2) À không, mấy hôm nay bận nhiều việc quá. ✅\n3) Anh xem rồi à.\n→ Được hỏi đã xem tài liệu chưa → trả lời thật là CHƯA xem vì bận."
+        },
+        {
+          "qnum": 5,
+          "options": [
+            "あっ、これ以上はもう持てません。",
+            "え、おまかせしてもいいんですか。",
+            "うーん、1時間ぐらいならいいですよ。"
+          ],
+          "optionsVi": [
+            "À, tôi không cầm thêm được nữa.",
+            "Ơ, giao hết cho tôi được à?",
+            "Ừm, khoảng 1 tiếng thì được."
+          ],
+          "correctIndex": 2,
+          "script": "男:あの、森さん、倉庫の書類を整理したいんですけど、今、手空いてますか。\n1. あっ、これ以上はもう持てません。\n2. え、おまかせしてもいいんですか。\n3. うーん、1時間ぐらいならいいですよ。",
+          "scriptVi": "Nam: Mori, tôi muốn sắp xếp lại tài liệu trong kho, giờ chị rảnh không ạ?\n1. À, tôi không cầm thêm được nữa.\n2. Ơ, giao hết cho tôi được à?\n3. Ừm, khoảng 1 tiếng thì được.",
+          "tip": "Câu hỏi: Nam: Mori, tôi muốn sắp xếp lại tài liệu trong kho, giờ chị rảnh không ạ?\n1) À, tôi không cầm thêm được nữa.\n2) Ơ, giao hết cho tôi được à?\n3) Ừm, khoảng 1 tiếng thì được. ✅\n→ Được hỏi có rảnh giúp không → trả lời hợp lý là xác nhận THỜI GIAN rảnh."
+        },
+        {
+          "qnum": 6,
+          "options": [
+            "予定通り、がんばってやりましょう。",
+            "今回は仕方ありませんね。",
+            "中止にならなくて、ほっとしました。"
+          ],
+          "optionsVi": [
+            "Cứ theo đúng lịch mà cố gắng làm thôi.",
+            "Lần này đành chịu vậy.",
+            "May quá không phải hủy."
+          ],
+          "correctIndex": 1,
+          "script": "男:台風が来てるし、明日の屋外イベントは中止せざるを得ないよ。\n1. 予定通り、がんばってやりましょう。\n2. 今回は仕方ありませんね。\n3. 中止にならなくて、ほっとしました。",
+          "scriptVi": "Nam: Bão sắp đến rồi, sự kiện ngoài trời mai chắc phải hủy thôi.\n1. Cứ theo đúng lịch mà cố gắng làm thôi.\n2. Lần này đành chịu vậy.\n3. May quá không phải hủy.",
+          "tip": "Câu hỏi: Nam: Bão sắp đến rồi, sự kiện ngoài trời mai chắc phải hủy thôi.\n1) Cứ theo đúng lịch mà cố gắng làm thôi.\n2) Lần này đành chịu vậy. ✅\n3) May quá không phải hủy.\n→ Thông báo buộc phải hủy → đồng tình chấp nhận 'đành chịu vậy'."
+        },
+        {
+          "qnum": 7,
+          "options": [
+            "すぐつけに行ってくるよ。",
+            "消しちゃいけなかった。",
+            "ああ、忘れたかもしれない。"
+          ],
+          "optionsVi": [
+            "Tớ đi bật ngay đây.",
+            "Không được tắt à.",
+            "À, có khi tớ quên mất rồi."
+          ],
+          "correctIndex": 2,
+          "script": "女:佐藤君、さっき会議室出るとき、エアコンちゃんと消してくれた?\n1. すぐつけに行ってくるよ。\n2. 消しちゃいけなかった。\n3. ああ、忘れたかもしれない。",
+          "scriptVi": "Nữ: Satō, lúc nãy ra khỏi phòng họp, cậu đã tắt điều hòa chưa?\n1. Tớ đi bật ngay đây.\n2. Không được tắt à.\n3. À, có khi tớ quên mất rồi.",
+          "tip": "Câu hỏi: Nữ: Satō, lúc nãy ra khỏi phòng họp, cậu đã tắt điều hòa chưa?\n1) Tớ đi bật ngay đây.\n2) Không được tắt à.\n3) À, có khi tớ quên mất rồi. ✅\n→ Bị hỏi đã làm việc gì chưa → thừa nhận có thể đã QUÊN."
+        },
+        {
+          "qnum": 8,
+          "options": [
+            "嫌なことでもあったんじゃない?",
+            "なんかいいことあったのかな?",
+            "機嫌直るといいね。"
+          ],
+          "optionsVi": [
+            "Chắc có chuyện gì không vui à?",
+            "Chắc có chuyện gì vui đây?",
+            "Mong là hết bực nhỉ."
+          ],
+          "correctIndex": 1,
+          "script": "女:ねえ、吉田さん、今日課長、ご機嫌だと思わない\n1. 嫌なことでもあったんじゃない?\n2. なんかいいことあったのかな?\n3. 機嫌直るといいね。",
+          "scriptVi": "Nữ: Này Yoshida, cậu không thấy hôm nay trưởng phòng vui vẻ khác thường à?\n1. Chắc có chuyện gì không vui à?\n2. Chắc có chuyện gì vui đây?\n3. Mong là hết bực nhỉ.",
+          "tip": "Câu hỏi: Nữ: Này Yoshida, cậu không thấy hôm nay trưởng phòng vui vẻ khác thường à?\n1) Chắc có chuyện gì không vui à?\n2) Chắc có chuyện gì vui đây? ✅\n3) Mong là hết bực nhỉ.\n→ Nhận xét trưởng phòng đang VUI → phản hồi hợp lý là đoán 'có chuyện gì vui'."
+        },
+        {
+          "qnum": 9,
+          "options": [
+            "申し訳ありません、気をつけます。",
+            "お褒めいただき、恐縮です。",
+            "では、遠慮なく、休ませていただきます。"
+          ],
+          "optionsVi": [
+            "Xin lỗi, tôi sẽ chú ý hơn.",
+            "Được khen vậy tôi cảm kích quá.",
+            "Vậy tôi xin phép nghỉ ngơi luôn."
+          ],
+          "correctIndex": 0,
+          "script": "男:堀さん、堀さんいくら渡れてるからって、打ち合わせでうとうとしちゃうなんて。\n1. 申し訳ありません、気をつけます。\n2. お褒めいただき、恐縮です。\n3. では、遠慮なく、休ませていただきます。",
+          "scriptVi": "Nam: Hori, dù có quen việc đến đâu thì cũng không nên ngủ gật trong cuộc họp chứ.\n1. Xin lỗi, tôi sẽ chú ý hơn.\n2. Được khen vậy tôi cảm kích quá.\n3. Vậy tôi xin phép nghỉ ngơi luôn.",
+          "tip": "Câu hỏi: Nam: Hori, dù có quen việc đến đâu thì cũng không nên ngủ gật trong cuộc họp chứ.\n1) Xin lỗi, tôi sẽ chú ý hơn. ✅\n2) Được khen vậy tôi cảm kích quá.\n3) Vậy tôi xin phép nghỉ ngơi luôn.\n→ Bị nhắc nhở lỗi (ngủ gật) → phản hồi hợp lý là XIN LỖI và hứa sửa."
+        },
+        {
+          "qnum": 10,
+          "options": [
+            "今までで、一番よかったんですね。",
+            "え、見に行こうと思ってたんですけど",
+            "そんなに面白いなら、見に行ってみます。"
+          ],
+          "optionsVi": [
+            "Vậy là hay nhất từ trước đến giờ nhỉ.",
+            "Ơ, tôi đang định đi xem đấy.",
+            "Hay vậy thì tôi phải đi xem thử."
+          ],
+          "correctIndex": 1,
+          "script": "石田監督が作った最新の映画見ましたけど、今一つでしたよ。\n1. 今までで、一番よかったんですね。\n2. え、見に行こうと思ってたんですけど\n3. そんなに面白いなら、見に行ってみます。",
+          "scriptVi": "Tôi xem phim mới nhất của đạo diễn Ishida rồi, thấy cũng thường thôi.\n1. Vậy là hay nhất từ trước đến giờ nhỉ.\n2. Ơ, tôi đang định đi xem đấy.\n3. Hay vậy thì tôi phải đi xem thử.",
+          "tip": "Câu hỏi: Tôi xem phim mới nhất của đạo diễn Ishida rồi, thấy cũng thường thôi.\n1) Vậy là hay nhất từ trước đến giờ nhỉ.\n2) Ơ, tôi đang định đi xem đấy. ✅\n3) Hay vậy thì tôi phải đi xem thử.\n→ Nhận xét phim KHÔNG hay → phản hồi hợp lý là bối rối vì đang định đi xem."
+        },
+        {
+          "qnum": 11,
+          "options": [
+            "全く頭にくるよね。",
+            "なかなかできないことだよね。",
+            "え? 具合悪くなっちゃったの。"
+          ],
+          "optionsVi": [
+            "Đúng là bực mình thật nhỉ.",
+            "Đúng là không dễ làm được vậy nhỉ.",
+            "Hả? Bị ốm rồi à?"
+          ],
+          "correctIndex": 1,
+          "script": "女：受付の木村さん、毎朝早く来て、掃除してくれてるんだって頭が下がるよ。\n1. 全く頭にくるよね。\n2. なかなかできないことだよね。\n3. え? 具合悪くなっちゃったの。",
+          "scriptVi": "Nữ: Kimura ở lễ tân, sáng nào cũng đến sớm dọn dẹp, thật đáng nể.\n1. Đúng là bực mình thật nhỉ.\n2. Đúng là không dễ làm được vậy nhỉ.\n3. Hả? Bị ốm rồi à?",
+          "tip": "Câu hỏi: Nữ: Kimura ở lễ tân, sáng nào cũng đến sớm dọn dẹp, thật đáng nể.\n1) Đúng là bực mình thật nhỉ.\n2) Đúng là không dễ làm được vậy nhỉ. ✅\n3) Hả? Bị ốm rồi à?\n→ Khen ngợi hành động tốt → đồng tình 'không dễ làm được vậy'."
+        },
+        {
+          "qnum": 12,
+          "options": [
+            "営業の仕事やってきてるんなら、当然じゃない?",
+            "経験がないのに、結果出してるよね。",
+            "そんなに成績落としちゃった。"
+          ],
+          "optionsVi": [
+            "Nếu đã làm kinh doanh trước rồi thì đương nhiên chứ?",
+            "Không có kinh nghiệm mà vẫn ra kết quả nhỉ.",
+            "Thành tích tệ vậy sao."
+          ],
+          "correctIndex": 1,
+          "script": "男:今度入った加藤さん、営業の仕事が初めてのわりには、営業成績上げてるよね。\n1. 営業の仕事やってきてるんなら、当然じゃない?\n2. 経験がないのに、結果出してるよね。\n3. そんなに成績落としちゃった。",
+          "scriptVi": "Nam: Katō mới vào, dù lần đầu làm kinh doanh nhưng thành tích bán hàng tốt nhỉ.\n1. Nếu đã làm kinh doanh trước rồi thì đương nhiên chứ?\n2. Không có kinh nghiệm mà vẫn ra kết quả nhỉ.\n3. Thành tích tệ vậy sao.",
+          "tip": "Câu hỏi: Nam: Katō mới vào, dù lần đầu làm kinh doanh nhưng thành tích bán hàng tốt nhỉ.\n1) Nếu đã làm kinh doanh trước rồi thì đương nhiên chứ?\n2) Không có kinh nghiệm mà vẫn ra kết quả nhỉ. ✅\n3) Thành tích tệ vậy sao.\n→ Khen thành tích dù mới vào nghề → đồng tình nhấn mạnh 'không kinh nghiệm mà vẫn giỏi'."
+        }
+      ]
+    }
+  ]
+}

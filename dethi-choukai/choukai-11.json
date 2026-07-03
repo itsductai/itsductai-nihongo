@@ -1,0 +1,206 @@
+{
+  "id": "choukai-11",
+  "title": "聴解 11 (JLPT N2 2024/12)",
+  "year": "2024/12",
+  "audioMode": "split",
+  "audioFile": null,
+  "audioFiles": {
+    "4": "聴解 11 4.mp3"
+  },
+  "mondai": [
+    {
+      "number": 4,
+      "name": "即時応答",
+      "instruction": "Nghe câu nói ngắn, chọn phản hồi phù hợp nhất trong 3 lựa chọn (chỉ đọc qua audio, không in sẵn).",
+      "questions": [
+        {
+          "qnum": 1,
+          "options": [
+            "エアコンはなくてもいいんですか?",
+            "え?どうしてエアコンを使わないんですか?",
+            "エアコンつけて寝ないと寝れないですよね"
+          ],
+          "optionsVi": [
+            "Không cần điều hòa cũng được à?",
+            "Ơ? Sao lại không dùng điều hòa vậy?",
+            "Phải bật điều hòa mới ngủ được nhỉ."
+          ],
+          "correctIndex": 2,
+          "script": "女:こう熱帯夜が続くとエアコンは欠かせませんよね?\n1. エアコンはなくてもいいんですか?\n2. え?どうしてエアコンを使わないんですか?\n3. エアコンつけて寝ないと寝れないですよね",
+          "scriptVi": "Nữ: Đêm nóng thế này liên tục thì không thể thiếu điều hòa nhỉ?\n1. Không cần điều hòa cũng được à?\n2. Ơ? Sao lại không dùng điều hòa vậy?\n3. Phải bật điều hòa mới ngủ được nhỉ.",
+          "tip": "Câu hỏi: Nữ: Đêm nóng thế này liên tục thì không thể thiếu điều hòa nhỉ?\n1) Không cần điều hòa cũng được à?\n2) Ơ? Sao lại không dùng điều hòa vậy?\n3) Phải bật điều hòa mới ngủ được nhỉ. ✅\n→ Khẳng định điều hòa là CẦN THIẾT → đồng tình xác nhận."
+        },
+        {
+          "qnum": 2,
+          "options": [
+            "あ、私はいつでも構いません",
+            "打ち合わせの時間を長くするんですか?",
+            "2時からで大丈夫です"
+          ],
+          "optionsVi": [
+            "À, tôi lúc nào cũng được ạ.",
+            "Là kéo dài thời gian họp ạ?",
+            "2 giờ là được ạ."
+          ],
+          "correctIndex": 0,
+          "script": "女:伊藤さん。2時から予定してた打ち合わせだけど、時間ずらしてもらえない?\n1. あ、私はいつでも構いません\n2. 打ち合わせの時間を長くするんですか?\n3. 2時からで大丈夫です",
+          "scriptVi": "Nữ: Itō, cuộc họp dự định 2 giờ, đổi giờ được không?\n1. À, tôi lúc nào cũng được ạ.\n2. Là kéo dài thời gian họp ạ?\n3. 2 giờ là được ạ.",
+          "tip": "Câu hỏi: Nữ: Itō, cuộc họp dự định 2 giờ, đổi giờ được không?\n1) À, tôi lúc nào cũng được ạ. ✅\n2) Là kéo dài thời gian họp ạ?\n3) 2 giờ là được ạ.\n→ Được hỏi đổi giờ họp → trả lời linh hoạt 'lúc nào cũng được'."
+        },
+        {
+          "qnum": 3,
+          "options": [
+            "試合が近いから休みたくないんだ",
+            "ごめん、ちょっとバイトが忙しくて",
+            "練習がないから1人でやってたんだ"
+          ],
+          "optionsVi": [
+            "Sắp thi đấu nên tớ không muốn nghỉ.",
+            "Xin lỗi, dạo này làm thêm bận quá.",
+            "Không có buổi tập nên tớ tự tập một mình."
+          ],
+          "correctIndex": 1,
+          "script": "男:中野さん。中野さん、最近卓球部の練習休みがちだけどどうしたの?\n1. 試合が近いから休みたくないんだ\n2. ごめん、ちょっとバイトが忙しくて\n3. 練習がないから1人でやってたんだ",
+          "scriptVi": "Nam: Nakano, dạo này cậu hay nghỉ tập bóng bàn, có chuyện gì vậy?\n1. Sắp thi đấu nên tớ không muốn nghỉ.\n2. Xin lỗi, dạo này làm thêm bận quá.\n3. Không có buổi tập nên tớ tự tập một mình.",
+          "tip": "Câu hỏi: Nam: Nakano, dạo này cậu hay nghỉ tập bóng bàn, có chuyện gì vậy?\n1) Sắp thi đấu nên tớ không muốn nghỉ.\n2) Xin lỗi, dạo này làm thêm bận quá. ✅\n3) Không có buổi tập nên tớ tự tập một mình.\n→ Được hỏi lý do vắng mặt → trả lời lý do thật (bận làm thêm) + xin lỗi."
+        },
+        {
+          "qnum": 4,
+          "options": [
+            "まだ戻られてないんですか?",
+            "課長、これから昼食ですか?",
+            "あ、もう帰ってこられたんですか?"
+          ],
+          "optionsVi": [
+            "Vẫn chưa quay lại à?",
+            "Trưởng phòng giờ mới đi ăn trưa à?",
+            "À, đã về rồi ạ?"
+          ],
+          "correctIndex": 0,
+          "script": "男:もうすぐ会議の時間ですけど山本課長、昼ごはん食べに行ったきりですね。\n1. まだ戻られてないんですか?\n2. 課長、これから昼食ですか?\n3. あ、もう帰ってこられたんですか?",
+          "scriptVi": "Nam: Sắp tới giờ họp rồi mà trưởng phòng Yamamoto đi ăn trưa vẫn chưa thấy về.\n1. Vẫn chưa quay lại à?\n2. Trưởng phòng giờ mới đi ăn trưa à?\n3. À, đã về rồi ạ?",
+          "tip": "Câu hỏi: Nam: Sắp tới giờ họp rồi mà trưởng phòng Yamamoto đi ăn trưa vẫn chưa thấy về.\n1) Vẫn chưa quay lại à? ✅\n2) Trưởng phòng giờ mới đi ăn trưa à?\n3) À, đã về rồi ạ?\n→ Báo trưởng phòng CHƯA VỀ (đi ăn trưa lâu) → xác nhận lại đúng ý 'vẫn chưa về à?'."
+        },
+        {
+          "qnum": 5,
+          "options": [
+            "あー、直せないんですか",
+            "直せるんですね。良かったです",
+            "直せるかどうかまだわからないんですね"
+          ],
+          "optionsVi": [
+            "À, không sửa được à.",
+            "Sửa được à. May quá.",
+            "Vẫn chưa biết có sửa được không nhỉ."
+          ],
+          "correctIndex": 0,
+          "script": "女:店長、修理を頼んでいた冷蔵庫ですが、買い替えるほかないそうです。\n1. あー、直せないんですか\n2. 直せるんですね。良かったです\n3. 直せるかどうかまだわからないんですね",
+          "scriptVi": "Nữ: Quản lý, tủ lạnh gửi sửa nghe nói chỉ còn cách mua mới thôi ạ.\n1. À, không sửa được à.\n2. Sửa được à. May quá.\n3. Vẫn chưa biết có sửa được không nhỉ.",
+          "tip": "Câu hỏi: Nữ: Quản lý, tủ lạnh gửi sửa nghe nói chỉ còn cách mua mới thôi ạ.\n1) À, không sửa được à. ✅\n2) Sửa được à. May quá.\n3) Vẫn chưa biết có sửa được không nhỉ.\n→ 'Chỉ còn cách mua mới' = KHÔNG SỬA ĐƯỢC → xác nhận đúng ý đó."
+        },
+        {
+          "qnum": 6,
+          "options": [
+            "出る人だけ連絡すればいいんだね",
+            "行けないなら早めに返事するんだね",
+            "出席できない人は連絡いらないって思ってたよ"
+          ],
+          "optionsVi": [
+            "Vậy chỉ người tham dự mới cần báo nhỉ.",
+            "Vậy nếu không đi được thì báo sớm nhỉ.",
+            "Tớ cứ tưởng người không tham dự được thì không cần báo."
+          ],
+          "correctIndex": 2,
+          "script": "女:課長の送別会、「出席、欠席に関わらず早く返事くれ」って小野さんが言ってたよ。\n1. 出る人だけ連絡すればいいんだね\n2. 行けないなら早めに返事するんだね\n3. 出席できない人は連絡いらないって思ってたよ",
+          "scriptVi": "Nữ: Tiệc chia tay trưởng phòng, Ono nói 'dù tham dự hay không cũng trả lời sớm nhé'.\n1. Vậy chỉ người tham dự mới cần báo nhỉ.\n2. Vậy nếu không đi được thì báo sớm nhỉ.\n3. Tớ cứ tưởng người không tham dự được thì không cần báo.",
+          "tip": "Câu hỏi: Nữ: Tiệc chia tay trưởng phòng, Ono nói 'dù tham dự hay không cũng trả lời sớm nhé'.\n1) Vậy chỉ người tham dự mới cần báo nhỉ.\n2) Vậy nếu không đi được thì báo sớm nhỉ.\n3) Tớ cứ tưởng người không tham dự được thì không cần báo. ✅\n→ 'Dù đi hay không cũng phải báo' → người nghe hiểu sai trước đó, giờ nhận ra 'tớ cứ tưởng không cần báo'."
+        },
+        {
+          "qnum": 7,
+          "options": [
+            "スタッフの分だけで30個ですね。",
+            "予約するお弁当は全部で30個ですね",
+            "スタッフのお弁当は別に注文するんですね"
+          ],
+          "optionsVi": [
+            "Chỉ riêng phần nhân viên là 30 hộp nhỉ.",
+            "Tổng cộng đặt 30 hộp cơm nhỉ.",
+            "Cơm của nhân viên đặt riêng nhỉ."
+          ],
+          "correctIndex": 1,
+          "script": "女:森さん。セミナー当日のお弁当、スタッフの分を含めて30個予約をお願いします。\n1. スタッフの分だけで30個ですね。\n2. 予約するお弁当は全部で30個ですね\n3. スタッフのお弁当は別に注文するんですね",
+          "scriptVi": "Nữ: Mori, cơm hộp ngày hội thảo, tính cả phần nhân viên là đặt 30 hộp nhé.\n1. Chỉ riêng phần nhân viên là 30 hộp nhỉ.\n2. Tổng cộng đặt 30 hộp cơm nhỉ.\n3. Cơm của nhân viên đặt riêng nhỉ.",
+          "tip": "Câu hỏi: Nữ: Mori, cơm hộp ngày hội thảo, tính cả phần nhân viên là đặt 30 hộp nhé.\n1) Chỉ riêng phần nhân viên là 30 hộp nhỉ.\n2) Tổng cộng đặt 30 hộp cơm nhỉ. ✅\n3) Cơm của nhân viên đặt riêng nhỉ.\n→ 'Tính cả phần nhân viên = 30 hộp' → xác nhận TỔNG là 30 hộp."
+        },
+        {
+          "qnum": 8,
+          "options": [
+            "じゃ、部長が来てから始めよう",
+            "今日、部長来ないんだ",
+            "あー、今日はミーティング中止なんだね"
+          ],
+          "optionsVi": [
+            "Vậy đợi trưởng phòng đến rồi bắt đầu.",
+            "Vậy hôm nay trưởng phòng không đến à.",
+            "À, vậy hôm nay hủy họp à."
+          ],
+          "correctIndex": 1,
+          "script": "男:今日のサンプルのミーティングだけど、「部長抜きでやってくれ」って部長からメールが来たよ。\n1. じゃ、部長が来てから始めよう\n2. 今日、部長来ないんだ\n3. あー、今日はミーティング中止なんだね",
+          "scriptVi": "Nam: Họp mẫu hôm nay, trưởng phòng gửi mail bảo 'cứ họp không cần chờ tôi'.\n1. Vậy đợi trưởng phòng đến rồi bắt đầu.\n2. Vậy hôm nay trưởng phòng không đến à.\n3. À, vậy hôm nay hủy họp à.",
+          "tip": "Câu hỏi: Nam: Họp mẫu hôm nay, trưởng phòng gửi mail bảo 'cứ họp không cần chờ tôi'.\n1) Vậy đợi trưởng phòng đến rồi bắt đầu.\n2) Vậy hôm nay trưởng phòng không đến à. ✅\n3) À, vậy hôm nay hủy họp à.\n→ 'Cứ họp không cần chờ' = trưởng phòng KHÔNG THAM DỰ → hiểu đúng 'hôm nay không đến à'."
+        },
+        {
+          "qnum": 9,
+          "options": [
+            "毎週土日は半額なんだね。行こうか?",
+            "平日が半額になるなら平日だね",
+            "今度の週末だね。土曜でもいい?"
+          ],
+          "optionsVi": [
+            "Vậy là cuối tuần nào cũng giảm nửa giá nhỉ. Đi nhé?",
+            "Nếu ngày thường giảm giá thì đi ngày thường nhỉ.",
+            "Cuối tuần này đúng không. Thứ Bảy được không?"
+          ],
+          "correctIndex": 2,
+          "script": "女:駅前のカラオケ、今度の土日に限り半額ってチラシで見たけど行かない?\n1. 毎週土日は半額なんだね。行こうか?\n2. 平日が半額になるなら平日だね\n3. 今度の週末だね。土曜でもいい?",
+          "scriptVi": "Nữ: Karaoke trước ga, tờ rơi ghi chỉ giảm nửa giá cuối tuần này thôi, đi không?\n1. Vậy là cuối tuần nào cũng giảm nửa giá nhỉ. Đi nhé?\n2. Nếu ngày thường giảm giá thì đi ngày thường nhỉ.\n3. Cuối tuần này đúng không. Thứ Bảy được không?",
+          "tip": "Câu hỏi: Nữ: Karaoke trước ga, tờ rơi ghi chỉ giảm nửa giá cuối tuần này thôi, đi không?\n1) Vậy là cuối tuần nào cũng giảm nửa giá nhỉ. Đi nhé?\n2) Nếu ngày thường giảm giá thì đi ngày thường nhỉ.\n3) Cuối tuần này đúng không. Thứ Bảy được không? ✅\n→ 'Chỉ cuối tuần NÀY' (không phải mọi tuần) → xác nhận đúng thời điểm 'cuối tuần này' + hỏi ngày cụ thể."
+        },
+        {
+          "qnum": 10,
+          "options": [
+            "改めてお礼のメールを送ってください",
+            "じゃ、私から聞いてみましょうか",
+            "受けてもらえて安心しました"
+          ],
+          "optionsVi": [
+            "Hãy gửi lại mail cảm ơn nhé.",
+            "Vậy để tôi hỏi thử xem.",
+            "Được nhận lời rồi thì yên tâm quá."
+          ],
+          "correctIndex": 1,
+          "script": "男:課長、みどり社に来年のイベントへの協力を依頼しているんですが、返事が曖昧なんです。\n1. 改めてお礼のメールを送ってください\n2. じゃ、私から聞いてみましょうか\n3. 受けてもらえて安心しました",
+          "scriptVi": "Nam: Trưởng phòng, tôi đã nhờ công ty Midori hợp tác sự kiện năm sau nhưng câu trả lời còn mập mờ ạ.\n1. Hãy gửi lại mail cảm ơn nhé.\n2. Vậy để tôi hỏi thử xem.\n3. Được nhận lời rồi thì yên tâm quá.",
+          "tip": "Câu hỏi: Nam: Trưởng phòng, tôi đã nhờ công ty Midori hợp tác sự kiện năm sau nhưng câu trả lời còn mập mờ ạ.\n1) Hãy gửi lại mail cảm ơn nhé.\n2) Vậy để tôi hỏi thử xem. ✅\n3) Được nhận lời rồi thì yên tâm quá.\n→ Báo cáo tình trạng CHƯA RÕ RÀNG → trưởng phòng đề nghị hỗ trợ 'để tôi hỏi thử'."
+        },
+        {
+          "qnum": 11,
+          "options": [
+            "え?まだ時間あるのにもういっぱいなの?",
+            "じゃ、今月中に予約しなくちゃいけないんだね",
+            "そう。?じゃ、来月になったらすぐ予約しよう"
+          ],
+          "optionsVi": [
+            "Hả? Còn nhiều thời gian mà đã hết chỗ rồi à?",
+            "Vậy phải đặt trong tháng này nhỉ.",
+            "Vậy à. Vậy sang tháng đăng ký ngay nhé."
+          ],
+          "correctIndex": 2,
+          "script": "女:2月にみんなで行くスキー旅行のサイト見たけど、来月になってからでないと申し込みできないって。\n1. え?まだ時間あるのにもういっぱいなの?\n2. じゃ、今月中に予約しなくちゃいけないんだね\n3. そう。?じゃ、来月になったらすぐ予約しよう",
+          "scriptVi": "Nữ: Tôi xem trang web tour trượt tuyết tháng 2 cả nhóm định đi, nhưng phải sang tháng sau mới đăng ký được.\n1. Hả? Còn nhiều thời gian mà đã hết chỗ rồi à?\n2. Vậy phải đặt trong tháng này nhỉ.\n3. Vậy à. Vậy sang tháng đăng ký ngay nhé.",
+          "tip": "Câu hỏi: Nữ: Tôi xem trang web tour trượt tuyết tháng 2 cả nhóm định đi, nhưng phải sang tháng sau mới đăng ký được.\n1) Hả? Còn nhiều thời gian mà đã hết chỗ rồi à?\n2) Vậy phải đặt trong tháng này nhỉ.\n3) Vậy à. Vậy sang tháng đăng ký ngay nhé. ✅\n→ 'Phải sang tháng sau mới đăng ký được' (chưa mở đăng ký) → phản hồi hợp lý là ĐỢI sang tháng đăng ký ngay."
+        }
+      ]
+    }
+  ]
+}

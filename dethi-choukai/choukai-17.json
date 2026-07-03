@@ -1,0 +1,206 @@
+{
+  "id": "choukai-17",
+  "title": "聴解 17 (JLPT N2 2018/12)",
+  "year": "2018/12",
+  "audioMode": "split",
+  "audioFile": null,
+  "audioFiles": {
+    "4": "聴解 17 4.m4a"
+  },
+  "mondai": [
+    {
+      "number": 4,
+      "name": "即時応答",
+      "instruction": "Nghe câu nói ngắn, chọn phản hồi phù hợp nhất trong 3 lựa chọn (chỉ đọc qua audio, không in sẵn).",
+      "questions": [
+        {
+          "qnum": 1,
+          "options": [
+            "みなみ銀行に勤めてます。",
+            "うちはみなみ町です。",
+            "みなみ大学の出身です。"
+          ],
+          "optionsVi": [
+            "Tôi làm ở ngân hàng Minami.",
+            "Nhà tôi ở khu Minami.",
+            "Tôi tốt nghiệp đại học Minami."
+          ],
+          "correctIndex": 1,
+          "script": "りーさん、りーさんのお住まいはどちらですか。\n1. みなみ銀行に勤めてます。\n2. うちはみなみ町です。\n3. みなみ大学の出身です。",
+          "scriptVi": "Anh Lee, anh sống ở đâu vậy?\n1. Tôi làm ở ngân hàng Minami.\n2. Nhà tôi ở khu Minami.\n3. Tôi tốt nghiệp đại học Minami.",
+          "tip": "Câu hỏi: Anh Lee, anh sống ở đâu vậy?\n1) Tôi làm ở ngân hàng Minami.\n2) Nhà tôi ở khu Minami. ✅\n3) Tôi tốt nghiệp đại học Minami.\n→ Được hỏi NƠI Ở → trả lời trực tiếp địa chỉ."
+        },
+        {
+          "qnum": 2,
+          "options": [
+            "うん、そのままにしておく。",
+            "じゃ、すぐにつけるよ。",
+            "もう使わない?"
+          ],
+          "optionsVi": [
+            "Ừ, để nguyên vậy nhé.",
+            "Vậy tớ bật ngay đây.",
+            "Không dùng nữa à?"
+          ],
+          "correctIndex": 0,
+          "script": "ねえ、作業をやりかけだから、まだこのパソコンつけといて。\n1. うん、そのままにしておく。\n2. じゃ、すぐにつけるよ。\n3. もう使わない?",
+          "scriptVi": "Này, công việc đang làm dở, cứ để máy tính bật đó nhé.\n1. Ừ, để nguyên vậy nhé.\n2. Vậy tớ bật ngay đây.\n3. Không dùng nữa à?",
+          "tip": "Câu hỏi: Này, công việc đang làm dở, cứ để máy tính bật đó nhé.\n1) Ừ, để nguyên vậy nhé. ✅\n2) Vậy tớ bật ngay đây.\n3) Không dùng nữa à?\n→ Được yêu cầu GIỮ NGUYÊN trạng thái (đang bật) → xác nhận 'để nguyên vậy'."
+        },
+        {
+          "qnum": 3,
+          "options": [
+            "えっ、よかったですね。",
+            "どういたしまして。",
+            "うん、かまいませんよ。"
+          ],
+          "optionsVi": [
+            "Ơ, tốt quá nhỉ.",
+            "Không có gì đâu.",
+            "Ừ, không sao đâu."
+          ],
+          "correctIndex": 2,
+          "script": "あのう、この資料2、3日貸してもらえるとありがたいんだけど…\n1. えっ、よかったですね。\n2. どういたしまして。\n3. うん、かまいませんよ。",
+          "scriptVi": "À, nếu cho tôi mượn tài liệu này 2, 3 ngày thì tốt quá...\n1. Ơ, tốt quá nhỉ.\n2. Không có gì đâu.\n3. Ừ, không sao đâu.",
+          "tip": "Câu hỏi: À, nếu cho tôi mượn tài liệu này 2, 3 ngày thì tốt quá...\n1) Ơ, tốt quá nhỉ.\n2) Không có gì đâu.\n3) Ừ, không sao đâu. ✅\n→ Được nhờ mượn đồ → nhận lời 'không sao đâu'."
+        },
+        {
+          "qnum": 4,
+          "options": [
+            "いい経験になるといいね。",
+            "一か月だったんだけどね。",
+            "うん、がんばってくるよ。"
+          ],
+          "optionsVi": [
+            "Mong là kinh nghiệm tốt nhỉ.",
+            "Chỉ có 1 tháng thôi mà.",
+            "Ừ, tớ sẽ cố gắng."
+          ],
+          "correctIndex": 1,
+          "script": "ねえ、ねえ、留学したことあるんだって?\n1. いい経験になるといいね。\n2. 一か月だったんだけどね。\n3. うん、がんばってくるよ。",
+          "scriptVi": "Này này, nghe nói cậu từng đi du học à?\n1. Mong là kinh nghiệm tốt nhỉ.\n2. Chỉ có 1 tháng thôi mà.\n3. Ừ, tớ sẽ cố gắng.",
+          "tip": "Câu hỏi: Này này, nghe nói cậu từng đi du học à?\n1) Mong là kinh nghiệm tốt nhỉ.\n2) Chỉ có 1 tháng thôi mà. ✅\n3) Ừ, tớ sẽ cố gắng.\n→ Được hỏi về chuyện ĐÃ XẢY RA (quá khứ) → trả lời chi tiết 'chỉ 1 tháng thôi'."
+        },
+        {
+          "qnum": 5,
+          "options": [
+            "ちゃんと書いておきます。",
+            "メモしておけばよかったです。",
+            "書いてくださって助かりました。"
+          ],
+          "optionsVi": [
+            "Tôi sẽ ghi chép cẩn thận ạ.",
+            "Giá mà lúc đó tôi ghi chú thì tốt rồi.",
+            "Nhờ anh viết ra giúp tôi đỡ hẳn."
+          ],
+          "correctIndex": 0,
+          "script": "今から新しいソフトウェアの説明するけど、メモしとかないと忘れちゃうよ。\n1. ちゃんと書いておきます。\n2. メモしておけばよかったです。\n3. 書いてくださって助かりました。",
+          "scriptVi": "Bây giờ tôi giải thích phần mềm mới, không ghi chú lại là quên đó.\n1. Tôi sẽ ghi chép cẩn thận ạ.\n2. Giá mà lúc đó tôi ghi chú thì tốt rồi.\n3. Nhờ anh viết ra giúp tôi đỡ hẳn.",
+          "tip": "Câu hỏi: Bây giờ tôi giải thích phần mềm mới, không ghi chú lại là quên đó.\n1) Tôi sẽ ghi chép cẩn thận ạ. ✅\n2) Giá mà lúc đó tôi ghi chú thì tốt rồi.\n3) Nhờ anh viết ra giúp tôi đỡ hẳn.\n→ Được nhắc nhở TRƯỚC khi bắt đầu → xác nhận sẽ GHI CHÚ cẩn thận."
+        },
+        {
+          "qnum": 6,
+          "options": [
+            "前回のほうがよかったでしょうか。",
+            "そうですか。緊張してたんですけど。",
+            "最初のところだけってことですね。"
+          ],
+          "optionsVi": [
+            "Lần trước tốt hơn phải không ạ?",
+            "Vậy ạ. Nhưng tôi căng thẳng lắm ạ.",
+            "Ý là chỉ phần đầu thôi ạ."
+          ],
+          "correctIndex": 1,
+          "script": "伊藤さん、今日のプレゼン、初めてのわりにはうまくまとめてたね。\n1. 前回のほうがよかったでしょうか。\n2. そうですか。緊張してたんですけど。\n3. 最初のところだけってことですね。",
+          "scriptVi": "Itō, bài thuyết trình hôm nay, lần đầu mà tổng hợp tốt đó nhỉ.\n1. Lần trước tốt hơn phải không ạ?\n2. Vậy ạ. Nhưng tôi căng thẳng lắm ạ.\n3. Ý là chỉ phần đầu thôi ạ.",
+          "tip": "Câu hỏi: Itō, bài thuyết trình hôm nay, lần đầu mà tổng hợp tốt đó nhỉ.\n1) Lần trước tốt hơn phải không ạ?\n2) Vậy ạ. Nhưng tôi căng thẳng lắm ạ. ✅\n3) Ý là chỉ phần đầu thôi ạ.\n→ Được khen bài thuyết trình → phản hồi khiêm tốn kèm chia sẻ cảm xúc 'căng thẳng lắm'."
+        },
+        {
+          "qnum": 7,
+          "options": [
+            "そんなに量が多かったの?",
+            "切れないほど固かったの?",
+            "じゃ、ぜんぜん足りなかったの?"
+          ],
+          "optionsVi": [
+            "Nhiều đến vậy à?",
+            "Cứng đến mức không cắt được à?",
+            "Vậy là hoàn toàn không đủ à?"
+          ],
+          "correctIndex": 0,
+          "script": "きのうそこのレストランでステーキ定食頼んだら、食べきれなかったよ。\n1. そんなに量が多かったの?\n2. 切れないほど固かったの?\n3. じゃ、ぜんぜん足りなかったの?",
+          "scriptVi": "Hôm qua gọi set steak ở nhà hàng đó mà ăn không hết.\n1. Nhiều đến vậy à?\n2. Cứng đến mức không cắt được à?\n3. Vậy là hoàn toàn không đủ à?",
+          "tip": "Câu hỏi: Hôm qua gọi set steak ở nhà hàng đó mà ăn không hết.\n1) Nhiều đến vậy à? ✅\n2) Cứng đến mức không cắt được à?\n3) Vậy là hoàn toàn không đủ à?\n→ 'Ăn không hết' = PHẦN ĂN NHIỀU → hỏi xác nhận đúng ý đó."
+        },
+        {
+          "qnum": 8,
+          "options": [
+            "会社やめた後、何するんだろう。",
+            "考えは変わらなかったんだね。",
+            "誰かに引き留められたのかな。"
+          ],
+          "optionsVi": [
+            "Nghỉ việc rồi thì sẽ làm gì nhỉ.",
+            "Vậy là suy nghĩ không thay đổi nhỉ.",
+            "Chắc bị ai đó giữ lại nhỉ."
+          ],
+          "correctIndex": 2,
+          "script": "総務課の田中さん、会社やめるのを思いとどまったんですって。\n1. 会社やめた後、何するんだろう。\n2. 考えは変わらなかったんだね。\n3. 誰かに引き留められたのかな。",
+          "scriptVi": "Tanaka phòng tổng vụ nghe nói đã từ bỏ ý định nghỉ việc rồi đó.\n1. Nghỉ việc rồi thì sẽ làm gì nhỉ.\n2. Vậy là suy nghĩ không thay đổi nhỉ.\n3. Chắc bị ai đó giữ lại nhỉ.",
+          "tip": "Câu hỏi: Tanaka phòng tổng vụ nghe nói đã từ bỏ ý định nghỉ việc rồi đó.\n1) Nghỉ việc rồi thì sẽ làm gì nhỉ.\n2) Vậy là suy nghĩ không thay đổi nhỉ.\n3) Chắc bị ai đó giữ lại nhỉ. ✅\n→ 'Từ bỏ ý định nghỉ' = ĐỔI Ý (không nghỉ nữa) → suy đoán lý do 'chắc bị ai giữ lại'."
+        },
+        {
+          "qnum": 9,
+          "options": [
+            "せっかく断ったのにね。",
+            "なかなかそうもいかなくて。",
+            "うん、断って正解だったよ。"
+          ],
+          "optionsVi": [
+            "Từ chối công cốc rồi nhỉ.",
+            "Cũng không dễ như vậy đâu.",
+            "Ừ, từ chối là đúng rồi."
+          ],
+          "correctIndex": 1,
+          "script": "転勤の話、嫌なら断ればよかったのに。\n1. せっかく断ったのにね。\n2. なかなかそうもいかなくて。\n3. うん、断って正解だったよ。",
+          "scriptVi": "Chuyện chuyển công tác, không thích thì từ chối là được rồi mà.\n1. Từ chối công cốc rồi nhỉ.\n2. Cũng không dễ như vậy đâu.\n3. Ừ, từ chối là đúng rồi.",
+          "tip": "Câu hỏi: Chuyện chuyển công tác, không thích thì từ chối là được rồi mà.\n1) Từ chối công cốc rồi nhỉ.\n2) Cũng không dễ như vậy đâu. ✅\n3) Ừ, từ chối là đúng rồi.\n→ Được khuyên 'từ chối là được' (đơn giản hóa vấn đề) → phản hồi thực tế 'không dễ như vậy đâu'."
+        },
+        {
+          "qnum": 10,
+          "options": [
+            "えっ、このデザインって流行してるんですか。",
+            "今流行してるものを着たいですからね。",
+            "流行にはあまり興味がないんです。"
+          ],
+          "optionsVi": [
+            "Ơ, thiết kế này đang là xu hướng à.",
+            "Vì tôi muốn mặc đồ đang hot mà.",
+            "Tôi không quan tâm xu hướng lắm."
+          ],
+          "correctIndex": 2,
+          "script": "小田さん、小田さんのファッションは流行に左右されず、いつもおしゃれですね。\n1. えっ、このデザインって流行してるんですか。\n2. 今流行してるものを着たいですからね。\n3. 流行にはあまり興味がないんです。",
+          "scriptVi": "Oda, phong cách của anh không bị xu hướng chi phối, lúc nào cũng thời trang nhỉ.\n1. Ơ, thiết kế này đang là xu hướng à.\n2. Vì tôi muốn mặc đồ đang hot mà.\n3. Tôi không quan tâm xu hướng lắm.",
+          "tip": "Câu hỏi: Oda, phong cách của anh không bị xu hướng chi phối, lúc nào cũng thời trang nhỉ.\n1) Ơ, thiết kế này đang là xu hướng à.\n2) Vì tôi muốn mặc đồ đang hot mà.\n3) Tôi không quan tâm xu hướng lắm. ✅\n→ Được khen KHÔNG chạy theo xu hướng → xác nhận đúng ý 'không quan tâm xu hướng lắm'."
+        },
+        {
+          "qnum": 11,
+          "options": [
+            "本当にありがたい話ですね。",
+            "それでは、決めてみましょうか。",
+            "聞いてみないとわかりませんよ。"
+          ],
+          "optionsVi": [
+            "Đúng là chuyện đáng mừng thật.",
+            "Vậy thì thử quyết định xem sao.",
+            "Chưa hỏi thì chưa biết được đâu."
+          ],
+          "correctIndex": 2,
+          "script": "田中先生って忙しいから、講演頼んでも断られるに決まってるよ。\n1. 本当にありがたい話ですね。\n2. それでは、決めてみましょうか。\n3. 聞いてみないとわかりませんよ。",
+          "scriptVi": "Thầy Tanaka bận lắm, nhờ diễn thuyết chắc chắn sẽ bị từ chối thôi.\n1. Đúng là chuyện đáng mừng thật.\n2. Vậy thì thử quyết định xem sao.\n3. Chưa hỏi thì chưa biết được đâu.",
+          "tip": "Câu hỏi: Thầy Tanaka bận lắm, nhờ diễn thuyết chắc chắn sẽ bị từ chối thôi.\n1) Đúng là chuyện đáng mừng thật.\n2) Vậy thì thử quyết định xem sao.\n3) Chưa hỏi thì chưa biết được đâu. ✅\n→ Bi quan khẳng định sẽ bị từ chối → phản bác 'chưa hỏi thì chưa biết được'."
+        }
+      ]
+    }
+  ]
+}

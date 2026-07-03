@@ -1,0 +1,206 @@
+{
+  "id": "choukai-14",
+  "title": "聴解 14 (JLPT N2 2021/12)",
+  "year": "2021/12",
+  "audioMode": "split",
+  "audioFile": null,
+  "audioFiles": {
+    "4": "聴解 14 4.mp3"
+  },
+  "mondai": [
+    {
+      "number": 4,
+      "name": "即時応答",
+      "instruction": "Nghe câu nói ngắn, chọn phản hồi phù hợp nhất trong 3 lựa chọn (chỉ đọc qua audio, không in sẵn).",
+      "questions": [
+        {
+          "qnum": 1,
+          "options": [
+            "やっぱり書くことになったよ。",
+            "日本文学についてまとめたら。",
+            "徹夜で頑張るしかないよ。"
+          ],
+          "optionsVi": [
+            "Cuối cùng cũng phải viết rồi.",
+            "Tổng hợp về văn học Nhật Bản thử xem.",
+            "Chỉ còn cách thức trắng đêm cố thôi."
+          ],
+          "correctIndex": 2,
+          "script": "女:金曜日締切りのレポート、間に合いそう?。\n1. やっぱり書くことになったよ。\n2. 日本文学についてまとめたら。\n3. 徹夜で頑張るしかないよ。",
+          "scriptVi": "Nữ: Báo cáo hạn thứ Sáu, kịp không đấy?\n1. Cuối cùng cũng phải viết rồi.\n2. Tổng hợp về văn học Nhật Bản thử xem.\n3. Chỉ còn cách thức trắng đêm cố thôi.",
+          "tip": "Câu hỏi: Nữ: Báo cáo hạn thứ Sáu, kịp không đấy?\n1) Cuối cùng cũng phải viết rồi.\n2) Tổng hợp về văn học Nhật Bản thử xem.\n3) Chỉ còn cách thức trắng đêm cố thôi. ✅\n→ Bị hỏi có kịp deadline không → phản hồi hợp lý: chỉ còn cách thức đêm làm."
+        },
+        {
+          "qnum": 2,
+          "options": [
+            "落ち着いてるように見える?",
+            "ありがとう、気持ちを切り替えなきゃね。",
+            "不満を言われても困るよ。"
+          ],
+          "optionsVi": [
+            "Trông tớ có vẻ bình tĩnh không?",
+            "Cảm ơn, phải lấy lại tinh thần thôi.",
+            "Bị phàn nàn vậy tớ cũng chịu thôi."
+          ],
+          "correctIndex": 1,
+          "script": "女:ゼミの発表、うまく行かなかったからって、そんなに落ち込むことないよ。\n1. 落ち着いてるように見える?\n2. ありがとう、気持ちを切り替えなきゃね。\n3. 不満を言われても困るよ。",
+          "scriptVi": "Nữ: Bài thuyết trình seminar không suôn sẻ cũng đừng nản quá vậy chứ.\n1. Trông tớ có vẻ bình tĩnh không?\n2. Cảm ơn, phải lấy lại tinh thần thôi.\n3. Bị phàn nàn vậy tớ cũng chịu thôi.",
+          "tip": "Câu hỏi: Nữ: Bài thuyết trình seminar không suôn sẻ cũng đừng nản quá vậy chứ.\n1) Trông tớ có vẻ bình tĩnh không?\n2) Cảm ơn, phải lấy lại tinh thần thôi. ✅\n3) Bị phàn nàn vậy tớ cũng chịu thôi.\n→ Được an ủi → phản hồi hợp lý: cảm ơn + tự nhắc bản thân lấy lại tinh thần."
+        },
+        {
+          "qnum": 3,
+          "options": [
+            "テストの日、来週に変わるの?",
+            "来週にはならないでしょう。",
+            "来週になってよかったよね。"
+          ],
+          "optionsVi": [
+            "Ngày test đổi sang tuần sau à?",
+            "Chắc không đổi sang tuần sau đâu.",
+            "May quá đổi sang tuần sau rồi nhỉ."
+          ],
+          "correctIndex": 1,
+          "script": "漢字のテスト、明日なのに、まだ全然覚えてないよ。テスト、来週になったらいいのに。\n1. テストの日、来週に変わるの?\n2. 来週にはならないでしょう。\n3. 来週になってよかったよね。",
+          "scriptVi": "Bài test Hán tự mai rồi mà chưa thuộc gì cả. Ước gì test dời sang tuần sau.\n1. Ngày test đổi sang tuần sau à?\n2. Chắc không đổi sang tuần sau đâu.\n3. May quá đổi sang tuần sau rồi nhỉ.",
+          "tip": "Câu hỏi: Bài test Hán tự mai rồi mà chưa thuộc gì cả. Ước gì test dời sang tuần sau.\n1) Ngày test đổi sang tuần sau à?\n2) Chắc không đổi sang tuần sau đâu. ✅\n3) May quá đổi sang tuần sau rồi nhỉ.\n→ Ước muốn viển vông (test không thể tự dời) → phản hồi thực tế: 'chắc không đổi được đâu'."
+        },
+        {
+          "qnum": 4,
+          "options": [
+            "見てもらえたんだ、よかったね。",
+            "急いでるから、早めに出して。",
+            "ごめん、まだ見てないんだ。"
+          ],
+          "optionsVi": [
+            "Được xem rồi à, tốt quá.",
+            "Đang gấp, nộp sớm giúp tôi.",
+            "Xin lỗi, tôi chưa xem."
+          ],
+          "correctIndex": 2,
+          "script": "先週メールでお送りした出張の報告書課長、ご覧いただけましたか。\n1. 見てもらえたんだ、よかったね。\n2. 急いでるから、早めに出して。\n3. ごめん、まだ見てないんだ。",
+          "scriptVi": "Báo cáo công tác tôi gửi mail tuần trước, trưởng phòng xem chưa ạ?\n1. Được xem rồi à, tốt quá.\n2. Đang gấp, nộp sớm giúp tôi.\n3. Xin lỗi, tôi chưa xem.",
+          "tip": "Câu hỏi: Báo cáo công tác tôi gửi mail tuần trước, trưởng phòng xem chưa ạ?\n1) Được xem rồi à, tốt quá.\n2) Đang gấp, nộp sớm giúp tôi.\n3) Xin lỗi, tôi chưa xem. ✅\n→ Được hỏi đã xem báo cáo chưa → trả lời trực tiếp bằng câu XIN LỖI vì chưa xem."
+        },
+        {
+          "qnum": 5,
+          "options": [
+            "本当、偶然ですね。",
+            "わざわざ会いに来てくれたんですか。",
+            "あ、じゃ、ここじゃないところにしましょう。"
+          ],
+          "optionsVi": [
+            "Đúng là tình cờ thật nhỉ.",
+            "Anh cất công đến gặp tôi à?",
+            "À, vậy chọn chỗ khác đi."
+          ],
+          "correctIndex": 0,
+          "script": "あ、佐藤さん、こんにちは、こんなところでお会いするとは。\n1. 本当、偶然ですね。\n2. わざわざ会いに来てくれたんですか。\n3. あ、じゃ、ここじゃないところにしましょう。",
+          "scriptVi": "À, Satō, chào anh, không ngờ lại gặp ở đây.\n1. Đúng là tình cờ thật nhỉ.\n2. Anh cất công đến gặp tôi à?\n3. À, vậy chọn chỗ khác đi.",
+          "tip": "Câu hỏi: À, Satō, chào anh, không ngờ lại gặp ở đây.\n1) Đúng là tình cờ thật nhỉ. ✅\n2) Anh cất công đến gặp tôi à?\n3) À, vậy chọn chỗ khác đi.\n→ Tình cờ gặp mặt → phản hồi tự nhiên là đồng tình 'đúng là tình cờ thật'."
+        },
+        {
+          "qnum": 6,
+          "options": [
+            "森先輩はアドバイスしてくれたよ。",
+            "本当、森先輩に感謝しなくちゃね。",
+            "だから成功しなかったんだね。"
+          ],
+          "optionsVi": [
+            "Tiền bối Mori đã cho lời khuyên đó.",
+            "Đúng vậy, phải cảm ơn tiền bối Mori mới được.",
+            "Vậy nên mới không thành công nhỉ."
+          ],
+          "correctIndex": 1,
+          "script": "文化祭での僕たちのイベント、森先輩のアドバイスなしには成功しなかったよね。\n1. 森先輩はアドバイスしてくれたよ。\n2. 本当、森先輩に感謝しなくちゃね。\n3. だから成功しなかったんだね。",
+          "scriptVi": "Sự kiện của tụi mình ở lễ hội văn hóa, nếu không có lời khuyên của tiền bối Mori thì đâu thành công được nhỉ.\n1. Tiền bối Mori đã cho lời khuyên đó.\n2. Đúng vậy, phải cảm ơn tiền bối Mori mới được.\n3. Vậy nên mới không thành công nhỉ.",
+          "tip": "Câu hỏi: Sự kiện của tụi mình ở lễ hội văn hóa, nếu không có lời khuyên của tiền bối Mori thì đâu thành công được nhỉ.\n1) Tiền bối Mori đã cho lời khuyên đó.\n2) Đúng vậy, phải cảm ơn tiền bối Mori mới được. ✅\n3) Vậy nên mới không thành công nhỉ.\n→ Khẳng định công lao tiền bối → đồng tình bằng cách nhắc phải BIẾT ƠN."
+        },
+        {
+          "qnum": 7,
+          "options": [
+            "ああ、部長、厳しいですね。",
+            "え、部長が褒めてくれたんですか。",
+            "曖昧だったのはどこですか"
+          ],
+          "optionsVi": [
+            "À, trưởng phòng khó tính nhỉ.",
+            "Hả, trưởng phòng khen tôi thật à?",
+            "Chỗ nào mơ hồ vậy ạ?"
+          ],
+          "correctIndex": 1,
+          "script": "村田さん、部長が、この前の村田さんのプレゼン見て、大したもんだって言ってたよ。\n1. ああ、部長、厳しいですね。\n2. え、部長が褒めてくれたんですか。\n3. 曖昧だったのはどこですか",
+          "scriptVi": "Murata, trưởng phòng xem bài thuyết trình của cậu hôm trước, khen là 'giỏi thật đấy'.\n1. À, trưởng phòng khó tính nhỉ.\n2. Hả, trưởng phòng khen tôi thật à?\n3. Chỗ nào mơ hồ vậy ạ?",
+          "tip": "Câu hỏi: Murata, trưởng phòng xem bài thuyết trình của cậu hôm trước, khen là 'giỏi thật đấy'.\n1) À, trưởng phòng khó tính nhỉ.\n2) Hả, trưởng phòng khen tôi thật à? ✅\n3) Chỗ nào mơ hồ vậy ạ?\n→ Được truyền đạt lời khen từ cấp trên → phản ứng tự nhiên là ngạc nhiên vui mừng."
+        },
+        {
+          "qnum": 8,
+          "options": [
+            "小野さん、どうかされたんですか。",
+            "小野さんと一緒に行けばいいんですね。",
+            "小野さん、どなたと代わるんですか"
+          ],
+          "optionsVi": [
+            "Ono có chuyện gì vậy ạ?",
+            "Vậy tôi đi cùng Ono đúng không ạ?",
+            "Ono đổi với ai vậy ạ?"
+          ],
+          "correctIndex": 0,
+          "script": "急なんだけど、明後日の出張、小野さんの代わりに行ってくれる?\n1. 小野さん、どうかされたんですか。\n2. 小野さんと一緒に行けばいいんですね。\n3. 小野さん、どなたと代わるんですか",
+          "scriptVi": "Việc gấp quá, chuyến công tác ngày kia, đi thay Ono được không?\n1. Ono có chuyện gì vậy ạ?\n2. Vậy tôi đi cùng Ono đúng không ạ?\n3. Ono đổi với ai vậy ạ?",
+          "tip": "Câu hỏi: Việc gấp quá, chuyến công tác ngày kia, đi thay Ono được không?\n1) Ono có chuyện gì vậy ạ? ✅\n2) Vậy tôi đi cùng Ono đúng không ạ?\n3) Ono đổi với ai vậy ạ?\n→ Được nhờ đi thay đột xuất → phản ứng tự nhiên là hỏi LÝ DO người kia không đi được."
+        },
+        {
+          "qnum": 9,
+          "options": [
+            "それは心配ですね",
+            "そうですか。よかったですね。",
+            "まだ諦めちゃだめですよ。"
+          ],
+          "optionsVi": [
+            "Vậy thì đáng lo thật đấy.",
+            "Vậy à. Tốt quá rồi.",
+            "Đừng bỏ cuộc vội chứ."
+          ],
+          "correctIndex": 1,
+          "script": "先生、希望の会社に就職できるかどうか不安でしたが、なんとかなりました。\n1. それは心配ですね\n2. そうですか。よかったですね。\n3. まだ諦めちゃだめですよ。",
+          "scriptVi": "Thầy ơi, em từng lo lắng không biết có xin được vào công ty mong muốn không, nhưng cuối cùng cũng ổn rồi ạ.\n1. Vậy thì đáng lo thật đấy.\n2. Vậy à. Tốt quá rồi.\n3. Đừng bỏ cuộc vội chứ.",
+          "tip": "Câu hỏi: Thầy ơi, em từng lo lắng không biết có xin được vào công ty mong muốn không, nhưng cuối cùng cũng ổn rồi ạ.\n1) Vậy thì đáng lo thật đấy.\n2) Vậy à. Tốt quá rồi. ✅\n3) Đừng bỏ cuộc vội chứ.\n→ Báo tin đã thành công (quá khứ, chuyện đã xong) → phản hồi hợp lý là CHÚC MỪNG."
+        },
+        {
+          "qnum": 10,
+          "options": [
+            "何か、ご意見いただければ嬉しいです。",
+            "すぐに書き直してお持ちします。",
+            "ぜひご覧になってみてください。"
+          ],
+          "optionsVi": [
+            "Nếu được góp ý gì thì tôi rất vui ạ.",
+            "Tôi sẽ sửa lại và mang đến ngay ạ.",
+            "Xin hãy xem thử ạ."
+          ],
+          "correctIndex": 0,
+          "script": "君の企画書、興味深く読ませてもらったよ。\n1. 何か、ご意見いただければ嬉しいです。\n2. すぐに書き直してお持ちします。\n3. ぜひご覧になってみてください。",
+          "scriptVi": "Bản kế hoạch của cậu, tôi đọc thấy thú vị đấy.\n1. Nếu được góp ý gì thì tôi rất vui ạ.\n2. Tôi sẽ sửa lại và mang đến ngay ạ.\n3. Xin hãy xem thử ạ.",
+          "tip": "Câu hỏi: Bản kế hoạch của cậu, tôi đọc thấy thú vị đấy.\n1) Nếu được góp ý gì thì tôi rất vui ạ. ✅\n2) Tôi sẽ sửa lại và mang đến ngay ạ.\n3) Xin hãy xem thử ạ.\n→ Được khen bản kế hoạch → phản hồi hợp lý là mời góp ý thêm, thể hiện cầu thị."
+        },
+        {
+          "qnum": 11,
+          "options": [
+            "すみません、ただいま聞いてまいります。",
+            "すみません、すぐご注文をお伺いいたします。",
+            "すみません、もう結構です。"
+          ],
+          "optionsVi": [
+            "Xin lỗi, tôi đi hỏi ngay đây ạ.",
+            "Xin lỗi, tôi sẽ nhận order ngay ạ.",
+            "Xin lỗi, không cần nữa ạ."
+          ],
+          "correctIndex": 0,
+          "script": "あのう、すいません。サンドイッチ頼んでから、だいぶ経ってるんですけど。\n1. すみません、ただいま聞いてまいります。\n2. すみません、すぐご注文をお伺いいたします。\n3. すみません、もう結構です。",
+          "scriptVi": "À, xin lỗi. Tôi đặt sandwich lâu rồi mà chưa thấy.\n1. Xin lỗi, tôi đi hỏi ngay đây ạ.\n2. Xin lỗi, tôi sẽ nhận order ngay ạ.\n3. Xin lỗi, không cần nữa ạ.",
+          "tip": "Câu hỏi: À, xin lỗi. Tôi đặt sandwich lâu rồi mà chưa thấy.\n1) Xin lỗi, tôi đi hỏi ngay đây ạ. ✅\n2) Xin lỗi, tôi sẽ nhận order ngay ạ.\n3) Xin lỗi, không cần nữa ạ.\n→ Khách phàn nàn món ăn ra chậm → phản hồi đúng vai nhân viên là đi KIỂM TRA ngay."
+        }
+      ]
+    }
+  ]
+}

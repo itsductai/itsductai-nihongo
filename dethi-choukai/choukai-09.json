@@ -1,0 +1,206 @@
+{
+  "id": "choukai-09",
+  "title": "聴解 9 (JLPT N2 2023/07)",
+  "year": "2023/07",
+  "audioMode": "split",
+  "audioFile": null,
+  "audioFiles": {
+    "4": "聴解 9 4.m4a"
+  },
+  "mondai": [
+    {
+      "number": 4,
+      "name": "即時応答",
+      "instruction": "Nghe câu nói ngắn, chọn phản hồi phù hợp nhất trong 3 lựa chọn (chỉ đọc qua audio, không in sẵn).",
+      "questions": [
+        {
+          "qnum": 1,
+          "options": [
+            "このお皿、完璧ってわけだね",
+            "そう、色も悪くないと思うけどね",
+            "君が好きな色だよね。"
+          ],
+          "optionsVi": [
+            "Vậy là cái đĩa này hoàn hảo nhỉ.",
+            "Ừ, tớ thấy màu cũng không tệ đâu.",
+            "Màu cậu thích mà nhỉ."
+          ],
+          "correctIndex": 1,
+          "script": "女：このお皿、色はともかく、使いやすいんだよね。\n1. このお皿、完璧ってわけだね\n2. そう、色も悪くないと思うけどね\n3. 君が好きな色だよね。",
+          "scriptVi": "Nữ: Cái đĩa này, màu sắc thì tạm gác qua, nhưng dùng tiện thật đó.\n1. Vậy là cái đĩa này hoàn hảo nhỉ.\n2. Ừ, tớ thấy màu cũng không tệ đâu.\n3. Màu cậu thích mà nhỉ.",
+          "tip": "Câu hỏi: Nữ: Cái đĩa này, màu sắc thì tạm gác qua, nhưng dùng tiện thật đó.\n1) Vậy là cái đĩa này hoàn hảo nhỉ.\n2) Ừ, tớ thấy màu cũng không tệ đâu. ✅\n3) Màu cậu thích mà nhỉ.\n→ Nhận xét màu KHÔNG QUAN TRỌNG bằng độ tiện dụng → phản hồi hợp lý là bênh vực thêm về màu 'cũng không tệ đâu'."
+        },
+        {
+          "qnum": 2,
+          "options": [
+            "諦めるしかないんですか",
+            "はい、もう一度見直してみます",
+            "直しても無駄だとおっしゃるんですか?"
+          ],
+          "optionsVi": [
+            "Chỉ còn cách bỏ cuộc thôi sao ạ?",
+            "Vâng, em sẽ xem xét lại lần nữa ạ.",
+            "Ý anh là sửa cũng vô ích ạ?"
+          ],
+          "correctIndex": 1,
+          "script": "男：ジュンさん、ジュンさんの企画、予算の面で部長にひどく反対されたけど、諦めることはないよ。\n1. 諦めるしかないんですか\n2. はい、もう一度見直してみます\n3. 直しても無駄だとおっしゃるんですか?",
+          "scriptVi": "Nam: Jun, đề án của cậu bị trưởng phòng phản đối gay gắt về mặt ngân sách, nhưng đừng bỏ cuộc nhé.\n1. Chỉ còn cách bỏ cuộc thôi sao ạ?\n2. Vâng, em sẽ xem xét lại lần nữa ạ.\n3. Ý anh là sửa cũng vô ích ạ?",
+          "tip": "Câu hỏi: Nam: Jun, đề án của cậu bị trưởng phòng phản đối gay gắt về mặt ngân sách, nhưng đừng bỏ cuộc nhé.\n1) Chỉ còn cách bỏ cuộc thôi sao ạ?\n2) Vâng, em sẽ xem xét lại lần nữa ạ. ✅\n3) Ý anh là sửa cũng vô ích ạ?\n→ Được động viên đừng bỏ cuộc → phản hồi hợp lý là quyết tâm XEM LẠI đề án."
+        },
+        {
+          "qnum": 3,
+          "options": [
+            "野菜を摂りたくないんだね",
+            "野菜十分足りてていいね",
+            "気をつけて野菜を食べないとね"
+          ],
+          "optionsVi": [
+            "Vậy là không muốn ăn rau nhỉ.",
+            "Đủ rau rồi thì tốt quá.",
+            "Phải chú ý ăn rau vào chứ."
+          ],
+          "correctIndex": 2,
+          "script": "男：一人暮らしを始めてから野菜が不足しがちなんだよね。\n1. 野菜を摂りたくないんだね\n2. 野菜十分足りてていいね\n3. 気をつけて野菜を食べないとね",
+          "scriptVi": "Nam: Từ khi sống một mình, tôi hay thiếu rau quá.\n1. Vậy là không muốn ăn rau nhỉ.\n2. Đủ rau rồi thì tốt quá.\n3. Phải chú ý ăn rau vào chứ.",
+          "tip": "Câu hỏi: Nam: Từ khi sống một mình, tôi hay thiếu rau quá.\n1) Vậy là không muốn ăn rau nhỉ.\n2) Đủ rau rồi thì tốt quá.\n3) Phải chú ý ăn rau vào chứ. ✅\n→ Than phiền thiếu rau → phản hồi hợp lý là khuyên NHỚ ĂN rau."
+        },
+        {
+          "qnum": 4,
+          "options": [
+            "ずっと人気あるよね",
+            "確かにあの人、よくテレビで見るね",
+            "あぁ、そんな人いたね。"
+          ],
+          "optionsVi": [
+            "Vẫn nổi tiếng mãi mà nhỉ.",
+            "Đúng là hay thấy người đó trên TV nhỉ.",
+            "À, có người đó à."
+          ],
+          "correctIndex": 2,
+          "script": "男：昨日テレビで歌手の小林ゆうとを見たけど、忘れられつつあるよね。\n1. ずっと人気あるよね\n2. 確かにあの人、よくテレビで見るね\n3. あぁ、そんな人いたね。",
+          "scriptVi": "Nam: Hôm qua thấy ca sĩ Kobayashi Yuto trên TV, dần bị quên lãng rồi nhỉ.\n1. Vẫn nổi tiếng mãi mà nhỉ.\n2. Đúng là hay thấy người đó trên TV nhỉ.\n3. À, có người đó à.",
+          "tip": "Câu hỏi: Nam: Hôm qua thấy ca sĩ Kobayashi Yuto trên TV, dần bị quên lãng rồi nhỉ.\n1) Vẫn nổi tiếng mãi mà nhỉ.\n2) Đúng là hay thấy người đó trên TV nhỉ.\n3) À, có người đó à. ✅\n→ Nhận xét ca sĩ đang BỊ QUÊN LÃNG → đồng tình xác nhận 'à, có người đó à' (tỏ ra không nhớ rõ)."
+        },
+        {
+          "qnum": 5,
+          "options": [
+            "ちょっと後悔してるんだ",
+            "もっと早く辞めるべきだったってこと?",
+            "辞めてよかったよね"
+          ],
+          "optionsVi": [
+            "Tớ cũng hơi hối hận rồi.",
+            "Ý là nên nghỉ sớm hơn à?",
+            "Nghỉ vậy là đúng rồi nhỉ."
+          ],
+          "correctIndex": 0,
+          "script": "女：仕事、簡単に辞めるべきじゃなかったんじゃない?\n1. ちょっと後悔してるんだ\n2. もっと早く辞めるべきだったってこと?\n3. 辞めてよかったよね",
+          "scriptVi": "Nữ: Cậu không nên nghỉ việc dễ dàng như vậy chứ nhỉ?\n1. Tớ cũng hơi hối hận rồi.\n2. Ý là nên nghỉ sớm hơn à?\n3. Nghỉ vậy là đúng rồi nhỉ.",
+          "tip": "Câu hỏi: Nữ: Cậu không nên nghỉ việc dễ dàng như vậy chứ nhỉ?\n1) Tớ cũng hơi hối hận rồi. ✅\n2) Ý là nên nghỉ sớm hơn à?\n3) Nghỉ vậy là đúng rồi nhỉ.\n→ Bị chê trách quyết định nghỉ việc → thừa nhận HỐI HẬN."
+        },
+        {
+          "qnum": 6,
+          "options": [
+            "お天気、よくなくて残念でしたね",
+            "よく晴れて気持ちよかったですね",
+            "期待通りの天気でしたね"
+          ],
+          "optionsVi": [
+            "Thời tiết không tốt, tiếc thật nhỉ.",
+            "Trời nắng đẹp dễ chịu thật nhỉ.",
+            "Đúng như mong đợi về thời tiết nhỉ."
+          ],
+          "correctIndex": 0,
+          "script": "女：この間の花見、あいにくのお天気でしたね。\n1. お天気、よくなくて残念でしたね\n2. よく晴れて気持ちよかったですね\n3. 期待通りの天気でしたね",
+          "scriptVi": "Nữ: Hôm ngắm hoa hôm trước, thời tiết không may nhỉ.\n1. Thời tiết không tốt, tiếc thật nhỉ.\n2. Trời nắng đẹp dễ chịu thật nhỉ.\n3. Đúng như mong đợi về thời tiết nhỉ.",
+          "tip": "Câu hỏi: Nữ: Hôm ngắm hoa hôm trước, thời tiết không may nhỉ.\n1) Thời tiết không tốt, tiếc thật nhỉ. ✅\n2) Trời nắng đẹp dễ chịu thật nhỉ.\n3) Đúng như mong đợi về thời tiết nhỉ.\n→ Nhận xét thời tiết XUI XẺO → đồng tình tiếc nuối."
+        },
+        {
+          "qnum": 7,
+          "options": [
+            "上司にいろんなことが話せていいね",
+            "上司に思ったことが言えない環境なの?",
+            "上司が意見をよく聞いてくれるんだ"
+          ],
+          "optionsVi": [
+            "Nói được nhiều chuyện với sếp thì tốt nhỉ.",
+            "Là môi trường không nói được suy nghĩ với sếp à?",
+            "Sếp hay lắng nghe ý kiến nhỉ."
+          ],
+          "correctIndex": 1,
+          "script": "男：僕が勤めている会社、上司に意見を言いやすかったらいいのに。\n1. 上司にいろんなことが話せていいね\n2. 上司に思ったことが言えない環境なの?\n3. 上司が意見をよく聞いてくれるんだ",
+          "scriptVi": "Nam: Công ty tôi làm, giá mà dễ nói ý kiến với sếp hơn thì tốt.\n1. Nói được nhiều chuyện với sếp thì tốt nhỉ.\n2. Là môi trường không nói được suy nghĩ với sếp à?\n3. Sếp hay lắng nghe ý kiến nhỉ.",
+          "tip": "Câu hỏi: Nam: Công ty tôi làm, giá mà dễ nói ý kiến với sếp hơn thì tốt.\n1) Nói được nhiều chuyện với sếp thì tốt nhỉ.\n2) Là môi trường không nói được suy nghĩ với sếp à? ✅\n3) Sếp hay lắng nghe ý kiến nhỉ.\n→ Ước 'giá mà dễ nói hơn' = HIỆN TẠI khó nói → phản hồi xác nhận đúng ý 'môi trường khó nói với sếp'."
+        },
+        {
+          "qnum": 8,
+          "options": [
+            "入院しなくていいんですね",
+            "入院するんですか、大変ですね",
+            "入院するかどうかわからないんですね"
+          ],
+          "optionsVi": [
+            "Vậy là không cần nhập viện nhỉ.",
+            "Phải nhập viện à, vất vả nhỉ.",
+            "Chưa biết có nhập viện hay không à."
+          ],
+          "correctIndex": 0,
+          "script": "女：山田課長。佐藤さん転んで骨折したけど、入院せずに済むそうです。\n1. 入院しなくていいんですね\n2. 入院するんですか、大変ですね\n3. 入院するかどうかわからないんですね",
+          "scriptVi": "Nữ: Trưởng phòng Yamada, Satō bị té gãy xương nhưng nghe nói không cần nhập viện ạ.\n1. Vậy là không cần nhập viện nhỉ.\n2. Phải nhập viện à, vất vả nhỉ.\n3. Chưa biết có nhập viện hay không à.",
+          "tip": "Câu hỏi: Nữ: Trưởng phòng Yamada, Satō bị té gãy xương nhưng nghe nói không cần nhập viện ạ.\n1) Vậy là không cần nhập viện nhỉ. ✅\n2) Phải nhập viện à, vất vả nhỉ.\n3) Chưa biết có nhập viện hay không à.\n→ Báo tin KHÔNG CẦN nhập viện → xác nhận lại đúng ý đó."
+        },
+        {
+          "qnum": 9,
+          "options": [
+            "体に悪いって知らなかったの?",
+            "わかっていてもやめられないことってあるよ",
+            "健康に良くないから我慢しているんだね"
+          ],
+          "optionsVi": [
+            "Không biết là có hại à?",
+            "Có những thứ biết rồi vẫn không bỏ được mà.",
+            "Vì không tốt cho sức khỏe nên đang cố nhịn nhỉ."
+          ],
+          "correctIndex": 1,
+          "script": "男：体に悪いと知りつつ、夜中にお菓子食べるのをやめられないんだ。\n1. 体に悪いって知らなかったの?\n2. わかっていてもやめられないことってあるよ\n3. 健康に良くないから我慢しているんだね",
+          "scriptVi": "Nam: Biết là có hại cho sức khỏe mà vẫn không bỏ được thói ăn vặt khuya.\n1. Không biết là có hại à?\n2. Có những thứ biết rồi vẫn không bỏ được mà.\n3. Vì không tốt cho sức khỏe nên đang cố nhịn nhỉ.",
+          "tip": "Câu hỏi: Nam: Biết là có hại cho sức khỏe mà vẫn không bỏ được thói ăn vặt khuya.\n1) Không biết là có hại à?\n2) Có những thứ biết rồi vẫn không bỏ được mà. ✅\n3) Vì không tốt cho sức khỏe nên đang cố nhịn nhỉ.\n→ Thừa nhận BIẾT nhưng vẫn không bỏ được → đồng cảm 'có những thứ biết mà vẫn không bỏ được'."
+        },
+        {
+          "qnum": 10,
+          "options": [
+            "もっとたくさん来ると思ってましたよね",
+            "私たちの予想通りでしたね",
+            "思っていたより多かったですね"
+          ],
+          "optionsVi": [
+            "Nghĩ là sẽ đến nhiều hơn nữa nhỉ.",
+            "Đúng như dự đoán của chúng ta nhỉ.",
+            "Đông hơn cả những gì đã nghĩ nhỉ."
+          ],
+          "correctIndex": 2,
+          "script": "女：昨日のイベント、予想に反してたくさんの人が来たね。\n1. もっとたくさん来ると思ってましたよね\n2. 私たちの予想通りでしたね\n3. 思っていたより多かったですね",
+          "scriptVi": "Nữ: Sự kiện hôm qua, trái với dự đoán lại có rất đông người đến nhỉ.\n1. Nghĩ là sẽ đến nhiều hơn nữa nhỉ.\n2. Đúng như dự đoán của chúng ta nhỉ.\n3. Đông hơn cả những gì đã nghĩ nhỉ.",
+          "tip": "Câu hỏi: Nữ: Sự kiện hôm qua, trái với dự đoán lại có rất đông người đến nhỉ.\n1) Nghĩ là sẽ đến nhiều hơn nữa nhỉ.\n2) Đúng như dự đoán của chúng ta nhỉ.\n3) Đông hơn cả những gì đã nghĩ nhỉ. ✅\n→ 'Trái dự đoán' (đông hơn nghĩ) → đồng tình xác nhận 'đông hơn cả những gì đã nghĩ'."
+        },
+        {
+          "qnum": 11,
+          "options": [
+            "大人でもそんなに難しいの?",
+            "子供にとって易しいの?",
+            "大人なら簡単に解けるの?"
+          ],
+          "optionsVi": [
+            "Người lớn mà cũng khó vậy à?",
+            "Với trẻ em thì dễ à?",
+            "Người lớn thì giải dễ dàng à?"
+          ],
+          "correctIndex": 0,
+          "script": "この子供用のなぞなぞの本、やってみたんだけど半分も解ければいいほうだよ。\n1. 大人でもそんなに難しいの?\n2. 子供にとって易しいの?\n3. 大人なら簡単に解けるの?",
+          "scriptVi": "Sách đố vui cho trẻ em này, tôi thử làm mà giải được nửa đã là giỏi rồi.\n1. Người lớn mà cũng khó vậy à?\n2. Với trẻ em thì dễ à?\n3. Người lớn thì giải dễ dàng à?",
+          "tip": "Câu hỏi: Sách đố vui cho trẻ em này, tôi thử làm mà giải được nửa đã là giỏi rồi.\n1) Người lớn mà cũng khó vậy à? ✅\n2) Với trẻ em thì dễ à?\n3) Người lớn thì giải dễ dàng à?\n→ Người lớn thừa nhận KHÓ (dù sách cho trẻ em) → phản hồi ngạc nhiên 'người lớn mà cũng khó vậy à'."
+        }
+      ]
+    }
+  ]
+}

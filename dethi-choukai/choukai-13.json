@@ -1,0 +1,206 @@
+{
+  "id": "choukai-13",
+  "title": "聴解 13 (JLPT N2 2022/12)",
+  "year": "2022/12",
+  "audioMode": "split",
+  "audioFile": null,
+  "audioFiles": {
+    "4": "聴解 13 4.mp3"
+  },
+  "mondai": [
+    {
+      "number": 4,
+      "name": "即時応答",
+      "instruction": "Nghe câu nói ngắn, chọn phản hồi phù hợp nhất trong 3 lựa chọn (chỉ đọc qua audio, không in sẵn).",
+      "questions": [
+        {
+          "qnum": 1,
+          "options": [
+            "本当によく会うよね。",
+            "久しぶりだね。元気?",
+            "じゃあ、卒業式の日に会おうね。"
+          ],
+          "optionsVi": [
+            "Đúng là hay gặp thật nhỉ.",
+            "Lâu rồi không gặp. Khỏe không?",
+            "Vậy hẹn gặp ngày lễ tốt nghiệp nhé."
+          ],
+          "correctIndex": 1,
+          "script": "あれ、アンさん?アンさんに会うの、大学を卒業して以来だよね?\n1. 本当によく会うよね。\n2. 久しぶりだね。元気?\n3. じゃあ、卒業式の日に会おうね。",
+          "scriptVi": "Ơ, An à? Từ khi tốt nghiệp đại học đến giờ mới gặp lại cậu nhỉ?\n1. Đúng là hay gặp thật nhỉ.\n2. Lâu rồi không gặp. Khỏe không?\n3. Vậy hẹn gặp ngày lễ tốt nghiệp nhé.",
+          "tip": "Câu hỏi: Ơ, An à? Từ khi tốt nghiệp đại học đến giờ mới gặp lại cậu nhỉ?\n1) Đúng là hay gặp thật nhỉ.\n2) Lâu rồi không gặp. Khỏe không? ✅\n3) Vậy hẹn gặp ngày lễ tốt nghiệp nhé.\n→ Lâu ngày mới gặp lại → phản hồi tự nhiên nhất là chào hỏi 'lâu rồi không gặp, khỏe không'."
+        },
+        {
+          "qnum": 2,
+          "options": [
+            "それなら、急がなくてもいいね。",
+            "もう間に合わないってこと?",
+            "そろそろ出るよ。ありがとう。"
+          ],
+          "optionsVi": [
+            "Vậy thì không cần vội cũng được nhỉ.",
+            "Ý là không kịp nữa rồi à?",
+            "Tớ đi luôn đây. Cảm ơn cậu."
+          ],
+          "correctIndex": 2,
+          "script": "午後出張でしょ?もう行かないと、飛行機に乗り遅れるよ。\n1. それなら、急がなくてもいいね。\n2. もう間に合わないってこと?\n3. そろそろ出るよ。ありがとう。",
+          "scriptVi": "Chiều nay công tác đúng không? Không đi thì trễ máy bay đó.\n1. Vậy thì không cần vội cũng được nhỉ.\n2. Ý là không kịp nữa rồi à?\n3. Tớ đi luôn đây. Cảm ơn cậu.",
+          "tip": "Câu hỏi: Chiều nay công tác đúng không? Không đi thì trễ máy bay đó.\n1) Vậy thì không cần vội cũng được nhỉ.\n2) Ý là không kịp nữa rồi à?\n3) Tớ đi luôn đây. Cảm ơn cậu. ✅\n→ Được nhắc nhở giờ giấc → phản hồi hợp lý là CHUẨN BỊ ĐI NGAY + cảm ơn."
+        },
+        {
+          "qnum": 3,
+          "options": [
+            "じゃあ、受けることにしたの?",
+            "ねえ、僕に不満を言わないでよ。",
+            "断る理由ができたね。"
+          ],
+          "optionsVi": [
+            "Vậy là quyết định nhận lời rồi à?",
+            "Này, đừng phàn nàn với tớ chứ.",
+            "Vậy là có lý do để từ chối rồi nhỉ."
+          ],
+          "correctIndex": 0,
+          "script": "さくら電機からの提案、断るつもりだったけど、プレゼンを聞いたら文句のつけようがなかったよ。\n1. じゃあ、受けることにしたの?\n2. ねえ、僕に不満を言わないでよ。\n3. 断る理由ができたね。",
+          "scriptVi": "Đề xuất của Sakura Denki, định từ chối nhưng nghe thuyết trình xong thì không chê vào đâu được.\n1. Vậy là quyết định nhận lời rồi à?\n2. Này, đừng phàn nàn với tớ chứ.\n3. Vậy là có lý do để từ chối rồi nhỉ.",
+          "tip": "Câu hỏi: Đề xuất của Sakura Denki, định từ chối nhưng nghe thuyết trình xong thì không chê vào đâu được.\n1) Vậy là quyết định nhận lời rồi à? ✅\n2) Này, đừng phàn nàn với tớ chứ.\n3) Vậy là có lý do để từ chối rồi nhỉ.\n→ 'Không chê vào đâu được' = ẤN TƯỢNG TỐT → suy ra sẽ CHẤP NHẬN đề xuất."
+        },
+        {
+          "qnum": 4,
+          "options": [
+            "負けないって信じてるんだね。",
+            "えー。もう試合終わっちゃったか。",
+            "やってみなきゃわからないでしょ。"
+          ],
+          "optionsVi": [
+            "Vậy là tin sẽ không thua nhỉ.",
+            "Ơ. Trận đấu kết thúc rồi à.",
+            "Chưa đấu thì chưa biết được đâu."
+          ],
+          "correctIndex": 2,
+          "script": "うちの高校の試合、去年の優勝校が相手か。負けるに決まってるよ。\n1. 負けないって信じてるんだね。\n2. えー。もう試合終わっちゃったか。\n3. やってみなきゃわからないでしょ。",
+          "scriptVi": "Trận đấu trường mình, đối thủ là trường vô địch năm ngoái. Chắc chắn thua thôi.\n1. Vậy là tin sẽ không thua nhỉ.\n2. Ơ. Trận đấu kết thúc rồi à.\n3. Chưa đấu thì chưa biết được đâu.",
+          "tip": "Câu hỏi: Trận đấu trường mình, đối thủ là trường vô địch năm ngoái. Chắc chắn thua thôi.\n1) Vậy là tin sẽ không thua nhỉ.\n2) Ơ. Trận đấu kết thúc rồi à.\n3) Chưa đấu thì chưa biết được đâu. ✅\n→ Bi quan khẳng định sẽ thua → phản bác động viên 'chưa thi thì chưa biết'."
+        },
+        {
+          "qnum": 5,
+          "options": [
+            "うまくいきそうなんだね。",
+            "大変かもしれないけど、頑張って。",
+            "少しは心配したら?"
+          ],
+          "optionsVi": [
+            "Có vẻ suôn sẻ nhỉ.",
+            "Có thể sẽ vất vả nhưng cố lên nhé.",
+            "Cũng nên lo lắng chút chứ."
+          ],
+          "correctIndex": 1,
+          "script": "今度、初めて海外勤務になるんだけど、うまくやれるか不安でしょうがないよ。\n1. うまくいきそうなんだね。\n2. 大変かもしれないけど、頑張って。\n3. 少しは心配したら?",
+          "scriptVi": "Sắp tới lần đầu công tác nước ngoài, lo không biết có làm tốt không.\n1. Có vẻ suôn sẻ nhỉ.\n2. Có thể sẽ vất vả nhưng cố lên nhé.\n3. Cũng nên lo lắng chút chứ.",
+          "tip": "Câu hỏi: Sắp tới lần đầu công tác nước ngoài, lo không biết có làm tốt không.\n1) Có vẻ suôn sẻ nhỉ.\n2) Có thể sẽ vất vả nhưng cố lên nhé. ✅\n3) Cũng nên lo lắng chút chứ.\n→ Bày tỏ LO LẮNG → phản hồi động viên 'có thể vất vả nhưng cố lên'."
+        },
+        {
+          "qnum": 6,
+          "options": [
+            "行きたかったんだけどね。",
+            "本当に参加してよかったよ。",
+            "都合が合えばね。"
+          ],
+          "optionsVi": [
+            "Tớ cũng muốn đi lắm chứ.",
+            "Đúng là tham gia thì tốt thật.",
+            "Nếu sắp xếp được thì đi."
+          ],
+          "correctIndex": 0,
+          "script": "中野さん、昨日のゼミのパーティー、中野さんも来られたらよかったのに。\n1. 行きたかったんだけどね。\n2. 本当に参加してよかったよ。\n3. 都合が合えばね。",
+          "scriptVi": "Nakano, tiệc seminar hôm qua, giá mà cậu đến được thì tốt biết mấy.\n1. Tớ cũng muốn đi lắm chứ.\n2. Đúng là tham gia thì tốt thật.\n3. Nếu sắp xếp được thì đi.",
+          "tip": "Câu hỏi: Nakano, tiệc seminar hôm qua, giá mà cậu đến được thì tốt biết mấy.\n1) Tớ cũng muốn đi lắm chứ. ✅\n2) Đúng là tham gia thì tốt thật.\n3) Nếu sắp xếp được thì đi.\n→ Tiếc nuối vì KHÔNG THAM DỰ được → đồng cảm 'cũng muốn đi lắm chứ'."
+        },
+        {
+          "qnum": 7,
+          "options": [
+            "あ、連絡があったんだね。",
+            "遅刻してばかりだよね。",
+            "森さん今まで遅れたことないからね。"
+          ],
+          "optionsVi": [
+            "À, có liên lạc rồi à.",
+            "Toàn trễ suốt ấy nhỉ.",
+            "Từ trước đến giờ Mori chưa trễ lần nào mà."
+          ],
+          "correctIndex": 2,
+          "script": "森さんまだ来ないよ。森さんに限って、まさか試合に遅刻することはないよね。\n1. あ、連絡があったんだね。\n2. 遅刻してばかりだよね。\n3. 森さん今まで遅れたことないからね。",
+          "scriptVi": "Mori vẫn chưa đến. Riêng Mori thì chắc không trễ trận đấu đâu nhỉ.\n1. À, có liên lạc rồi à.\n2. Toàn trễ suốt ấy nhỉ.\n3. Từ trước đến giờ Mori chưa trễ lần nào mà.",
+          "tip": "Câu hỏi: Mori vẫn chưa đến. Riêng Mori thì chắc không trễ trận đấu đâu nhỉ.\n1) À, có liên lạc rồi à.\n2) Toàn trễ suốt ấy nhỉ.\n3) Từ trước đến giờ Mori chưa trễ lần nào mà. ✅\n→ Khẳng định Mori KHÔNG BAO GIỜ trễ → đồng tình xác nhận."
+        },
+        {
+          "qnum": 8,
+          "options": [
+            "続行できないですもんね。",
+            "そのまま最後までやるんですね。",
+            "え?イベント中止になっちゃったんですか?"
+          ],
+          "optionsVi": [
+            "Đúng là không thể tiếp tục được nhỉ.",
+            "Vẫn làm đến hết luôn nhỉ.",
+            "Hả? Sự kiện bị hủy rồi à?"
+          ],
+          "correctIndex": 0,
+          "script": "今日のイベント、天気予報が言うように、夕立が来たら、途中で中止にせざるをえませんね。\n1. 続行できないですもんね。\n2. そのまま最後までやるんですね。\n3. え?イベント中止になっちゃったんですか?",
+          "scriptVi": "Sự kiện hôm nay, nếu đúng như dự báo có mưa rào chiều thì buộc phải hủy giữa chừng nhỉ.\n1. Đúng là không thể tiếp tục được nhỉ.\n2. Vẫn làm đến hết luôn nhỉ.\n3. Hả? Sự kiện bị hủy rồi à?",
+          "tip": "Câu hỏi: Sự kiện hôm nay, nếu đúng như dự báo có mưa rào chiều thì buộc phải hủy giữa chừng nhỉ.\n1) Đúng là không thể tiếp tục được nhỉ. ✅\n2) Vẫn làm đến hết luôn nhỉ.\n3) Hả? Sự kiện bị hủy rồi à?\n→ Xác nhận điều kiện SẼ HỦY nếu mưa → đồng tình 'đúng là không thể tiếp tục được'."
+        },
+        {
+          "qnum": 9,
+          "options": [
+            "一昨年を抜いたんですね。",
+            "過去最高なんて、すごいですね。",
+            "来年こそは、一昨年を越えたいですね。"
+          ],
+          "optionsVi": [
+            "Vậy là vượt qua năm kia rồi nhỉ.",
+            "Cao nhất từ trước đến giờ, giỏi thật.",
+            "Sang năm nhất định phải vượt năm kia."
+          ],
+          "correctIndex": 2,
+          "script": "今年度の売り上げが出たよ。過去最高だった一昨年に次いで高かったよ。\n1. 一昨年を抜いたんですね。\n2. 過去最高なんて、すごいですね。\n3. 来年こそは、一昨年を越えたいですね。",
+          "scriptVi": "Doanh thu năm nay ra rồi. Cao thứ nhì sau năm kia (năm cao nhất từ trước đến giờ).\n1. Vậy là vượt qua năm kia rồi nhỉ.\n2. Cao nhất từ trước đến giờ, giỏi thật.\n3. Sang năm nhất định phải vượt năm kia.",
+          "tip": "Câu hỏi: Doanh thu năm nay ra rồi. Cao thứ nhì sau năm kia (năm cao nhất từ trước đến giờ).\n1) Vậy là vượt qua năm kia rồi nhỉ.\n2) Cao nhất từ trước đến giờ, giỏi thật.\n3) Sang năm nhất định phải vượt năm kia. ✅\n→ 'Cao THỨ NHÌ, sau năm kia' = CHƯA VƯỢT được năm kia → phản hồi hợp lý là đặt mục tiêu 'sang năm phải vượt'."
+        },
+        {
+          "qnum": 10,
+          "options": [
+            "ちゃんと聞いてたよ。",
+            "え、どうして?何かあった?",
+            "あー、今日なら時間あるよ。"
+          ],
+          "optionsVi": [
+            "Tớ nghe kỹ hết rồi mà.",
+            "Ơ, sao vậy? Có chuyện gì à?",
+            "À, hôm nay thì có thời gian đấy."
+          ],
+          "correctIndex": 1,
+          "script": "昨日私が話したこと、やっぱり聞かなかったことにしてくれない?\n1. ちゃんと聞いてたよ。\n2. え、どうして?何かあった?\n3. あー、今日なら時間あるよ。",
+          "scriptVi": "Chuyện tôi nói hôm qua, cậu coi như chưa nghe được không?\n1. Tớ nghe kỹ hết rồi mà.\n2. Ơ, sao vậy? Có chuyện gì à?\n3. À, hôm nay thì có thời gian đấy.",
+          "tip": "Câu hỏi: Chuyện tôi nói hôm qua, cậu coi như chưa nghe được không?\n1) Tớ nghe kỹ hết rồi mà.\n2) Ơ, sao vậy? Có chuyện gì à? ✅\n3) À, hôm nay thì có thời gian đấy.\n→ Yêu cầu bất thường (coi như chưa nghe) → phản ứng tự nhiên là hỏi LÝ DO."
+        },
+        {
+          "qnum": 11,
+          "options": [
+            "そうですね。誰か呼んできます。",
+            "誰もいないんじゃ仕方ないですね。",
+            "助けてもらえてよかったですね。"
+          ],
+          "optionsVi": [
+            "Đúng vậy. Tôi đi gọi ai đó giúp.",
+            "Không có ai thì đành chịu vậy.",
+            "Được giúp đỡ thì tốt quá nhỉ."
+          ],
+          "correctIndex": 0,
+          "script": "商品の発送作業、終わりそうにないね。他の人に手伝ってもらうより他ないか。\n1. そうですね。誰か呼んできます。\n2. 誰もいないんじゃ仕方ないですね。\n3. 助けてもらえてよかったですね。",
+          "scriptVi": "Công việc gửi hàng, có vẻ không xong được. Chắc phải nhờ người khác giúp thôi.\n1. Đúng vậy. Tôi đi gọi ai đó giúp.\n2. Không có ai thì đành chịu vậy.\n3. Được giúp đỡ thì tốt quá nhỉ.",
+          "tip": "Câu hỏi: Công việc gửi hàng, có vẻ không xong được. Chắc phải nhờ người khác giúp thôi.\n1) Đúng vậy. Tôi đi gọi ai đó giúp. ✅\n2) Không có ai thì đành chịu vậy.\n3) Được giúp đỡ thì tốt quá nhỉ.\n→ Đề xuất cần NHỜ NGƯỜI KHÁC giúp → phản hồi hành động ngay 'đi gọi người giúp'."
+        }
+      ]
+    }
+  ]
+}

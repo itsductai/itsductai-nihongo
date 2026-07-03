@@ -1,17 +1,18 @@
 <!DOCTYPE html>
+<!-- deploy trigger: force redeploy sau khi đổi Pages source -->
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>N2 Vocab Lab</title>
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/theme-plus.css?v=2">
+<link rel="stylesheet" href="css/theme-plus.css?v=3">
 </head>
 <body>
 
 <div id="app">
 
-  <!-- Nút thoát chế độ phóng to, chỉ hiện khi đang ở focus modejgiug -->
+  <!-- Nút thoát chế độ phóng to, chỉ hiện khi đang ở focus mode -->
   <button id="btnExitFocus" class="exit-focus-btn hidden" title="Thoát chế độ phóng to">✕</button>
 
   <!-- ===== SIDEBAR ===== -->
@@ -441,6 +442,20 @@
     </div>
 
     <!-- ===================================================================
+         CHOUKAI MODE — Luyện riêng Mondai 4 (即時応答), chọn đề 1 phát vào thẳng
+    =================================================================== -->
+    <section class="view hidden" id="view-choukai-m4">
+      <div class="view-head">
+        <div class="choukai-m4-head-title">🎯 Luyện riêng Mondai 4 — chọn đề để bắt đầu ngay</div>
+      </div>
+      <div id="choukaiM4Empty" class="empty-state">
+        <div class="empty-icon">🎯</div>
+        <div>Chưa có đề nào có Mondai 4.</div>
+      </div>
+      <div class="choukai-m4-grid" id="choukaiM4List"></div>
+    </section>
+
+    <!-- ===================================================================
          CHOUKAI MODE — Luyện nghe (聴解) theo từng đề/mondai thật
     =================================================================== -->
     <section class="view hidden" id="view-choukai">
@@ -734,12 +749,12 @@
 <script src="js/scoring.js?v=1"></script>
 <script src="js/stats-weakness.js?v=5"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=6"></script>
+<script src="js/loader-nav.js?v=7"></script>
 <script src="js/flashcard-edit.js?v=3"></script>
 <script src="js/table-srs-typing.js?v=4"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=6"></script>
-<script src="js/choukai.js?v=8"></script>
+<script src="js/choukai.js?v=9"></script>
 <script src="js/grammar-groups.js?v=2"></script>
 <script src="js/init.js?v=11"></script>
 </body>
