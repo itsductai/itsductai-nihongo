@@ -233,11 +233,65 @@ document.addEventListener("DOMContentLoaded", async () => {
       else if (e.key === "ArrowUp") { e.preventDefault(); flashMarkResult("hard"); }
       else if (e.key === "ArrowDown") { e.preventDefault(); flipFlashCard(); }
       else if (e.key === "ArrowRight") { e.preventDefault(); flashMarkResult("remembered"); }
-    } else if (isSrsVisible && srsStageVisible) {
+      return;
+    }
+    if (isSrsVisible && srsStageVisible) {
       if (e.key === "ArrowLeft") { e.preventDefault(); rateCurrentSrsWord("again"); }
       else if (e.key === "ArrowUp") { e.preventDefault(); rateCurrentSrsWord("hard"); }
       else if (e.key === "ArrowDown") { e.preventDefault(); flipSrsCard(); }
       else if (e.key === "ArrowRight") { e.preventDefault(); rateCurrentSrsWord("easy"); }
+      return;
+    }
+
+    // ---- Phím tắt trả lời cho ĐỀ THI / NGHE / QUIZ (luyện đề bấm giờ nhanh) ----
+    // Số 1–9: chọn đáp án theo đúng vị trí đang hiện (chỉ khi đáp án còn bấm được).
+    // Enter: chốt / tiếp tục theo ngữ cảnh từng chế độ.
+    // Chỉ 1 đáp án bị bấm cho mỗi lần nhấn, không tự ý làm gì thêm.
+    function clickNthOption(containerSel, key) {
+      if (!(key >= "1" && key <= "9")) return false;
+      const opts = document.querySelectorAll(containerSel + " .quiz-opt");
+      const idx = parseInt(key, 10) - 1;
+      const btn = opts[idx];
+      if (btn && !btn.classList.contains("disabled")) { btn.click(); return true; }
+      return false;
+    }
+
+    const examView = document.getElementById("view-exam");
+    const isExamVisible = examView && !examView.classList.contains("hidden");
+    const examBodyVisible = !document.getElementById("examBody").classList.contains("hidden");
+    if (isExamVisible && examBodyVisible) {
+      if (clickNthOption("#examOptions", e.key)) { e.preventDefault(); return; }
+      if (e.key === "Enter") {
+        const cont = document.getElementById("btnExamContinue");
+        if (cont && !cont.classList.contains("hidden")) { e.preventDefault(); cont.click(); }
+      }
+      return;
+    }
+
+    const choukaiView = document.getElementById("view-choukai");
+    const isChoukaiVisible = choukaiView && !choukaiView.classList.contains("hidden");
+    const choukaiBodyVisible = !document.getElementById("choukaiBody").classList.contains("hidden");
+    if (isChoukaiVisible && choukaiBodyVisible) {
+      if (clickNthOption("#choukaiOptions", e.key)) { e.preventDefault(); return; }
+      if (e.key === "Enter") {
+        const confirmBtn = document.getElementById("btnChoukaiConfirm");
+        const contBtn = document.getElementById("btnChoukaiContinue");
+        // Ưu tiên chốt đáp án nếu nút Xác nhận đang hiện & bật; nếu không thì Tiếp tục.
+        if (confirmBtn && !confirmBtn.classList.contains("hidden") && !confirmBtn.disabled) {
+          e.preventDefault(); confirmBtn.click();
+        } else if (contBtn && contBtn.offsetParent !== null) {
+          e.preventDefault(); contBtn.click();
+        }
+      }
+      return;
+    }
+
+    const quizView = document.getElementById("view-quiz");
+    const isQuizVisible = quizView && !quizView.classList.contains("hidden");
+    const quizBodyVisible = !document.getElementById("quizBody").classList.contains("hidden");
+    if (isQuizVisible && quizBodyVisible) {
+      if (clickNthOption("#quizOptions", e.key)) { e.preventDefault(); }
+      return;
     }
   });
 
@@ -504,6 +558,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     const el = document.getElementById("choukaiAudioEl");
     if (el.src) { el.currentTime = 0; el.play().catch(() => {}); }
   });
+  // Tua nhanh 5s/10s — thay cho kéo thanh thủ công, tiện khi cần nghe lại đúng
+  // đoạn ngắn (đặc biệt hữu ích ở Mondai 3/4 khi lỡ mất 1 câu ngắn).
+  bindChoukaiSeekButtons("choukaiAudioEl", "btnChoukaiSeekBack10", -10);
+  bindChoukaiSeekButtons("choukaiAudioEl", "btnChoukaiSeekBack5", -5);
+  bindChoukaiSeekButtons("choukaiAudioEl", "btnChoukaiSeekFwd5", 5);
+  bindChoukaiSeekButtons("choukaiAudioEl", "btnChoukaiSeekFwd10", 10);
   document.getElementById("choukaiHintToggle").addEventListener("change", (e) => {
     App.choukaiHintEnabled = e.target.checked;
     renderChoukaiQuestion();
@@ -544,6 +604,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     const el = document.getElementById("choukaiShadowAudioEl");
     if (el.src) { el.currentTime = 0; el.play().catch(() => {}); }
   });
+  bindChoukaiSeekButtons("choukaiShadowAudioEl", "btnChoukaiShadowSeekBack10", -10);
+  bindChoukaiSeekButtons("choukaiShadowAudioEl", "btnChoukaiShadowSeekBack5", -5);
+  bindChoukaiSeekButtons("choukaiShadowAudioEl", "btnChoukaiShadowSeekFwd5", 5);
+  bindChoukaiSeekButtons("choukaiShadowAudioEl", "btnChoukaiShadowSeekFwd10", 10);
 
   // ----- Deck picker -----
   document.getElementById("deckPicker").addEventListener("change", (e) => {

@@ -32,6 +32,20 @@ function saveChoukaiDetailSnapshot(testId, answers) {
 
 // Mỗi câu trả lời được định danh bằng key duy nhất trong 1 đề:
 // "m{mondaiNumber}q{qnum}" hoặc thêm "s{subIndex}" cho câu có 2 câu hỏi con (Mondai 5).
+// Tua audio nhanh ±N giây cho 1 nút, dùng chung cho player chính (choukaiAudioEl)
+// và player "Luyện nghe câu" (choukaiShadowAudioEl) — clamp trong [0, duration]
+// để không tua âm hoặc vượt quá cuối file.
+function bindChoukaiSeekButtons(audioElId, btnId, deltaSeconds) {
+  const btn = document.getElementById(btnId);
+  if (!btn) return;
+  btn.addEventListener("click", () => {
+    const el = document.getElementById(audioElId);
+    if (!el.src) return;
+    const duration = isFinite(el.duration) ? el.duration : Infinity;
+    el.currentTime = Math.min(Math.max(el.currentTime + deltaSeconds, 0), duration);
+  });
+}
+
 function choukaiKeyFor(mNum, qnum, subIndex) {
   return (subIndex === undefined || subIndex === null) ? ("m" + mNum + "q" + qnum) : ("m" + mNum + "q" + qnum + "s" + subIndex);
 }

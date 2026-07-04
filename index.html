@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>N2 Vocab Lab</title>
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/theme-plus.css?v=3">
+<link rel="stylesheet" href="css/theme-plus.css?v=4">
 </head>
 <body>
 
@@ -490,6 +490,12 @@
           <audio id="choukaiAudioEl" preload="metadata" controls></audio>
           <div class="choukai-audio-controls-row">
             <button class="choukai-play-btn" id="btnChoukaiPlay">▶ Phát từ đầu</button>
+            <div class="choukai-seek-group">
+              <button class="choukai-seek-btn" id="btnChoukaiSeekBack10" title="Tua lùi 10 giây">⏪10s</button>
+              <button class="choukai-seek-btn" id="btnChoukaiSeekBack5" title="Tua lùi 5 giây">⏪5s</button>
+              <button class="choukai-seek-btn" id="btnChoukaiSeekFwd5" title="Tua tới 5 giây">5s⏩</button>
+              <button class="choukai-seek-btn" id="btnChoukaiSeekFwd10" title="Tua tới 10 giây">10s⏩</button>
+            </div>
             <span class="choukai-audio-hint" id="choukaiAudioHint"></span>
           </div>
         </div>
@@ -596,6 +602,12 @@
           <audio id="choukaiShadowAudioEl" preload="metadata" controls></audio>
           <div class="choukai-audio-controls-row">
             <button class="choukai-play-btn" id="btnChoukaiShadowPlay">▶ Phát từ đầu</button>
+            <div class="choukai-seek-group">
+              <button class="choukai-seek-btn" id="btnChoukaiShadowSeekBack10" title="Tua lùi 10 giây">⏪10s</button>
+              <button class="choukai-seek-btn" id="btnChoukaiShadowSeekBack5" title="Tua lùi 5 giây">⏪5s</button>
+              <button class="choukai-seek-btn" id="btnChoukaiShadowSeekFwd5" title="Tua tới 5 giây">5s⏩</button>
+              <button class="choukai-seek-btn" id="btnChoukaiShadowSeekFwd10" title="Tua tới 10 giây">10s⏩</button>
+            </div>
           </div>
         </div>
         <div class="choukai-shadow-lines" id="choukaiShadowLines"></div>
@@ -754,8 +766,8 @@
 <script src="js/table-srs-typing.js?v=4"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=6"></script>
-<script src="js/choukai.js?v=9"></script>
+<script src="js/choukai.js?v=10"></script>
 <script src="js/grammar-groups.js?v=2"></script>
-<script src="js/init.js?v=11"></script>
+<script src="js/init.js?v=12"></script>
 </body>
 </html>

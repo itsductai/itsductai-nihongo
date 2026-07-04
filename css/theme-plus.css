@@ -330,7 +330,26 @@ input[type="text"]:focus, textarea:focus {
   }
 }
 
-/* ---- 18. Luyện riêng Mondai 4 — grid chọn đề nhanh ---- */
+/* ---- 17. Nút tua nhanh ±5s/±10s cho audio nghe ---- */
+/* Nhóm nút tua nhanh ±5s/±10s — thay thao tác kéo thanh audio thủ công */
+.choukai-seek-group { display: flex; gap: 6px; }
+.choukai-seek-btn {
+  font-size: 12px; font-weight: 700; color: var(--text-1);
+  padding: 6px 10px; border-radius: var(--radius-sm);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: background .14s, border-color .14s, color .14s, transform .1s;
+}
+.choukai-seek-btn:hover {
+  background: var(--accent-soft); color: #cddaff;
+  border-color: rgba(107,147,255,0.4); transform: translateY(-1px);
+}
+.choukai-seek-btn:active { transform: translateY(0); }
+@media (max-width: 480px) {
+  .choukai-seek-group { flex-wrap: wrap; }
+  .choukai-seek-btn { flex: 1 1 auto; text-align: center; }
+}
 .choukai-m4-head-title { font-size: 15px; font-weight: 700; color: var(--text-0); padding: 4px 2px; }
 .choukai-m4-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -358,7 +377,7 @@ input[type="text"]:focus, textarea:focus {
 }
 .choukai-m4-status.is-new { background: rgba(107,147,255,0.14); color: #a9c0ff; border: 1px solid rgba(107,147,255,0.3); }
 .choukai-m4-status.is-done { background: rgba(72,201,140,0.14); color: var(--good); border: 1px solid rgba(72,201,140,0.32); }
-/* ---- 17. Mobile: sidebar & countdown gọn lại ---- */
+/* ---- 19. Mobile: sidebar & countdown gọn lại ---- */
 @media (max-width: 820px) {
   .exam-countdown { margin: 4px 6px 10px; }
   .exam-countdown-days { font-size: 30px; }
