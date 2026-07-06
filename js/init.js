@@ -197,6 +197,15 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.querySelectorAll("#flashRateRow [data-flash-result]").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
+      // Kích hoạt sparkle bằng class do JS thêm/xóa — KHÔNG dùng :active vì
+      // :active biến mất ngay khi thả tay/chuột, cắt đứt animation 0.6s giữa
+      // chừng theo đúng cơ chế CSS (animation revert về none khi rule hết áp dụng).
+      if (btn.dataset.flashResult === "remembered") {
+        btn.classList.remove("is-sparkling");
+        void btn.offsetWidth; // ép reflow để animation restart được nếu bấm liên tiếp nhanh
+        btn.classList.add("is-sparkling");
+        setTimeout(() => btn.classList.remove("is-sparkling"), 650);
+      }
       flashMarkResult(btn.dataset.flashResult);
     });
   });
