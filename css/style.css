@@ -447,8 +447,10 @@ rt {
   content: "✦"; position: absolute; top: 50%; left: 50%; font-size: 12px;
   color: var(--gold, #ffd15c); opacity: 0; pointer-events: none;
 }
-.rate-remember:active::before { animation: sparkleFly1 0.6s ease-out; }
-.rate-remember:active::after { animation: sparkleFly2 0.6s ease-out; }
+.rate-remember:active::before { animation: none; }
+.rate-remember:active::after { animation: none; }
+.rate-remember.is-sparkling::before { animation: sparkleFly1 0.6s ease-out; }
+.rate-remember.is-sparkling::after { animation: sparkleFly2 0.6s ease-out; }
 @keyframes sparkleFly1 {
   0% { opacity: 1; transform: translate(-50%, -50%) scale(0.4) translateY(0); }
   100% { opacity: 0; transform: translate(-50%, -50%) scale(1.1) translate(-24px, -22px) rotate(30deg); }
