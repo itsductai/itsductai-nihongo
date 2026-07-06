@@ -238,6 +238,7 @@ function renderSrsCard() {
 
   renderSrsStarButtons(w);
   updateSrsRateTimePreviews(w);
+  renderQueueStatusList("srsQueueList", App.srsQueue.slice(App.srsIndex), w._id);
 }
 
 // Cập nhật trạng thái nút ★ trên thẻ SRS (2 mặt). Trong chế độ học GỘP nhiều bộ

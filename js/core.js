@@ -9,6 +9,7 @@ const App = {
   grammarGroupsData: null, // data/grammar-groups.json — nhóm nghĩa + họ dễ nhầm
   grammarGroupsTab: "nhomnghia",
   srsComboActive: false, // true khi đang học SRS gộp nhiều bộ ngữ pháp cùng lúc (xem startComboSrs())
+  srsComboDueOnly: false, // true khi combo đang ở chế độ "Cần ôn tổng hợp" (chỉ xếp từ đến hạn, không trộn từ mới)
   choukaiDraftIndex: null, // đáp án đang chọn NHÁP (chưa xác nhận) của câu đề nghe hiện tại
   choukaiFlagged: new Set(), // các câu đề nghe đã đánh dấu cờ để xem lại (key choukaiKeyFor)
   // ĐÁNH DẤU PHÂN VÂN — nay theo TỪNG ĐÁP ÁN, không phải cả câu:
@@ -465,6 +466,49 @@ function speakWord(w) {
   if (!w) return;
   const text = w.doc || w.cautruc || w.kanji;
   speakJapanese(text);
+}
+
+/* ===================================================================
+   PANEL "DANH SÁCH TỪ TRONG HÀNG ĐỢI" — dùng chung cho Flashcard + SRS.
+   Hiện toàn bộ từ còn lại trong phiên học hiện tại kèm trạng thái SRS
+   (mới/đang học/đã thuộc/thành thạo), từ đang học được highlight. Bấm vào 1
+   dòng để xem nhanh nghĩa + trạng thái chi tiết mà KHÔNG nhảy vị trí học
+   (an toàn tuyệt đối — không đụng App.flashQueue/App.srsIndex).
+=================================================================== */
+const STATUS_LABEL_MAP = { new: "Chưa học", learning: "Đang học", known: "Đã thuộc", mastered: "⭐ Thành thạo" };
+
+function renderQueueStatusList(containerId, words, currentWordId) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  if (!words.length) { container.innerHTML = `<div class="queue-list-empty">Hàng đợi trống.</div>`; return; }
+
+  container.innerHTML = words.map((w) => {
+    const st = SRS.status(SRS.getEntry(App.progress, w._id));
+    const isCurrent = w._id === currentWordId;
+    const displayText = w.kanji || w.cautruc || "";
+    return `
+      <button class="queue-list-row status-${st}${isCurrent ? " is-current" : ""}" data-queue-word-id="${w._id}">
+        <span class="queue-list-text">${displayText}</span>
+        <span class="status-pill status-${st}">${STATUS_LABEL_MAP[st]}</span>
+      </button>
+      <div class="queue-list-detail hidden" id="queueDetail-${w._id}"></div>`;
+  }).join("");
+
+  container.querySelectorAll("[data-queue-word-id]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.dataset.queueWordId;
+      const detail = document.getElementById(`queueDetail-${id}`);
+      const wasOpen = !detail.classList.contains("hidden");
+      container.querySelectorAll(".queue-list-detail").forEach((d) => d.classList.add("hidden"));
+      if (wasOpen) return;
+      const w = words.find((x) => x._id === id);
+      const st = SRS.status(SRS.getEntry(App.progress, id));
+      detail.innerHTML = `
+        <div class="queue-list-detail-nghia">${w.nghia || ""}</div>
+        <div class="queue-list-detail-status">Trạng thái: <b>${STATUS_LABEL_MAP[st]}</b></div>`;
+      detail.classList.remove("hidden");
+    });
+  });
 }
 
 /* ===================================================================

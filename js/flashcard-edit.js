@@ -463,6 +463,9 @@ function renderFlashCard() {
   document.getElementById("flashTotal").textContent = App.flashTotalCount;
   const pct = (App.flashRememberedCount / App.flashTotalCount) * 100;
   document.getElementById("flashBar").style.width = `${pct}%`;
+
+  const queueWords = App.flashQueue.map((id) => App.currentWords.find((x) => x._id === id)).filter(Boolean);
+  renderQueueStatusList("flashQueueList", queueWords, w._id);
 }
 
 function renderFlashStarButtons(w) {
