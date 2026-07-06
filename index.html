@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nihongo Lab — Luyện thi JLPT</title>
 <link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/theme-plus.css?v=5" id="themeClassicLink">
 <link rel="stylesheet" href="css/theme-new.css?v=1" id="themeNewLink" disabled>
 </head>
@@ -88,16 +91,8 @@
     </div>
   </header>
 
-  <!-- Lớp phủ tối phía sau sidebar khi mở trên mobile, bấm vào để đóng -->
-  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
-
-  <!-- ===== MAIN WRAP (chỉ có ý nghĩa bố cục trên mobile) ===== -->
+  <!-- ===== MAIN WRAP ===== -->
   <div class="main-wrap">
-    <!-- Thanh trên cùng chỉ hiện trên mobile: nút mở sidebar + tên bộ đang học -->
-    <div class="mobile-topbar">
-      <button class="mobile-menu-btn" id="btnMobileMenu" title="Mở menu">☰</button>
-      <div class="mobile-topbar-title" id="mobileTopbarTitle">đang tải...</div>
-    </div>
 
     <!-- ===== MAIN ===== -->
     <main class="main">
@@ -237,6 +232,7 @@
           <option value="starred">★ Đã đánh dấu</option>
         </select>
         <button id="btnColConfig" class="icon-btn" title="Ẩn/hiện cột">☷ Cột</button>
+        <span class="table-count-badge" id="tableCountBadge">0 từ</span>
         <button class="icon-btn focus-toggle-btn" data-focus-target="table" title="Phóng to toàn màn hình">⛶</button>
       </div>
       <div class="field-config hidden" id="colConfigPanel">
@@ -858,13 +854,13 @@
 <script src="js/stats-weakness.js?v=5"></script>
 <script src="js/dashboard.js?v=1"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=12"></script>
+<script src="js/loader-nav.js?v=13"></script>
 <script src="js/flashcard-edit.js?v=4"></script>
-<script src="js/table-srs-typing.js?v=7"></script>
+<script src="js/table-srs-typing.js?v=9"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=6"></script>
 <script src="js/choukai.js?v=11"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=16"></script>
+<script src="js/init.js?v=17"></script>
 </body>
 </html>
