@@ -4,15 +4,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>N2 Vocab Lab</title>
+<title>Nihongo Lab — Luyện thi JLPT</title>
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/theme-plus.css?v=4">
+<link rel="stylesheet" href="css/theme-plus.css?v=5">
 </head>
 <body>
 
 <div id="app">
 
-  <!-- Nút thoát chế độ phóng to,     chỉ hiện khi đang ở focus mode -->
+  <!-- Nút thoát chế độ phóng to, chỉ hiện khi đang ở focus mode -->
   <button id="btnExitFocus" class="exit-focus-btn hidden" title="Thoát chế độ phóng to">✕</button>
 
   <!-- ===== SIDEBAR ===== -->
@@ -20,7 +20,7 @@
     <div class="brand">
       <span class="brand-mark">語</span>
       <div class="brand-text">
-        <div class="brand-title">N2 Vocab Lab</div>
+        <div class="brand-title">Nihongo Lab</div>
         <div class="brand-sub" id="deckName">đang tải...</div>
       </div>
       <button id="btnToggleSound" class="sound-toggle-btn" title="Bật/tắt âm thanh phản hồi">🔊</button>
@@ -36,6 +36,22 @@
       </div>
       <div class="exam-countdown-date" id="examCountdownDate">05/07 · がんばって！</div>
       <div class="exam-countdown-bar"><div class="exam-countdown-bar-fill" id="examCountdownBarFill"></div></div>
+    </div>
+
+    <!-- CẦN ÔN TỔNG HỢP — cộng dồn số từ/cấu trúc đến hạn ôn (SRS due) trên TẤT CẢ
+         bộ, tách riêng Từ vựng và Ngữ pháp. Bấm vào là gộp thẳng toàn bộ bộ cùng
+         loại và vào ôn ngay (chỉ từ đến hạn, không trộn từ mới) — khỏi phải mở
+         từng bộ một để xem còn nợ ôn hay không. -->
+    <div class="due-review-widget" id="dueReviewWidget">
+      <div class="due-review-title">🔥 Cần ôn tổng hợp</div>
+      <button class="due-review-row" id="btnDueReviewTuvung">
+        <span class="due-review-label">📚 Từ vựng</span>
+        <span class="due-review-count" id="dueReviewTuvungCount">0</span>
+      </button>
+      <button class="due-review-row" id="btnDueReviewNguphap">
+        <span class="due-review-label">📖 Ngữ pháp</span>
+        <span class="due-review-count" id="dueReviewNguphapCount">0</span>
+      </button>
     </div>
 
     <nav class="nav" id="navList">
@@ -397,15 +413,16 @@
       <div id="grammarGroupsBody"></div>
     </section>
 
-    <!-- Modal chọn bộ ngữ pháp để học gộp SRS (Anki-style) -->
+    <!-- Modal chọn bộ để học gộp SRS (Anki-style) — dùng chung cho cả từ vựng & ngữ pháp -->
     <div class="modal-overlay hidden" id="comboSrsModalOverlay">
       <div class="modal-box">
         <div class="modal-head">
-          <div class="modal-title">🔀 Học SRS gộp nhiều bộ ngữ pháp</div>
+          <div class="modal-title" id="comboSrsModalTitle">🔀 Học SRS gộp nhiều bộ</div>
           <button class="modal-close-btn" id="btnComboSrsClose">✕</button>
         </div>
         <div class="modal-body">
           <div class="combo-srs-hint">Chọn 1 hoặc nhiều bộ muốn học CHUNG trong 1 phiên — tiến độ vẫn lưu riêng đúng theo từng bộ gốc như bình thường, chỉ gộp lại để học cùng lúc.</div>
+          <button class="ghost-btn combo-srs-select-all-btn" id="btnComboSrsSelectAll">☑ Chọn tất cả</button>
           <div id="comboSrsDeckList" class="combo-srs-deck-list"></div>
           <button class="primary-btn" id="btnComboSrsStart">▶ Bắt đầu học</button>
         </div>
@@ -748,7 +765,7 @@
 
 </div>
 
-<script src="js/srs.js?v=4"></script>
+<script src="js/srs.js?v=5"></script>
 <!-- app.js (4740 dòng) đã được TÁCH thành 10 module nhỏ theo tính năng — mục đích
      để mỗi lần cần sửa 1 phần, chỉ cần đọc/sửa đúng module liên quan (vài trăm
      dòng) thay vì cả file lớn ~200KB. Tất cả vẫn dùng CHUNG biến toàn cục `App`
@@ -761,13 +778,13 @@
 <script src="js/scoring.js?v=1"></script>
 <script src="js/stats-weakness.js?v=5"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=7"></script>
+<script src="js/loader-nav.js?v=8"></script>
 <script src="js/flashcard-edit.js?v=3"></script>
-<script src="js/table-srs-typing.js?v=4"></script>
+<script src="js/table-srs-typing.js?v=5"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=6"></script>
 <script src="js/choukai.js?v=10"></script>
-<script src="js/grammar-groups.js?v=2"></script>
-<script src="js/init.js?v=12"></script>
+<script src="js/grammar-groups.js?v=3"></script>
+<script src="js/init.js?v=13"></script>
 </body>
 </html>
