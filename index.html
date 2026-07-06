@@ -90,8 +90,58 @@
     <!-- ===== MAIN ===== -->
     <main class="main">
 
+    <!-- ===================================================================
+         DASHBOARD — màn hình mặc định khi mở app. Tổng quan tiến độ, chọn
+         giáo trình học, kết quả đề thi gần đây. Tái dùng data SRS/exam-history
+         sẵn có, xem js/dashboard.js.
+    =================================================================== -->
+    <section class="view" id="view-dashboard">
+      <div class="dash-greeting">
+        <div class="dash-greeting-title" id="dashGreeting">Chào bạn 👋</div>
+        <div class="dash-greeting-sub" id="dashSubtitle"></div>
+      </div>
+
+      <div class="dash-grid">
+        <div class="dash-chart-card">
+          <div class="dash-chart-head">
+            <div class="dash-chart-title">📈 Tiến độ học tập</div>
+            <div class="dash-chart-tabs">
+              <button class="dash-chart-tab is-active" data-chart-mode="curriculum">Theo Giáo trình</button>
+              <button class="dash-chart-tab" data-chart-mode="status">Theo Trạng thái</button>
+              <button class="dash-chart-tab" data-chart-mode="time">Theo Thời gian</button>
+            </div>
+          </div>
+          <div id="dashChartBox" class="dash-chart-box"></div>
+        </div>
+
+        <div class="dash-side-card">
+          <div class="dash-side-title">🎓 Chọn giáo trình học</div>
+          <div id="dashCurriculumList" class="dash-course-list"></div>
+        </div>
+
+        <div class="dash-bottom-card">
+          <div class="dash-side-title">✅ Tiến độ tổng quan</div>
+          <div id="dashProgressSummary" class="dash-progress-list">
+            <div class="dash-progress-row" id="dashProgressTuvung">
+              <div class="dash-progress-label">📚 Từ vựng <span class="dash-progress-value">0/0</span></div>
+              <div class="dash-progress-track"><div class="dash-progress-fill" style="background:var(--accent)"></div></div>
+            </div>
+            <div class="dash-progress-row" id="dashProgressNguphap">
+              <div class="dash-progress-label">📖 Ngữ pháp <span class="dash-progress-value">0/0</span></div>
+              <div class="dash-progress-track"><div class="dash-progress-fill" style="background:var(--purple)"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dash-bottom-card">
+          <div class="dash-side-title">🏆 Kết quả đề thi gần đây</div>
+          <div id="dashRecentResults" class="dash-result-list"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- ---- FLASHCARD MODE ---- -->
-    <section class="view" id="view-flash">
+    <section class="view hidden" id="view-flash">
       <div class="view-head">
         <div class="progress-line">
           <span class="flash-progress-label">Thẻ <span id="flashQueuePos">1</span> / <span id="flashQueueTotal">0</span></span>
@@ -290,7 +340,7 @@
     <!-- ---- EXAM MODE (đề thi trắc nghiệm thật) ---- -->
     <section class="view hidden" id="view-exam">
       <div class="quiz-head">
-        <select id="examPicker" class="filter-select"></select>
+        <select id="examPicker" class="filter-select picker-hidden"></select>
         <div class="quiz-progress" id="examTitleLabel">Chưa chọn đề</div>
         <div class="quiz-score">Điểm: <span id="examScore">0</span>/<span id="examTotal">0</span></div>
         <label class="toggle speed-toggle">
@@ -300,6 +350,7 @@
         <div class="exam-total-timer hidden" id="examTotalTimerWrap">⏱ <span id="examTotalTimer">00:00</span></div>
         <button class="icon-btn focus-toggle-btn" data-focus-target="exam" title="Phóng to toàn màn hình">⛶</button>
       </div>
+      <div id="examPickerGrid" class="exam-picker-grid"></div>
       <div id="examEmpty" class="empty-state">
         <div class="empty-icon">▤</div>
         <div>Chọn một đề thi ở trên để bắt đầu làm bài.</div>
@@ -479,7 +530,7 @@
     =================================================================== -->
     <section class="view hidden" id="view-choukai">
       <div class="view-head">
-        <select id="choukaiPicker" class="filter-select">
+        <select id="choukaiPicker" class="filter-select picker-hidden">
           <option value="">— chọn đề nghe —</option>
         </select>
         <select id="choukaiMondaiPicker" class="filter-select hidden">
@@ -487,6 +538,7 @@
         </select>
         <button class="icon-btn focus-toggle-btn" data-focus-target="choukai" title="Phóng to toàn màn hình">⛶</button>
       </div>
+      <div id="choukaiPickerGrid" class="exam-picker-grid"></div>
 
       <div id="choukaiEmpty" class="empty-state">
         <div class="empty-icon">🎧</div>
@@ -779,14 +831,15 @@
 <script src="js/core.js?v=7"></script>
 <script src="js/scoring.js?v=1"></script>
 <script src="js/stats-weakness.js?v=5"></script>
+<script src="js/dashboard.js?v=1"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=8"></script>
+<script src="js/loader-nav.js?v=9"></script>
 <script src="js/flashcard-edit.js?v=3"></script>
-<script src="js/table-srs-typing.js?v=5"></script>
+<script src="js/table-srs-typing.js?v=6"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=6"></script>
-<script src="js/choukai.js?v=10"></script>
+<script src="js/choukai.js?v=11"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=13"></script>
+<script src="js/init.js?v=14"></script>
 </body>
 </html>
