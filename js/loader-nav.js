@@ -134,6 +134,35 @@ function populateExamPicker() {
     opt.textContent = `${ex.title} (${ex.questions.length} câu)`;
     picker.appendChild(opt);
   });
+  renderExamPickerCards();
+}
+
+// Card grid thay cho dropdown — dropdown gốc vẫn giữ trong DOM (ẩn qua CSS
+// .picker-hidden) vì vài chỗ khác trong code còn sync .value vào đó; bấm card
+// gọi THẲNG openExamModeModal() giống hệt handler "change" của dropdown, đồng
+// thời đồng bộ lại .value để 2 nơi không lệch nhau.
+function renderExamPickerCards() {
+  const grid = document.getElementById("examPickerGrid");
+  if (!grid) return;
+  grid.innerHTML = App.exams.map((ex) => {
+    const best = getBestExamScore(ex.id);
+    const scoreBadge = best
+      ? `<span class="exam-picker-card-status is-done">${best.score}/${best.total} điểm</span>`
+      : `<span class="exam-picker-card-status is-new">Chưa làm</span>`;
+    return `
+      <button class="exam-picker-card" data-exam-id="${ex.id}">
+        <div class="exam-picker-card-title">${ex.title}</div>
+        <div class="exam-picker-card-meta">${ex.questions.length} câu</div>
+        ${scoreBadge}
+      </button>`;
+  }).join("");
+  grid.querySelectorAll("[data-exam-id]").forEach((card) => {
+    card.addEventListener("click", () => {
+      const id = card.dataset.examId;
+      document.getElementById("examPicker").value = id;
+      openExamModeModal(id);
+    });
+  });
 }
 
 /* ---------- Navigation: nav items thay đổi theo TYPE ---------- */
@@ -165,6 +194,15 @@ const NAV_ITEMS_BY_TYPE = {
 function renderNav() {
   const nav = document.getElementById("navList");
   nav.innerHTML = "";
+
+  // Dashboard — mục cố định, không đổi theo type deck đang chọn (khác các mục
+  // bên dưới vốn thay đổi theo App.currentDeckType).
+  const dashBtn = document.createElement("button");
+  dashBtn.className = "nav-item";
+  dashBtn.dataset.mode = "dashboard";
+  dashBtn.innerHTML = `<span class="nav-icon">🏠</span> <span>Dashboard</span>`;
+  dashBtn.addEventListener("click", () => setMode("dashboard"));
+  nav.appendChild(dashBtn);
 
   const label = document.createElement("div");
   label.className = "nav-section-label";
@@ -313,6 +351,7 @@ function setMode(mode) {
   const view = document.getElementById(`view-${mode}`);
   if (view) view.classList.remove("hidden");
 
+  if (mode === "dashboard") renderDashboard();
   if (mode === "table") renderTable();
   if (mode === "srs") initSrsMode();
   if (mode === "typing") initTypingMode();

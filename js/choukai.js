@@ -56,14 +56,46 @@ function populateChoukaiPicker() {
   App.choukaiTests.forEach(function (t) {
     const opt = document.createElement("option");
     opt.value = t.id;
-    let totalQ = 0;
-    t.mondai.forEach(function (m) {
-      m.questions.forEach(function (q) {
-        totalQ += q.isDualQuestion ? q.subQuestions.length : 1;
-      });
-    });
-    opt.textContent = t.title + " (" + totalQ + " câu)";
+    opt.textContent = t.title + " (" + choukaiTotalQuestions(t) + " câu)";
     picker.appendChild(opt);
+  });
+  renderChoukaiPickerCards();
+}
+
+function choukaiTotalQuestions(t) {
+  let totalQ = 0;
+  t.mondai.forEach(function (m) {
+    m.questions.forEach(function (q) {
+      totalQ += q.isDualQuestion ? q.subQuestions.length : 1;
+    });
+  });
+  return totalQ;
+}
+
+// Card grid thay cho dropdown — cùng nguyên tắc với renderExamPickerCards():
+// dropdown gốc giữ ẩn trong DOM để không phá các chỗ khác đang sync .value.
+function renderChoukaiPickerCards() {
+  const grid = document.getElementById("choukaiPickerGrid");
+  if (!grid) return;
+  grid.innerHTML = App.choukaiTests.map(function (t) {
+    const best = getBestChoukaiScore(t.id);
+    const scoreBadge = best
+      ? '<span class="exam-picker-card-status is-done">' + best.score + '/' + best.total + ' điểm</span>'
+      : '<span class="exam-picker-card-status is-new">Chưa làm</span>';
+    return (
+      '<button class="exam-picker-card" data-choukai-id="' + t.id + '">' +
+      '<div class="exam-picker-card-title">' + t.title + '</div>' +
+      '<div class="exam-picker-card-meta">' + choukaiTotalQuestions(t) + ' câu · 5 Mondai</div>' +
+      scoreBadge +
+      '</button>'
+    );
+  }).join("");
+  grid.querySelectorAll("[data-choukai-id]").forEach(function (card) {
+    card.addEventListener("click", function () {
+      const id = card.dataset.choukaiId;
+      document.getElementById("choukaiPicker").value = id;
+      openChoukaiModeModal(id);
+    });
   });
 }
 

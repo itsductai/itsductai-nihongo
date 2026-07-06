@@ -101,6 +101,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   ensureVoicesLoaded();
   initExamCountdown();
   renderDueReviewWidget();
+  document.querySelectorAll(".dash-chart-tab").forEach((btn) => {
+    btn.addEventListener("click", () => setDashboardChartMode(btn.dataset.chartMode));
+  });
   document.getElementById("btnDueReviewTuvung").addEventListener("click", () => startDueReviewCombo("TUVUNG"));
   document.getElementById("btnDueReviewNguphap").addEventListener("click", () => startDueReviewCombo("NGUPHAP"));
 
@@ -943,5 +946,5 @@ document.addEventListener("DOMContentLoaded", async () => {
   // LẦN ĐẦU thì mở thẳng trang Thống kê để nhìn tổng quan tiến độ trước, nên ghi
   // đè lại mode ngay sau đó — CHỈ áp dụng cho lần load trang này, không ảnh hưởng
   // gì tới việc đổi bộ học bình thường sau đó.
-  setMode("stats");
+  setMode("dashboard");
 });

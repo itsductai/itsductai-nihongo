@@ -281,6 +281,10 @@ function rateCurrentSrsWord(rating) {
   // Ghi nhận vào thống kê điểm yếu chung: "Quên" = sai, "Khó"/"Dễ" = đúng
   // (đã nhớ được, chỉ khác mức độ dễ/khó khi nhớ lại).
   recordWeaknessResult(App.currentDeckId, w._id, rating !== "again");
+  // Ghi log hoạt động theo NGÀY (cho chart "Theo thời gian" ở Dashboard) —
+  // tách riêng từ vựng/ngữ pháp vì App.currentDeckType luôn biết đúng loại
+  // (kể cả khi đang ở combo gộp nhiều bộ).
+  recordDailyActivity(App.currentDeckType);
 
   App.srsIndex++;
   if (App.srsIndex >= App.srsQueue.length) {
