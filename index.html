@@ -196,6 +196,13 @@
           <button class="rate-btn rate-hard" data-flash-result="hard">△ Khó<span class="rate-key-hint">↑</span></button>
           <button class="rate-btn rate-remember" data-flash-result="remembered">✓ Đã nhớ<span class="rate-key-hint">→</span></button>
         </div>
+
+        <!-- Danh sách toàn bộ từ còn lại trong hàng đợi — bấm xem nhanh nghĩa +
+             trạng thái mà không rời khỏi thẻ đang học. -->
+        <details class="queue-list-wrap">
+          <summary class="queue-list-summary">📋 Danh sách từ trong phiên này</summary>
+          <div class="queue-list" id="flashQueueList"></div>
+        </details>
       </div>
 
       <!-- Màn hình hoàn thành -->
@@ -277,6 +284,12 @@
           ⭐ Đã thuộc <span class="srs-mastered-hint">(ít xuất hiện lại — bỏ qua bước Anki)</span>
         </button>
       </div>
+
+      <!-- Danh sách toàn bộ từ còn lại trong hàng đợi SRS phiên này -->
+      <details class="queue-list-wrap">
+        <summary class="queue-list-summary">📋 Danh sách từ trong phiên này</summary>
+        <div class="queue-list" id="srsQueueList"></div>
+      </details>
     </section>
 
     <!-- ---- TYPING MODE (gõ hiragana) ---- -->
@@ -832,14 +845,14 @@
      load SAU CÙNG vì nó chạy code thực thi ngay (DOMContentLoaded) cần mọi hàm
      ở các module khác đã được định nghĩa xong. Xem mục cấu trúc file trong
      README.md để biết module nào phụ trách phần nào. -->
-<script src="js/core.js?v=7"></script>
+<script src="js/core.js?v=8"></script>
 <script src="js/scoring.js?v=1"></script>
 <script src="js/stats-weakness.js?v=5"></script>
 <script src="js/dashboard.js?v=1"></script>
 <script src="js/config-focus.js?v=1"></script>
 <script src="js/loader-nav.js?v=10"></script>
-<script src="js/flashcard-edit.js?v=3"></script>
-<script src="js/table-srs-typing.js?v=6"></script>
+<script src="js/flashcard-edit.js?v=4"></script>
+<script src="js/table-srs-typing.js?v=7"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=6"></script>
 <script src="js/choukai.js?v=11"></script>
