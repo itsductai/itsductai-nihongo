@@ -330,6 +330,78 @@ input[type="text"]:focus, textarea:focus {
   }
 }
 
+/* ---- 20. Widget "Cần ôn tổng hợp" (sidebar) ---- */
+.due-review-widget {
+  margin: 4px 4px 12px; padding: 12px 14px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #241c1c, #1e1a1e);
+  border: 1px solid rgba(240,85,90,0.22);
+  box-shadow: var(--shadow-soft);
+}
+.due-review-title { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; color: #ffb199; text-transform: uppercase; margin-bottom: 8px; }
+.due-review-row {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 10px; margin-bottom: 6px; border-radius: 9px;
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border-soft);
+  cursor: pointer; transition: background .14s, border-color .14s, transform .1s;
+}
+.due-review-row:last-child { margin-bottom: 0; }
+.due-review-row:hover { transform: translateX(2px); border-color: rgba(240,85,90,0.35); }
+.due-review-label { font-size: 12.5px; color: var(--text-1); font-weight: 600; }
+.due-review-count {
+  font-size: 13px; font-weight: 800; color: var(--text-2);
+  min-width: 26px; text-align: center; padding: 2px 8px; border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+}
+.due-review-row.has-due .due-review-count {
+  color: #ff8a7a; background: rgba(240,85,90,0.16); border: 1px solid rgba(240,85,90,0.35);
+}
+
+/* ---- 21. Nút "Đưa về ôn lại" trong Bảng ---- */
+.table-back-to-review-btn {
+  display: inline-block; margin-left: 8px;
+  font-size: 11px; font-weight: 700; color: var(--text-2);
+  padding: 3px 8px; border-radius: 7px;
+  background: rgba(255,255,255,0.04); border: 1px dashed var(--border);
+  cursor: pointer; transition: background .14s, color .14s, border-color .14s;
+}
+.table-back-to-review-btn:hover { color: #cddaff; background: var(--accent-soft); border-color: rgba(107,147,255,0.4); }
+
+/* ---- 22. Modal combo SRS — nút "Chọn tất cả" ---- */
+.combo-srs-select-all-btn { margin-bottom: 10px; font-size: 12.5px; }
+/* ---- 23. Flashcard sinh động hơn: kanji gradient, khung ví dụ nổi bật ---- */
+.cf-kanji {
+  background: linear-gradient(135deg, #f2f4fb 10%, #b9c8ff 60%, #8fa6ff 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(0 2px 14px rgba(107,147,255,0.22));
+}
+.cf-hanviet {
+  display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.03em;
+  color: #ffce8a; background: rgba(255,180,80,0.12);
+  border: 1px solid rgba(255,180,80,0.3);
+  padding: 2px 10px; border-radius: 999px; margin-bottom: 10px;
+}
+.cf-nghia {
+  background: linear-gradient(90deg, #fff, #dfe6ff);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.cf-vidu {
+  padding: 12px 14px; border-radius: 12px;
+  background: rgba(255,255,255,0.03);
+  border-left: 3px solid var(--accent);
+  text-align: left;
+}
+.cf-vidu-line { padding: 3px 0; }
+/* Mặt trước & sau thẻ có nền chuyển sắc nhẹ khác nhau để phân biệt trực quan */
+.card-face.card-front {
+  background: radial-gradient(140% 100% at 50% -10%, rgba(107,147,255,0.07), transparent 60%);
+}
+.card-face.card-back {
+  background: radial-gradient(140% 100% at 50% -10%, rgba(169,139,255,0.08), transparent 60%);
+}
+/* Ruby (furigana) rõ ràng, màu nhấn nhẹ để không lẫn với kanji chính */
+.cf-vidu ruby rt { color: var(--accent); font-size: 0.62em; font-weight: 700; }
 /* ---- 17. Nút tua nhanh ±5s/±10s cho audio nghe ---- */
 /* Nhóm nút tua nhanh ±5s/±10s — thay thao tác kéo thanh audio thủ công */
 .choukai-seek-group { display: flex; gap: 6px; }
