@@ -1,5 +1,25 @@
 /* ===== MODULE: loader-nav.js — Load decks/exams từ JSON, populate dropdown, render sidebar nav, switchDeck/setMode ===== */
 
+/* ---------- Bộ icon SVG dùng chung cho navbar — thay emoji để đồng nhất tone
+   (line-icon, stroke=currentColor, ăn theo màu chữ hiện tại, không cần font/
+   CDN ngoài -> an toàn offline, không rủi ro phụ thuộc bên thứ 3). ---------- */
+const NAV_SVG_ICONS = {
+  home: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>`,
+  book: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg>`,
+  bookOpen: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4.5c2.5-1 5.5-1 8 0v15c-2.5-1-5.5-1-8 0Z"/><path d="M22 4.5c-2.5-1-5.5-1-8 0v15c2.5-1 5.5-1 8 0Z"/></svg>`,
+  fileText: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>`,
+  headphones: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="3" y="14" width="5" height="7" rx="1.5"/><rect x="16" y="14" width="5" height="7" rx="1.5"/></svg>`,
+  volume: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg>`,
+  volumeMute: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4Z"/><path d="M22 9l-6 6"/><path d="M16 9l6 6"/></svg>`,
+  mic: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 19v3"/></svg>`,
+  palette: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20c1.2 0 2-1 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.3 0-1 .8-1.9 1.9-1.9H17a3 3 0 0 0 3-3c0-5.5-4-10.5-8-10.5Z"/><circle cx="7" cy="10" r="1.2" fill="currentColor" stroke="none"/><circle cx="11" cy="6.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="16" cy="8.5" r="1.2" fill="currentColor" stroke="none"/></svg>`,
+  settings: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></svg>`,
+  search: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>`,
+};
+function navIcon(name, cls) {
+  return `<span class="nav-svg-icon${cls ? " " + cls : ""}">${NAV_SVG_ICONS[name] || ""}</span>`;
+}
+
 /* ---------- Loading decks & exams ---------- */
 
 async function loadDecks() {
@@ -247,7 +267,7 @@ function renderNav() {
   dashBtn.className = "nav-item nav-item-standalone";
   dashBtn.dataset.mode = "dashboard";
   dashBtn.title = "Dashboard";
-  dashBtn.innerHTML = `<span class="nav-icon">🏠</span>`;
+  dashBtn.innerHTML = navIcon("home");
   dashBtn.addEventListener("click", () => setMode("dashboard"));
   nav.appendChild(dashBtn);
 
@@ -262,7 +282,7 @@ function renderNav() {
   }
   const typeModes = typeItems.map((b) => b.dataset.mode);
   nav.appendChild(buildNavCategory(
-    isNguphap ? "📖" : "📚",
+    navIcon(isNguphap ? "book" : "bookOpen"),
     isNguphap ? "Học ngữ pháp" : "Học từ vựng",
     typeItems,
     typeModes
@@ -274,7 +294,7 @@ function renderNav() {
       buildNavItemBtn("exam", "▤", "Làm đề thi"),
       buildNavItemBtn("examnotes", "📝", "Ghi chú đề thi"),
     ];
-    nav.appendChild(buildNavCategory("📝", "Đề thi thật", examItems, examItems.map((b) => b.dataset.mode)));
+    nav.appendChild(buildNavCategory(navIcon("fileText"), "Đề thi thật", examItems, examItems.map((b) => b.dataset.mode)));
   }
 
   // Nhóm "Luyện nghe (聴解)"
@@ -284,7 +304,7 @@ function renderNav() {
       buildNavItemBtn("choukai-m4", "🎯", "Luyện riêng Mondai 4"),
       buildNavItemBtn("choukai-shadow", "🔁", "Luyện nghe câu"),
     ];
-    nav.appendChild(buildNavCategory("🎧", "Luyện nghe (聴解)", choukaiItems, choukaiItems.map((b) => b.dataset.mode)));
+    nav.appendChild(buildNavCategory(navIcon("headphones"), "Luyện nghe (聴解)", choukaiItems, choukaiItems.map((b) => b.dataset.mode)));
   }
 
   // Re-apply active state: tô sáng nav-item con đang active, VÀ tô viền
@@ -303,6 +323,64 @@ function renderNav() {
 document.addEventListener("click", (e) => {
   if (!e.target.closest(".nav-category")) closeAllNavDropdowns();
 });
+
+/* ===================================================================
+   TỪ ĐIỂN NỘI BỘ — search TOÀN BỘ deck (cả TUVUNG lẫn NGUPHAP) theo
+   kanji/hiragana/Hán Việt/nghĩa tiếng Việt (hoặc cautruc/nghia/muc_do với
+   ngữ pháp) — TÁI DÙNG đúng field-matching logic của renderTable() (không
+   tạo hệ tìm kiếm song song, chỉ mở rộng phạm vi từ 1 deck ra TẤT CẢ deck).
+=================================================================== */
+function performGlobalSearch(query) {
+  const resultsBox = document.getElementById("globalSearchResults");
+  const q = query.trim().toLowerCase();
+  if (!q) { resultsBox.classList.add("hidden"); resultsBox.innerHTML = ""; return; }
+
+  const results = [];
+  for (const deck of App.decks) {
+    const keys = deck.type === "NGUPHAP" ? ["cautruc", "nghia", "muc_do"] : ["kanji", "doc", "han_viet", "nghia"];
+    for (const w of deck.words) {
+      const haystack = keys.map((k) => w[k] || "").join(" ").toLowerCase();
+      if (haystack.includes(q)) {
+        results.push({ deck, w });
+        if (results.length >= 30) break;
+      }
+    }
+    if (results.length >= 30) break;
+  }
+
+  if (!results.length) {
+    resultsBox.innerHTML = `<div class="search-result-empty">Không tìm thấy "${query}"</div>`;
+  } else {
+    resultsBox.innerHTML = results.slice(0, 10).map(({ deck, w }) => {
+      const display = w.kanji || w.cautruc || "";
+      return `
+        <button class="search-result-row" data-jump-deck="${deck.id}" data-jump-word="${w._id}">
+          <span class="search-result-kanji">${display}</span>
+          <span class="search-result-nghia">${w.nghia || ""}</span>
+          <span class="search-result-deck">${deck.title}</span>
+        </button>`;
+    }).join("");
+    resultsBox.querySelectorAll("[data-jump-word]").forEach((btn) => {
+      btn.addEventListener("click", () => jumpToSearchResult(btn.dataset.jumpDeck, btn.dataset.jumpWord));
+    });
+  }
+  resultsBox.classList.remove("hidden");
+}
+
+// Nhảy tới từ tìm được — chuyển đúng bộ chứa nó, vào Bảng danh sách và tự điền
+// ô search của Bảng để lọc ngay ra đúng dòng đó (TÁI DÙNG bộ lọc Bảng sẵn có,
+// không cần logic "nhảy tới vị trí" mới trong Flashcard/SRS).
+function jumpToSearchResult(deckId, wordId) {
+  const deck = App.decks.find((d) => d.id === deckId);
+  if (!deck) return;
+  const w = deck.words.find((x) => x._id === wordId);
+  switchDeck(deckId);
+  setMode("table");
+  document.getElementById("tableSearch").value = w.kanji || w.cautruc || "";
+  renderTable();
+  document.getElementById("globalSearchResults").classList.add("hidden");
+  document.getElementById("globalSearchInput").value = "";
+}
 
 function switchDeck(deckId) {
   const deck = App.decks.find((d) => d.id === deckId);

@@ -192,6 +192,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
+  // ----- Từ điển nội bộ (search toàn bộ deck) -----
+  document.getElementById("globalSearchInput").addEventListener("input", (e) => {
+    performGlobalSearch(e.target.value);
+  });
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest(".navbar-search-wrap")) {
+      document.getElementById("globalSearchResults").classList.add("hidden");
+    }
+  });
+
   // ----- Flashcard mode -----
   document.getElementById("flashCard").addEventListener("click", () => {
     flipFlashCard();
