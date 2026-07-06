@@ -28,9 +28,10 @@
 html, body {
   margin: 0;
   height: 100%;
+  overflow-x: hidden;
   background: var(--bg-0);
   color: var(--text-0);
-  font-family: "Hiragino Sans", "Noto Sans JP", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Inter", "Hiragino Sans", "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 #app { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
@@ -72,9 +73,24 @@ rt {
   background: linear-gradient(135deg, var(--accent), var(--purple));
   display: flex; align-items: center; justify-content: center;
   font-size: 17px; font-weight: 700; color: #fff; flex-shrink: 0;
+  font-family: "Poppins", "Inter", sans-serif;
+  position: relative; overflow: hidden;
+}
+/* Hiệu ứng "phép thuật" — 1 dải sáng lướt qua logo lặp lại, tinh tế, không
+   gây xao nhãng (chỉ ở LOGO, không rải khắp app — đúng tinh thần bounded). */
+.brand-mark::after {
+  content: ""; position: absolute; top: -50%; left: -60%;
+  width: 40%; height: 200%; background: rgba(255,255,255,0.35);
+  transform: rotate(20deg); animation: brandShimmer 3.5s ease-in-out infinite;
+}
+@keyframes brandShimmer {
+  0% { left: -60%; opacity: 0; }
+  8% { opacity: 1; }
+  35% { left: 130%; opacity: 0; }
+  100% { left: 130%; opacity: 0; }
 }
 
-.brand-title { font-size: 14px; font-weight: 700; color: var(--text-0); line-height: 1.2; }
+.brand-title { font-size: 14px; font-weight: 700; color: var(--text-0); line-height: 1.2; font-family: "Poppins", "Inter", sans-serif; }
 .brand-sub {
   font-size: 10.5px; color: var(--text-2); margin-top: 1px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px;
@@ -360,6 +376,20 @@ rt {
 .flash-completion-actions { display: flex; flex-direction: column; gap: 10px; align-items: center; }
 
 .cf-kanji { font-size: 52px; font-weight: 700; color: var(--text-0); margin-bottom: 12px; line-height: 1.25; }
+
+/* "Lấp lánh" nhẹ trên kanji khi thẻ vừa lật ra mặt sau — animate drop-shadow
+   (KHÔNG đụng property `background` vì theme-plus/theme-new đang dùng nó cho
+   gradient chữ, animate chung sẽ đè mất màu). Chỉ chạy 1 lần khi lật thẻ,
+   không lặp vô hạn (tránh xao nhãng khi học lâu). */
+.card.flipped .cf-kanji { animation: kanjiShimmer 1.2s ease-out; }
+@keyframes kanjiShimmer {
+  0% { filter: drop-shadow(0 0 0 transparent); }
+  35% { filter: drop-shadow(0 0 14px var(--gold, #ffd15c)); }
+  100% { filter: drop-shadow(0 0 0 transparent); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card.flipped .cf-kanji { animation: none; }
+}
 .cf-doc { font-size: 18px; color: var(--accent); margin-bottom: 4px; }
 .cf-hanviet { font-size: 12.5px; letter-spacing: 0.06em; color: var(--warn); font-weight: 700; text-transform: uppercase; margin-bottom: 10px; }
 .cf-nghia { font-size: 20px; font-weight: 600; color: var(--text-0); margin-bottom: 14px; line-height: 1.4; }
@@ -408,8 +438,25 @@ rt {
 .rate-forget:hover { background: var(--bad-soft); border-color: var(--bad); box-shadow: 0 8px 20px -4px var(--bad-soft); transform: translateY(-3px) scale(1.03) rotate(-1deg); }
 .rate-hard { color: var(--warn); border-color: var(--warn-soft); }
 .rate-hard:hover { background: var(--warn-soft); border-color: var(--warn); box-shadow: 0 8px 20px -4px var(--warn-soft); }
-.rate-remember { color: var(--good); border-color: var(--good-soft); }
+.rate-remember { color: var(--good); border-color: var(--good-soft); position: relative; overflow: visible; }
 .rate-remember:hover { background: var(--good-soft); border-color: var(--good); box-shadow: 0 8px 20px -4px var(--good-soft); transform: translateY(-3px) scale(1.03) rotate(1deg); }
+/* Lấp lánh nhẹ khi bấm "Đã nhớ" — điểm nhấn duy nhất, không lặp lại ở nơi
+   khác (bounded, đúng tinh thần No over-engineering: chỉ nơi tạo động lực
+   thật sự cần). CSS thuần, không cần JS particle engine. */
+.rate-remember::before, .rate-remember::after {
+  content: "✦"; position: absolute; top: 50%; left: 50%; font-size: 12px;
+  color: var(--gold, #ffd15c); opacity: 0; pointer-events: none;
+}
+.rate-remember:active::before { animation: sparkleFly1 0.6s ease-out; }
+.rate-remember:active::after { animation: sparkleFly2 0.6s ease-out; }
+@keyframes sparkleFly1 {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(0.4) translateY(0); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.1) translate(-24px, -22px) rotate(30deg); }
+}
+@keyframes sparkleFly2 {
+  0% { opacity: 1; transform: translate(-50%, -50%) scale(0.4) translateY(0); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.1) translate(26px, -18px) rotate(-25deg); }
+}
 .rate-flip { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-soft); }
 .rate-flip:hover { background: #34466b; box-shadow: 0 8px 20px -4px var(--accent-soft); }
 .rate-flip:active svg, .rate-flip:active { animation: rateFlipSpin .35s ease; }
@@ -710,45 +757,19 @@ tbody tr:last-child td { border-bottom: none; }
 #app.focus-mode .choukai-shadow-note { display: none; }
 
 @media (max-width: 860px) {
-  /* Navbar chuyển thành drawer trượt từ trái, ẩn mặc định trên mobile — giữ
-     ĐẦY ĐỦ nội dung (brand, chip, nav, settings), chỉ ẩn/hiện qua hamburger. */
-  .navbar {
-    position: fixed; top: 0; left: 0; height: 100vh; width: 280px;
-    z-index: 150; transform: translateX(-100%);
-    transition: transform 0.25s ease; box-shadow: var(--shadow);
-    flex-direction: column; overflow-y: auto;
-  }
-  .navbar.is-open { transform: translateX(0); }
-  .navbar-row { flex-wrap: wrap; }
-  .navbar-search-wrap { order: 3; flex: 1 1 100%; max-width: 100%; margin: 6px 0 0; }
-  .nav { flex-direction: column; align-items: stretch; overflow-x: visible; }
-  .nav-item { width: 100%; }
-  /* Trên mobile, nav đã là drawer dọc full-height -> dropdown không cần nổi
-     tuyệt đối (không đủ chỗ neo đẹp), luôn hiện sẵn dạng khối tĩnh trong dòng. */
-  .nav-category { width: 100%; }
-  .nav-category-trigger { width: 100%; }
-  .nav-dropdown {
-    position: static; display: none; margin-top: 4px; margin-left: 12px;
-    box-shadow: none; border: none; background: none; padding: 0;
-  }
-  .nav-category.is-open .nav-dropdown { display: flex; }
+  /* KHÔNG còn drawer ẩn/hiện kiểu app nữa — navbar luôn nằm trong flow bình
+     thường như 1 trang web thật, chỉ co gọn lại + cho phép xuống dòng. */
+  .navbar-row { flex-wrap: wrap; row-gap: 8px; padding: 8px 12px; }
+  .navbar-chips { order: 2; flex: 1 1 auto; }
+  .navbar-right { order: 3; }
+  .navbar-search-wrap { order: 4; flex: 1 1 100%; max-width: 100%; margin: 2px 0 0; }
+  .brand-sub { max-width: 120px; }
 
-  .sidebar-backdrop {
-    position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 140;
-    display: none;
-  }
-  .sidebar-backdrop.is-visible { display: block; }
-
-  .mobile-topbar {
-    display: flex; align-items: center; gap: 10px;
-    padding: 10px 14px; border-bottom: 1px solid var(--border);
-    background: var(--bg-1); flex-shrink: 0;
-  }
-  .mobile-menu-btn {
-    background: var(--bg-2); border: 1px solid var(--border); color: var(--text-0);
-    width: 38px; height: 38px; border-radius: 8px; font-size: 18px; flex-shrink: 0;
-  }
-  .mobile-topbar-title { font-size: 13px; color: var(--text-1); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  /* Dropdown vẫn nổi (absolute) như desktop, chỉ giới hạn bề rộng để không
+     tràn khỏi viewport hẹp (ví dụ iPhone 11: 414px) khi trigger gần mép phải. */
+  .nav-dropdown { max-width: calc(100vw - 24px); }
+  .nav-category:last-child .nav-dropdown,
+  .nav-category:nth-last-child(2) .nav-dropdown { left: auto; right: 0; }
 
   .main { padding: 16px 12px; flex: 1; }
   .view { max-width: 100%; }
@@ -773,10 +794,6 @@ tbody tr:last-child td { border-bottom: none; }
   .exit-focus-btn { top: 10px; right: 12px; width: 38px; height: 38px; }
 
   #app.focus-mode .main { padding: 24px 14px; }
-}
-
-@media (min-width: 861px) {
-  .mobile-topbar, .sidebar-backdrop, .mobile-menu-btn { display: none; }
 }
 
 /* ===== EDIT MODAL ===== */
@@ -830,6 +847,9 @@ tbody tr:last-child td { border-bottom: none; }
 }
 .table-edit-btn:hover { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
 
+.col-stt-head { width: 40px; text-align: center; color: var(--text-2); }
+.col-stt-cell { text-align: center; color: var(--text-2); font-size: 12px; font-variant-numeric: tabular-nums; }
+.table-count-badge { font-size: 12px; color: var(--text-2); font-weight: 700; white-space: nowrap; padding: 0 4px; }
 .col-star-head { width: 32px; }
 .col-star-cell { text-align: center; }
 .table-star-btn {
