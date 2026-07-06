@@ -108,6 +108,33 @@ rt {
 }
 .nav-section-label:first-child { border-left: none; padding-left: 0; }
 
+/* Icon đơn (Dashboard) — không có dropdown, chỉ hiện icon cho gọn */
+.nav-item-standalone { padding: 8px 11px; }
+
+/* ===== Category dạng dropdown: icon trigger + panel xổ xuống ===== */
+.nav-category { position: relative; flex-shrink: 0; }
+.nav-category-trigger {
+  display: flex; align-items: center; gap: 4px;
+  background: none; border: none; color: var(--text-1);
+  padding: 8px 12px; border-radius: 8px; cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.nav-category-trigger:hover { background: var(--bg-hover); color: var(--text-0); }
+.nav-category.has-active .nav-category-trigger { color: var(--accent); }
+.nav-category.is-open .nav-category-trigger { background: var(--accent-soft); color: var(--accent); }
+.nav-caret { font-size: 9px; transition: transform 0.15s ease; }
+.nav-category.is-open .nav-caret { transform: rotate(180deg); }
+
+.nav-dropdown {
+  position: absolute; top: 100%; left: 0; margin-top: 6px;
+  min-width: 210px; z-index: 40;
+  background: var(--bg-1); border: 1px solid var(--border);
+  border-radius: var(--radius-sm, 10px); box-shadow: var(--shadow, 0 12px 30px rgba(0,0,0,0.4));
+  padding: 6px; display: none; flex-direction: column; gap: 2px;
+}
+.nav-category.is-open .nav-dropdown { display: flex; }
+.nav-dropdown .nav-item { width: 100%; padding: 9px 12px; }
+
 /* Compact hóa 2 widget cũ (vốn thiết kế dạng card dọc trong sidebar) để vừa
    trong navbar-chips ngang — CHỈ đè layout/kích thước, màu sắc vẫn do
    theme-plus.css/theme-new.css quyết định (không đụng vào đó). */
@@ -652,6 +679,15 @@ tbody tr:last-child td { border-bottom: none; }
   .navbar-row { flex-wrap: wrap; }
   .nav { flex-direction: column; align-items: stretch; overflow-x: visible; }
   .nav-item { width: 100%; }
+  /* Trên mobile, nav đã là drawer dọc full-height -> dropdown không cần nổi
+     tuyệt đối (không đủ chỗ neo đẹp), luôn hiện sẵn dạng khối tĩnh trong dòng. */
+  .nav-category { width: 100%; }
+  .nav-category-trigger { width: 100%; }
+  .nav-dropdown {
+    position: static; display: none; margin-top: 4px; margin-left: 12px;
+    box-shadow: none; border: none; background: none; padding: 0;
+  }
+  .nav-category.is-open .nav-dropdown { display: flex; }
 
   .sidebar-backdrop {
     position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 140;
