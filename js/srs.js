@@ -137,6 +137,18 @@ const SRS = (() => {
 
   // Trạng thái hiển thị: new / learning (chưa qua 1 ngày) / known (đã "trưởng thành") /
   // mastered (được đánh dấu "Đã thuộc" thủ công, bỏ qua các bước tăng dần)
+  // Chủ động đưa 1 từ "đã thuộc"/bất kỳ trạng thái nào về lại "cần ôn NGAY" —
+  // không đợi due tự nhiên đến hạn. Giữ nguyên ease (không phải đang "quên thật",
+  // chỉ là người học chủ động muốn ôn lại sớm), chỉ reset due về hiện tại và tắt
+  // cờ mastered để status() không còn trả về "mastered" nữa.
+  function forceBackToReview(progress, wordId) {
+    const entry = getEntry(progress, wordId);
+    entry.due = now();
+    entry.mastered = false;
+    if (entry.intervalMin >= GRADUATE_THRESHOLD) entry.intervalMin = GRADUATE_THRESHOLD - 1;
+    return entry;
+  }
+
   function status(entry) {
     if (!entry || !entry.seen) return "new";
     if (entry.mastered) return "mastered";
@@ -189,5 +201,6 @@ const SRS = (() => {
     previewLabel,
     exportAll,
     importAll,
+    forceBackToReview,
   };
 })();

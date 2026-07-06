@@ -219,19 +219,24 @@ function ggQuizNext() {
 }
 
 /* ===================================================================
-   MODAL "HỌC SRS GỘP NHIỀU BỘ" — chọn 1 hoặc nhiều bộ NGUPHAP để học CHUNG
-   trong 1 phiên SRS (tái dùng startComboSrs() trong table-srs-typing.js).
+   MODAL "HỌC SRS GỘP NHIỀU BỘ" — chọn 1 hoặc nhiều bộ CÙNG LOẠI (từ vựng HOẶC
+   ngữ pháp) để học CHUNG trong 1 phiên SRS (tái dùng startComboSrs() trong
+   table-srs-typing.js). type: "TUVUNG" | "NGUPHAP".
 =================================================================== */
-function openComboSrsModal() {
+function openComboSrsModal(type) {
+  App.comboSrsModalType = type;
   const list = document.getElementById("comboSrsDeckList");
-  const grammarDecks = App.decks.filter((d) => d.type === "NGUPHAP");
-  list.innerHTML = grammarDecks.map((d) => `
+  const decks = App.decks.filter((d) => d.type === type);
+  const unitLabel = type === "NGUPHAP" ? "cấu trúc" : "từ";
+  list.innerHTML = decks.map((d) => `
     <label class="combo-srs-deck-item">
       <input type="checkbox" value="${d.id}" class="combo-srs-checkbox">
       <span>${d.title}</span>
-      <span class="combo-srs-deck-count">${d.words.length} cấu trúc</span>
+      <span class="combo-srs-deck-count">${d.words.length} ${unitLabel}</span>
     </label>
   `).join("");
+  document.getElementById("comboSrsModalTitle").textContent =
+    type === "NGUPHAP" ? "🔀 Gộp nhiều bộ ngữ pháp" : "🔀 Gộp nhiều bộ từ vựng";
   document.getElementById("comboSrsModalOverlay").classList.remove("hidden");
 }
 
@@ -243,7 +248,13 @@ function confirmStartComboSrs() {
   const checked = Array.from(document.querySelectorAll(".combo-srs-checkbox:checked")).map((c) => c.value);
   if (!checked.length) { alert("Chọn ít nhất 1 bộ để bắt đầu học."); return; }
   closeComboSrsModal();
-  startComboSrs(checked);
+  startComboSrs(checked, false);
+}
+
+// "Chọn tất cả" trong modal — tiện khi muốn gộp hết mọi bộ cùng loại luôn,
+// không cần tick tay từng ô.
+function toggleAllComboSrsCheckboxes(checked) {
+  document.querySelectorAll(".combo-srs-checkbox").forEach((c) => { c.checked = checked; });
 }
 
 function closeGgQuizModal() {

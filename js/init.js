@@ -19,6 +19,41 @@ document.addEventListener("visibilitychange", () => {
 // Đếm ngược tới ngày thi JLPT N2 (đọc data-exam-date trên #examCountdown).
 // Thanh tiến độ lấy mốc 90 ngày trước ngày thi làm điểm bắt đầu để tạo cảm giác
 // "kim đồng hồ đang chạy" — càng gần ngày thi thanh càng đầy.
+// Tính tổng số từ/cấu trúc ĐẾN HẠN ÔN (SRS due) cộng dồn qua TẤT CẢ bộ, tách
+// riêng theo type — hiện ở widget "Cần ôn tổng hợp" trong sidebar. Chỉ đếm
+// (không load hết words vào bộ nhớ nặng nề) — mỗi entry đã lưu sẵn trong
+// localStorage theo từng deck, duyệt qua "seen && isDue" là đủ.
+function computeDueCounts() {
+  let tuvung = 0, nguphap = 0;
+  App.decks.forEach((deck) => {
+    const progress = SRS.loadProgress(deck.id);
+    const dueInDeck = deck.words.filter((w) => {
+      const entry = progress[w._id];
+      return entry && entry.seen && SRS.isDue(entry);
+    }).length;
+    if (deck.type === "NGUPHAP") nguphap += dueInDeck;
+    else tuvung += dueInDeck;
+  });
+  return { tuvung, nguphap };
+}
+
+function renderDueReviewWidget() {
+  const { tuvung, nguphap } = computeDueCounts();
+  document.getElementById("dueReviewTuvungCount").textContent = tuvung;
+  document.getElementById("dueReviewNguphapCount").textContent = nguphap;
+  document.getElementById("btnDueReviewTuvung").classList.toggle("has-due", tuvung > 0);
+  document.getElementById("btnDueReviewNguphap").classList.toggle("has-due", nguphap > 0);
+}
+
+// Bấm 1 phát "Cần ôn tổng hợp" — gộp TẤT CẢ bộ cùng loại (đang có ít nhất 1 từ
+// đến hạn hoặc không, gộp hết cho đơn giản — bộ không có gì đến hạn thì cũng
+// không góp thêm từ nào vào hàng đợi) rồi vào ôn ngay, dueOnly=true.
+function startDueReviewCombo(type) {
+  const deckIds = App.decks.filter((d) => d.type === type).map((d) => d.id);
+  if (!deckIds.length) return;
+  startComboSrs(deckIds, true);
+}
+
 function initExamCountdown() {
   const el = document.getElementById("examCountdown");
   if (!el) return;
@@ -65,6 +100,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   loadShuffleConfig();
   ensureVoicesLoaded();
   initExamCountdown();
+  renderDueReviewWidget();
+  document.getElementById("btnDueReviewTuvung").addEventListener("click", () => startDueReviewCombo("TUVUNG"));
+  document.getElementById("btnDueReviewNguphap").addEventListener("click", () => startDueReviewCombo("NGUPHAP"));
 
   App.decks = await loadDecks();
   buildGrammarIndex();
@@ -488,7 +526,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   // ----- Modal "Học SRS gộp nhiều bộ" -----
-  document.getElementById("btnOpenComboSrs").addEventListener("click", openComboSrsModal);
+  document.getElementById("btnOpenComboSrs").addEventListener("click", () => openComboSrsModal("NGUPHAP"));
+  document.getElementById("btnComboSrsSelectAll").addEventListener("click", () => {
+    const allChecked = Array.from(document.querySelectorAll(".combo-srs-checkbox")).every((c) => c.checked);
+    toggleAllComboSrsCheckboxes(!allChecked); // bấm lại lần 2 -> bỏ chọn hết
+  });
   document.getElementById("btnComboSrsClose").addEventListener("click", closeComboSrsModal);
   document.getElementById("comboSrsModalOverlay").addEventListener("click", (e) => {
     if (e.target.id === "comboSrsModalOverlay") closeComboSrsModal();

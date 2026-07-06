@@ -6,7 +6,17 @@
    từ NHIỀU bộ cùng lúc thay vì 1 bộ. `_id` mỗi từ đã có dạng "deckId::key" sẵn
    (xem wordId() trong core.js) -> không trùng nhau giữa các bộ, gộp an toàn.
 =================================================================== */
-function startComboSrs(deckIds) {
+/* ===================================================================
+   HỌC SRS GỘP NHIỀU BỘ TÙY Ý (từ vựng HOẶC ngữ pháp) — tái dùng TOÀN BỘ giao
+   diện/thuật toán SRS có sẵn (giống Anki), chỉ khác là App.currentWords/
+   App.progress được gộp từ NHIỀU bộ CÙNG LOẠI cùng lúc thay vì 1 bộ. `_id` mỗi
+   từ đã có dạng "deckId::key" sẵn (xem wordId() trong core.js) -> không trùng
+   nhau giữa các bộ, gộp an toàn.
+   dueOnly=true: dùng cho nút "Cần ôn tổng hợp" — CHỈ xếp từ đến hạn ôn vào
+   hàng đợi, không trộn thêm từ mới (khác hành vi combo thủ công thường thêm
+   tối đa 10 từ mới, ở đây mục đích thuần là dọn hết nợ ôn tập).
+=================================================================== */
+function startComboSrs(deckIds, dueOnly) {
   const decks = deckIds.map((id) => App.decks.find((d) => d.id === id)).filter(Boolean);
   if (!decks.length) return;
 
@@ -18,12 +28,19 @@ function startComboSrs(deckIds) {
   });
 
   App.srsComboActive = true;
+  App.srsComboDueOnly = !!dueOnly;
   App.currentDeckId = "__combo__";
-  App.currentDeckType = "NGUPHAP"; // combo chỉ áp dụng cho bộ ngữ pháp
+  // Loại combo suy ra từ chính các bộ được chọn (không hardcode NGUPHAP nữa) —
+  // giả định tất cả deckIds truyền vào CÙNG type (đúng theo cách 2 điểm gọi
+  // hiện tại — modal chọn thủ công và nút "cần ôn tổng hợp" — đều lọc theo 1 type).
+  App.currentDeckType = decks[0].type;
   App.currentWords = comboWords;
   App.progress = comboProgress;
 
-  const comboLabel = `🔀 Gộp ${decks.length} bộ: ${decks.map((d) => d.title).join(" + ")}`;
+  const unit = App.currentDeckType === "NGUPHAP" ? "cấu trúc" : "từ";
+  const comboLabel = dueOnly
+    ? `🔥 Cần ôn tổng hợp: ${decks.length} bộ (${App.currentDeckType === "NGUPHAP" ? "ngữ pháp" : "từ vựng"})`
+    : `🔀 Gộp ${decks.length} bộ: ${decks.map((d) => d.title).join(" + ")}`;
   document.getElementById("deckName").textContent = comboLabel;
   document.getElementById("mobileTopbarTitle").textContent = comboLabel;
 
@@ -93,7 +110,13 @@ function renderTable() {
     const cells = cols.map((col) => {
       if (col === "status") {
         const statusLabel = { new: "Chưa học", learning: "Đang học", known: "Đã thuộc", mastered: "⭐ Đã thuộc" }[st];
-        return `<td><span class="status-pill status-${st}">${statusLabel}</span></td>`;
+        // Từ đã "chín" (known/mastered) — cho phép chủ động đẩy về "cần ôn NGAY"
+        // thay vì đợi tự nhiên tới hạn (known: theo chu kỳ SRS bình thường,
+        // mastered: 60 ngày) — xem SRS.forceBackToReview().
+        const backBtn = (st === "known" || st === "mastered")
+          ? `<button class="table-back-to-review-btn" data-back-review-id="${w._id}" title="Đưa về ôn lại ngay, không đợi tới hạn tự nhiên">↩ Ôn lại</button>`
+          : "";
+        return `<td><span class="status-pill status-${st}">${statusLabel}</span>${backBtn}</td>`;
       }
       const colMeta = meta[col];
       let raw = w[col] || "";
@@ -128,6 +151,14 @@ function renderTable() {
     btn.addEventListener("click", () => {
       toggleStar(App.currentDeckId, btn.dataset.starWordId);
       renderTable();
+    });
+  });
+  document.querySelectorAll(".table-back-to-review-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      SRS.forceBackToReview(App.progress, btn.dataset.backReviewId);
+      saveCurrentSrsProgress();
+      renderTable();
+      renderDueReviewWidget();
     });
   });
 
@@ -167,7 +198,9 @@ function initSrsMode(restrictToIds) {
   const shuffleOn = App.shuffleEnabled.srs;
   const orderedNew = shuffleOn ? shuffle(newWords) : newWords;
   const orderedDue = shuffleOn ? shuffle(due) : due;
-  const newSlice = orderedNew.slice(0, 10);
+  // "Cần ôn tổng hợp" (dueOnly): chỉ dọn đúng các từ đến hạn, KHÔNG trộn từ mới —
+  // khác combo thủ công bình thường (luôn thêm tối đa 10 từ mới cho đa dạng).
+  const newSlice = App.srsComboDueOnly ? [] : orderedNew.slice(0, 10);
   App.srsQueue = orderedDue.concat(newSlice);
   App.srsIndex = 0;
 
@@ -255,6 +288,7 @@ function rateCurrentSrsWord(rating) {
   } else {
     renderSrsCard();
   }
+  renderDueReviewWidget();
 }
 
 /* ===================================================================
