@@ -1411,6 +1411,127 @@ mark.exam-note-mark {
 .quiz-opt.is-correct-lucky, .exam-result-dot.is-correct-lucky {
   background: #d4a017; border-color: #d4a017; color: #fff; /* 🚩 lụi mà đúng -> vàng cam (cảnh báo nhẹ) */
 }
-.quiz-opt.is-correct-unsure, .exam-result-dot.is-correct-unsure {
-  background: #d2521e; border-color: #d2521e; color: #fff; /* ❓ phân vân mà đúng -> đỏ cam (cảnh báo mạnh hơn) */
+/* ===================================================================
+   EXAM/CHOUKAI PICKER — card grid thay dropdown cũ. Dropdown gốc vẫn tồn tại
+   trong DOM (ẩn qua .picker-hidden) để không phá code khác đang sync .value.
+=================================================================== */
+.picker-hidden { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; overflow: hidden; }
+.exam-picker-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px; margin: 12px 0 20px;
+}
+.exam-picker-card {
+  text-align: left; cursor: pointer; padding: 14px 16px;
+  border-radius: var(--radius); background: var(--bg-1);
+  border: 1px solid var(--border-soft); box-shadow: var(--shadow-soft);
+  display: flex; flex-direction: column; gap: 6px;
+  transition: transform .14s ease, border-color .14s ease, box-shadow .14s ease;
+}
+.exam-picker-card:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: var(--shadow); }
+.exam-picker-card-title { font-size: 14px; font-weight: 700; color: var(--text-0); }
+.exam-picker-card-meta { font-size: 12px; color: var(--text-2); }
+.exam-picker-card-status {
+  align-self: flex-start; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 999px;
+}
+.exam-picker-card-status.is-new { background: var(--accent-soft); color: var(--accent); }
+.exam-picker-card-status.is-done { background: var(--good-soft); color: var(--good); }
+
+/* ===================================================================
+   DASHBOARD — layout/spacing CHUNG cho cả 2 theme (màu sắc để riêng trong
+   theme-plus.css / theme-new.css). Grid 2 cột: chart lớn bên trái, sidebar
+   giáo trình bên phải; hàng dưới 2 card ngang (tiến độ + kết quả gần đây).
+=================================================================== */
+.dash-greeting { padding: 4px 4px 20px; }
+.dash-greeting-title { font-size: 26px; font-weight: 800; color: var(--text-0); margin-bottom: 4px; }
+.dash-greeting-sub { font-size: 13.5px; color: var(--text-2); }
+
+.dash-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
+}
+.dash-chart-card { grid-column: 1; grid-row: 1; }
+.dash-side-card { grid-column: 2; grid-row: 1 / span 2; }
+.dash-bottom-card { grid-column: 1; }
+.dash-bottom-card + .dash-bottom-card { grid-column: 1; }
+/* 2 card dưới xếp cạnh nhau trong cùng cột chart (không lấn sang cột sidebar) */
+.dash-grid > .dash-bottom-card:nth-of-type(3) { grid-row: 2; }
+.dash-grid > .dash-bottom-card:nth-of-type(4) { grid-row: 3; }
+
+.dash-chart-card, .dash-side-card, .dash-bottom-card {
+  padding: 20px; border-radius: var(--radius);
+  background: var(--bg-1); border: 1px solid var(--border-soft);
+}
+.dash-chart-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+.dash-chart-title, .dash-side-title { font-size: 15px; font-weight: 800; color: var(--text-0); margin-bottom: 4px; }
+.dash-chart-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
+.dash-chart-tab {
+  font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 999px;
+  background: var(--bg-2); border: 1px solid var(--border); color: var(--text-2);
+  cursor: pointer; transition: all .15s ease;
+}
+.dash-chart-box { min-height: 160px; }
+.dash-chart-empty { color: var(--text-2); font-size: 13px; padding: 30px 0; text-align: center; }
+.dash-chart-caption { text-align: center; font-size: 12px; color: var(--text-2); margin-top: 10px; }
+
+/* Chart "Theo giáo trình" — thanh ngang */
+.dash-hbar-chart { display: flex; flex-direction: column; gap: 14px; }
+.dash-hbar-row { display: grid; grid-template-columns: 120px 1fr 90px; align-items: center; gap: 10px; }
+.dash-hbar-label { font-size: 12.5px; font-weight: 700; color: var(--text-1); }
+.dash-hbar-track { height: 10px; border-radius: 999px; background: var(--bg-3); overflow: hidden; }
+.dash-hbar-fill { height: 100%; border-radius: 999px; transition: width .5s ease; }
+.dash-hbar-value { font-size: 12.5px; font-weight: 800; color: var(--text-0); text-align: right; }
+.dash-hbar-sub { font-weight: 500; color: var(--text-2); }
+
+/* Chart "Theo trạng thái" — donut tái dùng stats-donut-svg + legend riêng */
+.dash-donut-wrap { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; justify-content: center; }
+.dash-donut-legend { display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--text-1); }
+
+/* Chart "Theo thời gian" — cột SVG */
+.dash-timeseries-svg { width: 100%; height: 140px; }
+.dash-chart-axis-label { font-size: 3.5px; fill: var(--text-2); }
+
+/* Card "Chọn giáo trình học" */
+.dash-course-list { display: flex; flex-direction: column; gap: 12px; max-height: 460px; overflow-y: auto; }
+.dash-course-card {
+  padding: 14px 16px; border-radius: var(--radius-sm);
+  background: var(--bg-2); border: 1px solid var(--border-soft);
+}
+.dash-course-card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+.dash-course-card-title { font-size: 13.5px; font-weight: 800; color: var(--text-0); }
+.dash-course-card-badge { font-size: 10.5px; font-weight: 700; color: var(--text-2); background: var(--bg-3); padding: 2px 8px; border-radius: 999px; }
+.dash-course-card-sub { font-size: 11.5px; color: var(--text-2); margin-bottom: 8px; }
+.dash-course-card-bar { height: 6px; border-radius: 999px; background: var(--bg-3); overflow: hidden; margin-bottom: 10px; }
+.dash-course-card-bar-fill { height: 100%; border-radius: 999px; background: var(--accent); transition: width .5s ease; }
+.dash-course-card-btn {
+  width: 100%; padding: 8px; border-radius: var(--radius-sm); font-size: 12.5px; font-weight: 700;
+  background: var(--accent-soft); color: var(--accent); border: 1px solid transparent; cursor: pointer;
+  transition: all .15s ease;
+}
+.dash-course-card-btn:hover { filter: brightness(1.15); transform: translateY(-1px); }
+
+/* Card "Tiến độ tổng quan" */
+.dash-progress-list { display: flex; flex-direction: column; gap: 16px; }
+.dash-progress-label { display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; color: var(--text-1); margin-bottom: 6px; }
+.dash-progress-value { color: var(--text-0); }
+.dash-progress-track { height: 8px; border-radius: 999px; background: var(--bg-3); overflow: hidden; }
+.dash-progress-fill { height: 100%; border-radius: 999px; width: 0%; transition: width .5s ease; }
+
+/* Card "Kết quả đề thi gần đây" */
+.dash-result-list { display: flex; flex-direction: column; gap: 8px; }
+.dash-result-row {
+  display: flex; align-items: center; gap: 10px; padding: 9px 12px;
+  border-radius: var(--radius-sm); background: var(--bg-2); border: 1px solid var(--border-soft);
+  font-size: 12.5px;
+}
+.dash-result-kind { font-size: 15px; }
+.dash-result-title { flex: 1; color: var(--text-1); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dash-result-score { color: var(--text-0); font-weight: 700; white-space: nowrap; }
+
+@media (max-width: 900px) {
+  .dash-grid { grid-template-columns: 1fr; }
+  .dash-chart-card, .dash-side-card, .dash-bottom-card { grid-column: 1 !important; }
+  .dash-side-card { grid-row: auto !important; }
+  .dash-hbar-row { grid-template-columns: 90px 1fr 70px; }
 }
