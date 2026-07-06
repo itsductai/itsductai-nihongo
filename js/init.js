@@ -356,6 +356,31 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderWeaknessMode();
   });
 
+  // ----- Theme toggle: classic (theme-plus.css) <-> new (theme-new.css, Beta) -----
+  // Feature-flag đơn giản qua localStorage — bật/tắt disabled trên 2 thẻ <link>,
+  // KHÔNG cần reload trang. Nếu theme mới ổn định, xóa hẳn theme-plus.css +
+  // nút này sau, không ảnh hưởng gì tới theme-new.css đang chạy.
+  const themeBtn = document.getElementById("btnToggleTheme");
+  const themeClassicLink = document.getElementById("themeClassicLink");
+  const themeNewLink = document.getElementById("themeNewLink");
+  const THEME_STORAGE_KEY = "n2vocab_theme";
+
+  function applyTheme(theme) {
+    const isNew = theme === "new";
+    themeClassicLink.disabled = isNew;
+    themeNewLink.disabled = !isNew;
+    themeBtn.classList.toggle("is-active", isNew);
+    themeBtn.title = isNew ? "Đang dùng giao diện MỚI (Beta) — bấm để quay lại giao diện cũ" : "Chuyển sang giao diện mới (Beta)";
+  }
+  const savedTheme = localStorage.getItem(THEME_STORAGE_KEY) || "classic";
+  applyTheme(savedTheme);
+  themeBtn.addEventListener("click", () => {
+    const current = localStorage.getItem(THEME_STORAGE_KEY) || "classic";
+    const next = current === "new" ? "classic" : "new";
+    localStorage.setItem(THEME_STORAGE_KEY, next);
+    applyTheme(next);
+  });
+
   // ----- Sound toggle -----
   const soundBtn = document.getElementById("btnToggleSound");
   function refreshSoundBtnUI() {
