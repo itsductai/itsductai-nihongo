@@ -33,7 +33,7 @@ html, body {
   font-family: "Hiragino Sans", "Noto Sans JP", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-#app { display: flex; height: 100vh; overflow: hidden; }
+#app { display: flex; flex-direction: column; height: 100vh; overflow: hidden; }
 
 /* ===== Trường âm + furigana ===== */
 .choon {
@@ -49,46 +49,52 @@ rt {
   user-select: none;
 }
 
-/* ===== SIDEBAR ===== */
-.sidebar {
-  width: 250px;
+/* ===== NAVBAR (thay sidebar cũ — nằm ngang, cố định trên cùng) ===== */
+.navbar {
   flex-shrink: 0;
   background: var(--bg-1);
-  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
   display: flex;
   flex-direction: column;
-  padding: 18px 14px;
-  overflow-y: auto;
+  position: relative;
+  z-index: 20;
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 4px 6px 18px;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 14px;
+.navbar-row {
+  display: flex; align-items: center; gap: 16px;
+  padding: 10px 20px;
 }
+
+.brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 
 .brand-mark {
-  width: 36px; height: 36px; border-radius: 8px;
+  width: 34px; height: 34px; border-radius: 8px;
   background: linear-gradient(135deg, var(--accent), var(--purple));
   display: flex; align-items: center; justify-content: center;
-  font-size: 18px; font-weight: 700; color: #fff; flex-shrink: 0;
+  font-size: 17px; font-weight: 700; color: #fff; flex-shrink: 0;
 }
 
-.brand-title { font-size: 14px; font-weight: 700; color: var(--text-0); }
+.brand-title { font-size: 14px; font-weight: 700; color: var(--text-0); line-height: 1.2; }
 .brand-sub {
-  font-size: 11px; color: var(--text-2); margin-top: 2px;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 180px;
+  font-size: 10.5px; color: var(--text-2); margin-top: 1px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px;
 }
 
-.nav { display: flex; flex-direction: column; gap: 3px; flex: 1; }
+/* Chip đếm ngược thi + cần ôn — nằm giữa navbar, thu gọn ngang thay vì card dọc */
+.navbar-chips { display: flex; align-items: center; gap: 8px; flex: 1; overflow-x: auto; }
+.navbar-right { display: flex; align-items: center; gap: 4px; flex-shrink: 0; margin-left: auto; }
+
+/* Nav ngang — thay .nav dọc cũ. Cuộn ngang khi tràn thay vì xuống dòng lộn xộn. */
+.nav {
+  display: flex; flex-direction: row; align-items: center; gap: 4px; flex: 1;
+  padding: 4px 20px 10px; overflow-x: auto;
+}
+.nav::-webkit-scrollbar { display: none; }
 
 .nav-item {
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; gap: 7px; flex-shrink: 0;
   background: none; border: none; color: var(--text-1);
-  padding: 10px 12px; border-radius: 8px; font-size: 13.5px;
+  padding: 8px 13px; border-radius: 8px; font-size: 13px; white-space: nowrap;
   cursor: pointer; text-align: left; transition: background 0.15s, color 0.15s;
 }
 .nav-item:hover { background: var(--bg-hover); color: var(--text-0); }
@@ -96,12 +102,36 @@ rt {
 .nav-icon { font-size: 14px; width: 18px; text-align: center; }
 .nav-section-label {
   font-size: 10.5px; color: var(--text-2); text-transform: uppercase;
-  letter-spacing: 0.06em; margin: 12px 6px 4px; font-weight: 700;
+  letter-spacing: 0.06em; margin: 0 6px; font-weight: 700; flex-shrink: 0;
+  padding-left: 10px; border-left: 1px solid var(--border);
+  display: flex; align-items: center; height: 20px;
 }
+.nav-section-label:first-child { border-left: none; padding-left: 0; }
 
-.sidebar-bottom {
-  border-top: 1px solid var(--border); padding-top: 14px;
-  display: flex; flex-direction: column; gap: 12px;
+/* Compact hóa 2 widget cũ (vốn thiết kế dạng card dọc trong sidebar) để vừa
+   trong navbar-chips ngang — CHỈ đè layout/kích thước, màu sắc vẫn do
+   theme-plus.css/theme-new.css quyết định (không đụng vào đó). */
+.navbar-chips .exam-countdown {
+  display: flex; align-items: center; gap: 8px;
+  padding: 6px 12px; margin: 0; flex-shrink: 0;
+}
+.navbar-chips .exam-countdown-badge { padding: 2px 8px; font-size: 9px; }
+.navbar-chips .exam-countdown-days { font-size: 16px; }
+.navbar-chips .exam-countdown-unit { font-size: 10.5px; }
+.navbar-chips .due-review-row {
+  display: flex; align-items: center; gap: 5px;
+  padding: 6px 10px; margin: 0; flex-shrink: 0;
+}
+.navbar-chips .due-review-label { font-size: 13px; }
+.navbar-chips .due-review-count { font-size: 12px; padding: 1px 7px; }
+
+/* Panel Cài đặt (deck picker + xuất/nhập) — dropdown nổi dưới nút ⚙ */
+.navbar-settings-panel {
+  position: absolute; top: 100%; right: 16px; margin-top: 6px;
+  width: 260px; z-index: 30;
+  background: var(--bg-1); border: 1px solid var(--border);
+  border-radius: var(--radius-sm, 10px); box-shadow: var(--shadow, 0 12px 30px rgba(0,0,0,0.4));
+  padding: 14px; display: flex; flex-direction: column; gap: 12px;
 }
 
 .deck-select label { font-size: 11px; color: var(--text-2); display: block; margin-bottom: 5px; }
@@ -122,7 +152,7 @@ rt {
 /* ===== MAIN ===== */
 .main { flex: 1; overflow-y: auto; padding: 28px 36px; }
 
-/* .main-wrap bọc mobile-topbar + main — trên desktop chiếm toàn bộ phần còn lại sau sidebar */
+/* .main-wrap bọc mobile-topbar + main — trên desktop chiếm toàn bộ phần còn lại dưới navbar */
 .main-wrap { flex: 1; display: flex; flex-direction: column; min-width: 0; min-height: 0; overflow: hidden; }
 .view { max-width: 920px; margin: 0 auto; }
 .hidden { display: none !important; }
@@ -512,7 +542,7 @@ tbody tr:last-child td { border-bottom: none; }
 .exit-focus-btn:hover { background: var(--bad-soft); color: var(--bad); transform: scale(1.06); }
 
 /* Khi bật focus mode: ẩn sidebar, mở rộng main toàn màn hình */
-#app.focus-mode .sidebar { display: none; }
+#app.focus-mode .navbar { display: none; }
 #app.focus-mode .main {
   padding: 64px 48px;
   /* LƯU Ý: dùng align-items: flex-start (KHÔNG phải center) — đây là lỗi
@@ -593,17 +623,18 @@ tbody tr:last-child td { border-bottom: none; }
 #app.focus-mode .choukai-shadow-note { display: none; }
 
 @media (max-width: 860px) {
-  /* Sidebar chuyển thành drawer trượt từ trái, ẩn mặc định trên mobile.
-     Đây là thay đổi quan trọng so với bản cũ: bản cũ co sidebar lại 76px
-     và ẨN LUÔN .sidebar-bottom (chứa dropdown chọn bộ học/đề thi), khiến
-     không thể chọn bộ học trên điện thoại. Giờ sidebar giữ ĐẦY ĐỦ nội dung,
-     chỉ ẩn/hiện toàn bộ qua nút hamburger. */
-  .sidebar {
+  /* Navbar chuyển thành drawer trượt từ trái, ẩn mặc định trên mobile — giữ
+     ĐẦY ĐỦ nội dung (brand, chip, nav, settings), chỉ ẩn/hiện qua hamburger. */
+  .navbar {
     position: fixed; top: 0; left: 0; height: 100vh; width: 280px;
     z-index: 150; transform: translateX(-100%);
     transition: transform 0.25s ease; box-shadow: var(--shadow);
+    flex-direction: column; overflow-y: auto;
   }
-  .sidebar.is-open { transform: translateX(0); }
+  .navbar.is-open { transform: translateX(0); }
+  .navbar-row { flex-wrap: wrap; }
+  .nav { flex-direction: column; align-items: stretch; overflow-x: visible; }
+  .nav-item { width: 100%; }
 
   .sidebar-backdrop {
     position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 140;
@@ -622,7 +653,6 @@ tbody tr:last-child td { border-bottom: none; }
   }
   .mobile-topbar-title { font-size: 13px; color: var(--text-1); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
-  #app { flex-direction: column; }
   .main { padding: 16px 12px; flex: 1; }
   .view { max-width: 100%; }
 
