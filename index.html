@@ -47,11 +47,19 @@
         </button>
       </div>
 
+      <!-- Từ điển nội bộ — tìm bất kỳ từ vựng/ngữ pháp nào (kanji/hiragana/nghĩa
+           tiếng Việt) trên TẤT CẢ bộ đang có, không cần đổi bộ trước. -->
+      <div class="navbar-search-wrap">
+        <span class="nav-svg-icon navbar-search-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span>
+        <input type="text" id="globalSearchInput" class="navbar-search-input" placeholder="Tra từ vựng / ngữ pháp... (kanji, hiragana, nghĩa)" autocomplete="off">
+        <div class="navbar-search-results hidden" id="globalSearchResults"></div>
+      </div>
+
       <div class="navbar-right">
-        <button id="btnToggleSound" class="sound-toggle-btn" title="Bật/tắt âm thanh phản hồi">🔊</button>
-        <button id="btnToggleSpeech" class="sound-toggle-btn" title="Bật/tắt phát âm khi lật thẻ">🗣</button>
-        <button id="btnToggleTheme" class="sound-toggle-btn" title="Chuyển sang giao diện mới (Beta)">🎨</button>
-        <button id="btnNavbarSettings" class="sound-toggle-btn" title="Bộ học / Xuất-nhập tiến độ">⚙</button>
+        <button id="btnToggleSound" class="sound-toggle-btn" title="Bật/tắt âm thanh phản hồi"><span class="nav-svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></svg></span></button>
+        <button id="btnToggleSpeech" class="sound-toggle-btn" title="Bật/tắt phát âm khi lật thẻ"><span class="nav-svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 19v3"/></svg></span></button>
+        <button id="btnToggleTheme" class="sound-toggle-btn" title="Chuyển sang giao diện mới (Beta)"><span class="nav-svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20c1.2 0 2-1 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.3 0-1 .8-1.9 1.9-1.9H17a3 3 0 0 0 3-3c0-5.5-4-10.5-8-10.5Z"/><circle cx="7" cy="10" r="1.2" fill="currentColor" stroke="none"/><circle cx="11" cy="6.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="16" cy="8.5" r="1.2" fill="currentColor" stroke="none"/></svg></span></button>
+        <button id="btnNavbarSettings" class="sound-toggle-btn" title="Bộ học / Xuất-nhập tiến độ"><span class="nav-svg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></svg></span></button>
       </div>
     </div>
 
@@ -850,13 +858,13 @@
 <script src="js/stats-weakness.js?v=5"></script>
 <script src="js/dashboard.js?v=1"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=11"></script>
+<script src="js/loader-nav.js?v=12"></script>
 <script src="js/flashcard-edit.js?v=4"></script>
 <script src="js/table-srs-typing.js?v=7"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=6"></script>
 <script src="js/choukai.js?v=11"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=15"></script>
+<script src="js/init.js?v=16"></script>
 </body>
 </html>
