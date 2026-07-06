@@ -312,11 +312,22 @@ rt {
 
 .rate-row { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
 .rate-btn {
-  padding: 12px 22px; border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer;
-  border: 1px solid var(--border); background: var(--bg-2); color: var(--text-0);
-  transition: transform 0.1s, background 0.15s; display: flex; flex-direction: column; align-items: center; gap: 2px;
+  position: relative; overflow: hidden;
+  padding: 13px 24px; border-radius: 999px; font-size: 14px; font-weight: 700; cursor: pointer;
+  border: 1.5px solid var(--border); background: var(--bg-2); color: var(--text-0);
+  transition: transform 0.16s cubic-bezier(.34,1.56,.64,1), background 0.15s, border-color 0.15s, box-shadow 0.2s;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
 }
-.rate-btn:active { transform: scale(0.96); }
+.rate-btn:hover { transform: translateY(-3px) scale(1.03); }
+.rate-btn:active { transform: translateY(0) scale(0.95); transition-duration: .08s; }
+/* Vệt sáng quét qua khi hover — cảm giác "phản hồi sống" thay vì đổi màu tĩnh */
+.rate-btn::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.14) 50%, transparent 70%);
+  transform: translateX(-120%); transition: transform .5s ease;
+  pointer-events: none;
+}
+.rate-btn:hover::before { transform: translateX(120%); }
 .rate-key-hint {
   font-size: 10px; font-weight: 400; opacity: 0.6; margin-left: 4px;
   background: var(--bg-3); padding: 1px 6px; border-radius: 4px;
@@ -324,13 +335,19 @@ rt {
 .rate-time { font-size: 10px; font-weight: 400; opacity: 0.75; display: block; }
 
 .rate-forget { color: var(--bad); border-color: var(--bad-soft); }
-.rate-forget:hover { background: var(--bad-soft); }
+.rate-forget:hover { background: var(--bad-soft); border-color: var(--bad); box-shadow: 0 8px 20px -4px var(--bad-soft); transform: translateY(-3px) scale(1.03) rotate(-1deg); }
 .rate-hard { color: var(--warn); border-color: var(--warn-soft); }
-.rate-hard:hover { background: var(--warn-soft); }
+.rate-hard:hover { background: var(--warn-soft); border-color: var(--warn); box-shadow: 0 8px 20px -4px var(--warn-soft); }
 .rate-remember { color: var(--good); border-color: var(--good-soft); }
-.rate-remember:hover { background: var(--good-soft); }
+.rate-remember:hover { background: var(--good-soft); border-color: var(--good); box-shadow: 0 8px 20px -4px var(--good-soft); transform: translateY(-3px) scale(1.03) rotate(1deg); }
 .rate-flip { background: var(--accent-soft); color: var(--accent); border-color: var(--accent-soft); }
-.rate-flip:hover { background: #34466b; }
+.rate-flip:hover { background: #34466b; box-shadow: 0 8px 20px -4px var(--accent-soft); }
+.rate-flip:active svg, .rate-flip:active { animation: rateFlipSpin .35s ease; }
+@keyframes rateFlipSpin { from { transform: scale(0.95) rotateY(0deg); } to { transform: scale(0.95) rotateY(180deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .rate-btn, .rate-btn::before { transition: none !important; animation: none !important; }
+}
 
 /* ===== TABLE ===== */
 .search-input, .filter-select {
@@ -1465,6 +1482,45 @@ mark.exam-note-mark {
 }
 .exam-picker-card-status.is-new { background: var(--accent-soft); color: var(--accent); }
 .exam-picker-card-status.is-done { background: var(--good-soft); color: var(--good); }
+
+/* ===================================================================
+   PANEL "DANH SÁCH TỪ TRONG HÀNG ĐỢI" — dùng chung Flashcard + SRS.
+   <details>/<summary> gốc HTML, không cần JS riêng để đóng/mở.
+=================================================================== */
+.queue-list-wrap { margin-top: 18px; }
+.queue-list-summary {
+  cursor: pointer; font-size: 12.5px; font-weight: 700; color: var(--text-1);
+  padding: 8px 12px; border-radius: var(--radius-sm, 10px);
+  background: var(--bg-1); border: 1px solid var(--border);
+  list-style: none; user-select: none;
+}
+.queue-list-summary::-webkit-details-marker { display: none; }
+.queue-list-summary:hover { background: var(--bg-hover); color: var(--text-0); }
+.queue-list {
+  margin-top: 8px; max-height: 280px; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 6px; border-radius: var(--radius-sm, 10px);
+  background: var(--bg-1); border: 1px solid var(--border-soft, var(--border));
+}
+.queue-list-empty { padding: 16px; text-align: center; color: var(--text-2); font-size: 12.5px; }
+.queue-list-row {
+  width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  padding: 8px 12px; border-radius: 8px; border: none; background: transparent;
+  color: var(--text-1); font-size: 13px; cursor: pointer; text-align: left;
+  transition: background .14s ease, transform .1s ease;
+}
+.queue-list-row:hover { background: var(--bg-hover); transform: translateX(2px); }
+.queue-list-row.is-current {
+  background: var(--accent-soft); color: var(--accent); font-weight: 700;
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+.queue-list-text { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.queue-list-detail {
+  margin: 0 4px 4px; padding: 10px 14px; border-radius: 8px;
+  background: var(--bg-2); font-size: 12.5px; color: var(--text-1);
+}
+.queue-list-detail-nghia { margin-bottom: 4px; }
+.queue-list-detail-status b { color: var(--text-0); }
 
 /* ===================================================================
    DASHBOARD — layout/spacing CHUNG cho cả 2 theme (màu sắc để riêng trong
