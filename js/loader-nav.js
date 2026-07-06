@@ -392,7 +392,6 @@ function switchDeck(deckId) {
   App.currentWords = deck.words;
   App.progress = SRS.loadProgress(deckId);
   document.getElementById("deckName").textContent = deck.title;
-  document.getElementById("mobileTopbarTitle").textContent = deck.title;
 
   if (App.quizTimerHandle) clearInterval(App.quizTimerHandle);
   if (App.matchTimerHandle) clearInterval(App.matchTimerHandle);

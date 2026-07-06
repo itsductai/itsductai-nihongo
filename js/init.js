@@ -144,17 +144,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   });
 
-  // ----- Nav dạng drawer trên mobile (≤860px) -----
-  function openMobileSidebar() {
-    document.querySelector(".navbar").classList.add("is-open");
-    document.getElementById("sidebarBackdrop").classList.add("is-visible");
-  }
-  function closeMobileSidebar() {
-    document.querySelector(".navbar").classList.remove("is-open");
-    document.getElementById("sidebarBackdrop").classList.remove("is-visible");
-  }
-  document.getElementById("btnMobileMenu").addEventListener("click", openMobileSidebar);
-
   // "Unlock" speechSynthesis trên iOS: phải gọi speak() ít nhất 1 lần ngay trong
   // user-gesture đầu tiên (bất kỳ tap nào trên trang), nếu không các lệnh speak()
   // gọi sau đó (kể cả trong gesture khác) có thể bị im lặng không phát ra tiếng.
@@ -173,12 +162,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   document.addEventListener("touchstart", unlockSpeechOnce, { once: true });
   document.addEventListener("click", unlockSpeechOnce, { once: true });
-  document.getElementById("sidebarBackdrop").addEventListener("click", closeMobileSidebar);
-  // Tự đóng sidebar sau khi chọn 1 mục trong nav, để vào ngay nội dung học (chỉ có
-  // tác dụng trên mobile vì trên desktop sidebar luôn cố định hiện, không có class is-open)
-  document.getElementById("navList").addEventListener("click", (e) => {
-    if (e.target.closest(".nav-item")) closeMobileSidebar();
-  });
+
 
   // ----- Panel Cài đặt (deck picker + xuất/nhập) trong navbar mới -----
   document.getElementById("btnNavbarSettings").addEventListener("click", (e) => {
@@ -704,7 +688,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   // ----- Deck picker -----
   document.getElementById("deckPicker").addEventListener("change", (e) => {
     switchDeck(e.target.value);
-    closeMobileSidebar();
   });
 
   // ----- Export / Import progress (toàn bộ lịch sử học + cấu hình + sửa tạm) -----
