@@ -144,13 +144,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   });
 
-  // ----- Sidebar dạng drawer trên mobile (≤860px) -----
+  // ----- Nav dạng drawer trên mobile (≤860px) -----
   function openMobileSidebar() {
-    document.querySelector(".sidebar").classList.add("is-open");
+    document.querySelector(".navbar").classList.add("is-open");
     document.getElementById("sidebarBackdrop").classList.add("is-visible");
   }
   function closeMobileSidebar() {
-    document.querySelector(".sidebar").classList.remove("is-open");
+    document.querySelector(".navbar").classList.remove("is-open");
     document.getElementById("sidebarBackdrop").classList.remove("is-visible");
   }
   document.getElementById("btnMobileMenu").addEventListener("click", openMobileSidebar);
@@ -178,6 +178,18 @@ document.addEventListener("DOMContentLoaded", async () => {
   // tác dụng trên mobile vì trên desktop sidebar luôn cố định hiện, không có class is-open)
   document.getElementById("navList").addEventListener("click", (e) => {
     if (e.target.closest(".nav-item")) closeMobileSidebar();
+  });
+
+  // ----- Panel Cài đặt (deck picker + xuất/nhập) trong navbar mới -----
+  document.getElementById("btnNavbarSettings").addEventListener("click", (e) => {
+    e.stopPropagation();
+    document.getElementById("navbarSettingsPanel").classList.toggle("hidden");
+  });
+  document.addEventListener("click", (e) => {
+    const panel = document.getElementById("navbarSettingsPanel");
+    if (!panel.classList.contains("hidden") && !panel.contains(e.target) && e.target.id !== "btnNavbarSettings") {
+      panel.classList.add("hidden");
+    }
   });
 
   // ----- Flashcard mode -----
