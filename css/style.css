@@ -61,8 +61,8 @@ rt {
 }
 
 .navbar-row {
-  display: flex; align-items: center; gap: 16px;
-  padding: 10px 20px;
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 10px 16px;
 }
 
 .brand { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
@@ -84,12 +84,14 @@ rt {
 .navbar-chips { display: flex; align-items: center; gap: 8px; flex: 1; overflow-x: auto; }
 .navbar-right { display: flex; align-items: center; gap: 4px; flex-shrink: 0; margin-left: auto; }
 
-/* Nav ngang — thay .nav dọc cũ. Cuộn ngang khi tràn thay vì xuống dòng lộn xộn. */
+/* Nav ngang — icon-only nên đủ gọn để KHÔNG cần cuộn ngang (overflow-x:auto
+   kéo theo overflow-y:auto ẩn, sẽ CLIP mất .nav-dropdown position:absolute —
+   đây chính là nguyên nhân dropdown bị che/không bấm được). Dùng flex-wrap
+   thay vì scroll để không cần overflow ở container cha. */
 .nav {
-  display: flex; flex-direction: row; align-items: center; gap: 4px; flex: 1;
-  padding: 4px 20px 10px; overflow-x: auto;
+  display: flex; flex-direction: row; align-items: center; flex-wrap: wrap; gap: 4px; flex: 1;
+  padding: 4px 20px 8px; overflow: visible;
 }
-.nav::-webkit-scrollbar { display: none; }
 
 .nav-item {
   display: flex; align-items: center; gap: 7px; flex-shrink: 0;
@@ -107,6 +109,47 @@ rt {
   display: flex; align-items: center; height: 20px;
 }
 .nav-section-label:first-child { border-left: none; padding-left: 0; }
+
+/* ===== SVG icon dùng chung navbar — đồng nhất kích thước/tone màu ===== */
+.nav-svg-icon { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; flex-shrink: 0; }
+.nav-svg-icon svg { width: 100%; height: 100%; }
+.nav-category-trigger .nav-svg-icon { width: 19px; height: 19px; }
+.sound-toggle-btn .nav-svg-icon { width: 17px; height: 17px; }
+
+/* ===== Thanh tìm kiếm nội bộ (từ điển) — giữa navbar ===== */
+.navbar-search-wrap {
+  position: relative; flex: 1 1 320px; max-width: 420px; margin: 0 auto;
+  display: flex; align-items: center;
+}
+.navbar-search-icon {
+  position: absolute; left: 11px; color: var(--text-2); pointer-events: none;
+}
+.navbar-search-input {
+  width: 100%; background: var(--bg-2); border: 1px solid var(--border);
+  color: var(--text-0); padding: 8px 12px 8px 34px; border-radius: 999px;
+  font-size: 12.5px; transition: border-color .15s, background .15s;
+}
+.navbar-search-input:focus { outline: none; border-color: var(--accent); background: var(--bg-3); }
+.navbar-search-input::placeholder { color: var(--text-2); }
+
+.navbar-search-results {
+  position: absolute; top: 100%; left: 0; right: 0; margin-top: 6px;
+  max-height: 360px; overflow-y: auto; z-index: 200;
+  background: var(--bg-1); border: 1px solid var(--border);
+  border-radius: var(--radius-sm, 10px); box-shadow: var(--shadow, 0 12px 30px rgba(0,0,0,0.4));
+  padding: 6px;
+}
+.search-result-row {
+  display: flex; align-items: center; gap: 10px; width: 100%;
+  padding: 9px 10px; border-radius: 8px; background: none; border: none;
+  text-align: left; cursor: pointer; color: var(--text-1);
+  transition: background .12s;
+}
+.search-result-row:hover { background: var(--bg-hover); color: var(--text-0); }
+.search-result-kanji { font-weight: 700; color: var(--text-0); flex-shrink: 0; }
+.search-result-nghia { flex: 1; font-size: 12px; color: var(--text-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.search-result-deck { font-size: 10px; padding: 2px 7px; border-radius: 999px; background: var(--bg-3); color: var(--text-2); flex-shrink: 0; }
+.search-result-empty { padding: 14px; text-align: center; color: var(--text-2); font-size: 12.5px; }
 
 /* Icon đơn (Dashboard) — không có dropdown, chỉ hiện icon cho gọn */
 .nav-item-standalone { padding: 8px 11px; }
@@ -127,7 +170,7 @@ rt {
 
 .nav-dropdown {
   position: absolute; top: 100%; left: 0; margin-top: 6px;
-  min-width: 210px; z-index: 40;
+  min-width: 210px; z-index: 200;
   background: var(--bg-1); border: 1px solid var(--border);
   border-radius: var(--radius-sm, 10px); box-shadow: var(--shadow, 0 12px 30px rgba(0,0,0,0.4));
   padding: 6px; display: none; flex-direction: column; gap: 2px;
@@ -677,6 +720,7 @@ tbody tr:last-child td { border-bottom: none; }
   }
   .navbar.is-open { transform: translateX(0); }
   .navbar-row { flex-wrap: wrap; }
+  .navbar-search-wrap { order: 3; flex: 1 1 100%; max-width: 100%; margin: 6px 0 0; }
   .nav { flex-direction: column; align-items: stretch; overflow-x: visible; }
   .nav-item { width: 100%; }
   /* Trên mobile, nav đã là drawer dọc full-height -> dropdown không cần nổi
