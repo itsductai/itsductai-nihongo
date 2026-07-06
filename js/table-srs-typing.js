@@ -42,7 +42,6 @@ function startComboSrs(deckIds, dueOnly) {
     ? `🔥 Cần ôn tổng hợp: ${decks.length} bộ (${App.currentDeckType === "NGUPHAP" ? "ngữ pháp" : "từ vựng"})`
     : `🔀 Gộp ${decks.length} bộ: ${decks.map((d) => d.title).join(" + ")}`;
   document.getElementById("deckName").textContent = comboLabel;
-  document.getElementById("mobileTopbarTitle").textContent = comboLabel;
 
   setMode("srs");
   initSrsMode();
@@ -79,7 +78,7 @@ function renderTable() {
   const cols = App.visibleCols[type].filter((c) => meta[c]);
 
   const thead = document.getElementById("tableHead");
-  thead.innerHTML = `<tr><th class="col-star-head"></th>${cols.map((c) => `<th>${meta[c].label}</th>`).join("")}<th class="col-edit-head"></th></tr>`;
+  thead.innerHTML = `<tr><th class="col-stt-head">STT</th><th class="col-star-head"></th>${cols.map((c) => `<th>${meta[c].label}</th>`).join("")}<th class="col-edit-head"></th></tr>`;
 
   const tbody = document.getElementById("tableBody");
   const search = (document.getElementById("tableSearch").value || "").toLowerCase();
@@ -88,6 +87,7 @@ function renderTable() {
 
   tbody.innerHTML = "";
 
+  let stt = 0;
   App.currentWords.forEach((w) => {
     const entry = SRS.getEntry(App.progress, w._id);
     const st = SRS.status(entry);
@@ -105,7 +105,9 @@ function renderTable() {
     const haystack = searchKeys.join(" ").toLowerCase();
     if (search && !haystack.includes(search)) return;
 
+    stt++;
     const tr = document.createElement("tr");
+    const sttCell = `<td class="col-stt-cell">${stt}</td>`;
     const starCell = `<td class="col-star-cell"><button class="table-star-btn ${starred ? "is-starred" : ""}" data-star-word-id="${w._id}" title="Đánh dấu sao">${starred ? "★" : "☆"}</button></td>`;
     const cells = cols.map((col) => {
       if (col === "status") {
@@ -139,10 +141,14 @@ function renderTable() {
       return `<td class="${cssClass}">${raw}</td>`;
     });
     cells.unshift(starCell);
+    cells.unshift(sttCell);
     cells.push(`<td class="col-edit-cell"><button class="table-edit-btn" data-edit-word-id="${w._id}" title="Sửa">✎</button></td>`);
     tr.innerHTML = cells.join("");
     tbody.appendChild(tr);
   });
+
+  const badge = document.getElementById("tableCountBadge");
+  if (badge) badge.textContent = `${stt} từ`;
 
   document.querySelectorAll(".table-edit-btn").forEach((btn) => {
     btn.addEventListener("click", () => openEditModal(btn.dataset.editWordId));
