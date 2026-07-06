@@ -191,104 +191,118 @@ const NAV_ITEMS_BY_TYPE = {
   ],
 };
 
+// Tạo 1 nút nav-item (giữ NGUYÊN class/data-mode/click handler như bản cũ —
+// chỉ khác chỗ nó được append vào đâu: trước đây thẳng vào #navList, giờ vào
+// trong .nav-dropdown của category tương ứng).
+function buildNavItemBtn(mode, icon, label) {
+  const btn = document.createElement("button");
+  btn.className = "nav-item";
+  btn.dataset.mode = mode;
+  btn.innerHTML = `<span class="nav-icon">${icon}</span> <span>${label}</span>`;
+  btn.addEventListener("click", () => {
+    setMode(mode);
+    closeAllNavDropdowns();
+  });
+  return btn;
+}
+
+// 1 category = icon trigger (không chữ, gọn) + dropdown xổ xuống chứa các
+// nav-item con. modes: mảng data-mode thuộc category này, dùng để tô sáng
+// trigger khi mode đang active nằm trong nhóm (dù dropdown đang đóng).
+function buildNavCategory(icon, title, items, modes) {
+  const wrap = document.createElement("div");
+  wrap.className = "nav-category";
+  wrap.dataset.navModes = modes.join(",");
+
+  const trigger = document.createElement("button");
+  trigger.className = "nav-category-trigger";
+  trigger.title = title;
+  trigger.innerHTML = `<span class="nav-icon">${icon}</span><span class="nav-caret">▾</span>`;
+  trigger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const isOpen = wrap.classList.contains("is-open");
+    closeAllNavDropdowns();
+    if (!isOpen) wrap.classList.add("is-open");
+  });
+  wrap.appendChild(trigger);
+
+  const dropdown = document.createElement("div");
+  dropdown.className = "nav-dropdown";
+  items.forEach((item) => dropdown.appendChild(item));
+  wrap.appendChild(dropdown);
+
+  return wrap;
+}
+
+function closeAllNavDropdowns() {
+  document.querySelectorAll(".nav-category.is-open").forEach((c) => c.classList.remove("is-open"));
+}
+
 function renderNav() {
   const nav = document.getElementById("navList");
   nav.innerHTML = "";
 
-  // Dashboard — mục cố định, không đổi theo type deck đang chọn (khác các mục
-  // bên dưới vốn thay đổi theo App.currentDeckType).
+  // Dashboard — icon đơn, bấm là vào thẳng, không cần dropdown vì chỉ có 1 hành động.
   const dashBtn = document.createElement("button");
-  dashBtn.className = "nav-item";
+  dashBtn.className = "nav-item nav-item-standalone";
   dashBtn.dataset.mode = "dashboard";
-  dashBtn.innerHTML = `<span class="nav-icon">🏠</span> <span>Dashboard</span>`;
+  dashBtn.title = "Dashboard";
+  dashBtn.innerHTML = `<span class="nav-icon">🏠</span>`;
   dashBtn.addEventListener("click", () => setMode("dashboard"));
   nav.appendChild(dashBtn);
 
-  const label = document.createElement("div");
-  label.className = "nav-section-label";
-  label.textContent = App.currentDeckType === "NGUPHAP" ? "Học ngữ pháp" : "Học từ vựng";
-  nav.appendChild(label);
+  // Nhóm "Từ vựng"/"Ngữ pháp" — icon + label đổi theo loại deck đang chọn.
+  const isNguphap = App.currentDeckType === "NGUPHAP";
+  const typeItems = (NAV_ITEMS_BY_TYPE[App.currentDeckType] || NAV_ITEMS_BY_TYPE.TUVUNG)
+    .map((it) => buildNavItemBtn(it.mode, it.icon, it.label));
+  // "Nhóm ngữ pháp" (học thông minh) gộp chung vào nhóm Ngữ pháp thay vì tách
+  // category riêng — giảm số icon trên navbar (Well-Architected: đơn giản hóa).
+  if (isNguphap && App.grammarGroupsData) {
+    typeItems.push(buildNavItemBtn("grammargroups", "📚", "Nhóm ngữ pháp"));
+  }
+  const typeModes = typeItems.map((b) => b.dataset.mode);
+  nav.appendChild(buildNavCategory(
+    isNguphap ? "📖" : "📚",
+    isNguphap ? "Học ngữ pháp" : "Học từ vựng",
+    typeItems,
+    typeModes
+  ));
 
-  const items = NAV_ITEMS_BY_TYPE[App.currentDeckType] || NAV_ITEMS_BY_TYPE.TUVUNG;
-  items.forEach((item) => {
-    const btn = document.createElement("button");
-    btn.className = "nav-item";
-    btn.dataset.mode = item.mode;
-    btn.innerHTML = `<span class="nav-icon">${item.icon}</span> <span>${item.label}</span>`;
-    btn.addEventListener("click", () => setMode(item.mode));
-    nav.appendChild(btn);
-  });
-
+  // Nhóm "Đề thi thật"
   if (App.exams.length > 0) {
-    const examLabel = document.createElement("div");
-    examLabel.className = "nav-section-label";
-    examLabel.textContent = "Đề thi thật";
-    nav.appendChild(examLabel);
-
-    const examBtn = document.createElement("button");
-    examBtn.className = "nav-item";
-    examBtn.dataset.mode = "exam";
-    examBtn.innerHTML = `<span class="nav-icon">▤</span> <span>Làm đề thi</span>`;
-    examBtn.addEventListener("click", () => setMode("exam"));
-    nav.appendChild(examBtn);
-
-    const examNotesBtn = document.createElement("button");
-    examNotesBtn.className = "nav-item";
-    examNotesBtn.dataset.mode = "examnotes";
-    examNotesBtn.innerHTML = `<span class="nav-icon">📝</span> <span>Ghi chú đề thi</span>`;
-    examNotesBtn.addEventListener("click", () => setMode("examnotes"));
-    nav.appendChild(examNotesBtn);
+    const examItems = [
+      buildNavItemBtn("exam", "▤", "Làm đề thi"),
+      buildNavItemBtn("examnotes", "📝", "Ghi chú đề thi"),
+    ];
+    nav.appendChild(buildNavCategory("📝", "Đề thi thật", examItems, examItems.map((b) => b.dataset.mode)));
   }
 
+  // Nhóm "Luyện nghe (聴解)"
   if (App.choukaiTests.length > 0) {
-    const choukaiLabel = document.createElement("div");
-    choukaiLabel.className = "nav-section-label";
-    choukaiLabel.textContent = "Luyện nghe (聴解)";
-    nav.appendChild(choukaiLabel);
-
-    const choukaiBtn = document.createElement("button");
-    choukaiBtn.className = "nav-item";
-    choukaiBtn.dataset.mode = "choukai";
-    choukaiBtn.innerHTML = `<span class="nav-icon">🎧</span> <span>Luyện nghe theo đề</span>`;
-    choukaiBtn.addEventListener("click", () => setMode("choukai"));
-    nav.appendChild(choukaiBtn);
-
-    const choukaiM4Btn = document.createElement("button");
-    choukaiM4Btn.className = "nav-item";
-    choukaiM4Btn.dataset.mode = "choukai-m4";
-    choukaiM4Btn.innerHTML = `<span class="nav-icon">🎯</span> <span>Luyện riêng Mondai 4</span>`;
-    choukaiM4Btn.addEventListener("click", () => setMode("choukai-m4"));
-    nav.appendChild(choukaiM4Btn);
-
-    const shadowBtn = document.createElement("button");
-    shadowBtn.className = "nav-item";
-    shadowBtn.dataset.mode = "choukai-shadow";
-    shadowBtn.innerHTML = `<span class="nav-icon">🔁</span> <span>Luyện nghe câu</span>`;
-    shadowBtn.addEventListener("click", () => setMode("choukai-shadow"));
-    nav.appendChild(shadowBtn);
+    const choukaiItems = [
+      buildNavItemBtn("choukai", "🎧", "Luyện nghe theo đề"),
+      buildNavItemBtn("choukai-m4", "🎯", "Luyện riêng Mondai 4"),
+      buildNavItemBtn("choukai-shadow", "🔁", "Luyện nghe câu"),
+    ];
+    nav.appendChild(buildNavCategory("🎧", "Luyện nghe (聴解)", choukaiItems, choukaiItems.map((b) => b.dataset.mode)));
   }
 
-  if (App.grammarGroupsData) {
-    const ggLabel = document.createElement("div");
-    ggLabel.className = "nav-section-label";
-    ggLabel.textContent = "Học thông minh";
-    nav.appendChild(ggLabel);
-
-    const ggBtn = document.createElement("button");
-    ggBtn.className = "nav-item";
-    ggBtn.dataset.mode = "grammargroups";
-    ggBtn.innerHTML = `<span class="nav-icon">📚</span> <span>Nhóm ngữ pháp</span>`;
-    ggBtn.addEventListener("click", () => setMode("grammargroups"));
-    nav.appendChild(ggBtn);
-  }
-
-  // Re-apply active state for current mode if any nav-item matches
+  // Re-apply active state: tô sáng nav-item con đang active, VÀ tô viền
+  // category cha (has-active) để biết đang ở nhóm nào dù dropdown đang đóng.
   const current = document.querySelector(".view:not(.hidden)");
   if (current) {
     const mode = current.id.replace("view-", "");
     document.querySelectorAll(".nav-item").forEach((b) => b.classList.toggle("active", b.dataset.mode === mode));
+    document.querySelectorAll(".nav-category").forEach((cat) => {
+      cat.classList.toggle("has-active", cat.dataset.navModes.split(",").includes(mode));
+    });
   }
 }
+
+// Đóng dropdown khi bấm ra ngoài navbar.
+document.addEventListener("click", (e) => {
+  if (!e.target.closest(".nav-category")) closeAllNavDropdowns();
+});
 
 function switchDeck(deckId) {
   const deck = App.decks.find((d) => d.id === deckId);
