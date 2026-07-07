@@ -2,6 +2,20 @@
 
 /* ===== N2 Vocab Lab v2 — main app logic ===== */
 
+// ----- Gate "nội dung riêng tư" — bất kỳ deck/đề thi/đề nghe nào có field
+// "private": true trong JSON sẽ bị ẨN HOÀN TOÀN khỏi App.decks/App.exams/
+// App.choukaiTests (lọc ngay tại loader, xem loader-nav.js) TRỪ KHI đã mở khóa
+// đúng key (xem btnPrivateUnlock trong init.js). Đặt ở ĐÂY (core.js, load đầu
+// tiên) vì các hàm loadDecks()/loadExams()/loadChoukaiTests() trong
+// loader-nav.js cần dùng NGAY khi load trang, trước khi init.js chạy.
+// CHỈ lưu SHA-256 hash của key trong code — không phải access-control thật
+// (client-side luôn đọc ngược được qua DevTools), chỉ là ẩn khỏi mắt thường/
+// grep repo public trên GitHub.
+const PRIVATE_UNLOCK_STORAGE_KEY = "n2vocab_advanced_unlocked";
+function isPrivateContentUnlocked() {
+  return localStorage.getItem(PRIVATE_UNLOCK_STORAGE_KEY) === "1";
+}
+
 const App = {
   decks: [],
   exams: [],

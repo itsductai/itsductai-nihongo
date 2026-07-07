@@ -176,23 +176,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
-  // ----- Gate ẩn "chức năng nâng cao" — CHỈ lưu SHA-256 hash của key, KHÔNG
-  // bao giờ lưu plaintext trong code (repo public trên GitHub) — đây là cách
-  // "ẩn khỏi mắt thường/grep repo", KHÔNG phải access-control thật (client-side
-  // JS luôn có thể bị đọc ngược qua DevTools, đã nói rõ với Zane). Trạng thái
-  // mở khóa lưu localStorage, tồn tại qua các lần load lại trang.
-  const PRIVATE_UNLOCK_HASH = "a244e82e26bdaba19bbf798e8d0b9719468f947e33618eb456ef6086f60e0204";
-  const PRIVATE_UNLOCK_STORAGE_KEY = "n2vocab_advanced_unlocked";
-
+  // ----- Gate ẩn "nội dung riêng tư" — bất kỳ deck/đề thi/đề nghe nào đánh dấu
+  // "private": true trong JSON sẽ được LỌC NGAY TỪ LÚC LOAD (xem loadDecks()/
+  // loadExams()/loadChoukaiTests() trong loader-nav.js + isPrivateContentUnlocked()
+  // trong core.js) — không phải 1 tab/view riêng. Nhập đúng key -> reload trang
+  // để loader chạy lại, TỰ ĐỘNG hiện toàn bộ nội dung private xen kẽ bình thường
+  // ở đúng vị trí của nó (dropdown deck, exam picker, choukai picker...), không
+  // cần logic refresh-live riêng cho 1 tính năng hiếm khi dùng.
   async function sha256Hex(text) {
     const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
     return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
   }
-
-  function applyAdvancedUnlockState(unlocked) {
-    document.body.classList.toggle("advanced-unlocked", unlocked);
-  }
-  applyAdvancedUnlockState(localStorage.getItem(PRIVATE_UNLOCK_STORAGE_KEY) === "1");
+  const PRIVATE_UNLOCK_HASH = "a244e82e26bdaba19bbf798e8d0b9719468f947e33618eb456ef6086f60e0204";
 
   document.getElementById("btnPrivateUnlock").addEventListener("click", async (e) => {
     e.stopPropagation();
@@ -201,8 +196,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const hash = await sha256Hex(input.trim());
     if (hash === PRIVATE_UNLOCK_HASH) {
       localStorage.setItem(PRIVATE_UNLOCK_STORAGE_KEY, "1");
-      applyAdvancedUnlockState(true);
-      alert("Đã mở khóa chức năng nâng cao.");
+      alert("Đã mở khóa — trang sẽ tải lại để hiện nội dung riêng tư.");
+      location.reload();
     } else {
       alert("Key không đúng.");
     }

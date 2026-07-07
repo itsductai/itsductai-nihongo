@@ -30,6 +30,9 @@ async function loadDecks() {
     try {
       const r = await fetch(`tailieu/${filename}`);
       const data = await r.json();
+      // "private": true trong JSON -> bỏ qua hoàn toàn, không đưa vào App.decks,
+      // TRỪ KHI đã mở khóa (xem isPrivateContentUnlocked() trong core.js).
+      if (data.private === true && !isPrivateContentUnlocked()) continue;
       const id = filename.replace(/\.json$/, "");
       const type = data.type === "NGUPHAP" ? "NGUPHAP" : "TUVUNG";
 
@@ -76,6 +79,7 @@ async function loadExams() {
       try {
         const r = await fetch(`dethi/${filename}`);
         const data = await r.json();
+        if (data.private === true && !isPrivateContentUnlocked()) continue;
         const id = filename.replace(/\.json$/, "");
         exams.push({ id, title: data.title || filename, questions: data.questions || [], mondai_breakdown: data.mondai_breakdown || null });
       } catch (e) {
@@ -101,6 +105,7 @@ async function loadChoukaiTests() {
       try {
         const r = await fetch(`dethi-choukai/${filename}`);
         const data = await r.json();
+        if (data.private === true && !isPrivateContentUnlocked()) continue;
         tests.push(data);
       } catch (e) {
         console.error("Lỗi tải đề nghe", filename, e);
@@ -305,13 +310,6 @@ function renderNav() {
       buildNavItemBtn("choukai-shadow", "🔁", "Luyện nghe câu"),
     ];
     nav.appendChild(buildNavCategory(navIcon("headphones"), "Luyện nghe (聴解)", choukaiItems, choukaiItems.map((b) => b.dataset.mode)));
-  }
-
-  // Nhóm "Nâng cao" — CHỈ hiện khi đã mở khóa qua gate ẩn (xem btnPrivateUnlock
-  // trong init.js). Placeholder ban đầu, Zane tự thêm chức năng thật vào sau.
-  if (document.body.classList.contains("advanced-unlocked")) {
-    const advancedItems = [buildNavItemBtn("advanced", "🔓", "Khu vực nâng cao")];
-    nav.appendChild(buildNavCategory(navIcon("settings"), "Nâng cao", advancedItems, advancedItems.map((b) => b.dataset.mode)));
   }
 
   // Re-apply active state: tô sáng nav-item con đang active, VÀ tô viền
