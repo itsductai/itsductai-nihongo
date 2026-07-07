@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nihongo Lab — Luyện thi JLPT</title>
-<link rel="stylesheet" href="css/style.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -41,11 +41,11 @@
           <span class="picker-hidden" id="examCountdownBarFill"></span>
         </div>
         <button class="due-review-row" id="btnDueReviewTuvung">
-          <span class="due-review-label">📚</span>
+          <span class="due-review-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4.5c2.5-1 5.5-1 8 0v15c-2.5-1-5.5-1-8 0Z"/><path d="M22 4.5c-2.5-1-5.5-1-8 0v15c2.5-1 5.5-1 8 0Z"/></svg></span>
           <span class="due-review-count" id="dueReviewTuvungCount">0</span>
         </button>
         <button class="due-review-row" id="btnDueReviewNguphap">
-          <span class="due-review-label">📖</span>
+          <span class="due-review-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></span>
           <span class="due-review-count" id="dueReviewNguphapCount">0</span>
         </button>
       </div>
@@ -150,7 +150,7 @@
     <!-- Popover chọn field hiển thị mặt trước / mặt sau — DÙNG CHUNG cho cả
          Flashcard và SRS (2 nút ⚙ Mặt thẻ ở mỗi view cùng toggle chung panel
          này), nên đặt ngoài mọi <section class="view">, không thuộc riêng bên nào. -->
-    <div class="field-config hidden" id="fieldConfigPanel">
+    <div class="field-config" id="fieldConfigPanel">
       <div class="field-config-col">
         <div class="field-config-title">Mặt trước</div>
         <div id="frontFieldOptions" class="field-config-options"></div>
@@ -857,13 +857,13 @@
 <script src="js/stats-weakness.js?v=5"></script>
 <script src="js/dashboard.js?v=1"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=14"></script>
+<script src="js/loader-nav.js?v=15"></script>
 <script src="js/flashcard-edit.js?v=5"></script>
 <script src="js/table-srs-typing.js?v=9"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=6"></script>
 <script src="js/choukai.js?v=11"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=19"></script>
+<script src="js/init.js?v=20"></script>
 </body>
 </html>
