@@ -112,9 +112,8 @@ body {
 .exam-countdown-days { background: linear-gradient(120deg, #ffb38f, #ff7e5a); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .exam-countdown-bar-fill { background: linear-gradient(90deg, var(--accent-2), #ff5f7e); box-shadow: 0 0 14px rgba(255,143,107,0.5); }
 
-.due-review-row { border-radius: 11px; background: rgba(255,255,255,0.02); }
-.due-review-row:hover { background: rgba(45,212,167,0.08); transform: translateX(3px); }
-.due-review-row.has-due .due-review-count { color: #ffb38f; background: rgba(255,143,107,0.16); border-color: rgba(255,143,107,0.35); }
+/* .due-review-row layout ở style.css, màu has-due cũng đã gộp về đó dùng
+   var(--bad) theme-aware — không cần định nghĩa riêng ở đây (DRY). */
 
 /* ---- 6. Nút: bo tròn hẳn (pill), gradient sống động ---- */
 .primary-btn {
