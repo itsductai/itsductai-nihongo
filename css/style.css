@@ -413,6 +413,16 @@ rt {
 .cf-vidu { font-size: 13.5px; color: var(--text-1); line-height: 1.7; max-width: 460px; margin-bottom: 8px; }
 .cf-vidu-line { margin-bottom: 6px; }
 .cf-vidu-line:last-child { margin-bottom: 0; }
+/* Câu chính (đầu tiên) — nổi bật hơn, luôn là câu quan trọng nhất của từ */
+.cf-vidu-line-main { font-weight: 600; }
+/* Nhãn phân cách trước nhóm ví dụ bổ sung — chỉ hiện khi có từ 2 câu trở lên */
+.cf-vidu-extra-label {
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--text-2); margin: 10px 0 6px; padding-top: 8px;
+  border-top: 1px dashed var(--border);
+}
+/* Câu bổ sung — nhẹ hơn câu chính để không cạnh tranh sự chú ý */
+.cf-vidu-line-extra { font-weight: 400; color: var(--text-1); font-size: 0.94em; }
 .cf-block-label { font-size: 10.5px; color: var(--text-2); text-transform: uppercase; letter-spacing: 0.05em; margin: 10px 0 4px; font-weight: 700; }
 .cf-synonyms { font-size: 13px; color: var(--good); }
 .cf-antonyms { font-size: 13px; color: var(--bad); }

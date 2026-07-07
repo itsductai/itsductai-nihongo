@@ -181,7 +181,7 @@ body {
   border: 1px solid var(--border-soft);
   border-left: 4px solid var(--accent-2);
 }
-.cf-vidu ruby rt { color: var(--accent); font-weight: 800; }
+.cf-vidu ruby rt { color: var(--text-2); font-weight: 800; }
 .cf-block-label {
   display: inline-block; font-size: 10.5px; font-weight: 800; text-transform: uppercase;
   letter-spacing: 0.05em; color: var(--text-2); margin: 10px 0 4px;

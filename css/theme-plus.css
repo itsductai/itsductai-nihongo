@@ -401,7 +401,7 @@ input[type="text"]:focus, textarea:focus {
   background: radial-gradient(140% 100% at 50% -10%, rgba(169,139,255,0.08), transparent 60%);
 }
 /* Ruby (furigana) rõ ràng, màu nhấn nhẹ để không lẫn với kanji chính */
-.cf-vidu ruby rt { color: var(--accent); font-size: 0.62em; font-weight: 700; }
+.cf-vidu ruby rt { color: var(--text-2); font-size: 0.62em; font-weight: 700; }
 /* ---- 17. Nút tua nhanh ±5s/±10s cho audio nghe ---- */
 /* Nhóm nút tua nhanh ±5s/±10s — thay thao tác kéo thanh audio thủ công */
 .choukai-seek-group { display: flex; gap: 6px; }
