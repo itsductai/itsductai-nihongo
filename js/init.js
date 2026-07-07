@@ -210,10 +210,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   });
   document.getElementById("btnFieldConfig").addEventListener("click", () => {
-    document.getElementById("fieldConfigPanel").classList.toggle("hidden");
+    document.getElementById("fieldConfigPanel").classList.toggle("is-open");
   });
   document.getElementById("btnSrsFieldConfig").addEventListener("click", () => {
-    document.getElementById("fieldConfigPanel").classList.toggle("hidden");
+    document.getElementById("fieldConfigPanel").classList.toggle("is-open");
   });
   document.getElementById("btnEditCurrentFlash").addEventListener("click", (e) => {
     e.stopPropagation();

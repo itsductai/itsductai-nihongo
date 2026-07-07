@@ -422,7 +422,7 @@ function setMode(mode) {
   // mọi view) -> phải tự đóng khi rời cả 2 view đó, tránh kẹt hiện lơ lửng
   // phía trên Dashboard/view khác không liên quan.
   if (mode !== "flash" && mode !== "srs") {
-    document.getElementById("fieldConfigPanel").classList.add("hidden");
+    document.getElementById("fieldConfigPanel").classList.remove("is-open");
   }
 
   // Dừng timer đề thi khi rời khỏi exam mode (nếu đang làm bài giữa lúc bật luyện tốc độ)
