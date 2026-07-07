@@ -450,10 +450,9 @@ function renderFlashCard() {
     renderFlashCard();
     return;
   }
-  const type = App.currentDeckType;
-
-  renderCardFace(document.getElementById("flashFrontContent"), w, App.fieldConfig[type].front);
-  renderCardFace(document.getElementById("flashBackContent"), w, App.fieldConfig[type].back);
+  const cardFields = computeCardFields(w);
+  renderCardFace(document.getElementById("flashFrontContent"), w, cardFields.front);
+  renderCardFace(document.getElementById("flashBackContent"), w, cardFields.back);
   renderFlashStarButtons(w);
 
   // Luôn cuộn về đầu nội dung mỗi khi đổi sang thẻ mới — tránh tình trạng thẻ

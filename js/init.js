@@ -500,6 +500,41 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
+  // ----- Toggle "Ngẫu nhiên chiều học" — dùng CHUNG 1 state (App.randomDirectionEnabled)
+  // cho cả Flashcard lẫn SRS, 2 checkbox chỉ là 2 điểm bật/tắt của cùng 1 cài đặt
+  // (giống cách 2 nút "Mặt thẻ" cùng mở chung 1 fieldConfigPanel). Đổi ở đâu thì
+  // đồng bộ luôn checkbox còn lại + xóa map chiều học cũ (đổi cài đặt giữa chừng
+  // thì tính lại chiều từ đầu cho nhất quán, tránh trạng thái nửa cũ nửa mới).
+  function toggleRandomDirection(checked) {
+    App.randomDirectionEnabled = checked;
+    App.flashDirectionMap.clear();
+    document.getElementById("flashRandomDirectionToggle").checked = checked;
+    document.getElementById("srsRandomDirectionToggle").checked = checked;
+    if (App.flashQueue.length > 0) renderFlashCard();
+    if (App.srsQueue.length > 0) renderSrsCard();
+  }
+  document.getElementById("flashRandomDirectionToggle").addEventListener("change", (e) => toggleRandomDirection(e.target.checked));
+  document.getElementById("srsRandomDirectionToggle").addEventListener("change", (e) => toggleRandomDirection(e.target.checked));
+
+  // ----- Auto-copy khi bôi đen + buông chuột trên mặt thẻ (Flashcard + SRS) —
+  // khỏi cần Ctrl+C thủ công. Chỉ copy khi có text thật sự được chọn (tránh
+  // spam clipboard mỗi lần click thường không kèm bôi đen). writeText() cần
+  // secure context (HTTPS) — GitHub Pages đã đáp ứng, không cần xin quyền thêm
+  // vì đây là hành động user tự khởi tạo (user-gesture triggered). -----
+  function initAutoCopyOnSelect(containerIds) {
+    containerIds.forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener("mouseup", () => {
+        const text = window.getSelection().toString();
+        if (text.trim()) {
+          navigator.clipboard.writeText(text).catch(() => { /* im lặng bỏ qua nếu trình duyệt chặn */ });
+        }
+      });
+    });
+  }
+  initAutoCopyOnSelect(["flashFrontContent", "flashBackContent", "srsFrontContent", "srsBackContent"]);
+
   // ----- Typing mode -----
   document.getElementById("typingFreeInput").addEventListener("keydown", typingHandleKeydown);
   document.getElementById("btnTypingCheck").addEventListener("click", typingCheckAnswer);

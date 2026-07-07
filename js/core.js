@@ -42,6 +42,13 @@ const App = {
   flashTotalCount: 0,        // tổng số từ ban đầu của phiên (để tính % progress)
   flashRestrictToIds: null,  // nếu học giới hạn theo 1 danh sách _id cụ thể (ví dụ "chỉ học từ yếu")
 
+  // "Ngẫu nhiên chiều học" — mặt trước ngẫu nhiên là kanji/cautruc HOẶC nghĩa
+  // (mặt sau tự đổi ngược lại), áp dụng cả Flashcard lẫn SRS vì dùng chung
+  // renderCardFace(). Chiều học CỐ ĐỊNH theo từng thẻ trong phiên (không random
+  // lại mỗi lần lật/quay lại) -> lưu trong Map theo _id.
+  randomDirectionEnabled: false,
+  flashDirectionMap: new Map(),
+
   srsQueue: [],
   srsIndex: 0,
 
@@ -221,6 +228,31 @@ const FIELD_META = {
   },
 };
 
+// "Ngẫu nhiên chiều học" — hoán đổi field CHÍNH (kanji/cautruc <-> nghĩa) giữa
+// mặt trước/sau, các field phụ khác (ví dụ, đồng/trái nghĩa...) GIỮ NGUYÊN ở
+// mặt sau bất kể chiều nào (chỉ đảo đúng 2 field chính, không đụng field-config
+// chi tiết người dùng đã chọn). Chiều học cố định theo từng thẻ trong phiên.
+function computeCardFields(w) {
+  const type = App.currentDeckType;
+  const config = App.fieldConfig[type];
+  if (!App.randomDirectionEnabled) return { front: config.front, back: config.back };
+
+  const primaryKey = type === "NGUPHAP" ? "cautruc" : "kanji";
+  let dir = App.flashDirectionMap.get(w._id);
+  if (dir === undefined) {
+    dir = Math.random() < 0.5 ? "normal" : "reversed";
+    App.flashDirectionMap.set(w._id, dir);
+  }
+  if (dir === "normal") return { front: config.front, back: config.back };
+
+  // Đảo chiều: mặt trước = nghĩa, mặt sau = field chính (kanji/cautruc) + các
+  // field phụ khác đã cấu hình (bỏ "nghia" ra khỏi mặt sau vì giờ nó ở mặt trước).
+  return {
+    front: ["nghia"],
+    back: [primaryKey, ...config.back.filter((k) => k !== "nghia")],
+  };
+}
+
 /* ---------- Field nào cho phép sửa qua modal, loại input gì ---------- */
 
 const EDIT_FIELD_META = {
@@ -296,15 +328,25 @@ function extractTranslationSuffix(sentenceText) {
   return m ? m[0] : "";
 }
 
+// FIX BUG (lặp dịch 2 lần): 1 số bộ dữ liệu cũ (vd nut-that-n2.json) sinh
+// vi_du_ruby KHÔNG theo đúng spec trên — đã kèm SẴN bản dịch cuối câu, khác
+// giả định ban đầu. Nếu cứ nối thêm firstTranslation vào, dịch sẽ hiện 2 lần.
+// -> Kiểm tra ruby đã tự có "(...)" ở cuối chưa, có rồi thì dùng nguyên, không
+// nối thêm gì cả; chưa có thì mới nối như logic gốc.
 function renderExampleSentencesForCard(w) {
   const full = w.vi_du || "";
   const ruby = (w.vi_du_ruby || "").trim();
   if (!full) return ruby ? renderChoon(ruby) : "";
   if (!ruby) return renderExampleSentences(full);
 
+  const rubyAlreadyHasTranslation = /\([^()]*\)\s*$/.test(ruby);
   const sentences = full.split(/(?<=\)) +(?=\S)/).filter(Boolean);
-  const firstTranslation = extractTranslationSuffix(sentences[0] || "");
-  sentences[0] = firstTranslation ? `${ruby} ${firstTranslation}` : ruby;
+  if (rubyAlreadyHasTranslation) {
+    sentences[0] = ruby;
+  } else {
+    const firstTranslation = extractTranslationSuffix(sentences[0] || "");
+    sentences[0] = firstTranslation ? `${ruby} ${firstTranslation}` : ruby;
+  }
 
   if (sentences.length <= 1) return renderChoon(sentences[0]);
   return sentences.map((s) => `<div class="cf-vidu-line">${renderChoon(s)}</div>`).join("");

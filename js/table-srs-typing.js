@@ -233,10 +233,10 @@ function renderSrsCard() {
   card.classList.remove("flipped");
   const w = App.srsQueue[App.srsIndex];
   if (!w) return;
-  const type = App.currentDeckType;
 
-  renderCardFace(document.getElementById("srsFrontContent"), w, App.fieldConfig[type].front);
-  renderCardFace(document.getElementById("srsBackContent"), w, App.fieldConfig[type].back);
+  const cardFields = computeCardFields(w);
+  renderCardFace(document.getElementById("srsFrontContent"), w, cardFields.front);
+  renderCardFace(document.getElementById("srsBackContent"), w, cardFields.back);
 
   // Luôn cuộn về đầu nội dung mỗi khi đổi thẻ — cùng lý do như Flashcard.
   document.getElementById("srsFront").scrollTop = 0;
