@@ -330,11 +330,16 @@ input[type="text"]:focus, textarea:focus {
   }
 }
 
-/* ---- 20. "Cần ôn tổng hợp" — widget cũ đã dời sang navbar-chips (xem
-   style.css .navbar-chips .due-review-row), block CSS gốc ở đây đã xóa vì
-   .due-review-widget/.due-review-title không còn tồn tại trong HTML nữa —
-   giữ lại sẽ là dead code gây rò rỉ style (width:100% từng đè lên layout
-   navbar ngang, đây chính là bug "thanh quá dài" đã xảy ra thật). ---- */
+/* ---- 20. "Cần ôn tổng hợp" — chỉ còn màu/hiệu ứng ở đây, LAYOUT (padding,
+   width, flex...) đã dời hẳn sang .navbar-chips .due-review-row trong
+   style.css để tránh lặp/rò rỉ thuộc tính giữa 2 nơi (đây chính là nguyên
+   nhân bug "thanh quá dài" trước đó — rule layout cũ ở file này đè lên rule
+   mới). File này CHỈ set màu sắc/transition, không set width/justify-content/
+   padding nữa. */
+.due-review-row:hover { transform: translateX(2px); border-color: rgba(240,85,90,0.35); }
+.due-review-row.has-due .due-review-count {
+  color: #ff8a7a; background: rgba(240,85,90,0.16); border: 1px solid rgba(240,85,90,0.35);
+}
 
 /* ---- 21. Nút "Đưa về ôn lại" trong Bảng ---- */
 .table-back-to-review-btn {
