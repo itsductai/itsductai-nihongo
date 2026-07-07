@@ -312,7 +312,7 @@ rt {
    .card tự giãn cao đúng theo lượng nội dung thật — đảm bảo không bao giờ bị cắt. */
 .card-stage { display: flex; justify-content: center; margin: 30px 0 36px; perspective: 1400px; }
 .card {
-  width: 100%; max-width: 580px; position: relative; cursor: pointer;
+  width: 100%; max-width: 580px; height: min(72vh, 560px); position: relative; cursor: pointer;
   transform-style: preserve-3d; transition: transform 0.45s cubic-bezier(.4,.2,.2,1);
 }
 .card-face {
@@ -329,26 +329,27 @@ rt {
   */
   display: flex; flex-direction: column; align-items: center;
   text-align: center; background: var(--bg-2); border: 1px solid var(--border);
-  box-shadow: var(--shadow); overflow-y: auto; max-height: 72vh; min-height: 320px;
+  box-shadow: var(--shadow); overflow-y: auto;
   /* Ẩn hẳn thanh cuộn (theo yêu cầu) — vẫn cuộn được bằng chạm/lăn chuột bình thường,
      chỉ là không hiện thanh cuộn trên khung nữa. */
   scrollbar-width: none; -ms-overflow-style: none;
 }
 .card-face::-webkit-scrollbar { display: none; width: 0; height: 0; }
 
-/* Mặt trước luôn nằm trong luồng layout (quyết định chiều cao .card khi chưa lật) */
-.card-face.card-front { position: relative; width: 100%; }
-/* Mặt sau mặc định nằm ngoài luồng (không ảnh hưởng chiều cao khi chưa lật) */
-.card-face.card-back {
-  position: absolute; inset: 0; width: 100%; transform: rotateY(180deg);
-}
+/* CẢ 2 mặt LUÔN position:absolute inset:0, KHÔNG đảo vai trò theo trạng thái lật
+   nữa (khác bản cũ) — .card giờ có height CỐ ĐỊNH riêng (xem trên) nên không cần
+   "mượn" chiều cao từ mặt đang active. Đây chính là fix cho lỗi giật khi lật thẻ:
+   bản cũ đổi position relative<->absolute NGAY LẬP TỨC lúc bấm lật, trong khi
+   transform:rotateY animate trong 0.45s -> khung bị đổi kích thước ĐỘT NGỘT giữa
+   chừng animation xoay, gây giật. Giờ kích thước khung không đổi trong suốt lúc
+   lật vì cả 2 mặt luôn absolute — chỉ có transform xoay chạy mượt, không còn nhảy
+   chiều cao nữa. Nội dung dài hơn khung vẫn cuộn được bình thường (overflow-y:auto
+   ở trên, độc lập với việc đổi position).
+*/
+.card-face.card-front, .card-face.card-back { position: absolute; inset: 0; width: 100%; }
+.card-face.card-back { transform: rotateY(180deg); }
 
-/* Khi .card đã lật: đảo vai trò — mặt SAU vào luồng layout để quyết định chiều cao
-   (vì giờ đang xem mặt sau, nội dung mặt sau có thể dài/ngắn khác mặt trước),
-   mặt TRƯỚC ra khỏi luồng (không hiện, không ảnh hưởng chiều cao). */
 .card.flipped { transform: rotateY(180deg); }
-.card.flipped .card-face.card-front { position: absolute; inset: 0; }
-.card.flipped .card-face.card-back { position: relative; }
 
 .card-face-content {
   display: flex; flex-direction: column; align-items: center; justify-content: center;
