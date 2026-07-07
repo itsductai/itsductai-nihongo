@@ -215,6 +215,7 @@ rt {
   border-radius: 999px;
 }
 .navbar-chips .due-review-label { font-size: 14px; line-height: 1; display: inline-flex; }
+.navbar-chips .due-review-text { font-size: 11.5px; color: var(--text-1); font-weight: 600; white-space: nowrap; }
 .navbar-chips .due-review-count { font-size: 12px; padding: 2px 8px; min-width: 20px; text-align: center; line-height: 1.3; }
 
 /* Panel Cài đặt (deck picker + xuất/nhập) — dropdown nổi dưới nút ⚙ */
