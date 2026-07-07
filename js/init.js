@@ -212,6 +212,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("btnFieldConfig").addEventListener("click", () => {
     document.getElementById("fieldConfigPanel").classList.toggle("hidden");
   });
+  document.getElementById("btnSrsFieldConfig").addEventListener("click", () => {
+    document.getElementById("fieldConfigPanel").classList.toggle("hidden");
+  });
   document.getElementById("btnEditCurrentFlash").addEventListener("click", (e) => {
     e.stopPropagation();
     const w = getCurrentFlashWord();
