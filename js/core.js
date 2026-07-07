@@ -311,11 +311,22 @@ function renderChoon(text) {
 // bằng khoảng trắng sau dấu ")") thành từng dòng riêng — chỉ xử lý ở tầng hiển
 // thị, KHÔNG cần sửa lại cấu trúc dữ liệu JSON gốc đã có. An toàn với câu chỉ
 // có 1 ví dụ (không có gì để tách) và với các thẻ <ruby> bên trong.
+// Câu ĐẦU TIÊN = "câu chính" (nổi bật hơn, luôn có/luôn xem trước), các câu
+// SAU = "ví dụ bổ sung" (gộp dưới 1 label riêng, kiểu chữ nhẹ hơn) — tránh
+// tình trạng nhiều câu liệt kê rời rạc, không phân biệt được đâu là câu chính.
+function renderSentenceGroup(sentences) {
+  if (sentences.length <= 1) {
+    return `<div class="cf-vidu-line cf-vidu-line-main">${renderChoon(sentences[0] || "")}</div>`;
+  }
+  const main = `<div class="cf-vidu-line cf-vidu-line-main">${renderChoon(sentences[0])}</div>`;
+  const extra = sentences.slice(1).map((s) => `<div class="cf-vidu-line cf-vidu-line-extra">${renderChoon(s)}</div>`).join("");
+  return `${main}<div class="cf-vidu-extra-label">Ví dụ khác</div>${extra}`;
+}
+
 function renderExampleSentences(text) {
   if (!text) return "";
   const sentences = text.split(/(?<=\)) +(?=\S)/).filter(Boolean);
-  if (sentences.length <= 1) return renderChoon(text);
-  return sentences.map((s) => `<div class="cf-vidu-line">${renderChoon(s)}</div>`).join("");
+  return renderSentenceGroup(sentences);
 }
 
 // FIX BUG: trước đây field "vi_du" (Flashcard + Bảng) ưu tiên vi_du_ruby khi có,
@@ -348,8 +359,7 @@ function renderExampleSentencesForCard(w) {
     sentences[0] = firstTranslation ? `${ruby} ${firstTranslation}` : ruby;
   }
 
-  if (sentences.length <= 1) return renderChoon(sentences[0]);
-  return sentences.map((s) => `<div class="cf-vidu-line">${renderChoon(s)}</div>`).join("");
+  return renderSentenceGroup(sentences);
 }
 
 function stripChoonMarks(text) {
