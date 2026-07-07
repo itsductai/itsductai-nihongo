@@ -179,10 +179,13 @@ function renderDashboard() {
 
 // "Hôm nay đã ôn bao nhiêu từ/cấu trúc" — tái dùng đúng log hoạt động theo
 // ngày đã ghi (recordDailyActivity, xem trên) thay vì tạo hệ đếm mới.
+// "Hôm nay cần học gì" — tổng số từ/cấu trúc ĐẾN HẠN ÔN ngay bây giờ, tái dùng
+// đúng computeDueCounts() đã có (cùng nguồn data với 2 nút due-review bên dưới,
+// không tính riêng "đã ôn hôm nay" — đó là khái niệm khác, spec yêu cầu đúng
+// là tổng CẦN học, không phải đã học).
 function renderDashboardTodayCount() {
-  const log = loadDailyActivity();
-  const today = log[todayKey()] || { tuvung: 0, nguphap: 0 };
-  document.getElementById("dashTodayCount").textContent = today.tuvung + today.nguphap;
+  const { tuvung, nguphap } = computeDueCounts();
+  document.getElementById("dashTodayCount").textContent = tuvung + nguphap;
 }
 
 function renderDashboardGreeting() {

@@ -1022,15 +1022,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   });
 
-  // ----- Bắt đầu với bộ đầu tiên -----
-  switchDeck(App.decks[0].id);
-
-  // Khôi phục lại ĐÚNG mode + deck lần cuối người dùng đang xem trước khi
-  // reload/đóng tab — thay vì luôn nhảy về Dashboard. switchDeck() ở trên vẫn
-  // cần chạy trước (để App.decks[0] load sẵn làm fallback khi chưa có gì lưu,
-  // hoặc deck đã lưu không còn tồn tại do đổi/xóa file JSON).
+  // Đọc giá trị đã lưu TRƯỚC KHI gọi bất kỳ switchDeck()/setMode() nào —
+  // đây là bug thật ở bản trước: switchDeck(decks[0]) chạy trước sẽ tự gọi
+  // setMode("flash") bên trong, mà setMode() ghi đè localStorage NGAY LẬP TỨC
+  // (dòng đầu hàm) -> xóa mất giá trị phiên trước trước khi kịp đọc, nên đọc
+  // ra luôn là "flash" bất kể trước đó đang ở tab nào. Đọc trước, dùng biến,
+  // không đọc lại từ localStorage sau khi các hàm trên đã chạy.
   const lastDeckId = localStorage.getItem(LAST_SESSION_STORAGE_KEY + "_deck");
   const lastMode = localStorage.getItem(LAST_SESSION_STORAGE_KEY + "_mode");
+
+  // ----- Bắt đầu với bộ đầu tiên (fallback nếu chưa có gì lưu, hoặc deck đã
+  // lưu không còn tồn tại do đổi/xóa file JSON) -----
+  switchDeck(App.decks[0].id);
+
   if (lastDeckId && App.decks.some((d) => d.id === lastDeckId)) {
     switchDeck(lastDeckId);
   }
