@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Nihongo Lab — Luyện thi JLPT</title>
-<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="stylesheet" href="css/style.css?v=10">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -40,16 +40,6 @@
           <span class="picker-hidden" id="examCountdownDate"></span>
           <span class="picker-hidden" id="examCountdownBarFill"></span>
         </div>
-        <button class="due-review-row" id="btnDueReviewTuvung" title="Cần ôn tổng hợp Từ vựng — gộp tất cả từ đến hạn ôn (SRS) của mọi bộ, bấm vào ôn ngay">
-          <span class="due-review-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4.5c2.5-1 5.5-1 8 0v15c-2.5-1-5.5-1-8 0Z"/><path d="M22 4.5c-2.5-1-5.5-1-8 0v15c2.5-1 5.5-1 8 0Z"/></svg></span>
-          <span class="due-review-text">Từ vựng</span>
-          <span class="due-review-count" id="dueReviewTuvungCount">0</span>
-        </button>
-        <button class="due-review-row" id="btnDueReviewNguphap" title="Cần ôn tổng hợp Ngữ pháp — gộp tất cả cấu trúc đến hạn ôn (SRS) của mọi bộ, bấm vào ôn ngay">
-          <span class="due-review-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></span>
-          <span class="due-review-text">Ngữ pháp</span>
-          <span class="due-review-count" id="dueReviewNguphapCount">0</span>
-        </button>
       </div>
 
       <!-- Từ điển nội bộ — tìm bất kỳ từ vựng/ngữ pháp nào (kanji/hiragana/nghĩa
@@ -90,6 +80,10 @@
         </label>
       </div>
       <button id="btnClearPatches" class="ghost-btn clear-patches-btn">Dọn các sửa tạm</button>
+      <!-- Gate ẩn — không hiện chữ gợi ý là gì, chỉ 1 icon nhỏ khiêm tốn.
+           Key KHÔNG lưu plaintext trong code (xem js/init.js: chỉ lưu hash
+           SHA-256) — bấm mở prompt nhập key, đúng thì mở khóa. -->
+      <button id="btnPrivateUnlock" class="ghost-btn private-unlock-btn" title="🔒">🔒</button>
     </div>
   </header>
 
@@ -104,10 +98,41 @@
          giáo trình học, kết quả đề thi gần đây. Tái dùng data SRS/exam-history
          sẵn có, xem js/dashboard.js.
     =================================================================== -->
+    <section class="view hidden" id="view-advanced">
+      <div class="view-head">
+        <div class="dash-side-title">🔓 Khu vực nâng cao</div>
+      </div>
+      <div class="dash-chart-empty">
+        Placeholder — Zane tự thêm chức năng thật vào view này sau (cùng key gate đã có sẵn).
+      </div>
+    </section>
+
     <section class="view" id="view-dashboard">
       <div class="dash-greeting">
         <div class="dash-greeting-title" id="dashGreeting">Chào bạn 👋</div>
         <div class="dash-greeting-sub" id="dashSubtitle"></div>
+      </div>
+
+      <div class="dash-today-card">
+        <div class="dash-today-head">
+          <div class="dash-side-title">🔥 Hôm nay cần học gì</div>
+          <div class="dash-today-stat">
+            <span class="dash-today-stat-num" id="dashTodayCount">0</span>
+            <span class="dash-today-stat-label">từ/cấu trúc đã ôn hôm nay</span>
+          </div>
+        </div>
+        <div class="dash-today-actions">
+          <button class="dash-today-action" id="btnDueReviewTuvung" title="Cần ôn tổng hợp Từ vựng — gộp tất cả từ đến hạn ôn (SRS) của mọi bộ, bấm vào ôn ngay">
+            <span class="dash-today-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4.5c2.5-1 5.5-1 8 0v15c-2.5-1-5.5-1-8 0Z"/><path d="M22 4.5c-2.5-1-5.5-1-8 0v15c2.5-1 5.5-1 8 0Z"/></svg></span>
+            <span class="dash-today-action-text">Từ vựng</span>
+            <span class="dash-today-action-count" id="dueReviewTuvungCount">0</span>
+          </button>
+          <button class="dash-today-action" id="btnDueReviewNguphap" title="Cần ôn tổng hợp Ngữ pháp — gộp tất cả cấu trúc đến hạn ôn (SRS) của mọi bộ, bấm vào ôn ngay">
+            <span class="dash-today-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></span>
+            <span class="dash-today-action-text">Ngữ pháp</span>
+            <span class="dash-today-action-count" id="dueReviewNguphapCount">0</span>
+          </button>
+        </div>
       </div>
 
       <div class="dash-grid">
@@ -865,15 +890,15 @@
 <script src="js/core.js?v=11"></script>
 <script src="js/scoring.js?v=1"></script>
 <script src="js/stats-weakness.js?v=5"></script>
-<script src="js/dashboard.js?v=1"></script>
+<script src="js/dashboard.js?v=2"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=15"></script>
+<script src="js/loader-nav.js?v=16"></script>
 <script src="js/flashcard-edit.js?v=6"></script>
 <script src="js/table-srs-typing.js?v=10"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=6"></script>
 <script src="js/choukai.js?v=11"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=21"></script>
+<script src="js/init.js?v=22"></script>
 </body>
 </html>
