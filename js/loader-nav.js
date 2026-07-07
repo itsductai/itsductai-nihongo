@@ -307,6 +307,13 @@ function renderNav() {
     nav.appendChild(buildNavCategory(navIcon("headphones"), "Luyện nghe (聴解)", choukaiItems, choukaiItems.map((b) => b.dataset.mode)));
   }
 
+  // Nhóm "Nâng cao" — CHỈ hiện khi đã mở khóa qua gate ẩn (xem btnPrivateUnlock
+  // trong init.js). Placeholder ban đầu, Zane tự thêm chức năng thật vào sau.
+  if (document.body.classList.contains("advanced-unlocked")) {
+    const advancedItems = [buildNavItemBtn("advanced", "🔓", "Khu vực nâng cao")];
+    nav.appendChild(buildNavCategory(navIcon("settings"), "Nâng cao", advancedItems, advancedItems.map((b) => b.dataset.mode)));
+  }
+
   // Re-apply active state: tô sáng nav-item con đang active, VÀ tô viền
   // category cha (has-active) để biết đang ở nhóm nào dù dropdown đang đóng.
   const current = document.querySelector(".view:not(.hidden)");
@@ -385,6 +392,7 @@ function jumpToSearchResult(deckId, wordId) {
 function switchDeck(deckId) {
   const deck = App.decks.find((d) => d.id === deckId);
   if (!deck) return;
+  localStorage.setItem(LAST_SESSION_STORAGE_KEY + "_deck", deckId);
   App.srsComboActive = false; // rời khỏi mode "học SRS gộp nhiều bộ" nếu đang ở đó
   App.srsComboDueOnly = false;
   App.currentDeckId = deckId;
@@ -414,7 +422,12 @@ function switchDeck(deckId) {
   setMode("flash");
 }
 
+// Ghi nhớ mode + deck đang xem — dùng khi reload trang thì quay lại ĐÚNG chỗ
+// cũ thay vì luôn nhảy về Dashboard (xem chỗ khôi phục trong init.js).
+const LAST_SESSION_STORAGE_KEY = "n2vocab_last_session";
+
 function setMode(mode) {
+  localStorage.setItem(LAST_SESSION_STORAGE_KEY + "_mode", mode);
   // Thoát focus mode khi chuyển sang chức năng khác, tránh kẹt UI vì sidebar đang ẩn
   exitFocusMode();
 

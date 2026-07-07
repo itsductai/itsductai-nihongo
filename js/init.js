@@ -176,6 +176,38 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   });
 
+  // ----- Gate ẩn "chức năng nâng cao" — CHỈ lưu SHA-256 hash của key, KHÔNG
+  // bao giờ lưu plaintext trong code (repo public trên GitHub) — đây là cách
+  // "ẩn khỏi mắt thường/grep repo", KHÔNG phải access-control thật (client-side
+  // JS luôn có thể bị đọc ngược qua DevTools, đã nói rõ với Zane). Trạng thái
+  // mở khóa lưu localStorage, tồn tại qua các lần load lại trang.
+  const PRIVATE_UNLOCK_HASH = "a244e82e26bdaba19bbf798e8d0b9719468f947e33618eb456ef6086f60e0204";
+  const PRIVATE_UNLOCK_STORAGE_KEY = "n2vocab_advanced_unlocked";
+
+  async function sha256Hex(text) {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+    return Array.from(new Uint8Array(buf)).map((b) => b.toString(16).padStart(2, "0")).join("");
+  }
+
+  function applyAdvancedUnlockState(unlocked) {
+    document.body.classList.toggle("advanced-unlocked", unlocked);
+  }
+  applyAdvancedUnlockState(localStorage.getItem(PRIVATE_UNLOCK_STORAGE_KEY) === "1");
+
+  document.getElementById("btnPrivateUnlock").addEventListener("click", async (e) => {
+    e.stopPropagation();
+    const input = prompt("Nhập key:");
+    if (!input) return;
+    const hash = await sha256Hex(input.trim());
+    if (hash === PRIVATE_UNLOCK_HASH) {
+      localStorage.setItem(PRIVATE_UNLOCK_STORAGE_KEY, "1");
+      applyAdvancedUnlockState(true);
+      alert("Đã mở khóa chức năng nâng cao.");
+    } else {
+      alert("Key không đúng.");
+    }
+  });
+
   // ----- Từ điển nội bộ (search toàn bộ deck) -----
   document.getElementById("globalSearchInput").addEventListener("input", (e) => {
     performGlobalSearch(e.target.value);
@@ -993,10 +1025,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   // ----- Bắt đầu với bộ đầu tiên -----
   switchDeck(App.decks[0].id);
 
-  // switchDeck() ở trên mặc định mở Flashcard (đúng hành vi khi NGƯỜI DÙNG tự đổi
-  // bộ giữa lúc đang dùng app — xem comment trong switchDeck()). Nhưng lúc MỞ APP
-  // LẦN ĐẦU thì mở thẳng trang Thống kê để nhìn tổng quan tiến độ trước, nên ghi
-  // đè lại mode ngay sau đó — CHỈ áp dụng cho lần load trang này, không ảnh hưởng
-  // gì tới việc đổi bộ học bình thường sau đó.
-  setMode("dashboard");
+  // Khôi phục lại ĐÚNG mode + deck lần cuối người dùng đang xem trước khi
+  // reload/đóng tab — thay vì luôn nhảy về Dashboard. switchDeck() ở trên vẫn
+  // cần chạy trước (để App.decks[0] load sẵn làm fallback khi chưa có gì lưu,
+  // hoặc deck đã lưu không còn tồn tại do đổi/xóa file JSON).
+  const lastDeckId = localStorage.getItem(LAST_SESSION_STORAGE_KEY + "_deck");
+  const lastMode = localStorage.getItem(LAST_SESSION_STORAGE_KEY + "_mode");
+  if (lastDeckId && App.decks.some((d) => d.id === lastDeckId)) {
+    switchDeck(lastDeckId);
+  }
+  setMode(lastMode || "dashboard");
 });

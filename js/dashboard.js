@@ -170,10 +170,19 @@ function buildDailyActivityChart(series) {
 =================================================================== */
 function renderDashboard() {
   renderDashboardGreeting();
+  renderDashboardTodayCount();
   renderDashboardChart();
   renderDashboardCurriculumCards();
   renderDashboardProgressSummary();
   renderDashboardRecentResults();
+}
+
+// "Hôm nay đã ôn bao nhiêu từ/cấu trúc" — tái dùng đúng log hoạt động theo
+// ngày đã ghi (recordDailyActivity, xem trên) thay vì tạo hệ đếm mới.
+function renderDashboardTodayCount() {
+  const log = loadDailyActivity();
+  const today = log[todayKey()] || { tuvung: 0, nguphap: 0 };
+  document.getElementById("dashTodayCount").textContent = today.tuvung + today.nguphap;
 }
 
 function renderDashboardGreeting() {
