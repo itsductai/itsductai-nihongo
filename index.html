@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nihongo Lab — Luyện thi JLPT</title>
-<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/style.css?v=3">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -147,6 +147,20 @@
       </div>
     </section>
 
+    <!-- Popover chọn field hiển thị mặt trước / mặt sau — DÙNG CHUNG cho cả
+         Flashcard và SRS (2 nút ⚙ Mặt thẻ ở mỗi view cùng toggle chung panel
+         này), nên đặt ngoài mọi <section class="view">, không thuộc riêng bên nào. -->
+    <div class="field-config hidden" id="fieldConfigPanel">
+      <div class="field-config-col">
+        <div class="field-config-title">Mặt trước</div>
+        <div id="frontFieldOptions" class="field-config-options"></div>
+      </div>
+      <div class="field-config-col">
+        <div class="field-config-title">Mặt sau</div>
+        <div id="backFieldOptions" class="field-config-options"></div>
+      </div>
+    </div>
+
     <!-- ---- FLASHCARD MODE ---- -->
     <section class="view hidden" id="view-flash">
       <div class="view-head">
@@ -164,18 +178,6 @@
             <span>⤮ Ngẫu nhiên</span>
           </label>
           <button class="icon-btn focus-toggle-btn" data-focus-target="flash" title="Phóng to toàn màn hình">⛶</button>
-        </div>
-      </div>
-
-      <!-- Popover chọn field hiển thị mặt trước / mặt sau -->
-      <div class="field-config hidden" id="fieldConfigPanel">
-        <div class="field-config-col">
-          <div class="field-config-title">Mặt trước</div>
-          <div id="frontFieldOptions" class="field-config-options"></div>
-        </div>
-        <div class="field-config-col">
-          <div class="field-config-title">Mặt sau</div>
-          <div id="backFieldOptions" class="field-config-options"></div>
         </div>
       </div>
 
@@ -254,6 +256,7 @@
       <div class="view-head">
         <div></div>
         <div class="head-actions">
+          <button id="btnSrsFieldConfig" class="icon-btn" title="Chọn hiển thị mặt thẻ">⚙ Mặt thẻ</button>
           <button id="btnSrsStarOnly" class="icon-btn" title="Chỉ ôn các từ đã đánh dấu ★">★ Ôn từ đã sao</button>
           <label class="toggle shuffle-toggle">
             <input type="checkbox" id="srsShuffleToggle" checked>
@@ -854,13 +857,13 @@
 <script src="js/stats-weakness.js?v=5"></script>
 <script src="js/dashboard.js?v=1"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=13"></script>
+<script src="js/loader-nav.js?v=14"></script>
 <script src="js/flashcard-edit.js?v=4"></script>
 <script src="js/table-srs-typing.js?v=9"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=6"></script>
 <script src="js/choukai.js?v=11"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=18"></script>
+<script src="js/init.js?v=19"></script>
 </body>
 </html>
