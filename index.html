@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nihongo Lab — Luyện thi JLPT</title>
-<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -40,12 +40,14 @@
           <span class="picker-hidden" id="examCountdownDate"></span>
           <span class="picker-hidden" id="examCountdownBarFill"></span>
         </div>
-        <button class="due-review-row" id="btnDueReviewTuvung">
+        <button class="due-review-row" id="btnDueReviewTuvung" title="Cần ôn tổng hợp Từ vựng — gộp tất cả từ đến hạn ôn (SRS) của mọi bộ, bấm vào ôn ngay">
           <span class="due-review-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4.5c2.5-1 5.5-1 8 0v15c-2.5-1-5.5-1-8 0Z"/><path d="M22 4.5c-2.5-1-5.5-1-8 0v15c2.5-1 5.5-1 8 0Z"/></svg></span>
+          <span class="due-review-text">Từ vựng</span>
           <span class="due-review-count" id="dueReviewTuvungCount">0</span>
         </button>
-        <button class="due-review-row" id="btnDueReviewNguphap">
+        <button class="due-review-row" id="btnDueReviewNguphap" title="Cần ôn tổng hợp Ngữ pháp — gộp tất cả cấu trúc đến hạn ôn (SRS) của mọi bộ, bấm vào ôn ngay">
           <span class="due-review-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/></svg></span>
+          <span class="due-review-text">Ngữ pháp</span>
           <span class="due-review-count" id="dueReviewNguphapCount">0</span>
         </button>
       </div>
