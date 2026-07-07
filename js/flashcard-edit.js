@@ -174,7 +174,15 @@ function closeGrammarRelatedPopup() {
 function renderCardFace(containerEl, word, fieldKeys) {
   const type = App.currentDeckType;
   const meta = FIELD_META[type];
-  const html = fieldKeys
+  // fieldKeys đến từ App.fieldConfig[type].back — 1 Set được build theo thứ tự
+  // BẤM TICK (Set.add() giữ thứ tự chèn), không phải thứ tự hợp lý của field.
+  // Bỏ tick rồi tick lại Kanji sau cùng sẽ đẩy nó xuống CUỐI mảng dù đáng lẽ
+  // phải hiện ĐẦU TIÊN. Sắp lại đúng thứ tự khai báo chuẩn trong FIELD_META
+  // (kanji -> doc -> han_viet -> nghia -> vi_du -> ...) trước khi render, không
+  // phụ thuộc thứ tự người dùng bấm tick.
+  const canonicalOrder = Object.keys(meta);
+  const orderedKeys = fieldKeys.slice().sort((a, b) => canonicalOrder.indexOf(a) - canonicalOrder.indexOf(b));
+  const html = orderedKeys
     .map((key) => (meta[key] ? meta[key].render(word) : ""))
     .filter(Boolean)
     .join("");
