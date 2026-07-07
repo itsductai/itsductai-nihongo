@@ -330,32 +330,11 @@ input[type="text"]:focus, textarea:focus {
   }
 }
 
-/* ---- 20. Widget "Cần ôn tổng hợp" (sidebar) ---- */
-.due-review-widget {
-  margin: 4px 4px 12px; padding: 12px 14px;
-  border-radius: var(--radius);
-  background: linear-gradient(135deg, #241c1c, #1e1a1e);
-  border: 1px solid rgba(240,85,90,0.22);
-  box-shadow: var(--shadow-soft);
-}
-.due-review-title { font-size: 11px; font-weight: 800; letter-spacing: 0.04em; color: #ffb199; text-transform: uppercase; margin-bottom: 8px; }
-.due-review-row {
-  width: 100%; display: flex; align-items: center; justify-content: space-between;
-  padding: 8px 10px; margin-bottom: 6px; border-radius: 9px;
-  background: rgba(255,255,255,0.03); border: 1px solid var(--border-soft);
-  cursor: pointer; transition: background .14s, border-color .14s, transform .1s;
-}
-.due-review-row:last-child { margin-bottom: 0; }
-.due-review-row:hover { transform: translateX(2px); border-color: rgba(240,85,90,0.35); }
-.due-review-label { font-size: 12.5px; color: var(--text-1); font-weight: 600; }
-.due-review-count {
-  font-size: 13px; font-weight: 800; color: var(--text-2);
-  min-width: 26px; text-align: center; padding: 2px 8px; border-radius: 999px;
-  background: rgba(255,255,255,0.05);
-}
-.due-review-row.has-due .due-review-count {
-  color: #ff8a7a; background: rgba(240,85,90,0.16); border: 1px solid rgba(240,85,90,0.35);
-}
+/* ---- 20. "Cần ôn tổng hợp" — widget cũ đã dời sang navbar-chips (xem
+   style.css .navbar-chips .due-review-row), block CSS gốc ở đây đã xóa vì
+   .due-review-widget/.due-review-title không còn tồn tại trong HTML nữa —
+   giữ lại sẽ là dead code gây rò rỉ style (width:100% từng đè lên layout
+   navbar ngang, đây chính là bug "thanh quá dài" đã xảy ra thật). ---- */
 
 /* ---- 21. Nút "Đưa về ôn lại" trong Bảng ---- */
 .table-back-to-review-btn {

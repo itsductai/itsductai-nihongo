@@ -112,14 +112,6 @@ body {
 .exam-countdown-days { background: linear-gradient(120deg, #ffb38f, #ff7e5a); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .exam-countdown-bar-fill { background: linear-gradient(90deg, var(--accent-2), #ff5f7e); box-shadow: 0 0 14px rgba(255,143,107,0.5); }
 
-.due-review-widget {
-  border-radius: var(--radius);
-  background: rgba(45,212,167,0.06);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(45,212,167,0.2);
-  box-shadow: var(--shadow-soft);
-}
-.due-review-title { color: #8bf5d4; }
 .due-review-row { border-radius: 11px; background: rgba(255,255,255,0.02); }
 .due-review-row:hover { background: rgba(45,212,167,0.08); transform: translateX(3px); }
 .due-review-row.has-due .due-review-count { color: #ffb38f; background: rgba(255,143,107,0.16); border-color: rgba(255,143,107,0.35); }
@@ -251,7 +243,7 @@ tbody tr:hover { background: rgba(45,212,167,0.05); }
 
 /* ---- 15. Mobile ---- */
 @media (max-width: 820px) {
-  .exam-countdown, .due-review-widget { margin: 4px 6px 10px; }
+  .exam-countdown { margin: 4px 6px 10px; }
   .exam-countdown-days { font-size: 30px; }
   .choukai-m4-grid { grid-template-columns: 1fr; }
 }

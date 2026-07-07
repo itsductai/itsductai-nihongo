@@ -211,7 +211,7 @@ rt {
 .navbar-chips .exam-countdown-unit { font-size: 10.5px; }
 .navbar-chips .due-review-row {
   display: flex; align-items: center; gap: 6px;
-  padding: 6px 11px; margin: 0; flex-shrink: 0;
+  width: auto; padding: 6px 11px; margin: 0; flex-shrink: 0;
   border-radius: 999px;
 }
 .navbar-chips .due-review-label { font-size: 14px; line-height: 1; display: inline-flex; }
@@ -793,6 +793,16 @@ tbody tr:last-child td { border-bottom: none; }
   .navbar-right { order: 3; }
   .navbar-search-wrap { order: 4; flex: 1 1 100%; max-width: 100%; margin: 2px 0 0; }
   .brand-sub { max-width: 120px; }
+
+  /* Safari iOS TỰ ĐỘNG ZOOM cả trang khi focus vào input có font-size < 16px
+     — hành vi mặc định của WebKit, không phải bug CSS thông thường. Chỉ cần
+     bump đúng ngưỡng 16px trên input tìm kiếm là tắt hẳn hành vi này. */
+  .navbar-search-input { font-size: 16px; }
+
+  /* Safe-area-inset cho iPhone có notch/Dynamic Island — navbar dính sát mép
+     trên cùng nên cần padding thêm bằng đúng vùng an toàn của thiết bị, nếu
+     không nội dung (brand, icon) sẽ bị tai thỏ/thanh trạng thái che mất. */
+  .navbar { padding-top: env(safe-area-inset-top, 0px); }
 
   /* Dropdown vẫn nổi (absolute) như desktop, chỉ giới hạn bề rộng để không
      tràn khỏi viewport hẹp (ví dụ iPhone 11: 414px) khi trigger gần mép phải. */
