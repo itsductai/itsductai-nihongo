@@ -218,14 +218,17 @@ rt {
 .navbar-chips .due-review-text { font-size: 11.5px; color: var(--text-1); font-weight: 600; white-space: nowrap; }
 .navbar-chips .due-review-count { font-size: 12px; padding: 2px 8px; min-width: 20px; text-align: center; line-height: 1.3; }
 
-/* Màu trạng thái "has-due" dùng biến --bad (đã theme-aware sẵn ở :root của
-   theme-plus.css/theme-new.css) — viết 1 lần duy nhất ở đây thay vì lặp lại
-   2 lần với mã màu hardcode khác nhau ở mỗi file theme. Đổi theme thì màu tự
-   đổi theo, không cần sửa gì thêm khi thêm theme mới sau này. */
+/* Màu trạng thái "has-due" dùng biến --bad/--bad-soft (đã theme-aware sẵn ở
+   :root của theme-plus.css/theme-new.css) — viết 1 lần duy nhất ở đây thay vì
+   lặp lại 2 lần với mã màu hardcode khác nhau ở mỗi file theme. Đổi theme thì
+   màu tự đổi theo, không cần sửa gì thêm khi thêm theme mới sau này.
+   KHÔNG dùng color-mix() (CSS function quá mới, nhiều trình duyệt/thiết bị
+   cũ chưa hỗ trợ -> cả khai báo bị coi invalid, bị bỏ qua ÂM THẦM không báo
+   lỗi, false-negative "code không chạy"). Dùng thẳng --bad-soft đã pha sẵn
+   trong từng theme thay thế, tương thích tuyệt đối mọi trình duyệt. */
 .due-review-row:hover { transform: translateX(2px); border-color: var(--bad); }
 .due-review-row.has-due .due-review-count {
-  color: var(--bad); background: color-mix(in srgb, var(--bad) 16%, transparent);
-  border: 1px solid color-mix(in srgb, var(--bad) 40%, transparent);
+  color: var(--bad); background: var(--bad-soft); border: 1px solid var(--bad);
 }
 
 /* Panel Cài đặt (deck picker + xuất/nhập) — dropdown nổi dưới nút ⚙ */
