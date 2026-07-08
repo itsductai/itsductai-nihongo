@@ -230,7 +230,7 @@ function renderDashboardChart() {
         </div>
       </div>`;
     box.querySelectorAll("[data-status-filter]").forEach((btn) => {
-      btn.addEventListener("click", () => openWordStatusModal(btn.dataset.statusFilter));
+      btn.addEventListener("click", () => openWordStatusModal(btn.dataset.statusFilter, "all"));
     });
   } else {
     box.innerHTML = buildDailyActivityChart(getDailyActivitySeries(14));
@@ -258,24 +258,40 @@ function formatDueDate(entry) {
   return `Còn ${days} ngày nữa`;
 }
 
-function openWordStatusModal(statusFilter) {
+const WORD_STATUS_MODAL_LABELS = {
+  known: "✅ Đã thuộc", learning: "🟡 Đang học", fresh: "⚪ Chưa học",
+  mastered: "⭐ Đã thuộc làu", due: "🔥 Cần ôn ngay",
+};
+
+// scope: "all" (mọi bộ, dùng ở Dashboard) | "current" (chỉ bộ đang học SRS,
+// dùng ở view-srs — 2 nơi khác nhau, số liệu khác nhau nên KHÔNG dùng chung
+// 1 phạm vi mặc định).
+function openWordStatusModal(statusFilter, scope) {
   App.wordStatusModalFilter = statusFilter;
-  const label = { known: "✅ Đã thuộc", learning: "🟡 Đang học", fresh: "⚪ Chưa học" }[statusFilter];
-  document.getElementById("wordStatusModalTitle").textContent = label;
+  App.wordStatusModalScope = scope || "all";
+  document.getElementById("wordStatusModalTitle").textContent = WORD_STATUS_MODAL_LABELS[statusFilter];
   renderWordStatusModalList();
   document.getElementById("wordStatusModalOverlay").classList.remove("hidden");
 }
 
+function wordStatusMatchesFilter(entry, st, statusFilter) {
+  if (statusFilter === "known") return st === "known" || st === "mastered";
+  if (statusFilter === "due") return entry.seen && SRS.isDue(entry);
+  return st === statusFilter; // "learning" | "fresh" | "mastered" (khớp CHÍNH XÁC, khác "known" gộp cả mastered)
+}
+
 function renderWordStatusModalList() {
   const statusFilter = App.wordStatusModalFilter;
+  const scope = App.wordStatusModalScope || "all";
+  const decksToScan = scope === "current" ? App.decks.filter((d) => d.id === App.currentDeckId) : App.decks;
+
   const rows = [];
-  App.decks.forEach((deck) => {
+  decksToScan.forEach((deck) => {
     const progress = SRS.loadProgress(deck.id);
     deck.words.forEach((w) => {
       const entry = SRS.getEntry(progress, w._id);
       const st = SRS.status(entry);
-      const matches = statusFilter === "known" ? (st === "known" || st === "mastered") : st === statusFilter;
-      if (matches) rows.push({ deck, w, entry, st });
+      if (wordStatusMatchesFilter(entry, st, statusFilter)) rows.push({ deck, w, entry, st });
     });
   });
 
@@ -319,15 +335,17 @@ function renderWordStatusModalList() {
 function fastForwardWordStatusList(days) {
   const ms = days * 86400000;
   const statusFilter = App.wordStatusModalFilter;
+  const scope = App.wordStatusModalScope || "all";
+  const decksToScan = scope === "current" ? App.decks.filter((d) => d.id === App.currentDeckId) : App.decks;
   let dueBefore = 0, dueAfter = 0;
 
-  App.decks.forEach((deck) => {
+  decksToScan.forEach((deck) => {
     const progress = SRS.loadProgress(deck.id);
     let changed = false;
     deck.words.forEach((w) => {
       const entry = SRS.getEntry(progress, w._id);
       const st = SRS.status(entry);
-      const matches = statusFilter === "known" ? st === "known" : st === statusFilter; // không đụng "mastered" dù đang lọc known
+      const matches = wordStatusMatchesFilter(entry, st, statusFilter);
       if (matches && entry.seen) {
         if (SRS.isDue(entry)) dueBefore++;
         entry.due -= ms;

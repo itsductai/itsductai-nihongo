@@ -681,6 +681,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.querySelectorAll("[data-ff-days]").forEach((btn) => {
     btn.addEventListener("click", () => fastForwardWordStatusList(parseInt(btn.dataset.ffDays, 10)));
   });
+
+  // ----- 3 ô thống kê ở trang SRS (cần ôn/từ mới/đã thuộc làu) — bấm để xem
+  // danh sách từ CỤ THỂ trong ĐÚNG bộ đang học (scope="current", khác Dashboard
+  // dùng scope="all" gộp mọi bộ). -----
+  document.querySelectorAll(".srs-stat[data-status-filter]").forEach((btn) => {
+    btn.addEventListener("click", () => openWordStatusModal(btn.dataset.statusFilter, btn.dataset.statusScope));
+  });
   document.getElementById("comboSrsModalOverlay").addEventListener("click", (e) => {
     if (e.target.id === "comboSrsModalOverlay") closeComboSrsModal();
   });
