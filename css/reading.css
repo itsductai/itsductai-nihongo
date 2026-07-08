@@ -21,6 +21,20 @@
 .dokkai-article-card-title { font-size: 14.5px; font-weight: 700; color: var(--text-0); margin-bottom: 3px; }
 .dokkai-article-card-sub { font-size: 12px; color: var(--text-2); }
 
+.dokkai-category-filter { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0; }
+.dokkai-category-btn {
+  font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 999px;
+  background: var(--bg-2); border: 1px solid var(--border-soft); color: var(--text-2); cursor: pointer;
+}
+.dokkai-category-btn:hover { border-color: var(--accent); color: var(--text-0); }
+.dokkai-category-btn.is-active { background: var(--accent); border-color: var(--accent); color: #fff; }
+.dokkai-category-badge { font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 999px; background: var(--bg-3); color: var(--text-2); }
+
+.dokkai-article-card-illust { border-radius: 8px; overflow: hidden; margin-bottom: 10px; }
+.dokkai-article-card-illust svg { width: 100%; height: auto; display: block; }
+.dokkai-read-illust { max-width: 320px; border-radius: 10px; overflow: hidden; margin-bottom: 12px; }
+.dokkai-read-illust svg { width: 100%; height: auto; display: block; }
+
 /* ---- Đầu trang đọc: tiêu đề + toggle dịch + fullscreen ---- */
 .dokkai-read-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
 .dokkai-read-title { font-size: 18px; font-weight: 800; color: var(--text-0); }
