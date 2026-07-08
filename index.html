@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Nihongo Lab — Luyện thi JLPT</title>
-<link rel="stylesheet" href="css/style.css?v=12">
+<link rel="stylesheet" href="css/style.css?v=13">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -293,9 +293,9 @@
         </div>
       </div>
       <div class="srs-summary">
-        <div class="srs-stat"><div class="srs-num" id="srsDueCount">0</div><div class="srs-label">cần ôn ngay</div></div>
-        <div class="srs-stat"><div class="srs-num" id="srsNewCount">0</div><div class="srs-label">từ mới</div></div>
-        <div class="srs-stat"><div class="srs-num" id="srsMasteredCount">0</div><div class="srs-label">đã thuộc làu</div></div>
+        <button class="srs-stat" data-status-filter="due" data-status-scope="current"><div class="srs-num" id="srsDueCount">0</div><div class="srs-label">cần ôn ngay</div></button>
+        <button class="srs-stat" data-status-filter="fresh" data-status-scope="current"><div class="srs-num" id="srsNewCount">0</div><div class="srs-label">từ mới</div></button>
+        <button class="srs-stat" data-status-filter="mastered" data-status-scope="current"><div class="srs-num" id="srsMasteredCount">0</div><div class="srs-label">đã thuộc làu</div></button>
       </div>
       <div id="srsEmpty" class="empty-state hidden">
         <div class="empty-icon">✓</div>
@@ -1053,7 +1053,7 @@
 <script src="js/core.js?v=14"></script>
 <script src="js/scoring.js?v=1"></script>
 <script src="js/stats-weakness.js?v=5"></script>
-<script src="js/dashboard.js?v=6"></script>
+<script src="js/dashboard.js?v=7"></script>
 <script src="js/game.js?v=7"></script>
 <script src="js/listen-game.js?v=3"></script>
 <script src="js/config-focus.js?v=1"></script>
@@ -1064,6 +1064,6 @@
 <script src="js/exam.js?v=7"></script>
 <script src="js/choukai.js?v=12"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=29"></script>
+<script src="js/init.js?v=30"></script>
 </body>
 </html>
