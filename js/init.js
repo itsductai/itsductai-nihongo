@@ -570,13 +570,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     btn.addEventListener("click", () => pickGameDirection(btn));
   });
   document.getElementById("btnGameStart").addEventListener("click", startGame);
-  document.getElementById("gameTypingInput").addEventListener("input", updateTypingSlotsLive);
+  document.getElementById("btnGameSkipBubble").addEventListener("click", skipBubblePhase);
   document.getElementById("gameTypingInput").addEventListener("keydown", (e) => {
     if (e.key === "Enter") checkGameTypingAnswer();
   });
   document.getElementById("btnGameSubmit").addEventListener("click", checkGameTypingAnswer);
-  document.getElementById("btnGameHintSpeak").addEventListener("click", () => useGameHint("speak"));
-  document.getElementById("btnGameHintLetter").addEventListener("click", () => useGameHint("letter"));
   document.getElementById("btnGamePlayAgain").addEventListener("click", backToGameSetup);
   document.getElementById("btnGameBackFromResult").addEventListener("click", backToGameSetup);
   document.getElementById("btnGameOverRetry").addEventListener("click", backToGameSetup);
