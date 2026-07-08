@@ -176,24 +176,52 @@ function renderBubbleArena() {
     bubble.dataset.wordId = w._id;
     bubble.textContent = bubbleText;
 
-    bubble.style.left = (5 + Math.random() * 80) + "vw";
-    bubble.style.top = (10 + Math.random() * 65) + "vh";
-    bubble.style.setProperty("--dx1", (Math.random() * 2 - 1).toFixed(2));
-    bubble.style.setProperty("--dy1", (Math.random() * 2 - 1).toFixed(2));
-    bubble.style.setProperty("--dx2", (Math.random() * 2 - 1).toFixed(2));
-    bubble.style.setProperty("--dy2", (Math.random() * 2 - 1).toFixed(2));
-    bubble.style.setProperty("--dur", (6 + Math.random() * 6).toFixed(2) + "s");
-    bubble.style.setProperty("--delay", (Math.random() * 4).toFixed(2) + "s");
-    bubble.style.setProperty("--size", (76 + Math.random() * 34).toFixed(0) + "px");
-    bubble.style.setProperty("--hue", Math.floor(Math.random() * 360));
+    const size = 76 + Math.random() * 34;
+    bubble.style.setProperty("--size", size.toFixed(0) + "px");
+    // Random khắp TOÀN màn hình thật sự (0-100vw/vh), chỉ chừa đúng nửa kích
+    // thước bong bóng ở mép để không bị cắt nửa ra ngoài viewport.
+    const marginVw = (size / window.innerWidth) * 100 / 2;
+    const marginVh = (size / window.innerHeight) * 100 / 2;
+    bubble.style.left = (marginVw + Math.random() * (100 - marginVw * 2)) + "vw";
+    bubble.style.top = (marginVh + Math.random() * (100 - marginVh * 2)) + "vh";
+    setNaturalBubbleMotion(bubble);
 
     bubble.addEventListener("dragstart", (e) => {
       e.dataTransfer.setData("text/plain", w._id);
       bubble.classList.add("is-dragging");
     });
-    bubble.addEventListener("dragend", () => bubble.classList.remove("is-dragging"));
+    // Thả chuột ở đâu, bong bóng "ở lại" đúng chỗ đó rồi tiếp tục trôi tự
+    // nhiên TỪ vị trí mới — không nhảy về vị trí cũ. dragend luôn có tọa độ
+    // chuột cuối cùng (kể cả khi thả trật, không trúng ô nào).
+    bubble.addEventListener("dragend", (e) => {
+      bubble.classList.remove("is-dragging");
+      if (e.clientX || e.clientY) {
+        bubble.style.left = e.clientX - size / 2 + "px";
+        bubble.style.top = e.clientY - size / 2 + "px";
+        setNaturalBubbleMotion(bubble); // random lại quỹ đạo mới, trôi tiếp từ đây
+      }
+    });
     arena.appendChild(bubble);
   });
+}
+
+// Gán quỹ đạo trôi TỰ NHIÊN kiểu bong bóng xà phòng thật: trôi lên chậm rãi +
+// đung đưa trái phải, nhiều điểm waypoint thay vì chỉ 1 vòng lặp đơn giản.
+// Gọi lại hàm này (reset animation qua reflow) mỗi khi cần bong bóng bắt đầu
+// trôi từ 1 vị trí MỚI (lúc tạo, hoặc sau khi thả chuột).
+function setNaturalBubbleMotion(bubble) {
+  bubble.style.animation = "none";
+  void bubble.offsetWidth; // ép reflow để animation restart đúng từ vị trí left/top mới set
+  bubble.style.setProperty("--wx1", (Math.random() * 2 - 1).toFixed(2));
+  bubble.style.setProperty("--wy1", (-0.6 - Math.random() * 0.8).toFixed(2)); // luôn có xu hướng TRÔI LÊN
+  bubble.style.setProperty("--wx2", (Math.random() * 2 - 1).toFixed(2));
+  bubble.style.setProperty("--wy2", (-0.3 - Math.random() * 1).toFixed(2));
+  bubble.style.setProperty("--wx3", (Math.random() * 2 - 1).toFixed(2));
+  bubble.style.setProperty("--wy3", (-0.8 - Math.random() * 0.6).toFixed(2));
+  bubble.style.setProperty("--dur", (10 + Math.random() * 8).toFixed(2) + "s");
+  bubble.style.setProperty("--delay", (Math.random() * 2).toFixed(2) + "s");
+  bubble.style.setProperty("--hue", Math.floor(Math.random() * 360));
+  bubble.style.animation = `bubbleNatural var(--dur) ease-in-out var(--delay) infinite alternate`;
 }
 
 function handleBubbleDrop(droppedId, zoneWordId, zoneEl) {
