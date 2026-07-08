@@ -404,3 +404,22 @@
 .lg-result-title { font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 16px; }
 .lg-result-score { font-size: 40px; font-weight: 900; color: #7de8ff; }
 .lg-result-pct { font-size: 15px; color: #9aa3d0; margin-bottom: 24px; }
+
+.lg-wrong-review-title { font-size: 13px; font-weight: 800; color: #7de8ff; text-transform: uppercase; letter-spacing: 0.04em; margin: 20px 0 10px; text-align: left; }
+.lg-wrong-review-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+.lg-wrong-review-row {
+  display: flex; align-items: center; gap: 8px; padding: 9px 12px;
+  background: rgba(255,107,107,0.08); border: 1px solid rgba(255,107,107,0.25); border-radius: 12px;
+  text-align: left;
+}
+.lg-wrong-review-kanji { font-size: 14px; font-weight: 800; color: #fff; min-width: 60px; }
+.lg-wrong-review-nghia { font-size: 12px; color: #9aa3d0; flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lg-wrong-review-listen {
+  width: 28px; height: 28px; border-radius: 50%; font-size: 13px; flex-shrink: 0;
+  background: rgba(107,147,255,0.15); border: 1px solid rgba(107,147,255,0.4); cursor: pointer;
+}
+.lg-wrong-review-srs {
+  font-size: 11px; font-weight: 700; padding: 6px 10px; border-radius: 999px; flex-shrink: 0; white-space: nowrap;
+  background: rgba(72,201,140,0.15); color: #48c98c; border: 1px solid rgba(72,201,140,0.4); cursor: pointer;
+}
+.lg-wrong-review-srs:hover { filter: brightness(1.2); }
