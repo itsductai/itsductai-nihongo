@@ -13,25 +13,45 @@
     {
       "difficulty": 1,
       "q": "在宅勤務が増えたきっかけは何か。",
-      "options": ["会社の給料が上がったから", "感染症が流行したから", "電車が値上がりしたから", "社員の趣味が変わったから"],
+      "options": [
+        "会社の給料が上がったから",
+        "感染症が流行したから",
+        "電車が値上がりしたから",
+        "社員の趣味が変わったから"
+      ],
       "answer": 1
     },
     {
       "difficulty": 2,
       "q": "在宅勤務の利点として本文に書かれていないものはどれか。",
-      "options": ["通勤時間が不要になる", "家族と過ごす時間が増える", "給料が上がる", "満員電車のストレスがなくなる"],
+      "options": [
+        "通勤時間が不要になる",
+        "家族と過ごす時間が増える",
+        "給料が上がる",
+        "満員電車のストレスがなくなる"
+      ],
       "answer": 2
     },
     {
       "difficulty": 3,
       "q": "在宅勤務の課題として本文で挙げられているものはどれか。",
-      "options": ["仕事と私生活の境界が曖昧になること", "会社の設備が古いこと", "通勤時間が長くなること", "給料が下がること"],
+      "options": [
+        "仕事と私生活の境界が曖昧になること",
+        "会社の設備が古いこと",
+        "通勤時間が長くなること",
+        "給料が下がること"
+      ],
       "answer": 0
     },
     {
       "difficulty": 4,
       "q": "「意思疎通がうまくいかず」とあるが、その原因として本文が挙げているのはどれか。",
-      "options": ["会社のルールが厳しいから", "同僚と直接顔を合わせる機会が減ったから", "仕事量が増えたから", "給料が減ったから"],
+      "options": [
+        "会社のルールが厳しいから",
+        "同僚と直接顔を合わせる機会が減ったから",
+        "仕事量が増えたから",
+        "給料が減ったから"
+      ],
       "answer": 1
     },
     {
@@ -44,6 +64,155 @@
         "在宅勤務は感染症対策としてのみ意味がある。"
       ],
       "answer": 1
+    }
+  ],
+  "paragraphsVi": [
+    "Gần đây, ở Nhật Bản cũng ngày càng nhiều công ty áp dụng hình thức làm việc tại nhà. Đặc biệt, lấy sự lây lan của dịch bệnh làm cái cớ, nhiều doanh nghiệp đã bắt đầu xem xét lại cách thức làm việc. Làm việc tại nhà có một ưu điểm lớn là không cần thời gian đi lại. Nhờ thoát khỏi căng thẳng khi đi tàu điện đông đúc, người ta có thể dùng khoảng thời gian đó để ở bên gia đình hoặc dành cho sở thích của mình.",
+    "Mặt khác, làm việc tại nhà cũng không ít thách thức. Trước hết, có vấn đề là ranh giới giữa công việc và đời sống riêng tư dễ trở nên mơ hồ. Nhiều người vì ở nhà mà lỡ làm việc kéo dài tới khuya. Ngoài ra, do cơ hội gặp mặt trực tiếp đồng nghiệp giảm đi, việc trao đổi thông tin không suôn sẻ, và có cả kết quả khảo sát cho thấy một số nhân viên cảm thấy cô đơn.",
+    "Như vậy, làm việc tại nhà một mặt hiện thực hóa cách làm việc linh hoạt, nhưng mặt khác cũng tạo ra những thách thức mới. Trong tương lai, kiểu làm việc \"hybrid\" kết hợp giữa làm tại nhà và đến công ty được cho là sẽ trở thành xu hướng chủ đạo."
+  ],
+  "n2VocabList": [
+    {
+      "kanji": "在宅勤務",
+      "hanviet": "TẠI TRẠCH CẦN VỤ",
+      "reading": "ざいたくきんむ",
+      "meaning": "làm việc tại nhà"
+    },
+    {
+      "kanji": "導入",
+      "hanviet": "ĐẠO NHẬP",
+      "reading": "どうにゅう",
+      "meaning": "áp dụng, đưa vào sử dụng"
+    },
+    {
+      "kanji": "流行",
+      "hanviet": "LƯU HÀNH",
+      "reading": "りゅうこう",
+      "meaning": "sự lây lan, dịch bệnh"
+    },
+    {
+      "kanji": "不要",
+      "hanviet": "BẤT YẾU",
+      "reading": "ふよう",
+      "meaning": "không cần thiết"
+    },
+    {
+      "kanji": "利点",
+      "hanviet": "LỢI ĐIỂM",
+      "reading": "りてん",
+      "meaning": "ưu điểm"
+    },
+    {
+      "kanji": "解放",
+      "hanviet": "GIẢI PHÓNG",
+      "reading": "かいほう",
+      "meaning": "giải phóng, thoát khỏi"
+    },
+    {
+      "kanji": "趣味",
+      "hanviet": "THÚ VỊ",
+      "reading": "しゅみ",
+      "meaning": "sở thích"
+    },
+    {
+      "kanji": "課題",
+      "hanviet": "KHÓA ĐỀ",
+      "reading": "かだい",
+      "meaning": "vấn đề cần giải quyết, thách thức"
+    },
+    {
+      "kanji": "私生活",
+      "hanviet": "TƯ SINH HOẠT",
+      "reading": "しせいかつ",
+      "meaning": "đời sống riêng tư"
+    },
+    {
+      "kanji": "境界",
+      "hanviet": "CẢNH GIỚI",
+      "reading": "きょうかい",
+      "meaning": "ranh giới"
+    },
+    {
+      "kanji": "曖昧",
+      "hanviet": "ẢI MUỘI",
+      "reading": "あいまい",
+      "meaning": "mơ hồ, không rõ ràng"
+    },
+    {
+      "kanji": "同僚",
+      "hanviet": "ĐỒNG LIÊU",
+      "reading": "どうりょう",
+      "meaning": "đồng nghiệp"
+    },
+    {
+      "kanji": "意思疎通",
+      "hanviet": "Ý TỨ SƠ THÔNG",
+      "reading": "いしそつう",
+      "meaning": "sự trao đổi/thông hiểu lẫn nhau"
+    },
+    {
+      "kanji": "孤独感",
+      "hanviet": "CÔ ĐỘC CẢM",
+      "reading": "こどくかん",
+      "meaning": "cảm giác cô đơn"
+    },
+    {
+      "kanji": "調査結果",
+      "hanviet": "ĐIỀU TRA KẾT QUẢ",
+      "reading": "ちょうさけっか",
+      "meaning": "kết quả khảo sát"
+    },
+    {
+      "kanji": "柔軟",
+      "hanviet": "NHU NHUYỄN",
+      "reading": "じゅうなん",
+      "meaning": "linh hoạt"
+    },
+    {
+      "kanji": "実現",
+      "hanviet": "THỰC HIỆN",
+      "reading": "じつげん",
+      "meaning": "hiện thực hóa"
+    },
+    {
+      "kanji": "出社",
+      "hanviet": "XUẤT XÃ",
+      "reading": "しゅっしゃ",
+      "meaning": "đến công ty làm việc"
+    }
+  ],
+  "grammarList": [
+    {
+      "pattern": "〜をきっかけに",
+      "meaning": "lấy... làm cái cớ/động cơ, nhân dịp..."
+    },
+    {
+      "pattern": "〜ようになる",
+      "meaning": "trở nên... (thay đổi theo thời gian)"
+    },
+    {
+      "pattern": "〜やすい",
+      "meaning": "dễ... (có xu hướng)"
+    },
+    {
+      "pattern": "つい〜てしまう",
+      "meaning": "lỡ..., vô tình... (hành động ngoài ý muốn)"
+    },
+    {
+      "pattern": "〜ため",
+      "meaning": "vì, do (nguyên nhân)"
+    },
+    {
+      "pattern": "〜という調査結果も出ている",
+      "meaning": "cũng có kết quả khảo sát cho thấy rằng..."
+    },
+    {
+      "pattern": "〜一方で",
+      "meaning": "mặt khác, trong khi đó"
+    },
+    {
+      "pattern": "〜と考えられている",
+      "meaning": "được cho là..., người ta nghĩ rằng..."
     }
   ]
 }

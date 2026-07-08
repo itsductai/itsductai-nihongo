@@ -1,9 +1,9 @@
 /* =====================================================================
-   reading.css — "読解モード" (Đọc hiểu). Style riêng cho glossing thủ công
-   ({{}}) và auto-scan (theo kho từ vựng, gạch chân màu theo trình độ).
+   reading.css — "読解モード" REBUILD: layout 3 cột (từ vựng | bài đọc+quiz |
+   ngữ pháp), 2 chế độ dịch, quiz hiện inline không chuyển màn.
    ===================================================================== */
 
-.dokkai-phase { max-width: 760px; margin: 0 auto; padding: 20px 16px 60px; position: relative; }
+.dokkai-phase { max-width: 1180px; margin: 0 auto; padding: 20px 16px 60px; position: relative; }
 
 /* ---- Màn chọn bài đọc ---- */
 .dokkai-article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
@@ -14,43 +14,74 @@
 }
 .dokkai-article-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: var(--shadow-soft); }
 .dokkai-article-card-head { display: flex; gap: 6px; margin-bottom: 8px; }
-.dokkai-level-badge {
-  font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 999px;
-  background: var(--accent-soft); color: var(--accent);
-}
+.dokkai-level-badge { font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 999px; }
 .dokkai-source-badge { font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 999px; }
 .dokkai-source-ai { background: rgba(168,107,255,0.15); color: var(--purple); }
 .dokkai-source-user { background: var(--good-soft); color: var(--good); }
 .dokkai-article-card-title { font-size: 14.5px; font-weight: 700; color: var(--text-0); margin-bottom: 3px; }
 .dokkai-article-card-sub { font-size: 12px; color: var(--text-2); }
 
-/* ---- Màn đọc bài ---- */
-.dokkai-read-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px; }
+/* ---- Đầu trang đọc: tiêu đề + toggle dịch + fullscreen ---- */
+.dokkai-read-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
 .dokkai-read-title { font-size: 18px; font-weight: 800; color: var(--text-0); }
-.dokkai-read-hint { font-size: 11.5px; color: var(--text-2); margin-bottom: 16px; }
+.dokkai-read-hint { font-size: 11.5px; color: var(--text-2); margin: 6px 0 16px; }
 .dokkai-source-note {
   font-size: 11px; color: var(--text-2); font-style: italic; padding: 8px 12px;
   background: var(--bg-2); border-left: 3px solid var(--accent); border-radius: 6px;
   margin-bottom: 14px;
 }
+
+.dokkai-translate-toggle { display: flex; gap: 6px; flex-wrap: wrap; }
+.dokkai-translate-btn {
+  font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 999px;
+  background: var(--bg-2); border: 1px solid var(--border-soft); color: var(--text-2); cursor: pointer;
+  transition: all .15s ease;
+}
+.dokkai-translate-btn:hover { border-color: var(--accent); color: var(--text-0); }
+.dokkai-translate-btn.is-active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* ---- Layout 3 CỘT: từ vựng | bài đọc + quiz | ngữ pháp ---- */
+.dokkai-3col { display: grid; grid-template-columns: 220px 1fr 220px; gap: 20px; align-items: start; }
+.dokkai-vocab-sidebar, .dokkai-grammar-sidebar {
+  position: sticky; top: 16px; max-height: calc(100vh - 100px); overflow-y: auto;
+  background: var(--bg-1); border: 1px solid var(--border-soft); border-radius: var(--radius-sm, 10px);
+  padding: 14px;
+}
+.dokkai-sidebar-title { font-size: 12px; font-weight: 800; color: var(--text-0); margin-bottom: 10px; }
+.dokkai-sidebar-list { display: flex; flex-direction: column; gap: 10px; }
+.dokkai-sidebar-empty { font-size: 11.5px; color: var(--text-2); }
+
+.dokkai-vocab-item { padding: 8px 10px; border-radius: 8px; background: var(--bg-2); }
+.dokkai-vocab-item-head { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+.dokkai-vocab-kanji { font-size: 14px; font-weight: 800; color: var(--text-0); }
+.dokkai-vocab-reading { font-size: 11px; color: var(--accent); }
+.dokkai-vocab-hanviet { font-size: 10.5px; font-weight: 700; color: var(--purple); text-transform: uppercase; letter-spacing: 0.02em; margin-top: 2px; }
+.dokkai-vocab-meaning { font-size: 11.5px; color: var(--text-1); margin-top: 2px; }
+.dokkai-vocab-deck-match { font-size: 10px; color: var(--good); margin-top: 4px; font-weight: 700; }
+
+.dokkai-grammar-item { padding: 8px 10px; border-radius: 8px; background: var(--bg-2); }
+.dokkai-grammar-pattern { font-size: 13px; font-weight: 800; color: var(--warn); }
+.dokkai-grammar-meaning { font-size: 11.5px; color: var(--text-1); margin-top: 3px; }
+
+/* ---- Cột giữa: thân bài + dịch + quiz ---- */
+.dokkai-main-col { min-width: 0; }
 .dokkai-read-body { font-size: 16px; line-height: 2.1; color: var(--text-1); }
 .dokkai-paragraph { margin-bottom: 18px; }
+.dokkai-paragraph-vi {
+  font-size: 14px; line-height: 1.8; color: var(--text-2); font-style: italic;
+  padding: 10px 14px; background: var(--bg-2); border-left: 3px solid var(--good); border-radius: 6px;
+  margin-top: -8px; margin-bottom: 18px;
+}
+.dokkai-full-translation-divider {
+  font-size: 13px; font-weight: 800; color: var(--good); text-align: center;
+  margin: 24px 0 16px; padding-top: 16px; border-top: 1px dashed var(--border);
+}
 
-/* Glossing THỦ CÔNG ({{}}) — có furigana sẵn, viền chấm nhẹ để phân biệt với
-   auto-scan (auto-scan không có furigana, chỉ gạch chân màu). */
 .dokkai-gloss { cursor: pointer; border-bottom: 2px dotted var(--accent); }
 .dokkai-gloss rt { color: var(--accent); font-weight: 700; }
-
-/* Auto-scan — gạch chân màu theo TRÌNH ĐỘ deck chứa từ đó (--scan-color set
-   inline theo DOKKAI_LEVEL_COLORS trong JS), không có furigana (từ đã biết
-   qua flashcard rồi nên không cần, chỉ cần click xem lại nếu quên). */
-.dokkai-auto-scan {
-  cursor: pointer; border-bottom: 2px solid var(--scan-color, var(--accent));
-  transition: opacity .12s ease;
-}
+.dokkai-auto-scan { cursor: pointer; border-bottom: 2px solid var(--scan-color, var(--accent)); transition: opacity .12s ease; }
 .dokkai-auto-scan:hover { opacity: 0.7; }
 
-/* Popover nghĩa khi click từ (cả 2 loại) */
 .dokkai-gloss-popover {
   position: fixed; z-index: 300; max-width: 240px;
   background: var(--bg-1); border: 1px solid var(--border); border-radius: 10px;
@@ -62,15 +93,23 @@
 .dokkai-gloss-popover b { font-size: 13px; color: var(--accent); }
 .dokkai-gloss-popover span { font-size: 12.5px; color: var(--text-1); }
 
-.dokkai-next-btn { margin-top: 20px; width: 100%; }
-
-/* ---- Màn quiz đọc hiểu ---- */
-.dokkai-quiz-difficulty { font-size: 13px; color: var(--warn); letter-spacing: 2px; }
-.dokkai-quiz-stage { padding: 30px 16px; text-align: center; }
-.dokkai-quiz-question { font-size: 17px; font-weight: 700; color: var(--text-0); margin-bottom: 24px; line-height: 1.6; }
-.dokkai-quiz-options { display: flex; flex-direction: column; gap: 10px; }
+/* ---- Quiz INLINE — nằm ngay trong luồng đọc, không chuyển màn ---- */
+.dokkai-inline-quiz { margin-top: 30px; }
+.dokkai-quiz-divider {
+  font-size: 15px; font-weight: 800; color: var(--text-0); text-align: center;
+  margin-bottom: 18px; padding-top: 20px; border-top: 2px solid var(--border);
+}
+.dokkai-quiz-block {
+  margin-bottom: 20px; padding: 16px 18px; border-radius: var(--radius);
+  background: var(--bg-1); border: 1px solid var(--border-soft);
+}
+.dokkai-quiz-block-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.dokkai-quiz-block-num { font-size: 12px; font-weight: 800; color: var(--accent); }
+.dokkai-quiz-difficulty { font-size: 12px; color: var(--warn); letter-spacing: 1px; }
+.dokkai-quiz-question { font-size: 14.5px; font-weight: 700; color: var(--text-0); margin-bottom: 14px; line-height: 1.6; }
+.dokkai-quiz-options { display: flex; flex-direction: column; gap: 8px; }
 .dokkai-quiz-opt {
-  padding: 14px 18px; border-radius: 12px; font-size: 14px; font-weight: 600; color: var(--text-1);
+  padding: 11px 14px; border-radius: 10px; font-size: 13.5px; font-weight: 600; color: var(--text-1);
   background: var(--bg-2); border: 1.5px solid var(--border-soft); cursor: pointer;
   text-align: left; transition: all .15s ease;
 }
@@ -78,12 +117,20 @@
 .dokkai-quiz-opt.disabled { cursor: default; }
 .dokkai-quiz-opt.correct { background: var(--good-soft); border-color: var(--good); color: var(--good); }
 .dokkai-quiz-opt.wrong { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
+.dokkai-submit-btn { width: 100%; margin-top: 10px; }
 
 @media (prefers-reduced-motion: reduce) {
   .dokkai-gloss-popover { animation: none; }
 }
 
+/* ---- Responsive: dưới 1024px gộp 3 cột thành xếp chồng ---- */
+@media (max-width: 1024px) {
+  .dokkai-3col { grid-template-columns: 1fr; }
+  .dokkai-vocab-sidebar, .dokkai-grammar-sidebar { position: relative; top: 0; max-height: none; }
+  .dokkai-main-col { order: -1; }
+}
+
 @media (max-width: 640px) {
   .dokkai-read-body { font-size: 15px; line-height: 2; }
-  .dokkai-quiz-question { font-size: 15px; }
+  .dokkai-quiz-question { font-size: 14px; }
 }

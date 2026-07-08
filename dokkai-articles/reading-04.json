@@ -11,10 +11,331 @@
     "もちろん、ロボットが{{人間|にんげん|con người}}の{{介護|かいご}}をすべて{{代|か}}わることは{{難|むずか}}しいという{{見方|みかた|quan điểm, cách nhìn}}も{{根強|ねづよ}}い。{{高齢者|こうれいしゃ}}にとって、{{人|ひと}}と{{人|ひと}}との{{触|ふ}}れ{{合|あ}}いや{{会話|かいわ}}は、{{心|こころ}}の{{健康|けんこう|sức khỏe}}を{{保|たも}}つ上で{{欠|か}}かせないからだ。それでも、{{働|はたら}}き手{{不足|ふそく}}が{{深刻|しんこく|nghiêm trọng}}な{{現場|げんば|hiện trường, nơi làm việc thực tế}}において、ロボットが人の{{負担|ふたん|gánh nặng}}を{{軽減|けいげん|giảm nhẹ}}する{{役割|やくわり|vai trò}}を{{果|は}}たすことへの{{期待|きたい|kỳ vọng}}は、今後さらに{{高|たか}}まっていくと{{考|かんが}}えられる。"
   ],
   "questions": [
-    { "difficulty": 1, "q": "日本の65歳以上の人口は、全体のおよそどのくらいを占めているか。", "options": ["1割近く", "2割近く", "3割近く", "5割近く"], "answer": 2 },
-    { "difficulty": 2, "q": "高齢化に伴い、本文で挙げられている大きな社会問題は何か。", "options": ["介護を担う働き手の不足", "若者の失業率の上昇", "住宅価格の下落", "教育費の増加"], "answer": 0 },
-    { "difficulty": 3, "q": "本文で紹介されている介護ロボットの例として正しいものはどれか。", "options": ["高齢者の運転を代わりに行うロボット", "高齢者を抱き上げる作業を補助するロボット", "高齢者の税金を計算するロボット", "高齢者の代わりに投票するロボット"], "answer": 1 },
-    { "difficulty": 4, "q": "「ロボットが人間の介護をすべて代わることは難しい」とあるが、その理由として本文が挙げているのはどれか。", "options": ["ロボットの値段が高すぎるから", "人と人との触れ合いや会話が心の健康に欠かせないから", "ロボットの数がまだ少ないから", "高齢者がロボットを怖がるから"], "answer": 1 },
-    { "difficulty": 5, "q": "この文章全体の内容と最も合っているものはどれか。", "options": ["介護ロボットは完全に人間に取って代わるべきだという意見で一致している。", "介護ロボットには限界があるとして、開発は今後縮小していくと述べている。", "介護ロボットが人の負担を軽減する役割への期待は今後も高まっていくと考えられている。", "高齢化はすでに解決された問題であると述べている。"], "answer": 2 }
+    {
+      "difficulty": 1,
+      "q": "日本の65歳以上の人口は、全体のおよそどのくらいを占めているか。",
+      "options": [
+        "1割近く",
+        "2割近く",
+        "3割近く",
+        "5割近く"
+      ],
+      "answer": 2
+    },
+    {
+      "difficulty": 2,
+      "q": "高齢化に伴い、本文で挙げられている大きな社会問題は何か。",
+      "options": [
+        "介護を担う働き手の不足",
+        "若者の失業率の上昇",
+        "住宅価格の下落",
+        "教育費の増加"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 3,
+      "q": "本文で紹介されている介護ロボットの例として正しいものはどれか。",
+      "options": [
+        "高齢者の運転を代わりに行うロボット",
+        "高齢者を抱き上げる作業を補助するロボット",
+        "高齢者の税金を計算するロボット",
+        "高齢者の代わりに投票するロボット"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 4,
+      "q": "「ロボットが人間の介護をすべて代わることは難しい」とあるが、その理由として本文が挙げているのはどれか。",
+      "options": [
+        "ロボットの値段が高すぎるから",
+        "人と人との触れ合いや会話が心の健康に欠かせないから",
+        "ロボットの数がまだ少ないから",
+        "高齢者がロボットを怖がるから"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 5,
+      "q": "この文章全体の内容と最も合っているものはどれか。",
+      "options": [
+        "介護ロボットは完全に人間に取って代わるべきだという意見で一致している。",
+        "介護ロボットには限界があるとして、開発は今後縮小していくと述べている。",
+        "介護ロボットが人の負担を軽減する役割への期待は今後も高まっていくと考えられている。",
+        "高齢化はすでに解決された問題であると述べている。"
+      ],
+      "answer": 2
+    }
+  ],
+  "paragraphsVi": [
+    "Nhật Bản là một trong những nước có mức độ già hóa dân số cao nhất thế giới. Dân số từ 65 tuổi trở lên chiếm gần 3 phần 10 tổng dân số, và tỷ lệ này được dự đoán sẽ còn tiếp tục tăng lên trong tương lai. Đi kèm với đó, sự thiếu hụt lực lượng đảm nhận công việc chăm sóc đang trở thành một vấn đề xã hội lớn.",
+    "Trước thách thức này, \"robot chăm sóc\" đang thu hút sự chú ý trong những năm gần đây. Ví dụ như robot hỗ trợ thao tác bế/nâng người cao tuổi, hay robot kiểu \"chữa lành\" đóng vai trò làm đối tượng trò chuyện — chủng loại của chúng rất đa dạng. Các trường đại học và doanh nghiệp đang hợp tác phát triển, và cũng đã xuất hiện những robot có thể thực hiện cả những thao tác nhỏ như giúp xỏ tất.",
+    "Tất nhiên, quan điểm cho rằng robot khó có thể thay thế hoàn toàn con người trong việc chăm sóc vẫn còn khá phổ biến. Bởi vì đối với người cao tuổi, sự tiếp xúc và trò chuyện giữa người với người là điều không thể thiếu để duy trì sức khỏe tinh thần. Dù vậy, tại những nơi làm việc đang thiếu hụt nhân lực nghiêm trọng, kỳ vọng vào việc robot đóng vai trò giảm nhẹ gánh nặng cho con người được cho là sẽ ngày càng tăng lên trong tương lai."
+  ],
+  "n2VocabList": [
+    {
+      "kanji": "高齢化",
+      "hanviet": "CAO LINH HÓA",
+      "reading": "こうれいか",
+      "meaning": "già hóa dân số"
+    },
+    {
+      "kanji": "人口",
+      "hanviet": "NHÂN KHẨU",
+      "reading": "じんこう",
+      "meaning": "dân số"
+    },
+    {
+      "kanji": "全体",
+      "hanviet": "TOÀN THỂ",
+      "reading": "ぜんたい",
+      "meaning": "toàn bộ, tổng thể"
+    },
+    {
+      "kanji": "割",
+      "hanviet": "CÁT",
+      "reading": "わり",
+      "meaning": "phần mười (đơn vị tỷ lệ)"
+    },
+    {
+      "kanji": "占めて",
+      "hanviet": "CHIÊM",
+      "reading": "しめて",
+      "meaning": "chiếm"
+    },
+    {
+      "kanji": "割合",
+      "hanviet": "CÁT HỢP",
+      "reading": "わりあい",
+      "meaning": "tỷ lệ"
+    },
+    {
+      "kanji": "上昇",
+      "hanviet": "THƯỢNG THĂNG",
+      "reading": "じょうしょう",
+      "meaning": "tăng lên"
+    },
+    {
+      "kanji": "予測",
+      "hanviet": "DỰ TRẮC",
+      "reading": "よそく",
+      "meaning": "dự đoán"
+    },
+    {
+      "kanji": "介護",
+      "hanviet": "GIỚI HỘ",
+      "reading": "かいご",
+      "meaning": "chăm sóc, điều dưỡng"
+    },
+    {
+      "kanji": "担う",
+      "hanviet": "ĐẢM",
+      "reading": "になう",
+      "meaning": "đảm nhận, gánh vác"
+    },
+    {
+      "kanji": "不足",
+      "hanviet": "BẤT TÚC",
+      "reading": "ふそく",
+      "meaning": "thiếu hụt"
+    },
+    {
+      "kanji": "社会問題",
+      "hanviet": "XÃ HỘI VẤN ĐỀ",
+      "reading": "しゃかいもんだい",
+      "meaning": "vấn đề xã hội"
+    },
+    {
+      "kanji": "近年",
+      "hanviet": "CẬN NIÊN",
+      "reading": "きんねん",
+      "meaning": "những năm gần đây"
+    },
+    {
+      "kanji": "注目",
+      "hanviet": "CHÚ MỤC",
+      "reading": "ちゅうもく",
+      "meaning": "chú ý, quan tâm"
+    },
+    {
+      "kanji": "高齢者",
+      "hanviet": "CAO LINH GIẢ",
+      "reading": "こうれいしゃ",
+      "meaning": "người cao tuổi"
+    },
+    {
+      "kanji": "抱き上げる",
+      "hanviet": "BÃO THƯỢNG",
+      "reading": "だきあげる",
+      "meaning": "bế lên, nâng lên"
+    },
+    {
+      "kanji": "作業",
+      "hanviet": "TÁC NGHIỆP",
+      "reading": "さぎょう",
+      "meaning": "công việc, thao tác"
+    },
+    {
+      "kanji": "補助",
+      "hanviet": "BỔ TRỢ",
+      "reading": "ほじょ",
+      "meaning": "hỗ trợ, trợ giúp"
+    },
+    {
+      "kanji": "会話",
+      "hanviet": "HỘI THOẠI",
+      "reading": "かいわ",
+      "meaning": "hội thoại, trò chuyện"
+    },
+    {
+      "kanji": "相手",
+      "hanviet": "TƯƠNG THỦ",
+      "reading": "あいて",
+      "meaning": "đối tác, đối tượng"
+    },
+    {
+      "kanji": "癒し系",
+      "hanviet": "DŨ HỆ",
+      "reading": "いやしけい",
+      "meaning": "kiểu chữa lành, xoa dịu"
+    },
+    {
+      "kanji": "種類",
+      "hanviet": "CHỦNG LOẠI",
+      "reading": "しゅるい",
+      "meaning": "chủng loại"
+    },
+    {
+      "kanji": "多岐",
+      "hanviet": "ĐA KỲ",
+      "reading": "たき",
+      "meaning": "đa dạng, nhiều mặt"
+    },
+    {
+      "kanji": "共同",
+      "hanviet": "CỘNG ĐỒNG",
+      "reading": "きょうどう",
+      "meaning": "hợp tác, cùng nhau"
+    },
+    {
+      "kanji": "開発",
+      "hanviet": "KHAI PHÁT",
+      "reading": "かいはつ",
+      "meaning": "phát triển"
+    },
+    {
+      "kanji": "動作",
+      "hanviet": "ĐỘNG TÁC",
+      "reading": "どうさ",
+      "meaning": "động tác, thao tác"
+    },
+    {
+      "kanji": "登場",
+      "hanviet": "ĐĂNG TRƯỜNG",
+      "reading": "とうじょう",
+      "meaning": "xuất hiện, ra mắt"
+    },
+    {
+      "kanji": "人間",
+      "hanviet": "NHÂN GIAN",
+      "reading": "にんげん",
+      "meaning": "con người"
+    },
+    {
+      "kanji": "見方",
+      "hanviet": "KIẾN PHƯƠNG",
+      "reading": "みかた",
+      "meaning": "quan điểm, cách nhìn"
+    },
+    {
+      "kanji": "根強い",
+      "hanviet": "CĂN CƯỜNG",
+      "reading": "ねづよい",
+      "meaning": "cố hữu, phổ biến sâu sắc"
+    },
+    {
+      "kanji": "触れ合い",
+      "hanviet": "XÚC HỢP",
+      "reading": "ふれあい",
+      "meaning": "sự tiếp xúc, gần gũi"
+    },
+    {
+      "kanji": "健康",
+      "hanviet": "KIỆN KHANG",
+      "reading": "けんこう",
+      "meaning": "sức khỏe"
+    },
+    {
+      "kanji": "欠かせない",
+      "hanviet": "KHIẾM",
+      "reading": "かかせない",
+      "meaning": "không thể thiếu"
+    },
+    {
+      "kanji": "深刻",
+      "hanviet": "THÂM KHẮC",
+      "reading": "しんこく",
+      "meaning": "nghiêm trọng"
+    },
+    {
+      "kanji": "現場",
+      "hanviet": "HIỆN TRƯỜNG",
+      "reading": "げんば",
+      "meaning": "hiện trường, nơi làm việc thực tế"
+    },
+    {
+      "kanji": "負担",
+      "hanviet": "PHỤ ĐẢM",
+      "reading": "ふたん",
+      "meaning": "gánh nặng"
+    },
+    {
+      "kanji": "軽減",
+      "hanviet": "KHINH GIẢM",
+      "reading": "けいげん",
+      "meaning": "giảm nhẹ"
+    },
+    {
+      "kanji": "役割",
+      "hanviet": "DỊCH CÁT",
+      "reading": "やくわり",
+      "meaning": "vai trò"
+    },
+    {
+      "kanji": "期待",
+      "hanviet": "KỲ ĐÃI",
+      "reading": "きたい",
+      "meaning": "kỳ vọng"
+    }
+  ],
+  "grammarList": [
+    {
+      "pattern": "〜近くを占めている",
+      "meaning": "chiếm gần tới..."
+    },
+    {
+      "pattern": "それに伴い",
+      "meaning": "đi kèm với đó, theo đó"
+    },
+    {
+      "pattern": "〜にわたる",
+      "meaning": "trải rộng khắp, bao trùm..."
+    },
+    {
+      "pattern": "〜という見方も根強い",
+      "meaning": "quan điểm rằng... vẫn còn phổ biến/cố hữu"
+    },
+    {
+      "pattern": "〜からだ",
+      "meaning": "vì là... (giải thích lý do)"
+    },
+    {
+      "pattern": "それでも〜と考えられる",
+      "meaning": "dù vậy, vẫn được cho là..."
+    },
+    {
+      "pattern": "〜役割を果たす",
+      "meaning": "đóng vai trò..."
+    }
   ]
 }

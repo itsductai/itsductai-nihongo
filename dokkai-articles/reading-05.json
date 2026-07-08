@@ -13,10 +13,439 @@
     "このように、{{人口|じんこう}}{{減少|げんしょう}}{{時代|じだい|thời đại}}における{{労働市場|ろうどうしじょう|thị trường lao động}}の{{課題|かだい}}は、AIさえ{{導入|どうにゅう}}すれば{{解決|かいけつ|giải quyết}}するという{{単純|たんじゅん}}なものではない。{{職種|しょくしゅ}}{{間|かん}}の{{労働力|ろうどうりょく}}{{移動|いどう|di chuyển, dịch chuyển}}を{{円滑|えんかつ|trôi chảy, thuận lợi}}にする{{政策|せいさく|chính sách}}や、{{技能|ぎのう}}の{{再教育|さいきょういく|đào tạo lại}}を{{支援|しえん|hỗ trợ}}する{{仕組|しく}}みなど、AIの{{進歩|しんぽ|tiến bộ}}を{{実際|じっさい}}の{{労働市場|ろうどうしじょう}}に{{生|い}}かすための{{政策|せいさく}}が、これまで以上に{{重要|じゅうよう|quan trọng}}になっていくと{{考|かんが}}えられる。"
   ],
   "questions": [
-    { "difficulty": 1, "q": "国際機関の分析によると、高齢化の影響を強く受けた業界には、数年後どのような傾向があるか。", "options": ["人手不足が深刻化する傾向", "利益が急増する傾向", "労働時間が短くなる傾向", "海外進出が進む傾向"], "answer": 0 },
-    { "difficulty": 2, "q": "労働者の高齢化は、労働生産性の伸びにどのような影響を与えていると指摘されているか。", "options": ["プラスの影響", "マイナスの影響", "まったく影響がない", "影響はまだ分かっていない"], "answer": 1 },
-    { "difficulty": 3, "q": "「話はそれほど単純ではない」とあるが、その理由として本文が挙げているのはどれか。", "options": ["AIの開発費用が非常に高いから", "高齢の労働者が多い職種ほどAIに代替されにくい傾向があるから", "AIを使いたがらない企業が多いから", "AIの性能がまだ低いから"], "answer": 1 },
-    { "difficulty": 4, "q": "本文が評価している、日本のこれまでの取り組みは何か。", "options": ["高齢者や女性の労働参加を増やすことに成功してきたこと", "労働時間を大幅に減らしてきたこと", "AIの導入を完全に終えたこと", "外国人労働者を大幅に増やしたこと"], "answer": 0 },
-    { "difficulty": 5, "q": "この文章全体で筆者が最も伝えたいことは何か。", "options": ["AIを導入しさえすれば、人口減少の課題はすぐに解決する。", "人口減少時代の労働市場の課題は複雑であり、労働力移動や技能再教育を支援する政策がより重要になる。", "高齢者や女性の労働参加は、これ以上増やす必要がない。", "日本の労働市場には、もはや解決すべき課題は残っていない。"], "answer": 1 }
+    {
+      "difficulty": 1,
+      "q": "国際機関の分析によると、高齢化の影響を強く受けた業界には、数年後どのような傾向があるか。",
+      "options": [
+        "人手不足が深刻化する傾向",
+        "利益が急増する傾向",
+        "労働時間が短くなる傾向",
+        "海外進出が進む傾向"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 2,
+      "q": "労働者の高齢化は、労働生産性の伸びにどのような影響を与えていると指摘されているか。",
+      "options": [
+        "プラスの影響",
+        "マイナスの影響",
+        "まったく影響がない",
+        "影響はまだ分かっていない"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 3,
+      "q": "「話はそれほど単純ではない」とあるが、その理由として本文が挙げているのはどれか。",
+      "options": [
+        "AIの開発費用が非常に高いから",
+        "高齢の労働者が多い職種ほどAIに代替されにくい傾向があるから",
+        "AIを使いたがらない企業が多いから",
+        "AIの性能がまだ低いから"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 4,
+      "q": "本文が評価している、日本のこれまでの取り組みは何か。",
+      "options": [
+        "高齢者や女性の労働参加を増やすことに成功してきたこと",
+        "労働時間を大幅に減らしてきたこと",
+        "AIの導入を完全に終えたこと",
+        "外国人労働者を大幅に増やしたこと"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 5,
+      "q": "この文章全体で筆者が最も伝えたいことは何か。",
+      "options": [
+        "AIを導入しさえすれば、人口減少の課題はすぐに解決する。",
+        "人口減少時代の労働市場の課題は複雑であり、労働力移動や技能再教育を支援する政策がより重要になる。",
+        "高齢者や女性の労働参加は、これ以上増やす必要がない。",
+        "日本の労働市場には、もはや解決すべき課題は残っていない。"
+      ],
+      "answer": 1
+    }
+  ],
+  "paragraphsVi": [
+    "Ở Nhật Bản, nơi tình trạng sinh ít con và già hóa dân số đang tiến triển, sự suy giảm dân số trong độ tuổi lao động đang gây ảnh hưởng nghiêm trọng tới hoạt động kinh doanh của doanh nghiệp. Theo phân tích của một tổ chức quốc tế, những ngành chịu ảnh hưởng già hóa càng mạnh thì càng có xu hướng thiếu nhân lực trầm trọng hơn sau vài năm. Ngoài ra, việc người lao động cao tuổi hóa cũng được chỉ ra là có ảnh hưởng tiêu cực tới tăng trưởng năng suất lao động.",
+    "Trong bối cảnh đó, việc ứng dụng trí tuệ nhân tạo (AI) đang thu hút nhiều kỳ vọng. Nhật Bản vốn đã tích cực trong việc tự động hóa từ trước, và cũng có quan điểm cho rằng có thể dùng AI để giảm nhẹ tình trạng thiếu nhân lực. Tuy nhiên, nhìn vào kết quả phân tích thì mọi chuyện không đơn giản như vậy.",
+    "Một trong những lý do là kết quả phân tích cho thấy những ngành nghề có nhiều lao động cao tuổi làm việc thì càng khó bị AI thay thế. Nói cách khác, chính những nơi cần AI nhất lại là nơi khó áp dụng AI trên thực tế nhất — một mâu thuẫn đang nảy sinh. Hơn nữa, do kỹ năng yêu cầu khác nhau rất nhiều tùy theo ngành nghề, nên việc người lao động chuyển sang công việc khác cũng không hề dễ dàng.",
+    "Mặt khác, phân tích này cũng đánh giá cao điểm là Nhật Bản đã thành công hơn các nước phát triển khác trong việc tăng cường sự tham gia lao động của người cao tuổi và phụ nữ. Tuy nhiên, vấn đề còn tồn tại là phần lớn người cao tuổi và phụ nữ làm việc bán thời gian, nên tổng thời gian lao động vẫn chưa tăng lên đầy đủ.",
+    "Như vậy, thách thức của thị trường lao động trong thời đại suy giảm dân số không phải là điều có thể giải quyết đơn giản chỉ bằng cách áp dụng AI. Có thể nói rằng những chính sách nhằm giúp tận dụng sự tiến bộ của AI vào thị trường lao động thực tế — như chính sách làm trôi chảy việc di chuyển lao động giữa các ngành nghề, hay cơ chế hỗ trợ đào tạo lại kỹ năng — sẽ ngày càng trở nên quan trọng hơn bao giờ hết."
+  ],
+  "n2VocabList": [
+    {
+      "kanji": "少子高齢化",
+      "hanviet": "THIẾU TỬ CAO LINH HÓA",
+      "reading": "しょうしこうれいか",
+      "meaning": "tỷ lệ sinh giảm và già hóa dân số"
+    },
+    {
+      "kanji": "労働力",
+      "hanviet": "LAO ĐỘNG LỰC",
+      "reading": "ろうどうりょく",
+      "meaning": "lực lượng lao động"
+    },
+    {
+      "kanji": "減少",
+      "hanviet": "GIẢM THIỂU",
+      "reading": "げんしょう",
+      "meaning": "suy giảm"
+    },
+    {
+      "kanji": "企業",
+      "hanviet": "XÍ NGHIỆP",
+      "reading": "きぎょう",
+      "meaning": "doanh nghiệp"
+    },
+    {
+      "kanji": "経営",
+      "hanviet": "KINH DOANH",
+      "reading": "けいえい",
+      "meaning": "kinh doanh, quản lý"
+    },
+    {
+      "kanji": "及ぼして",
+      "hanviet": "CẬP",
+      "reading": "およぼして",
+      "meaning": "gây ra, ảnh hưởng đến"
+    },
+    {
+      "kanji": "国際機関",
+      "hanviet": "QUỐC TẾ CƠ QUAN",
+      "reading": "こくさいきかん",
+      "meaning": "tổ chức quốc tế"
+    },
+    {
+      "kanji": "分析",
+      "hanviet": "PHÂN TÍCH",
+      "reading": "ぶんせき",
+      "meaning": "phân tích"
+    },
+    {
+      "kanji": "業界",
+      "hanviet": "NGHIỆP GIỚI",
+      "reading": "ぎょうかい",
+      "meaning": "ngành nghề"
+    },
+    {
+      "kanji": "人手不足",
+      "hanviet": "NHÂN THỦ BẤT TÚC",
+      "reading": "ひとでぶそく",
+      "meaning": "thiếu nhân lực"
+    },
+    {
+      "kanji": "深刻化",
+      "hanviet": "THÂM KHẮC HÓA",
+      "reading": "しんこくか",
+      "meaning": "trở nên nghiêm trọng"
+    },
+    {
+      "kanji": "傾向",
+      "hanviet": "KHUYNH HƯỚNG",
+      "reading": "けいこう",
+      "meaning": "xu hướng"
+    },
+    {
+      "kanji": "労働者",
+      "hanviet": "LAO ĐỘNG GIẢ",
+      "reading": "ろうどうしゃ",
+      "meaning": "người lao động"
+    },
+    {
+      "kanji": "生産性",
+      "hanviet": "SINH SẢN TÍNH",
+      "reading": "せいさんせい",
+      "meaning": "năng suất lao động"
+    },
+    {
+      "kanji": "指摘",
+      "hanviet": "CHỈ TRÍCH",
+      "reading": "してき",
+      "meaning": "chỉ ra, nhận định"
+    },
+    {
+      "kanji": "人工知能",
+      "hanviet": "NHÂN CÔNG TRI NĂNG",
+      "reading": "じんこうちのう",
+      "meaning": "trí tuệ nhân tạo (AI)"
+    },
+    {
+      "kanji": "活用",
+      "hanviet": "HOẠT DỤNG",
+      "reading": "かつよう",
+      "meaning": "ứng dụng, tận dụng"
+    },
+    {
+      "kanji": "自動化",
+      "hanviet": "TỰ ĐỘNG HÓA",
+      "reading": "じどうか",
+      "meaning": "tự động hóa"
+    },
+    {
+      "kanji": "積極的",
+      "hanviet": "TÍCH CỰC ĐÍCH",
+      "reading": "せっきょくてき",
+      "meaning": "tích cực, chủ động"
+    },
+    {
+      "kanji": "見方",
+      "hanviet": "KIẾN PHƯƠNG",
+      "reading": "みかた",
+      "meaning": "quan điểm"
+    },
+    {
+      "kanji": "緩和",
+      "hanviet": "HOÃN HÒA",
+      "reading": "かんわ",
+      "meaning": "làm dịu, giảm nhẹ"
+    },
+    {
+      "kanji": "単純",
+      "hanviet": "ĐƠN THUẦN",
+      "reading": "たんじゅん",
+      "meaning": "đơn giản"
+    },
+    {
+      "kanji": "理由",
+      "hanviet": "LÝ DO",
+      "reading": "りゆう",
+      "meaning": "lý do"
+    },
+    {
+      "kanji": "職種",
+      "hanviet": "CHỨC CHỦNG",
+      "reading": "しょくしゅ",
+      "meaning": "loại công việc, ngành nghề"
+    },
+    {
+      "kanji": "代替",
+      "hanviet": "ĐẠI THẾ",
+      "reading": "だいたい",
+      "meaning": "thay thế"
+    },
+    {
+      "kanji": "必要",
+      "hanviet": "TẤT YẾU",
+      "reading": "ひつよう",
+      "meaning": "cần thiết"
+    },
+    {
+      "kanji": "現場",
+      "hanviet": "HIỆN TRƯỜNG",
+      "reading": "げんば",
+      "meaning": "hiện trường"
+    },
+    {
+      "kanji": "導入",
+      "hanviet": "ĐẠO NHẬP",
+      "reading": "どうにゅう",
+      "meaning": "áp dụng, đưa vào sử dụng"
+    },
+    {
+      "kanji": "矛盾",
+      "hanviet": "MÂU THUẪN",
+      "reading": "むじゅん",
+      "meaning": "mâu thuẫn"
+    },
+    {
+      "kanji": "技能",
+      "hanviet": "KỸ NĂNG",
+      "reading": "ぎのう",
+      "meaning": "kỹ năng"
+    },
+    {
+      "kanji": "容易",
+      "hanviet": "DUNG DỊ",
+      "reading": "ようい",
+      "meaning": "dễ dàng"
+    },
+    {
+      "kanji": "一方",
+      "hanviet": "NHẤT PHƯƠNG",
+      "reading": "いっぽう",
+      "meaning": "mặt khác"
+    },
+    {
+      "kanji": "先進国",
+      "hanviet": "TIÊN TIẾN QUỐC",
+      "reading": "せんしんこく",
+      "meaning": "nước phát triển"
+    },
+    {
+      "kanji": "比べて",
+      "hanviet": "TỶ",
+      "reading": "くらべて",
+      "meaning": "so với"
+    },
+    {
+      "kanji": "女性",
+      "hanviet": "NỮ TÍNH",
+      "reading": "じょせい",
+      "meaning": "nữ giới"
+    },
+    {
+      "kanji": "参加",
+      "hanviet": "THAM GIA",
+      "reading": "さんか",
+      "meaning": "tham gia"
+    },
+    {
+      "kanji": "成功",
+      "hanviet": "THÀNH CÔNG",
+      "reading": "せいこう",
+      "meaning": "thành công"
+    },
+    {
+      "kanji": "評価",
+      "hanviet": "ĐÁNH GIÁ",
+      "reading": "ひょうか",
+      "meaning": "đánh giá"
+    },
+    {
+      "kanji": "短時間",
+      "hanviet": "ĐOẢN THỜI GIAN",
+      "reading": "たんじかん",
+      "meaning": "thời gian ngắn"
+    },
+    {
+      "kanji": "勤務",
+      "hanviet": "CẦN VỤ",
+      "reading": "きんむ",
+      "meaning": "làm việc"
+    },
+    {
+      "kanji": "十分",
+      "hanviet": "THẬP PHẦN",
+      "reading": "じゅうぶん",
+      "meaning": "đầy đủ"
+    },
+    {
+      "kanji": "課題",
+      "hanviet": "KHÓA ĐỀ",
+      "reading": "かだい",
+      "meaning": "vấn đề"
+    },
+    {
+      "kanji": "時代",
+      "hanviet": "THỜI ĐẠI",
+      "reading": "じだい",
+      "meaning": "thời đại"
+    },
+    {
+      "kanji": "労働市場",
+      "hanviet": "LAO ĐỘNG THỊ TRƯỜNG",
+      "reading": "ろうどうしじょう",
+      "meaning": "thị trường lao động"
+    },
+    {
+      "kanji": "解決",
+      "hanviet": "GIẢI QUYẾT",
+      "reading": "かいけつ",
+      "meaning": "giải quyết"
+    },
+    {
+      "kanji": "移動",
+      "hanviet": "DI ĐỘNG",
+      "reading": "いどう",
+      "meaning": "di chuyển, dịch chuyển"
+    },
+    {
+      "kanji": "円滑",
+      "hanviet": "VIÊN HOẠT",
+      "reading": "えんかつ",
+      "meaning": "trôi chảy, thuận lợi"
+    },
+    {
+      "kanji": "政策",
+      "hanviet": "CHÍNH SÁCH",
+      "reading": "せいさく",
+      "meaning": "chính sách"
+    },
+    {
+      "kanji": "再教育",
+      "hanviet": "TÁI GIÁO DỤC",
+      "reading": "さいきょういく",
+      "meaning": "đào tạo lại"
+    },
+    {
+      "kanji": "支援",
+      "hanviet": "CHI VIỆN",
+      "reading": "しえん",
+      "meaning": "hỗ trợ"
+    },
+    {
+      "kanji": "仕組み",
+      "hanviet": "SĨ TỔ",
+      "reading": "しくみ",
+      "meaning": "cơ chế, cơ cấu"
+    },
+    {
+      "kanji": "進歩",
+      "hanviet": "TIẾN BỘ",
+      "reading": "しんぽ",
+      "meaning": "tiến bộ"
+    },
+    {
+      "kanji": "生かす",
+      "hanviet": "SINH",
+      "reading": "いかす",
+      "meaning": "tận dụng, phát huy"
+    },
+    {
+      "kanji": "重要",
+      "hanviet": "TRỌNG YẾU",
+      "reading": "じゅうよう",
+      "meaning": "quan trọng"
+    }
+  ],
+  "grammarList": [
+    {
+      "pattern": "〜に深刻な影響を及ぼしている",
+      "meaning": "gây ảnh hưởng nghiêm trọng đến..."
+    },
+    {
+      "pattern": "〜ほど〜傾向があるという",
+      "meaning": "càng... thì càng có xu hướng..."
+    },
+    {
+      "pattern": "〜にもマイナスの影響を与えている",
+      "meaning": "cũng gây ảnh hưởng tiêu cực đến..."
+    },
+    {
+      "pattern": "〜のではないかという見方もある",
+      "meaning": "cũng có quan điểm cho rằng có lẽ..."
+    },
+    {
+      "pattern": "〜というのは単純ではない",
+      "meaning": "không đơn giản như vậy"
+    },
+    {
+      "pattern": "〜つまり〜という矛盾が生まれている",
+      "meaning": "nói cách khác, đang nảy sinh mâu thuẫn rằng..."
+    },
+    {
+      "pattern": "〜も容易ではない",
+      "meaning": "cũng không hề dễ dàng"
+    },
+    {
+      "pattern": "〜てきた点も評価している",
+      "meaning": "cũng đánh giá cao điểm đã... từ trước tới nay"
+    },
+    {
+      "pattern": "〜という課題も残っている",
+      "meaning": "vẫn còn tồn tại vấn đề rằng..."
+    },
+    {
+      "pattern": "〜さえ〜すれば解決するという単純なものではない",
+      "meaning": "không phải chỉ cần... là giải quyết được đơn giản như vậy"
+    },
+    {
+      "pattern": "〜これまで以上に重要になっていくと考えられる",
+      "meaning": "được cho là sẽ trở nên quan trọng hơn bao giờ hết"
+    }
   ]
 }

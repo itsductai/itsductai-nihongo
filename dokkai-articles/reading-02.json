@@ -11,10 +11,287 @@
     "一方で、日本{{政府|せいふ|chính phủ}}は、{{生活|せいかつ|đời sống, sinh hoạt}}が苦しい{{世帯|せたい|hộ gia đình}}を{{支援|しえん|hỗ trợ}}するため、食料品にかかる{{消費税|しょうひぜい|thuế tiêu dùng}}を一時的に{{見直|みなお}}すことも{{検討|けんとう|xem xét, cân nhắc}}していると{{伝|つた}}えられている。ただし、こうした{{支援策|しえんさく|biện pháp hỗ trợ}}は、本当に困っている人や{{企業|きぎょう|doanh nghiệp}}に{{絞|しぼ}}って、{{一時的|いちじてき|mang tính tạm thời}}に行うべきだという{{意見|いけん|ý kiến}}も出ている。"
   ],
   "questions": [
-    { "difficulty": 1, "q": "2026年7月、日本で何が起きると本文に書かれているか。", "options": ["多くの食品の値段が上がる", "多くの食品の値段が下がる", "食品の輸入が禁止される", "食品の税金がなくなる"], "answer": 0 },
-    { "difficulty": 2, "q": "食品が値上がりしている原因として本文に挙げられているのはどれか。", "options": ["消費税が上がったから", "原油や包装材料の価格が上がったから", "働く人が減ったから", "海外からの旅行者が増えたから"], "answer": 1 },
-    { "difficulty": 3, "q": "本文によると、多くの人はどのように感じているか。", "options": ["給料が物価の上昇より速く上がっていると感じている", "物価の上昇が給料の上昇より速いと感じている", "物価も給料も変わっていないと感じている", "税金が下がって楽になったと感じている"], "answer": 1 },
-    { "difficulty": 4, "q": "IMFは日本の実質賃金について、どのような見通しを示しているか。", "options": ["物価上昇が緩やかになれば、いずれ上がっていくだろう", "今後も下がり続けるだろう", "変化はまったくないだろう", "すぐに大きく上がるだろう"], "answer": 0 },
-    { "difficulty": 5, "q": "政府が検討している支援策について、本文が伝える意見として最も適切なものはどれか。", "options": ["すべての世帯に平等に支援すべきだという意見", "支援策自体をやめるべきだという意見", "本当に困っている人や企業に絞って一時的に行うべきだという意見", "支援より税金を上げるべきだという意見"], "answer": 2 }
+    {
+      "difficulty": 1,
+      "q": "2026年7月、日本で何が起きると本文に書かれているか。",
+      "options": [
+        "多くの食品の値段が上がる",
+        "多くの食品の値段が下がる",
+        "食品の輸入が禁止される",
+        "食品の税金がなくなる"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 2,
+      "q": "食品が値上がりしている原因として本文に挙げられているのはどれか。",
+      "options": [
+        "消費税が上がったから",
+        "原油や包装材料の価格が上がったから",
+        "働く人が減ったから",
+        "海外からの旅行者が増えたから"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 3,
+      "q": "本文によると、多くの人はどのように感じているか。",
+      "options": [
+        "給料が物価の上昇より速く上がっていると感じている",
+        "物価の上昇が給料の上昇より速いと感じている",
+        "物価も給料も変わっていないと感じている",
+        "税金が下がって楽になったと感じている"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 4,
+      "q": "IMFは日本の実質賃金について、どのような見通しを示しているか。",
+      "options": [
+        "物価上昇が緩やかになれば、いずれ上がっていくだろう",
+        "今後も下がり続けるだろう",
+        "変化はまったくないだろう",
+        "すぐに大きく上がるだろう"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 5,
+      "q": "政府が検討している支援策について、本文が伝える意見として最も適切なものはどれか。",
+      "options": [
+        "すべての世帯に平等に支援すべきだという意見",
+        "支援策自体をやめるべきだという意見",
+        "本当に困っている人や企業に絞って一時的に行うべきだという意見",
+        "支援より税金を上げるべきだという意見"
+      ],
+      "answer": 2
+    }
+  ],
+  "paragraphsVi": [
+    "Năm 2026, tại Nhật Bản, việc tăng giá thực phẩm vẫn tiếp tục. Theo một số báo chí đưa tin, vào tháng 7, giá cả của hơn 2500 mặt hàng thực phẩm sẽ tăng lên. Một trong những nguyên nhân là giá dầu thô và nguyên liệu dùng để đóng gói đã tăng lên. Đặc biệt, thực phẩm chế biến sẵn, ví dụ như mì ăn liền, đang chịu ảnh hưởng lớn từ điều này.",
+    "Việc tăng giá này đang gây gánh nặng lớn cho kinh tế hộ gia đình. Nhiều người cảm thấy rằng tốc độ tăng vật giá nhanh hơn tốc độ tăng lương. Quỹ Tiền tệ Quốc tế (IMF) cũng đưa ra nhận định về lương thực tế của Nhật Bản rằng nếu lạm phát trở nên dịu bớt thì sớm muộn gì lương cũng sẽ tăng lên.",
+    "Mặt khác, chính phủ Nhật Bản được cho là đang xem xét việc tạm thời điều chỉnh lại thuế tiêu dùng đối với thực phẩm, nhằm hỗ trợ những hộ gia đình đang gặp khó khăn trong đời sống. Tuy nhiên, cũng có ý kiến cho rằng các biện pháp hỗ trợ như vậy nên chỉ tập trung vào những người và doanh nghiệp thực sự khó khăn, và nên mang tính tạm thời."
+  ],
+  "n2VocabList": [
+    {
+      "kanji": "食品",
+      "hanviet": "THỰC PHẨM",
+      "reading": "しょくひん",
+      "meaning": "thực phẩm"
+    },
+    {
+      "kanji": "報道",
+      "hanviet": "BÁO ĐẠO",
+      "reading": "ほうどう",
+      "meaning": "báo chí đưa tin"
+    },
+    {
+      "kanji": "品目",
+      "hanviet": "PHẨM MỤC",
+      "reading": "ひんもく",
+      "meaning": "mặt hàng, hạng mục sản phẩm"
+    },
+    {
+      "kanji": "価格",
+      "hanviet": "GIÁ CÁCH",
+      "reading": "かかく",
+      "meaning": "giá cả"
+    },
+    {
+      "kanji": "原因",
+      "hanviet": "NGUYÊN NHÂN",
+      "reading": "げんいん",
+      "meaning": "nguyên nhân"
+    },
+    {
+      "kanji": "原油",
+      "hanviet": "NGUYÊN DU",
+      "reading": "げんゆ",
+      "meaning": "dầu thô"
+    },
+    {
+      "kanji": "包装",
+      "hanviet": "BAO TRANG",
+      "reading": "ほうそう",
+      "meaning": "bao bì, đóng gói"
+    },
+    {
+      "kanji": "材料",
+      "hanviet": "TÀI LIỆU",
+      "reading": "ざいりょう",
+      "meaning": "nguyên liệu"
+    },
+    {
+      "kanji": "加工食品",
+      "hanviet": "GIA CÔNG THỰC PHẨM",
+      "reading": "かこうしょくひん",
+      "meaning": "thực phẩm chế biến sẵn"
+    },
+    {
+      "kanji": "影響",
+      "hanviet": "ẢNH HƯỞNG",
+      "reading": "えいきょう",
+      "meaning": "ảnh hưởng"
+    },
+    {
+      "kanji": "家計",
+      "hanviet": "GIA KẾ",
+      "reading": "かけい",
+      "meaning": "kinh tế hộ gia đình, chi tiêu gia đình"
+    },
+    {
+      "kanji": "負担",
+      "hanviet": "PHỤ ĐẢM",
+      "reading": "ふたん",
+      "meaning": "gánh nặng"
+    },
+    {
+      "kanji": "給料",
+      "hanviet": "CẤP LIỆU",
+      "reading": "きゅうりょう",
+      "meaning": "lương"
+    },
+    {
+      "kanji": "物価",
+      "hanviet": "VẬT GIÁ",
+      "reading": "ぶっか",
+      "meaning": "vật giá, giá cả sinh hoạt"
+    },
+    {
+      "kanji": "国際",
+      "hanviet": "QUỐC TẾ",
+      "reading": "こくさい",
+      "meaning": "quốc tế"
+    },
+    {
+      "kanji": "通貨",
+      "hanviet": "THÔNG HÓA",
+      "reading": "つうか",
+      "meaning": "tiền tệ"
+    },
+    {
+      "kanji": "基金",
+      "hanviet": "CƠ KIM",
+      "reading": "ききん",
+      "meaning": "quỹ"
+    },
+    {
+      "kanji": "実質賃金",
+      "hanviet": "THỰC CHẤT NHẪM KIM",
+      "reading": "じっしつちんぎん",
+      "meaning": "lương thực tế"
+    },
+    {
+      "kanji": "物価上昇",
+      "hanviet": "VẬT GIÁ THƯỢNG THĂNG",
+      "reading": "ぶっかじょうしょう",
+      "meaning": "lạm phát, vật giá leo thang"
+    },
+    {
+      "kanji": "見通し",
+      "hanviet": "KIẾN THÔNG",
+      "reading": "みとおし",
+      "meaning": "sự nhận định, dự đoán"
+    },
+    {
+      "kanji": "政府",
+      "hanviet": "CHÍNH PHỦ",
+      "reading": "せいふ",
+      "meaning": "chính phủ"
+    },
+    {
+      "kanji": "生活",
+      "hanviet": "SINH HOẠT",
+      "reading": "せいかつ",
+      "meaning": "đời sống, sinh hoạt"
+    },
+    {
+      "kanji": "世帯",
+      "hanviet": "THẾ ĐỚI",
+      "reading": "せたい",
+      "meaning": "hộ gia đình"
+    },
+    {
+      "kanji": "支援",
+      "hanviet": "CHI VIỆN",
+      "reading": "しえん",
+      "meaning": "hỗ trợ"
+    },
+    {
+      "kanji": "消費税",
+      "hanviet": "TIÊU PHÍ THUẾ",
+      "reading": "しょうひぜい",
+      "meaning": "thuế tiêu dùng"
+    },
+    {
+      "kanji": "検討",
+      "hanviet": "KIỂM THẢO",
+      "reading": "けんとう",
+      "meaning": "xem xét, cân nhắc"
+    },
+    {
+      "kanji": "支援策",
+      "hanviet": "CHI VIỆN SÁCH",
+      "reading": "しえんさく",
+      "meaning": "biện pháp hỗ trợ"
+    },
+    {
+      "kanji": "企業",
+      "hanviet": "XÍ NGHIỆP",
+      "reading": "きぎょう",
+      "meaning": "doanh nghiệp"
+    },
+    {
+      "kanji": "絞って",
+      "hanviet": "GIẢO",
+      "reading": "しぼって",
+      "meaning": "tập trung vào, thu hẹp lại"
+    },
+    {
+      "kanji": "一時的",
+      "hanviet": "NHẤT THỜI ĐÍCH",
+      "reading": "いちじてき",
+      "meaning": "mang tính tạm thời"
+    },
+    {
+      "kanji": "意見",
+      "hanviet": "Ý KIẾN",
+      "reading": "いけん",
+      "meaning": "ý kiến"
+    }
+  ],
+  "grammarList": [
+    {
+      "pattern": "〜によると",
+      "meaning": "theo như... (nguồn thông tin)"
+    },
+    {
+      "pattern": "〜を超える",
+      "meaning": "vượt quá..."
+    },
+    {
+      "pattern": "〜ものの、〜方が速いと感じている",
+      "meaning": "cảm thấy rằng vế sau ... hơn vế trước"
+    },
+    {
+      "pattern": "〜という見通しを示している",
+      "meaning": "đưa ra nhận định/dự đoán rằng..."
+    },
+    {
+      "pattern": "〜ため",
+      "meaning": "để, nhằm mục đích..."
+    },
+    {
+      "pattern": "〜と検討していると伝えられている",
+      "meaning": "được cho biết là đang xem xét..."
+    },
+    {
+      "pattern": "〜に絞って",
+      "meaning": "chỉ tập trung/thu hẹp vào..."
+    },
+    {
+      "pattern": "〜べきだという意見も出ている",
+      "meaning": "cũng có ý kiến cho rằng nên..."
+    }
   ]
 }

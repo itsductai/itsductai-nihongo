@@ -12,10 +12,374 @@
     "{{大切|たいせつ|quan trọng}}なのは、{{自分|じぶん}}が{{育|そだ}}った{{文化|ぶんか}}の{{コミュニケーション|こみゅにけーしょん}}{{スタイル|すたいる|phong cách}}を「{{当|あ}}たり{{前|まえ}}」だと{{思|おも}}い{{込|こ}}まず、{{相手|あいて}}によって{{伝|つた}}え{{方|かた}}を{{変|か}}えていく{{柔軟性|じゅうなんせい|tính linh hoạt}}ではないだろうか。「{{察|さっ}}する」ことを{{相手|あいて}}に{{期待|きたい|kỳ vọng}}するだけでなく、{{必要|ひつよう}}な{{時|とき}}には{{自分|じぶん}}から{{言葉|ことば}}にして{{伝|つた}}える。そうした{{バランス|ばらんす|cân bằng}}こそが、{{異|こと}}なる{{文化|ぶんか}}的{{背景|はいけい|bối cảnh}}を{{持|も}}つ{{人々|ひとびと|mọi người}}が{{共|とも}}に{{暮|く}}らす{{社会|しゃかい}}において、{{今後|こんご|từ nay về sau}}ますます{{重要|じゅうよう|quan trọng}}になっていくだろう。"
   ],
   "questions": [
-    { "difficulty": 1, "q": "本文によると、「察する」とはどういう意味か。", "options": ["相手に直接質問すること", "相手が言葉にしなくても気持ちを読み取ること", "相手の言葉をそのまま繰り返すこと", "相手の意見に必ず従うこと"], "answer": 1 },
-    { "difficulty": 2, "q": "海外から日本に来た人にとって、「察する」文化はどのようなものになりやすいか。", "options": ["すぐに慣れることができるもの", "戸惑いの原因となりやすいもの", "まったく気にならないもの", "母国の文化と完全に同じもの"], "answer": 1 },
-    { "difficulty": 3, "q": "「察する」文化の弱点として本文が挙げているのは何か。", "options": ["時間がかかりすぎること", "誤解を生みやすいこと", "お金がかかること", "外国語の学習を妨げること"], "answer": 1 },
-    { "difficulty": 4, "q": "直接的なコミュニケーションについて、本文はどのように述べているか。", "options": ["誤解を減らせる反面、時に相手を傷つけてしまう可能性もある", "誤解も相手を傷つけることも一切ない", "日本では完全に禁止されている", "察する文化より常に優れている"], "answer": 0 },
-    { "difficulty": 5, "q": "この文章全体で筆者が最も伝えたいことは何か。", "options": ["察する文化こそが唯一正しいコミュニケーションの形である。", "直接的なコミュニケーションこそが唯一正しい形である。", "自分の文化のスタイルを当たり前だと思わず、相手によって伝え方を変える柔軟性が重要である。", "異なる文化を持つ人々が共に暮らすことは不可能である。"], "answer": 2 }
+    {
+      "difficulty": 1,
+      "q": "本文によると、「察する」とはどういう意味か。",
+      "options": [
+        "相手に直接質問すること",
+        "相手が言葉にしなくても気持ちを読み取ること",
+        "相手の言葉をそのまま繰り返すこと",
+        "相手の意見に必ず従うこと"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 2,
+      "q": "海外から日本に来た人にとって、「察する」文化はどのようなものになりやすいか。",
+      "options": [
+        "すぐに慣れることができるもの",
+        "戸惑いの原因となりやすいもの",
+        "まったく気にならないもの",
+        "母国の文化と完全に同じもの"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 3,
+      "q": "「察する」文化の弱点として本文が挙げているのは何か。",
+      "options": [
+        "時間がかかりすぎること",
+        "誤解を生みやすいこと",
+        "お金がかかること",
+        "外国語の学習を妨げること"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 4,
+      "q": "直接的なコミュニケーションについて、本文はどのように述べているか。",
+      "options": [
+        "誤解を減らせる反面、時に相手を傷つけてしまう可能性もある",
+        "誤解も相手を傷つけることも一切ない",
+        "日本では完全に禁止されている",
+        "察する文化より常に優れている"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 5,
+      "q": "この文章全体で筆者が最も伝えたいことは何か。",
+      "options": [
+        "察する文化こそが唯一正しいコミュニケーションの形である。",
+        "直接的なコミュニケーションこそが唯一正しい形である。",
+        "自分の文化のスタイルを当たり前だと思わず、相手によって伝え方を変える柔軟性が重要である。",
+        "異なる文化を持つ人々が共に暮らすことは不可能である。"
+      ],
+      "answer": 2
+    }
+  ],
+  "paragraphsVi": [
+    "Trong tiếng Nhật có từ \"察する\" (sát suru). Nghĩa của nó là dù đối phương không nói ra trực tiếp bằng lời, ta vẫn có thể đọc được cảm xúc của họ qua biểu cảm và thái độ. Văn hóa \"đọc ý\" này thường được nhắc tới như một đặc trưng trong giao tiếp của người Nhật.",
+    "Mặt khác, đối với những người từ nước ngoài đến Nhật Bản, văn hóa \"đọc ý\" này lại thường là nguyên nhân gây bối rối. Không ít tiếng nói mong muốn rằng \"nếu ghét thì xin hãy nói rõ là ghét\", \"xin hãy nói thẳng những gì mình thực sự nghĩ\". Quả thực tồn tại sự khác biệt giữa hệ giá trị coi việc truyền đạt cảm xúc cho nhau mà không dựa vào lời nói là một đức tính tốt đẹp, và hệ giá trị coi trọng việc truyền đạt ý muốn rõ ràng bằng lời nói.",
+    "Tuy nhiên, việc tranh luận xem nền văn hóa nào \"ưu việt\" hơn thì có lẽ không mấy ý nghĩa. Văn hóa \"đọc ý\" có khía cạnh là sự quan tâm tới đối phương, nhưng đồng thời cũng mang điểm yếu là dễ tạo ra hiểu lầm. Ngược lại, giao tiếp trực tiếp tuy có thể giảm bớt hiểu lầm, nhưng đôi khi cũng có khả năng làm tổn thương đối phương.",
+    "Điều quan trọng có lẽ là không mặc định phong cách giao tiếp của nền văn hóa mình sinh ra là \"lẽ đương nhiên\", mà cần có sự linh hoạt để thay đổi cách truyền đạt tùy theo từng đối tượng. Không chỉ kỳ vọng đối phương \"đọc ý\" mình, mà khi cần thiết, tự mình cũng chủ động nói thành lời để truyền đạt. Chính sự cân bằng đó mới là điều sẽ ngày càng trở nên quan trọng hơn, trong một xã hội nơi những con người mang nền tảng văn hóa khác nhau cùng chung sống."
+  ],
+  "n2VocabList": [
+    {
+      "kanji": "相手",
+      "hanviet": "TƯƠNG THỦ",
+      "reading": "あいて",
+      "meaning": "đối phương"
+    },
+    {
+      "kanji": "直接",
+      "hanviet": "TRỰC TIẾP",
+      "reading": "ちょくせつ",
+      "meaning": "trực tiếp"
+    },
+    {
+      "kanji": "表情",
+      "hanviet": "BIỂU TÌNH",
+      "reading": "ひょうじょう",
+      "meaning": "biểu cảm"
+    },
+    {
+      "kanji": "態度",
+      "hanviet": "THÁI ĐỘ",
+      "reading": "たいど",
+      "meaning": "thái độ"
+    },
+    {
+      "kanji": "気持ち",
+      "hanviet": "KHÍ TRÌ",
+      "reading": "きもち",
+      "meaning": "cảm xúc, tâm trạng"
+    },
+    {
+      "kanji": "読み取る",
+      "hanviet": "ĐỘC THỦ",
+      "reading": "よみとる",
+      "meaning": "đọc được, nắm bắt được"
+    },
+    {
+      "kanji": "文化",
+      "hanviet": "VĂN HÓA",
+      "reading": "ぶんか",
+      "meaning": "văn hóa"
+    },
+    {
+      "kanji": "特徴",
+      "hanviet": "ĐẶC TRƯNG",
+      "reading": "とくちょう",
+      "meaning": "đặc trưng"
+    },
+    {
+      "kanji": "海外",
+      "hanviet": "HẢI NGOẠI",
+      "reading": "かいがい",
+      "meaning": "nước ngoài"
+    },
+    {
+      "kanji": "戸惑い",
+      "hanviet": "HỘ HOẶC",
+      "reading": "とまどい",
+      "meaning": "sự bối rối"
+    },
+    {
+      "kanji": "原因",
+      "hanviet": "NGUYÊN NHÂN",
+      "reading": "げんいん",
+      "meaning": "nguyên nhân"
+    },
+    {
+      "kanji": "嫌",
+      "hanviet": "HIỀM",
+      "reading": "いや",
+      "meaning": "ghét, không thích"
+    },
+    {
+      "kanji": "本当",
+      "hanviet": "BẢN ĐƯƠNG",
+      "reading": "ほんとう",
+      "meaning": "thực sự"
+    },
+    {
+      "kanji": "頼らず",
+      "hanviet": "LẠI",
+      "reading": "たよらず",
+      "meaning": "không dựa vào"
+    },
+    {
+      "kanji": "伝え合う",
+      "hanviet": "TRUYỀN HỢP",
+      "reading": "つたえあう",
+      "meaning": "truyền đạt cho nhau"
+    },
+    {
+      "kanji": "美徳",
+      "hanviet": "MỸ ĐỨC",
+      "reading": "びとく",
+      "meaning": "đức tính tốt đẹp"
+    },
+    {
+      "kanji": "価値観",
+      "hanviet": "GIÁ TRỊ QUAN",
+      "reading": "かちかん",
+      "meaning": "giá trị quan"
+    },
+    {
+      "kanji": "意思",
+      "hanviet": "Ý TỨ",
+      "reading": "いし",
+      "meaning": "ý chí, ý muốn"
+    },
+    {
+      "kanji": "重視",
+      "hanviet": "TRỌNG THỊ",
+      "reading": "じゅうし",
+      "meaning": "coi trọng"
+    },
+    {
+      "kanji": "確かに",
+      "hanviet": "XÁC",
+      "reading": "たしかに",
+      "meaning": "quả thực, chắc chắn là"
+    },
+    {
+      "kanji": "存在",
+      "hanviet": "TỒN TẠI",
+      "reading": "そんざい",
+      "meaning": "tồn tại"
+    },
+    {
+      "kanji": "議論",
+      "hanviet": "NGHỊ LUẬN",
+      "reading": "ぎろん",
+      "meaning": "tranh luận"
+    },
+    {
+      "kanji": "優れて",
+      "hanviet": "ƯU",
+      "reading": "すぐれて",
+      "meaning": "ưu việt, xuất sắc"
+    },
+    {
+      "kanji": "側面",
+      "hanviet": "TRẮC DIỆN",
+      "reading": "そくめん",
+      "meaning": "khía cạnh"
+    },
+    {
+      "kanji": "誤解",
+      "hanviet": "NGỘ GIẢI",
+      "reading": "ごかい",
+      "meaning": "hiểu lầm"
+    },
+    {
+      "kanji": "弱点",
+      "hanviet": "NHƯỢC ĐIỂM",
+      "reading": "じゃくてん",
+      "meaning": "điểm yếu"
+    },
+    {
+      "kanji": "抱えて",
+      "hanviet": "BÃO",
+      "reading": "かかえて",
+      "meaning": "mang, ôm giữ"
+    },
+    {
+      "kanji": "直接的",
+      "hanviet": "TRỰC TIẾP ĐÍCH",
+      "reading": "ちょくせつてき",
+      "meaning": "trực tiếp"
+    },
+    {
+      "kanji": "反面",
+      "hanviet": "PHẢN DIỆN",
+      "reading": "はんめん",
+      "meaning": "mặt khác"
+    },
+    {
+      "kanji": "傷つけて",
+      "hanviet": "THƯƠNG",
+      "reading": "きずつけて",
+      "meaning": "làm tổn thương"
+    },
+    {
+      "kanji": "可能性",
+      "hanviet": "KHẢ NĂNG TÍNH",
+      "reading": "かのうせい",
+      "meaning": "khả năng"
+    },
+    {
+      "kanji": "大切",
+      "hanviet": "ĐẠI THIẾT",
+      "reading": "たいせつ",
+      "meaning": "quan trọng"
+    },
+    {
+      "kanji": "当たり前",
+      "hanviet": "ĐƯƠNG TIỀN",
+      "reading": "あたりまえ",
+      "meaning": "lẽ đương nhiên"
+    },
+    {
+      "kanji": "思い込まず",
+      "hanviet": "TƯ",
+      "reading": "おもいこまず",
+      "meaning": "không mặc định, không cho là"
+    },
+    {
+      "kanji": "柔軟性",
+      "hanviet": "NHU NHUYỄN TÍNH",
+      "reading": "じゅうなんせい",
+      "meaning": "tính linh hoạt"
+    },
+    {
+      "kanji": "期待",
+      "hanviet": "KỲ ĐÃI",
+      "reading": "きたい",
+      "meaning": "kỳ vọng"
+    },
+    {
+      "kanji": "バランス",
+      "hanviet": "",
+      "reading": "ばらんす",
+      "meaning": "cân bằng"
+    },
+    {
+      "kanji": "異なる",
+      "hanviet": "DỊ",
+      "reading": "ことなる",
+      "meaning": "khác nhau"
+    },
+    {
+      "kanji": "背景",
+      "hanviet": "BỐI CẢNH",
+      "reading": "はいけい",
+      "meaning": "bối cảnh"
+    },
+    {
+      "kanji": "人々",
+      "hanviet": "NHÂN NHÂN",
+      "reading": "ひとびと",
+      "meaning": "mọi người"
+    },
+    {
+      "kanji": "共に",
+      "hanviet": "CỘNG",
+      "reading": "ともに",
+      "meaning": "cùng nhau"
+    },
+    {
+      "kanji": "暮らす",
+      "hanviet": "MỘ",
+      "reading": "くらす",
+      "meaning": "sinh sống"
+    },
+    {
+      "kanji": "今後",
+      "hanviet": "KIM HẬU",
+      "reading": "こんご",
+      "meaning": "từ nay về sau"
+    },
+    {
+      "kanji": "重要",
+      "hanviet": "TRỌNG YẾU",
+      "reading": "じゅうよう",
+      "meaning": "quan trọng"
+    }
+  ],
+  "grammarList": [
+    {
+      "pattern": "〜という言葉がある",
+      "meaning": "có một từ là..."
+    },
+    {
+      "pattern": "〜という意味である",
+      "meaning": "có nghĩa là..."
+    },
+    {
+      "pattern": "〜としてよく語られる",
+      "meaning": "thường được nhắc tới như là..."
+    },
+    {
+      "pattern": "〜にとって、〜はしばしば〜となる",
+      "meaning": "đối với..., thì... thường trở thành..."
+    },
+    {
+      "pattern": "〜てほしいという声も少なくない",
+      "meaning": "không ít tiếng nói mong muốn rằng..."
+    },
+    {
+      "pattern": "〜との間には、確かに違いが存在する",
+      "meaning": "giữa... và... quả thực tồn tại sự khác biệt"
+    },
+    {
+      "pattern": "〜という議論には、あまり意味がないだろう",
+      "meaning": "việc tranh luận... có lẽ không mấy ý nghĩa"
+    },
+    {
+      "pattern": "〜という側面を持つ一方で、〜という弱点も抱えている",
+      "meaning": "có khía cạnh là... nhưng mặt khác cũng mang điểm yếu là..."
+    },
+    {
+      "pattern": "〜反面、〜可能性もある",
+      "meaning": "mặt khác, cũng có khả năng..."
+    },
+    {
+      "pattern": "〜と思い込まず、〜柔軟性ではないだろうか",
+      "meaning": "không mặc định rằng..., mà có lẽ chính sự linh hoạt để... mới là điều quan trọng"
+    }
   ]
 }

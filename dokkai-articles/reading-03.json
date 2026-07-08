@@ -11,10 +11,283 @@
     "{{専門家|せんもんか|chuyên gia}}の中には、円安だけでなく、{{人口|じんこう|dân số}}{{減少|げんしょう|suy giảm}}という{{構造的|こうぞうてき|mang tính cấu trúc}}な{{課題|かだい|vấn đề, thách thức}}こそが、日本経済の{{長期的|ちょうきてき|dài hạn, lâu dài}}な{{競争力|きょうそうりょく|năng lực cạnh tranh}}にとってより{{重要|じゅうよう|quan trọng}}な{{論点|ろんてん|điểm tranh luận}}だと{{主張|しゅちょう|khẳng định, lập luận}}する人もいる。単純に{{規模|きぼ|quy mô}}だけを{{比較|ひかく|so sánh}}するのではなく、一人あたりの{{豊|ゆた}}かさをどう{{維持|いじ|duy trì}}していくかが、これからの日本にとって大きな{{課題|かだい|vấn đề}}だと言えるだろう。"
   ],
   "questions": [
-    { "difficulty": 1, "q": "円安は輸出企業にとってどのように働くことが多いか。", "options": ["不利に働くことが多い", "有利に働くことが多い", "まったく関係がない", "常に悪い影響しかない"], "answer": 1 },
-    { "difficulty": 2, "q": "円安が輸入に頼る生活必需品や燃料の価格にどのような影響を与えるか。", "options": ["価格を押し下げる", "価格を押し上げる", "価格に影響しない", "価格をゼロにする"], "answer": 1 },
-    { "difficulty": 3, "q": "GDPの規模について、本文はどのような指摘を紹介しているか。", "options": ["日本が他の国に追い抜かれる可能性がある", "日本が世界一になる可能性が高い", "GDPはもう関係ない指標だ", "日本のGDPは今後変わらない"], "answer": 0 },
-    { "difficulty": 4, "q": "国際機関の分析によると、2026年の日本経済自体はどうだと見られているか。", "options": ["大きく縮小していく", "底堅い成長を続ける", "完全に停止する", "予測が不可能である"], "answer": 1 },
-    { "difficulty": 5, "q": "一部の専門家が、日本経済の長期的な競争力にとってより重要だと主張している論点は何か。", "options": ["円安そのものだけの問題", "人口減少という構造的な課題", "輸出企業の数を増やすこと", "GDPの規模を単純に比較すること"], "answer": 1 }
+    {
+      "difficulty": 1,
+      "q": "円安は輸出企業にとってどのように働くことが多いか。",
+      "options": [
+        "不利に働くことが多い",
+        "有利に働くことが多い",
+        "まったく関係がない",
+        "常に悪い影響しかない"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 2,
+      "q": "円安が輸入に頼る生活必需品や燃料の価格にどのような影響を与えるか。",
+      "options": [
+        "価格を押し下げる",
+        "価格を押し上げる",
+        "価格に影響しない",
+        "価格をゼロにする"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 3,
+      "q": "GDPの規模について、本文はどのような指摘を紹介しているか。",
+      "options": [
+        "日本が他の国に追い抜かれる可能性がある",
+        "日本が世界一になる可能性が高い",
+        "GDPはもう関係ない指標だ",
+        "日本のGDPは今後変わらない"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 4,
+      "q": "国際機関の分析によると、2026年の日本経済自体はどうだと見られているか。",
+      "options": [
+        "大きく縮小していく",
+        "底堅い成長を続ける",
+        "完全に停止する",
+        "予測が不可能である"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 5,
+      "q": "一部の専門家が、日本経済の長期的な競争力にとってより重要だと主張している論点は何か。",
+      "options": [
+        "円安そのものだけの問題",
+        "人口減少という構造的な課題",
+        "輸出企業の数を増やすこと",
+        "GDPの規模を単純に比較すること"
+      ],
+      "answer": 1
+    }
+  ],
+  "paragraphsVi": [
+    "Những năm gần đây, đồng Yên yếu vẫn tiếp diễn, gây ra nhiều ảnh hưởng đa dạng tới nền kinh tế Nhật Bản. Đồng Yên yếu thường có lợi cho các doanh nghiệp xuất khẩu, nhưng cũng là một yếu tố đẩy giá các nhu yếu phẩm sinh hoạt và nhiên liệu phụ thuộc vào nhập khẩu lên cao.",
+    "Nhìn vào quy mô Tổng sản phẩm quốc nội (GDP), do ảnh hưởng của đồng Yên yếu, cũng có nhận định rằng Nhật Bản có khả năng bị các nước khác vượt qua. Tuy nhiên, theo phân tích của các tổ chức quốc tế, bản thân nền kinh tế Nhật Bản năm 2026 được dự đoán vẫn sẽ tiếp tục tăng trưởng vững chắc.",
+    "Trong số các chuyên gia, cũng có người khẳng định rằng không chỉ riêng đồng Yên yếu, mà chính vấn đề mang tính cấu trúc là suy giảm dân số mới là điểm tranh luận quan trọng hơn đối với năng lực cạnh tranh dài hạn của nền kinh tế Nhật Bản. Có thể nói rằng, thay vì chỉ đơn thuần so sánh quy mô, việc duy trì sự giàu có tính theo đầu người như thế nào mới là thách thức lớn đối với Nhật Bản trong thời gian tới."
+  ],
+  "n2VocabList": [
+    {
+      "kanji": "円安",
+      "hanviet": "VIÊN AN",
+      "reading": "えんやす",
+      "meaning": "đồng Yên yếu, tỷ giá Yên giảm"
+    },
+    {
+      "kanji": "経済",
+      "hanviet": "KINH TẾ",
+      "reading": "けいざい",
+      "meaning": "kinh tế"
+    },
+    {
+      "kanji": "様々",
+      "hanviet": "DẠNG DẠNG",
+      "reading": "さまざま",
+      "meaning": "đa dạng, nhiều loại"
+    },
+    {
+      "kanji": "輸出",
+      "hanviet": "THÂU XUẤT",
+      "reading": "ゆしゅつ",
+      "meaning": "xuất khẩu"
+    },
+    {
+      "kanji": "企業",
+      "hanviet": "XÍ NGHIỆP",
+      "reading": "きぎょう",
+      "meaning": "doanh nghiệp"
+    },
+    {
+      "kanji": "有利",
+      "hanviet": "HỮU LỢI",
+      "reading": "ゆうり",
+      "meaning": "có lợi"
+    },
+    {
+      "kanji": "輸入",
+      "hanviet": "THÂU NHẬP",
+      "reading": "ゆにゅう",
+      "meaning": "nhập khẩu"
+    },
+    {
+      "kanji": "生活必需品",
+      "hanviet": "SINH HOẠT TẤT NHU PHẨM",
+      "reading": "せいかつひつじゅひん",
+      "meaning": "nhu yếu phẩm sinh hoạt"
+    },
+    {
+      "kanji": "燃料",
+      "hanviet": "NHIÊN LIỆU",
+      "reading": "ねんりょう",
+      "meaning": "nhiên liệu"
+    },
+    {
+      "kanji": "要因",
+      "hanviet": "YẾU NHÂN",
+      "reading": "よういん",
+      "meaning": "yếu tố nguyên nhân"
+    },
+    {
+      "kanji": "国内総生産",
+      "hanviet": "QUỐC NỘI TỔNG SINH SẢN",
+      "reading": "こくないそうせいさん",
+      "meaning": "tổng sản phẩm quốc nội (GDP)"
+    },
+    {
+      "kanji": "規模",
+      "hanviet": "QUY MÔ",
+      "reading": "きぼ",
+      "meaning": "quy mô"
+    },
+    {
+      "kanji": "他",
+      "hanviet": "THA",
+      "reading": "た",
+      "meaning": "khác"
+    },
+    {
+      "kanji": "追い抜かれる",
+      "hanviet": "TRUY BẠT",
+      "reading": "おいぬかれる",
+      "meaning": "bị vượt qua"
+    },
+    {
+      "kanji": "可能性",
+      "hanviet": "KHẢ NĂNG TÍNH",
+      "reading": "かのうせい",
+      "meaning": "khả năng"
+    },
+    {
+      "kanji": "指摘",
+      "hanviet": "CHỈ TRÍCH",
+      "reading": "してき",
+      "meaning": "chỉ ra, nhận định"
+    },
+    {
+      "kanji": "国際機関",
+      "hanviet": "QUỐC TẾ CƠ QUAN",
+      "reading": "こくさいきかん",
+      "meaning": "tổ chức quốc tế"
+    },
+    {
+      "kanji": "分析",
+      "hanviet": "PHÂN TÍCH",
+      "reading": "ぶんせき",
+      "meaning": "phân tích"
+    },
+    {
+      "kanji": "自体",
+      "hanviet": "TỰ THỂ",
+      "reading": "じたい",
+      "meaning": "bản thân, chính nó"
+    },
+    {
+      "kanji": "底堅い",
+      "hanviet": "ĐỂ KIÊN",
+      "reading": "そこがたい",
+      "meaning": "vững chắc (kinh tế)"
+    },
+    {
+      "kanji": "成長",
+      "hanviet": "THÀNH TRƯỞNG",
+      "reading": "せいちょう",
+      "meaning": "tăng trưởng"
+    },
+    {
+      "kanji": "専門家",
+      "hanviet": "CHUYÊN MÔN GIA",
+      "reading": "せんもんか",
+      "meaning": "chuyên gia"
+    },
+    {
+      "kanji": "人口減少",
+      "hanviet": "NHÂN KHẨU GIẢM THIỂU",
+      "reading": "じんこうげんしょう",
+      "meaning": "suy giảm dân số"
+    },
+    {
+      "kanji": "構造的",
+      "hanviet": "CẤU TẠO ĐÍCH",
+      "reading": "こうぞうてき",
+      "meaning": "mang tính cấu trúc"
+    },
+    {
+      "kanji": "長期的",
+      "hanviet": "TRƯỜNG KỲ ĐÍCH",
+      "reading": "ちょうきてき",
+      "meaning": "dài hạn, lâu dài"
+    },
+    {
+      "kanji": "競争力",
+      "hanviet": "CẠNH TRANH LỰC",
+      "reading": "きょうそうりょく",
+      "meaning": "năng lực cạnh tranh"
+    },
+    {
+      "kanji": "論点",
+      "hanviet": "LUẬN ĐIỂM",
+      "reading": "ろんてん",
+      "meaning": "điểm tranh luận"
+    },
+    {
+      "kanji": "主張",
+      "hanviet": "CHỦ TRƯƠNG",
+      "reading": "しゅちょう",
+      "meaning": "khẳng định, lập luận"
+    },
+    {
+      "kanji": "比較",
+      "hanviet": "TỶ GIẢO",
+      "reading": "ひかく",
+      "meaning": "so sánh"
+    },
+    {
+      "kanji": "維持",
+      "hanviet": "DUY TRÌ",
+      "reading": "いじ",
+      "meaning": "duy trì"
+    },
+    {
+      "kanji": "課題",
+      "hanviet": "KHÓA ĐỀ",
+      "reading": "かだい",
+      "meaning": "vấn đề, thách thức"
+    }
+  ],
+  "grammarList": [
+    {
+      "pattern": "〜にとっては〜が多い",
+      "meaning": "đối với... thì phần lớn/thường là..."
+    },
+    {
+      "pattern": "〜要因にもなっている",
+      "meaning": "cũng trở thành 1 yếu tố gây ra..."
+    },
+    {
+      "pattern": "〜という指摘も出ている",
+      "meaning": "cũng có nhận định/chỉ ra rằng..."
+    },
+    {
+      "pattern": "〜ただし〜とも見られている",
+      "meaning": "tuy nhiên cũng được nhận định là..."
+    },
+    {
+      "pattern": "〜と主張する人もいる",
+      "meaning": "cũng có người khẳng định rằng..."
+    },
+    {
+      "pattern": "〜のではなく、むしろ〜",
+      "meaning": "không phải là..., mà đúng hơn là..."
+    },
+    {
+      "pattern": "〜と言えるだろう",
+      "meaning": "có thể nói rằng..."
+    }
   ]
 }

@@ -12,10 +12,498 @@
     "こうした{{知見|ちけん|kiến thức, sự hiểu biết}}を{{踏|ふ}}まえるならば、{{睡眠|すいみん}}を{{犠牲|ぎせい|hy sinh}}にしてまで{{生産性|せいさんせい|năng suất}}を{{追求|ついきゅう|theo đuổi}}しようとする{{働|はたら}}き方は、{{長期的|ちょうきてき|dài hạn}}に{{見|み}}れば、むしろ{{本末転倒|ほんまつてんとう|đảo lộn gốc ngọn, làm ngược}}と言わざるを{{得|え}}ない。{{睡眠|すいみん}}を{{犠牲|ぎせい}}にすることは、{{一時的|いちじてき|tạm thời}}な{{時間|じかん}}の{{確保|かくほ|đảm bảo, giữ lấy}}にはなり{{得|う}}ても、{{結果的|けっかてき|mang tính kết quả}}には{{判断力|はんだんりょく}}や{{集中力|しゅうちゅうりょく}}の{{低下|ていか}}を{{招|まね}}き、より{{多|おお}}くの{{時間|じかん}}を{{失|うしな}}う{{結果|けっか}}になりかねないからである。{{睡眠|すいみん}}を「{{削|けず}}るべきコスト」ではなく、「{{投資|とうし|đầu tư}}すべき{{資源|しげん|tài nguyên}}」として{{捉|とら}}え{{直|なお}}す{{発想|はっそう|góc nhìn, lối tư duy}}の{{転換|てんかん|chuyển đổi}}が、{{今|いま}}こそ{{求|もと}}められているのではないだろうか。"
   ],
   "questions": [
-    { "difficulty": 1, "q": "筆者は、睡眠を単なる「休息」と見なして軽視する傾向について、どう述べているか。", "options": ["まったく問題がないと述べている", "看過できない危険性が潜んでいると述べている", "むしろ推奨すべき考え方だと述べている", "現代人にはもう関係のない話だと述べている"], "answer": 1 },
-    { "difficulty": 2, "q": "慢性的な睡眠不足が招くとされているものとして、本文に書かれていないものはどれか。", "options": ["集中力や判断力の低下", "免疫機能の低下", "生活習慣病のリスクの上昇", "身長が伸びなくなること"], "answer": 3 },
-    { "difficulty": 3, "q": "睡眠不足が「人間関係における摩擦の一因」となり得るのはなぜか。", "options": ["睡眠不足の人は他人と会う時間が減るから", "十分な睡眠が取れていないと、些細な出来事にも過剰に反応してしまいがちだから", "睡眠不足の人は嘘をつきやすくなるから", "睡眠不足は伝染すると考えられているから"], "answer": 1 },
-    { "difficulty": 4, "q": "筆者が「本末転倒」だと述べているのはどのような働き方か。", "options": ["十分な睡眠を取りながら効率的に働く働き方", "睡眠を犠牲にしてまで生産性を追求しようとする働き方", "労働時間を厳格に管理する働き方", "在宅勤務を中心とした働き方"], "answer": 1 },
-    { "difficulty": 5, "q": "この文章全体を通して筆者が最も伝えたいことは何か。", "options": ["睡眠時間は短ければ短いほど良い。", "睡眠を「削るべきコスト」ではなく「投資すべき資源」として捉え直す発想の転換が求められている。", "睡眠不足は現代人にとってもはや避けられない宿命である。", "生産性を上げるためには、睡眠よりも仕事を優先すべきだ。"], "answer": 1 }
+    {
+      "difficulty": 1,
+      "q": "筆者は、睡眠を単なる「休息」と見なして軽視する傾向について、どう述べているか。",
+      "options": [
+        "まったく問題がないと述べている",
+        "看過できない危険性が潜んでいると述べている",
+        "むしろ推奨すべき考え方だと述べている",
+        "現代人にはもう関係のない話だと述べている"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 2,
+      "q": "慢性的な睡眠不足が招くとされているものとして、本文に書かれていないものはどれか。",
+      "options": [
+        "集中力や判断力の低下",
+        "免疫機能の低下",
+        "生活習慣病のリスクの上昇",
+        "身長が伸びなくなること"
+      ],
+      "answer": 3
+    },
+    {
+      "difficulty": 3,
+      "q": "睡眠不足が「人間関係における摩擦の一因」となり得るのはなぜか。",
+      "options": [
+        "睡眠不足の人は他人と会う時間が減るから",
+        "十分な睡眠が取れていないと、些細な出来事にも過剰に反応してしまいがちだから",
+        "睡眠不足の人は嘘をつきやすくなるから",
+        "睡眠不足は伝染すると考えられているから"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 4,
+      "q": "筆者が「本末転倒」だと述べているのはどのような働き方か。",
+      "options": [
+        "十分な睡眠を取りながら効率的に働く働き方",
+        "睡眠を犠牲にしてまで生産性を追求しようとする働き方",
+        "労働時間を厳格に管理する働き方",
+        "在宅勤務を中心とした働き方"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 5,
+      "q": "この文章全体を通して筆者が最も伝えたいことは何か。",
+      "options": [
+        "睡眠時間は短ければ短いほど良い。",
+        "睡眠を「削るべきコスト」ではなく「投資すべき資源」として捉え直す発想の転換が求められている。",
+        "睡眠不足は現代人にとってもはや避けられない宿命である。",
+        "生産性を上げるためには、睡眠よりも仕事を優先すべきだ。"
+      ],
+      "answer": 1
+    }
+  ],
+  "paragraphsVi": [
+    "Người ta đã nói từ lâu rằng phần lớn người hiện đại đang gặp phải tình trạng thiếu ngủ. Trong những ngày bị cuốn theo công việc và học tập, việc cắt giảm thời gian ngủ không còn là điều gì hiếm gặp nữa. Tuy nhiên, xu hướng coi giấc ngủ đơn thuần chỉ là \"nghỉ ngơi\" rồi xem nhẹ nó, không thể không nói là đang tiềm ẩn một mức độ nguy hiểm không thể bỏ qua.",
+    "Ảnh hưởng của việc thiếu ngủ lên tâm-thân không chỉ dừng lại ở cảm giác chủ quan là \"buồn ngủ\". Thiếu ngủ mang tính mạn tính không chỉ dẫn tới sự suy giảm khả năng tập trung và phán đoán, mà việc nó làm tăng nguy cơ suy giảm chức năng miễn dịch và các bệnh do lối sống cũng đã được nhiều nghiên cứu chứng minh.",
+    "Điều thú vị là cũng có nhận định cho rằng thiếu ngủ còn gây ảnh hưởng tiêu cực tới khả năng kiểm soát cảm xúc. Khi ở trạng thái chưa ngủ đủ giấc, con người dễ có xu hướng phản ứng thái quá ngay cả với những sự việc nhỏ nhặt, và điều này cũng có thể trở thành một nguyên nhân gây xung đột trong quan hệ con người. Nói cách khác, chất lượng giấc ngủ không chỉ là vấn đề của sức khỏe cá nhân, mà còn là vấn đề có thể lan tỏa tới cả mối quan hệ với những người xung quanh.",
+    "Dựa trên những hiểu biết này, cách làm việc hy sinh giấc ngủ để theo đuổi năng suất, nếu nhìn về dài hạn, không thể không nói đó là một sự đảo lộn gốc ngọn. Bởi vì việc hy sinh giấc ngủ, dù có thể tạm thời đảm bảo được thời gian, nhưng kết quả lại có thể dẫn tới sự suy giảm khả năng phán đoán và tập trung, khiến ta mất đi nhiều thời gian hơn về sau. Có lẽ giờ đây, điều đang được đòi hỏi chính là một sự chuyển đổi trong tư duy — nhìn nhận lại giấc ngủ không phải là \"chi phí cần cắt giảm\", mà là \"tài nguyên cần đầu tư\"."
+  ],
+  "n2VocabList": [
+    {
+      "kanji": "現代人",
+      "hanviet": "HIỆN ĐẠI NHÂN",
+      "reading": "げんだいじん",
+      "meaning": "người hiện đại"
+    },
+    {
+      "kanji": "睡眠不足",
+      "hanviet": "THỤY MIÊN BẤT TÚC",
+      "reading": "すいみんぶそく",
+      "meaning": "thiếu ngủ"
+    },
+    {
+      "kanji": "久しい",
+      "hanviet": "CỬU",
+      "reading": "ひさしい",
+      "meaning": "đã lâu, từ lâu"
+    },
+    {
+      "kanji": "学業",
+      "hanviet": "HỌC NGHIỆP",
+      "reading": "がくぎょう",
+      "meaning": "học tập, học nghiệp"
+    },
+    {
+      "kanji": "追われる",
+      "hanviet": "TRUY",
+      "reading": "おわれる",
+      "meaning": "bị cuốn theo, bị đuổi theo"
+    },
+    {
+      "kanji": "日々",
+      "hanviet": "NHẬT NHẬT",
+      "reading": "ひび",
+      "meaning": "hàng ngày"
+    },
+    {
+      "kanji": "睡眠時間",
+      "hanviet": "THỤY MIÊN THỜI GIAN",
+      "reading": "すいみんじかん",
+      "meaning": "thời gian ngủ"
+    },
+    {
+      "kanji": "削る",
+      "hanviet": "TƯỚC",
+      "reading": "けずる",
+      "meaning": "cắt giảm"
+    },
+    {
+      "kanji": "珍しい",
+      "hanviet": "TRÂN",
+      "reading": "めずらしい",
+      "meaning": "hiếm gặp"
+    },
+    {
+      "kanji": "休息",
+      "hanviet": "HƯU TỨC",
+      "reading": "きゅうそく",
+      "meaning": "nghỉ ngơi"
+    },
+    {
+      "kanji": "見なし",
+      "hanviet": "KIẾN",
+      "reading": "みなし",
+      "meaning": "coi là, xem như"
+    },
+    {
+      "kanji": "軽視",
+      "hanviet": "KHINH THỊ",
+      "reading": "けいし",
+      "meaning": "xem nhẹ, coi thường"
+    },
+    {
+      "kanji": "傾向",
+      "hanviet": "KHUYNH HƯỚNG",
+      "reading": "けいこう",
+      "meaning": "xu hướng"
+    },
+    {
+      "kanji": "看過",
+      "hanviet": "KHÁN QUÁ",
+      "reading": "かんか",
+      "meaning": "bỏ qua, không chú ý"
+    },
+    {
+      "kanji": "危険性",
+      "hanviet": "NGUY HIỂM TÍNH",
+      "reading": "きけんせい",
+      "meaning": "tính nguy hiểm"
+    },
+    {
+      "kanji": "潜んで",
+      "hanviet": "TIỀM",
+      "reading": "ひそんで",
+      "meaning": "tiềm ẩn"
+    },
+    {
+      "kanji": "心身",
+      "hanviet": "TÂM THÂN",
+      "reading": "しんしん",
+      "meaning": "tâm-thân, thân tâm"
+    },
+    {
+      "kanji": "及ぼす",
+      "hanviet": "CẬP",
+      "reading": "およぼす",
+      "meaning": "gây ra, ảnh hưởng đến"
+    },
+    {
+      "kanji": "影響",
+      "hanviet": "ẢNH HƯỞNG",
+      "reading": "えいきょう",
+      "meaning": "ảnh hưởng"
+    },
+    {
+      "kanji": "主観的",
+      "hanviet": "CHỦ QUAN ĐÍCH",
+      "reading": "しゅかんてき",
+      "meaning": "mang tính chủ quan"
+    },
+    {
+      "kanji": "感覚",
+      "hanviet": "CẢM GIÁC",
+      "reading": "かんかく",
+      "meaning": "cảm giác"
+    },
+    {
+      "kanji": "留まらない",
+      "hanviet": "LƯU",
+      "reading": "とどまらない",
+      "meaning": "không dừng lại ở"
+    },
+    {
+      "kanji": "慢性的",
+      "hanviet": "MẠN TÍNH ĐÍCH",
+      "reading": "まんせいてき",
+      "meaning": "mang tính mạn tính"
+    },
+    {
+      "kanji": "集中力",
+      "hanviet": "TẬP TRUNG LỰC",
+      "reading": "しゅうちゅうりょく",
+      "meaning": "khả năng tập trung"
+    },
+    {
+      "kanji": "判断力",
+      "hanviet": "PHÁN ĐOÁN LỰC",
+      "reading": "はんだんりょく",
+      "meaning": "khả năng phán đoán"
+    },
+    {
+      "kanji": "低下",
+      "hanviet": "ĐÊ HẠ",
+      "reading": "ていか",
+      "meaning": "suy giảm"
+    },
+    {
+      "kanji": "招く",
+      "hanviet": "CHIÊU",
+      "reading": "まねく",
+      "meaning": "dẫn tới, gây ra"
+    },
+    {
+      "kanji": "免疫機能",
+      "hanviet": "MIỄN DỊCH CƠ NĂNG",
+      "reading": "めんえききのう",
+      "meaning": "chức năng miễn dịch"
+    },
+    {
+      "kanji": "生活習慣病",
+      "hanviet": "SINH HOẠT TẬP QUÁN BỆNH",
+      "reading": "せいかつしゅうかんびょう",
+      "meaning": "bệnh do lối sống"
+    },
+    {
+      "kanji": "リスク",
+      "hanviet": "",
+      "reading": "りすく",
+      "meaning": "rủi ro"
+    },
+    {
+      "kanji": "数々",
+      "hanviet": "SỐ SỐ",
+      "reading": "かずかず",
+      "meaning": "nhiều, vô số"
+    },
+    {
+      "kanji": "研究",
+      "hanviet": "NGHIÊN CỨU",
+      "reading": "けんきゅう",
+      "meaning": "nghiên cứu"
+    },
+    {
+      "kanji": "裏付けられて",
+      "hanviet": "LÝ PHÓ",
+      "reading": "うらづけられて",
+      "meaning": "được chứng minh, được xác nhận"
+    },
+    {
+      "kanji": "興味深い",
+      "hanviet": "HỨNG VỊ THÂM",
+      "reading": "きょうみぶかい",
+      "meaning": "thú vị, đáng chú ý"
+    },
+    {
+      "kanji": "制御",
+      "hanviet": "CHẾ NGỰ",
+      "reading": "せいぎょ",
+      "meaning": "điều khiển, kiểm soát"
+    },
+    {
+      "kanji": "負",
+      "hanviet": "PHỤ",
+      "reading": "ふ",
+      "meaning": "âm, tiêu cực"
+    },
+    {
+      "kanji": "指摘",
+      "hanviet": "CHỈ TRÍCH",
+      "reading": "してき",
+      "meaning": "chỉ ra, nhận định"
+    },
+    {
+      "kanji": "状態",
+      "hanviet": "TRẠNG THÁI",
+      "reading": "じょうたい",
+      "meaning": "trạng thái"
+    },
+    {
+      "kanji": "些細",
+      "hanviet": "TA TẾ",
+      "reading": "ささい",
+      "meaning": "nhỏ nhặt, vụn vặt"
+    },
+    {
+      "kanji": "過剰",
+      "hanviet": "QUÁ THẶNG",
+      "reading": "かじょう",
+      "meaning": "quá mức"
+    },
+    {
+      "kanji": "反応",
+      "hanviet": "PHẢN ỨNG",
+      "reading": "はんのう",
+      "meaning": "phản ứng"
+    },
+    {
+      "kanji": "人間関係",
+      "hanviet": "NHÂN GIAN QUAN HỆ",
+      "reading": "にんげんかんけい",
+      "meaning": "quan hệ con người"
+    },
+    {
+      "kanji": "摩擦",
+      "hanviet": "MA SÁT",
+      "reading": "まさつ",
+      "meaning": "xung đột"
+    },
+    {
+      "kanji": "一因",
+      "hanviet": "NHẤT NHÂN",
+      "reading": "いちいん",
+      "meaning": "1 nguyên nhân"
+    },
+    {
+      "kanji": "個人",
+      "hanviet": "CÁ NHÂN",
+      "reading": "こじん",
+      "meaning": "cá nhân"
+    },
+    {
+      "kanji": "健康",
+      "hanviet": "KIỆN KHANG",
+      "reading": "けんこう",
+      "meaning": "sức khỏe"
+    },
+    {
+      "kanji": "周囲",
+      "hanviet": "CHU VI",
+      "reading": "しゅうい",
+      "meaning": "xung quanh"
+    },
+    {
+      "kanji": "関係性",
+      "hanviet": "QUAN HỆ TÍNH",
+      "reading": "かんけいせい",
+      "meaning": "tính chất mối quan hệ"
+    },
+    {
+      "kanji": "波及",
+      "hanviet": "BA CẬP",
+      "reading": "はきゅう",
+      "meaning": "lan tỏa, ảnh hưởng dây chuyền"
+    },
+    {
+      "kanji": "知見",
+      "hanviet": "TRI KIẾN",
+      "reading": "ちけん",
+      "meaning": "kiến thức, sự hiểu biết"
+    },
+    {
+      "kanji": "踏まえる",
+      "hanviet": "ĐẠP",
+      "reading": "ふまえる",
+      "meaning": "dựa trên, căn cứ vào"
+    },
+    {
+      "kanji": "犠牲",
+      "hanviet": "HY SINH",
+      "reading": "ぎせい",
+      "meaning": "hy sinh"
+    },
+    {
+      "kanji": "生産性",
+      "hanviet": "SINH SẢN TÍNH",
+      "reading": "せいさんせい",
+      "meaning": "năng suất"
+    },
+    {
+      "kanji": "追求",
+      "hanviet": "TRUY CẦU",
+      "reading": "ついきゅう",
+      "meaning": "theo đuổi"
+    },
+    {
+      "kanji": "長期的",
+      "hanviet": "TRƯỜNG KỲ ĐÍCH",
+      "reading": "ちょうきてき",
+      "meaning": "dài hạn"
+    },
+    {
+      "kanji": "本末転倒",
+      "hanviet": "BẢN MẠT CHUYỂN ĐẢO",
+      "reading": "ほんまつてんとう",
+      "meaning": "đảo lộn gốc ngọn, làm ngược"
+    },
+    {
+      "kanji": "一時的",
+      "hanviet": "NHẤT THỜI ĐÍCH",
+      "reading": "いちじてき",
+      "meaning": "tạm thời"
+    },
+    {
+      "kanji": "確保",
+      "hanviet": "XÁC BẢO",
+      "reading": "かくほ",
+      "meaning": "đảm bảo, giữ lấy"
+    },
+    {
+      "kanji": "結果的",
+      "hanviet": "KẾT QUẢ ĐÍCH",
+      "reading": "けっかてき",
+      "meaning": "mang tính kết quả"
+    },
+    {
+      "kanji": "失う",
+      "hanviet": "THẤT",
+      "reading": "うしなう",
+      "meaning": "mất đi"
+    },
+    {
+      "kanji": "投資",
+      "hanviet": "ĐẦU TƯ",
+      "reading": "とうし",
+      "meaning": "đầu tư"
+    },
+    {
+      "kanji": "資源",
+      "hanviet": "TÀI NGUYÊN",
+      "reading": "しげん",
+      "meaning": "tài nguyên"
+    },
+    {
+      "kanji": "発想",
+      "hanviet": "PHÁT TƯỞNG",
+      "reading": "はっそう",
+      "meaning": "góc nhìn, lối tư duy"
+    },
+    {
+      "kanji": "転換",
+      "hanviet": "CHUYỂN HOÁN",
+      "reading": "てんかん",
+      "meaning": "chuyển đổi"
+    }
+  ],
+  "grammarList": [
+    {
+      "pattern": "〜と言われて久しい",
+      "meaning": "đã được nói tới từ lâu rằng..."
+    },
+    {
+      "pattern": "〜には、看過できない〜が潜んでいると言わざるを得ない",
+      "meaning": "không thể không nói rằng trong... tiềm ẩn..."
+    },
+    {
+      "pattern": "〜に留まらない",
+      "meaning": "không chỉ dừng lại ở..."
+    },
+    {
+      "pattern": "〜のみならず、〜も〜によって裏付けられている",
+      "meaning": "không chỉ..., mà cả... cũng đã được chứng minh bởi..."
+    },
+    {
+      "pattern": "〜がちであり、〜ともなり得る",
+      "meaning": "có xu hướng... và cũng có thể trở thành..."
+    },
+    {
+      "pattern": "すなわち",
+      "meaning": "tức là, nói cách khác"
+    },
+    {
+      "pattern": "〜にまで波及し得る",
+      "meaning": "có thể lan tỏa/ảnh hưởng tới tận..."
+    },
+    {
+      "pattern": "〜を踏まえるならば",
+      "meaning": "nếu dựa trên/căn cứ vào..."
+    },
+    {
+      "pattern": "〜は、〜見れば、むしろ〜と言わざるを得ない",
+      "meaning": "nếu nhìn theo..., thì không thể không nói là..."
+    },
+    {
+      "pattern": "〜にはなり得ても、結果的には〜になりかねない",
+      "meaning": "dù có thể..., nhưng kết quả có thể dẫn đến..."
+    },
+    {
+      "pattern": "〜として捉え直す発想の転換が、今こそ求められているのではないだろうか",
+      "meaning": "sự chuyển đổi tư duy để nhìn nhận lại... có lẽ đang được đòi hỏi ngay lúc này"
+    }
   ]
 }

@@ -12,10 +12,420 @@
     "このように{{見|み}}てくると、「{{忘却|ぼうきゃく|sự lãng quên, quên lãng}}」は{{単|たん}}なる{{欠陥|けっかん|khiếm khuyết}}ではなく、{{限|かぎ}}られた{{脳|のう}}の{{容量|ようりょう|dung lượng}}を{{有効|ゆうこう|hữu hiệu, hiệu quả}}に{{使|つか}}うための、{{合理的|ごうりてき|hợp lý}}な{{仕組|しく}}みだと{{捉|とら}}え{{直|なお}}すこともできるだろう。{{何|なに}}かを「{{忘|わす}}れてしまった」と{{落|お}}ち{{込|こ}}むよりも、{{脳|のう}}が{{今|いま}}の{{自分|じぶん}}にとって{{本当|ほんとう}}に{{必要|ひつよう}}な{{情報|じょうほう}}を{{選|えら}}び{{直|なお}}している{{過程|かてい|quá trình}}なのだと{{考|かんが}}えてみるのも、一つの{{視点|してん|góc nhìn}}ではないだろうか。"
   ],
   "questions": [
-    { "difficulty": 1, "q": "心理学の分野では、記憶とはどのようなものだと考えられているか。", "options": ["単に情報を保存する装置", "感情と深く結びついた働き", "脳とはまったく関係のない現象", "誰にとっても同じ仕組み"], "answer": 1 },
-    { "difficulty": 2, "q": "強い感情を伴う出来事は、どのように処理されやすいか。", "options": ["すぐに忘れられやすい", "長期記憶として定着しやすい", "感情とは無関係に処理される", "他人の記憶と混同されやすい"], "answer": 1 },
-    { "difficulty": 3, "q": "睡眠と記憶の関係について、本文はどのように述べているか。", "options": ["睡眠は記憶とは関係がない", "眠っている間に脳が情報を整理し、重要なものを長期記憶に移していると考えられている", "睡眠を減らすほど記憶力が上がる", "記憶は睡眠中には一切働かない"], "answer": 1 },
-    { "difficulty": 4, "q": "筆者は「忘却」をどのように捉え直すことができると述べているか。", "options": ["単なる脳の欠陥として捉えるべきだ", "限られた脳の容量を有効に使うための合理的な仕組みとして捉え直すこともできる", "忘却は病気の一種である", "忘却は訓練によって完全になくすことができる"], "answer": 1 },
-    { "difficulty": 5, "q": "この文章全体で筆者が伝えたいことに最も近いものはどれか。", "options": ["忘れることは常に悪いことであり、避けるべきだ。", "記憶力を上げる方法は睡眠以外にはない。", "忘却は脳が必要な情報を選び取る過程だと考えることもでき、単なる欠陥とは限らない。", "感情を伴わない情報は記憶する価値がない。"], "answer": 2 }
+    {
+      "difficulty": 1,
+      "q": "心理学の分野では、記憶とはどのようなものだと考えられているか。",
+      "options": [
+        "単に情報を保存する装置",
+        "感情と深く結びついた働き",
+        "脳とはまったく関係のない現象",
+        "誰にとっても同じ仕組み"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 2,
+      "q": "強い感情を伴う出来事は、どのように処理されやすいか。",
+      "options": [
+        "すぐに忘れられやすい",
+        "長期記憶として定着しやすい",
+        "感情とは無関係に処理される",
+        "他人の記憶と混同されやすい"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 3,
+      "q": "睡眠と記憶の関係について、本文はどのように述べているか。",
+      "options": [
+        "睡眠は記憶とは関係がない",
+        "眠っている間に脳が情報を整理し、重要なものを長期記憶に移していると考えられている",
+        "睡眠を減らすほど記憶力が上がる",
+        "記憶は睡眠中には一切働かない"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 4,
+      "q": "筆者は「忘却」をどのように捉え直すことができると述べているか。",
+      "options": [
+        "単なる脳の欠陥として捉えるべきだ",
+        "限られた脳の容量を有効に使うための合理的な仕組みとして捉え直すこともできる",
+        "忘却は病気の一種である",
+        "忘却は訓練によって完全になくすことができる"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 5,
+      "q": "この文章全体で筆者が伝えたいことに最も近いものはどれか。",
+      "options": [
+        "忘れることは常に悪いことであり、避けるべきだ。",
+        "記憶力を上げる方法は睡眠以外にはない。",
+        "忘却は脳が必要な情報を選び取る過程だと考えることもでき、単なる欠陥とは限らない。",
+        "感情を伴わない情報は記憶する価値がない。"
+      ],
+      "answer": 2
+    }
+  ],
+  "paragraphsVi": [
+    "Trong cuộc sống hàng ngày, đôi khi ta tự hỏi \"tại sao chuyện này thì mình nhớ rất rõ, mà chuyện kia lại quên mất rồi nhỉ?\". Trong lĩnh vực tâm lý học, trí nhớ được cho không đơn thuần là một thiết bị lưu giữ thông tin, mà là một chức năng gắn kết sâu sắc với cảm xúc.",
+    "Có kết quả nghiên cứu cho thấy những sự kiện đi kèm cảm xúc mạnh thường được não bộ xử lý ưu tiên và dễ định hình thành trí nhớ dài hạn. Ngược lại, những thông tin đơn điệu, không đi kèm cảm xúc thì dễ phai nhạt theo thời gian. Nói cách khác, hiện tượng \"quên\" không phải là do não bộ bị hỏng, mà đúng hơn có thể coi đó là một loại chức năng để chọn lọc thông tin cần thiết.",
+    "Gần đây, nghiên cứu về mối quan hệ giữa giấc ngủ và trí nhớ cũng đang được tiến hành. Người ta cho rằng trong lúc ngủ, não bộ sẽ sắp xếp lại thông tin thu nhận được trong ngày và chuyển những thông tin quan trọng vào trí nhớ dài hạn. Cũng có nhận định rằng nếu không ngủ đủ giấc, việc định hình trí nhớ có thể bị cản trở, và không ít ý kiến cho rằng \"nếu muốn tăng khả năng ghi nhớ, trước tiên nên xem lại giấc ngủ của mình\".",
+    "Nhìn theo hướng này, có thể coi lại \"sự lãng quên\" không đơn thuần là một khiếm khuyết, mà là một cơ chế hợp lý để sử dụng hiệu quả dung lượng có hạn của não bộ. Thay vì buồn bã khi \"quên mất điều gì đó\", việc nghĩ rằng đây là quá trình não bộ đang chọn lọc lại thông tin thực sự cần thiết cho bản thân mình lúc này, cũng là một góc nhìn đáng để thử."
+  ],
+  "n2VocabList": [
+    {
+      "kanji": "日常",
+      "hanviet": "NHẬT THƯỜNG",
+      "reading": "にちじょう",
+      "meaning": "đời thường, hàng ngày"
+    },
+    {
+      "kanji": "鮮明",
+      "hanviet": "TIÊN MINH",
+      "reading": "せんめい",
+      "meaning": "rõ ràng, sắc nét"
+    },
+    {
+      "kanji": "疑問",
+      "hanviet": "NGHI VẤN",
+      "reading": "ぎもん",
+      "meaning": "nghi vấn, thắc mắc"
+    },
+    {
+      "kanji": "心理学",
+      "hanviet": "TÂM LÝ HỌC",
+      "reading": "しんりがく",
+      "meaning": "tâm lý học"
+    },
+    {
+      "kanji": "分野",
+      "hanviet": "PHÂN DÃ",
+      "reading": "ぶんや",
+      "meaning": "lĩnh vực"
+    },
+    {
+      "kanji": "記憶",
+      "hanviet": "KÝ ỨC",
+      "reading": "きおく",
+      "meaning": "trí nhớ, ký ức"
+    },
+    {
+      "kanji": "単",
+      "hanviet": "ĐƠN",
+      "reading": "たん",
+      "meaning": "đơn thuần"
+    },
+    {
+      "kanji": "情報",
+      "hanviet": "TÌNH BÁO",
+      "reading": "じょうほう",
+      "meaning": "thông tin"
+    },
+    {
+      "kanji": "保存",
+      "hanviet": "BẢO TỒN",
+      "reading": "ほぞん",
+      "meaning": "lưu giữ"
+    },
+    {
+      "kanji": "装置",
+      "hanviet": "TRANG TRÍ",
+      "reading": "そうち",
+      "meaning": "thiết bị, cơ chế"
+    },
+    {
+      "kanji": "感情",
+      "hanviet": "CẢM TÌNH",
+      "reading": "かんじょう",
+      "meaning": "cảm xúc"
+    },
+    {
+      "kanji": "結びついた",
+      "hanviet": "KẾT",
+      "reading": "むすびついた",
+      "meaning": "gắn kết"
+    },
+    {
+      "kanji": "働き",
+      "hanviet": "ĐỘNG",
+      "reading": "はたらき",
+      "meaning": "chức năng, hoạt động"
+    },
+    {
+      "kanji": "出来事",
+      "hanviet": "XUẤT LAI SỰ",
+      "reading": "できごと",
+      "meaning": "sự việc, sự kiện"
+    },
+    {
+      "kanji": "伴う",
+      "hanviet": "BẠN",
+      "reading": "ともなう",
+      "meaning": "đi kèm, kèm theo"
+    },
+    {
+      "kanji": "脳",
+      "hanviet": "NÃO",
+      "reading": "のう",
+      "meaning": "não bộ"
+    },
+    {
+      "kanji": "優先的",
+      "hanviet": "ƯU TIÊN ĐÍCH",
+      "reading": "ゆうせんてき",
+      "meaning": "mang tính ưu tiên"
+    },
+    {
+      "kanji": "処理",
+      "hanviet": "XỬ LÝ",
+      "reading": "しょり",
+      "meaning": "xử lý"
+    },
+    {
+      "kanji": "長期記憶",
+      "hanviet": "TRƯỜNG KỲ KÝ ỨC",
+      "reading": "ちょうききおく",
+      "meaning": "trí nhớ dài hạn"
+    },
+    {
+      "kanji": "定着",
+      "hanviet": "ĐỊNH TRƯỚC",
+      "reading": "ていちゃく",
+      "meaning": "định hình, cố định"
+    },
+    {
+      "kanji": "逆",
+      "hanviet": "NGHỊCH",
+      "reading": "ぎゃく",
+      "meaning": "ngược lại"
+    },
+    {
+      "kanji": "単調",
+      "hanviet": "ĐƠN ĐIỆU",
+      "reading": "たんちょう",
+      "meaning": "đơn điệu"
+    },
+    {
+      "kanji": "経過",
+      "hanviet": "KINH QUÁ",
+      "reading": "けいか",
+      "meaning": "trôi qua"
+    },
+    {
+      "kanji": "薄れやすい",
+      "hanviet": "BẠC",
+      "reading": "うすれやすい",
+      "meaning": "dễ phai nhạt"
+    },
+    {
+      "kanji": "現象",
+      "hanviet": "HIỆN TƯỢNG",
+      "reading": "げんしょう",
+      "meaning": "hiện tượng"
+    },
+    {
+      "kanji": "壊れて",
+      "hanviet": "HOẠI",
+      "reading": "こわれて",
+      "meaning": "bị hỏng"
+    },
+    {
+      "kanji": "一種",
+      "hanviet": "NHẤT CHỦNG",
+      "reading": "いっしゅ",
+      "meaning": "1 loại"
+    },
+    {
+      "kanji": "機能",
+      "hanviet": "CƠ NĂNG",
+      "reading": "きのう",
+      "meaning": "chức năng"
+    },
+    {
+      "kanji": "近年",
+      "hanviet": "CẬN NIÊN",
+      "reading": "きんねん",
+      "meaning": "những năm gần đây"
+    },
+    {
+      "kanji": "睡眠",
+      "hanviet": "THỤY MIÊN",
+      "reading": "すいみん",
+      "meaning": "giấc ngủ"
+    },
+    {
+      "kanji": "関係",
+      "hanviet": "QUAN HỆ",
+      "reading": "かんけい",
+      "meaning": "mối quan hệ"
+    },
+    {
+      "kanji": "眠って",
+      "hanviet": "MIÊN",
+      "reading": "ねむって",
+      "meaning": "ngủ"
+    },
+    {
+      "kanji": "得た",
+      "hanviet": "ĐẮC",
+      "reading": "えた",
+      "meaning": "thu được, có được"
+    },
+    {
+      "kanji": "整理",
+      "hanviet": "CHỈNH LÝ",
+      "reading": "せいり",
+      "meaning": "sắp xếp, chỉnh lý"
+    },
+    {
+      "kanji": "重要",
+      "hanviet": "TRỌNG YẾU",
+      "reading": "じゅうよう",
+      "meaning": "quan trọng"
+    },
+    {
+      "kanji": "移して",
+      "hanviet": "DI",
+      "reading": "うつして",
+      "meaning": "chuyển, dịch chuyển"
+    },
+    {
+      "kanji": "十分",
+      "hanviet": "THẬP PHẦN",
+      "reading": "じゅうぶん",
+      "meaning": "đầy đủ"
+    },
+    {
+      "kanji": "妨げられる",
+      "hanviet": "PHƯƠNG",
+      "reading": "さまたげられる",
+      "meaning": "bị cản trở"
+    },
+    {
+      "kanji": "可能性",
+      "hanviet": "KHẢ NĂNG TÍNH",
+      "reading": "かのうせい",
+      "meaning": "khả năng"
+    },
+    {
+      "kanji": "指摘",
+      "hanviet": "CHỈ TRÍCH",
+      "reading": "してき",
+      "meaning": "chỉ ra, nhận định"
+    },
+    {
+      "kanji": "記憶力",
+      "hanviet": "KÝ ỨC LỰC",
+      "reading": "きおくりょく",
+      "meaning": "khả năng ghi nhớ"
+    },
+    {
+      "kanji": "見直す",
+      "hanviet": "KIẾN TRỰC",
+      "reading": "みなおす",
+      "meaning": "xem xét lại"
+    },
+    {
+      "kanji": "少なくない",
+      "hanviet": "THIẾU",
+      "reading": "すくなくない",
+      "meaning": "không ít"
+    },
+    {
+      "kanji": "忘却",
+      "hanviet": "VONG KHƯỚC",
+      "reading": "ぼうきゃく",
+      "meaning": "sự lãng quên, quên lãng"
+    },
+    {
+      "kanji": "欠陥",
+      "hanviet": "KHIẾM HÃM",
+      "reading": "けっかん",
+      "meaning": "khiếm khuyết"
+    },
+    {
+      "kanji": "限られた",
+      "hanviet": "HẠN",
+      "reading": "かぎられた",
+      "meaning": "bị giới hạn"
+    },
+    {
+      "kanji": "容量",
+      "hanviet": "DUNG LƯỢNG",
+      "reading": "ようりょう",
+      "meaning": "dung lượng"
+    },
+    {
+      "kanji": "有効",
+      "hanviet": "HỮU HIỆU",
+      "reading": "ゆうこう",
+      "meaning": "hữu hiệu, hiệu quả"
+    },
+    {
+      "kanji": "合理的",
+      "hanviet": "HỢP LÝ ĐÍCH",
+      "reading": "ごうりてき",
+      "meaning": "hợp lý"
+    },
+    {
+      "kanji": "捉え直す",
+      "hanviet": "TRÓC TRỰC",
+      "reading": "とらえなおす",
+      "meaning": "nhìn nhận lại, coi lại"
+    },
+    {
+      "kanji": "落ち込む",
+      "hanviet": "LẠC",
+      "reading": "おちこむ",
+      "meaning": "buồn bã, chán nản"
+    },
+    {
+      "kanji": "過程",
+      "hanviet": "QUÁ TRÌNH",
+      "reading": "かてい",
+      "meaning": "quá trình"
+    },
+    {
+      "kanji": "視点",
+      "hanviet": "THỊ ĐIỂM",
+      "reading": "してん",
+      "meaning": "góc nhìn"
+    }
+  ],
+  "grammarList": [
+    {
+      "pattern": "〜と考えられている",
+      "meaning": "được cho là..."
+    },
+    {
+      "pattern": "〜やすいという研究結果がある",
+      "meaning": "có kết quả nghiên cứu cho thấy dễ..."
+    },
+    {
+      "pattern": "つまり〜とも言える",
+      "meaning": "nói cách khác, cũng có thể nói rằng..."
+    },
+    {
+      "pattern": "〜ではなく、むしろ〜だとも言える",
+      "meaning": "không phải là..., mà đúng hơn có thể coi là..."
+    },
+    {
+      "pattern": "〜と考えられている",
+      "meaning": "được cho là... (nhắc lại, tần suất cao trong văn phong học thuật)"
+    },
+    {
+      "pattern": "〜可能性があるという指摘もあり",
+      "meaning": "cũng có nhận định rằng có khả năng..."
+    },
+    {
+      "pattern": "〜こう見てくると",
+      "meaning": "nhìn theo hướng này thì..."
+    },
+    {
+      "pattern": "〜よりも〜考えてみるのも一つの視点ではないだろうか",
+      "meaning": "thay vì..., việc nghĩ theo hướng... cũng là 1 góc nhìn đáng để thử, phải không?"
+    }
   ]
 }

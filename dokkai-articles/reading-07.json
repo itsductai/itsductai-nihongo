@@ -12,10 +12,502 @@
     "{{グローバル化|ぐろーばるか|toàn cầu hóa}}が{{進|すす}}んだ{{現代|げんだい|hiện đại}}{{社会|しゃかい}}において、{{異文化|いぶんか}}{{間|かん}}の{{接触|せっしょく|tiếp xúc}}は、もはや{{避|さ}}けようのないものとなっている。だからこそ{{我々|われわれ}}に{{求|もと}}められているのは、{{他者|たしゃ}}を{{完全|かんぜん}}に「{{理解|りかい}}した」と{{錯覚|さっかく|ảo tưởng, nhầm lẫn}}することではなく、{{理解|りかい}}し{{切|き}}れない{{部分|ぶぶん|phần, bộ phận}}が{{常|つね}}に{{残|のこ}}り{{続|つづ}}けるという{{前提|ぜんてい|tiền đề}}に{{立|た}}った上で、それでもなお{{対話|たいわ}}を{{続|つづ}}けようとする{{姿勢|しせい}}ではないだろうか。"
   ],
   "questions": [
-    { "difficulty": 1, "q": "筆者は、異文化理解が「容易ならざる試み」であることの根拠として何を挙げているか。", "options": ["異文化間の摩擦が絶えないという事実", "異文化理解を研究する学者が少ないという事実", "異文化交流の予算が不足しているという事実", "言語の種類が多すぎるという事実"], "answer": 0 },
-    { "difficulty": 2, "q": "文化人類学者の間で共通認識になりつつある見解とは何か。", "options": ["完全に中立的な立場から他文化を観察することは不可能に近い", "他文化の観察は訓練によって完全に客観的になり得る", "文化人類学はもはや必要のない学問である", "他文化の理解には言語習得だけで十分である"], "answer": 0 },
-    { "difficulty": 3, "q": "「他者理解とは…自己と他者との絶えざる対話の産物にほかならない」とあるが、これはどういう意味か。", "options": ["他者理解は相手をありのままに正確に映し出す行為である", "他者理解は自己と他者の相互作用の中で生まれるものである", "他者理解は対話をしなくても達成できるものである", "他者理解は科学的に完全に測定できるものである"], "answer": 1 },
-    { "difficulty": 4, "q": "筆者によると、異文化理解を阻む最大の要因は何か。", "options": ["異文化交流の機会が少ないこと", "自文化の尺度のみで他者を裁こうとする態度", "外国語教育が不十分であること", "異文化への関心が低いこと"], "answer": 1 },
-    { "difficulty": 5, "q": "この文章全体を通して筆者が最も伝えたいことは何か。", "options": ["異文化理解は不可能なので、試みる必要はない。", "他者を完全に理解したと錯覚せず、理解し切れない部分を前提としつつ対話を続ける姿勢が求められる。", "自文化の価値観こそが最も優れた判断基準である。", "グローバル化は異文化間の摩擦を完全になくすことができる。"], "answer": 1 }
+    {
+      "difficulty": 1,
+      "q": "筆者は、異文化理解が「容易ならざる試み」であることの根拠として何を挙げているか。",
+      "options": [
+        "異文化間の摩擦が絶えないという事実",
+        "異文化理解を研究する学者が少ないという事実",
+        "異文化交流の予算が不足しているという事実",
+        "言語の種類が多すぎるという事実"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 2,
+      "q": "文化人類学者の間で共通認識になりつつある見解とは何か。",
+      "options": [
+        "完全に中立的な立場から他文化を観察することは不可能に近い",
+        "他文化の観察は訓練によって完全に客観的になり得る",
+        "文化人類学はもはや必要のない学問である",
+        "他文化の理解には言語習得だけで十分である"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 3,
+      "q": "「他者理解とは…自己と他者との絶えざる対話の産物にほかならない」とあるが、これはどういう意味か。",
+      "options": [
+        "他者理解は相手をありのままに正確に映し出す行為である",
+        "他者理解は自己と他者の相互作用の中で生まれるものである",
+        "他者理解は対話をしなくても達成できるものである",
+        "他者理解は科学的に完全に測定できるものである"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 4,
+      "q": "筆者によると、異文化理解を阻む最大の要因は何か。",
+      "options": [
+        "異文化交流の機会が少ないこと",
+        "自文化の尺度のみで他者を裁こうとする態度",
+        "外国語教育が不十分であること",
+        "異文化への関心が低いこと"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 5,
+      "q": "この文章全体を通して筆者が最も伝えたいことは何か。",
+      "options": [
+        "異文化理解は不可能なので、試みる必要はない。",
+        "他者を完全に理解したと錯覚せず、理解し切れない部分を前提としつつ対話を続ける姿勢が求められる。",
+        "自文化の価値観こそが最も優れた判断基準である。",
+        "グローバル化は異文化間の摩擦を完全になくすことができる。"
+      ],
+      "answer": 1
+    }
+  ],
+  "paragraphsVi": [
+    "Việc thấu hiểu một nền văn hóa khác, thoạt nhìn thường bị coi là một hành vi đơn giản. Nhưng chỉ cần nhìn vào thực tế là xung đột giữa các nền văn hóa vẫn không ngừng xảy ra, thì rõ ràng đây là một thử thách chẳng hề dễ dàng. Khi cố gắng thấu hiểu văn hóa của người khác, chúng ta thường chỉ có thể nhìn nhận nó thông qua một \"bộ lọc\" chính là hệ giá trị quan của bản thân mình.",
+    "Trong giới nhân học văn hóa, quan điểm cho rằng việc quan sát một nền văn hóa khác từ một lập trường hoàn toàn trung lập gần như là bất khả thi, đang dần trở thành một nhận thức chung. Bởi vì người quan sát không bao giờ có thể hoàn toàn tự do khỏi bối cảnh văn hóa mà chính họ đã lớn lên trong đó. Theo nghĩa này, việc thấu hiểu người khác không phải là hành vi phản chiếu đối phương một cách nguyên vẹn, mà đúng hơn, đó chính là sản phẩm của một cuộc đối thoại không ngừng giữa bản thân và tha nhân.",
+    "Tuy vậy, việc thừa nhận những giới hạn này không có nghĩa là phải từ bỏ bản thân nỗ lực thấu hiểu văn hóa khác. Ngược lại, chính sự tự nhận thức rằng sự hiểu biết của bản thân luôn chỉ mang tính bộ phận và tạm thời, mới là cơ duyên tạo nên thái độ khiêm tốn đối với người khác. Có thể nói không quá rằng, chính thái độ chỉ dùng thước đo của văn hóa bản thân để phán xét người khác mới là nhân tố lớn nhất cản trở sự thấu hiểu văn hóa khác.",
+    "Trong xã hội hiện đại, nơi toàn cầu hóa đã tiến triển sâu rộng, sự tiếp xúc giữa các nền văn hóa khác nhau đã trở thành điều không thể tránh khỏi. Chính vì vậy, điều được đòi hỏi ở chúng ta không phải là ảo tưởng rằng mình đã \"thấu hiểu\" hoàn toàn người khác, mà là thái độ đứng trên tiền đề rằng luôn luôn còn tồn tại những phần không thể hiểu hết, để rồi vẫn tiếp tục cố gắng đối thoại."
+  ],
+  "n2VocabList": [
+    {
+      "kanji": "異文化",
+      "hanviet": "DỊ VĂN HÓA",
+      "reading": "いぶんか",
+      "meaning": "văn hóa khác biệt"
+    },
+    {
+      "kanji": "理解",
+      "hanviet": "LÝ GIẢI",
+      "reading": "りかい",
+      "meaning": "thấu hiểu"
+    },
+    {
+      "kanji": "一見",
+      "hanviet": "NHẤT KIẾN",
+      "reading": "いっけん",
+      "meaning": "thoạt nhìn"
+    },
+    {
+      "kanji": "行為",
+      "hanviet": "HÀNH VI",
+      "reading": "こうい",
+      "meaning": "hành vi"
+    },
+    {
+      "kanji": "容易",
+      "hanviet": "DUNG DỊ",
+      "reading": "ようい",
+      "meaning": "dễ dàng"
+    },
+    {
+      "kanji": "試み",
+      "hanviet": "THỬ",
+      "reading": "こころみ",
+      "meaning": "thử nghiệm, nỗ lực thử"
+    },
+    {
+      "kanji": "摩擦",
+      "hanviet": "MA SÁT",
+      "reading": "まさつ",
+      "meaning": "xung đột, ma sát"
+    },
+    {
+      "kanji": "絶えない",
+      "hanviet": "TUYỆT",
+      "reading": "たえない",
+      "meaning": "không ngừng, không dứt"
+    },
+    {
+      "kanji": "事実",
+      "hanviet": "SỰ THẬT",
+      "reading": "じじつ",
+      "meaning": "sự thật"
+    },
+    {
+      "kanji": "明らか",
+      "hanviet": "MINH",
+      "reading": "あきらか",
+      "meaning": "rõ ràng"
+    },
+    {
+      "kanji": "我々",
+      "hanviet": "NGÃ NGÃ",
+      "reading": "われわれ",
+      "meaning": "chúng ta"
+    },
+    {
+      "kanji": "他者",
+      "hanviet": "THA GIẢ",
+      "reading": "たしゃ",
+      "meaning": "người khác, tha nhân"
+    },
+    {
+      "kanji": "自分自身",
+      "hanviet": "TỰ PHẦN TỰ THÂN",
+      "reading": "じぶんじしん",
+      "meaning": "bản thân mình"
+    },
+    {
+      "kanji": "価値観",
+      "hanviet": "GIÁ TRỊ QUAN",
+      "reading": "かちかん",
+      "meaning": "giá trị quan"
+    },
+    {
+      "kanji": "捉える",
+      "hanviet": "TRÓC",
+      "reading": "とらえる",
+      "meaning": "nắm bắt, nhìn nhận"
+    },
+    {
+      "kanji": "文化人類学",
+      "hanviet": "VĂN HÓA NHÂN LOẠI HỌC",
+      "reading": "ぶんかじんるいがく",
+      "meaning": "nhân học văn hóa"
+    },
+    {
+      "kanji": "中立的",
+      "hanviet": "TRUNG LẬP ĐÍCH",
+      "reading": "ちゅうりつてき",
+      "meaning": "trung lập"
+    },
+    {
+      "kanji": "立場",
+      "hanviet": "LẬP TRƯỜNG",
+      "reading": "たちば",
+      "meaning": "lập trường, vị trí"
+    },
+    {
+      "kanji": "他文化",
+      "hanviet": "THA VĂN HÓA",
+      "reading": "たぶんか",
+      "meaning": "văn hóa khác"
+    },
+    {
+      "kanji": "観察",
+      "hanviet": "QUAN SÁT",
+      "reading": "かんさつ",
+      "meaning": "quan sát"
+    },
+    {
+      "kanji": "不可能",
+      "hanviet": "BẤT KHẢ NĂNG",
+      "reading": "ふかのう",
+      "meaning": "bất khả thi"
+    },
+    {
+      "kanji": "見解",
+      "hanviet": "KIẾN GIẢI",
+      "reading": "けんかい",
+      "meaning": "quan điểm, kiến giải"
+    },
+    {
+      "kanji": "共通認識",
+      "hanviet": "CỘNG THÔNG NHẬN THỨC",
+      "reading": "きょうつうにんしき",
+      "meaning": "nhận thức chung"
+    },
+    {
+      "kanji": "観察者",
+      "hanviet": "QUAN SÁT GIẢ",
+      "reading": "かんさつしゃ",
+      "meaning": "người quan sát"
+    },
+    {
+      "kanji": "自ら",
+      "hanviet": "TỰ",
+      "reading": "みずから",
+      "meaning": "tự bản thân"
+    },
+    {
+      "kanji": "育った",
+      "hanviet": "DỤC",
+      "reading": "そだった",
+      "meaning": "đã trưởng thành, lớn lên"
+    },
+    {
+      "kanji": "背景",
+      "hanviet": "BỐI CẢNH",
+      "reading": "はいけい",
+      "meaning": "bối cảnh"
+    },
+    {
+      "kanji": "自由",
+      "hanviet": "TỰ DO",
+      "reading": "じゆう",
+      "meaning": "tự do"
+    },
+    {
+      "kanji": "得ない",
+      "hanviet": "ĐẮC",
+      "reading": "えない",
+      "meaning": "không thể"
+    },
+    {
+      "kanji": "他者理解",
+      "hanviet": "THA GIẢ LÝ GIẢI",
+      "reading": "たしゃりかい",
+      "meaning": "thấu hiểu người khác"
+    },
+    {
+      "kanji": "相手",
+      "hanviet": "TƯƠNG THỦ",
+      "reading": "あいて",
+      "meaning": "đối phương"
+    },
+    {
+      "kanji": "映し出す",
+      "hanviet": "ẢNH XUẤT",
+      "reading": "うつしだす",
+      "meaning": "phản chiếu, phản ánh ra"
+    },
+    {
+      "kanji": "自己",
+      "hanviet": "TỰ KỶ",
+      "reading": "じこ",
+      "meaning": "bản thân, tự ngã"
+    },
+    {
+      "kanji": "対話",
+      "hanviet": "ĐỐI THOẠI",
+      "reading": "たいわ",
+      "meaning": "đối thoại"
+    },
+    {
+      "kanji": "産物",
+      "hanviet": "SẢN VẬT",
+      "reading": "さんぶつ",
+      "meaning": "sản phẩm, kết quả"
+    },
+    {
+      "kanji": "限界",
+      "hanviet": "HẠN GIỚI",
+      "reading": "げんかい",
+      "meaning": "giới hạn"
+    },
+    {
+      "kanji": "認める",
+      "hanviet": "NHẬN",
+      "reading": "みとめる",
+      "meaning": "thừa nhận"
+    },
+    {
+      "kanji": "自体",
+      "hanviet": "TỰ THỂ",
+      "reading": "じたい",
+      "meaning": "bản thân, chính nó"
+    },
+    {
+      "kanji": "放棄",
+      "hanviet": "PHÓNG KHÍ",
+      "reading": "ほうき",
+      "meaning": "từ bỏ"
+    },
+    {
+      "kanji": "部分的",
+      "hanviet": "BỘ PHẬN ĐÍCH",
+      "reading": "ぶぶんてき",
+      "meaning": "mang tính bộ phận, không toàn diện"
+    },
+    {
+      "kanji": "暫定的",
+      "hanviet": "TẠM ĐỊNH ĐÍCH",
+      "reading": "ざんていてき",
+      "meaning": "mang tính tạm thời"
+    },
+    {
+      "kanji": "自覚",
+      "hanviet": "TỰ GIÁC",
+      "reading": "じかく",
+      "meaning": "tự nhận thức, tự giác"
+    },
+    {
+      "kanji": "謙虚",
+      "hanviet": "KHIÊM HƯ",
+      "reading": "けんきょ",
+      "meaning": "khiêm tốn"
+    },
+    {
+      "kanji": "姿勢",
+      "hanviet": "TƯ THẾ",
+      "reading": "しせい",
+      "meaning": "thái độ, tư thế"
+    },
+    {
+      "kanji": "契機",
+      "hanviet": "KHẾ CƠ",
+      "reading": "けいき",
+      "meaning": "cơ duyên, động cơ"
+    },
+    {
+      "kanji": "自文化",
+      "hanviet": "TỰ VĂN HÓA",
+      "reading": "じぶんか",
+      "meaning": "văn hóa của bản thân"
+    },
+    {
+      "kanji": "尺度",
+      "hanviet": "XÍCH ĐỘ",
+      "reading": "しゃくど",
+      "meaning": "thước đo, tiêu chuẩn"
+    },
+    {
+      "kanji": "裁く",
+      "hanviet": "TÀI",
+      "reading": "さばく",
+      "meaning": "phán xét"
+    },
+    {
+      "kanji": "態度",
+      "hanviet": "THÁI ĐỘ",
+      "reading": "たいど",
+      "meaning": "thái độ"
+    },
+    {
+      "kanji": "阻む",
+      "hanviet": "TRỞ",
+      "reading": "はばむ",
+      "meaning": "cản trở"
+    },
+    {
+      "kanji": "最大",
+      "hanviet": "TỐI ĐẠI",
+      "reading": "さいだい",
+      "meaning": "lớn nhất"
+    },
+    {
+      "kanji": "要因",
+      "hanviet": "YẾU NHÂN",
+      "reading": "よういん",
+      "meaning": "nhân tố"
+    },
+    {
+      "kanji": "過言",
+      "hanviet": "QUÁ NGÔN",
+      "reading": "かごん",
+      "meaning": "nói quá"
+    },
+    {
+      "kanji": "グローバル化",
+      "hanviet": "HÓA",
+      "reading": "ぐろーばるか",
+      "meaning": "toàn cầu hóa"
+    },
+    {
+      "kanji": "現代",
+      "hanviet": "HIỆN ĐẠI",
+      "reading": "げんだい",
+      "meaning": "hiện đại"
+    },
+    {
+      "kanji": "接触",
+      "hanviet": "TIẾP XÚC",
+      "reading": "せっしょく",
+      "meaning": "tiếp xúc"
+    },
+    {
+      "kanji": "避ける",
+      "hanviet": "TỴ",
+      "reading": "さける",
+      "meaning": "tránh"
+    },
+    {
+      "kanji": "求められて",
+      "hanviet": "CẦU",
+      "reading": "もとめられて",
+      "meaning": "được yêu cầu, đòi hỏi"
+    },
+    {
+      "kanji": "完全",
+      "hanviet": "HOÀN TOÀN",
+      "reading": "かんぜん",
+      "meaning": "hoàn toàn"
+    },
+    {
+      "kanji": "錯覚",
+      "hanviet": "THÁC GIÁC",
+      "reading": "さっかく",
+      "meaning": "ảo tưởng, nhầm lẫn"
+    },
+    {
+      "kanji": "理解し切れない",
+      "hanviet": "LÝ GIẢI THIẾT",
+      "reading": "りかいしきれない",
+      "meaning": "không thể hiểu hết"
+    },
+    {
+      "kanji": "部分",
+      "hanviet": "BỘ PHẬN",
+      "reading": "ぶぶん",
+      "meaning": "phần, bộ phận"
+    },
+    {
+      "kanji": "前提",
+      "hanviet": "TIỀN ĐỀ",
+      "reading": "ぜんてい",
+      "meaning": "tiền đề"
+    },
+    {
+      "kanji": "立った",
+      "hanviet": "LẬP",
+      "reading": "たった",
+      "meaning": "đứng trên (lập trường/tiền đề)"
+    }
+  ],
+  "grammarList": [
+    {
+      "pattern": "〜がちである",
+      "meaning": "có xu hướng, thường hay..."
+    },
+    {
+      "pattern": "〜ならざる〜であることは、〜を見れば明らかであろう",
+      "meaning": "việc không thể... thì rõ ràng nếu nhìn vào..."
+    },
+    {
+      "pattern": "〜しかない",
+      "meaning": "chỉ có thể... (không còn cách nào khác)"
+    },
+    {
+      "pattern": "〜に近いという見解が、もはや共通認識になりつつある",
+      "meaning": "quan điểm gần như... đang dần trở thành nhận thức chung"
+    },
+    {
+      "pattern": "〜からである",
+      "meaning": "vì là... (giải thích lý do, văn phong học thuật)"
+    },
+    {
+      "pattern": "〜というより、むしろ〜にほかならない",
+      "meaning": "hơn là..., đúng hơn chính là... (không gì khác ngoài...)"
+    },
+    {
+      "pattern": "とはいえ",
+      "meaning": "tuy vậy, dù nói vậy"
+    },
+    {
+      "pattern": "〜わけではない",
+      "meaning": "không có nghĩa là..."
+    },
+    {
+      "pattern": "〜に過ぎないという自覚こそが〜となり得る",
+      "meaning": "chính sự tự nhận thức rằng chỉ là... mới có thể trở thành..."
+    },
+    {
+      "pattern": "〜と言っても過言ではないだろう",
+      "meaning": "có thể nói không quá rằng..."
+    },
+    {
+      "pattern": "もはや〜となっている",
+      "meaning": "đã trở thành... (không thể tránh khỏi nữa)"
+    },
+    {
+      "pattern": "〜ではないだろうか",
+      "meaning": "chẳng phải là... hay sao? (kết luận nhẹ nhàng, mang tính gợi mở)"
+    }
   ]
 }
