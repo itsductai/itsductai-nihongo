@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/theme-plus.css?v=9" id="themeClassicLink">
 <link rel="stylesheet" href="css/theme-new.css?v=4" id="themeNewLink" disabled>
+<link rel="stylesheet" href="css/game.css?v=1">
 </head>
 <body>
 
@@ -326,30 +327,103 @@
     </section>
 
     <!-- ---- TYPING MODE (gõ hiragana) ---- -->
-    <section class="view hidden" id="view-typing">
+    <!-- ===================================================================
+         GAME ÔN TẬP — thay thế hẳn mode "Gõ hiragana" cũ. 2 màn: bong bóng
+         (ghép kanji/nghĩa) rồi tới gõ chữ (đoán đáp án), có mạng/sao/huy
+         chương. UI tiếng Nhật theo yêu cầu. CSS riêng ở css/game.css.
+    =================================================================== -->
+    <section class="view hidden" id="view-game">
+
+      <!-- Màn 1: Thiết lập ván chơi -->
+      <div class="game-phase" id="gamePhaseSetup">
+        <div class="game-setup-box">
+          <div class="game-setup-title">🎮 単語バトル</div>
+          <div class="game-setup-sub">語彙ゲームで復習しよう！</div>
+
+          <div class="game-setup-row">
+            <label>出題数（言葉の数）</label>
+            <div class="game-setup-count-row">
+              <button class="game-count-preset" data-count="5">5</button>
+              <button class="game-count-preset" data-count="10">10</button>
+              <button class="game-count-preset" data-count="20">20</button>
+              <button class="game-count-preset" data-count="due">復習期限の言葉全部</button>
+            </div>
+          </div>
+
+          <div class="game-setup-row">
+            <label>バブルモードの方向</label>
+            <div class="game-setup-count-row">
+              <button class="game-dir-preset" data-dir="kanji-to-nghia">漢字・読み方 → 意味</button>
+              <button class="game-dir-preset" data-dir="nghia-to-kanji">意味 → 漢字・読み方</button>
+            </div>
+          </div>
+
+          <button class="game-start-btn" id="btnGameStart">▶ スタート！</button>
+        </div>
+      </div>
+
+      <!-- Màn 2: Bong bóng ghép nghĩa -->
+      <div class="game-phase hidden" id="gamePhaseBubble">
+        <div class="game-hud">
+          <div class="game-hud-item game-hud-lives" id="gameHudLives"></div>
+          <div class="game-hud-item game-hud-stars">⭐ <span id="gameHudStars">10</span></div>
+          <div class="game-hud-progress">バブル：<span id="gameBubbleProgress">0</span>/<span id="gameBubbleTotal">0</span></div>
+        </div>
+        <div class="game-bubble-arena" id="gameBubbleArena"></div>
+        <div class="game-wall" id="gameWall"></div>
+      </div>
+
+      <!-- Màn 3: Gõ đáp án -->
+      <div class="game-phase hidden" id="gamePhaseTyping">
+        <div class="game-hud">
+          <div class="game-hud-item game-hud-lives" id="gameHudLivesTyping"></div>
+          <div class="game-hud-item game-hud-stars">⭐ <span id="gameHudStarsTyping">10</span></div>
+          <div class="game-hud-progress">問題：<span id="gameTypingProgress">0</span>/<span id="gameTypingTotal">0</span></div>
+        </div>
+        <div class="game-typing-stage">
+          <div class="game-typing-prompt" id="gameTypingPrompt"></div>
+          <div class="game-typing-slots" id="gameTypingSlots"></div>
+          <input type="text" id="gameTypingInput" class="game-typing-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="ひらがなで入力してください">
+          <div class="game-typing-feedback" id="gameTypingFeedback"></div>
+          <div class="game-typing-actions">
+            <button class="game-hint-btn" id="btnGameHintSpeak" title="1⭐ 消費：発音を聞く">🔊 発音ヒント (1⭐)</button>
+            <button class="game-hint-btn" id="btnGameHintLetter" title="1⭐ 消費：最初の文字を見る">🔤 最初の文字 (1⭐)</button>
+            <button class="game-submit-btn" id="btnGameSubmit">答える</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Màn 4: Kết quả + huy chương -->
+      <div class="game-phase hidden" id="gamePhaseResult">
+        <div class="game-result-box">
+          <div class="game-medal-display" id="gameMedalDisplay"></div>
+          <div class="game-result-title" id="gameResultTitle"></div>
+          <div class="game-result-stats" id="gameResultStats"></div>
+          <button class="game-start-btn" id="btnGamePlayAgain">🔁 もう一度</button>
+          <button class="game-back-btn" id="btnGameBackFromResult">← 設定に戻る</button>
+        </div>
+      </div>
+
+      <!-- Overlay hiệu ứng Game Over -->
+      <div class="game-overlay hidden" id="gameOverOverlay">
+        <div class="game-over-box">
+          <div class="game-over-title">💧 ゲームオーバー</div>
+          <div class="game-over-sub">ライフがなくなりました…</div>
+          <button class="game-start-btn" id="btnGameOverRetry">🔁 もう一度挑戦</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         THÀNH TÍCH HỌC TẬP — xem huy chương đã đạt được, phai màu theo thời
+         gian nếu không ôn lại (xem tính toán decay trong game.js).
+    =================================================================== -->
+    <section class="view hidden" id="view-achievements">
       <div class="view-head">
-        <div class="progress-line">
-          <span id="typingPos">0</span> / <span id="typingTotal">0</span>
-          <div class="bar"><div class="bar-fill" id="typingBar"></div></div>
-        </div>
-        <div class="quiz-score">Đúng: <span id="typingScore">0</span></div>
-        <button class="icon-btn focus-toggle-btn" data-focus-target="typing" title="Phóng to toàn màn hình">⛶</button>
+        <div class="dash-side-title">🏅 学習実績</div>
       </div>
-      <div class="typing-stage">
-        <div class="typing-kanji" id="typingKanji"></div>
-        <div class="typing-nghia" id="typingNghia"></div>
-
-        <input type="text" id="typingFreeInput" class="typing-free-input" placeholder="Gõ cách đọc hiragana ra đây..." autocomplete="off" autocapitalize="off" spellcheck="false">
-
-        <div class="typing-reveal-row" id="typingRevealRow"></div>
-        <div class="typing-result-line" id="typingResultLine"></div>
-
-        <div class="typing-action-row" id="typingActionRow">
-          <button class="icon-btn" id="btnTypingHint">💡 Gợi ý</button>
-          <button class="icon-btn" id="btnTypingShowAnswer">👁 Xem đáp án</button>
-          <button class="primary-btn" id="btnTypingCheck">Kiểm tra</button>
-        </div>
-      </div>
+      <div class="achievements-grid" id="achievementsGrid"></div>
+      <div class="dash-chart-empty hidden" id="achievementsEmpty">まだ実績がありません — ゲームをプレイしてメダルを獲得しよう！</div>
     </section>
 
     <!-- ---- QUIZ MODE (trắc nghiệm nghĩa) ---- -->
@@ -884,14 +958,15 @@
 <script src="js/scoring.js?v=1"></script>
 <script src="js/stats-weakness.js?v=5"></script>
 <script src="js/dashboard.js?v=3"></script>
+<script src="js/game.js?v=1"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=17"></script>
+<script src="js/loader-nav.js?v=18"></script>
 <script src="js/flashcard-edit.js?v=6"></script>
 <script src="js/table-srs-typing.js?v=10"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=7"></script>
 <script src="js/choukai.js?v=12"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=25"></script>
+<script src="js/init.js?v=26"></script>
 </body>
 </html>
