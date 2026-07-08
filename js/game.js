@@ -185,6 +185,7 @@ function renderBubbleArena() {
   bubblePhysics.clear();
   const remainingWords = App.game.bubbleRemaining.map((id) => App.game.words.find((w) => w._id === id));
   const isK2N = App.game.direction === "kanji-to-nghia";
+  const bounds = getGameArenaBounds(); // đọc 1 LẦN cho cả lượt tạo, không đọc lại mỗi quả
 
   remainingWords.forEach((w) => {
     const bubbleText = isK2N ? getWordDisplay(w) : getWordMeaningShort(w);
@@ -197,13 +198,17 @@ function renderBubbleArena() {
     const size = 76 + Math.random() * 34;
     bubble.style.setProperty("--size", size.toFixed(0) + "px");
     bubble.style.setProperty("--hue", Math.floor(Math.random() * 360));
-    const bounds = getGameArenaBounds();
-    const x = Math.random() * (bounds.w - size);
-    const y = Math.random() * (bounds.h - size);
-    bubble.style.left = x + "px";
-    bubble.style.top = y + "px";
+    // left/top set ĐÚNG 1 LẦN lúc tạo (vị trí GỐC) — KHÔNG bao giờ đụng lại
+    // 2 thuộc tính này nữa sau đó, vì set left/top mỗi frame ép trình duyệt
+    // tính lại LAYOUT (reflow) — chính là nguồn giật còn sót lại. Mọi
+    // chuyển động về sau CHỈ dùng transform:translate() (compositor-only,
+    // GPU, không reflow) tính LỆCH so với gốc này.
+    const baseX = Math.random() * (bounds.w - size);
+    const baseY = Math.random() * (bounds.h - size);
+    bubble.style.left = baseX + "px";
+    bubble.style.top = baseY + "px";
 
-    initBubblePhysics(w._id, x, y);
+    initBubblePhysics(w._id, baseX, baseY, size);
 
     bubble.addEventListener("dragstart", (e) => {
       e.dataTransfer.setData("text/plain", w._id);
@@ -212,16 +217,15 @@ function renderBubbleArena() {
     bubble.addEventListener("dragend", (e) => {
       bubble.classList.remove("is-dragging");
       if (e.clientX || e.clientY) {
-        // e.clientX/clientY là tọa độ theo VIEWPORT THẬT, nhưng bong bóng giờ
-        // định vị theo khung #view-game (containing block do transform) —
-        // phải trừ đi offset của khung đó trước khi gán left/top, không thì
-        // vị trí thả chuột sẽ lệch hẳn khi navbar đang hiện (khung không nằm
-        // ở góc viewport).
         const gb = document.getElementById("view-game").getBoundingClientRect();
         const nx = e.clientX - gb.left - size / 2, ny = e.clientY - gb.top - size / 2;
+        // Đặt lại GỐC mới đúng chỗ thả chuột — reset transform về 0 rồi mới
+        // gán left/top mới (set left/top ở đây là NGOẠI LỆ hợp lý, vì đây là
+        // hành động rời rạc do người dùng, không phải update liên tục 60fps).
+        bubble.style.transform = "translate(0px, 0px)";
         bubble.style.left = nx + "px";
         bubble.style.top = ny + "px";
-        initBubblePhysics(w._id, nx, ny);
+        initBubblePhysics(w._id, nx, ny, size);
       }
     });
     arena.appendChild(bubble);
@@ -230,9 +234,10 @@ function renderBubbleArena() {
   startBubblePhysicsLoop();
 }
 
-function initBubblePhysics(wordId, x, y) {
+function initBubblePhysics(wordId, baseX, baseY, size) {
   bubblePhysics.set(wordId, {
-    x, y,
+    baseX, baseY, size,
+    x: baseX, y: baseY, // x/y là vị trí TUYỆT ĐỐI hiện tại, dùng để tính vật lý/va chạm
     vx: (Math.random() - 0.5) * 0.02,
     vy: (Math.random() - 0.5) * 0.02,
     buoy: -(0.003 + Math.random() * 0.004),
@@ -240,16 +245,12 @@ function initBubblePhysics(wordId, x, y) {
 }
 
 function stepBubblePhysics(dt) {
+  const bounds = getGameArenaBounds(); // đọc 1 LẦN cho cả frame, không phải mỗi bong bóng
   bubblePhysics.forEach((p, wordId) => {
     const el = document.querySelector(`.game-bubble[data-word-id="${wordId}"]`);
     if (!el) { bubblePhysics.delete(wordId); return; }
     if (el.classList.contains("is-dragging")) return;
 
-    // FIX GIẬT: hệ số nhiễu loạn trước đây (0.05*dt) ở dt~16-48ms ra tới
-    // 0.8-2.4 — vượt xa maxSpeed (0.09) nên vận tốc bị KẸP TRẦN mỗi frame,
-    // tạo cảm giác random-jump giật cục thay vì trôi mượt dần. Giờ hệ số nhỏ
-    // hơn ~30 lần, để vận tốc CỘNG DỒN mượt qua nhiều frame trước khi chạm
-    // trần — đồng thời giảm cả maxSpeed/buoy để bay CHẬM lại như yêu cầu.
     p.vx += (Math.random() - 0.5) * 0.0016 * dt;
     p.vy += (Math.random() - 0.5) * 0.0013 * dt + p.buoy * dt;
 
@@ -263,10 +264,8 @@ function stepBubblePhysics(dt) {
     p.x += p.vx * dt;
     p.y += p.vy * dt;
 
-    const size = parseFloat(getComputedStyle(el).getPropertyValue("--size")) || 90;
-    const bounds = getGameArenaBounds();
-    const maxX = bounds.w - size;
-    const maxY = bounds.h - size;
+    const maxX = bounds.w - p.size;
+    const maxY = bounds.h - p.size;
     if (p.x < 0) { p.x = 0; p.vx = Math.abs(p.vx) * 0.6; }
     if (p.x > maxX) { p.x = maxX; p.vx = -Math.abs(p.vx) * 0.6; }
     if (p.y < 0) { p.y = 0; p.vy = Math.abs(p.vy) * 0.6; p.buoy = Math.abs(p.buoy) * 0.5; }
@@ -274,9 +273,11 @@ function stepBubblePhysics(dt) {
 
     if (Math.random() < 0.0015 * dt) p.buoy *= -1;
 
-    el.style.left = p.x + "px";
-    el.style.top = p.y + "px";
-    el.style.transform = `rotate(${(Math.sin(Date.now() / 2600 + p.x * 0.01) * 6).toFixed(1)}deg)`;
+    // CHỈ set transform (compositor-only) — không đụng left/top nữa, tránh
+    // reflow layout mỗi frame (nguồn giật thật sự đã tìm ra).
+    const dx = p.x - p.baseX, dy = p.y - p.baseY;
+    const rot = Math.sin(Date.now() / 2600 + p.x * 0.01) * 6;
+    el.style.transform = `translate(${dx.toFixed(1)}px, ${dy.toFixed(1)}px) rotate(${rot.toFixed(1)}deg)`;
   });
 }
 
