@@ -487,16 +487,30 @@ function playWrongSound() {
 let cachedJapaneseVoice = null;
 let voicesLoadAttempted = false;
 
+// Trước đây chỉ lấy giọng ja-JP ĐẦU TIÊN tìm thấy — không phân biệt chất
+// lượng, nên tùy trình duyệt có thể vớ phải giọng robot cũ (local, nén nhẹ,
+// nghe không tự nhiên) thay vì giọng neural/cloud mượt hơn nhiều. Giờ chấm
+// điểm ưu tiên: tên chứa "Google"/"Neural"/"Online"/"Natural"/"Wavenet" (đặc
+// trưng của giọng chất lượng cao, không phải local nén nhẹ) được ưu tiên cao
+// nhất; voice.localService === false (giọng cloud) cũng được cộng điểm.
 function pickJapaneseVoice() {
   if (!("speechSynthesis" in window)) return null;
   const voices = window.speechSynthesis.getVoices();
   if (!voices || !voices.length) return null;
-  // Ưu tiên khớp chính xác "ja-JP", sau đó bất kỳ giọng có lang bắt đầu bằng "ja"
-  return (
-    voices.find((v) => v.lang === "ja-JP") ||
-    voices.find((v) => v.lang && v.lang.toLowerCase().startsWith("ja")) ||
-    null
-  );
+
+  const jaVoices = voices.filter((v) => v.lang && v.lang.toLowerCase().startsWith("ja"));
+  if (!jaVoices.length) return null;
+
+  function qualityScore(v) {
+    let score = 0;
+    if (/google/i.test(v.name)) score += 50;
+    if (/neural|online|natural|wavenet/i.test(v.name)) score += 40;
+    if (v.localService === false) score += 20; // giọng cloud thường tự nhiên hơn giọng cài sẵn máy
+    if (v.lang === "ja-JP") score += 5; // khớp region chính xác hơn "ja" chung chung
+    return score;
+  }
+
+  return jaVoices.reduce((best, v) => (qualityScore(v) > qualityScore(best) ? v : best), jaVoices[0]);
 }
 
 function ensureVoicesLoaded() {

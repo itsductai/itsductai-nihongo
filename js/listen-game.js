@@ -97,14 +97,25 @@ function renderListenGameQuestion() {
   // Tự phát âm ngay khi câu hỏi hiện ra — dùng speakJapaneseForced() vì đây
   // là CƠ CHẾ CHÍNH của game (không phải tiện ích phụ như "tự đọc khi lật
   // thẻ"), không được phép bị tắt tiếng bởi App.speechEnabled.
-  speakJapaneseForced(getListenGameAnswerText(q.word));
+  // Đọc từ TRƯỚC, xong (onend thật) đọc TIẾP câu ví dụ — CHỈ ĐỌC, KHÔNG hiện
+  // chữ (nếu hiện chữ sẽ lộ luôn kanji của từ đang hỏi, phá mất phần đoán).
+  // Nhiều từ đứng lẻ 1 mình khó nghe rõ/dễ nhầm — nghe trong câu có ngữ cảnh
+  // sẽ dễ đoán hơn hẳn.
+  playListenGameQuestionAudio(q.word);
+}
+
+function playListenGameQuestionAudio(w) {
+  const example = getFirstExampleSentencePlain(w);
+  speakJapaneseForced(getListenGameAnswerText(w), () => {
+    if (example) speakJapaneseForced(example.jp);
+  });
 }
 
 function getListenGameAnswerText(w) { return w.doc || w.cautruc || w.kanji || ""; }
 
 function replayListenGameAudio() {
   const q = App.listenGame.questions[App.listenGame.index];
-  speakJapaneseForced(getListenGameAnswerText(q.word));
+  playListenGameQuestionAudio(q.word);
 }
 
 function handleListenGameAnswer(btn, chosen, q) {
