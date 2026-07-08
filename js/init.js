@@ -562,11 +562,24 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
   initAutoCopyOnSelect(["flashFrontContent", "flashBackContent", "srsFrontContent", "srsBackContent"]);
 
-  // ----- Typing mode -----
-  document.getElementById("typingFreeInput").addEventListener("keydown", typingHandleKeydown);
-  document.getElementById("btnTypingCheck").addEventListener("click", typingCheckAnswer);
-  document.getElementById("btnTypingHint").addEventListener("click", typingShowHint);
-  document.getElementById("btnTypingShowAnswer").addEventListener("click", typingShowAnswer);
+  // ----- Game ôn tập (thay Typing cũ) -----
+  document.querySelectorAll(".game-count-preset").forEach((btn) => {
+    btn.addEventListener("click", () => pickGameWordCount(btn));
+  });
+  document.querySelectorAll(".game-dir-preset").forEach((btn) => {
+    btn.addEventListener("click", () => pickGameDirection(btn));
+  });
+  document.getElementById("btnGameStart").addEventListener("click", startGame);
+  document.getElementById("gameTypingInput").addEventListener("input", updateTypingSlotsLive);
+  document.getElementById("gameTypingInput").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") checkGameTypingAnswer();
+  });
+  document.getElementById("btnGameSubmit").addEventListener("click", checkGameTypingAnswer);
+  document.getElementById("btnGameHintSpeak").addEventListener("click", () => useGameHint("speak"));
+  document.getElementById("btnGameHintLetter").addEventListener("click", () => useGameHint("letter"));
+  document.getElementById("btnGamePlayAgain").addEventListener("click", backToGameSetup);
+  document.getElementById("btnGameBackFromResult").addEventListener("click", backToGameSetup);
+  document.getElementById("btnGameOverRetry").addEventListener("click", backToGameSetup);
 
   // ----- Quiz mode -----
   document.getElementById("btnQuizRestart").addEventListener("click", initQuizMode);

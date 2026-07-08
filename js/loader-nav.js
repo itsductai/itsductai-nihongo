@@ -197,7 +197,7 @@ const NAV_ITEMS_BY_TYPE = {
     { mode: "flash", icon: "▤", label: "Flashcard" },
     { mode: "table", icon: "☰", label: "Bảng danh sách" },
     { mode: "srs", icon: "◷", label: "Ôn tập (SRS)" },
-    { mode: "typing", icon: "⌨", label: "Gõ hiragana" },
+    { mode: "game", icon: "🎮", label: "Game ôn tập" },
     { mode: "quiz", icon: "✓", label: "Trắc nghiệm nghĩa" },
     { mode: "match", icon: "▦", label: "Ghép thẻ" },
     { mode: "weakness", icon: "⚠", label: "Điểm yếu" },
@@ -275,6 +275,14 @@ function renderNav() {
   dashBtn.innerHTML = navIcon("home");
   dashBtn.addEventListener("click", () => setMode("dashboard"));
   nav.appendChild(dashBtn);
+
+  const achBtn = document.createElement("button");
+  achBtn.className = "nav-item nav-item-standalone";
+  achBtn.dataset.mode = "achievements";
+  achBtn.title = "Thành tích học tập";
+  achBtn.innerHTML = `<span class="nav-icon">🏅</span>`;
+  achBtn.addEventListener("click", () => setMode("achievements"));
+  nav.appendChild(achBtn);
 
   // Nhóm "Từ vựng"/"Ngữ pháp" — icon + label đổi theo loại deck đang chọn.
   const isNguphap = App.currentDeckType === "NGUPHAP";
@@ -463,7 +471,8 @@ function setMode(mode) {
   if (mode === "dashboard") renderDashboard();
   if (mode === "table") renderTable();
   if (mode === "srs") initSrsMode();
-  if (mode === "typing") initTypingMode();
+  if (mode === "game") initGameMode();
+  if (mode === "achievements") renderAchievementsView();
 
   if (mode === "quiz" && (App.quizNeedsReset || !App.quizQuestions.length)) {
     initQuizMode();
