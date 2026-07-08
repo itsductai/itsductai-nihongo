@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/theme-plus.css?v=9" id="themeClassicLink">
 <link rel="stylesheet" href="css/theme-new.css?v=4" id="themeNewLink" disabled>
-<link rel="stylesheet" href="css/game.css?v=3">
+<link rel="stylesheet" href="css/game.css?v=4">
 </head>
 <body>
 
@@ -415,6 +415,57 @@
           <div class="game-over-title">ゲームオーバー</div>
           <div class="game-over-sub">ライフがなくなりました…</div>
           <button class="game-start-btn" id="btnGameOverRetry">もう一度挑戦</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         聞き取りゲーム — nghe phát âm, đoán nghĩa, hiện đáp án + đọc lại +
+         câu ví dụ. Game THỨ 2 trong category "Game" (khác game bong bóng).
+    =================================================================== -->
+    <section class="view hidden" id="view-listen-game">
+
+      <div class="lg-phase" id="lgPhaseSetup">
+        <div class="lg-setup-box">
+          <div class="lg-setup-title">聞き取りゲーム</div>
+          <div class="lg-setup-sub">発音を聞いて、意味を当てよう！</div>
+          <div class="lg-setup-row">
+            <label>学習セットを選択</label>
+            <select id="lgDeckPicker" class="game-deck-select"></select>
+          </div>
+          <div class="lg-setup-row">
+            <label>出題数</label>
+            <div class="game-setup-count-row">
+              <button class="lg-count-preset" data-count="5">5</button>
+              <button class="lg-count-preset" data-count="10">10</button>
+              <button class="lg-count-preset" data-count="20">20</button>
+            </div>
+          </div>
+          <button class="game-start-btn" id="btnLgStart">スタート</button>
+        </div>
+      </div>
+
+      <div class="lg-phase hidden" id="lgPhaseQuestion">
+        <div class="game-hud">
+          <div class="game-hud-progress">問題：<span id="lgPos">0</span>/<span id="lgTotal">0</span></div>
+          <div class="game-hud-item">正解：<span id="lgScore">0</span></div>
+          <button class="icon-btn focus-toggle-btn" data-focus-target="listen-game" title="全画面表示">⛶</button>
+        </div>
+        <div class="lg-question-stage">
+          <button class="lg-replay-btn" id="btnLgReplay" title="もう一度聞く">🔊 もう一度聞く</button>
+          <div class="lg-question-sub">この言葉の意味はどれですか？</div>
+          <div class="lg-options" id="lgOptions"></div>
+        </div>
+      </div>
+
+      <div class="lg-phase hidden lg-reveal" id="lgReveal"></div>
+
+      <div class="lg-phase hidden" id="lgPhaseResult">
+        <div class="lg-result-box">
+          <div class="lg-result-title">結果</div>
+          <div id="lgResultStats"></div>
+          <button class="game-start-btn" id="btnLgPlayAgain">もう一度</button>
+          <button class="game-back-btn" id="btnLgBackFromResult">← 設定に戻る</button>
         </div>
       </div>
     </section>
@@ -992,19 +1043,20 @@
      load SAU CÙNG vì nó chạy code thực thi ngay (DOMContentLoaded) cần mọi hàm
      ở các module khác đã được định nghĩa xong. Xem mục cấu trúc file trong
      README.md để biết module nào phụ trách phần nào. -->
-<script src="js/core.js?v=12"></script>
+<script src="js/core.js?v=13"></script>
 <script src="js/scoring.js?v=1"></script>
 <script src="js/stats-weakness.js?v=5"></script>
 <script src="js/dashboard.js?v=4"></script>
 <script src="js/game.js?v=4"></script>
+<script src="js/listen-game.js?v=1"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=19"></script>
+<script src="js/loader-nav.js?v=20"></script>
 <script src="js/flashcard-edit.js?v=6"></script>
 <script src="js/table-srs-typing.js?v=10"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=7"></script>
 <script src="js/choukai.js?v=12"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=28"></script>
+<script src="js/init.js?v=29"></script>
 </body>
 </html>
