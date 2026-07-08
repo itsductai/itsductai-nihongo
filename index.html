@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Nihongo Lab — Luyện thi JLPT</title>
-<link rel="stylesheet" href="css/style.css?v=10">
+<link rel="stylesheet" href="css/style.css?v=11">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -596,6 +596,39 @@
       <div id="grammarGroupsBody"></div>
     </section>
 
+    <!-- Modal chọn bộ cụ thể trong 1 nhóm giáo trình (từ nút "Học ngay" Dashboard) -->
+    <div class="modal-overlay hidden" id="dashDeckPickerModalOverlay">
+      <div class="modal-box">
+        <div class="modal-head">
+          <div class="modal-title" id="dashDeckPickerTitle">Chọn bộ để học</div>
+          <button class="modal-close-btn" id="btnDashDeckPickerClose">✕</button>
+        </div>
+        <div class="modal-body">
+          <div id="dashDeckPickerList" class="dash-deck-picker-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal danh sách từ theo trạng thái (bấm donut legend ở Dashboard) —
+         xem hạn ôn từng từ, đưa về đang học, hoặc tua nhanh N ngày. -->
+    <div class="modal-overlay hidden" id="wordStatusModalOverlay">
+      <div class="modal-box word-status-modal-box">
+        <div class="modal-head">
+          <div class="modal-title" id="wordStatusModalTitle">Danh sách từ</div>
+          <span class="word-status-modal-count" id="wordStatusModalCount">0 từ</span>
+          <button class="modal-close-btn" id="btnWordStatusModalClose">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="word-status-fastforward-row">
+            <span>⏩ Tua nhanh (mô phỏng thời gian trôi qua):</span>
+            <button class="ghost-btn" data-ff-days="10">10 ngày</button>
+            <button class="ghost-btn" data-ff-days="15">15 ngày</button>
+          </div>
+          <div id="wordStatusModalList" class="word-status-modal-list"></div>
+        </div>
+      </div>
+    </div>
+
     <!-- Modal chọn bộ để học gộp SRS (Anki-style) — dùng chung cho cả từ vựng & ngữ pháp -->
     <div class="modal-overlay hidden" id="comboSrsModalOverlay">
       <div class="modal-box">
@@ -962,16 +995,16 @@
 <script src="js/core.js?v=12"></script>
 <script src="js/scoring.js?v=1"></script>
 <script src="js/stats-weakness.js?v=5"></script>
-<script src="js/dashboard.js?v=3"></script>
+<script src="js/dashboard.js?v=4"></script>
 <script src="js/game.js?v=2"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=18"></script>
+<script src="js/loader-nav.js?v=19"></script>
 <script src="js/flashcard-edit.js?v=6"></script>
 <script src="js/table-srs-typing.js?v=10"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=7"></script>
 <script src="js/choukai.js?v=12"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=27"></script>
+<script src="js/init.js?v=28"></script>
 </body>
 </html>
