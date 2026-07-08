@@ -1,6 +1,7 @@
 {
   "type": "NGUPHAP",
   "title": "Mẫu ngữ pháp N2 (demo cấu trúc)",
+  "level": "N2",
   "words": [
     {
       "cautruc": "～にもかかわらず",
@@ -11,9 +12,14 @@
       "cau_truc_ngu_phap": "N / Vる・Vた / Aい / Aな + にもかかわらず",
       "vi_du": "<ruby>悪天候<rt>あくてんこう</rt></ruby>にもかかわらず、試合は行われた。(Mặc dù thời tiết xấu, trận đấu vẫn được diễn ra.)",
       "so_sanh_de_nham": [
-        {"cautruc": "～のに", "khac_biet": "のに mang sắc thái cảm xúc cá nhân (bất mãn, ngạc nhiên) nhiều hơn, dùng cả văn nói; にもかかわらず khách quan, trang trọng hơn, hay dùng văn viết."}
+        {
+          "cautruc": "～のに",
+          "khac_biet": "のに mang sắc thái cảm xúc cá nhân (bất mãn, ngạc nhiên) nhiều hơn, dùng cả văn nói; にもかかわらず khách quan, trang trọng hơn, hay dùng văn viết."
+        }
       ],
-      "dong_nghia": ["～ものの"],
+      "dong_nghia": [
+        "～ものの"
+      ],
       "trai_nghia": []
     },
     {
@@ -25,9 +31,15 @@
       "cau_truc_ngu_phap": "Vる・Vた / Aい / Aな(である) / Nである + ものの",
       "vi_du": "<ruby>合格<rt>ごうかく</rt></ruby>したものの、まだ実感がない。(Tuy đã đỗ rồi nhưng vẫn chưa cảm thấy thực sự.)",
       "so_sanh_de_nham": [
-        {"cautruc": "～にもかかわらず", "khac_biet": "ものの thiên về cảm giác cá nhân của người nói về một kết quả chưa trọn vẹn; にもかかわらず khách quan và trang trọng hơn."}
+        {
+          "cautruc": "～にもかかわらず",
+          "khac_biet": "ものの thiên về cảm giác cá nhân của người nói về một kết quả chưa trọn vẹn; にもかかわらず khách quan và trang trọng hơn."
+        }
       ],
-      "dong_nghia": ["～にもかかわらず", "～が"],
+      "dong_nghia": [
+        "～にもかかわらず",
+        "～が"
+      ],
       "trai_nghia": []
     },
     {
@@ -39,7 +51,10 @@
       "cau_truc_ngu_phap": "N + さえ + Vば / Aければ / Aなら",
       "vi_du": "あなたが<ruby>来<rt>き</rt></ruby>てくれさえすれば、私は安心です。(Chỉ cần bạn đến thì tôi sẽ yên tâm.)",
       "so_sanh_de_nham": [
-        {"cautruc": "～だけで", "khac_biet": "さえば nhấn mạnh điều kiện tối thiểu cần và đủ; だけで chỉ đơn thuần nói về phạm vi/mức độ, không nhấn điều kiện giả định."}
+        {
+          "cautruc": "～だけで",
+          "khac_biet": "さえば nhấn mạnh điều kiện tối thiểu cần và đủ; だけで chỉ đơn thuần nói về phạm vi/mức độ, không nhấn điều kiện giả định."
+        }
       ],
       "dong_nghia": [],
       "trai_nghia": []

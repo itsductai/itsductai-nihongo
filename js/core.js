@@ -622,3 +622,24 @@ function renderQueueStatusList(containerId, words, currentWordId) {
 
 const WEAKNESS_STORAGE_KEY = "n2vocab_weakness_stats";
 
+/* ===================================================================
+   HIỆU ỨNG LOADING DÙNG CHUNG — overlay spinner nhỏ, gọi được từ bất kỳ đâu
+   cần hiện trạng thái "đang tải/đang xử lý" (đọc hiểu quét từ vựng, Dashboard
+   dựng chart...) — 1 component duy nhất, tránh mỗi nơi tự vẽ loading riêng.
+=================================================================== */
+function showLoadingOverlay(containerEl, show) {
+  if (!containerEl) return;
+  let overlay = containerEl.querySelector(":scope > .app-loading-overlay");
+  if (show) {
+    if (!overlay) {
+      overlay = document.createElement("div");
+      overlay.className = "app-loading-overlay";
+      overlay.innerHTML = `<div class="app-loading-spinner"></div>`;
+      containerEl.style.position = containerEl.style.position || "relative";
+      containerEl.appendChild(overlay);
+    }
+  } else if (overlay) {
+    overlay.remove();
+  }
+}
+

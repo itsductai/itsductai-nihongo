@@ -55,7 +55,7 @@ async function loadDecks() {
       // "series" (vd "mimi") — field tùy chọn để nhóm các bộ thuộc cùng 1 giáo
       // trình lại với nhau trong dropdown, tách khỏi các bộ lẻ khác. Không có
       // field này thì coi như thuộc nhóm "khác" (không ảnh hưởng bộ cũ).
-      decks.push({ id, title: data.title || filename, type, series: data.series || null, words });
+      decks.push({ id, title: data.title || filename, type, series: data.series || null, level: data.level || null, words });
     } catch (e) {
       console.error("Lỗi tải bộ", filename, e);
     }
@@ -331,6 +331,18 @@ function renderNav() {
     nav.appendChild(buildNavCategory(navIcon("gamepad"), "Game", gameItems, gameItems.map((b) => b.dataset.mode)));
   }
 
+  // "Đọc hiểu" — standalone (chưa cần dropdown vì mới có 1 chế độ, thêm chế
+  // độ đọc khác sau này thì chuyển thành category như Game).
+  if (App.dokkaiArticles.length > 0) {
+    const readingBtn = document.createElement("button");
+    readingBtn.className = "nav-item nav-item-standalone";
+    readingBtn.dataset.mode = "reading";
+    readingBtn.title = "Đọc hiểu (読解)";
+    readingBtn.innerHTML = `<span class="nav-icon">📰</span>`;
+    readingBtn.addEventListener("click", () => setMode("reading"));
+    nav.appendChild(readingBtn);
+  }
+
   // Re-apply active state: tô sáng nav-item con đang active, VÀ tô viền
   // category cha (has-active) để biết đang ở nhóm nào dù dropdown đang đóng.
   const current = document.querySelector(".view:not(.hidden)");
@@ -484,6 +496,7 @@ function setMode(mode) {
   if (mode === "srs") initSrsMode();
   if (mode === "game") initGameMode();
   if (mode === "listen-game") initListenGameMode();
+  if (mode === "reading") initReadingMode();
   if (mode === "achievements") renderAchievementsView();
 
   if (mode === "quiz" && (App.quizNeedsReset || !App.quizQuestions.length)) {

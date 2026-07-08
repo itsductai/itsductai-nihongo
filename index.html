@@ -5,13 +5,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Nihongo Lab — Luyện thi JLPT</title>
-<link rel="stylesheet" href="css/style.css?v=13">
+<link rel="stylesheet" href="css/style.css?v=14">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/theme-plus.css?v=9" id="themeClassicLink">
 <link rel="stylesheet" href="css/theme-new.css?v=4" id="themeNewLink" disabled>
 <link rel="stylesheet" href="css/game.css?v=8">
+<link rel="stylesheet" href="css/reading.css?v=2">
 </head>
 <body>
 
@@ -467,6 +468,49 @@
           <div id="lgWrongReview"></div>
           <button class="game-start-btn" id="btnLgPlayAgain">もう一度</button>
           <button class="game-back-btn" id="btnLgBackFromResult">← 設定に戻る</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         読解モード — đọc bài (glossing click-to-reveal) rồi làm 3-5 câu hỏi
+         trắc nghiệm từ dễ tới khó. Nguồn: "ai" (tự viết, không phải tin thật)
+         hoặc "user" (Zane tự cung cấp) — nhãn hiện rõ trên từng thẻ bài.
+    =================================================================== -->
+    <section class="view hidden" id="view-reading">
+
+      <div class="dokkai-phase" id="dokkaiPhasePicker">
+        <div class="dash-side-title">📰 読解モード — chọn bài đọc</div>
+        <div class="dokkai-article-grid" id="dokkaiArticleGrid"></div>
+      </div>
+
+      <div class="dokkai-phase hidden" id="dokkaiPhaseRead">
+        <div class="dokkai-read-head">
+          <div class="dokkai-read-title" id="dokkaiReadTitle"></div>
+          <button class="icon-btn focus-toggle-btn" data-focus-target="reading" title="全画面表示">⛶</button>
+        </div>
+        <div class="dokkai-source-note hidden" id="dokkaiSourceNote"></div>
+        <div class="dokkai-read-hint">💡 単語をタップすると意味が出ます</div>
+        <div class="dokkai-read-body" id="dokkaiReadBody"></div>
+        <button class="game-start-btn dokkai-next-btn" id="btnDokkaiGoQuiz">問題に進む →</button>
+      </div>
+
+      <div class="dokkai-phase hidden" id="dokkaiPhaseQuiz">
+        <div class="game-hud">
+          <div class="game-hud-progress">問題：<span id="dokkaiQuizPos">0</span>/<span id="dokkaiQuizTotal">0</span></div>
+          <div class="dokkai-quiz-difficulty" id="dokkaiQuizDifficulty"></div>
+        </div>
+        <div class="dokkai-quiz-stage">
+          <div class="dokkai-quiz-question" id="dokkaiQuizQuestion"></div>
+          <div class="dokkai-quiz-options" id="dokkaiQuizOptions"></div>
+        </div>
+      </div>
+
+      <div class="dokkai-phase hidden" id="dokkaiPhaseResult">
+        <div class="lg-result-box">
+          <div class="lg-result-title">結果</div>
+          <div id="dokkaiResultStats"></div>
+          <button class="game-start-btn" id="btnDokkaiBackToPicker">← 他の記事を読む</button>
         </div>
       </div>
     </section>
@@ -1050,20 +1094,21 @@
      load SAU CÙNG vì nó chạy code thực thi ngay (DOMContentLoaded) cần mọi hàm
      ở các module khác đã được định nghĩa xong. Xem mục cấu trúc file trong
      README.md để biết module nào phụ trách phần nào. -->
-<script src="js/core.js?v=14"></script>
+<script src="js/core.js?v=15"></script>
 <script src="js/scoring.js?v=1"></script>
 <script src="js/stats-weakness.js?v=5"></script>
-<script src="js/dashboard.js?v=8"></script>
+<script src="js/dashboard.js?v=9"></script>
 <script src="js/game.js?v=7"></script>
 <script src="js/listen-game.js?v=3"></script>
+<script src="js/reading.js?v=2"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=20"></script>
+<script src="js/loader-nav.js?v=21"></script>
 <script src="js/flashcard-edit.js?v=6"></script>
 <script src="js/table-srs-typing.js?v=10"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=7"></script>
 <script src="js/choukai.js?v=12"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=31"></script>
+<script src="js/init.js?v=32"></script>
 </body>
 </html>

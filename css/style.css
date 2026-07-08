@@ -1845,3 +1845,24 @@ mark.exam-note-mark {
   .dash-side-card { grid-row: auto !important; }
   .dash-hbar-row { grid-template-columns: 90px 1fr 70px; }
 }
+
+/* ===================================================================
+   HIỆU ỨNG LOADING DÙNG CHUNG (showLoadingOverlay trong core.js) — dùng ở
+   Dashboard, đọc hiểu, và bất kỳ nơi nào khác cần trong tương lai.
+=================================================================== */
+.app-loading-overlay {
+  position: absolute; inset: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(10,12,20,0.55); backdrop-filter: blur(2px);
+  border-radius: inherit; animation: appLoadingFadeIn .15s ease;
+}
+@keyframes appLoadingFadeIn { from { opacity: 0; } to { opacity: 1; } }
+.app-loading-spinner {
+  width: 34px; height: 34px; border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.15); border-top-color: var(--accent);
+  animation: appLoadingSpin .7s linear infinite;
+}
+@keyframes appLoadingSpin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .app-loading-spinner { animation-duration: 1.4s; }
+}

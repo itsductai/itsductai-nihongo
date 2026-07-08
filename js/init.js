@@ -112,6 +112,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadGrammarGroups();
   App.exams = await loadExams();
   App.choukaiTests = await loadChoukaiTests();
+  App.dokkaiArticles = await loadDokkaiArticles();
 
   if (App.decks.length === 0) {
     document.getElementById("deckName").textContent = "Không tải được bộ học nào";
@@ -587,6 +588,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("btnLgReplay").addEventListener("click", replayListenGameAudio);
   document.getElementById("btnLgPlayAgain").addEventListener("click", backToListenGameSetup);
   document.getElementById("btnLgBackFromResult").addEventListener("click", backToListenGameSetup);
+
+  // ----- Đọc hiểu (読解モード) -----
+  document.getElementById("btnDokkaiGoQuiz").addEventListener("click", goToDokkaiQuiz);
+  document.getElementById("btnDokkaiBackToPicker").addEventListener("click", backToDokkaiPicker);
 
   // ----- Quiz mode -----
   document.getElementById("btnQuizRestart").addEventListener("click", initQuizMode);

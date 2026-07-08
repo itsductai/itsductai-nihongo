@@ -169,12 +169,17 @@ function buildDailyActivityChart(series) {
    lại toàn bộ Dashboard, chỉ render lại riêng phần chart.
 =================================================================== */
 function renderDashboard() {
-  renderDashboardGreeting();
-  renderDashboardTodayCount();
-  renderDashboardChart();
-  renderDashboardCurriculumCards();
-  renderDashboardProgressSummary();
-  renderDashboardRecentResults();
+  const container = document.getElementById("view-dashboard");
+  showLoadingOverlay(container, true);
+  setTimeout(() => {
+    renderDashboardGreeting();
+    renderDashboardTodayCount();
+    renderDashboardChart();
+    renderDashboardCurriculumCards();
+    renderDashboardProgressSummary();
+    renderDashboardRecentResults();
+    showLoadingOverlay(container, false);
+  }, 120); // hiệu ứng loading ngắn có chủ đích (data thật ra tính rất nhanh) — theo đúng yêu cầu "sinh động hơn"
 }
 
 // "Hôm nay đã ôn bao nhiêu từ/cấu trúc" — tái dùng đúng log hoạt động theo
