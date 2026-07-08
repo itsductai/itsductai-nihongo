@@ -1,0 +1,388 @@
+{
+  "id": "reading-10",
+  "title": "確証バイアスとは何か",
+  "titleVi": "Thiên kiến xác nhận (confirmation bias) là gì",
+  "level": "N2",
+  "category": "心理学",
+  "source": "ai",
+  "sourceNote": "Bài luận gốc về tâm lý học nhận thức (chủ đề kinh điển JLPT), do AI viết, không dựa trên 1 nguồn cụ thể nào.",
+  "paragraphs": [
+    "人は{{無意識|むいしき|vô thức}}のうちに、{{自分|じぶん}}の{{考|かんが}}えを{{支持|しじ|ủng hộ, hậu thuẫn}}する{{情報|じょうほう|thông tin}}ばかりを{{集|あつ}}めてしまう{{傾向|けいこう|xu hướng}}がある。この{{現象|げんしょう|hiện tượng}}は「{{確証|かくしょう|xác nhận, xác chứng}}バイアス」と{{呼|よ}}ばれ、{{心理学|しんりがく}}の{{分野|ぶんや|lĩnh vực}}で{{古|ふる}}くから{{研究|けんきゅう}}されてきた{{概念|がいねん|khái niệm}}である。",
+    "たとえば、ある{{商品|しょうひん|sản phẩm}}を「{{良|よ}}い」と{{信|しん}}じている{{人|ひと}}は、その{{商品|しょうひん}}を{{褒|ほ}}める{{口|くち}}コミばかりに{{目|め}}が{{行|い}}き、{{批判的|ひはんてき|mang tính phê phán}}な{{意見|いけん|ý kiến}}は{{無視|むし|làm ngơ}}したり、{{軽|かる}}く{{受|う}}け{{止|と}}めたりしがちである。{{逆|ぎゃく}}に、{{自分|じぶん}}の{{意見|いけん}}と{{矛盾|むじゅん|mâu thuẫn}}する{{情報|じょうほう}}に{{出会|であ}}うと、それを{{軽視|けいし|xem nhẹ}}したり、{{理由|りゆう|lý do}}を{{付|つ}}けて{{否定|ひてい|phủ định}}したりする{{傾向|けいこう}}が{{見|み}}られる。",
+    "このバイアスが{{厄介|やっかい|phiền toái, rắc rối}}なのは、{{本人|ほんにん|đương sự, chính người đó}}が{{偏|かたよ}}った{{見方|みかた|cách nhìn}}をしていることに{{気|き}}づきにくい{{点|てん|điểm}}にある。{{自分|じぶん}}では「{{客観的|きゃっかんてき|mang tính khách quan}}に{{判断|はんだん|phán đoán}}している」と{{思|おも}}っていても、{{実際|じっさい|thực tế}}には{{都合|つごう|thuận tiện, hợp ý}}の{{良|よ}}い{{情報|じょうほう}}だけを{{選|えら}}んでいるケースが{{少|すく}}なくない。{{特|とく}}に{{近年|きんねん|những năm gần đây}}は、インターネットや{{SNS|えすえぬえす}}の{{アルゴリズム|あるごりずむ|thuật toán}}によって、{{自分|じぶん}}の{{好|この}}みに{{合|あ}}う{{情報|じょうほう}}ばかりが{{表示|ひょうじ|hiển thị}}されやすくなっており、この{{傾向|けいこう}}は{{強|つよ}}まっていると{{指摘|してき|chỉ ra, nhận định}}されている。",
+    "では、{{確証|かくしょう}}バイアスを{{完全|かんぜん|hoàn toàn}}に{{避|さ}}けることは{{可能|かのう|khả thi}}だろうか。{{専門家|せんもんか|chuyên gia}}によれば、{{完全|かんぜん}}に{{避|さ}}けることは{{難|むずか}}しいものの、「{{自分|じぶん}}の{{意見|いけん}}に{{反|はん}}する{{情報|じょうほう}}を{{意識的|いしきてき|một cách có ý thức}}に{{探|さが}}す」という{{習慣|しゅうかん|thói quen}}を{{持|も}}つことで、その{{影響|えいきょう|ảnh hưởng}}を{{和|やわ}}らげることはできるという。{{自分|じぶん}}の{{判断|はんだん}}が{{本当|ほんとう}}に{{正|ただ}}しいのかを{{一度|いちど}}{{立|た}}ち{{止|ど}}まって{{疑|うたが}}ってみる{{姿勢|しせい|thái độ}}が、{{確証|かくしょう}}バイアスへの{{対策|たいさく|biện pháp đối phó}}として{{有効|ゆうこう|hữu hiệu}}だと言えるだろう。"
+  ],
+  "paragraphsVi": [
+    "Con người có xu hướng vô thức chỉ thu thập những thông tin ủng hộ cho suy nghĩ của bản thân. Hiện tượng này được gọi là \"thiên kiến xác nhận\", là một khái niệm đã được nghiên cứu từ lâu trong lĩnh vực tâm lý học.",
+    "Ví dụ, người tin rằng một sản phẩm nào đó là \"tốt\" thường chỉ chú ý tới những lời đánh giá khen ngợi sản phẩm đó, còn những ý kiến mang tính phê phán thì dễ bị bỏ qua hoặc chỉ được tiếp nhận một cách hời hợt. Ngược lại, khi gặp phải thông tin mâu thuẫn với ý kiến của bản thân, người ta có xu hướng xem nhẹ nó, hoặc tìm lý do để phủ định nó.",
+    "Điều phiền toái của thiên kiến này nằm ở chỗ chính bản thân người đó khó nhận ra rằng mình đang có cách nhìn thiên lệch. Dù tự cho rằng \"mình đang phán đoán một cách khách quan\", nhưng thực tế không ít trường hợp chỉ đang chọn lọc những thông tin hợp ý mình. Đặc biệt những năm gần đây, do thuật toán của Internet và mạng xã hội khiến những thông tin hợp sở thích bản thân dễ được hiển thị hơn, nên xu hướng này được chỉ ra là đang ngày càng mạnh lên.",
+    "Vậy thì, liệu có thể tránh hoàn toàn thiên kiến xác nhận hay không? Theo các chuyên gia, dù việc tránh hoàn toàn là khó, nhưng nếu có thói quen \"chủ động tìm kiếm thông tin trái với ý kiến của bản thân\" một cách có ý thức, thì có thể làm dịu bớt ảnh hưởng của nó. Có thể nói rằng, thái độ dừng lại một chút để tự hoài nghi xem phán đoán của mình có thực sự đúng hay không, chính là một biện pháp hữu hiệu để đối phó với thiên kiến xác nhận."
+  ],
+  "questions": [
+    {
+      "difficulty": 1,
+      "q": "「確証バイアス」とはどのような傾向か。",
+      "options": [
+        "自分の考えを支持する情報ばかり集めてしまう傾向",
+        "他人の意見を常に信じる傾向",
+        "情報をまったく集めない傾向",
+        "批判的な意見だけを探す傾向"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 2,
+      "q": "ある商品を「良い」と信じている人は、どのような口コミに目が行きやすいか。",
+      "options": [
+        "批判的な口コミ",
+        "商品を褒める口コミ",
+        "まったく関係のない口コミ",
+        "他の商品の口コミ"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 3,
+      "q": "確証バイアスが「厄介」だと述べられている理由は何か。",
+      "options": [
+        "本人が偏った見方をしていることに気づきにくいから",
+        "誰にでもすぐに分かるから",
+        "対策の方法がまったくないから",
+        "科学的に証明されていないから"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 4,
+      "q": "近年、確証バイアスの傾向が強まっていると指摘されている理由は何か。",
+      "options": [
+        "学校教育が変化したから",
+        "インターネットやSNSのアルゴリズムによって自分の好みに合う情報が表示されやすくなっているから",
+        "本を読む人が減ったから",
+        "テレビの視聴時間が減ったから"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 5,
+      "q": "専門家によると、確証バイアスの影響を和らげる方法として有効なのはどれか。",
+      "options": [
+        "情報をまったく見ないようにすること",
+        "自分の意見に反する情報を意識的に探す習慣を持つこと",
+        "他人の意見を無視すること",
+        "SNSを使う時間を増やすこと"
+      ],
+      "answer": 1
+    }
+  ],
+  "n2VocabList": [
+    {
+      "kanji": "無意識",
+      "hanviet": "VÔ Ý THỨC",
+      "reading": "むいしき",
+      "meaning": "vô thức"
+    },
+    {
+      "kanji": "支持",
+      "hanviet": "CHI TRÌ",
+      "reading": "しじ",
+      "meaning": "ủng hộ, hậu thuẫn"
+    },
+    {
+      "kanji": "情報",
+      "hanviet": "TÌNH BÁO",
+      "reading": "じょうほう",
+      "meaning": "thông tin"
+    },
+    {
+      "kanji": "傾向",
+      "hanviet": "KHUYNH HƯỚNG",
+      "reading": "けいこう",
+      "meaning": "xu hướng"
+    },
+    {
+      "kanji": "現象",
+      "hanviet": "HIỆN TƯỢNG",
+      "reading": "げんしょう",
+      "meaning": "hiện tượng"
+    },
+    {
+      "kanji": "確証",
+      "hanviet": "XÁC CHỨNG",
+      "reading": "かくしょう",
+      "meaning": "xác nhận, xác chứng"
+    },
+    {
+      "kanji": "呼ばれ",
+      "hanviet": "HÔ",
+      "reading": "よばれ",
+      "meaning": "được gọi là"
+    },
+    {
+      "kanji": "分野",
+      "hanviet": "PHÂN DÃ",
+      "reading": "ぶんや",
+      "meaning": "lĩnh vực"
+    },
+    {
+      "kanji": "概念",
+      "hanviet": "KHÁI NIỆM",
+      "reading": "がいねん",
+      "meaning": "khái niệm"
+    },
+    {
+      "kanji": "商品",
+      "hanviet": "THƯƠNG PHẨM",
+      "reading": "しょうひん",
+      "meaning": "sản phẩm"
+    },
+    {
+      "kanji": "信じて",
+      "hanviet": "TÍN",
+      "reading": "しんじて",
+      "meaning": "tin tưởng"
+    },
+    {
+      "kanji": "褒める",
+      "hanviet": "BAO",
+      "reading": "ほめる",
+      "meaning": "khen ngợi"
+    },
+    {
+      "kanji": "批判的",
+      "hanviet": "PHÊ PHÁN ĐÍCH",
+      "reading": "ひはんてき",
+      "meaning": "mang tính phê phán"
+    },
+    {
+      "kanji": "意見",
+      "hanviet": "Ý KIẾN",
+      "reading": "いけん",
+      "meaning": "ý kiến"
+    },
+    {
+      "kanji": "無視",
+      "hanviet": "VÔ THỊ",
+      "reading": "むし",
+      "meaning": "làm ngơ"
+    },
+    {
+      "kanji": "矛盾",
+      "hanviet": "MÂU THUẪN",
+      "reading": "むじゅん",
+      "meaning": "mâu thuẫn"
+    },
+    {
+      "kanji": "出会う",
+      "hanviet": "XUẤT HỘI",
+      "reading": "であう",
+      "meaning": "gặp phải, bắt gặp"
+    },
+    {
+      "kanji": "軽視",
+      "hanviet": "KHINH THỊ",
+      "reading": "けいし",
+      "meaning": "xem nhẹ"
+    },
+    {
+      "kanji": "否定",
+      "hanviet": "PHỦ ĐỊNH",
+      "reading": "ひてい",
+      "meaning": "phủ định"
+    },
+    {
+      "kanji": "厄介",
+      "hanviet": "ÁCH GIỚI",
+      "reading": "やっかい",
+      "meaning": "phiền toái, rắc rối"
+    },
+    {
+      "kanji": "本人",
+      "hanviet": "BẢN NHÂN",
+      "reading": "ほんにん",
+      "meaning": "đương sự, chính người đó"
+    },
+    {
+      "kanji": "偏った",
+      "hanviet": "THIÊN",
+      "reading": "かたよった",
+      "meaning": "thiên lệch"
+    },
+    {
+      "kanji": "見方",
+      "hanviet": "KIẾN PHƯƠNG",
+      "reading": "みかた",
+      "meaning": "cách nhìn"
+    },
+    {
+      "kanji": "客観的",
+      "hanviet": "KHÁCH QUAN ĐÍCH",
+      "reading": "きゃっかんてき",
+      "meaning": "mang tính khách quan"
+    },
+    {
+      "kanji": "判断",
+      "hanviet": "PHÁN ĐOÁN",
+      "reading": "はんだん",
+      "meaning": "phán đoán"
+    },
+    {
+      "kanji": "実際",
+      "hanviet": "THỰC TẾ",
+      "reading": "じっさい",
+      "meaning": "thực tế"
+    },
+    {
+      "kanji": "都合",
+      "hanviet": "ĐÔ HỢP",
+      "reading": "つごう",
+      "meaning": "thuận tiện, hợp ý"
+    },
+    {
+      "kanji": "近年",
+      "hanviet": "CẬN NIÊN",
+      "reading": "きんねん",
+      "meaning": "những năm gần đây"
+    },
+    {
+      "kanji": "アルゴリズム",
+      "hanviet": "",
+      "reading": "あるごりずむ",
+      "meaning": "thuật toán"
+    },
+    {
+      "kanji": "好み",
+      "hanviet": "HIẾU",
+      "reading": "このみ",
+      "meaning": "sở thích"
+    },
+    {
+      "kanji": "表示",
+      "hanviet": "BIỂU THỊ",
+      "reading": "ひょうじ",
+      "meaning": "hiển thị"
+    },
+    {
+      "kanji": "指摘",
+      "hanviet": "CHỈ TRÍCH",
+      "reading": "してき",
+      "meaning": "chỉ ra, nhận định"
+    },
+    {
+      "kanji": "完全",
+      "hanviet": "HOÀN TOÀN",
+      "reading": "かんぜん",
+      "meaning": "hoàn toàn"
+    },
+    {
+      "kanji": "避ける",
+      "hanviet": "TỴ",
+      "reading": "さける",
+      "meaning": "tránh"
+    },
+    {
+      "kanji": "可能",
+      "hanviet": "KHẢ NĂNG",
+      "reading": "かのう",
+      "meaning": "khả thi"
+    },
+    {
+      "kanji": "専門家",
+      "hanviet": "CHUYÊN MÔN GIA",
+      "reading": "せんもんか",
+      "meaning": "chuyên gia"
+    },
+    {
+      "kanji": "意識的",
+      "hanviet": "Ý THỨC ĐÍCH",
+      "reading": "いしきてき",
+      "meaning": "một cách có ý thức"
+    },
+    {
+      "kanji": "習慣",
+      "hanviet": "TẬP QUÁN",
+      "reading": "しゅうかん",
+      "meaning": "thói quen"
+    },
+    {
+      "kanji": "影響",
+      "hanviet": "ẢNH HƯỞNG",
+      "reading": "えいきょう",
+      "meaning": "ảnh hưởng"
+    },
+    {
+      "kanji": "和らげる",
+      "hanviet": "HÒA",
+      "reading": "やわらげる",
+      "meaning": "làm dịu bớt"
+    },
+    {
+      "kanji": "立ち止まって",
+      "hanviet": "LẬP CHỈ",
+      "reading": "たちどまって",
+      "meaning": "dừng lại"
+    },
+    {
+      "kanji": "疑って",
+      "hanviet": "NGHI",
+      "reading": "うたがって",
+      "meaning": "hoài nghi"
+    },
+    {
+      "kanji": "姿勢",
+      "hanviet": "TƯ THẾ",
+      "reading": "しせい",
+      "meaning": "thái độ"
+    },
+    {
+      "kanji": "対策",
+      "hanviet": "ĐỐI SÁCH",
+      "reading": "たいさく",
+      "meaning": "biện pháp đối phó"
+    },
+    {
+      "kanji": "有効",
+      "hanviet": "HỮU HIỆU",
+      "reading": "ゆうこう",
+      "meaning": "hữu hiệu"
+    }
+  ],
+  "grammarList": [
+    {
+      "pattern": "〜のうちに〜てしまう傾向がある",
+      "meaning": "trong lúc... thì có xu hướng lỡ..."
+    },
+    {
+      "pattern": "〜と呼ばれ、〜されてきた",
+      "meaning": "được gọi là..., và đã được... từ trước tới nay"
+    },
+    {
+      "pattern": "〜がちである",
+      "meaning": "có xu hướng, thường hay..."
+    },
+    {
+      "pattern": "〜たりする傾向が見られる",
+      "meaning": "có thể thấy xu hướng... (liệt kê nhiều hành động)"
+    },
+    {
+      "pattern": "〜のは、〜点にある",
+      "meaning": "sở dĩ... là ở điểm..."
+    },
+    {
+      "pattern": "〜と思っていても、実際には〜ケースが少なくない",
+      "meaning": "dù nghĩ rằng..., nhưng thực tế không ít trường hợp..."
+    },
+    {
+      "pattern": "〜によって〜されやすくなっており",
+      "meaning": "do... nên trở nên dễ... hơn"
+    },
+    {
+      "pattern": "〜ものの、〜ことで〜はできるという",
+      "meaning": "dù... nhưng bằng cách... thì có thể..."
+    },
+    {
+      "pattern": "〜と言えるだろう",
+      "meaning": "có thể nói rằng..."
+    }
+  ]
+}

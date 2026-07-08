@@ -1,0 +1,352 @@
+{
+  "id": "reading-11",
+  "title": "内発的動機と外発的動機",
+  "titleVi": "Động lực nội tại và động lực bên ngoài",
+  "level": "N2",
+  "category": "心理学",
+  "source": "ai",
+  "sourceNote": "Bài luận gốc về tâm lý học động lực (chủ đề kinh điển JLPT), do AI viết, không dựa trên 1 nguồn cụ thể nào.",
+  "paragraphs": [
+    "{{心理学|しんりがく|tâm lý học}}では、{{人|ひと}}が{{何|なに}}かに{{取|と}}り{{組|く}}む{{動機|どうき|động lực, động cơ}}を、{{大|おお}}きく{{二|ふた}}つに{{分|わ}}けて{{考|かんが}}えることが多い。一つは「{{内発的|ないはつてき|mang tính nội tại}}{{動機|どうき}}」で、{{活動|かつどう|hoạt động}}{{そのもの|そのもの|chính bản thân nó}}に{{興味|きょうみ|hứng thú}}や{{楽|たの}}しさを{{感|かん}}じて{{取|と}}り{{組|く}}む{{場合|ばあい|trường hợp}}を{{指|さ}}す。もう一つは「{{外発的|がいはつてき|mang tính bên ngoài}}{{動機|どうき}}」で、{{報酬|ほうしゅう|phần thưởng}}や{{評価|ひょうか|đánh giá}}、あるいは{{罰|ばつ|hình phạt}}を{{避|さ}}けるためといった、{{外部|がいぶ|bên ngoài}}からの{{要因|よういん|yếu tố}}によって{{行動|こうどう|hành động}}する{{場合|ばあい}}を{{指|さ}}す。",
+    "{{興味深|きょうみぶか}}いことに、{{外発的|がいはつてき}}な{{報酬|ほうしゅう}}を{{与|あた}}えることが、かえって{{内発的|ないはつてき}}{{動機|どうき}}を{{低下|ていか|suy giảm}}させてしまう{{場合|ばあい}}があると{{指摘|してき|chỉ ra, nhận định}}されている。これは「{{アンダーマイニング|あんだーまいにんぐ|hiệu ứng làm suy yếu}}{{効果|こうか|hiệu quả, hiệu ứng}}」と{{呼|よ}}ばれる{{現象|げんしょう|hiện tượng}}である。たとえば、もともと{{絵|え}}を{{描|か}}くことが{{好|す}}きだった{{子|こ}}どもに、{{絵|え}}を{{描|か}}くたびに{{報酬|ほうしゅう}}を{{与|あた}}えるようにしたところ、{{報酬|ほうしゅう}}がなくなった{{途端|とたん|ngay khi}}に{{絵|え}}を{{描|か}}かなくなってしまった、という{{実験|じっけん|thí nghiệm}}{{結果|けっか|kết quả}}が{{知|し}}られている。",
+    "この{{結果|けっか}}は、{{子|こ}}どもの{{学習意欲|がくしゅういよく|động lực học tập}}を{{高|たか}}めようとする{{教育現場|きょういくげんば|hiện trường giáo dục}}にとって、{{重要|じゅうよう|quan trọng}}な{{示唆|しさ|gợi ý, hàm ý}}を{{含|ふく}}んでいる。ただ「テストの{{点数|てんすう|điểm số}}が{{良|よ}}ければご{{褒美|ほうび|phần thưởng}}をあげる」という{{方法|ほうほう|phương pháp}}だけに{{頼|たよ}}っていると、{{子|こ}}ども{{自身|じしん|bản thân}}が{{学|まな}}ぶことそのものの{{楽|たの}}しさを{{見失|みうしな}}ってしまう{{恐|おそ}}れがあるからだ。",
+    "もちろん、{{外発的|がいはつてき}}{{動機|どうき}}が{{常|つね}}に{{悪|わる}}いというわけではない。{{最初|さいしょ}}は{{報酬|ほうしゅう}}が{{きっかけ|きっかけ|cái cớ, động lực khởi đầu}}となって{{始|はじ}}めたことが、{{続|つづ}}けていくうちに「{{楽|たの}}しい」「{{もっと|もっと|nhiều hơn nữa}}{{知|し}}りたい」という{{内発的|ないはつてき}}な{{気持|きも}}ちへと{{変化|へんか|thay đổi}}していく{{ケース|けーす|trường hợp, ca}}も{{少|すく}}なくない。{{大切|たいせつ|quan trọng}}なのは、{{外発的|がいはつてき}}{{動機|どうき}}と{{内発的|ないはつてき}}{{動機|どうき}}を{{対立|たいりつ|đối lập}}するものとして{{捉|とら}}えるのではなく、{{両者|りょうしゃ|cả 2 bên}}が{{うまく|うまく|khéo léo, thuận lợi}}{{つながる|つながる|liên kết, kết nối}}ような{{関|かか}}わり{{方|かた}}を{{考|かんが}}えることではないだろうか。"
+  ],
+  "paragraphsVi": [
+    "Trong tâm lý học, động lực khiến con người bắt tay vào làm việc gì đó thường được chia thành 2 loại lớn. Một là \"động lực nội tại\", chỉ trường hợp cảm thấy hứng thú hoặc niềm vui từ chính bản thân hoạt động đó mà bắt tay vào làm. Hai là \"động lực bên ngoài\", chỉ trường hợp hành động do các yếu tố từ bên ngoài như phần thưởng, sự đánh giá, hoặc để tránh hình phạt.",
+    "Điều thú vị là có nhận định cho rằng việc trao phần thưởng bên ngoài đôi khi lại làm suy giảm chính động lực nội tại. Hiện tượng này được gọi là \"hiệu ứng làm suy yếu\" (undermining effect). Ví dụ, có một kết quả thí nghiệm nổi tiếng: một đứa trẻ vốn thích vẽ tranh, khi được cho phần thưởng mỗi lần vẽ tranh, thì ngay khi phần thưởng không còn nữa, đứa trẻ đó đã ngừng vẽ tranh.",
+    "Kết quả này mang một hàm ý quan trọng đối với hiện trường giáo dục đang muốn nâng cao động lực học tập của trẻ em. Bởi vì nếu chỉ phụ thuộc vào phương pháp \"nếu điểm thi tốt thì sẽ được thưởng\", có nguy cơ chính bản thân đứa trẻ sẽ đánh mất niềm vui của việc học tập.",
+    "Tất nhiên, không phải lúc nào động lực bên ngoài cũng xấu. Có không ít trường hợp việc ban đầu bắt đầu nhờ phần thưởng làm cái cớ, nhưng qua quá trình tiếp tục lại dần chuyển hóa thành cảm giác nội tại kiểu \"vui quá\", \"muốn biết thêm nữa\". Điều quan trọng có lẽ không phải là coi động lực bên ngoài và động lực nội tại là hai thứ đối lập nhau, mà là suy nghĩ về cách kết hợp sao cho cả hai có thể liên kết với nhau một cách thuận lợi."
+  ],
+  "questions": [
+    {
+      "difficulty": 1,
+      "q": "「内発的動機」とはどのような場合を指すか。",
+      "options": [
+        "報酬のために行動する場合",
+        "活動そのものに興味や楽しさを感じて取り組む場合",
+        "罰を避けるために行動する場合",
+        "他人に命令されて行動する場合"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 2,
+      "q": "「アンダーマイニング効果」とはどのような現象か。",
+      "options": [
+        "外発的な報酬が内発的動機を高める現象",
+        "外発的な報酬がかえって内発的動機を低下させてしまう現象",
+        "内発的動機がまったく変化しない現象",
+        "報酬が多いほど成績が上がる現象"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 3,
+      "q": "絵を描く実験で、報酬がなくなった途端に子どもはどうなったか。",
+      "options": [
+        "前よりもっと熱心に絵を描くようになった",
+        "絵を描かなくなってしまった",
+        "まったく変化がなかった",
+        "他の遊びを始めた"
+      ],
+      "answer": 1
+    },
+    {
+      "difficulty": 4,
+      "q": "「テストの点数が良ければご褒美をあげる」という方法だけに頼ることの問題点は何か。",
+      "options": [
+        "子どもが学ぶこと自体の楽しさを見失ってしまう恐れがあること",
+        "テストの点数が必ず下がること",
+        "教師の負担が増えること",
+        "保護者からの苦情が増えること"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 5,
+      "q": "筆者が最も伝えたいことに近いものはどれか。",
+      "options": [
+        "外発的動機は常に悪いものであり、避けるべきだ。",
+        "内発的動機だけを重視し、外発的動機は一切使うべきではない。",
+        "外発的動機と内発的動機を対立するものとして捉えず、両者がうまくつながる関わり方を考えることが大切だ。",
+        "報酬を与える教育方法はすべて廃止すべきだ。"
+      ],
+      "answer": 2
+    }
+  ],
+  "n2VocabList": [
+    {
+      "kanji": "心理学",
+      "hanviet": "TÂM LÝ HỌC",
+      "reading": "しんりがく",
+      "meaning": "tâm lý học"
+    },
+    {
+      "kanji": "動機",
+      "hanviet": "ĐỘNG CƠ",
+      "reading": "どうき",
+      "meaning": "động lực, động cơ"
+    },
+    {
+      "kanji": "内発的",
+      "hanviet": "NỘI PHÁT ĐÍCH",
+      "reading": "ないはつてき",
+      "meaning": "mang tính nội tại"
+    },
+    {
+      "kanji": "活動",
+      "hanviet": "HOẠT ĐỘNG",
+      "reading": "かつどう",
+      "meaning": "hoạt động"
+    },
+    {
+      "kanji": "興味",
+      "hanviet": "HỨNG VỊ",
+      "reading": "きょうみ",
+      "meaning": "hứng thú"
+    },
+    {
+      "kanji": "場合",
+      "hanviet": "TRƯỜNG HỢP",
+      "reading": "ばあい",
+      "meaning": "trường hợp"
+    },
+    {
+      "kanji": "指す",
+      "hanviet": "CHỈ",
+      "reading": "さす",
+      "meaning": "chỉ, ám chỉ"
+    },
+    {
+      "kanji": "外発的",
+      "hanviet": "NGOẠI PHÁT ĐÍCH",
+      "reading": "がいはつてき",
+      "meaning": "mang tính bên ngoài"
+    },
+    {
+      "kanji": "報酬",
+      "hanviet": "BÁO THÙ",
+      "reading": "ほうしゅう",
+      "meaning": "phần thưởng"
+    },
+    {
+      "kanji": "評価",
+      "hanviet": "ĐÁNH GIÁ",
+      "reading": "ひょうか",
+      "meaning": "đánh giá"
+    },
+    {
+      "kanji": "罰",
+      "hanviet": "PHẠT",
+      "reading": "ばつ",
+      "meaning": "hình phạt"
+    },
+    {
+      "kanji": "外部",
+      "hanviet": "NGOẠI BỘ",
+      "reading": "がいぶ",
+      "meaning": "bên ngoài"
+    },
+    {
+      "kanji": "要因",
+      "hanviet": "YẾU NHÂN",
+      "reading": "よういん",
+      "meaning": "yếu tố"
+    },
+    {
+      "kanji": "行動",
+      "hanviet": "HÀNH ĐỘNG",
+      "reading": "こうどう",
+      "meaning": "hành động"
+    },
+    {
+      "kanji": "興味深い",
+      "hanviet": "HỨNG VỊ THÂM",
+      "reading": "きょうみぶかい",
+      "meaning": "thú vị, đáng chú ý"
+    },
+    {
+      "kanji": "与える",
+      "hanviet": "DỮ",
+      "reading": "あたえる",
+      "meaning": "trao, cho"
+    },
+    {
+      "kanji": "低下",
+      "hanviet": "ĐÊ HẠ",
+      "reading": "ていか",
+      "meaning": "suy giảm"
+    },
+    {
+      "kanji": "指摘",
+      "hanviet": "CHỈ TRÍCH",
+      "reading": "してき",
+      "meaning": "chỉ ra, nhận định"
+    },
+    {
+      "kanji": "効果",
+      "hanviet": "HIỆU QUẢ",
+      "reading": "こうか",
+      "meaning": "hiệu quả, hiệu ứng"
+    },
+    {
+      "kanji": "現象",
+      "hanviet": "HIỆN TƯỢNG",
+      "reading": "げんしょう",
+      "meaning": "hiện tượng"
+    },
+    {
+      "kanji": "描く",
+      "hanviet": "MIÊU",
+      "reading": "かく",
+      "meaning": "vẽ"
+    },
+    {
+      "kanji": "途端",
+      "hanviet": "ĐỒ ĐOAN",
+      "reading": "とたん",
+      "meaning": "ngay khi"
+    },
+    {
+      "kanji": "実験",
+      "hanviet": "THỰC NGHIỆM",
+      "reading": "じっけん",
+      "meaning": "thí nghiệm"
+    },
+    {
+      "kanji": "学習意欲",
+      "hanviet": "HỌC TẬP Ý DỤC",
+      "reading": "がくしゅういよく",
+      "meaning": "động lực học tập"
+    },
+    {
+      "kanji": "教育現場",
+      "hanviet": "GIÁO DỤC HIỆN TRƯỜNG",
+      "reading": "きょういくげんば",
+      "meaning": "hiện trường giáo dục"
+    },
+    {
+      "kanji": "示唆",
+      "hanviet": "THỊ TA",
+      "reading": "しさ",
+      "meaning": "gợi ý, hàm ý"
+    },
+    {
+      "kanji": "含んで",
+      "hanviet": "HÀM",
+      "reading": "ふくんで",
+      "meaning": "bao hàm, chứa đựng"
+    },
+    {
+      "kanji": "点数",
+      "hanviet": "ĐIỂM SỐ",
+      "reading": "てんすう",
+      "meaning": "điểm số"
+    },
+    {
+      "kanji": "褒美",
+      "hanviet": "BAO MỸ",
+      "reading": "ほうび",
+      "meaning": "phần thưởng"
+    },
+    {
+      "kanji": "方法",
+      "hanviet": "PHƯƠNG PHÁP",
+      "reading": "ほうほう",
+      "meaning": "phương pháp"
+    },
+    {
+      "kanji": "頼って",
+      "hanviet": "LẠI",
+      "reading": "たよって",
+      "meaning": "dựa vào, phụ thuộc"
+    },
+    {
+      "kanji": "自身",
+      "hanviet": "TỰ THÂN",
+      "reading": "じしん",
+      "meaning": "bản thân"
+    },
+    {
+      "kanji": "見失って",
+      "hanviet": "KIẾN THẤT",
+      "reading": "みうしなって",
+      "meaning": "đánh mất, để mất"
+    },
+    {
+      "kanji": "恐れ",
+      "hanviet": "KHỦNG",
+      "reading": "おそれ",
+      "meaning": "nguy cơ, e sợ"
+    },
+    {
+      "kanji": "変化",
+      "hanviet": "BIẾN HÓA",
+      "reading": "へんか",
+      "meaning": "thay đổi"
+    },
+    {
+      "kanji": "大切",
+      "hanviet": "ĐẠI THIẾT",
+      "reading": "たいせつ",
+      "meaning": "quan trọng"
+    },
+    {
+      "kanji": "対立",
+      "hanviet": "ĐỐI LẬP",
+      "reading": "たいりつ",
+      "meaning": "đối lập"
+    },
+    {
+      "kanji": "捉える",
+      "hanviet": "TRÓC",
+      "reading": "とらえる",
+      "meaning": "nắm bắt, nhìn nhận"
+    },
+    {
+      "kanji": "両者",
+      "hanviet": "LƯỠNG GIẢ",
+      "reading": "りょうしゃ",
+      "meaning": "cả 2 bên"
+    }
+  ],
+  "grammarList": [
+    {
+      "pattern": "〜を大きく二つに分けて考える",
+      "meaning": "chia lớn thành 2 để xem xét"
+    },
+    {
+      "pattern": "〜場合を指す",
+      "meaning": "chỉ trường hợp..."
+    },
+    {
+      "pattern": "〜とされている〜と呼ばれる",
+      "meaning": "được cho là..., được gọi là..."
+    },
+    {
+      "pattern": "〜たところ、〜という結果が知られている",
+      "meaning": "khi thử..., thì kết quả... đã được biết đến"
+    },
+    {
+      "pattern": "〜にとって、〜な示唆を含んでいる",
+      "meaning": "đối với..., mang hàm ý quan trọng rằng..."
+    },
+    {
+      "pattern": "〜だけに頼っていると、〜恐れがあるからだ",
+      "meaning": "vì nếu chỉ phụ thuộc vào..., có nguy cơ..."
+    },
+    {
+      "pattern": "〜というわけではない",
+      "meaning": "không có nghĩa là..."
+    },
+    {
+      "pattern": "〜うちに〜へと変化していくケースも少なくない",
+      "meaning": "trong quá trình... thì không ít trường hợp dần chuyển hóa thành..."
+    },
+    {
+      "pattern": "〜のではなく、〜ではないだろうか",
+      "meaning": "không phải là..., mà có lẽ... phải không?"
+    }
+  ]
+}
