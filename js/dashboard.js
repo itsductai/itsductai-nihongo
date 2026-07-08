@@ -275,9 +275,15 @@ function openWordStatusModal(statusFilter, scope) {
 }
 
 function wordStatusMatchesFilter(entry, st, statusFilter) {
-  if (statusFilter === "known") return st === "known" || st === "mastered";
+  if (statusFilter === "known") return (st === "known" || st === "mastered") && !SRS.isDue(entry);
   if (statusFilter === "due") return entry.seen && SRS.isDue(entry);
-  return st === statusFilter; // "learning" | "fresh" | "mastered" (khớp CHÍNH XÁC, khác "known" gộp cả mastered)
+  // "mastered": status() chỉ dựa vào flag entry.mastered, KHÔNG tự xét đã đến
+  // hạn hay chưa — nên tua nhanh đẩy due sớm lên nhưng flag mastered vẫn y
+  // nguyên, từ đó bug "tua rồi mà không bị loại khỏi Đã thuộc làu" xảy ra.
+  // Fix tại đây: loại từ đã ĐẾN HẠN ra khỏi bộ lọc "mastered" — từ đó nên
+  // thuộc về "due" (cần ôn ngay) chứ không còn nằm yên trong "đã thuộc làu".
+  if (statusFilter === "mastered") return st === "mastered" && !SRS.isDue(entry);
+  return st === statusFilter; // "learning" | "fresh"
 }
 
 function renderWordStatusModalList() {

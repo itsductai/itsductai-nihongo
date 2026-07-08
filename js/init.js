@@ -816,7 +816,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("btnExport").addEventListener("click", () => {
     const exportPayload = {
       exportedAt: new Date().toISOString(),
-      version: 8,
+      version: 9,
       srsProgress: SRS.exportAll(),
       fieldConfig: App.fieldConfig,
       visibleCols: App.visibleCols,
@@ -835,6 +835,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       shuffleEnabled: App.shuffleEnabled,
       soundEnabled: App.soundEnabled,
       speechEnabled: App.speechEnabled,
+      // 2 mục MỚI thêm trong phiên xây Game/Dashboard — trước đây thiếu, sẽ
+      // mất huy chương/lịch sử học hằng ngày khi đổi máy nếu không có ở đây.
+      // KHÔNG export trạng thái mở khóa private (n2vocab_advanced_unlocked)
+      // — cố ý, vì export file không nên trở thành cách bypass gate ẩn.
+      gameAchievements: loadGameAchievements(),
+      dailyActivity: loadDailyActivity(),
     };
     const blob = new Blob([JSON.stringify(exportPayload, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -1032,6 +1038,32 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (data.speechEnabled !== undefined) {
           App.speechEnabled = data.speechEnabled;
           saveSpeechConfig();
+        }
+        if (data.gameAchievements) {
+          // Gộp danh sách huy chương của 2 máy (không đè) — loại trùng theo
+          // "id" (mỗi huy chương có id ngẫu nhiên riêng lúc lưu, phòng trường
+          // hợp export/import lặp lại trên CHÍNH máy đó, tránh nhân đôi).
+          const currentAchievements = loadGameAchievements();
+          const existingIds = new Set(currentAchievements.map((a) => a.id));
+          const merged = currentAchievements.concat(data.gameAchievements.filter((a) => !existingIds.has(a.id)));
+          merged.sort((a, b) => b.earnedAt - a.earnedAt);
+          localStorage.setItem(GAME_ACHIEVEMENTS_KEY, JSON.stringify(merged.slice(0, 200)));
+        }
+        if (data.dailyActivity) {
+          // Gộp log hoạt động theo NGÀY — CỘNG DỒN số đếm nếu cả 2 máy đều có
+          // hoạt động cùng 1 ngày (giống cách gộp weaknessStats — số liệu tích
+          // lũy, không phải snapshot trạng thái nên không lấy "mới hơn").
+          const currentActivity = loadDailyActivity();
+          Object.keys(data.dailyActivity).forEach((dateKey) => {
+            const incoming = data.dailyActivity[dateKey];
+            if (!currentActivity[dateKey]) {
+              currentActivity[dateKey] = { ...incoming };
+            } else {
+              currentActivity[dateKey].tuvung = (currentActivity[dateKey].tuvung || 0) + (incoming.tuvung || 0);
+              currentActivity[dateKey].nguphap = (currentActivity[dateKey].nguphap || 0) + (incoming.nguphap || 0);
+            }
+          });
+          localStorage.setItem(DAILY_ACTIVITY_STORAGE_KEY, JSON.stringify(currentActivity));
         }
 
         App.progress = SRS.loadProgress(App.currentDeckId);
