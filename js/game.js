@@ -166,6 +166,19 @@ const bubblePhysics = new Map(); // wordId -> {x, y, vx, vy, buoy}
 let bubblePhysicsRAF = null;
 let bubblePhysicsLastTime = 0;
 
+// #view-game có transform:translateZ(0) -> nó tự trở thành containing block
+// cho MỌI phần tử con position:fixed bên trong (kể cả .game-bubble), nghĩa
+// là "fixed" giờ được đo theo kích thước khung NÀY, không phải true viewport
+// nữa (đúng ý: mặc định bó trong vùng nội dung dưới navbar, chỉ full viewport
+// thật khi bật focus-mode vì lúc đó chính khung này giãn ra full màn hình).
+// PHẢI lấy kích thước bằng getBoundingClientRect() của #view-game, không
+// được dùng window.innerWidth/innerHeight nữa (sẽ sai lệch, tràn ra ngoài
+// khung thật khi chưa bật phóng to).
+function getGameArenaBounds() {
+  const rect = document.getElementById("view-game").getBoundingClientRect();
+  return { w: rect.width, h: rect.height };
+}
+
 function renderBubbleArena() {
   const arena = document.getElementById("gameBubbleArena");
   arena.innerHTML = "";
@@ -184,8 +197,9 @@ function renderBubbleArena() {
     const size = 76 + Math.random() * 34;
     bubble.style.setProperty("--size", size.toFixed(0) + "px");
     bubble.style.setProperty("--hue", Math.floor(Math.random() * 360));
-    const x = Math.random() * (window.innerWidth - size);
-    const y = Math.random() * (window.innerHeight - size);
+    const bounds = getGameArenaBounds();
+    const x = Math.random() * (bounds.w - size);
+    const y = Math.random() * (bounds.h - size);
     bubble.style.left = x + "px";
     bubble.style.top = y + "px";
 
@@ -198,7 +212,13 @@ function renderBubbleArena() {
     bubble.addEventListener("dragend", (e) => {
       bubble.classList.remove("is-dragging");
       if (e.clientX || e.clientY) {
-        const nx = e.clientX - size / 2, ny = e.clientY - size / 2;
+        // e.clientX/clientY là tọa độ theo VIEWPORT THẬT, nhưng bong bóng giờ
+        // định vị theo khung #view-game (containing block do transform) —
+        // phải trừ đi offset của khung đó trước khi gán left/top, không thì
+        // vị trí thả chuột sẽ lệch hẳn khi navbar đang hiện (khung không nằm
+        // ở góc viewport).
+        const gb = document.getElementById("view-game").getBoundingClientRect();
+        const nx = e.clientX - gb.left - size / 2, ny = e.clientY - gb.top - size / 2;
         bubble.style.left = nx + "px";
         bubble.style.top = ny + "px";
         initBubblePhysics(w._id, nx, ny);
@@ -213,9 +233,9 @@ function renderBubbleArena() {
 function initBubblePhysics(wordId, x, y) {
   bubblePhysics.set(wordId, {
     x, y,
-    vx: (Math.random() - 0.5) * 0.15,
-    vy: (Math.random() - 0.5) * 0.15,
-    buoy: -(0.012 + Math.random() * 0.018),
+    vx: (Math.random() - 0.5) * 0.02,
+    vy: (Math.random() - 0.5) * 0.02,
+    buoy: -(0.003 + Math.random() * 0.004),
   });
 }
 
@@ -225,13 +245,18 @@ function stepBubblePhysics(dt) {
     if (!el) { bubblePhysics.delete(wordId); return; }
     if (el.classList.contains("is-dragging")) return;
 
-    p.vx += (Math.random() - 0.5) * 0.05 * dt;
-    p.vy += (Math.random() - 0.5) * 0.04 * dt + p.buoy * dt;
+    // FIX GIẬT: hệ số nhiễu loạn trước đây (0.05*dt) ở dt~16-48ms ra tới
+    // 0.8-2.4 — vượt xa maxSpeed (0.09) nên vận tốc bị KẸP TRẦN mỗi frame,
+    // tạo cảm giác random-jump giật cục thay vì trôi mượt dần. Giờ hệ số nhỏ
+    // hơn ~30 lần, để vận tốc CỘNG DỒN mượt qua nhiều frame trước khi chạm
+    // trần — đồng thời giảm cả maxSpeed/buoy để bay CHẬM lại như yêu cầu.
+    p.vx += (Math.random() - 0.5) * 0.0016 * dt;
+    p.vy += (Math.random() - 0.5) * 0.0013 * dt + p.buoy * dt;
 
-    p.vx *= 0.988;
-    p.vy *= 0.988;
+    p.vx *= 0.985;
+    p.vy *= 0.985;
 
-    const maxSpeed = 0.09;
+    const maxSpeed = 0.028;
     p.vx = Math.max(-maxSpeed, Math.min(maxSpeed, p.vx));
     p.vy = Math.max(-maxSpeed, Math.min(maxSpeed, p.vy));
 
@@ -239,8 +264,9 @@ function stepBubblePhysics(dt) {
     p.y += p.vy * dt;
 
     const size = parseFloat(getComputedStyle(el).getPropertyValue("--size")) || 90;
-    const maxX = window.innerWidth - size;
-    const maxY = window.innerHeight - size;
+    const bounds = getGameArenaBounds();
+    const maxX = bounds.w - size;
+    const maxY = bounds.h - size;
     if (p.x < 0) { p.x = 0; p.vx = Math.abs(p.vx) * 0.6; }
     if (p.x > maxX) { p.x = maxX; p.vx = -Math.abs(p.vx) * 0.6; }
     if (p.y < 0) { p.y = 0; p.vy = Math.abs(p.vy) * 0.6; p.buoy = Math.abs(p.buoy) * 0.5; }
