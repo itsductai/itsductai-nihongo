@@ -1,237 +1,286 @@
 /* =====================================================================
-   game.css — CSS RIÊNG cho "単語バトル" (Game ôn tập). Thiết kế cố tình khác
-   hẳn phần còn lại của app — màu sắc rực rỡ, hiệu ứng động nhiều, đúng tinh
-   thần "game thực thụ" thay vì 1 màn học thông thường.
+   game.css — "単語バトル" — REBUILD TOÀN DIỆN theo góp ý: bong bóng bay
+   chaotic toàn màn hình như bong bóng xà phòng (trong suốt, iridescent),
+   tường lắp ghép full màn hình, phong cách sci-tech (gradient động, phát
+   sáng neon, hoa văn lưới hex/circuit), không emoji cứng (SVG heart/star).
    ===================================================================== */
 
-.game-phase { max-width: 720px; margin: 0 auto; padding: 20px 0 60px; }
+/* ---- Nền chung game — mesh gradient động + lưới hex trang trí ---- */
+#view-game {
+  position: relative; min-height: 100%;
+  background:
+    radial-gradient(1000px 700px at 15% -10%, rgba(107,147,255,0.16), transparent 55%),
+    radial-gradient(900px 650px at 100% 10%, rgba(168,107,255,0.14), transparent 55%),
+    radial-gradient(800px 800px at 50% 120%, rgba(72,201,140,0.10), transparent 55%),
+    #0a0c1a;
+  border-radius: 20px; overflow: hidden;
+  padding: 0 !important;
+}
+#view-game::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.35; z-index: 0;
+  background-image:
+    linear-gradient(30deg, rgba(107,147,255,0.06) 1px, transparent 1px),
+    linear-gradient(150deg, rgba(107,147,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(107,147,255,0.04) 1px, transparent 1px);
+  background-size: 60px 104px, 60px 104px, 60px 104px;
+  animation: gameGridDrift 40s linear infinite;
+}
+@keyframes gameGridDrift { from { background-position: 0 0, 0 0, 0 0; } to { background-position: 400px 200px, -400px 200px, 200px 400px; } }
+
+.game-phase { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; padding: 24px 16px 60px; }
 
 /* ---- Màn thiết lập ---- */
 .game-setup-box {
-  background: radial-gradient(120% 140% at 20% -10%, rgba(107,147,255,0.18), transparent 55%),
-              linear-gradient(160deg, #1c1f3a, #14162a);
-  border: 1px solid rgba(107,147,255,0.3);
-  border-radius: 24px; padding: 36px 30px; text-align: center;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  background: linear-gradient(160deg, rgba(28,31,58,0.9), rgba(16,18,36,0.95));
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+  border-radius: 26px; padding: 40px 32px; text-align: center;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.6), 0 0 0 1px rgba(107,147,255,0.25) inset;
 }
+.game-setup-box::before {
+  content: ""; position: absolute; inset: -1px; border-radius: 26px; z-index: -1;
+  background: linear-gradient(120deg, #6b93ff, #ff6bcb, #ffd15c, #48c98c, #6b93ff);
+  background-size: 300% auto; animation: gameBorderFlow 6s linear infinite;
+  opacity: 0.5; filter: blur(1px);
+}
+@keyframes gameBorderFlow { to { background-position: 300% center; } }
+
 .game-setup-title {
-  font-size: 30px; font-weight: 800;
-  background: linear-gradient(120deg, #8fb0ff, #ff9ad5, #ffd15c);
+  font-size: 32px; font-weight: 900; letter-spacing: 0.02em;
+  background: linear-gradient(120deg, #9fc0ff, #ff9ad5 40%, #ffd15c 70%, #9fc0ff);
+  background-size: 200% auto; animation: gameTitleShine 4s linear infinite;
   -webkit-background-clip: text; background-clip: text; color: transparent;
-  margin-bottom: 6px;
+  margin-bottom: 6px; filter: drop-shadow(0 0 24px rgba(107,147,255,0.35));
 }
-.game-setup-sub { color: #b9c0e0; font-size: 13px; margin-bottom: 28px; }
+@keyframes gameTitleShine { to { background-position: 200% center; } }
+.game-setup-sub { color: #9aa3d0; font-size: 13px; margin-bottom: 30px; letter-spacing: 0.02em; }
 .game-setup-row { margin-bottom: 24px; text-align: left; }
-.game-setup-row label { display: block; font-size: 12px; color: #9aa3d0; font-weight: 700; margin-bottom: 10px; letter-spacing: 0.03em; }
+.game-setup-row label { display: block; font-size: 11.5px; color: #7de8ff; font-weight: 800; margin-bottom: 10px; letter-spacing: 0.06em; text-transform: uppercase; }
+.game-deck-select {
+  width: 100%; padding: 12px 14px; border-radius: 14px; font-size: 13.5px; font-weight: 600;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(107,147,255,0.3); color: #dfe3ff;
+}
 .game-setup-count-row { display: flex; gap: 8px; flex-wrap: wrap; }
 .game-count-preset, .game-dir-preset {
-  flex: 1 1 auto; padding: 10px 14px; border-radius: 12px; font-size: 13px; font-weight: 700;
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: #dfe3ff;
-  cursor: pointer; transition: all .15s ease;
+  flex: 1 1 auto; padding: 11px 14px; border-radius: 14px; font-size: 13px; font-weight: 700;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #b9c0e0;
+  cursor: pointer; transition: all .18s ease;
 }
-.game-count-preset:hover, .game-dir-preset:hover { background: rgba(107,147,255,0.2); }
+.game-count-preset:hover, .game-dir-preset:hover { background: rgba(107,147,255,0.15); color: #fff; }
 .game-count-preset.is-selected, .game-dir-preset.is-selected {
   background: linear-gradient(120deg, #6b93ff, #a98bff); border-color: transparent; color: #fff;
-  box-shadow: 0 6px 18px rgba(107,147,255,0.4);
+  box-shadow: 0 0 22px rgba(107,147,255,0.55), 0 6px 16px rgba(107,147,255,0.3);
 }
 .game-start-btn {
-  margin-top: 8px; width: 100%; padding: 16px; border: none; border-radius: 16px;
-  font-size: 18px; font-weight: 800; color: #fff; cursor: pointer;
-  background: linear-gradient(120deg, #ff6b9d, #6b93ff, #48c98c);
-  background-size: 200% auto; animation: gameBtnShimmer 3s linear infinite;
-  box-shadow: 0 10px 30px rgba(107,147,255,0.35);
+  margin-top: 10px; width: 100%; padding: 17px; border: none; border-radius: 18px;
+  font-size: 18px; font-weight: 900; letter-spacing: 0.03em; color: #fff; cursor: pointer;
+  background: linear-gradient(120deg, #ff6b9d, #6b93ff, #48c98c, #ffd15c, #ff6b9d);
+  background-size: 300% auto; animation: gameBtnShimmer 4s linear infinite;
+  box-shadow: 0 12px 36px rgba(107,147,255,0.4), 0 0 30px rgba(255,107,203,0.25);
   transition: transform .15s ease;
 }
-.game-start-btn:hover { transform: translateY(-2px) scale(1.01); }
-@keyframes gameBtnShimmer { to { background-position: 200% center; } }
+.game-start-btn:hover { transform: translateY(-3px) scale(1.015); }
+@keyframes gameBtnShimmer { to { background-position: 300% center; } }
 .game-back-btn {
-  margin-top: 10px; width: 100%; padding: 10px; border-radius: 12px; font-size: 13px;
-  background: none; border: 1px solid rgba(255,255,255,0.15); color: #b9c0e0; cursor: pointer;
+  margin-top: 10px; width: 100%; padding: 11px; border-radius: 14px; font-size: 13px;
+  background: none; border: 1px solid rgba(255,255,255,0.15); color: #9aa3d0; cursor: pointer;
 }
 
-/* ---- HUD (mạng/sao/tiến độ) ---- */
+/* ---- HUD ---- */
 .game-hud {
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
-  padding: 10px 18px; margin-bottom: 16px; border-radius: 999px;
-  background: rgba(20,22,45,0.8); border: 1px solid rgba(255,255,255,0.1);
-  backdrop-filter: blur(8px);
+  position: relative; z-index: 5;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  padding: 12px 20px; margin-bottom: 4px; border-radius: 999px;
+  background: rgba(10,12,26,0.75); border: 1px solid rgba(107,147,255,0.3);
+  backdrop-filter: blur(10px); box-shadow: 0 0 24px rgba(107,147,255,0.15);
 }
-.game-hud-item { display: flex; align-items: center; gap: 4px; font-size: 15px; font-weight: 700; color: #fff; }
-.game-hud-lives { display: flex; gap: 3px; }
-.game-heart { font-size: 17px; filter: drop-shadow(0 0 6px rgba(107,180,255,0.6)); transition: all .3s ease; }
-.game-heart.is-lost { filter: grayscale(1) opacity(0.25); transform: scale(0.8); }
+.game-hud-item { display: flex; align-items: center; gap: 5px; font-size: 15px; font-weight: 800; color: #fff; }
+.game-hud-lives { display: flex; gap: 4px; }
+.game-heart { width: 19px; height: 19px; color: #ff6b8f; filter: drop-shadow(0 0 8px rgba(255,107,143,0.7)); transition: all .3s ease; }
+.game-heart svg { width: 100%; height: 100%; display: block; }
+.game-heart.is-lost { color: #3a3d55; filter: none; transform: scale(0.75); }
 .game-hud-stars { color: #ffd15c; }
-.game-hud-progress { font-size: 12px; color: #9aa3d0; }
-
-/* ---- Bong bóng thủy tinh — glass/water bubble effect ---- */
-.game-bubble-arena { position: relative; min-height: 260px; margin-bottom: 20px; }
-.game-bubble-pool {
-  position: relative; min-height: 220px;
-  display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center;
-  padding: 20px;
-}
-.game-bubble {
-  position: relative;
-  width: 96px; height: 96px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  text-align: center; padding: 8px; font-size: 13px; font-weight: 700; color: #0d2b3d;
-  cursor: grab; user-select: none;
-  /* Hiệu ứng "bong bóng nước/thủy tinh": gradient nhiều lớp giả ánh sáng phản
-     chiếu + highlight tròn nhỏ góc trên trái, viền mờ trong suốt */
-  background:
-    radial-gradient(circle at 30% 25%, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.25) 18%, transparent 45%),
-    radial-gradient(circle at 70% 75%, rgba(150,220,255,0.35), transparent 60%),
-    linear-gradient(160deg, rgba(180,230,255,0.55), rgba(120,170,255,0.35));
-  border: 1.5px solid rgba(255,255,255,0.7);
-  box-shadow:
-    inset 0 0 20px rgba(255,255,255,0.4),
-    inset 0 -10px 16px rgba(80,140,220,0.25),
-    0 8px 20px rgba(30,60,120,0.35);
-  animation: bubbleFloat var(--float-dur, 5s) ease-in-out var(--float-delay, 0s) infinite;
-}
-@keyframes bubbleFloat {
-  0%, 100% { transform: translate(0, 0) rotate(0deg); }
-  25% { transform: translate(calc(var(--float-x, 0) * 10px), -14px) rotate(2deg); }
-  50% { transform: translate(calc(var(--float-x, 0) * -8px), 6px) rotate(-2deg); }
-  75% { transform: translate(calc(var(--float-x, 0) * 6px), -8px) rotate(1deg); }
-}
-.game-bubble:hover { filter: brightness(1.08); }
-.game-bubble.is-dragging { opacity: 0.4; animation-play-state: paused; }
-
-.game-drop-zones {
-  display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
-  padding: 16px; border-top: 1px dashed rgba(255,255,255,0.15); margin-top: 8px;
-}
-.game-drop-zone {
-  min-width: 130px; padding: 14px 12px; border-radius: 16px; text-align: center;
-  font-size: 12.5px; font-weight: 700; color: #dfe3ff;
-  background: rgba(255,255,255,0.04); border: 2px dashed rgba(255,255,255,0.25);
-  transition: all .15s ease;
-}
-.game-drop-zone.is-hover { background: rgba(107,147,255,0.25); border-color: #6b93ff; transform: scale(1.05); }
-
-/* ---- Tường chữ đã ghép đúng ---- */
-.game-wall { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 10px; }
-.game-wall-item {
-  padding: 10px 14px; border-radius: 14px; text-align: center; min-width: 90px;
-  background: rgba(72,201,140,0.12); border: 1px solid rgba(72,201,140,0.35);
-  animation: wallPop .4s cubic-bezier(.34,1.56,.64,1);
-}
-@keyframes wallPop { from { transform: scale(0); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-.game-wall-kanji { font-size: 16px; font-weight: 800; color: #fff; }
-.game-wall-doc { font-size: 11px; color: #9ee8c0; }
-.game-wall-nghia { font-size: 11px; color: #b9c0e0; }
-
-/* ---- Màn gõ chữ ---- */
-.game-typing-stage { text-align: center; padding: 30px 20px; }
-.game-typing-prompt-main {
-  font-size: 42px; font-weight: 800; color: #fff;
-  filter: drop-shadow(0 0 20px rgba(107,147,255,0.4));
-  margin-bottom: 6px;
-}
-.game-typing-prompt-sub { font-size: 13px; color: #9aa3d0; margin-bottom: 24px; }
-.game-typing-slots { display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
-.game-typing-slot {
-  width: 38px; height: 46px; border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 20px; font-weight: 800; color: #fff;
-  background: rgba(255,255,255,0.05); border-bottom: 3px solid rgba(107,147,255,0.4);
-  transition: all .15s ease;
-}
-.game-typing-slot.is-filled { border-bottom-color: #6b93ff; background: rgba(107,147,255,0.12); }
-.game-typing-input {
-  width: 100%; max-width: 320px; padding: 12px 16px; border-radius: 14px;
-  font-size: 16px; text-align: center; background: rgba(255,255,255,0.06);
-  border: 2px solid rgba(107,147,255,0.35); color: #fff; margin-bottom: 12px;
-}
-.game-typing-input:focus { outline: none; border-color: #6b93ff; }
-.game-typing-feedback { min-height: 24px; font-size: 15px; font-weight: 700; margin-bottom: 14px; }
-.game-typing-feedback.is-correct { color: #48c98c; }
-.game-typing-feedback.is-wrong { color: #ff6b6b; animation: feedbackShake .4s ease; }
-.game-typing-feedback.is-hint { color: #ffd15c; }
-@keyframes feedbackShake { 0%,100%{transform:translateX(0);} 25%{transform:translateX(-6px);} 75%{transform:translateX(6px);} }
-.game-typing-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-.game-hint-btn {
-  padding: 10px 14px; border-radius: 12px; font-size: 12.5px; font-weight: 700;
-  background: rgba(255,209,92,0.12); border: 1px solid rgba(255,209,92,0.35); color: #ffd15c;
+.game-svg-star { width: 17px; height: 17px; display: inline-flex; color: #ffd15c; filter: drop-shadow(0 0 8px rgba(255,209,92,0.7)); vertical-align: -3px; }
+.game-svg-star svg { width: 100%; height: 100%; }
+.game-hud-progress { font-size: 11.5px; color: #7de8ff; font-weight: 700; }
+.game-skip-btn {
+  padding: 7px 14px; border-radius: 999px; font-size: 12px; font-weight: 700;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); color: #b9c0e0;
   cursor: pointer; transition: all .15s ease;
 }
-.game-hint-btn:hover { background: rgba(255,209,92,0.22); transform: translateY(-1px); }
-.game-submit-btn {
-  padding: 10px 26px; border-radius: 12px; font-size: 14px; font-weight: 800; color: #fff;
-  background: linear-gradient(120deg, #6b93ff, #a98bff); border: none; cursor: pointer;
-  box-shadow: 0 6px 18px rgba(107,147,255,0.35); transition: transform .15s ease;
-}
-.game-submit-btn:hover { transform: translateY(-1px); }
+.game-skip-btn:hover { background: rgba(107,147,255,0.2); color: #fff; }
 
-/* Rung nhẹ khi trả lời/ghép sai */
+/* =====================================================================
+   MÀN BONG BÓNG — full màn hình, tường ở dưới, bong bóng bay chaotic phía
+   trên (position:fixed để không giới hạn trong khung cha).
+   ===================================================================== */
+
+/* Tường lắp ghép FULL MÀN HÌNH — lưới ô đều, hiện ngay từ đầu toàn bộ đáp án
+   dạng "khuyết", ghép đúng thì ô đó sáng lên hiện chữ thật (giống lắp ráp). */
+.game-wall-full {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px; padding: 16px 8px 40px;
+  min-height: 50vh;
+}
+.game-wall-slot {
+  position: relative; min-height: 100px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px;
+  background: repeating-linear-gradient(135deg, rgba(107,147,255,0.05) 0 8px, rgba(107,147,255,0.09) 8px 16px);
+  border: 2px dashed rgba(107,147,255,0.35);
+  color: #9aa3d0; font-size: 13px; font-weight: 700;
+  transition: all .2s ease;
+}
+.game-wall-slot.is-hover { border-color: #7de8ff; background: rgba(125,232,255,0.14); transform: scale(1.03); }
+.game-wall-slot.is-solved {
+  border: 2px solid rgba(72,201,140,0.5); background: linear-gradient(160deg, rgba(72,201,140,0.14), rgba(72,201,140,0.04));
+  box-shadow: 0 0 26px rgba(72,201,140,0.25); flex-direction: column; animation: wallPop .45s cubic-bezier(.34,1.56,.64,1);
+}
+@keyframes wallPop { from { transform: scale(0.4) rotate(-8deg); opacity: 0; } to { transform: scale(1) rotate(0); opacity: 1; } }
+.game-wall-slot-label { font-size: 12.5px; }
+.game-wall-kanji { font-size: 17px; font-weight: 900; color: #fff; }
+.game-wall-doc { font-size: 10.5px; color: #7de8ff; margin-top: 2px; }
+.game-wall-nghia { font-size: 10.5px; color: #9ee8c0; margin-top: 1px; }
+
+/* Khung bong bóng — fixed, phủ toàn viewport, bong bóng con bay tự do bên
+   trong (mỗi quả position:fixed riêng, không phụ thuộc layout cha). */
+.game-bubble-arena { position: fixed; inset: 0; z-index: 40; pointer-events: none; }
+.game-bubble { pointer-events: auto; }
+
+/* Bong bóng — hiệu ứng THỦY TINH/XÀ PHÒNG: nhiều lớp gradient giả ánh sáng
+   khúc xạ + màu iridescent đổi theo --hue random mỗi quả, viền cực mảnh
+   trong suốt, bay theo quỹ đạo 2 điểm ngẫu nhiên (dx1/dy1 -> dx2/dy2) lặp
+   lại không đồng bộ giữa các quả (mỗi quả 1 --dur/--delay riêng). */
+.game-bubble {
+  position: fixed;
+  width: var(--size, 90px); height: var(--size, 90px); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  padding: 6px; font-size: 12.5px; font-weight: 800; color: rgba(255,255,255,0.95);
+  cursor: grab; user-select: none; z-index: 41;
+  background:
+    radial-gradient(circle at 28% 22%, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.15) 16%, transparent 42%),
+    radial-gradient(circle at 75% 80%, hsla(calc(var(--hue) + 60), 90%, 70%, 0.35), transparent 60%),
+    linear-gradient(150deg, hsla(var(--hue), 85%, 75%, 0.28), hsla(calc(var(--hue) + 80), 85%, 65%, 0.16));
+  border: 1px solid rgba(255,255,255,0.55);
+  box-shadow:
+    inset 0 0 24px rgba(255,255,255,0.3),
+    inset 0 -12px 20px hsla(var(--hue), 80%, 60%, 0.18),
+    0 10px 26px rgba(10,14,30,0.4);
+  backdrop-filter: blur(2px);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  animation: bubbleChaotic var(--dur, 8s) ease-in-out var(--delay, 0s) infinite alternate;
+}
+@keyframes bubbleChaotic {
+  0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
+  33%  { transform: translate(calc(var(--dx1, 1) * 90px), calc(var(--dy1, 1) * 60px)) scale(1.04) rotate(6deg); }
+  66%  { transform: translate(calc(var(--dx2, -1) * 80px), calc(var(--dy2, -1) * 70px)) scale(0.97) rotate(-5deg); }
+  100% { transform: translate(calc(var(--dx1, 1) * -60px), calc(var(--dy2, -1) * 50px)) scale(1.02) rotate(3deg); }
+}
+.game-bubble:hover { filter: brightness(1.15); }
+.game-bubble.is-dragging { opacity: 0.35; animation-play-state: paused; cursor: grabbing; }
+
+/* ---- Màn gõ chữ ---- */
+.game-typing-stage { text-align: center; padding: 30px 16px; }
+.game-typing-prompt-kanji {
+  font-size: 46px; font-weight: 900; color: #fff; line-height: 1.2;
+  filter: drop-shadow(0 0 28px rgba(107,147,255,0.5));
+}
+.game-typing-prompt-nghia { font-size: 16px; color: #9ee8c0; font-weight: 700; margin: 4px 0 4px; }
+.game-typing-prompt-sub { font-size: 12px; color: #7de8ff; margin-bottom: 22px; letter-spacing: 0.02em; }
+
+.game-typing-hintcircles { display: flex; gap: 8px; justify-content: center; margin-bottom: 14px; flex-wrap: wrap; }
+.game-hint-circle {
+  width: 32px; height: 32px; border-radius: 50%; font-size: 12px; font-weight: 800;
+  background: rgba(255,209,92,0.12); border: 1.5px solid rgba(255,209,92,0.5); color: #ffd15c;
+  cursor: pointer; transition: all .15s ease;
+}
+.game-hint-circle:hover { background: rgba(255,209,92,0.28); transform: scale(1.1); box-shadow: 0 0 16px rgba(255,209,92,0.5); }
+.game-hint-circle.is-used { background: rgba(72,201,140,0.15); border-color: rgba(72,201,140,0.5); color: #48c98c; cursor: default; }
+.game-hint-circle.is-used:hover { transform: none; box-shadow: none; }
+
+.game-typing-slots { display: flex; gap: 8px; justify-content: center; margin-bottom: 22px; flex-wrap: wrap; }
+.game-typing-slot {
+  width: 42px; height: 50px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; font-weight: 800; color: #fff;
+  background: rgba(255,255,255,0.04); border-bottom: 3px solid rgba(107,147,255,0.35);
+}
+.game-typing-slot.is-revealed { border-bottom-color: #ffd15c; background: rgba(255,209,92,0.1); color: #ffd15c; }
+.game-typing-input {
+  width: 100%; max-width: 320px; padding: 13px 16px; border-radius: 16px;
+  font-size: 17px; text-align: center; background: rgba(255,255,255,0.05);
+  border: 2px solid rgba(107,147,255,0.4); color: #fff; margin-bottom: 14px;
+  box-shadow: 0 0 0 0 rgba(107,147,255,0);
+  transition: box-shadow .2s ease, border-color .2s ease;
+}
+.game-typing-input:focus { outline: none; border-color: #7de8ff; box-shadow: 0 0 24px rgba(125,232,255,0.35); }
+.game-typing-feedback { min-height: 26px; font-size: 16px; font-weight: 800; margin-bottom: 16px; }
+.game-typing-feedback.is-correct { color: #48c98c; text-shadow: 0 0 16px rgba(72,201,140,0.6); }
+.game-typing-feedback.is-wrong { color: #ff6b6b; animation: feedbackShake .4s ease; text-shadow: 0 0 16px rgba(255,107,107,0.5); }
+@keyframes feedbackShake { 0%,100%{transform:translateX(0);} 25%{transform:translateX(-6px);} 75%{transform:translateX(6px);} }
+.game-submit-btn {
+  padding: 13px 34px; border-radius: 16px; font-size: 15px; font-weight: 900; color: #fff;
+  background: linear-gradient(120deg, #6b93ff, #a98bff); border: none; cursor: pointer;
+  box-shadow: 0 10px 28px rgba(107,147,255,0.4); transition: transform .15s ease;
+}
+.game-submit-btn:hover { transform: translateY(-2px); }
+
 .game-shake-fail { animation: gameShakeFail .45s ease; }
 @keyframes gameShakeFail {
   0%,100% { transform: translateX(0); }
-  20% { transform: translateX(-10px); }
-  40% { transform: translateX(8px); }
-  60% { transform: translateX(-6px); }
-  80% { transform: translateX(4px); }
+  20% { transform: translateX(-10px); } 40% { transform: translateX(8px); }
+  60% { transform: translateX(-6px); } 80% { transform: translateX(4px); }
 }
 
 /* ---- Màn kết quả + huy chương ---- */
 .game-result-box {
-  max-width: 420px; margin: 40px auto; text-align: center; padding: 40px 30px;
-  background: radial-gradient(120% 140% at 50% -10%, rgba(255,209,92,0.12), transparent 55%),
-              linear-gradient(160deg, #1c1f3a, #14162a);
-  border: 1px solid rgba(255,255,255,0.12); border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  max-width: 420px; margin: 40px auto; text-align: center; padding: 44px 32px;
+  background: linear-gradient(160deg, rgba(28,31,58,0.92), rgba(16,18,36,0.96));
+  border: 1px solid rgba(255,209,92,0.3); border-radius: 26px;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.6), 0 0 40px rgba(255,209,92,0.1);
 }
-.game-medal-icon { font-size: 90px; filter: drop-shadow(0 0 30px rgba(255,209,92,0.5)); animation: medalPop .6s cubic-bezier(.34,1.56,.64,1); }
+.game-medal-icon { width: 110px; height: 110px; margin: 0 auto; filter: drop-shadow(0 0 34px rgba(255,209,92,0.55)); animation: medalPop .6s cubic-bezier(.34,1.56,.64,1); }
+.game-medal-icon svg { width: 100%; height: 100%; }
 @keyframes medalPop { from { transform: scale(0) rotate(-30deg); opacity: 0; } to { transform: scale(1) rotate(0); opacity: 1; } }
-.game-result-title { font-size: 22px; font-weight: 800; color: #fff; margin: 12px 0 20px; }
-.game-result-stats { display: flex; flex-direction: column; gap: 6px; font-size: 14px; color: #dfe3ff; margin-bottom: 26px; }
+.game-result-title { font-size: 23px; font-weight: 900; color: #fff; margin: 14px 0 22px; }
+.game-result-stats { display: flex; flex-direction: column; gap: 7px; font-size: 14px; color: #dfe3ff; margin-bottom: 28px; font-weight: 600; }
 
 /* ---- Overlay Game Over ---- */
-.game-overlay {
-  position: fixed; inset: 0; z-index: 500;
-  background: rgba(5,8,20,0.85); backdrop-filter: blur(6px);
-  display: flex; align-items: center; justify-content: center;
-}
+.game-overlay { position: fixed; inset: 0; z-index: 500; background: rgba(5,6,16,0.9); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; }
 .game-over-box { text-align: center; padding: 40px; }
-.game-over-title { font-size: 30px; font-weight: 800; color: #ff6b6b; margin-bottom: 10px; }
-.game-over-sub { font-size: 14px; color: #b9c0e0; margin-bottom: 26px; }
+.game-over-title { font-size: 32px; font-weight: 900; color: #ff6b6b; margin-bottom: 10px; text-shadow: 0 0 30px rgba(255,107,107,0.6); }
+.game-over-sub { font-size: 14px; color: #9aa3d0; margin-bottom: 28px; }
 
-/* ---- Pháo giấy (confetti) — particle bay ra rồi tự rơi/mờ dần ---- */
+/* ---- Pháo giấy ---- */
 .game-confetti-piece {
   position: fixed; width: 8px; height: 8px; border-radius: 2px; pointer-events: none; z-index: 600;
   animation: confettiBurst .85s ease-out forwards;
 }
 @keyframes confettiBurst {
   0% { transform: translate(0,0) rotate(0deg); opacity: 1; }
-  100% {
-    transform:
-      translate(calc(cos(var(--angle)) * var(--dist)), calc(sin(var(--angle)) * var(--dist) + 60px))
-      rotate(360deg);
-    opacity: 0;
-  }
+  100% { transform: translate(var(--dx, 60px), var(--dy, 60px)) rotate(360deg); opacity: 0; }
 }
 
-/* ---- Thành tích (achievements grid) ---- */
-.achievements-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; margin-top: 16px;
-}
+/* ---- Thành tích ---- */
+.achievements-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; margin-top: 16px; }
 .achievement-card {
-  padding: 18px 14px; border-radius: 18px; text-align: center;
-  background: linear-gradient(160deg, #1c1f3a, #14162a);
+  padding: 20px 14px; border-radius: 20px; text-align: center;
+  background: linear-gradient(160deg, rgba(28,31,58,0.9), rgba(16,18,36,0.95));
   border: 1px solid rgba(255,255,255,0.1); transition: opacity .3s ease, filter .3s ease;
 }
-.achievement-icon { font-size: 40px; margin-bottom: 8px; filter: drop-shadow(0 0 12px rgba(255,209,92,0.4)); }
+.achievement-icon { width: 46px; height: 46px; margin: 0 auto 8px; filter: drop-shadow(0 0 14px rgba(255,209,92,0.4)); }
+.achievement-icon svg { width: 100%; height: 100%; }
 .achievement-deck { font-size: 12.5px; font-weight: 700; color: #fff; margin-bottom: 4px; }
 .achievement-date { font-size: 11px; color: #9aa3d0; }
 .achievement-expiring { font-size: 10px; color: #ff9a6b; margin-top: 8px; }
 
 @media (prefers-reduced-motion: reduce) {
-  .game-bubble, .game-start-btn, .game-medal-icon { animation: none !important; }
+  .game-bubble, .game-start-btn, .game-medal-icon, .game-setup-box::before, #view-game::before { animation: none !important; }
 }
 
 @media (max-width: 640px) {
-  .game-setup-box, .game-result-box { padding: 26px 18px; }
-  .game-typing-prompt-main { font-size: 32px; }
-  .game-bubble { width: 78px; height: 78px; font-size: 11.5px; }
+  .game-setup-box, .game-result-box { padding: 28px 20px; }
+  .game-typing-prompt-kanji { font-size: 34px; }
+  .game-wall-full { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
 }
