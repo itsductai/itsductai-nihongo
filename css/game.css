@@ -169,13 +169,17 @@
     0 10px 26px rgba(10,14,30,0.4);
   backdrop-filter: blur(2px);
   text-shadow: 0 1px 4px rgba(0,0,0,0.5);
-  animation: bubbleChaotic var(--dur, 8s) ease-in-out var(--delay, 0s) infinite alternate;
 }
-@keyframes bubbleChaotic {
-  0%   { transform: translate(0, 0) scale(1) rotate(0deg); }
-  33%  { transform: translate(calc(var(--dx1, 1) * 90px), calc(var(--dy1, 1) * 60px)) scale(1.04) rotate(6deg); }
-  66%  { transform: translate(calc(var(--dx2, -1) * 80px), calc(var(--dy2, -1) * 70px)) scale(0.97) rotate(-5deg); }
-  100% { transform: translate(calc(var(--dx1, 1) * -60px), calc(var(--dy2, -1) * 50px)) scale(1.02) rotate(3deg); }
+/* Trôi tự nhiên kiểu bong bóng xà phòng thật: luôn có xu hướng bay LÊN (wy âm),
+   đung đưa trái-phải nhẹ nhàng qua 3 waypoint thay vì lặp 1 vòng đơn giản —
+   nhìn mượt và ngẫu nhiên hơn hẳn bản cũ (chỉ 2 điểm, biên độ nhỏ, không có
+   xu hướng rõ ràng nên trông như "rung tại chỗ"). */
+@keyframes bubbleNatural {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  25%  { transform: translate(calc(var(--wx1, 0) * 120px), calc(var(--wy1, -1) * 160px)) rotate(5deg); }
+  50%  { transform: translate(calc(var(--wx2, 0) * 140px), calc(var(--wy2, -1) * 260px)) rotate(-4deg); }
+  75%  { transform: translate(calc(var(--wx3, 0) * 110px), calc(var(--wy3, -1) * 340px)) rotate(3deg); }
+  100% { transform: translate(calc(var(--wx1, 0) * 60px), calc(var(--wy3, -1) * 420px)) rotate(0deg); }
 }
 .game-bubble:hover { filter: brightness(1.15); }
 .game-bubble.is-dragging { opacity: 0.35; animation-play-state: paused; cursor: grabbing; }
