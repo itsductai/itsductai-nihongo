@@ -83,24 +83,60 @@ function parseDokkaiParagraph(text, vocabIndex) {
   }).join("");
 }
 
+// Minh họa SVG gốc theo TỪNG CHỦ ĐỀ (không phải từng bài, để hiệu quả) — tự
+// vẽ tay, không lấy ảnh thật từ internet (tránh y hệt vấn đề bản quyền như
+// NHK trước đó, chỉ khác là ảnh thay vì chữ). Dùng chung style tối/glow với
+// game.css cho đồng bộ giao diện.
+const DOKKAI_CATEGORY_ICONS = {
+  "経済": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><path d="M20 90 L60 60 L100 75 L140 35 L180 20" stroke="#6b93ff" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="180" cy="20" r="5" fill="#ffd15c"/><rect x="20" y="95" width="15" height="15" fill="#48c98c" opacity="0.6"/><rect x="60" y="80" width="15" height="30" fill="#48c98c" opacity="0.6"/><rect x="100" y="70" width="15" height="40" fill="#48c98c" opacity="0.6"/><rect x="140" y="55" width="15" height="55" fill="#48c98c" opacity="0.6"/></svg>`,
+  "社会": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><circle cx="60" cy="45" r="18" fill="#a98bff"/><rect x="42" y="66" width="36" height="40" rx="8" fill="#a98bff" opacity="0.7"/><circle cx="130" cy="50" r="14" fill="#6b93ff"/><rect x="116" y="66" width="28" height="36" rx="8" fill="#6b93ff" opacity="0.7"/><circle cx="165" cy="55" r="11" fill="#48c98c"/><rect x="154" y="68" width="22" height="30" rx="6" fill="#48c98c" opacity="0.7"/></svg>`,
+  "心理学": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><path d="M100 20 C60 20 40 50 45 75 C48 90 60 95 65 100 L70 110 L130 110 L135 100 C140 95 152 90 155 75 C160 50 140 20 100 20Z" fill="none" stroke="#ff6b6b" stroke-width="2.5"/><circle cx="80" cy="55" r="4" fill="#ffd15c"/><circle cx="105" cy="45" r="4" fill="#ffd15c"/><circle cx="125" cy="60" r="4" fill="#ffd15c"/><circle cx="95" cy="70" r="4" fill="#ffd15c"/><path d="M80 55 L105 45 M105 45 L125 60 M125 60 L95 70 M95 70 L80 55" stroke="#ffd15c" stroke-width="1" opacity="0.5"/></svg>`,
+  "文化": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><circle cx="100" cy="60" r="42" fill="none" stroke="#7de8ff" stroke-width="2"/><path d="M58 60 Q100 30 142 60 Q100 90 58 60Z" fill="none" stroke="#7de8ff" stroke-width="1.5"/><path d="M100 18 L100 102 M100 18 Q130 40 100 60 Q70 80 100 102" stroke="#7de8ff" stroke-width="1.5" fill="none"/></svg>`,
+  "健康": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><path d="M40 60 L70 60 L80 30 L95 90 L108 45 L118 60 L160 60" stroke="#48c98c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="150" cy="35" r="16" fill="none" stroke="#ffd15c" stroke-width="2"/><path d="M150 27 L150 43 M142 35 L158 35" stroke="#ffd15c" stroke-width="2"/></svg>`,
+};
+function getDokkaiCategoryIcon(category) {
+  return DOKKAI_CATEGORY_ICONS[category] || DOKKAI_CATEGORY_ICONS["社会"];
+}
+
 function initReadingMode() {
   App.reading = null;
+  App.dokkaiCategoryFilter = App.dokkaiCategoryFilter || "all";
   document.querySelectorAll(".dokkai-phase").forEach((p) => p.classList.add("hidden"));
   document.getElementById("dokkaiPhasePicker").classList.remove("hidden");
+  renderDokkaiCategoryFilter();
   renderDokkaiPicker();
+}
+
+function renderDokkaiCategoryFilter() {
+  const categories = ["all", ...new Set(App.dokkaiArticles.map((a) => a.category).filter(Boolean))];
+  const wrap = document.getElementById("dokkaiCategoryFilter");
+  wrap.innerHTML = categories.map((c) =>
+    `<button class="dokkai-category-btn${App.dokkaiCategoryFilter === c ? " is-active" : ""}" data-category="${c}">${c === "all" ? "すべて" : c}</button>`
+  ).join("");
+  wrap.querySelectorAll("[data-category]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      App.dokkaiCategoryFilter = btn.dataset.category;
+      renderDokkaiCategoryFilter();
+      renderDokkaiPicker();
+    });
+  });
 }
 
 function renderDokkaiPicker() {
   const grid = document.getElementById("dokkaiArticleGrid");
-  if (!App.dokkaiArticles.length) {
-    grid.innerHTML = `<div class="dash-chart-empty">Chưa có bài đọc nào — thêm file JSON vào dokkai-articles/.</div>`;
+  const filter = App.dokkaiCategoryFilter || "all";
+  const list = filter === "all" ? App.dokkaiArticles : App.dokkaiArticles.filter((a) => a.category === filter);
+  if (!list.length) {
+    grid.innerHTML = `<div class="dash-chart-empty">Chưa có bài đọc nào ở chủ đề này.</div>`;
     return;
   }
-  grid.innerHTML = App.dokkaiArticles.map((a) => `
+  grid.innerHTML = list.map((a) => `
     <button class="dokkai-article-card" data-article-id="${a.id}">
+      <div class="dokkai-article-card-illust">${getDokkaiCategoryIcon(a.category)}</div>
       <div class="dokkai-article-card-head">
         <span class="dokkai-level-badge" style="background:${DOKKAI_LEVEL_COLORS[a.level] || "var(--accent)"}22; color:${DOKKAI_LEVEL_COLORS[a.level] || "var(--accent)"}">${a.level}</span>
         <span class="dokkai-source-badge dokkai-source-${a.source}">${a.source === "ai" ? "AI" : "Zane"}</span>
+        ${a.category ? `<span class="dokkai-category-badge">${a.category}</span>` : ""}
       </div>
       <div class="dokkai-article-card-title">${a.title}</div>
       <div class="dokkai-article-card-sub">${a.titleVi || ""}</div>
@@ -120,6 +156,7 @@ function startReadingArticle(articleId) {
   document.getElementById("dokkaiPhasePicker").classList.add("hidden");
   document.getElementById("dokkaiPhaseRead").classList.remove("hidden");
   document.getElementById("dokkaiReadTitle").textContent = article.title;
+  document.getElementById("dokkaiReadIllust").innerHTML = getDokkaiCategoryIcon(article.category);
   const noteEl = document.getElementById("dokkaiSourceNote");
   noteEl.textContent = article.sourceNote || "";
   noteEl.classList.toggle("hidden", !article.sourceNote);
