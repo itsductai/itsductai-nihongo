@@ -326,6 +326,7 @@ function renderNav() {
   if (App.decks.some((d) => d.type === "TUVUNG")) {
     const gameItems = [
       buildNavItemBtn("game", "🎮", "単語バトル（ボキャブラリーゲーム）"),
+      buildNavItemBtn("listen-game", "🎧", "聞き取りゲーム（リスニング）"),
     ];
     nav.appendChild(buildNavCategory(navIcon("gamepad"), "Game", gameItems, gameItems.map((b) => b.dataset.mode)));
   }
@@ -482,6 +483,7 @@ function setMode(mode) {
   if (mode === "table") renderTable();
   if (mode === "srs") initSrsMode();
   if (mode === "game") initGameMode();
+  if (mode === "listen-game") initListenGameMode();
   if (mode === "achievements") renderAchievementsView();
 
   if (mode === "quiz" && (App.quizNeedsReset || !App.quizQuestions.length)) {

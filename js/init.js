@@ -579,6 +579,15 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("btnGameBackFromResult").addEventListener("click", backToGameSetup);
   document.getElementById("btnGameOverRetry").addEventListener("click", backToGameSetup);
 
+  // ----- Game nghe (聞き取りゲーム) -----
+  document.querySelectorAll(".lg-count-preset").forEach((btn) => {
+    btn.addEventListener("click", () => pickListenGameCount(btn));
+  });
+  document.getElementById("btnLgStart").addEventListener("click", startListenGame);
+  document.getElementById("btnLgReplay").addEventListener("click", replayListenGameAudio);
+  document.getElementById("btnLgPlayAgain").addEventListener("click", backToListenGameSetup);
+  document.getElementById("btnLgBackFromResult").addEventListener("click", backToListenGameSetup);
+
   // ----- Quiz mode -----
   document.getElementById("btnQuizRestart").addEventListener("click", initQuizMode);
   document.getElementById("quizDirectionPicker").addEventListener("change", (e) => {

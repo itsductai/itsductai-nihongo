@@ -527,6 +527,28 @@ function speakJapanese(text) {
   } catch (e) { /* ignore lỗi phát âm, không làm ảnh hưởng trải nghiệm học */ }
 }
 
+// Phát âm KHÔNG phụ thuộc App.speechEnabled (setting đó chỉ dành cho "tự đọc
+// khi lật thẻ Flashcard") — dùng cho các chỗ mà âm thanh là CƠ CHẾ CHÍNH chứ
+// không phải tiện ích phụ (vd game nghe đoán nghĩa). Có onEnd callback THẬT
+// (sự kiện speechSynthesis "end") thay vì đoán thời lượng bằng setTimeout —
+// chính xác tuyệt đối, không lo chồng tiếng hay delay sai.
+function speakJapaneseForced(text, onEnd) {
+  if (!text || !("speechSynthesis" in window)) { if (onEnd) onEnd(); return; }
+  try {
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = "ja-JP";
+    utter.rate = 0.95;
+    const voice = cachedJapaneseVoice || pickJapaneseVoice();
+    if (voice) utter.voice = voice;
+    if (onEnd) {
+      utter.onend = onEnd;
+      utter.onerror = onEnd; // vẫn gọi callback nếu lỗi, tránh kẹt luồng chờ mãi
+    }
+    window.speechSynthesis.speak(utter);
+  } catch (e) { if (onEnd) onEnd(); }
+}
+
 // Đọc đúng cách đọc thật (doc, không phải doc_marked có dấu **) hoặc cautruc cho ngữ pháp
 function speakWord(w) {
   if (!w) return;
