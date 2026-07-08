@@ -105,6 +105,10 @@ function renderChoukaiPickerState() {
   const hasResultShown = !document.getElementById("choukaiResult").classList.contains("hidden");
   document.getElementById("choukaiEmpty").classList.toggle("hidden", !!App.currentChoukaiId);
   document.getElementById("choukaiBody").classList.toggle("hidden", !App.currentChoukaiId || hasResultShown);
+  // Grid chọn đề chỉ hiện khi CHƯA chọn đề nào — cùng lỗi với exam picker:
+  // trước đây luôn hiện dù đã bắt đầu luyện, chiếm hết màn hình, làm tưởng
+  // bấm không có phản ứng gì. Giờ tự ẩn theo đúng App.currentChoukaiId.
+  document.getElementById("choukaiPickerGrid").classList.toggle("hidden", !!App.currentChoukaiId);
 }
 
 function getChoukaiTest(testId) {
@@ -742,6 +746,21 @@ function choukaiGoPrev() {
     App.choukaiPos--;
     renderChoukaiQuestion();
   }
+}
+
+// Quay lại màn chọn đề nghe — cùng logic backToExamPicker(): cảnh báo xác nhận
+// nếu đang làm dở (choukaiBody đang hiện, chưa tới màn kết quả).
+function backToChoukaiPicker() {
+  const isInProgress = !document.getElementById("choukaiBody").classList.contains("hidden");
+  if (isInProgress) {
+    const ok = confirm("Bạn chưa làm xong đề nghe này. Thoát ra sẽ hủy tiến độ đang làm — bạn có chắc muốn quay lại chọn đề khác không?");
+    if (!ok) return;
+  }
+  const audioEl = document.getElementById("choukaiAudioEl");
+  if (audioEl) audioEl.pause();
+  App.currentChoukaiId = null;
+  document.getElementById("choukaiResult").classList.add("hidden");
+  renderChoukaiPickerState();
 }
 
 function exitChoukaiEarlyAndShowResult() {

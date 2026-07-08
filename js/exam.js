@@ -401,6 +401,7 @@ function viewSavedExamResult(examId) {
   document.getElementById("examTitleLabel").textContent = exam.title;
   document.getElementById("examEmpty").classList.add("hidden");
   document.getElementById("examBody").classList.add("hidden");
+  document.getElementById("examPickerGrid").classList.add("hidden");
   document.getElementById("examResult").classList.remove("hidden");
 
   const correctCount = Object.values(App.examHistory).filter((h) => h.firstTryCorrect === true).length;
@@ -449,6 +450,7 @@ function startExam(examId) {
   document.getElementById("examResult").classList.add("hidden");
   document.getElementById("examBody").classList.remove("hidden");
   document.getElementById("examEmpty").classList.add("hidden");
+  document.getElementById("examPickerGrid").classList.add("hidden");
   // Nút "Thoát & xem kết quả" chỉ có ý nghĩa ở chế độ chấm ngay (vì đó là chế độ
   // có vòng lặp làm-lại-câu-sai có thể kéo dài) — chấm cuối bài đã đi tuần tự
   // hết đề 1 lượt rồi nên không cần "thoát sớm".
@@ -918,6 +920,26 @@ function exitExamEarlyAndShowResult() {
   finishExam();
 }
 
+// Quay lại màn chọn đề — nếu đề ĐANG LÀM DỞ (examBody đang hiện, chưa tới màn
+// kết quả) thì cảnh báo xác nhận trước khi hủy, tránh mất tiến độ đang làm mà
+// không hay biết. Nếu đã ở màn kết quả (examResult hiện) thì không cần hỏi vì
+// bài đã hoàn thành, không mất gì cả.
+function backToExamPicker() {
+  const isInProgress = !document.getElementById("examBody").classList.contains("hidden");
+  if (isInProgress) {
+    const ok = confirm("Bạn chưa làm xong đề này. Thoát ra sẽ hủy tiến độ đang làm — bạn có chắc muốn quay lại chọn đề khác không?");
+    if (!ok) return;
+  }
+  clearInterval(App.examPerQTimerHandle);
+  clearInterval(App.examTotalTimerHandle);
+  App.currentExamId = null;
+  document.getElementById("examBody").classList.add("hidden");
+  document.getElementById("examResult").classList.add("hidden");
+  document.getElementById("examPickerGrid").classList.remove("hidden");
+  document.getElementById("examEmpty").classList.remove("hidden");
+  document.getElementById("examTitleLabel").textContent = "Chưa chọn đề";
+}
+
 function finishExam() {
   clearInterval(App.examPerQTimerHandle);
   clearInterval(App.examTotalTimerHandle);
@@ -928,6 +950,7 @@ function finishExam() {
   }
 
   document.getElementById("examBody").classList.add("hidden");
+  document.getElementById("examPickerGrid").classList.add("hidden");
   document.getElementById("examResult").classList.remove("hidden");
 
   document.getElementById("examFinalScore").textContent =

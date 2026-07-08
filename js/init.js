@@ -595,6 +595,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     confirmExamMode("review");
   });
   document.getElementById("btnExamRestart").addEventListener("click", restartCurrentExam);
+  document.getElementById("btnExamBackToPicker").addEventListener("click", backToExamPicker);
+  document.getElementById("btnChoukaiBackToPicker").addEventListener("click", backToChoukaiPicker);
   document.getElementById("btnExamDetailModalClose").addEventListener("click", closeExamDetailModal);
   document.getElementById("examDetailModalOverlay").addEventListener("click", (e) => {
     if (e.target.id === "examDetailModalOverlay") closeExamDetailModal();
