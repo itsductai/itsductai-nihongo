@@ -162,9 +162,14 @@ function renderFullWall() {
   });
 }
 
+const bubblePhysics = new Map(); // wordId -> {x, y, vx, vy, buoy}
+let bubblePhysicsRAF = null;
+let bubblePhysicsLastTime = 0;
+
 function renderBubbleArena() {
   const arena = document.getElementById("gameBubbleArena");
   arena.innerHTML = "";
+  bubblePhysics.clear();
   const remainingWords = App.game.bubbleRemaining.map((id) => App.game.words.find((w) => w._id === id));
   const isK2N = App.game.direction === "kanji-to-nghia";
 
@@ -178,50 +183,94 @@ function renderBubbleArena() {
 
     const size = 76 + Math.random() * 34;
     bubble.style.setProperty("--size", size.toFixed(0) + "px");
-    // Random khắp TOÀN màn hình thật sự (0-100vw/vh), chỉ chừa đúng nửa kích
-    // thước bong bóng ở mép để không bị cắt nửa ra ngoài viewport.
-    const marginVw = (size / window.innerWidth) * 100 / 2;
-    const marginVh = (size / window.innerHeight) * 100 / 2;
-    bubble.style.left = (marginVw + Math.random() * (100 - marginVw * 2)) + "vw";
-    bubble.style.top = (marginVh + Math.random() * (100 - marginVh * 2)) + "vh";
-    setNaturalBubbleMotion(bubble);
+    bubble.style.setProperty("--hue", Math.floor(Math.random() * 360));
+    const x = Math.random() * (window.innerWidth - size);
+    const y = Math.random() * (window.innerHeight - size);
+    bubble.style.left = x + "px";
+    bubble.style.top = y + "px";
+
+    initBubblePhysics(w._id, x, y);
 
     bubble.addEventListener("dragstart", (e) => {
       e.dataTransfer.setData("text/plain", w._id);
       bubble.classList.add("is-dragging");
     });
-    // Thả chuột ở đâu, bong bóng "ở lại" đúng chỗ đó rồi tiếp tục trôi tự
-    // nhiên TỪ vị trí mới — không nhảy về vị trí cũ. dragend luôn có tọa độ
-    // chuột cuối cùng (kể cả khi thả trật, không trúng ô nào).
     bubble.addEventListener("dragend", (e) => {
       bubble.classList.remove("is-dragging");
       if (e.clientX || e.clientY) {
-        bubble.style.left = e.clientX - size / 2 + "px";
-        bubble.style.top = e.clientY - size / 2 + "px";
-        setNaturalBubbleMotion(bubble); // random lại quỹ đạo mới, trôi tiếp từ đây
+        const nx = e.clientX - size / 2, ny = e.clientY - size / 2;
+        bubble.style.left = nx + "px";
+        bubble.style.top = ny + "px";
+        initBubblePhysics(w._id, nx, ny);
       }
     });
     arena.appendChild(bubble);
   });
+
+  startBubblePhysicsLoop();
 }
 
-// Gán quỹ đạo trôi TỰ NHIÊN kiểu bong bóng xà phòng thật: trôi lên chậm rãi +
-// đung đưa trái phải, nhiều điểm waypoint thay vì chỉ 1 vòng lặp đơn giản.
-// Gọi lại hàm này (reset animation qua reflow) mỗi khi cần bong bóng bắt đầu
-// trôi từ 1 vị trí MỚI (lúc tạo, hoặc sau khi thả chuột).
-function setNaturalBubbleMotion(bubble) {
-  bubble.style.animation = "none";
-  void bubble.offsetWidth; // ép reflow để animation restart đúng từ vị trí left/top mới set
-  bubble.style.setProperty("--wx1", (Math.random() * 2 - 1).toFixed(2));
-  bubble.style.setProperty("--wy1", (-0.6 - Math.random() * 0.8).toFixed(2)); // luôn có xu hướng TRÔI LÊN
-  bubble.style.setProperty("--wx2", (Math.random() * 2 - 1).toFixed(2));
-  bubble.style.setProperty("--wy2", (-0.3 - Math.random() * 1).toFixed(2));
-  bubble.style.setProperty("--wx3", (Math.random() * 2 - 1).toFixed(2));
-  bubble.style.setProperty("--wy3", (-0.8 - Math.random() * 0.6).toFixed(2));
-  bubble.style.setProperty("--dur", (10 + Math.random() * 8).toFixed(2) + "s");
-  bubble.style.setProperty("--delay", (Math.random() * 2).toFixed(2) + "s");
-  bubble.style.setProperty("--hue", Math.floor(Math.random() * 360));
-  bubble.style.animation = `bubbleNatural var(--dur) ease-in-out var(--delay) infinite alternate`;
+function initBubblePhysics(wordId, x, y) {
+  bubblePhysics.set(wordId, {
+    x, y,
+    vx: (Math.random() - 0.5) * 0.15,
+    vy: (Math.random() - 0.5) * 0.15,
+    buoy: -(0.012 + Math.random() * 0.018),
+  });
+}
+
+function stepBubblePhysics(dt) {
+  bubblePhysics.forEach((p, wordId) => {
+    const el = document.querySelector(`.game-bubble[data-word-id="${wordId}"]`);
+    if (!el) { bubblePhysics.delete(wordId); return; }
+    if (el.classList.contains("is-dragging")) return;
+
+    p.vx += (Math.random() - 0.5) * 0.05 * dt;
+    p.vy += (Math.random() - 0.5) * 0.04 * dt + p.buoy * dt;
+
+    p.vx *= 0.988;
+    p.vy *= 0.988;
+
+    const maxSpeed = 0.09;
+    p.vx = Math.max(-maxSpeed, Math.min(maxSpeed, p.vx));
+    p.vy = Math.max(-maxSpeed, Math.min(maxSpeed, p.vy));
+
+    p.x += p.vx * dt;
+    p.y += p.vy * dt;
+
+    const size = parseFloat(getComputedStyle(el).getPropertyValue("--size")) || 90;
+    const maxX = window.innerWidth - size;
+    const maxY = window.innerHeight - size;
+    if (p.x < 0) { p.x = 0; p.vx = Math.abs(p.vx) * 0.6; }
+    if (p.x > maxX) { p.x = maxX; p.vx = -Math.abs(p.vx) * 0.6; }
+    if (p.y < 0) { p.y = 0; p.vy = Math.abs(p.vy) * 0.6; p.buoy = Math.abs(p.buoy) * 0.5; }
+    if (p.y > maxY) { p.y = maxY; p.vy = -Math.abs(p.vy) * 0.6; }
+
+    if (Math.random() < 0.0015 * dt) p.buoy *= -1;
+
+    el.style.left = p.x + "px";
+    el.style.top = p.y + "px";
+    el.style.transform = `rotate(${(Math.sin(Date.now() / 2600 + p.x * 0.01) * 6).toFixed(1)}deg)`;
+  });
+}
+
+function startBubblePhysicsLoop() {
+  if (bubblePhysicsRAF) cancelAnimationFrame(bubblePhysicsRAF);
+  bubblePhysicsLastTime = performance.now();
+  function loop(now) {
+    if (!App.game || App.game.phase !== "bubble") { bubblePhysicsRAF = null; return; }
+    const dt = Math.min(now - bubblePhysicsLastTime, 48);
+    bubblePhysicsLastTime = now;
+    stepBubblePhysics(dt);
+    bubblePhysicsRAF = requestAnimationFrame(loop);
+  }
+  bubblePhysicsRAF = requestAnimationFrame(loop);
+}
+
+function stopBubblePhysicsLoop() {
+  if (bubblePhysicsRAF) cancelAnimationFrame(bubblePhysicsRAF);
+  bubblePhysicsRAF = null;
+  bubblePhysics.clear();
 }
 
 function handleBubbleDrop(droppedId, zoneWordId, zoneEl) {
@@ -230,12 +279,9 @@ function handleBubbleDrop(droppedId, zoneWordId, zoneEl) {
     App.game.bubbleRemaining = App.game.bubbleRemaining.filter((id) => id !== zoneWordId);
     App.game.bubbleMatchedCount++;
     document.getElementById("gameBubbleProgress").textContent = App.game.bubbleMatchedCount;
-    // Chỉ xóa ĐÚNG quả bong bóng vừa ghép trúng, KHÔNG gọi lại renderBubbleArena()
-    // cho cả khung — trước đây gọi lại toàn bộ khiến MỌI quả còn lại bị random
-    // vị trí mới, gây giật hình rõ rệt dù chúng không liên quan gì tới lần
-    // ghép này. Các quả khác giữ nguyên animation/vị trí đang trôi dở.
     const bubbleEl = document.querySelector(`.game-bubble[data-word-id="${zoneWordId}"]`);
     if (bubbleEl) bubbleEl.remove();
+    bubblePhysics.delete(zoneWordId);
     setTimeout(() => {
       renderFullWall();
       if (App.game.bubbleRemaining.length === 0) {
@@ -250,6 +296,7 @@ function handleBubbleDrop(droppedId, zoneWordId, zoneEl) {
 
 function skipBubblePhase() {
   if (!confirm("バブルモードをスキップして、直接タイピングに進みますか？")) return;
+  stopBubblePhysicsLoop();
   App.game.bubbleRemaining = [];
   transitionToTypingPhase();
 }
@@ -259,6 +306,7 @@ function skipBubblePhase() {
    Gợi ý = vòng tròn theo từng VỊ TRÍ ký tự, bấm xác nhận rồi mới lộ.
 =================================================================== */
 function transitionToTypingPhase() {
+  stopBubblePhysicsLoop();
   App.game.phase = "typing";
   document.getElementById("gamePhaseBubble").classList.add("hidden");
   document.getElementById("gamePhaseTyping").classList.remove("hidden");
@@ -466,6 +514,7 @@ function playGameFailEffect(targetEl) {
 }
 
 function backToGameSetup() {
+  stopBubblePhysicsLoop();
   App.game = null;
   document.querySelectorAll(".game-phase").forEach((p) => p.classList.add("hidden"));
   document.getElementById("gameOverOverlay").classList.add("hidden");
