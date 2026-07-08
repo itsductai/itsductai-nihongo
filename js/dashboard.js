@@ -399,7 +399,7 @@ function openDashDeckPickerModal(curriculumKey) {
   list.querySelectorAll("[data-deck-id]").forEach((btn) => {
     btn.addEventListener("click", () => {
       switchDeck(btn.dataset.deckId);
-      setMode("flash");
+      setMode("srs"); // đi thẳng vào SRS, không phải Flashcard thường — đúng ý ban đầu
       document.getElementById("dashDeckPickerModalOverlay").classList.add("hidden");
     });
   });
