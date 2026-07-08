@@ -230,12 +230,16 @@ function handleBubbleDrop(droppedId, zoneWordId, zoneEl) {
     App.game.bubbleRemaining = App.game.bubbleRemaining.filter((id) => id !== zoneWordId);
     App.game.bubbleMatchedCount++;
     document.getElementById("gameBubbleProgress").textContent = App.game.bubbleMatchedCount;
+    // Chỉ xóa ĐÚNG quả bong bóng vừa ghép trúng, KHÔNG gọi lại renderBubbleArena()
+    // cho cả khung — trước đây gọi lại toàn bộ khiến MỌI quả còn lại bị random
+    // vị trí mới, gây giật hình rõ rệt dù chúng không liên quan gì tới lần
+    // ghép này. Các quả khác giữ nguyên animation/vị trí đang trôi dở.
+    const bubbleEl = document.querySelector(`.game-bubble[data-word-id="${zoneWordId}"]`);
+    if (bubbleEl) bubbleEl.remove();
     setTimeout(() => {
       renderFullWall();
       if (App.game.bubbleRemaining.length === 0) {
         transitionToTypingPhase();
-      } else {
-        renderBubbleArena();
       }
     }, 550);
   } else {
