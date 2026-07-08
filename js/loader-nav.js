@@ -15,6 +15,7 @@ const NAV_SVG_ICONS = {
   palette: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 0 20c1.2 0 2-1 2-2 0-.5-.2-1-.5-1.3-.3-.4-.5-.8-.5-1.3 0-1 .8-1.9 1.9-1.9H17a3 3 0 0 0 3-3c0-5.5-4-10.5-8-10.5Z"/><circle cx="7" cy="10" r="1.2" fill="currentColor" stroke="none"/><circle cx="11" cy="6.5" r="1.2" fill="currentColor" stroke="none"/><circle cx="16" cy="8.5" r="1.2" fill="currentColor" stroke="none"/></svg>`,
   settings: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></svg>`,
   search: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>`,
+  gamepad: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5.5"/><path d="M7 10v4M5 12h4"/><circle cx="16" cy="11" r="1" fill="currentColor" stroke="none"/><circle cx="18.5" cy="14" r="1" fill="currentColor" stroke="none"/></svg>`,
 };
 function navIcon(name, cls) {
   return `<span class="nav-svg-icon${cls ? " " + cls : ""}">${NAV_SVG_ICONS[name] || ""}</span>`;
@@ -197,7 +198,6 @@ const NAV_ITEMS_BY_TYPE = {
     { mode: "flash", icon: "▤", label: "Flashcard" },
     { mode: "table", icon: "☰", label: "Bảng danh sách" },
     { mode: "srs", icon: "◷", label: "Ôn tập (SRS)" },
-    { mode: "game", icon: "🎮", label: "Game ôn tập" },
     { mode: "quiz", icon: "✓", label: "Trắc nghiệm nghĩa" },
     { mode: "match", icon: "▦", label: "Ghép thẻ" },
     { mode: "weakness", icon: "⚠", label: "Điểm yếu" },
@@ -318,6 +318,16 @@ function renderNav() {
       buildNavItemBtn("choukai-shadow", "🔁", "Luyện nghe câu"),
     ];
     nav.appendChild(buildNavCategory(navIcon("headphones"), "Luyện nghe (聴解)", choukaiItems, choukaiItems.map((b) => b.dataset.mode)));
+  }
+
+  // Nhóm "Game" — tab RIÊNG (không nằm trong Từ vựng nữa), dropdown liệt kê
+  // từng game — sau này thêm game mới chỉ cần append thêm 1 dòng vào mảng
+  // gameItems, không cần đổi kiến trúc.
+  if (App.decks.some((d) => d.type === "TUVUNG")) {
+    const gameItems = [
+      buildNavItemBtn("game", "🎮", "単語バトル（ボキャブラリーゲーム）"),
+    ];
+    nav.appendChild(buildNavCategory(navIcon("gamepad"), "Game", gameItems, gameItems.map((b) => b.dataset.mode)));
   }
 
   // Re-apply active state: tô sáng nav-item con đang active, VÀ tô viền

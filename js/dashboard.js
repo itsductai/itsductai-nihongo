@@ -224,11 +224,14 @@ function renderDashboardChart() {
           { value: agg.fresh, color: "var(--border)" },
         ], `${pct}%`, "đã thuộc")}
         <div class="dash-donut-legend">
-          <div><i class="stats-dot stats-dot-known"></i> Đã thuộc: <b>${agg.known}</b></div>
-          <div><i class="stats-dot stats-dot-learning"></i> Đang học: <b>${agg.learning}</b></div>
-          <div><i class="stats-dot stats-dot-fresh"></i> Chưa học: <b>${agg.fresh}</b></div>
+          <button class="dash-donut-legend-row" data-status-filter="known"><i class="stats-dot stats-dot-known"></i> Đã thuộc: <b>${agg.known}</b></button>
+          <button class="dash-donut-legend-row" data-status-filter="learning"><i class="stats-dot stats-dot-learning"></i> Đang học: <b>${agg.learning}</b></button>
+          <button class="dash-donut-legend-row" data-status-filter="fresh"><i class="stats-dot stats-dot-fresh"></i> Chưa học: <b>${agg.fresh}</b></button>
         </div>
       </div>`;
+    box.querySelectorAll("[data-status-filter]").forEach((btn) => {
+      btn.addEventListener("click", () => openWordStatusModal(btn.dataset.statusFilter));
+    });
   } else {
     box.innerHTML = buildDailyActivityChart(getDailyActivitySeries(14));
   }
@@ -239,14 +242,107 @@ function setDashboardChartMode(mode) {
   renderDashboardChart();
 }
 
-// "Chọn giáo trình học" — card mỗi nhóm, bấm "Học ngay" nhảy thẳng vào deck
-// dang dở gần nhất trong nhóm đó (findNextDeckToLearn), vào chế độ Flashcard.
+/* ===================================================================
+   MODAL "DANH SÁCH TỪ THEO TRẠNG THÁI" — bấm vào donut legend (Đã thuộc/Đang
+   học/Chưa học) mở modal này, liệt kê TỪNG TỪ cụ thể thuộc đúng trạng thái đó
+   (quét TẤT CẢ deck), kèm hạn ôn tiếp theo + nút đưa về "đang học" ngay
+   (tái dùng SRS.forceBackToReview() đã có, không viết logic mới).
+=================================================================== */
+const WORD_STATUS_LABEL = { known: "Đã thuộc", learning: "Đang học", fresh: "Chưa học", mastered: "⭐ Thành thạo" };
+
+function formatDueDate(entry) {
+  if (!entry.seen) return "Chưa học lần nào";
+  const days = Math.round((entry.due - Date.now()) / 86400000);
+  if (days <= 0) return "Đã đến hạn ôn";
+  if (days === 1) return "Còn 1 ngày nữa";
+  return `Còn ${days} ngày nữa`;
+}
+
+function openWordStatusModal(statusFilter) {
+  App.wordStatusModalFilter = statusFilter;
+  const label = { known: "✅ Đã thuộc", learning: "🟡 Đang học", fresh: "⚪ Chưa học" }[statusFilter];
+  document.getElementById("wordStatusModalTitle").textContent = label;
+  renderWordStatusModalList();
+  document.getElementById("wordStatusModalOverlay").classList.remove("hidden");
+}
+
+function renderWordStatusModalList() {
+  const statusFilter = App.wordStatusModalFilter;
+  const rows = [];
+  App.decks.forEach((deck) => {
+    const progress = SRS.loadProgress(deck.id);
+    deck.words.forEach((w) => {
+      const entry = SRS.getEntry(progress, w._id);
+      const st = SRS.status(entry);
+      const matches = statusFilter === "known" ? (st === "known" || st === "mastered") : st === statusFilter;
+      if (matches) rows.push({ deck, w, entry, st });
+    });
+  });
+
+  const listEl = document.getElementById("wordStatusModalList");
+  document.getElementById("wordStatusModalCount").textContent = `${rows.length} từ`;
+  if (!rows.length) {
+    listEl.innerHTML = `<div class="dash-chart-empty">Không có từ nào ở trạng thái này.</div>`;
+    return;
+  }
+  listEl.innerHTML = rows.slice(0, 300).map(({ deck, w, entry, st }) => `
+    <div class="word-status-row">
+      <span class="word-status-kanji">${w.kanji || w.cautruc || ""}</span>
+      <span class="word-status-deck">${deck.title}</span>
+      <span class="word-status-due">${formatDueDate(entry)}</span>
+      ${st !== "learning" ? `<button class="word-status-relearn-btn" data-deck-id="${deck.id}" data-word-id="${w._id}">↩ Đưa về đang học</button>` : ""}
+    </div>
+  `).join("") + (rows.length > 300 ? `<div class="dash-chart-empty">...và ${rows.length - 300} từ khác (chỉ hiện 300 từ đầu)</div>` : "");
+
+  listEl.querySelectorAll("[data-word-id]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const progress = SRS.loadProgress(btn.dataset.deckId);
+      SRS.forceBackToReview(progress, btn.dataset.wordId);
+      SRS.saveProgress(btn.dataset.deckId, progress);
+      renderWordStatusModalList();
+      renderDashboardChart();
+      renderDueReviewWidget();
+    });
+  });
+}
+
+// "Tua nhanh N ngày" — mô phỏng thời gian trôi qua, đẩy hạn ôn (due) của các
+// từ đang "học dở" (learning/known, KHÔNG đụng "mastered" hay "chưa học lần
+// nào") lùi về sớm hơn N ngày, để những từ nhớ mức trung bình tự nhiên trồi
+// lên "cần ôn" ngay bây giờ thay vì phải đợi thật NGÀY đó tới. Chỉ áp dụng
+// cho đúng danh sách đang xem trong modal (theo statusFilter hiện tại).
+function fastForwardWordStatusList(days) {
+  const ok = confirm(`Tua nhanh ${days} ngày cho danh sách đang xem — hạn ôn của các từ (trừ "chưa học" và "thành thạo") sẽ lùi lại ${days} ngày. Tiếp tục?`);
+  if (!ok) return;
+  const ms = days * 86400000;
+  const statusFilter = App.wordStatusModalFilter;
+  App.decks.forEach((deck) => {
+    const progress = SRS.loadProgress(deck.id);
+    let changed = false;
+    deck.words.forEach((w) => {
+      const entry = SRS.getEntry(progress, w._id);
+      const st = SRS.status(entry);
+      const matches = statusFilter === "known" ? st === "known" : st === statusFilter; // không đụng "mastered" dù đang lọc known
+      if (matches && entry.seen) {
+        entry.due -= ms;
+        changed = true;
+      }
+    });
+    if (changed) SRS.saveProgress(deck.id, progress);
+  });
+  renderWordStatusModalList();
+  renderDashboardChart();
+  renderDueReviewWidget();
+}
+
+// "Chọn giáo trình học" — card mỗi nhóm, bấm "Học ngay" MỞ MODAL chọn đúng bộ
+// muốn học trong nhóm đó (KHÔNG tự nhảy bừa vào 1 bộ như trước) — vào modal
+// là học luôn ngay khi bấm chọn 1 bộ cụ thể.
 function renderDashboardCurriculumCards() {
   const groups = getCurriculumGroups();
   const list = document.getElementById("dashCurriculumList");
   list.innerHTML = groups.map((g) => {
     const { pct } = computeCurriculumProgress(g);
-    const next = findNextDeckToLearn(g);
     return `
       <div class="dash-course-card" data-curriculum-type="${g.type}">
         <div class="dash-course-card-head">
@@ -255,15 +351,42 @@ function renderDashboardCurriculumCards() {
         </div>
         <div class="dash-course-card-sub">Hoàn thành ${pct}%</div>
         <div class="dash-course-card-bar"><div class="dash-course-card-bar-fill" style="width:${pct}%"></div></div>
-        <button class="dash-course-card-btn" data-jump-deck-id="${next.id}">Học ngay →</button>
+        <button class="dash-course-card-btn" data-curriculum-key="${g.key}">Học ngay →</button>
       </div>`;
   }).join("");
-  list.querySelectorAll("[data-jump-deck-id]").forEach((btn) => {
+  list.querySelectorAll("[data-curriculum-key]").forEach((btn) => {
+    btn.addEventListener("click", () => openDashDeckPickerModal(btn.dataset.curriculumKey));
+  });
+}
+
+// Modal chọn bộ cụ thể trong 1 nhóm giáo trình — bấm 1 bộ là vào Flashcard học
+// luôn ngay lập tức.
+function openDashDeckPickerModal(curriculumKey) {
+  const group = getCurriculumGroups().find((g) => g.key === curriculumKey);
+  if (!group) return;
+  document.getElementById("dashDeckPickerTitle").textContent = `🎓 ${group.label} — chọn bộ để học`;
+  const list = document.getElementById("dashDeckPickerList");
+  list.innerHTML = group.decks.map((deck) => {
+    const progress = SRS.loadProgress(deck.id);
+    const known = deck.words.filter((w) => {
+      const st = SRS.status(SRS.getEntry(progress, w._id));
+      return st === "known" || st === "mastered";
+    }).length;
+    const pct = deck.words.length ? Math.round((known / deck.words.length) * 100) : 0;
+    return `
+      <button class="dash-deck-picker-row" data-deck-id="${deck.id}">
+        <span class="dash-deck-picker-title">${deck.title}</span>
+        <span class="dash-deck-picker-meta">${known}/${deck.words.length} đã thuộc (${pct}%)</span>
+      </button>`;
+  }).join("");
+  list.querySelectorAll("[data-deck-id]").forEach((btn) => {
     btn.addEventListener("click", () => {
-      switchDeck(btn.dataset.jumpDeckId);
+      switchDeck(btn.dataset.deckId);
       setMode("flash");
+      document.getElementById("dashDeckPickerModalOverlay").classList.add("hidden");
     });
   });
+  document.getElementById("dashDeckPickerModalOverlay").classList.remove("hidden");
 }
 
 // Thanh tiến độ tổng quan Từ vựng / Ngữ pháp — tái dùng cùng công thức đã dùng

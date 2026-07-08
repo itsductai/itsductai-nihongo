@@ -653,6 +653,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     toggleAllComboSrsCheckboxes(!allChecked); // bấm lại lần 2 -> bỏ chọn hết
   });
   document.getElementById("btnComboSrsClose").addEventListener("click", closeComboSrsModal);
+
+  // ----- Modal chọn bộ trong nhóm giáo trình (Dashboard "Học ngay") -----
+  document.getElementById("btnDashDeckPickerClose").addEventListener("click", () => {
+    document.getElementById("dashDeckPickerModalOverlay").classList.add("hidden");
+  });
+  document.getElementById("dashDeckPickerModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "dashDeckPickerModalOverlay") e.target.classList.add("hidden");
+  });
+
+  // ----- Modal danh sách từ theo trạng thái (Dashboard donut legend) -----
+  document.getElementById("btnWordStatusModalClose").addEventListener("click", () => {
+    document.getElementById("wordStatusModalOverlay").classList.add("hidden");
+  });
+  document.getElementById("wordStatusModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "wordStatusModalOverlay") e.target.classList.add("hidden");
+  });
+  document.querySelectorAll("[data-ff-days]").forEach((btn) => {
+    btn.addEventListener("click", () => fastForwardWordStatusList(parseInt(btn.dataset.ffDays, 10)));
+  });
   document.getElementById("comboSrsModalOverlay").addEventListener("click", (e) => {
     if (e.target.id === "comboSrsModalOverlay") closeComboSrsModal();
   });
