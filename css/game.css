@@ -12,15 +12,36 @@
    view cha bị bó hẹp, không phải arena. Giờ #view-game tự thoát HẲN ra khỏi
    luồng layout app (position:fixed phủ kín viewport, z-index cao hơn navbar),
    full màn hình thật sự bất kể desktop hay điện thoại. */
+/* FIX "khung đen bị bó hẹp" bản trước ĐÃ đi hơi quá tay (position:fixed phủ
+   luôn cả navbar). Giờ đúng ý: MẶC ĐỊNH game vẫn nằm trong vùng nội dung
+   dưới navbar (chỉ tràn hết vùng đó, không đè navbar) — CHỈ khi bấm nút
+   phóng to (⛶, .focus-mode) mới thật sự full-viewport che cả navbar.
+   Kỹ thuật: transform: translateZ(0) trên #view-game biến nó thành CONTAINING
+   BLOCK cho mọi phần tử con position:fixed bên trong (kể cả .game-bubble-arena
+   và từng .game-bubble) — nghĩa là bong bóng "fixed" giờ bị bó theo khung
+   NÀY thay vì true viewport, tự động đúng phạm vi dù đang ở chế độ nào. */
 #view-game {
-  position: fixed; inset: 0; z-index: 25;
-  max-width: none; margin: 0; width: 100vw; height: 100vh;
-  overflow-y: auto; border-radius: 0;
+  position: relative;
+  transform: translateZ(0); /* thiết lập containing block cho fixed descendants */
+  max-width: none;
+  margin: -28px -36px; /* triệt tiêu padding của .main để tràn sát viền vùng nội dung */
+  width: calc(100% + 72px); min-height: calc(100vh - 100px);
+  overflow: hidden; border-radius: 0;
   background:
     radial-gradient(1000px 700px at 15% -10%, rgba(107,147,255,0.16), transparent 55%),
     radial-gradient(900px 650px at 100% 10%, rgba(168,107,255,0.14), transparent 55%),
     radial-gradient(800px 800px at 50% 120%, rgba(72,201,140,0.10), transparent 55%),
     #0a0c1a;
+}
+/* Chỉ khi bấm nút phóng to (focus-mode, navbar đã bị ẩn) mới tràn TOÀN
+   viewport thật sự — lúc này containing block ở trên vẫn hoạt động, chỉ là
+   bản thân nó giờ CHÍNH LÀ toàn màn hình nên bong bóng tự động theo full. */
+#app.focus-mode #view-game {
+  position: fixed; inset: 0; z-index: 30;
+  margin: 0; width: 100vw; height: 100vh; min-height: 100vh;
+}
+@media (max-width: 860px) {
+  #view-game { margin: -16px -12px; width: calc(100% + 24px); }
 }
 #view-game::before {
   content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.35; z-index: 0;
@@ -292,13 +313,22 @@
    ::before lưới hex + gradient động ở trên), chỉ thêm class riêng "lg-".
    ===================================================================== */
 #view-listen-game {
-  position: fixed; inset: 0; z-index: 25;
-  max-width: none; margin: 0; width: 100vw; height: 100vh;
-  overflow-y: auto; border-radius: 0;
+  position: relative;
+  max-width: none;
+  margin: -28px -36px;
+  width: calc(100% + 72px); min-height: calc(100vh - 100px);
+  overflow: hidden; border-radius: 0;
   background:
     radial-gradient(1000px 700px at 15% -10%, rgba(107,147,255,0.16), transparent 55%),
     radial-gradient(900px 650px at 100% 10%, rgba(168,107,255,0.14), transparent 55%),
     #0a0c1a;
+}
+#app.focus-mode #view-listen-game {
+  position: fixed; inset: 0; z-index: 30;
+  margin: 0; width: 100vw; height: 100vh; min-height: 100vh;
+}
+@media (max-width: 860px) {
+  #view-listen-game { margin: -16px -12px; width: calc(100% + 24px); }
 }
 .lg-phase { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; padding: 24px 16px 60px; }
 
