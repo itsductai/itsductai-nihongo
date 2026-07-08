@@ -37,8 +37,9 @@
    viewport thật sự — lúc này containing block ở trên vẫn hoạt động, chỉ là
    bản thân nó giờ CHÍNH LÀ toàn màn hình nên bong bóng tự động theo full. */
 #app.focus-mode #view-game {
-  position: fixed; inset: 0; z-index: 30;
-  margin: 0; width: 100vw; height: 100vh; min-height: 100vh;
+  position: fixed !important; inset: 0 !important; z-index: 30 !important;
+  margin: 0 !important; width: 100vw !important; max-width: none !important;
+  height: 100vh !important; min-height: 100vh !important;
 }
 @media (max-width: 860px) {
   #view-game { margin: -16px -12px; width: calc(100% + 24px); }
@@ -324,8 +325,9 @@
     #0a0c1a;
 }
 #app.focus-mode #view-listen-game {
-  position: fixed; inset: 0; z-index: 30;
-  margin: 0; width: 100vw; height: 100vh; min-height: 100vh;
+  position: fixed !important; inset: 0 !important; z-index: 30 !important;
+  margin: 0 !important; width: 100vw !important; max-width: none !important;
+  height: 100vh !important; min-height: 100vh !important;
 }
 @media (max-width: 860px) {
   #view-listen-game { margin: -16px -12px; width: calc(100% + 24px); }
