@@ -5,13 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Nihongo Lab — Luyện thi JLPT</title>
-<link rel="stylesheet" href="css/style.css?v=11">
+<link rel="stylesheet" href="css/style.css?v=12">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/theme-plus.css?v=9" id="themeClassicLink">
 <link rel="stylesheet" href="css/theme-new.css?v=4" id="themeNewLink" disabled>
-<link rel="stylesheet" href="css/game.css?v=7">
+<link rel="stylesheet" href="css/game.css?v=8">
 </head>
 <body>
 
@@ -464,6 +464,7 @@
         <div class="lg-result-box">
           <div class="lg-result-title">結果</div>
           <div id="lgResultStats"></div>
+          <div id="lgWrongReview"></div>
           <button class="game-start-btn" id="btnLgPlayAgain">もう一度</button>
           <button class="game-back-btn" id="btnLgBackFromResult">← 設定に戻る</button>
         </div>
@@ -671,10 +672,16 @@
         </div>
         <div class="modal-body">
           <div class="word-status-fastforward-row">
-            <span>⏩ Tua nhanh (mô phỏng thời gian trôi qua):</span>
-            <button class="ghost-btn" data-ff-days="10">10 ngày</button>
-            <button class="ghost-btn" data-ff-days="15">15 ngày</button>
+            <span>⏩ Tua nhanh (mô phỏng thời gian trôi, bấm càng nhiều càng tua thêm):</span>
+            <button class="ghost-btn" data-ff-days="1">+1</button>
+            <button class="ghost-btn" data-ff-days="2">+2</button>
+            <button class="ghost-btn" data-ff-days="3">+3</button>
+            <button class="ghost-btn" data-ff-days="4">+4</button>
+            <button class="ghost-btn" data-ff-days="5">+5</button>
+            <button class="ghost-btn" data-ff-days="10">+10</button>
+            <button class="ghost-btn" data-ff-days="15">+15</button>
           </div>
+          <div id="wordStatusFfFeedback" class="word-status-ff-feedback"></div>
           <div id="wordStatusModalList" class="word-status-modal-list"></div>
         </div>
       </div>
@@ -1046,9 +1053,9 @@
 <script src="js/core.js?v=14"></script>
 <script src="js/scoring.js?v=1"></script>
 <script src="js/stats-weakness.js?v=5"></script>
-<script src="js/dashboard.js?v=4"></script>
+<script src="js/dashboard.js?v=5"></script>
 <script src="js/game.js?v=7"></script>
-<script src="js/listen-game.js?v=2"></script>
+<script src="js/listen-game.js?v=3"></script>
 <script src="js/config-focus.js?v=1"></script>
 <script src="js/loader-nav.js?v=20"></script>
 <script src="js/flashcard-edit.js?v=6"></script>
