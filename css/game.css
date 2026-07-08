@@ -6,15 +6,21 @@
    ===================================================================== */
 
 /* ---- Nền chung game — mesh gradient động + lưới hex trang trí ---- */
+/* FIX "khung đen bị bó hẹp": #view-game trước đây kế thừa .view{max-width:920px;
+   margin:0 auto} + .main{padding:28px 36px} — nền tối bị giới hạn trong khung
+   đó dù .game-bubble-arena có position:fixed cũng vô nghĩa vì NỀN thuộc về
+   view cha bị bó hẹp, không phải arena. Giờ #view-game tự thoát HẲN ra khỏi
+   luồng layout app (position:fixed phủ kín viewport, z-index cao hơn navbar),
+   full màn hình thật sự bất kể desktop hay điện thoại. */
 #view-game {
-  position: relative; min-height: 100%;
+  position: fixed; inset: 0; z-index: 25;
+  max-width: none; margin: 0; width: 100vw; height: 100vh;
+  overflow-y: auto; border-radius: 0;
   background:
     radial-gradient(1000px 700px at 15% -10%, rgba(107,147,255,0.16), transparent 55%),
     radial-gradient(900px 650px at 100% 10%, rgba(168,107,255,0.14), transparent 55%),
     radial-gradient(800px 800px at 50% 120%, rgba(72,201,140,0.10), transparent 55%),
     #0a0c1a;
-  border-radius: 20px; overflow: hidden;
-  padding: 0 !important;
 }
 #view-game::before {
   content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.35; z-index: 0;
@@ -170,19 +176,11 @@
   backdrop-filter: blur(2px);
   text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
-/* Trôi tự nhiên kiểu bong bóng xà phòng thật: luôn có xu hướng bay LÊN (wy âm),
-   đung đưa trái-phải nhẹ nhàng qua 3 waypoint thay vì lặp 1 vòng đơn giản —
-   nhìn mượt và ngẫu nhiên hơn hẳn bản cũ (chỉ 2 điểm, biên độ nhỏ, không có
-   xu hướng rõ ràng nên trông như "rung tại chỗ"). */
-@keyframes bubbleNatural {
-  0%   { transform: translate(0, 0) rotate(0deg); }
-  25%  { transform: translate(calc(var(--wx1, 0) * 120px), calc(var(--wy1, -1) * 160px)) rotate(5deg); }
-  50%  { transform: translate(calc(var(--wx2, 0) * 140px), calc(var(--wy2, -1) * 260px)) rotate(-4deg); }
-  75%  { transform: translate(calc(var(--wx3, 0) * 110px), calc(var(--wy3, -1) * 340px)) rotate(3deg); }
-  100% { transform: translate(calc(var(--wx1, 0) * 60px), calc(var(--wy3, -1) * 420px)) rotate(0deg); }
-}
+/* Chuyển động giờ do JS vật lý điều khiển trực tiếp qua left/top/transform
+   mỗi frame (xem stepBubblePhysics() trong game.js) — KHÔNG còn dùng CSS
+   animation/keyframe nữa, nên bỏ hẳn @keyframes cũ (dead code). */
 .game-bubble:hover { filter: brightness(1.15); }
-.game-bubble.is-dragging { opacity: 0.35; animation-play-state: paused; cursor: grabbing; }
+.game-bubble.is-dragging { opacity: 0.35; cursor: grabbing; }
 
 /* ---- Màn gõ chữ ---- */
 .game-typing-stage { text-align: center; padding: 30px 16px; }
@@ -294,7 +292,9 @@
    ::before lưới hex + gradient động ở trên), chỉ thêm class riêng "lg-".
    ===================================================================== */
 #view-listen-game {
-  position: relative; min-height: 100%; border-radius: 20px; overflow: hidden; padding: 0 !important;
+  position: fixed; inset: 0; z-index: 25;
+  max-width: none; margin: 0; width: 100vw; height: 100vh;
+  overflow-y: auto; border-radius: 0;
   background:
     radial-gradient(1000px 700px at 15% -10%, rgba(107,147,255,0.16), transparent 55%),
     radial-gradient(900px 650px at 100% 10%, rgba(168,107,255,0.14), transparent 55%),
