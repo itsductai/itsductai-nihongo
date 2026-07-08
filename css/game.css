@@ -288,3 +288,87 @@
   .game-typing-prompt-kanji { font-size: 34px; }
   .game-wall-full { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
 }
+
+/* =====================================================================
+   聞き取りゲーム — dùng chung nền/tông sci-tech với #view-game (đã có
+   ::before lưới hex + gradient động ở trên), chỉ thêm class riêng "lg-".
+   ===================================================================== */
+#view-listen-game {
+  position: relative; min-height: 100%; border-radius: 20px; overflow: hidden; padding: 0 !important;
+  background:
+    radial-gradient(1000px 700px at 15% -10%, rgba(107,147,255,0.16), transparent 55%),
+    radial-gradient(900px 650px at 100% 10%, rgba(168,107,255,0.14), transparent 55%),
+    #0a0c1a;
+}
+.lg-phase { position: relative; z-index: 1; max-width: 640px; margin: 0 auto; padding: 24px 16px 60px; }
+
+.lg-setup-box {
+  background: linear-gradient(160deg, rgba(28,31,58,0.9), rgba(16,18,36,0.95));
+  border: 1px solid rgba(107,147,255,0.3); border-radius: 26px; padding: 40px 32px; text-align: center;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.6);
+}
+.lg-setup-title {
+  font-size: 28px; font-weight: 900;
+  background: linear-gradient(120deg, #7de8ff, #6b93ff, #a98bff);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  margin-bottom: 6px; filter: drop-shadow(0 0 20px rgba(125,232,255,0.35));
+}
+.lg-setup-sub { color: #9aa3d0; font-size: 13px; margin-bottom: 28px; }
+.lg-setup-row { margin-bottom: 22px; text-align: left; }
+.lg-setup-row label { display: block; font-size: 11.5px; color: #7de8ff; font-weight: 800; margin-bottom: 10px; letter-spacing: 0.05em; text-transform: uppercase; }
+.lg-count-preset {
+  flex: 1 1 auto; padding: 11px 14px; border-radius: 14px; font-size: 13px; font-weight: 700;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #b9c0e0;
+  cursor: pointer; transition: all .18s ease;
+}
+.lg-count-preset:hover { background: rgba(107,147,255,0.15); color: #fff; }
+.lg-count-preset.is-selected { background: linear-gradient(120deg, #6b93ff, #a98bff); border-color: transparent; color: #fff; box-shadow: 0 0 22px rgba(107,147,255,0.5); }
+
+.lg-question-stage { text-align: center; padding: 30px 16px; }
+.lg-replay-btn {
+  padding: 18px 30px; border-radius: 999px; font-size: 16px; font-weight: 800; color: #fff; cursor: pointer;
+  background: linear-gradient(120deg, #6b93ff, #7de8ff); border: none;
+  box-shadow: 0 0 40px rgba(125,232,255,0.4), 0 10px 30px rgba(107,147,255,0.3);
+  animation: lgPulse 2.2s ease-in-out infinite;
+}
+@keyframes lgPulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+.lg-question-sub { font-size: 13px; color: #9aa3d0; margin: 18px 0 22px; }
+.lg-options { display: flex; flex-direction: column; gap: 10px; }
+.lg-opt {
+  padding: 14px 18px; border-radius: 14px; font-size: 14.5px; font-weight: 700; color: #dfe3ff;
+  background: rgba(255,255,255,0.05); border: 1.5px solid rgba(255,255,255,0.12); cursor: pointer;
+  transition: all .15s ease; text-align: left;
+}
+.lg-opt:hover:not(.disabled) { background: rgba(107,147,255,0.15); border-color: #6b93ff; }
+.lg-opt.disabled { cursor: default; }
+.lg-opt.correct { background: rgba(72,201,140,0.18); border-color: #48c98c; color: #48c98c; }
+.lg-opt.wrong { background: rgba(255,107,107,0.18); border-color: #ff6b6b; color: #ff6b6b; }
+
+.lg-reveal {
+  max-width: 480px; margin: 20px auto; text-align: center; padding: 36px 28px;
+  background: linear-gradient(160deg, rgba(28,31,58,0.92), rgba(16,18,36,0.96));
+  border: 1px solid rgba(72,201,140,0.3); border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  animation: wallPop .4s cubic-bezier(.34,1.56,.64,1);
+}
+.lg-reveal-kanji { font-size: 40px; font-weight: 900; color: #fff; filter: drop-shadow(0 0 24px rgba(72,201,140,0.4)); }
+.lg-reveal-doc { font-size: 15px; color: #7de8ff; font-weight: 700; margin: 4px 0; }
+.lg-reveal-nghia { font-size: 16px; color: #9ee8c0; font-weight: 700; margin-bottom: 18px; }
+.lg-reveal-example {
+  text-align: left; padding: 14px 16px; border-radius: 14px; margin-bottom: 22px;
+  background: rgba(255,255,255,0.04); border-left: 3px solid #6b93ff;
+}
+.lg-reveal-example-jp { font-size: 14px; color: #dfe3ff; margin-bottom: 4px; }
+.lg-reveal-example-vi { font-size: 12.5px; color: #9aa3d0; }
+.lg-next-btn {
+  padding: 12px 30px; border-radius: 14px; font-size: 14px; font-weight: 800; color: #fff; cursor: pointer;
+  background: linear-gradient(120deg, #48c98c, #6b93ff); border: none; box-shadow: 0 8px 24px rgba(72,201,140,0.3);
+}
+
+.lg-result-box {
+  max-width: 400px; margin: 40px auto; text-align: center; padding: 40px 30px;
+  background: linear-gradient(160deg, rgba(28,31,58,0.92), rgba(16,18,36,0.96));
+  border: 1px solid rgba(255,255,255,0.12); border-radius: 24px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.lg-result-title { font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 16px; }
+.lg-result-score { font-size: 40px; font-weight: 900; color: #7de8ff; }
+.lg-result-pct { font-size: 15px; color: #9aa3d0; margin-bottom: 24px; }
