@@ -67,6 +67,7 @@ function startListenGame() {
     index: 0,
     score: 0,
     answered: false,
+    wrongWords: [], // lưu lại từ trả lời SAI để cho nghe lại + ôn nhanh ở màn kết quả
   };
   document.getElementById("lgPhaseSetup").classList.add("hidden");
   document.getElementById("lgPhaseQuestion").classList.remove("hidden");
@@ -124,6 +125,7 @@ function handleListenGameAnswer(btn, chosen, q) {
   g.answered = true;
   const isCorrect = chosen._id === q.word._id;
   if (isCorrect) g.score++;
+  else g.wrongWords.push(q.word); // ghi lại để cho nghe lại + ôn nhanh ở màn kết quả
   document.getElementById("lgScore").textContent = g.score;
 
   document.querySelectorAll(".lg-opt").forEach((b) => b.classList.add("disabled"));
@@ -185,6 +187,42 @@ function finishListenGame() {
     <div class="lg-result-score">${g.score} / ${g.questions.length}</div>
     <div class="lg-result-pct">${Math.round((g.score / g.questions.length) * 100)}%</div>
   `;
+  renderListenGameWrongReview();
+}
+
+// Danh sách từ trả lời SAI — bấm nghe lại (từ + câu ví dụ, dùng đúng hàm sẵn
+// có) hoặc "→ Ôn ngay (SRS)": ép từ đó thành ĐẾN HẠN ngay (forceBackToReview
+// đã có sẵn) rồi nhảy thẳng vào SRS của đúng bộ đó — KHỎI cần chọn/lựa gì
+// thêm, từ sai sẽ lên đầu hàng đợi SRS vì đã due ngay lập tức.
+function renderListenGameWrongReview() {
+  const g = App.listenGame;
+  const box = document.getElementById("lgWrongReview");
+  if (!g.wrongWords.length) { box.innerHTML = ""; return; }
+  box.innerHTML = `
+    <div class="lg-wrong-review-title">サッと復習しよう（間違えた言葉）</div>
+    <div class="lg-wrong-review-list">
+      ${g.wrongWords.map((w, i) => `
+        <div class="lg-wrong-review-row">
+          <span class="lg-wrong-review-kanji">${w.kanji || w.cautruc || ""}</span>
+          <span class="lg-wrong-review-nghia">${w.nghia || ""}</span>
+          <button class="lg-wrong-review-listen" data-idx="${i}" title="もう一度聞く">🔊</button>
+          <button class="lg-wrong-review-srs" data-word-id="${w._id}">→ SRSで復習</button>
+        </div>
+      `).join("")}
+    </div>
+  `;
+  box.querySelectorAll(".lg-wrong-review-listen").forEach((btn) => {
+    btn.addEventListener("click", () => playListenGameQuestionAudio(g.wrongWords[parseInt(btn.dataset.idx, 10)]));
+  });
+  box.querySelectorAll(".lg-wrong-review-srs").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const progress = SRS.loadProgress(g.deck.id);
+      SRS.forceBackToReview(progress, btn.dataset.wordId);
+      SRS.saveProgress(g.deck.id, progress);
+      switchDeck(g.deck.id);
+      setMode("srs");
+    });
+  });
 }
 
 function backToListenGameSetup() {

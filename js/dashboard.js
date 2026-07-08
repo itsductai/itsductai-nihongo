@@ -311,11 +311,16 @@ function renderWordStatusModalList() {
 // nào") lùi về sớm hơn N ngày, để những từ nhớ mức trung bình tự nhiên trồi
 // lên "cần ôn" ngay bây giờ thay vì phải đợi thật NGÀY đó tới. Chỉ áp dụng
 // cho đúng danh sách đang xem trong modal (theo statusFilter hiện tại).
+// "Tua nhanh N ngày" — bấm CÀNG NHIỀU LẦN thì càng tua thêm (mỗi lần cộng dồn
+// thêm N ngày vào due hiện tại, không phải set cố định 1 lần) — nên KHÔNG hỏi
+// confirm mỗi lần nữa (sẽ rất phiền khi bấm liên tiếp nhiều lần), thay bằng
+// hiện ngay số từ VỪA chuyển sang "cần học" sau lần bấm đó để biết rõ tác
+// động, tự nhiên đủ làm "lưới an toàn" thay cho hộp thoại xác nhận.
 function fastForwardWordStatusList(days) {
-  const ok = confirm(`Tua nhanh ${days} ngày cho danh sách đang xem — hạn ôn của các từ (trừ "chưa học" và "thành thạo") sẽ lùi lại ${days} ngày. Tiếp tục?`);
-  if (!ok) return;
   const ms = days * 86400000;
   const statusFilter = App.wordStatusModalFilter;
+  let dueBefore = 0, dueAfter = 0;
+
   App.decks.forEach((deck) => {
     const progress = SRS.loadProgress(deck.id);
     let changed = false;
@@ -324,12 +329,24 @@ function fastForwardWordStatusList(days) {
       const st = SRS.status(entry);
       const matches = statusFilter === "known" ? st === "known" : st === statusFilter; // không đụng "mastered" dù đang lọc known
       if (matches && entry.seen) {
+        if (SRS.isDue(entry)) dueBefore++;
         entry.due -= ms;
+        if (SRS.isDue(entry)) dueAfter++;
         changed = true;
       }
     });
     if (changed) SRS.saveProgress(deck.id, progress);
   });
+
+  const newlyDue = dueAfter - dueBefore;
+  const feedback = document.getElementById("wordStatusFfFeedback");
+  feedback.textContent = newlyDue > 0
+    ? `+${days} ngày → vừa thêm ${newlyDue} từ cần học ngay`
+    : `+${days} ngày → chưa có từ nào tới hạn thêm`;
+  feedback.classList.remove("is-flash");
+  void feedback.offsetWidth;
+  feedback.classList.add("is-flash");
+
   renderWordStatusModalList();
   renderDashboardChart();
   renderDueReviewWidget();
