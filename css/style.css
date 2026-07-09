@@ -1769,6 +1769,13 @@ mark.exam-note-mark {
 .dash-deck-picker-row:hover { border-color: var(--accent); transform: translateX(2px); }
 .dash-deck-picker-title { font-size: 13.5px; font-weight: 700; color: var(--text-0); }
 .dash-deck-picker-meta { font-size: 11.5px; color: var(--text-2); flex-shrink: 0; }
+.level-picker-series-card { border-left: 3px solid var(--accent); }
+.level-picker-back-btn {
+  display: block; width: 100%; text-align: left; font-size: 12.5px; font-weight: 700;
+  color: var(--text-2); background: none; border: none; cursor: pointer;
+  padding: 8px 4px; margin-bottom: 6px;
+}
+.level-picker-back-btn:hover { color: var(--accent); }
 
 /* Modal danh sách từ theo trạng thái */
 .word-status-modal-box { max-width: 640px; width: 92vw; }
