@@ -197,7 +197,6 @@ const NAV_ITEMS_BY_TYPE = {
   TUVUNG: [
     { mode: "flash", icon: "▤", label: "Flashcard" },
     { mode: "table", icon: "☰", label: "Bảng danh sách" },
-    { mode: "srs", icon: "◷", label: "Ôn tập (SRS)" },
     { mode: "quiz", icon: "✓", label: "Trắc nghiệm nghĩa" },
     { mode: "match", icon: "▦", label: "Ghép thẻ" },
     { mode: "weakness", icon: "⚠", label: "Điểm yếu" },
@@ -206,7 +205,6 @@ const NAV_ITEMS_BY_TYPE = {
   NGUPHAP: [
     { mode: "flash", icon: "▤", label: "Flashcard" },
     { mode: "table", icon: "☰", label: "Bảng danh sách" },
-    { mode: "srs", icon: "◷", label: "Ôn tập (SRS)" },
     { mode: "quiz", icon: "✓", label: "Trắc nghiệm ý nghĩa" },
     { mode: "weakness", icon: "⚠", label: "Điểm yếu" },
     { mode: "stats", icon: "📊", label: "Thống kê" },
@@ -276,13 +274,25 @@ function renderNav() {
   dashBtn.addEventListener("click", () => setMode("dashboard"));
   nav.appendChild(dashBtn);
 
-  const achBtn = document.createElement("button");
-  achBtn.className = "nav-item nav-item-standalone";
-  achBtn.dataset.mode = "achievements";
-  achBtn.title = "Thành tích học tập";
-  achBtn.innerHTML = `<span class="nav-icon">🏅</span>`;
-  achBtn.addEventListener("click", () => setMode("achievements"));
-  nav.appendChild(achBtn);
+  // SRS lên tab CHÍNH (standalone, 1-click) — mục tiêu học chính của Zane,
+  // không còn nằm lẫn trong dropdown Từ vựng/Ngữ pháp nữa.
+  const srsBtn = document.createElement("button");
+  srsBtn.className = "nav-item nav-item-standalone";
+  srsBtn.dataset.mode = "srs";
+  srsBtn.title = "Ôn tập (SRS)";
+  srsBtn.innerHTML = `<span class="nav-icon">◷</span>`;
+  srsBtn.addEventListener("click", () => setMode("srs"));
+  nav.appendChild(srsBtn);
+
+  // Chọn bộ học theo trình độ (N1/N2/N3...) — modal riêng, thay cho việc phải
+  // vào Cài đặt tìm deck trong <select> dài dằng dặc.
+  const levelPickerBtn = document.createElement("button");
+  levelPickerBtn.className = "nav-item nav-item-standalone";
+  levelPickerBtn.dataset.mode = "level-picker";
+  levelPickerBtn.title = "Chọn bộ học theo trình độ";
+  levelPickerBtn.innerHTML = `<span class="nav-icon">📚</span>`;
+  levelPickerBtn.addEventListener("click", openLevelDeckPickerModal);
+  nav.appendChild(levelPickerBtn);
 
   // Nhóm "Từ vựng"/"Ngữ pháp" — icon + label đổi theo loại deck đang chọn.
   const isNguphap = App.currentDeckType === "NGUPHAP";
@@ -327,6 +337,7 @@ function renderNav() {
     const gameItems = [
       buildNavItemBtn("game", "🎮", "単語バトル（ボキャブラリーゲーム）"),
       buildNavItemBtn("listen-game", "🎧", "聞き取りゲーム（リスニング）"),
+      buildNavItemBtn("achievements", "🏅", "学習実績（huy chương）"),
     ];
     nav.appendChild(buildNavCategory(navIcon("gamepad"), "Game", gameItems, gameItems.map((b) => b.dataset.mode)));
   }

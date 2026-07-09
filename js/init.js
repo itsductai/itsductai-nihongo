@@ -595,6 +595,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     btn.addEventListener("click", () => setDokkaiTranslateMode(btn.dataset.translateMode));
   });
   document.getElementById("btnDokkaiFuriganaToggle").addEventListener("click", toggleDokkaiFurigana);
+  document.getElementById("btnDokkaiAutoRead").addEventListener("click", toggleDokkaiAutoRead);
 
   // ----- Quiz mode -----
   document.getElementById("btnQuizRestart").addEventListener("click", initQuizMode);
@@ -670,6 +671,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     toggleAllComboSrsCheckboxes(!allChecked); // bấm lại lần 2 -> bỏ chọn hết
   });
   document.getElementById("btnComboSrsClose").addEventListener("click", closeComboSrsModal);
+
+  // ----- Modal chọn bộ theo trình độ (📚 nav standalone) -----
+  document.getElementById("btnLevelDeckPickerClose").addEventListener("click", () => {
+    document.getElementById("levelDeckPickerModalOverlay").classList.add("hidden");
+  });
+  document.getElementById("levelDeckPickerModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "levelDeckPickerModalOverlay") e.target.classList.add("hidden");
+  });
 
   // ----- Modal chọn bộ trong nhóm giáo trình (Dashboard "Học ngay") -----
   document.getElementById("btnDashDeckPickerClose").addEventListener("click", () => {
