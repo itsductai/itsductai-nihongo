@@ -513,6 +513,31 @@ function pickJapaneseVoice() {
   return jaVoices.reduce((best, v) => (qualityScore(v) > qualityScore(best) ? v : best), jaVoices[0]);
 }
 
+// Random GIỮA các giọng CHẤT LƯỢNG CAO (không phải luôn đúng 1 giọng cố định
+// như pickJapaneseVoice() ở trên) — để có cả nam lẫn nữ xen kẽ, đỡ nhàm. Chỉ
+// random trong nhóm điểm cao (trong khoảng 15 điểm so với giọng tốt nhất),
+// KHÔNG random hoàn toàn (tránh vớ phải giọng robot dở nằm trong danh sách).
+function pickRandomGoodJapaneseVoice() {
+  if (!("speechSynthesis" in window)) return null;
+  const voices = window.speechSynthesis.getVoices();
+  if (!voices || !voices.length) return null;
+  const jaVoices = voices.filter((v) => v.lang && v.lang.toLowerCase().startsWith("ja"));
+  if (!jaVoices.length) return null;
+
+  function qualityScore(v) {
+    let score = 0;
+    if (/google/i.test(v.name)) score += 50;
+    if (/neural|online|natural|wavenet/i.test(v.name)) score += 40;
+    if (v.localService === false) score += 20;
+    if (v.lang === "ja-JP") score += 5;
+    return score;
+  }
+  const scored = jaVoices.map((v) => ({ v, s: qualityScore(v) }));
+  const maxScore = Math.max(...scored.map((x) => x.s));
+  const goodOnes = scored.filter((x) => x.s >= maxScore - 15).map((x) => x.v);
+  return goodOnes[Math.floor(Math.random() * goodOnes.length)];
+}
+
 function ensureVoicesLoaded() {
   if (!("speechSynthesis" in window) || voicesLoadAttempted) return;
   voicesLoadAttempted = true;
@@ -535,7 +560,7 @@ function speakJapanese(text) {
     utter.rate = 0.95;
     // Cố gắng dùng giọng Nhật cụ thể nếu tìm được, để tránh trường hợp browser
     // chọn giọng mặc định không đọc được tiếng Nhật (im lặng hoặc đọc sai âm)
-    const voice = cachedJapaneseVoice || pickJapaneseVoice();
+    const voice = pickRandomGoodJapaneseVoice() || cachedJapaneseVoice;
     if (voice) utter.voice = voice;
     window.speechSynthesis.speak(utter);
   } catch (e) { /* ignore lỗi phát âm, không làm ảnh hưởng trải nghiệm học */ }
@@ -553,7 +578,7 @@ function speakJapaneseForced(text, onEnd) {
     const utter = new SpeechSynthesisUtterance(text);
     utter.lang = "ja-JP";
     utter.rate = 0.95;
-    const voice = cachedJapaneseVoice || pickJapaneseVoice();
+    const voice = pickRandomGoodJapaneseVoice() || cachedJapaneseVoice;
     if (voice) utter.voice = voice;
     if (onEnd) {
       utter.onend = onEnd;
@@ -564,10 +589,21 @@ function speakJapaneseForced(text, onEnd) {
 }
 
 // Đọc đúng cách đọc thật (doc, không phải doc_marked có dấu **) hoặc cautruc cho ngữ pháp
+// Đọc từ XONG (onend thật, không đoán thời lượng) mới đọc tiếp câu ví dụ nếu
+// có — tái dùng đúng cách tách câu đã xây cho game nghe (getFirstExampleSentencePlain
+// có ở listen-game.js), không viết lại logic tách câu ở đây.
+// LUÔN tôn trọng App.speechEnabled xuyên suốt (đây là toggle tự đọc khi lật
+// thẻ — khác speakJapaneseForced dùng cho game, nơi âm thanh là cơ chế
+// chính bắt buộc phải phát bất kể setting).
 function speakWord(w) {
-  if (!w) return;
+  if (!w || !App.speechEnabled) return;
   const text = w.doc || w.cautruc || w.kanji;
-  speakJapanese(text);
+  const example = typeof getFirstExampleSentencePlain === "function" ? getFirstExampleSentencePlain(w) : null;
+  if (example && example.jp) {
+    speakJapaneseForced(text, () => speakJapaneseForced(example.jp));
+  } else {
+    speakJapaneseForced(text);
+  }
 }
 
 /* ===================================================================

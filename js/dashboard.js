@@ -437,30 +437,74 @@ function renderLevelPickerFilter(levels) {
   });
 }
 
+App.levelPickerSeries = null; // series đang chọn (null = đang ở màn card theo series)
+
 function renderLevelPickerDeckList() {
+  App.levelPickerSeries = null;
+  renderLevelPickerSeriesCards();
+}
+
+// Bước 1: hiện CARD theo TỪNG SERIES (Mimi, Tango...) — không gộp phẳng các
+// bộ của nhiều tài liệu khác nhau vào chung 1 danh sách như trước.
+function renderLevelPickerSeriesCards() {
   const decks = App.decks.filter((d) => d.type === "TUVUNG" && d.level === App.levelPickerFilter);
+  const bySeries = {};
+  decks.forEach((d) => {
+    const key = d.series || "khác";
+    if (!bySeries[key]) bySeries[key] = [];
+    bySeries[key].push(d);
+  });
+
   const list = document.getElementById("levelPickerDeckList");
-  if (!decks.length) {
+  const seriesKeys = Object.keys(bySeries);
+  if (!seriesKeys.length) {
     list.innerHTML = `<div class="dash-chart-empty">Chưa có bộ nào ở trình độ này.</div>`;
     return;
   }
-  list.innerHTML = decks.map((deck) => {
-    const progress = SRS.loadProgress(deck.id);
-    const known = deck.words.filter((w) => {
-      const st = SRS.status(SRS.getEntry(progress, w._id));
-      return st === "known" || st === "mastered";
-    }).length;
-    const pct = deck.words.length ? Math.round((known / deck.words.length) * 100) : 0;
+  list.innerHTML = seriesKeys.map((key) => {
+    const seriesDecks = bySeries[key];
+    const totalWords = seriesDecks.reduce((s, d) => s + d.words.length, 0);
     return `
-      <button class="dash-deck-picker-row" data-deck-id="${deck.id}">
-        <span class="dash-deck-picker-title">${deck.title}</span>
-        <span class="dash-deck-picker-meta">${known}/${deck.words.length} đã thuộc (${pct}%)</span>
+      <button class="dash-deck-picker-row level-picker-series-card" data-series="${key}">
+        <span class="dash-deck-picker-title">${key === "khác" ? "Khác" : key.toUpperCase()}</span>
+        <span class="dash-deck-picker-meta">${seriesDecks.length} chương · ${totalWords} từ</span>
       </button>`;
   }).join("");
+  list.querySelectorAll("[data-series]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      App.levelPickerSeries = btn.dataset.series;
+      renderLevelPickerChapterList();
+    });
+  });
+}
+
+// Bước 2: trong ĐÚNG series đã chọn, hiện danh sách chương để bấm vào học.
+function renderLevelPickerChapterList() {
+  const decks = App.decks.filter((d) =>
+    d.type === "TUVUNG" && d.level === App.levelPickerFilter &&
+    (d.series || "khác") === App.levelPickerSeries
+  );
+  const list = document.getElementById("levelPickerDeckList");
+  list.innerHTML = `
+    <button class="level-picker-back-btn" id="btnLevelPickerBackToSeries">← Quay lại chọn tài liệu</button>
+    ${decks.map((deck) => {
+      const progress = SRS.loadProgress(deck.id);
+      const known = deck.words.filter((w) => {
+        const st = SRS.status(SRS.getEntry(progress, w._id));
+        return st === "known" || st === "mastered";
+      }).length;
+      const pct = deck.words.length ? Math.round((known / deck.words.length) * 100) : 0;
+      return `
+        <button class="dash-deck-picker-row" data-deck-id="${deck.id}">
+          <span class="dash-deck-picker-title">${deck.title}</span>
+          <span class="dash-deck-picker-meta">${known}/${deck.words.length} đã thuộc (${pct}%)</span>
+        </button>`;
+    }).join("")}
+  `;
+  document.getElementById("btnLevelPickerBackToSeries").addEventListener("click", renderLevelPickerSeriesCards);
   list.querySelectorAll("[data-deck-id]").forEach((btn) => {
     btn.addEventListener("click", () => {
-      switchDeck(btn.dataset.deckId);
-      setMode("srs"); // mục tiêu chính là SRS — chọn bộ xong vào thẳng SRS luôn
+      switchDeck(btn.dataset.deckId); // switchDeck() đã tự setMode("flash") bên trong
       document.getElementById("levelDeckPickerModalOverlay").classList.add("hidden");
     });
   });

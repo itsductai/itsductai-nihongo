@@ -16,6 +16,7 @@ const NAV_SVG_ICONS = {
   settings: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"/></svg>`,
   search: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>`,
   gamepad: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="11" rx="5.5"/><path d="M7 10v4M5 12h4"/><circle cx="16" cy="11" r="1" fill="currentColor" stroke="none"/><circle cx="18.5" cy="14" r="1" fill="currentColor" stroke="none"/></svg>`,
+  flashcardStack: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="10" rx="2" transform="rotate(-6 12 8)" opacity="0.5"/><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M8 12h8"/></svg>`,
 };
 function navIcon(name, cls) {
   return `<span class="nav-svg-icon${cls ? " " + cls : ""}">${NAV_SVG_ICONS[name] || ""}</span>`;
@@ -290,7 +291,7 @@ function renderNav() {
   levelPickerBtn.className = "nav-item nav-item-standalone";
   levelPickerBtn.dataset.mode = "level-picker";
   levelPickerBtn.title = "Chọn bộ học theo trình độ";
-  levelPickerBtn.innerHTML = `<span class="nav-icon">📚</span>`;
+  levelPickerBtn.innerHTML = navIcon("flashcardStack");
   levelPickerBtn.addEventListener("click", openLevelDeckPickerModal);
   nav.appendChild(levelPickerBtn);
 
@@ -420,11 +421,13 @@ function performGlobalSearch(query) {
 function jumpToSearchResult(deckId, wordId) {
   const deck = App.decks.find((d) => d.id === deckId);
   if (!deck) return;
-  const w = deck.words.find((x) => x._id === wordId);
-  switchDeck(deckId);
-  setMode("table");
-  document.getElementById("tableSearch").value = w.kanji || w.cautruc || "";
-  renderTable();
+  switchDeck(deckId); // switchDeck() đã tự gọi initFlashMode() bên trong, xáo lại queue mới
+  // Đưa ĐÚNG từ vừa tìm lên đầu queue (App.flashQueue[0] luôn là thẻ đang hiện,
+  // xem renderFlashCard()) — không cần sửa initFlashMode(), chỉ cần sắp lại
+  // thứ tự hàng đợi sau khi nó đã được tạo.
+  App.flashQueue = [wordId, ...App.flashQueue.filter((id) => id !== wordId)];
+  setMode("flash");
+  renderFlashCard();
   document.getElementById("globalSearchResults").classList.add("hidden");
   document.getElementById("globalSearchInput").value = "";
 }
