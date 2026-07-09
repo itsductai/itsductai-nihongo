@@ -33,13 +33,22 @@ const DOKKAI_LEVEL_COLORS = {
   N1: "#ff6b6b", N2: "#6b93ff", N3: "#48c98c", N4: "#ffd15c", N5: "#a98bff",
 };
 
+// BLOCKLIST — các động từ phụ trợ (auxiliary) mà deck có thể lưu dưới dạng
+// vocab với nghĩa TỪ ĐIỂN GỐC (vd しまう = "cất, giữ"), nhưng khi đứng sau
+// dạng て của động từ khác thì lại là NGỮ PHÁP hoàn toàn khác (〜てしまう =
+// lỡ làm/hối tiếc, KHÔNG liên quan gì "cất giữ"). Auto-scan không phân biệt
+// được ngữ cảnh (đứng riêng vs làm trợ động từ), nên loại hẳn các từ này khỏi
+// kho auto-scan để tránh gán nhầm nghĩa từ vựng vào chỗ đang là ngữ pháp —
+// đây chính xác là bug đã xảy ra thật với "しまう" trong bài viết.
+const DOKKAI_AUXILIARY_BLOCKLIST = new Set(["しまう", "おく", "いく", "くる", "みる", "あげる", "もらう", "くれる", "いる", "ある", "する", "なる"]);
+
 function buildDokkaiVocabIndex() {
   const list = [];
   App.decks.filter((d) => d.type === "TUVUNG" && d.level).forEach((deck) => {
     deck.words.forEach((w) => {
       const word = w.kanji;
-      if (word && word.length >= 2) {
-        list.push({ word, level: deck.level, reading: w.doc || "", meaning: w.nghia || "" });
+      if (word && word.length >= 2 && !DOKKAI_AUXILIARY_BLOCKLIST.has(word)) {
+        list.push({ word, level: deck.level, deckTitle: deck.title, reading: w.doc || "", meaning: w.nghia || "" });
       }
     });
   });
@@ -174,6 +183,10 @@ function startReadingArticle(articleId) {
   document.querySelectorAll(".dokkai-translate-btn").forEach((b) => b.classList.toggle("is-active", b.dataset.translateMode === "none"));
   document.getElementById("btnDokkaiFuriganaToggle").classList.add("is-active");
   document.getElementById("dokkaiReadBody").classList.remove("dokkai-furigana-hidden");
+  if (dokkaiIsReading) { window.speechSynthesis.cancel(); dokkaiIsReading = false; }
+  const readBtn = document.getElementById("btnDokkaiAutoRead");
+  readBtn.classList.remove("is-active");
+  readBtn.textContent = "🔊 記事を読む";
 
   showLoadingOverlay(document.getElementById("dokkaiPhaseRead"), true);
   setTimeout(() => {
@@ -235,6 +248,37 @@ function toggleDokkaiFurigana() {
   document.getElementById("dokkaiReadBody").classList.toggle("dokkai-furigana-hidden", !isOn);
 }
 
+// Đọc bài tự động — tái dùng speakJapaneseForced() đã cải thiện chọn giọng
+// (ưu tiên Google/Neural voice) từ game nghe, chain từng đoạn qua onend thật
+// (không đoán thời lượng bằng setTimeout).
+let dokkaiIsReading = false;
+function toggleDokkaiAutoRead() {
+  const btn = document.getElementById("btnDokkaiAutoRead");
+  if (dokkaiIsReading) {
+    window.speechSynthesis.cancel();
+    dokkaiIsReading = false;
+    btn.classList.remove("is-active");
+    btn.textContent = "🔊 記事を読む";
+    return;
+  }
+  dokkaiIsReading = true;
+  btn.classList.add("is-active");
+  btn.textContent = "⏹ 停止";
+  const paragraphs = App.reading.article.paragraphs.map((p) => p.replace(/\{\{([^|}]+)\|[^}]*\}\}/g, "$1"));
+  let i = 0;
+  function readNext() {
+    if (!dokkaiIsReading || i >= paragraphs.length) {
+      dokkaiIsReading = false;
+      btn.classList.remove("is-active");
+      btn.textContent = "🔊 記事を読む";
+      return;
+    }
+    speakJapaneseForced(paragraphs[i], readNext);
+    i++;
+  }
+  readNext();
+}
+
 function showDokkaiGlossPopover(e, el) {
   e.stopPropagation();
   document.querySelectorAll(".dokkai-gloss-popover").forEach((p) => p.remove());
@@ -274,12 +318,31 @@ function renderDokkaiVocabSidebar(vocabIndex) {
         <div class="dokkai-vocab-item-head">
           <span class="dokkai-vocab-kanji">${v.kanji}</span>
           <span class="dokkai-vocab-reading">${v.reading}</span>
+          ${deckMatch ? `<button class="dokkai-vocab-deck-badge" data-deck-title="${deckMatch.deckTitle.replace(/"/g, "&quot;")}" title="Bấm để xem chương cụ thể">mimi</button>` : ""}
         </div>
         <div class="dokkai-vocab-hanviet">${v.hanviet || ""}</div>
         <div class="dokkai-vocab-meaning">${v.meaning}</div>
-        ${deckMatch ? `<div class="dokkai-vocab-deck-match">✓ đã có trong bộ ${deckMatch.level}</div>` : ""}
       </div>`;
   }).join("");
+  wrap.querySelectorAll(".dokkai-vocab-deck-badge").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      document.querySelectorAll(".dokkai-deck-badge-popover").forEach((p) => p.remove());
+      const pop = document.createElement("div");
+      pop.className = "dokkai-deck-badge-popover";
+      pop.textContent = `📚 ${btn.dataset.deckTitle}`;
+      document.body.appendChild(pop);
+      const rect = btn.getBoundingClientRect();
+      pop.style.left = Math.min(rect.left, window.innerWidth - pop.offsetWidth - 12) + "px";
+      pop.style.top = rect.bottom + 6 + "px";
+      setTimeout(() => {
+        document.addEventListener("click", function closeOnce() {
+          pop.remove();
+          document.removeEventListener("click", closeOnce);
+        }, { once: true });
+      }, 0);
+    });
+  });
 }
 
 /* ===================================================================
@@ -363,6 +426,7 @@ function finishDokkaiQuiz() {
 }
 
 function backToDokkaiPicker() {
+  if (dokkaiIsReading) { window.speechSynthesis.cancel(); dokkaiIsReading = false; }
   App.reading = null;
   initReadingMode();
 }
