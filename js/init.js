@@ -103,7 +103,7 @@ function initExamCountdown() {
 document.addEventListener("DOMContentLoaded", async () => {
   // Hiệu ứng loading NGAY LÚC TẢI DỮ LIỆU LẦN ĐẦU (81+ bộ giờ đã khá nhiều) —
   // phủ toàn bộ #app cho tới khi loadDecks()/loadExams()/... xong.
-  showLoadingOverlay(document.getElementById("app"), true);
+  showLoadingOverlay(document.querySelector(".main"), true);
   loadFieldConfig();
   loadEditPatches();
   loadStarredItems();
@@ -1144,5 +1144,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     switchDeck(lastDeckId);
   }
   setMode(lastMode || "dashboard");
-  showLoadingOverlay(document.getElementById("app"), false);
+  showLoadingOverlay(document.querySelector(".main"), false);
 });

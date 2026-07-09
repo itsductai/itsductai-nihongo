@@ -31,12 +31,19 @@ const SRS = (() => {
   const MAX_EASE = 3.5;
   const DEFAULT_EASE = 2.5;
   const GRADUATE_THRESHOLD = 1440; // 1 ngày (phút) — sau ngưỡng này coi là đã "trưởng thành"
-  const GRADUATED_EASY_BONUS = 1.5; // cộng thêm vào ease khi tính Dễ sau khi đã "trưởng thành"
   // "Đã thuộc" — dành cho từ ĐÃ học trước ở nơi khác (Anki/Quizlet/sách giấy...),
   // không muốn đi từng bước Quên→Khó→Dễ như từ hoàn toàn mới. Đẩy thẳng lên mốc
   // RẤT XA (60 ngày) để gần như không xuất hiện lại, nhưng vẫn nằm trong hệ thống
   // (không xóa khỏi vòng ôn hẳn — nếu lâu quá quên thật thì vẫn sẽ gặp lại).
-  const MASTERED_INTERVAL = 60 * 1440; // 60 ngày, tính theo phút
+  const MASTERED_INTERVAL = 60 * 1440; // 60 ngày, tính theo phút (chỉ dùng khi ĐÁNH DẤU THỦ CÔNG "Đã thuộc", không phải kết quả tăng dần tự nhiên)
+  // FIX BUG THUẬT TOÁN: trước đây có thêm GRADUATED_EASY_BONUS (+1.5) cộng
+  // thẳng vào ease sau khi "trưởng thành" (qua 1 ngày), khiến hệ số nhân lên
+  // tới 3.5-5.0 lần MỖI LẦN đánh "Dễ" — tăng theo cấp số nhân quá nhanh (1
+  // ngày → 4 → 16 → 64 → 256 ngày...), không giống Anki thật (Anki chuẩn chỉ
+  // nhân theo ease đơn thuần ~1.3-3.5, không có bonus cộng thêm kiểu này).
+  // Bỏ hẳn bonus, dùng ĐÚNG 1 công thức "interval × ease" cho MỌI lần đánh
+  // Dễ (dù đã trưởng thành hay chưa) — sát với thuật toán SM-2 gốc hơn.
+  const MAX_REVIEW_INTERVAL = 90 * 1440; // TRẦN 90 ngày cho chu kỳ tăng dần TỰ NHIÊN — đảm bảo từ vựng ngôn ngữ (khác dữ kiện thuần túy) vẫn được chạm lại tối thiểu theo quý, không bao giờ giãn tới nửa năm+ dù ease cao.
 
   function now() {
     return Date.now();
@@ -110,10 +117,11 @@ const SRS = (() => {
     } else if (rating === "easy") {
       if (entry.intervalMin === 0) {
         next.intervalMin = FIRST_EASY;
-      } else if (entry.intervalMin < GRADUATE_THRESHOLD) {
-        next.intervalMin = Math.round(entry.intervalMin * entry.ease);
       } else {
-        next.intervalMin = Math.round(entry.intervalMin * (entry.ease + GRADUATED_EASY_BONUS));
+        // ĐÚNG 1 công thức duy nhất cho mọi lần Dễ (bỏ hẳn bonus sau "trưởng
+        // thành" từng gây tăng phi mã) + áp trần MAX_REVIEW_INTERVAL để
+        // không bao giờ giãn quá xa dù ease đã lên cao.
+        next.intervalMin = Math.min(MAX_REVIEW_INTERVAL, Math.round(entry.intervalMin * entry.ease));
       }
       next.ease = Math.min(MAX_EASE, entry.ease + 0.1);
     } else if (rating === "mastered") {

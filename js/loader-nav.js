@@ -98,7 +98,15 @@ async function ensureDeckLoaded(deckId) {
       const full = fullWordsById[thinWord._id];
       if (full) Object.assign(thinWord, full, { _id: thinWord._id });
     });
-    const patchedWords = applyPatchesToWords(deckId, deck.words);
+    // FIX BUG NGHIÊM TRỌNG: applyPatchesToWords() khi deck KHÔNG có sửa tạm
+    // nào (trường hợp thường gặp) trả về CÙNG THAM CHIẾU mảng deck.words (tối
+    // ưu, không copy nếu không cần). Nếu giữ nguyên logic cũ
+    // "deck.words.length = 0" ngay sau đó sẽ ĐỒNG THỜI xóa rỗng luôn
+    // patchedWords (vì là CÙNG 1 mảng trong bộ nhớ) — khiến push() sau đó
+    // không còn gì để đẩy vào, deck.words VĨNH VIỄN RỖNG. Đây chính là bug
+    // "dữ liệu biến mất sau khi tải xong" đã báo. Fix: .slice() ép tạo bản
+    // sao THẬT SỰ trước khi đụng vào deck.words gốc.
+    const patchedWords = applyPatchesToWords(deckId, deck.words).slice();
     deck.words.length = 0;
     deck.words.push(...patchedWords);
     App.deckThickLoaded[deckId] = true;
