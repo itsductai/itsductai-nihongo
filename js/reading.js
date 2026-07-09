@@ -18,11 +18,10 @@ async function loadDokkaiArticles() {
   try {
     const idxRes = await fetch("dokkai-articles/index.json");
     const idx = await idxRes.json();
-    const articles = [];
-    for (const filename of idx.files) {
+    const articles = await Promise.all(idx.files.map(async (filename) => {
       const r = await fetch(`dokkai-articles/${filename}`);
-      articles.push(await r.json());
-    }
+      return r.json();
+    }));
     return articles;
   } catch (e) {
     return [];

@@ -94,6 +94,9 @@ function initExamCountdown() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
+  // Hiệu ứng loading NGAY LÚC TẢI DỮ LIỆU LẦN ĐẦU (81+ bộ giờ đã khá nhiều) —
+  // phủ toàn bộ #app cho tới khi loadDecks()/loadExams()/... xong.
+  showLoadingOverlay(document.getElementById("app"), true);
   loadFieldConfig();
   loadEditPatches();
   loadStarredItems();
@@ -110,9 +113,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   App.decks = await loadDecks();
   buildGrammarIndex();
   await loadGrammarGroups();
-  App.exams = await loadExams();
-  App.choukaiTests = await loadChoukaiTests();
-  App.dokkaiArticles = await loadDokkaiArticles();
+  // exams/choukai/dokkaiArticles không phụ thuộc lẫn nhau -> tải song song
+  // thay vì đợi tuần tự từng cái (cùng fix hiệu năng như loadDecks() ở trên).
+  [App.exams, App.choukaiTests, App.dokkaiArticles] = await Promise.all([
+    loadExams(), loadChoukaiTests(), loadDokkaiArticles(),
+  ]);
 
   if (App.decks.length === 0) {
     document.getElementById("deckName").textContent = "Không tải được bộ học nào";
@@ -672,12 +677,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
   document.getElementById("btnComboSrsClose").addEventListener("click", closeComboSrsModal);
 
-  // ----- Modal chọn bộ theo trình độ (📚 nav standalone) -----
-  document.getElementById("btnLevelDeckPickerClose").addEventListener("click", () => {
-    document.getElementById("levelDeckPickerModalOverlay").classList.add("hidden");
+  // ----- Popup "Đổi chương" ngay trong SRS -----
+  document.getElementById("btnSrsSwitchChapter").addEventListener("click", openSrsChapterSwitchModal);
+  document.getElementById("btnSrsChapterSwitchClose").addEventListener("click", () => {
+    document.getElementById("srsChapterSwitchModalOverlay").classList.add("hidden");
   });
-  document.getElementById("levelDeckPickerModalOverlay").addEventListener("click", (e) => {
-    if (e.target.id === "levelDeckPickerModalOverlay") e.target.classList.add("hidden");
+  document.getElementById("srsChapterSwitchModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "srsChapterSwitchModalOverlay") e.target.classList.add("hidden");
   });
 
   // ----- Modal chọn bộ trong nhóm giáo trình (Dashboard "Học ngay") -----
@@ -1131,4 +1137,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     switchDeck(lastDeckId);
   }
   setMode(lastMode || "dashboard");
+  showLoadingOverlay(document.getElementById("app"), false);
 });

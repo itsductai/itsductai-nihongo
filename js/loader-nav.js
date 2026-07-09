@@ -27,20 +27,19 @@ function navIcon(name, cls) {
 async function loadDecks() {
   const res = await fetch("tailieu/index.json");
   const idx = await res.json();
-  const decks = [];
-  for (const filename of idx.files) {
+  // FIX HIỆU NĂNG: trước đây fetch TUẦN TỰ từng file (await trong vòng for)
+  // — với 81 bộ hiện tại, file sau phải đợi file trước tải xong mới bắt đầu,
+  // cực chậm. Giờ tải SONG SONG bằng Promise.all — trình duyệt tự giới hạn
+  // số kết nối đồng thời hợp lý (6 dòng gần như hiện đại), nhanh hơn nhiều so
+  // với chờ từng file 1.
+  const results = await Promise.all(idx.files.map(async (filename) => {
     try {
       const r = await fetch(`tailieu/${filename}`);
       const data = await r.json();
-      // "private": true trong JSON -> bỏ qua hoàn toàn, không đưa vào App.decks,
-      // TRỪ KHI đã mở khóa (xem isPrivateContentUnlocked() trong core.js).
-      if (data.private === true && !isPrivateContentUnlocked()) continue;
+      if (data.private === true && !isPrivateContentUnlocked()) return null;
       const id = filename.replace(/\.json$/, "");
       const type = data.type === "NGUPHAP" ? "NGUPHAP" : "TUVUNG";
 
-      // Tạo _id ổn định theo nội dung; nếu phát hiện trùng (hiếm, ví dụ 2 từ
-      // đồng âm được liệt kê riêng để học 2 nghĩa), thêm hậu tố #2, #3... để
-      // đảm bảo _id luôn duy nhất trong cùng 1 bộ.
       const seenIds = {};
       let words = data.words.map((w, i) => {
         let baseId = wordId(id, w, i);
@@ -53,14 +52,13 @@ async function loadDecks() {
         return { ...w, _id: baseId };
       });
       words = applyPatchesToWords(id, words);
-      // "series" (vd "mimi") — field tùy chọn để nhóm các bộ thuộc cùng 1 giáo
-      // trình lại với nhau trong dropdown, tách khỏi các bộ lẻ khác. Không có
-      // field này thì coi như thuộc nhóm "khác" (không ảnh hưởng bộ cũ).
-      decks.push({ id, title: data.title || filename, type, series: data.series || null, level: data.level || null, words });
+      return { id, title: data.title || filename, type, series: data.series || null, level: data.level || null, words };
     } catch (e) {
       console.error("Lỗi tải bộ", filename, e);
+      return null;
     }
-  }
+  }));
+  const decks = results.filter(Boolean);
   // Sắp theo tên hiển thị A-Z (so sánh kiểu tiếng Việt, có dấu đúng thứ tự)
   // — áp dụng ngay tại đây để MỌI nơi dùng App.decks (dropdown, sửa tạm reload...)
   // đều tự động theo đúng thứ tự, không cần sort lặp lại ở từng nơi hiển thị.
@@ -76,20 +74,19 @@ async function loadExams() {
   try {
     const res = await fetch("dethi/index.json");
     const idx = await res.json();
-    const exams = [];
-    for (const filename of idx.files) {
+    const results = await Promise.all(idx.files.map(async (filename) => {
       try {
         const r = await fetch(`dethi/${filename}`);
         const data = await r.json();
-        if (data.private === true && !isPrivateContentUnlocked()) continue;
+        if (data.private === true && !isPrivateContentUnlocked()) return null;
         const id = filename.replace(/\.json$/, "");
-        exams.push({ id, title: data.title || filename, questions: data.questions || [], mondai_breakdown: data.mondai_breakdown || null });
+        return { id, title: data.title || filename, questions: data.questions || [], mondai_breakdown: data.mondai_breakdown || null };
       } catch (e) {
         console.error("Lỗi tải đề thi", filename, e);
+        return null;
       }
-    }
-    // Cùng quy tắc với loadDecks(): sắp A-Z theo tên đề, hiểu số (numeric:true)
-    // để các đề có số năm/tháng trong tên không bị xếp sai kiểu so sánh ký tự.
+    }));
+    const exams = results.filter(Boolean);
     exams.sort((a, b) => a.title.localeCompare(b.title, "vi", { numeric: true }));
     return exams;
   } catch (e) {
@@ -102,17 +99,18 @@ async function loadChoukaiTests() {
   try {
     const res = await fetch("dethi-choukai/index.json");
     const idx = await res.json();
-    const tests = [];
-    for (const filename of idx.files) {
+    const results = await Promise.all(idx.files.map(async (filename) => {
       try {
         const r = await fetch(`dethi-choukai/${filename}`);
         const data = await r.json();
-        if (data.private === true && !isPrivateContentUnlocked()) continue;
-        tests.push(data);
+        if (data.private === true && !isPrivateContentUnlocked()) return null;
+        return data;
       } catch (e) {
         console.error("Lỗi tải đề nghe", filename, e);
+        return null;
       }
-    }
+    }));
+    const tests = results.filter(Boolean);
     tests.sort((a, b) => a.title.localeCompare(b.title, "vi", { numeric: true }));
     return tests;
   } catch (e) {
@@ -275,25 +273,17 @@ function renderNav() {
   dashBtn.addEventListener("click", () => setMode("dashboard"));
   nav.appendChild(dashBtn);
 
-  // SRS lên tab CHÍNH (standalone, 1-click) — mục tiêu học chính của Zane,
-  // không còn nằm lẫn trong dropdown Từ vựng/Ngữ pháp nữa.
+  // GỘP 2 nút cũ (SRS + Chọn bộ theo trình độ) thành 1 — bấm vào luôn đi tới
+  // trang chọn tài liệu (full-page, xem view-level-picker), chọn chương xong
+  // mới vào thẳng SRS (switchDeck() bên trong renderLevelPickerChapterListFull()
+  // tự gọi setMode("srs")). Đây chính là mục tiêu học chính, gộp lại cho gọn.
   const srsBtn = document.createElement("button");
   srsBtn.className = "nav-item nav-item-standalone";
-  srsBtn.dataset.mode = "srs";
-  srsBtn.title = "Ôn tập (SRS)";
-  srsBtn.innerHTML = `<span class="nav-icon">◷</span>`;
-  srsBtn.addEventListener("click", () => setMode("srs"));
+  srsBtn.dataset.mode = "level-picker";
+  srsBtn.title = "Học SRS — chọn bộ theo trình độ";
+  srsBtn.innerHTML = navIcon("flashcardStack");
+  srsBtn.addEventListener("click", () => setMode("level-picker"));
   nav.appendChild(srsBtn);
-
-  // Chọn bộ học theo trình độ (N1/N2/N3...) — modal riêng, thay cho việc phải
-  // vào Cài đặt tìm deck trong <select> dài dằng dặc.
-  const levelPickerBtn = document.createElement("button");
-  levelPickerBtn.className = "nav-item nav-item-standalone";
-  levelPickerBtn.dataset.mode = "level-picker";
-  levelPickerBtn.title = "Chọn bộ học theo trình độ";
-  levelPickerBtn.innerHTML = navIcon("flashcardStack");
-  levelPickerBtn.addEventListener("click", openLevelDeckPickerModal);
-  nav.appendChild(levelPickerBtn);
 
   // Nhóm "Từ vựng"/"Ngữ pháp" — icon + label đổi theo loại deck đang chọn.
   const isNguphap = App.currentDeckType === "NGUPHAP";
@@ -508,6 +498,7 @@ function setMode(mode) {
   if (mode === "dashboard") renderDashboard();
   if (mode === "table") renderTable();
   if (mode === "srs") initSrsMode();
+  if (mode === "level-picker") initLevelPickerPage();
   if (mode === "game") initGameMode();
   if (mode === "listen-game") initListenGameMode();
   if (mode === "reading") initReadingMode();

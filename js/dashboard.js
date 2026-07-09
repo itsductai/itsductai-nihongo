@@ -407,107 +407,162 @@ function renderDashboardCurriculumCards() {
 
 // Modal chọn bộ cụ thể trong 1 nhóm giáo trình — bấm 1 bộ là vào Flashcard học
 // luôn ngay lập tức.
-// Modal chọn bộ học theo TRÌNH ĐỘ — bấm nút N1/N2/N3... lọc đúng bộ trong
-// trình độ đó, bấm 1 bộ là vào SRS học luôn (mục tiêu chính là SRS).
+// Trang FULL-PAGE chọn bộ học theo TRÌNH ĐỘ (không phải popup — theo đúng yêu
+// cầu "thích khung khung như vầy hơn"). Sidebar trái = trình độ, chính giữa =
+// card từng tài liệu (Mimi/Tango...), bấm card mới hiện chương, bấm chương
+// vào thẳng SRS (mục tiêu chính là SRS).
 App.levelPickerFilter = App.levelPickerFilter || null;
+App.levelPickerSeries = null;
 
-function openLevelDeckPickerModal() {
+function initLevelPickerPage() {
   const levels = ["N1", "N2", "N3", "N4", "N5"].filter((lv) =>
     App.decks.some((d) => d.type === "TUVUNG" && d.level === lv)
   );
   if (!App.levelPickerFilter || !levels.includes(App.levelPickerFilter)) {
     App.levelPickerFilter = levels[0] || null;
   }
-  renderLevelPickerFilter(levels);
-  renderLevelPickerDeckList();
-  document.getElementById("levelDeckPickerModalOverlay").classList.remove("hidden");
+  App.levelPickerSeries = null;
+  renderLevelPickerTabs(levels);
+  renderLevelPickerPageHead();
+  renderLevelPickerSeriesGrid();
 }
 
-function renderLevelPickerFilter(levels) {
-  const wrap = document.getElementById("levelPickerLevelFilter");
+function renderLevelPickerTabs(levels) {
+  const wrap = document.getElementById("levelPickerTabs");
   wrap.innerHTML = levels.map((lv) =>
-    `<button class="dokkai-category-btn${App.levelPickerFilter === lv ? " is-active" : ""}" data-level="${lv}">${lv}</button>`
+    `<button class="level-picker-tab${App.levelPickerFilter === lv ? " is-active" : ""}" data-level="${lv}">Từ vựng ${lv}</button>`
   ).join("");
   wrap.querySelectorAll("[data-level]").forEach((btn) => {
     btn.addEventListener("click", () => {
       App.levelPickerFilter = btn.dataset.level;
-      renderLevelPickerFilter(levels);
-      renderLevelPickerDeckList();
+      App.levelPickerSeries = null;
+      renderLevelPickerTabs(levels);
+      renderLevelPickerPageHead();
+      renderLevelPickerSeriesGrid();
     });
   });
 }
 
-App.levelPickerSeries = null; // series đang chọn (null = đang ở màn card theo series)
-
-function renderLevelPickerDeckList() {
-  App.levelPickerSeries = null;
-  renderLevelPickerSeriesCards();
+function renderLevelPickerPageHead() {
+  const decks = App.decks.filter((d) => d.type === "TUVUNG" && d.level === App.levelPickerFilter);
+  const totalWords = decks.reduce((s, d) => s + d.words.length, 0);
+  document.getElementById("levelPickerPageTitle").textContent = `Danh sách từ vựng Cấp độ ${App.levelPickerFilter}`;
+  document.getElementById("levelPickerPageSub").textContent = `${totalWords} từ vựng cấp độ ${App.levelPickerFilter} trong ${decks.length} chương, từ các tài liệu đã thêm.`;
 }
 
 // Bước 1: hiện CARD theo TỪNG SERIES (Mimi, Tango...) — không gộp phẳng các
-// bộ của nhiều tài liệu khác nhau vào chung 1 danh sách như trước.
-function renderLevelPickerSeriesCards() {
+// bộ của nhiều tài liệu khác nhau vào chung 1 danh sách.
+function renderLevelPickerSeriesGrid() {
+  document.getElementById("levelPickerChapterListFull").classList.add("hidden");
+  const grid = document.getElementById("levelPickerSeriesGrid");
+  grid.classList.remove("hidden");
+
   const decks = App.decks.filter((d) => d.type === "TUVUNG" && d.level === App.levelPickerFilter);
   const bySeries = {};
   decks.forEach((d) => {
-    const key = d.series || "khác";
+    const key = d.series || "khac";
     if (!bySeries[key]) bySeries[key] = [];
     bySeries[key].push(d);
   });
+  const SERIES_LABELS = { mimi: "Mimikara oboeru", tango: "Tango N2 (nut-that)", khac: "Khác" };
 
-  const list = document.getElementById("levelPickerDeckList");
   const seriesKeys = Object.keys(bySeries);
   if (!seriesKeys.length) {
-    list.innerHTML = `<div class="dash-chart-empty">Chưa có bộ nào ở trình độ này.</div>`;
+    grid.innerHTML = `<div class="dash-chart-empty">Chưa có bộ nào ở trình độ này.</div>`;
     return;
   }
-  list.innerHTML = seriesKeys.map((key) => {
+  grid.innerHTML = seriesKeys.map((key) => {
     const seriesDecks = bySeries[key];
     const totalWords = seriesDecks.reduce((s, d) => s + d.words.length, 0);
     return `
-      <button class="dash-deck-picker-row level-picker-series-card" data-series="${key}">
-        <span class="dash-deck-picker-title">${key === "khác" ? "Khác" : key.toUpperCase()}</span>
-        <span class="dash-deck-picker-meta">${seriesDecks.length} chương · ${totalWords} từ</span>
+      <button class="level-picker-series-card" data-series="${key}">
+        <div class="level-picker-series-card-title">${SERIES_LABELS[key] || key}</div>
+        <div class="level-picker-series-card-sub">Từ vựng ${seriesDecks.length} chương</div>
+        <div class="level-picker-series-card-meta">${totalWords} từ vựng</div>
+        <div class="level-picker-series-card-link">Xem danh sách từ →</div>
       </button>`;
   }).join("");
-  list.querySelectorAll("[data-series]").forEach((btn) => {
+  grid.querySelectorAll("[data-series]").forEach((btn) => {
     btn.addEventListener("click", () => {
       App.levelPickerSeries = btn.dataset.series;
-      renderLevelPickerChapterList();
+      renderLevelPickerChapterListFull();
     });
   });
 }
 
 // Bước 2: trong ĐÚNG series đã chọn, hiện danh sách chương để bấm vào học.
-function renderLevelPickerChapterList() {
+function renderLevelPickerChapterListFull() {
+  document.getElementById("levelPickerSeriesGrid").classList.add("hidden");
+  const wrap = document.getElementById("levelPickerChapterListFull");
+  wrap.classList.remove("hidden");
+
   const decks = App.decks.filter((d) =>
     d.type === "TUVUNG" && d.level === App.levelPickerFilter &&
-    (d.series || "khác") === App.levelPickerSeries
+    (d.series || "khac") === App.levelPickerSeries
   );
-  const list = document.getElementById("levelPickerDeckList");
-  list.innerHTML = `
+  wrap.innerHTML = `
     <button class="level-picker-back-btn" id="btnLevelPickerBackToSeries">← Quay lại chọn tài liệu</button>
-    ${decks.map((deck) => {
-      const progress = SRS.loadProgress(deck.id);
-      const known = deck.words.filter((w) => {
-        const st = SRS.status(SRS.getEntry(progress, w._id));
-        return st === "known" || st === "mastered";
-      }).length;
-      const pct = deck.words.length ? Math.round((known / deck.words.length) * 100) : 0;
-      return `
-        <button class="dash-deck-picker-row" data-deck-id="${deck.id}">
-          <span class="dash-deck-picker-title">${deck.title}</span>
-          <span class="dash-deck-picker-meta">${known}/${deck.words.length} đã thuộc (${pct}%)</span>
-        </button>`;
-    }).join("")}
+    <div class="level-picker-chapter-grid">
+      ${decks.map((deck) => {
+        const progress = SRS.loadProgress(deck.id);
+        const known = deck.words.filter((w) => {
+          const st = SRS.status(SRS.getEntry(progress, w._id));
+          return st === "known" || st === "mastered";
+        }).length;
+        const pct = deck.words.length ? Math.round((known / deck.words.length) * 100) : 0;
+        return `
+          <button class="level-picker-chapter-card" data-deck-id="${deck.id}">
+            <div class="level-picker-chapter-title">${deck.title}</div>
+            <div class="level-picker-chapter-meta">${known}/${deck.words.length} đã thuộc (${pct}%)</div>
+            <div class="level-picker-chapter-bar"><div class="level-picker-chapter-bar-fill" style="width:${pct}%"></div></div>
+          </button>`;
+      }).join("")}
+    </div>
   `;
-  document.getElementById("btnLevelPickerBackToSeries").addEventListener("click", renderLevelPickerSeriesCards);
-  list.querySelectorAll("[data-deck-id]").forEach((btn) => {
+  document.getElementById("btnLevelPickerBackToSeries").addEventListener("click", renderLevelPickerSeriesGrid);
+  wrap.querySelectorAll("[data-deck-id]").forEach((btn) => {
     btn.addEventListener("click", () => {
       switchDeck(btn.dataset.deckId); // switchDeck() đã tự setMode("flash") bên trong
-      document.getElementById("levelDeckPickerModalOverlay").classList.add("hidden");
+      setMode("srs"); // mục tiêu chính là SRS -> chọn chương xong vào thẳng SRS
     });
   });
+}
+
+/* ===================================================================
+   POPUP NHỎ "Đổi chương" — dùng NGAY TRONG lúc đang ở SRS, chỉ trong CÙNG
+   series với bộ đang học, không cần thoát ra trang chọn tài liệu full lại.
+=================================================================== */
+function openSrsChapterSwitchModal() {
+  const currentDeck = App.decks.find((d) => d.id === App.currentDeckId);
+  if (!currentDeck) return;
+  const series = currentDeck.series || "khac";
+  const decks = App.decks.filter((d) =>
+    d.type === "TUVUNG" && d.level === currentDeck.level && (d.series || "khac") === series
+  );
+  document.getElementById("srsChapterSwitchTitle").textContent = `Đổi chương — ${currentDeck.level}`;
+  const list = document.getElementById("srsChapterSwitchList");
+  list.innerHTML = decks.map((deck) => {
+    const progress = SRS.loadProgress(deck.id);
+    const known = deck.words.filter((w) => {
+      const st = SRS.status(SRS.getEntry(progress, w._id));
+      return st === "known" || st === "mastered";
+    }).length;
+    const pct = deck.words.length ? Math.round((known / deck.words.length) * 100) : 0;
+    const isCurrent = deck.id === App.currentDeckId;
+    return `
+      <button class="dash-deck-picker-row${isCurrent ? " is-current" : ""}" data-deck-id="${deck.id}">
+        <span class="dash-deck-picker-title">${deck.title}${isCurrent ? " (đang học)" : ""}</span>
+        <span class="dash-deck-picker-meta">${known}/${deck.words.length} đã thuộc (${pct}%)</span>
+      </button>`;
+  }).join("");
+  list.querySelectorAll("[data-deck-id]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      switchDeck(btn.dataset.deckId);
+      setMode("srs");
+      document.getElementById("srsChapterSwitchModalOverlay").classList.add("hidden");
+    });
+  });
+  document.getElementById("srsChapterSwitchModalOverlay").classList.remove("hidden");
 }
 
 function openDashDeckPickerModal(curriculumKey) {
