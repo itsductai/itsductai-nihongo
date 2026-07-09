@@ -713,6 +713,21 @@
     </section>
 
     <!-- Modal chọn bộ cụ thể trong 1 nhóm giáo trình (từ nút "Học ngay" Dashboard) -->
+    <!-- Modal chọn bộ học theo TRÌNH ĐỘ (N1/N2/N3...) — chọn trình độ trước,
+         rồi chọn đúng bộ trong trình độ đó, bấm là vào SRS học luôn. -->
+    <div class="modal-overlay hidden" id="levelDeckPickerModalOverlay">
+      <div class="modal-box">
+        <div class="modal-head">
+          <div class="modal-title">📚 Chọn bộ học theo trình độ</div>
+          <button class="modal-close-btn" id="btnLevelDeckPickerClose">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="dokkai-category-filter" id="levelPickerLevelFilter"></div>
+          <div id="levelPickerDeckList" class="dash-deck-picker-list"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="modal-overlay hidden" id="dashDeckPickerModalOverlay">
       <div class="modal-box">
         <div class="modal-head">
@@ -1117,18 +1132,18 @@
 <script src="js/core.js?v=16"></script>
 <script src="js/scoring.js?v=1"></script>
 <script src="js/stats-weakness.js?v=5"></script>
-<script src="js/dashboard.js?v=9"></script>
+<script src="js/dashboard.js?v=10"></script>
 <script src="js/game.js?v=7"></script>
 <script src="js/listen-game.js?v=3"></script>
 <script src="js/reading.js?v=7"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=21"></script>
+<script src="js/loader-nav.js?v=22"></script>
 <script src="js/flashcard-edit.js?v=6"></script>
 <script src="js/table-srs-typing.js?v=10"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=8"></script>
 <script src="js/choukai.js?v=12"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=34"></script>
+<script src="js/init.js?v=35"></script>
 </body>
 </html>
