@@ -78,6 +78,13 @@
   background: var(--bg-2); border: 1px solid var(--border-soft); color: var(--text-2); cursor: pointer;
 }
 .dokkai-furigana-toggle.is-active { background: var(--good-soft); border-color: var(--good); color: var(--good); }
+
+.dokkai-auto-read-btn {
+  font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 999px;
+  background: var(--accent-soft); border: 1px solid var(--accent); color: var(--accent); cursor: pointer;
+}
+.dokkai-auto-read-btn:hover { filter: brightness(1.15); }
+.dokkai-auto-read-btn.is-active { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
 .dokkai-furigana-hidden rt { display: none; }
 
 /* Furigana-only (cú pháp {{chữ|đọc}} 2 phần, không có nghĩa riêng) — không
@@ -102,7 +109,11 @@
 .dokkai-vocab-reading { font-size: 11px; color: var(--accent); }
 .dokkai-vocab-hanviet { font-size: 10.5px; font-weight: 700; color: var(--purple); text-transform: uppercase; letter-spacing: 0.02em; margin-top: 2px; }
 .dokkai-vocab-meaning { font-size: 11.5px; color: var(--text-1); margin-top: 2px; }
-.dokkai-vocab-deck-match { font-size: 10px; color: var(--good); margin-top: 4px; font-weight: 700; }
+.dokkai-vocab-deck-badge {
+  font-size: 9px; font-weight: 800; padding: 1px 6px; border-radius: 999px;
+  background: var(--good-soft); color: var(--good); border: none; cursor: pointer;
+}
+.dokkai-vocab-deck-badge:hover { filter: brightness(1.2); }
 
 .dokkai-grammar-item { padding: 8px 10px; border-radius: 8px; background: var(--bg-2); }
 .dokkai-grammar-pattern { font-size: 13px; font-weight: 800; color: var(--warn); }
@@ -137,6 +148,14 @@
 @keyframes dokkaiPopoverIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
 .dokkai-gloss-popover b { font-size: 13px; color: var(--accent); }
 .dokkai-gloss-popover span { font-size: 12.5px; color: var(--text-1); }
+
+.dokkai-deck-badge-popover {
+  position: fixed; z-index: 300; max-width: 220px;
+  background: var(--bg-1); border: 1px solid var(--good); border-radius: 10px;
+  padding: 8px 12px; box-shadow: var(--shadow, 0 12px 30px rgba(0,0,0,0.4));
+  font-size: 12px; font-weight: 700; color: var(--good);
+  animation: dokkaiPopoverIn .15s ease;
+}
 
 /* ---- Quiz INLINE — nằm ngay trong luồng đọc, không chuyển màn ---- */
 .dokkai-inline-quiz { margin-top: 30px; }
