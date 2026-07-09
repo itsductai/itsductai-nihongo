@@ -39,10 +39,17 @@ function computeDueCounts() {
 
 function renderDueReviewWidget() {
   const { tuvung, nguphap } = computeDueCounts();
-  document.getElementById("dueReviewTuvungCount").textContent = tuvung;
-  document.getElementById("dueReviewNguphapCount").textContent = nguphap;
-  document.getElementById("btnDueReviewTuvung").classList.toggle("has-due", tuvung > 0);
-  document.getElementById("btnDueReviewNguphap").classList.toggle("has-due", nguphap > 0);
+  const tuvungCountEl = document.getElementById("dueReviewTuvungCount");
+  const nguphapCountEl = document.getElementById("dueReviewNguphapCount");
+  const tuvungBtnEl = document.getElementById("btnDueReviewTuvung");
+  const nguphapBtnEl = document.getElementById("btnDueReviewNguphap");
+  // Guard phòng thủ: KHÔNG để 1 phần tử thiếu (do đang deploy dở/thay đổi
+  // cấu trúc HTML giữa các phiên bản) làm crash TOÀN BỘ chuỗi khởi động —
+  // 1 lỗi ở đây trước đây có thể chặn luôn cả loadDecks() phía sau nó.
+  if (tuvungCountEl) tuvungCountEl.textContent = tuvung;
+  if (nguphapCountEl) nguphapCountEl.textContent = nguphap;
+  if (tuvungBtnEl) tuvungBtnEl.classList.toggle("has-due", tuvung > 0);
+  if (nguphapBtnEl) nguphapBtnEl.classList.toggle("has-due", nguphap > 0);
 }
 
 // Bấm 1 phát "Cần ôn tổng hợp" — gộp TẤT CẢ bộ cùng loại (đang có ít nhất 1 từ
@@ -107,8 +114,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.querySelectorAll(".dash-chart-tab").forEach((btn) => {
     btn.addEventListener("click", () => setDashboardChartMode(btn.dataset.chartMode));
   });
-  document.getElementById("btnDueReviewTuvung").addEventListener("click", () => startDueReviewCombo("TUVUNG"));
-  document.getElementById("btnDueReviewNguphap").addEventListener("click", () => startDueReviewCombo("NGUPHAP"));
+  document.getElementById("btnDueReviewTuvung")?.addEventListener("click", () => startDueReviewCombo("TUVUNG"));
+  document.getElementById("btnDueReviewNguphap")?.addEventListener("click", () => startDueReviewCombo("NGUPHAP"));
 
   App.decks = await loadDecks();
   buildGrammarIndex();

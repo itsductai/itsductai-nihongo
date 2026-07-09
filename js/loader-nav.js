@@ -24,41 +24,38 @@ function navIcon(name, cls) {
 
 /* ---------- Loading decks & exams ---------- */
 
-async function loadDecks() {
-  const res = await fetch("tailieu/index.json");
-  const idx = await res.json();
-  // FIX HIỆU NĂNG: trước đây fetch TUẦN TỰ từng file (await trong vòng for)
-  // — với 81 bộ hiện tại, file sau phải đợi file trước tải xong mới bắt đầu,
-  // cực chậm. Giờ tải SONG SONG bằng Promise.all — trình duyệt tự giới hạn
-  // số kết nối đồng thời hợp lý (6 dòng gần như hiện đại), nhanh hơn nhiều so
-  // với chờ từng file 1.
-  const results = await Promise.all(idx.files.map(async (filename) => {
-    try {
-      const r = await fetch(`tailieu/${filename}`);
-      const data = await r.json();
-      if (data.private === true && !isPrivateContentUnlocked()) return null;
-      const id = filename.replace(/\.json$/, "");
-      const type = data.type === "NGUPHAP" ? "NGUPHAP" : "TUVUNG";
+// ===================================================================
+// LAZY LOADING THẬT SỰ — 2 TẦNG DỮ LIỆU:
+//
+// TẦNG MỎNG (thin) — tải NGAY lúc mở app, dùng chung 1 file duy nhất
+// (tailieu/manifest-thin.json, sinh sẵn bằng script, chỉ chứa _id/kanji/
+// doc/nghia — đủ cho Dashboard tính % hoàn thành, thanh tìm kiếm toàn cục,
+// và auto-scan đọc báo). KHÔNG chứa vi_du/dong_nghia/trai_nghia/doc_marked/
+// han_viet (field NẶNG, chiếm phần lớn dung lượng vì có câu ví dụ dài).
+//
+// TẦNG ĐẦY ĐỦ (thick) — CHỈ tải khi thực sự mở 1 bộ ra học (switchDeck()),
+// xem ensureDeckLoaded() bên dưới — fetch ĐÚNG 1 file JSON gốc của bộ đó,
+// merge field nặng vào ĐÚNG từ đang có (khớp theo _id, cùng công thức sinh
+// _id với lúc build manifest nên khớp tuyệt đối), rồi render lại view đang
+// mở để hiện đủ thông tin.
+//
+// Vì sao KHÔNG làm switchDeck() thành async: tránh phải sửa hàng chục nơi
+// đang gọi switchDeck() đồng bộ trong toàn bộ code base (rủi ro rất cao nếu
+// đổi). Thay vào đó: switchDeck() vẫn đồng bộ, NHƯNG kích hoạt tải tầng đầy
+// đủ NGẦM (fire-and-forget có xử lý loading + render lại khi xong).
+// ===================================================================
 
-      const seenIds = {};
-      let words = data.words.map((w, i) => {
-        let baseId = wordId(id, w, i);
-        if (seenIds[baseId] !== undefined) {
-          seenIds[baseId] += 1;
-          baseId = `${baseId}#${seenIds[baseId]}`;
-        } else {
-          seenIds[baseId] = 0;
-        }
-        return { ...w, _id: baseId };
-      });
-      words = applyPatchesToWords(id, words);
-      return { id, title: data.title || filename, type, series: data.series || null, level: data.level || null, words };
-    } catch (e) {
-      console.error("Lỗi tải bộ", filename, e);
-      return null;
-    }
-  }));
-  const decks = results.filter(Boolean);
+App.deckThickLoaded = {}; // deckId -> true khi đã tải xong field nặng
+
+async function loadDecks() {
+  const res = await fetch("tailieu/manifest-thin.json");
+  const manifest = await res.json();
+  const decks = manifest.decks
+    .filter((d) => !d.private || isPrivateContentUnlocked())
+    .map((d) => ({
+      id: d.id, title: d.title, type: d.type, series: d.series || null, level: d.level || null,
+      words: applyPatchesToWords(d.id, d.words.map((w) => ({ ...w }))),
+    }));
   // Sắp theo tên hiển thị A-Z (so sánh kiểu tiếng Việt, có dấu đúng thứ tự)
   // — áp dụng ngay tại đây để MỌI nơi dùng App.decks (dropdown, sửa tạm reload...)
   // đều tự động theo đúng thứ tự, không cần sort lặp lại ở từng nơi hiển thị.
@@ -68,6 +65,46 @@ async function loadDecks() {
   // "Unit 4", nhìn vào tưởng sai thứ tự dù về mặt chuỗi vẫn đúng A-Z.
   decks.sort((a, b) => a.title.localeCompare(b.title, "vi", { numeric: true }));
   return decks;
+}
+
+// Tải TẦNG ĐẦY ĐỦ cho ĐÚNG 1 bộ (gọi từ switchDeck()) — fetch file JSON gốc
+// của bộ đó, merge field nặng (vi_du, dong_nghia, trai_nghia, doc_marked,
+// vi_du_ruby, han_viet) vào ĐÚNG từ đang có trong App.decks theo _id khớp
+// tuyệt đối (cùng công thức wordId() với lúc sinh manifest-thin.json).
+// KHÔNG tải lại nếu đã tải rồi (cache trong App.deckThickLoaded).
+async function ensureDeckLoaded(deckId) {
+  if (App.deckThickLoaded[deckId]) return; // đã có đủ rồi, khỏi tải lại
+  const deck = App.decks.find((d) => d.id === deckId);
+  if (!deck) return;
+  try {
+    const r = await fetch(`tailieu/${deckId}.json`);
+    const data = await r.json();
+    const seenIds = {};
+    const fullWordsById = {};
+    data.words.forEach((w, i) => {
+      let baseId = wordId(deckId, w, i);
+      if (seenIds[baseId] !== undefined) {
+        seenIds[baseId] += 1;
+        baseId = `${baseId}#${seenIds[baseId]}`;
+      } else {
+        seenIds[baseId] = 0;
+      }
+      fullWordsById[baseId] = w;
+    });
+    // Merge field nặng vào ĐÚNG object đang có sẵn trong App.decks (mutate
+    // in-place, KHÔNG thay thế cả mảng) — để mọi tham chiếu cũ (App.currentWords
+    // đang trỏ vào cùng mảng này) tự động thấy dữ liệu mới, không cần gán lại.
+    deck.words.forEach((thinWord) => {
+      const full = fullWordsById[thinWord._id];
+      if (full) Object.assign(thinWord, full, { _id: thinWord._id });
+    });
+    const patchedWords = applyPatchesToWords(deckId, deck.words);
+    deck.words.length = 0;
+    deck.words.push(...patchedWords);
+    App.deckThickLoaded[deckId] = true;
+  } catch (e) {
+    console.error("Lỗi tải đầy đủ bộ", deckId, e);
+  }
 }
 
 async function loadExams() {
@@ -453,6 +490,28 @@ function switchDeck(deckId) {
 
   // Mặc định mở Flashcard sau khi đổi bộ
   setMode("flash");
+
+  // ----- LAZY LOAD tầng đầy đủ (thick) NGẦM — switchDeck() vẫn đồng bộ như
+  // cũ (không phá vỡ hàng chục nơi đang gọi nó), chỉ kích hoạt tải NGẦM. Nếu
+  // đã tải rồi (ensureDeckLoaded tự kiểm tra App.deckThickLoaded) thì Promise
+  // resolve gần như ngay lập tức, không có gì để làm thêm. Nếu CHƯA tải,
+  // hiện spinner nhỏ ở view đang mở, tải xong thì render lại ĐÚNG view đang
+  // active LÚC ĐÓ (không phải lúc gọi — người dùng có thể đã chuyển tab khác
+  // trong lúc chờ tải). -----
+  if (!App.deckThickLoaded[deckId]) {
+    const activeViewEl = document.querySelector(".view:not(.hidden)");
+    if (activeViewEl) showLoadingOverlay(activeViewEl, true);
+    ensureDeckLoaded(deckId).then(() => {
+      if (activeViewEl) showLoadingOverlay(activeViewEl, false);
+      // Render lại ĐÚNG mode đang active tại thời điểm tải xong (không phải
+      // lúc bắt đầu gọi), để hiện đủ vi_du/dong_nghia/... vừa merge vào.
+      const nowMode = document.querySelector(".view:not(.hidden)")?.id.replace("view-", "");
+      if (nowMode === "flash") renderFlashCard();
+      else if (nowMode === "table") renderTable();
+      else if (nowMode === "srs") renderSrsCard();
+      else if (nowMode === "weakness" && typeof renderWeaknessMode === "function") renderWeaknessMode();
+    });
+  }
 }
 
 // Ghi nhớ mode + deck đang xem — dùng khi reload trang thì quay lại ĐÚNG chỗ
