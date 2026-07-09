@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Nihongo Lab — Luyện thi JLPT</title>
-<link rel="stylesheet" href="css/style.css?v=16">
+<link rel="stylesheet" href="css/style.css?v=17">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -100,6 +100,29 @@
          giáo trình học, kết quả đề thi gần đây. Tái dùng data SRS/exam-history
          sẵn có, xem js/dashboard.js.
     =================================================================== -->
+    <!-- ===================================================================
+         CHỌN BỘ HỌC THEO TRÌNH ĐỘ — trang riêng (không phải popup, theo đúng
+         yêu cầu "thích khung khung như vầy hơn"). Sidebar trái = trình độ,
+         chính giữa = card từng tài liệu (Mimi/Tango...), bấm card mới hiện
+         chương để chọn. Chọn chương xong -> vào thẳng SRS.
+    =================================================================== */
+    <section class="view hidden" id="view-level-picker">
+      <div class="level-picker-layout">
+        <aside class="level-picker-sidebar">
+          <div class="level-picker-sidebar-title">Menu</div>
+          <div id="levelPickerTabs"></div>
+        </aside>
+        <div class="level-picker-main">
+          <div class="level-picker-page-head">
+            <h2 id="levelPickerPageTitle">Danh sách từ vựng</h2>
+            <p id="levelPickerPageSub"></p>
+          </div>
+          <div class="level-picker-series-grid" id="levelPickerSeriesGrid"></div>
+          <div class="level-picker-chapter-list hidden" id="levelPickerChapterListFull"></div>
+        </div>
+      </div>
+    </section>
+
     <section class="view" id="view-dashboard">
       <div class="dash-greeting">
         <div class="dash-greeting-title" id="dashGreeting">Chào bạn 👋</div>
@@ -280,6 +303,7 @@
       <div class="view-head">
         <div></div>
         <div class="head-actions">
+          <button id="btnSrsSwitchChapter" class="icon-btn" title="Chọn chương khác">📑 Đổi chương</button>
           <button id="btnSrsFieldConfig" class="icon-btn" title="Chọn hiển thị mặt thẻ">⚙ Mặt thẻ</button>
           <label class="toggle random-direction-toggle" title="Mặt trước ngẫu nhiên là Kanji hoặc Nghĩa, mặt sau tự đổi ngược lại — cố định theo từng thẻ trong phiên">
             <input type="checkbox" id="srsRandomDirectionToggle">
@@ -715,15 +739,17 @@
     <!-- Modal chọn bộ cụ thể trong 1 nhóm giáo trình (từ nút "Học ngay" Dashboard) -->
     <!-- Modal chọn bộ học theo TRÌNH ĐỘ (N1/N2/N3...) — chọn trình độ trước,
          rồi chọn đúng bộ trong trình độ đó, bấm là vào SRS học luôn. -->
-    <div class="modal-overlay hidden" id="levelDeckPickerModalOverlay">
+
+    <!-- Popup NHỎ chọn chương khác NGAY TRONG lúc đang ở SRS — cùng series
+         với bộ đang học, không cần thoát ra trang chọn tài liệu full lại. -->
+    <div class="modal-overlay hidden" id="srsChapterSwitchModalOverlay">
       <div class="modal-box">
         <div class="modal-head">
-          <div class="modal-title">📚 Chọn bộ học theo trình độ</div>
-          <button class="modal-close-btn" id="btnLevelDeckPickerClose">✕</button>
+          <div class="modal-title" id="srsChapterSwitchTitle">Chọn chương khác</div>
+          <button class="modal-close-btn" id="btnSrsChapterSwitchClose">✕</button>
         </div>
         <div class="modal-body">
-          <div class="dokkai-category-filter" id="levelPickerLevelFilter"></div>
-          <div id="levelPickerDeckList" class="dash-deck-picker-list"></div>
+          <div id="srsChapterSwitchList" class="dash-deck-picker-list"></div>
         </div>
       </div>
     </div>
@@ -1132,18 +1158,18 @@
 <script src="js/core.js?v=17"></script>
 <script src="js/scoring.js?v=1"></script>
 <script src="js/stats-weakness.js?v=5"></script>
-<script src="js/dashboard.js?v=11"></script>
+<script src="js/dashboard.js?v=12"></script>
 <script src="js/game.js?v=7"></script>
 <script src="js/listen-game.js?v=3"></script>
-<script src="js/reading.js?v=7"></script>
+<script src="js/reading.js?v=8"></script>
 <script src="js/config-focus.js?v=1"></script>
-<script src="js/loader-nav.js?v=23"></script>
+<script src="js/loader-nav.js?v=24"></script>
 <script src="js/flashcard-edit.js?v=6"></script>
 <script src="js/table-srs-typing.js?v=10"></script>
 <script src="js/quiz-match.js?v=2"></script>
 <script src="js/exam.js?v=8"></script>
 <script src="js/choukai.js?v=12"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=35"></script>
+<script src="js/init.js?v=36"></script>
 </body>
 </html>
