@@ -137,6 +137,9 @@ function applyNoteHighlights(containerEl, kind, id, qKey) {
 function applyExamNoteHighlights(containerEl, examId, qIndex) {
   applyNoteHighlights(containerEl, "exam", examId, qIndex);
 }
+function applyReadingNoteHighlights(containerEl, articleId) {
+  applyNoteHighlights(containerEl, "reading", articleId, "body");
+}
 
 // state của popup ghi chú đang mở — null nếu đang TẠO MỚI (từ bôi đen),
 // có giá trị nếu đang SỬA 1 ghi chú có sẵn (bấm vào <mark>).
@@ -149,6 +152,7 @@ function initExamNoteSelectionHandler() {
   document.addEventListener("mouseup", () => {
     const examView = document.getElementById("view-exam");
     const choukaiView = document.getElementById("view-choukai");
+    const readingView = document.getElementById("view-reading");
     let kind = null, allowedIds = [];
     if (examView && !examView.classList.contains("hidden")) {
       kind = "exam";
@@ -156,6 +160,9 @@ function initExamNoteSelectionHandler() {
     } else if (choukaiView && !choukaiView.classList.contains("hidden")) {
       kind = "choukai";
       allowedIds = ["choukaiPrompt", "choukaiOptions", "choukaiReviewContent"];
+    } else if (readingView && !readingView.classList.contains("hidden")) {
+      kind = "reading";
+      allowedIds = ["dokkaiReadBody"];
     }
     const toolbarBtn = document.getElementById("examNoteToolbarBtn");
     if (!kind) { toolbarBtn.classList.add("hidden"); return; }
@@ -181,9 +188,15 @@ function initExamNoteSelectionHandler() {
     if (kind === "exam") {
       noteCtx.id = App.currentExamId;
       noteCtx.qKey = App.examCurrentQIndex;
-    } else {
+    } else if (kind === "choukai") {
       noteCtx.id = App.currentChoukaiId;
       noteCtx.qKey = getCurrentChoukaiNoteKey();
+    } else {
+      // reading: ghi chú gắn theo TOÀN BÀI (qKey cố định "body"), không tách
+      // theo đoạn — 1 bài đọc chỉ có 1 "vùng" duy nhất để ghi chú, khác exam/
+      // choukai vốn có nhiều câu hỏi riêng biệt cần tách qKey theo từng câu.
+      noteCtx.id = App.reading ? App.reading.article.id : null;
+      noteCtx.qKey = "body";
     }
     if (noteCtx.id == null || noteCtx.qKey == null) { toolbarBtn.classList.add("hidden"); return; }
 

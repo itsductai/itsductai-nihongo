@@ -594,6 +594,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.querySelectorAll(".dokkai-translate-btn").forEach((btn) => {
     btn.addEventListener("click", () => setDokkaiTranslateMode(btn.dataset.translateMode));
   });
+  document.getElementById("btnDokkaiFuriganaToggle").addEventListener("click", toggleDokkaiFurigana);
 
   // ----- Quiz mode -----
   document.getElementById("btnQuizRestart").addEventListener("click", initQuizMode);

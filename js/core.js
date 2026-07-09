@@ -634,7 +634,7 @@ function showLoadingOverlay(containerEl, show) {
     if (!overlay) {
       overlay = document.createElement("div");
       overlay.className = "app-loading-overlay";
-      overlay.innerHTML = `<div class="app-loading-spinner"></div>`;
+      overlay.innerHTML = `<div class="app-loading-spinner"></div><div class="app-loading-label">読み込み中...</div>`;
       containerEl.style.position = containerEl.style.position || "relative";
       containerEl.appendChild(overlay);
     }

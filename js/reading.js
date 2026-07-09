@@ -69,10 +69,20 @@ function autoScanDokkaiText(text, vocabIndex) {
 
 function parseDokkaiParagraph(text, vocabIndex) {
   const manualMatches = [];
-  const placeholder = text.replace(/\{\{([^|}]+)\|([^|}]+)\|([^}]+)\}\}/g, (_, word, reading, meaning) => {
-    const safeMeaning = meaning.replace(/"/g, "&quot;");
+  // Hỗ trợ CẢ 2 dạng cú pháp: {{chữ|đọc}} (2 phần, chỉ furigana cho kanji đơn
+  // giản không cần giải nghĩa riêng) VÀ {{chữ|đọc|nghĩa}} (3 phần, glossing
+  // đầy đủ). Trước đây regex CHỈ khớp đúng 3 phần, nên các chỗ tôi tự viết
+  // 2 phần (rất nhiều trong các bài đã soạn) bị lộ ra thô ngoài màn hình.
+  const placeholder = text.replace(/\{\{([^|}]+)\|([^|}]+)(?:\|([^}]+))?\}\}/g, (_, word, reading, meaning) => {
     const idx = manualMatches.length;
-    manualMatches.push(`<ruby class="dokkai-gloss" data-word="${word}" data-reading="${reading}" data-meaning="${safeMeaning}">${word}<rt>${reading}</rt></ruby>`);
+    if (meaning) {
+      const safeMeaning = meaning.replace(/"/g, "&quot;");
+      manualMatches.push(`<ruby class="dokkai-gloss" data-word="${word}" data-reading="${reading}" data-meaning="${safeMeaning}">${word}<rt>${reading}</rt></ruby>`);
+    } else {
+      // Chỉ furigana, không có nghĩa riêng -> không cần click-to-reveal,
+      // chỉ hiện cách đọc phía trên như furigana thông thường.
+      manualMatches.push(`<ruby class="dokkai-furigana-only">${word}<rt>${reading}</rt></ruby>`);
+    }
     return `\u0000${idx}\u0000`;
   });
   const segments = placeholder.split(/(\u0000\d+\u0000)/);
@@ -162,6 +172,8 @@ function startReadingArticle(articleId) {
   noteEl.classList.toggle("hidden", !article.sourceNote);
 
   document.querySelectorAll(".dokkai-translate-btn").forEach((b) => b.classList.toggle("is-active", b.dataset.translateMode === "none"));
+  document.getElementById("btnDokkaiFuriganaToggle").classList.add("is-active");
+  document.getElementById("dokkaiReadBody").classList.remove("dokkai-furigana-hidden");
 
   showLoadingOverlay(document.getElementById("dokkaiPhaseRead"), true);
   setTimeout(() => {
@@ -203,12 +215,24 @@ function renderDokkaiArticleBody(vocabIndex) {
   document.getElementById("dokkaiReadBody").querySelectorAll(".dokkai-gloss, .dokkai-auto-scan").forEach((el) => {
     el.addEventListener("click", (e) => showDokkaiGlossPopover(e, el));
   });
+  // Hiện lại các ghi chú đã lưu (tái dùng nguyên hệ thống ghi chú của đề thi/
+  // luyện nghe — kind="reading", qKey cố định "body").
+  applyReadingNoteHighlights(document.getElementById("dokkaiReadBody"), article.id);
 }
 
 function setDokkaiTranslateMode(mode) {
   App.dokkaiTranslateMode = mode;
   document.querySelectorAll(".dokkai-translate-btn").forEach((b) => b.classList.toggle("is-active", b.dataset.translateMode === mode));
   renderDokkaiArticleBody(buildDokkaiVocabIndex());
+}
+
+// Bật/tắt furigana toàn bài — chỉ ẩn/hiện <rt> qua CSS, không render lại
+// (giữ nguyên trạng thái ghi chú/glossing đang có, không mất gì).
+function toggleDokkaiFurigana() {
+  const btn = document.getElementById("btnDokkaiFuriganaToggle");
+  const isOn = !btn.classList.contains("is-active");
+  btn.classList.toggle("is-active", isOn);
+  document.getElementById("dokkaiReadBody").classList.toggle("dokkai-furigana-hidden", !isOn);
 }
 
 function showDokkaiGlossPopover(e, el) {
