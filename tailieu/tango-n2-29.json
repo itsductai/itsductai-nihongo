@@ -1,0 +1,272 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Quan hệ trên dưới",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "地位",
+      "doc": "ちい",
+      "doc_marked": "ちい",
+      "han_viet": "",
+      "nghia": "Vị trí, địa vị",
+      "vi_du": "地位の高い人とは少し話しにくい｡ (Hơi khó nói chuyện với người có địa vị cao.)",
+      "vi_du_ruby": "<ruby>地位<rt>ちい</rt></ruby>の高い人とは少し話しにくい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "目上",
+      "doc": "めうえ",
+      "doc_marked": "めうえ",
+      "han_viet": "",
+      "nghia": "Người trên",
+      "vi_du": "目上の人には敬語を使わないと失礼だ｡ (Không sử dụng kính ngữ với người trên thì thật thất lễ.)",
+      "vi_du_ruby": "<ruby>目上<rt>めうえ</rt></ruby>の人には敬語を使わないと失礼だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "敬意",
+      "doc": "けいい",
+      "doc_marked": "**けい**い",
+      "han_viet": "",
+      "nghia": "Sự tôn kính, tôn trọng",
+      "vi_du": "あの若者はお年寄りに敬意を持って話す｡ (Bạn trẻ đó nói chuyện với người già một cách tôn kính.)",
+      "vi_du_ruby": "あの若者はお年寄りに<ruby>敬意<rt>けいい</rt></ruby>を持って話す｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "敬う",
+      "doc": "うやまう",
+      "doc_marked": "うやまう",
+      "han_viet": "",
+      "nghia": "Tôn kính, kính trọng",
+      "vi_du": "目上を心から敬う｡ (Kính trọng người trên thật lòng.)",
+      "vi_du_ruby": "目上を心から<ruby>敬う<rt>うやまう</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "的確な",
+      "doc": "てきかくな",
+      "doc_marked": "てきかくな",
+      "han_viet": "",
+      "nghia": "Chính xác, xác đáng",
+      "vi_du": "先輩の的確なアドバイスは、ありがたい｡ (Lời khuyên xác đáng của đàn anh rất quý giá.)",
+      "vi_du_ruby": "先輩の<ruby>的確な<rt>てきかくな</rt></ruby>アドバイスは、ありがたい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "忠告（する）",
+      "doc": "ちゅうこく",
+      "doc_marked": "**ちゅう**こく",
+      "han_viet": "",
+      "nghia": "Lời cảnh cáo, nhắc nhở",
+      "vi_du": "祖父の忠告は今も役に立っている｡ (Lời nhắc nhở của ông tôi đến nay vẫn có ích.)",
+      "vi_du_ruby": "祖父の忠告は今も役に立っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "サポート（する）",
+      "doc": "さぽーと",
+      "doc_marked": "さぽーと",
+      "han_viet": "",
+      "nghia": "Sự hỗ trợ",
+      "vi_du": "新入社員は先輩達にサポートしてもらう｡ (Nhân viên mới được các đàn anh đàn chị hỗ trợ.)",
+      "vi_du_ruby": "新入社員は先輩達にサポートしてもらう｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "いばる",
+      "doc": "いばる",
+      "doc_marked": "いばる",
+      "han_viet": "",
+      "nghia": "Kiêu căng, ngạo mạn",
+      "vi_du": "部下に対していばる上司には、なりたくない｡ (Tôi không muốn trở thành cấp trên ngạo mạn với cấp dưới.)",
+      "vi_du_ruby": "部下に対して<ruby>いばる<rt>いばる</rt></ruby>上司には、なりたくない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "押し付ける",
+      "doc": "おしつける",
+      "doc_marked": "おしつける",
+      "han_viet": "",
+      "nghia": "Áp đặt, ép buộc",
+      "vi_du": "先輩に仕事を押し付けられた｡ (Tôi bị đàn anh áp đặt công việc.)",
+      "vi_du_ruby": "先輩に仕事を押し付けられた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ご無沙汰（する）",
+      "doc": "ごぶさた",
+      "doc_marked": "ごぶさた",
+      "han_viet": "",
+      "nghia": "Không liên lạc (trong thời gian dài)",
+      "vi_du": "先生、久しくご無沙汰しております｡ (Chào thầy / cô, đã lâu không liên lạc ạ.)",
+      "vi_du_ruby": "先生、久しくご無沙汰しております｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "恐縮（する）",
+      "doc": "きょうしゅく",
+      "doc_marked": "きょうしゅく",
+      "han_viet": "",
+      "nghia": "Thật ngại, áy náy",
+      "vi_du": "ご無沙汰している先生から連絡があり、恐縮した｡ (Có liên lạc của thầy / cô đã lâu không gặp, tôi thấy thật ấy náy.)",
+      "vi_du_ruby": "ご無沙汰している先生から連絡があり、恐縮した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "信頼（する）",
+      "doc": "しんらい",
+      "doc_marked": "しんらい",
+      "han_viet": "",
+      "nghia": "Sự tin cậy, tin tưởng",
+      "vi_du": "あの先輩は信頼できる人だと思う｡ (Tôi nghĩ đó là người đàn anh có thể tin tưởng được.)",
+      "vi_du_ruby": "あの先輩は信頼できる人だと思う｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "従う",
+      "doc": "したがう",
+      "doc_marked": "したがう",
+      "han_viet": "",
+      "nghia": "Tuân theo, theo",
+      "vi_du": "社員は会社の規則に従わなければならない｡ (Nhân viên phải tuân thủ nội quy công ty.)",
+      "vi_du_ruby": "社員は会社の規則に従わなければならない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "うなずく",
+      "doc": "うなずく",
+      "doc_marked": "うなずく",
+      "han_viet": "",
+      "nghia": "Gật đầu, gật gù",
+      "vi_du": "上司は私の話を、いつもうなずきながら聞いてくれる｡ (Cấp trên luôn vừa gật gù vừa nghe chuyện của tôi.)",
+      "vi_du_ruby": "上司は私の話を、いつもうなずきながら聞いてくれる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "反論（する）",
+      "doc": "はんろん",
+      "doc_marked": "はんろん",
+      "han_viet": "",
+      "nghia": "Phản biện, bác bỏ",
+      "vi_du": "会社のために上司の意見に反論した｡ (Vì công ty, tôi phản biện ý kiến của cấp trên.)",
+      "vi_du_ruby": "会社のために上司の意見に反論した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "わびる",
+      "doc": "わびる",
+      "doc_marked": "わびる",
+      "han_viet": "",
+      "nghia": "Xin lỗi",
+      "vi_du": "仕事のミスを上司にわびた｡ (Tôi xin lỗi cấp trên vì sai xót trong công việc.)",
+      "vi_du_ruby": "仕事のミスを上司にわびた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "やる気",
+      "doc": "やるき",
+      "doc_marked": "やるき",
+      "han_viet": "",
+      "nghia": "Sự hứng thú, cảm hứng",
+      "vi_du": "上司にやる気をアピールして、プロジェクトに参加した｡ (Tôi thể hiện sự nhiệt huyết với cấp trên để được tham gia dự án.)",
+      "vi_du_ruby": "上司に<ruby>やる気<rt>やるき</rt></ruby>をアピールして、プロジェクトに参加した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "お世辞",
+      "doc": "おせじ",
+      "doc_marked": "おせじ",
+      "han_viet": "",
+      "nghia": "Sự tâng bốc, nịnh hót",
+      "vi_du": "あの人はお世辞がうまい｡ (Người đó nịnh hót giỏi.)",
+      "vi_du_ruby": "あの人は<ruby>お世辞<rt>おせじ</rt></ruby>がうまい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ごまをする",
+      "doc": "ごまをする",
+      "doc_marked": "ごまをする",
+      "han_viet": "",
+      "nghia": "Xu nịnh",
+      "vi_du": "上司にごまをするなんて嫌だ｡ (Tôi ghét kiểu xu nịnh cấp trên.)",
+      "vi_du_ruby": "上司に<ruby>ごまをする<rt>ごまをする</rt></ruby>なんて嫌だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "上等な",
+      "doc": "じょうとうな",
+      "doc_marked": "じょうと**う**な",
+      "han_viet": "",
+      "nghia": "Cao cấp",
+      "vi_du": "夏と冬に、クライアントに上等なワインを贈る｡ (Gửi rượu vang cao cấp đến khách hàng vào mùa hè và mùa đông.)",
+      "vi_du_ruby": "夏と冬に、クライアントに<ruby>上等な<rt>じょうとうな</rt></ruby>ワインを贈る｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "苦痛",
+      "doc": "くつう",
+      "doc_marked": "くつう",
+      "han_viet": "",
+      "nghia": "Sự đau khổ",
+      "vi_du": "残業が毎日続くのは苦痛だ｡ (Làm tăng ca cứ tiếp diễn hàng ngày thì thật đau khổ.)",
+      "vi_du_ruby": "残業が毎日続くのは<ruby>苦痛<rt>くつう</rt></ruby>だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "夫人",
+      "doc": "ふじん",
+      "doc_marked": "ふじん",
+      "han_viet": "",
+      "nghia": "Phu nhân, người vợ",
+      "vi_du": "今日、部長夫人に初めてお会いした｡ (Hôm nay tôi đã được diện kiến phu nhân của trưởng phòng.)",
+      "vi_du_ruby": "今日、部長<ruby>夫人<rt>ふじん</rt></ruby>に初めてお会いした｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ベテラン",
+      "doc": "べてらん",
+      "doc_marked": "べてらん",
+      "han_viet": "",
+      "nghia": "Người giỏi, kỳ cựu",
+      "vi_du": "ベテランの上司にクライアントの情報を教えてもらう｡ (Tôi được cấp trên kỳ cựu chỉ thông tin của khách hàng.)",
+      "vi_du_ruby": "<ruby>ベテラン<rt>べてらん</rt></ruby>の上司にクライアントの情報を教えてもらう｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "平社員",
+      "doc": "ひらしゃいん",
+      "doc_marked": "ひらしゃいん",
+      "han_viet": "",
+      "nghia": "Nhân viên quèn",
+      "vi_du": "入社5年だが、まだ平社員だ｡ (Tôi vào công ty đã 5 năm mà vẫn là nhân viên quèn.)",
+      "vi_du_ruby": "入社5年だが、まだ<ruby>平社員<rt>ひらしゃいん</rt></ruby>だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

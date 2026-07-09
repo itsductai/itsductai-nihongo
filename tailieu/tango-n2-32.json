@@ -1,0 +1,261 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Thời trang",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "格好",
+      "doc": "かっこう",
+      "doc_marked": "かっこ**う**",
+      "han_viet": "",
+      "nghia": "Hình thức, bộ dạng, vẻ bề ngoài",
+      "vi_du": "そんな格好で外出するのは、やめなさい｡ (Hãy ngưng ngay cái việc đi ra ngoài với bộ dạng đó đi.)",
+      "vi_du_ruby": "そんな<ruby>格好<rt>かっこう</rt></ruby>で外出するのは、やめなさい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "持ち物",
+      "doc": "もちもの",
+      "doc_marked": "もちもの",
+      "han_viet": "",
+      "nghia": "Vật dụng",
+      "vi_du": "この女優の持ち物は全て有名ブランド品だ｡ (Tất cả những vật dụng nữ diễn viên này có đều là đồ hiệu nổi tiếng.)",
+      "vi_du_ruby": "この女優の<ruby>持ち物<rt>もちもの</rt></ruby>は全て有名ブランド品だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "身につける",
+      "doc": "みにつける",
+      "doc_marked": "みにつける",
+      "han_viet": "",
+      "nghia": "Mặc, đeo, học hỏi, tiếp thu",
+      "vi_du": "①先生が身につけているものはセンスがいい。 ②日本語を勉強して、会話力を身につけたい｡ (①Những gì thầy / cô mặc trên người đều có gu thẩm mỹ. ②Tôi muốn học tiếng Nhật, trang bị năng lực hội thoại.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "センス",
+      "doc": "せんす",
+      "doc_marked": "せんす",
+      "han_viet": "",
+      "nghia": "Gu thẩm mỹ, cảm nhận",
+      "vi_du": "彼女はセンスがよく、とても個性的だ｡ (Cô ấy có gu thẩm mỹ tốt, rất cá tính.)",
+      "vi_du_ruby": "彼女は<ruby>センス<rt>せんす</rt></ruby>がよく、とても個性的だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ダサい",
+      "doc": "ださい",
+      "doc_marked": "ださい",
+      "han_viet": "",
+      "nghia": "Khó coi, xấu xí, lôi thôi",
+      "vi_du": "弟はセンスが悪く、服装がダサい｡ (Em trai tôi không có gu thẩm mỹ, ăn mặc quê mùa.)",
+      "vi_du_ruby": "弟はセンスが悪く、服装が<ruby>ダサい<rt>ださい</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "いまひとつ",
+      "doc": "いまひとつ",
+      "doc_marked": "いまひとつ",
+      "han_viet": "",
+      "nghia": "Một chút, thiếu chút",
+      "vi_du": "この帽子は私にはいまひとつ似合わない｡ (Cái nón này không hợp với tôi lắm.)",
+      "vi_du_ruby": "この帽子は私には<ruby>いまひとつ<rt>いまひとつ</rt></ruby>似合わない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "スタイル",
+      "doc": "すたいる",
+      "doc_marked": "すたいる",
+      "han_viet": "",
+      "nghia": "Thân hình, phong cách",
+      "vi_du": "①彼女はモデルみたいにスタイルがいい。 ②これが私のライフスタイルだ｡ (①Cô ấy thân hình đẹp như người mẫu.②Đây là phong cách sống của tôi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "足元（足下）",
+      "doc": "あしもと",
+      "doc_marked": "あしもと",
+      "han_viet": "",
+      "nghia": "Bước chân (dưới chân)",
+      "vi_du": "彼は足元のおしゃれにも、こだわっている｡ (Anh ấy chú trọng đến cả việc sành điệu ở dưới chân. (Anh ấy sành điệu đến cả gót chân).)",
+      "vi_du_ruby": "彼は足元のおしゃれにも、こだわっている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ウエスト",
+      "doc": "うえすと",
+      "doc_marked": "うえすと",
+      "han_viet": "",
+      "nghia": "Vòng eo",
+      "vi_du": "このスカートはウエストがきつい｡ (Cái váy này vòng eo bị chật.)",
+      "vi_du_ruby": "このスカートは<ruby>ウエスト<rt>うえすと</rt></ruby>がきつい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "見た目",
+      "doc": "みため",
+      "doc_marked": "みため",
+      "han_viet": "",
+      "nghia": "Vẻ bề ngoài",
+      "vi_du": "妹は見た目は派手だが、性格は地味だ｡ (Em gái tôi nhìn bề ngoài sặc sỡ nhưng tính cách thì giản dị.)",
+      "vi_du_ruby": "妹は<ruby>見た目<rt>みため</rt></ruby>は派手だが、性格は地味だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "人目",
+      "doc": "ひとめ",
+      "doc_marked": "ひとめ",
+      "han_viet": "",
+      "nghia": "Sự quan tâm, chú ý của người xung quanh",
+      "vi_du": "彼女の服装は街の中でも人目を引く｡ (Phục trang của cô ấy thu hút sự quan tâm của người trong phố.)",
+      "vi_du_ruby": "彼女の服装は街の中でも<ruby>人目<rt>ひとめ</rt></ruby>を引く｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "色彩",
+      "doc": "しきさい",
+      "doc_marked": "しきさい",
+      "han_viet": "",
+      "nghia": "Sắc thái, màu sắc",
+      "vi_du": "この服は色彩は豊かだが、派手ではない｡ (Cái áo này màu sắc đa dạng nhưng không sặc sỡ.)",
+      "vi_du_ruby": "この服は<ruby>色彩<rt>しきさい</rt></ruby>は豊かだが、派手ではない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "華やかな",
+      "doc": "はなやかな",
+      "doc_marked": "はなやかな",
+      "han_viet": "",
+      "nghia": "Tươi tắn, lộng lẫy",
+      "vi_du": "妹は華やかな鳥が似合う｡ (Em gái tôi hợp với những bộ đồ sặc sỡ / rực rỡ.)",
+      "vi_du_ruby": "妹は<ruby>華やかな<rt>はなやかな</rt></ruby>鳥が似合う｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "鮮やかな",
+      "doc": "せんやかな",
+      "doc_marked": "せんやかな",
+      "han_viet": "",
+      "nghia": "Chói lọi, rực rỡ",
+      "vi_du": "鮮やかなピンクのシャツが欲しい｡ (Tôi muốn có cái áo thun màu hồng rực rỡ.)",
+      "vi_du_ruby": "<ruby>鮮やかな<rt>せんやかな</rt></ruby>ピンクのシャツが欲しい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "統一（する）",
+      "doc": "とういつ",
+      "doc_marked": "と**う**いつ",
+      "han_viet": "",
+      "nghia": "Sự thống nhất",
+      "vi_du": "上着とバッグの色を統一する｡ (Thống nhất màu áo khoác và túi xách với nhau.)",
+      "vi_du_ruby": "上着とバッグの色を統一する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "フリーサイズ",
+      "doc": "ふりーさいず",
+      "doc_marked": "ふりーさいず",
+      "han_viet": "",
+      "nghia": "Kích cỡ tự do, một kích cỡ",
+      "vi_du": "",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ぶかぶか（な/する）",
+      "doc": "ぶかぶか",
+      "doc_marked": "ぶかぶか",
+      "han_viet": "",
+      "nghia": "Thùng thình, to rộng",
+      "vi_du": "この服はデザインは好みだが、ぶかぶかだ｡ (Cái áo này mẫu mã hợp sở thích của tôi nhưng rộng thùng thình.)",
+      "vi_du_ruby": "この服はデザインは好みだが、ぶかぶかだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "生地",
+      "doc": "きじ",
+      "doc_marked": "きじ",
+      "han_viet": "",
+      "nghia": "Vải, tính chất tự nhiên",
+      "vi_du": "社長のスーツの生地は上等だ｡ (Vải đồ vest của giám đốc là cao cấp.)",
+      "vi_du_ruby": "社長のスーツの<ruby>生地<rt>きじ</rt></ruby>は上等だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "綿",
+      "doc": "めん",
+      "doc_marked": "めん",
+      "han_viet": "",
+      "nghia": "Sợi bông, vải cotton",
+      "vi_du": "綿の服は着心地が、とてもいい｡ (Áo quần vải cotton mặc có cảm giác dễ chịu.)",
+      "vi_du_ruby": "<ruby>綿<rt>めん</rt></ruby>の服は着心地が、とてもいい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "オーダーメイド",
+      "doc": "おーだーめいど",
+      "doc_marked": "おーだー**めい**ど",
+      "han_viet": "",
+      "nghia": "Hàng đặt",
+      "vi_du": "オーダーメイドでスーツを作った｡ (Tôi đã đặt may đồ vest.)",
+      "vi_du_ruby": "<ruby>オーダーメイド<rt>おーだーめいど</rt></ruby>でスーツを作った｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "サングラス",
+      "doc": "さんぐらす",
+      "doc_marked": "さんぐらす",
+      "han_viet": "",
+      "nghia": "Kính mát, kính râm",
+      "vi_du": "夏はサングラスが欠かせない｡ (Mùa hè không thể thiếu kính mát.)",
+      "vi_du_ruby": "夏は<ruby>サングラス<rt>さんぐらす</rt></ruby>が欠かせない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "（ボタンが）取れる",
+      "doc": "（ぼたんが）とれる",
+      "doc_marked": "（ぼたんが）とれる",
+      "han_viet": "",
+      "nghia": "(Nút) bị sút ra",
+      "vi_du": "このシャツはボタンが取れやすい｡ (Nút cái áo thun này dễ bị sút.)",
+      "vi_du_ruby": "このシャツはボタンが取れやすい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "浴衣",
+      "doc": "ゆかた",
+      "doc_marked": "ゆかた",
+      "han_viet": "",
+      "nghia": "yukata (kimono mùa hè của Nhật)",
+      "vi_du": "新しい浴衣を着て、花火大会に行きたい｡ (Tôi muốn mặc yukata mới đi lễ hội pháo hoa.)",
+      "vi_du_ruby": "新しい<ruby>浴衣<rt>ゆかた</rt></ruby>を着て、花火大会に行きたい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

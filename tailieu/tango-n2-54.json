@@ -1,0 +1,217 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Hình ảnh tích cực",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "はきはき（する）",
+      "doc": "はきはき",
+      "doc_marked": "はきはき",
+      "han_viet": "",
+      "nghia": "Quả quyết, sinh động, rõ ràng",
+      "vi_du": "生徒は先生の質問にはきはき答えた｡ (Học trò trả lời câu hỏi của thầy / cô thật rõ ràng.)",
+      "vi_du_ruby": "生徒は先生の質問にはきはき答えた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "清潔な",
+      "doc": "せいけつな",
+      "doc_marked": "**せい**けつな",
+      "han_viet": "",
+      "nghia": "Sạch sẽ",
+      "vi_du": "このデパートはトイレを清潔に保っている｡ (Trung tâm thương mại này luôn giữ nhà vệ sinh sạch sẽ.)",
+      "vi_du_ruby": "このデパートはトイレを清潔に保っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "客観的な",
+      "doc": "きゃっかんてきな",
+      "doc_marked": "きゃっかんてきな",
+      "han_viet": "",
+      "nghia": "Mang tính khách quan",
+      "vi_du": "社長の意見は、いつも客観的だ｡ (Ý kiến của giám đốc luôn mang tính khách quan.)",
+      "vi_du_ruby": "社長の意見は、いつも客観的だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "冷静な",
+      "doc": "れいせいな",
+      "doc_marked": "れい**せい**な",
+      "han_viet": "",
+      "nghia": "Điềm tĩnh, bình tĩnh",
+      "vi_du": "彼女は何があっても、冷静に対応する｡ (Dù có chuyện gì, cô ấy cũng bình tĩnh ứng phó.)",
+      "vi_du_ruby": "彼女は何があっても、冷静に対応する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "もっともな",
+      "doc": "もっともな",
+      "doc_marked": "もっともな",
+      "han_viet": "",
+      "nghia": "Đương nhiên, đúng đắn, có lý",
+      "vi_du": "彼女が怒るのはもっともだと思う｡ (Tôi nghĩ cô ấy tức giận là đúng rồi.)",
+      "vi_du_ruby": "彼女が怒るのはもっともだと思う｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "謙そん（する）",
+      "doc": "けんそん",
+      "doc_marked": "けんそん",
+      "han_viet": "",
+      "nghia": "Sự khiêm tốn, khiêm nhường",
+      "vi_du": "日本には謙そんの文化がある｡ (Nhật Bản có văn hóa khiêm nhường.)",
+      "vi_du_ruby": "日本には謙そんの文化がある｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "若々しい",
+      "doc": "わかわかしい",
+      "doc_marked": "わかわかしい",
+      "han_viet": "",
+      "nghia": "Trẻ trung, đầy sức sống",
+      "vi_du": "私の祖母は外見も気持ちも若々しい｡ (Bà tôi trẻ trung cả về bề ngoài lẫn tinh thần.)",
+      "vi_du_ruby": "私の祖母は外見も気持ちも<ruby>若々しい<rt>わかわかしい</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ユニークな",
+      "doc": "ゆにーくな",
+      "doc_marked": "ゆにーくな",
+      "han_viet": "",
+      "nghia": "Duy nhất, độc đáo",
+      "vi_du": "ユニークな建築物を見るのが好きだ｡ (Tôi thích ngắm những công trình độc đáo.)",
+      "vi_du_ruby": "<ruby>ユニークな<rt>ゆにーくな</rt></ruby>建築物を見るのが好きだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "唯一",
+      "doc": "ゆいいつ",
+      "doc_marked": "ゆいいつ",
+      "han_viet": "",
+      "nghia": "Sự duy nhất",
+      "vi_du": "彼は唯一信頼できる人だ｡ (Anh ấy là người duy nhất có thể tin cậy được.)",
+      "vi_du_ruby": "彼は<ruby>唯一<rt>ゆいいつ</rt></ruby>信頼できる人だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "洗練（する）",
+      "doc": "せんれん",
+      "doc_marked": "せんれん",
+      "han_viet": "",
+      "nghia": "Vẻ lịch sự, tinh tế",
+      "vi_du": "彼の小説は文章が洗練されている｡ (Câu văn trong tiểu thuyết của anh ấy rất trau chuốt / tinh tế.)",
+      "vi_du_ruby": "彼の小説は文章が洗練されている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "品",
+      "doc": "ひん",
+      "doc_marked": "ひん",
+      "han_viet": "",
+      "nghia": "Phẩm chất, phẩm giá",
+      "vi_du": "彼女の言葉づかいは、とても品がある｡ (Cách sử dụng ngôn từ của cô ấy rất quý phái.)",
+      "vi_du_ruby": "彼女の言葉づかいは、とても<ruby>品<rt>ひん</rt></ruby>がある｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "広々「と」（する）",
+      "doc": "ひろびろ「と」",
+      "doc_marked": "ひろびろ「と」",
+      "han_viet": "",
+      "nghia": "Rộng lớn, rộng rãi",
+      "vi_du": "広々としたキッチンは、とても使いやすい｡ (Căn bếp rộng rãi rất dễ sử dụng.)",
+      "vi_du_ruby": "広々としたキッチンは、とても使いやすい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ふわふわ（な/する）",
+      "doc": "ふわふわ",
+      "doc_marked": "ふわふわ",
+      "han_viet": "",
+      "nghia": "Mềm mại, êm ái",
+      "vi_du": "このパンはふわふわしていて、おいしそうだ｡ (Cái bánh mì này xốp mềm, trông thật ngon.)",
+      "vi_du_ruby": "このパンはふわふわしていて、おいしそうだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "断然",
+      "doc": "だんぜん",
+      "doc_marked": "だんぜん",
+      "han_viet": "",
+      "nghia": "Rõ ràng, hoàn toàn",
+      "vi_du": "私は断然こっちの絵が好きだ。（副） (Tôi hoàn toàn thích bức tranh này.)",
+      "vi_du_ruby": "私は<ruby>断然<rt>だんぜん</rt></ruby>こっちの絵が好きだ。（副）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "結構な",
+      "doc": "けっこうな",
+      "doc_marked": "けっこ**う**な",
+      "han_viet": "",
+      "nghia": "Tốt, đủ, được",
+      "vi_du": "①結構な物を、ありがとうございました。 ②十分いただいたので、もう結構です｡ (①Cảm ơn món đồ rất tốt. ②Tôi đã nhận đủ rồi, được rồi ạ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "見事な",
+      "doc": "みごとな",
+      "doc_marked": "みごとな",
+      "han_viet": "",
+      "nghia": "Đẹp, tuyệt vời",
+      "vi_du": "彼の作品は、いつも見事だ｡ (Tác phẩm của anh ấy luôn tuyệt vời.)",
+      "vi_du_ruby": "彼の作品は、いつも見事だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "貴重な",
+      "doc": "きちょうな",
+      "doc_marked": "きちょうな",
+      "han_viet": "",
+      "nghia": "Quý giá, quý trọng",
+      "vi_du": "留学は、とても貴重な経験だ｡ (Du học là kinh nghiệm rất quý giá.)",
+      "vi_du_ruby": "留学は、とても<ruby>貴重な<rt>きちょうな</rt></ruby>経験だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "質素（な）",
+      "doc": "しっそ",
+      "doc_marked": "しっそ",
+      "han_viet": "",
+      "nghia": "Sự giản dị, giản dị",
+      "vi_du": "無駄のない、質素な生活を送っている｡ (Tôi đang sống một cuộc sống giản dị, không hoang phí.)",
+      "vi_du_ruby": "無駄のない、質素な生活を送っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "同様な",
+      "doc": "どうような",
+      "doc_marked": "ど**う**ような",
+      "han_viet": "",
+      "nghia": "Tương tự",
+      "vi_du": "今までと同様に、これからもよろしくお願いします｡ (Trong tương lai, tôi cũng xin được giúp đỡ như từ trước đến nay.)",
+      "vi_du_ruby": "今までと同様に、これからもよろしくお願いします｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

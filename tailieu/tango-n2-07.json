@@ -1,0 +1,272 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Tiền bạc",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "収入",
+      "doc": "しゅうにゅう",
+      "doc_marked": "**しゅう**にゅう",
+      "han_viet": "",
+      "nghia": "Thu nhập, khoản thu (chưa trừ các phí tổn)",
+      "vi_du": "アルバイト生活なので、毎月の収入が違う｡ (Vì là cuộc sống làm thêm nên thu nhập hàng tháng khác nhau.)",
+      "vi_du_ruby": "アルバイト生活なので、毎月の<ruby>収入<rt>しゅうにゅう</rt></ruby>が違う｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ごく",
+      "doc": "ごく",
+      "doc_marked": "ごく",
+      "han_viet": "",
+      "nghia": "Cực kỳ, vô cùng",
+      "vi_du": "ごくわずかだが、給料が上がった｡ (Tiền lương đã tăng lên dù cực kỳ ít ỏi.)",
+      "vi_du_ruby": "<ruby>ごく<rt>ごく</rt></ruby>わずかだが、給料が上がった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "せいぜい",
+      "doc": "せいぜい",
+      "doc_marked": "**せい**ぜい",
+      "han_viet": "",
+      "nghia": "Nhiều nhất là, tối đa, trong mức có thể",
+      "vi_du": "①私の給料はせいぜい月20万円くらいだ。 ②あきらめずに、せいぜい頑張りなさい｡ (①Tiền lương của tôi nhiều nhất khoảng 200.00 yên một tháng. ②Không được bỏ cuộc mà hãy cố gắng trong khả năng có thể.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "出費（する）",
+      "doc": "しゅっぴ",
+      "doc_marked": "しゅっぴ",
+      "han_viet": "",
+      "nghia": "Chi tiêu",
+      "vi_du": "一人暮らしは出費が多くて、大変だ｡ (Sống một mình thì chi tiêu nhiều, thật vất vả.)",
+      "vi_du_ruby": "一人暮らしは出費が多くて、大変だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "赤字",
+      "doc": "あかじ",
+      "doc_marked": "あかじ",
+      "han_viet": "",
+      "nghia": "Lỗ (âm), chữ đỏ",
+      "vi_du": "①困った。今月もまた赤字だ。 ②レポートが返ってきたが、赤字が入っていた｡ (①Thôi rồi! Tháng này lại âm rồi. ②Bài báo cáo đã được trả lại có chữ đỏ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "大金",
+      "doc": "たいきん",
+      "doc_marked": "たいきん",
+      "han_viet": "",
+      "nghia": "Số tiền lớn",
+      "vi_du": "私にとって1万円は大金だ｡ (Với tôi, 10.000 yên là số tiền lớn.)",
+      "vi_du_ruby": "私にとって1万円は<ruby>大金<rt>たいきん</rt></ruby>だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "税金",
+      "doc": "ぜいきん",
+      "doc_marked": "**ぜい**きん",
+      "han_viet": "",
+      "nghia": "Tiền thuế",
+      "vi_du": "市役所から税金の支払い通知が来た｡ (Có thông báo yêu cầu thanh toán tiền thuế từ văn phòng ủy ban thành phố.)",
+      "vi_du_ruby": "市役所から<ruby>税金<rt>ぜいきん</rt></ruby>の支払い通知が来た｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "納める",
+      "doc": "おさめる",
+      "doc_marked": "おさめる",
+      "han_viet": "",
+      "nghia": "Nộp, đóng",
+      "vi_du": "私は税金を、きちんと納めている｡ (Tôi nộp thuế đầy đủ.)",
+      "vi_du_ruby": "私は税金を、きちんと納めている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "含む",
+      "doc": "ふくむ",
+      "doc_marked": "ふくむ",
+      "han_viet": "",
+      "nghia": "Bao gồm",
+      "vi_du": "税込価格は消費税含む｡ (Giá gồm thuế là bao gồm thuế tiêu thụ.)",
+      "vi_du_ruby": "税込価格は消費税<ruby>含む<rt>ふくむ</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "公共料金",
+      "doc": "こうきょうりょうきん",
+      "doc_marked": "こ**う**きょうりょうきん",
+      "han_viet": "",
+      "nghia": "Tiền công cộng, tiền điện nước ga (nói chung)",
+      "vi_du": "日本の公共料金は私の国よりずっと高い｡ (Tiền công cộng ở Nhật cao hơn hẳn so với nước tôi.)",
+      "vi_du_ruby": "日本の<ruby>公共料金<rt>こうきょうりょうきん</rt></ruby>は私の国よりずっと高い｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "払い込む",
+      "doc": "はらいこむ",
+      "doc_marked": "はらいこむ",
+      "han_viet": "",
+      "nghia": "Thanh toán",
+      "vi_du": "",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "引き落とし",
+      "doc": "ひきおとし",
+      "doc_marked": "ひきおとし",
+      "han_viet": "",
+      "nghia": "Sự rút (tiền từ tài khoản)",
+      "vi_du": "光熱費は銀行の引き落としにしている｡ (Tiền điện nước ga được rút từ ngân hàng.)",
+      "vi_du_ruby": "光熱費は銀行の<ruby>引き落とし<rt>ひきおとし</rt></ruby>にしている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手数料",
+      "doc": "てすうりょう",
+      "doc_marked": "てすうりょう",
+      "han_viet": "",
+      "nghia": "Lệ phí, phí dịch vụ",
+      "vi_du": "",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "出し入れ（する）",
+      "doc": "だしいれ",
+      "doc_marked": "だしいれ",
+      "han_viet": "",
+      "nghia": "Việc rút và gửi (tiền)",
+      "vi_du": "銀行預金の出し入れは、コンビニでもできる｡ (Có thể rút tiền và gửi tiền từ tài khoản ngân hàng ở cửa hàng tiện lợi.)",
+      "vi_du_ruby": "銀行預金の出し入れは、コンビニでもできる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "高くつく",
+      "doc": "たかくつく",
+      "doc_marked": "たかくつく",
+      "han_viet": "",
+      "nghia": "Đắt tiền, đắt đỏ",
+      "vi_du": "一人暮らしの自炊は高くつくこともある｡ (Việc tự nấu ăn khi sống một mình cũng có khi đắt đỏ.)",
+      "vi_du_ruby": "一人暮らしの自炊は<ruby>高くつく<rt>たかくつく</rt></ruby>こともある｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "残高",
+      "doc": "ざんだか",
+      "doc_marked": "ざんだか",
+      "han_viet": "",
+      "nghia": "Số dư",
+      "vi_du": "ときどき銀行の残高をチェックする｡ (Thỉnh thoảng, tôi kiểm tra số dư trong ngân hàng.)",
+      "vi_du_ruby": "ときどき銀行の<ruby>残高<rt>ざんだか</rt></ruby>をチェックする｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "せっせと",
+      "doc": "せっせと",
+      "doc_marked": "せっせと",
+      "han_viet": "",
+      "nghia": "Chăm chỉ, siêng năng",
+      "vi_du": "せっせとバイトして、少しでも貯金したい｡ (Tôi chăm chỉ làm thêm để tiết kiệm dù chỉ một chút.)",
+      "vi_du_ruby": "<ruby>せっせと<rt>せっせと</rt></ruby>バイトして、少しでも貯金したい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "大まかな",
+      "doc": "おおまかな",
+      "doc_marked": "おおまかな",
+      "han_viet": "",
+      "nghia": "Đại khái, ước chừng",
+      "vi_du": "大まかに1か月の生活費を計算すると、10万円だ｡ (Chi phí sinh hoạt 1 tháng ước chừng 100.000 yên.)",
+      "vi_du_ruby": "大まかに1か月の生活費を計算すると、10万円だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "差し引く",
+      "doc": "さしひく",
+      "doc_marked": "さしひく",
+      "han_viet": "",
+      "nghia": "Trừ đi",
+      "vi_du": "給料から生活費を差し引くと、貯金はできない｡ (Nếu trừ đi chi phí sinh hoạt từ tiền lương thì không thể tiết kiệm.)",
+      "vi_du_ruby": "給料から生活費を<ruby>差し引く<rt>さしひく</rt></ruby>と、貯金はできない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "努める",
+      "doc": "つとめる",
+      "doc_marked": "つとめる",
+      "han_viet": "",
+      "nghia": "Nỗ lực, cố gắng",
+      "vi_du": "いつも節約に努めている｡ (Tôi luôn cố gắng tiết kiệm.)",
+      "vi_du_ruby": "いつも節約に努めている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "立て替える",
+      "doc": "たてかえる",
+      "doc_marked": "たてかえる",
+      "han_viet": "",
+      "nghia": "Tạm ứng, ứng trước",
+      "vi_du": "友達に飲み会の勘定を立て替えてもらった｡ (Tôi nhờ bạn tạm ứng trước tiền buổi ăn uống.)",
+      "vi_du_ruby": "友達に飲み会の勘定を立て替えてもらった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "援助（する）",
+      "doc": "えんじょ",
+      "doc_marked": "えんじょ",
+      "han_viet": "",
+      "nghia": "Sự viện trợ",
+      "vi_du": "生活が苦しくて、親に援助してもらった｡ (Đời sống khó khăn nên tôi được bố mẹ viện trợ.)",
+      "vi_du_ruby": "生活が苦しくて、親に援助してもらった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "返済（する）",
+      "doc": "へんさい",
+      "doc_marked": "へんさい",
+      "han_viet": "",
+      "nghia": "Sự trả, hoàn trả",
+      "vi_du": "次のボーナスで親に借金を返済しよう｡ (Tôi sẽ trả tiền nợ cho bố mẹ bằng tiền thưởng lần tới.)",
+      "vi_du_ruby": "次のボーナスで親に借金を返済しよう｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "安定（する）",
+      "doc": "あんてい",
+      "doc_marked": "あん**てい**",
+      "han_viet": "",
+      "nghia": "ổn định",
+      "vi_du": "①やっと、日本での生活が安定してきた。 ②この機械は安定したところに置いてください｡ (①Cuối cùng thì cuộc sống ở Nhật cũng đã ổn định. ②Hãy để cái máy này ở chỗ ổn định.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

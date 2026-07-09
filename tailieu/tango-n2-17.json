@@ -1,0 +1,261 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Ủy ban (Văn phòng Nhà nước)",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "自治体",
+      "doc": "じちたい",
+      "doc_marked": "じちたい",
+      "han_viet": "",
+      "nghia": "Tổ chức tự trị, tự quản",
+      "vi_du": "日本には都道府県、市町村などの自治体がある｡ (Ở Nhật có các tổ chức tự quản ở các đơn vị hành chính thủ đô, phủ, tỉnh, thành phố, thị xã, làng v.v.)",
+      "vi_du_ruby": "日本には都道府県、市町村などの<ruby>自治体<rt>じちたい</rt></ruby>がある｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "知事",
+      "doc": "ちじ",
+      "doc_marked": "ちじ",
+      "han_viet": "",
+      "nghia": "Người đứng đầu tỉnh, tỉnh trưởng",
+      "vi_du": "新しい知事が福祉を充実させた｡ (Tỉnh trưởng mới đã cho củng cố phúc lợi.)",
+      "vi_du_ruby": "新しい<ruby>知事<rt>ちじ</rt></ruby>が福祉を充実させた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "応える",
+      "doc": "こたえる",
+      "doc_marked": "こたえる",
+      "han_viet": "",
+      "nghia": "Trả lời, đáp lại",
+      "vi_du": "今度の知事は住民の期待に応えるだろう｡ (Liệu tỉnh trưởng lần này có thể đáp lại kỳ vọng của người dân không nhỉ.)",
+      "vi_du_ruby": "今度の知事は住民の期待に<ruby>応える<rt>こたえる</rt></ruby>だろう｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "住民",
+      "doc": "じゅうみん",
+      "doc_marked": "**じゅう**みん",
+      "han_viet": "",
+      "nghia": "Người dân, dân cư",
+      "vi_du": "新しい施設ができて、住民の生活が変わった｡ (Có cơ sở mới, đời sống người dân đã thay đổi.)",
+      "vi_du_ruby": "新しい施設ができて、<ruby>住民<rt>じゅうみん</rt></ruby>の生活が変わった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "身分証明書",
+      "doc": "みぶんしょうめいしょ",
+      "doc_marked": "みぶんしょう**めい**しょ",
+      "han_viet": "",
+      "nghia": "giấy chứng minh, thẻ căn cước",
+      "vi_du": "図書館でカードを作る際は、身分証明書が必要だ｡ (Khi làm thẻ ở thư viện, cần có giấy chứng minh nhân dân.)",
+      "vi_du_ruby": "図書館でカードを作る際は、<ruby>身分証明書<rt>みぶんしょうめいしょ</rt></ruby>が必要だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "生年月日",
+      "doc": "せいねんがっぴ",
+      "doc_marked": "**せい**ねんがっぴ",
+      "han_viet": "",
+      "nghia": "Ngày tháng năm sinh",
+      "vi_du": "ここに生年月日を書いてください｡ (Vui lòng viết ngày tháng năm sinh ở đây.)",
+      "vi_du_ruby": "ここに<ruby>生年月日<rt>せいねんがっぴ</rt></ruby>を書いてください｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "署名（する）",
+      "doc": "しょめい",
+      "doc_marked": "しょ**めい**",
+      "han_viet": "",
+      "nghia": "Sự ký tên, chữ ký",
+      "vi_du": "こちらに、ご署名をお願いいたします｡ (Vui lòng ký tên ở đây.)",
+      "vi_du_ruby": "こちらに、ご署名をお願いいたします｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "修正（する）",
+      "doc": "しゅうせい",
+      "doc_marked": "しゅう**せい**",
+      "han_viet": "",
+      "nghia": "Sự chỉnh sửa, sửa",
+      "vi_du": "住所が間違っているので、修正してください｡ (Vui lòng sửa lại do địa chỉ bị sai.)",
+      "vi_du_ruby": "住所が間違っているので、修正してください｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "年金",
+      "doc": "ねんきん",
+      "doc_marked": "ねんきん",
+      "han_viet": "",
+      "nghia": "Lương hưu, tiền trợ cấp về hưu",
+      "vi_du": "国民は国に年金保険料を納めている｡ (Người dân đóng tiền bảo hiểm lương hưu cho Nhà nước.)",
+      "vi_du_ruby": "国民は国に<ruby>年金<rt>ねんきん</rt></ruby>保険料を納めている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "施設",
+      "doc": "しせつ",
+      "doc_marked": "しせつ",
+      "han_viet": "",
+      "nghia": "Cơ sở, địa điểm",
+      "vi_du": "市の新しい施設が、もうすぐできる｡ (Cơ sở mới của thành phố sắp hoàn thành rồi.)",
+      "vi_du_ruby": "市の新しい<ruby>施設<rt>しせつ</rt></ruby>が、もうすぐできる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ロッカー",
+      "doc": "ろっかー",
+      "doc_marked": "ろっかー",
+      "han_viet": "",
+      "nghia": "Tủ có khóa, tủ cất đồ",
+      "vi_du": "市のプールには無料で使えるロッカーがある｡ (Hồ bơi của thành phố có tủ cất đồ có thể sử dụng miễn phí.)",
+      "vi_du_ruby": "市のプールには無料で使える<ruby>ロッカー<rt>ろっかー</rt></ruby>がある｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "建築（する）",
+      "doc": "けんちく",
+      "doc_marked": "けんちく",
+      "han_viet": "",
+      "nghia": "Kiến trúc",
+      "vi_du": "5年後に新しい区役所の建築が予定されている｡ (Kiến trúc mới của ủy ban quận được dự định vào 5 năm sau.)",
+      "vi_du_ruby": "5年後に新しい区役所の建築が予定されている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ニューアル（する）",
+      "doc": "にゅーある",
+      "doc_marked": "にゅーある",
+      "han_viet": "",
+      "nghia": "Sự đổi mới, làm mới",
+      "vi_du": "市民ホールがリニューアルされた｡ (Hội trường nhân dân thành phố đã được đổi mới.)",
+      "vi_du_ruby": "市民ホールがリニューアルされた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "近づける",
+      "doc": "ちかづける",
+      "doc_marked": "ちかづける",
+      "han_viet": "",
+      "nghia": "Cho (~) đến gần",
+      "vi_du": "ここは危ないので、子どもを近づけないでください｡ (Ở đây nguy hiểm nên đừng cho trẻ đến gần.)",
+      "vi_du_ruby": "ここは危ないので、子どもを近づけないでください｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "福祉",
+      "doc": "ふくし",
+      "doc_marked": "ふくし",
+      "han_viet": "",
+      "nghia": "Phúc lợi",
+      "vi_du": "この町は福祉が充実している｡ (Thành phố này phúc lợi rất đầy đủ.)",
+      "vi_du_ruby": "この町は<ruby>福祉<rt>ふくし</rt></ruby>が充実している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "年度",
+      "doc": "ねんど",
+      "doc_marked": "ねんど",
+      "han_viet": "",
+      "nghia": "Năm tài khoá",
+      "vi_du": "4月から新しい年度が始まる｡ (Từ tháng 4, năm tài khóa mới sẽ bắt đầu.)",
+      "vi_du_ruby": "4月から新しい<ruby>年度<rt>ねんど</rt></ruby>が始まる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "交替（する）",
+      "doc": "こうたい",
+      "doc_marked": "こ**う**たい",
+      "han_viet": "",
+      "nghia": "Sự thay phiên, đổi phiên",
+      "vi_du": "市役所の福祉の担当者が交替した｡ (Người phụ trách phúc lợi của ủy ban thành phố đã thay đổi.)",
+      "vi_du_ruby": "市役所の福祉の担当者が交替した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "収集（する）",
+      "doc": "しゅうしゅう",
+      "doc_marked": "**しゅう**しゅう",
+      "han_viet": "",
+      "nghia": "Sự thu gom, thu nhập",
+      "vi_du": "ごみ収集のルールを町のホームページで調べる｡ (Tôi tìm hiểu quy định thu gom rác qua trang chủ của thành phố.)",
+      "vi_du_ruby": "ごみ収集のルールを町のホームページで調べる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "配布（する）",
+      "doc": "はいふ",
+      "doc_marked": "はいふ",
+      "han_viet": "",
+      "nghia": "Sự phân phối, phân phát",
+      "vi_du": "区役所はごみ出しのルールのパンフレットを配布している｡ (Ủy ban quận phân phát tập hướng dẫn quy định đổ rác.)",
+      "vi_du_ruby": "区役所はごみ出しのルールのパンフレットを配布している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "処理（する）",
+      "doc": "しょり",
+      "doc_marked": "しょり",
+      "han_viet": "",
+      "nghia": "Sự xử lý",
+      "vi_du": "自治体がこの地域のごみを処理している｡ (Tổ chức tự quản xử lý rác ở khu vực này.)",
+      "vi_du_ruby": "自治体がこの地域のごみを処理している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "需要",
+      "doc": "じゅよう",
+      "doc_marked": "じゅよ**う**",
+      "han_viet": "",
+      "nghia": "Nhu cầu",
+      "vi_du": "自治体は老人ホームの需要に応えられない｡ (Tổ chức tự quản không thể đáp ứng nhu cầu của viện dưỡng lão.)",
+      "vi_du_ruby": "自治体は老人ホームの<ruby>需要<rt>じゅよう</rt></ruby>に応えられない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "提供（する）",
+      "doc": "ていきょう",
+      "doc_marked": "**てい**きょう",
+      "han_viet": "",
+      "nghia": "Sự cung cấp",
+      "vi_du": "役所は生活に必要な情報を提供している｡ (Ủy ban cung cấp thông tin cần thiết cho đời sống.)",
+      "vi_du_ruby": "役所は生活に必要な情報を提供している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "用途",
+      "doc": "ようと",
+      "doc_marked": "よ**う**と",
+      "han_viet": "",
+      "nghia": "Sự sử dụng",
+      "vi_du": "役所では用途のわからない支出は認められない｡ (Ở ủy ban, không thể chấp nhận việc chi tiêu không rõ mục đích sử dụng.)",
+      "vi_du_ruby": "役所では<ruby>用途<rt>ようと</rt></ruby>のわからない支出は認められない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

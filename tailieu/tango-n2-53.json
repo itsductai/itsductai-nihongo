@@ -1,0 +1,250 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Cảm giác buồn bã",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "ゆううつ（な）",
+      "doc": "ゆううつ",
+      "doc_marked": "**ゆう**うつ",
+      "han_viet": "",
+      "nghia": "U uất, ảm đạm",
+      "vi_du": "一日中雨だと、ゆううつになる。（ナ形） (Mưa cả ngày thật ảm đạm.)",
+      "vi_du_ruby": "一日中雨だと、ゆううつになる。（ナ形）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "みじめな",
+      "doc": "みじめな",
+      "doc_marked": "みじめな",
+      "han_viet": "",
+      "nghia": "Đáng thương, khốn khổ",
+      "vi_du": "今のみじめな生活を早く終わらせたい｡ (Tôi muốn mau kết thúc cuộc sống khốn khổ hiện nay.)",
+      "vi_du_ruby": "今の<ruby>みじめな<rt>みじめな</rt></ruby>生活を早く終わらせたい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "つらい",
+      "doc": "つらい",
+      "doc_marked": "つらい",
+      "han_viet": "",
+      "nghia": "Buồn, khổ sở, đau khổ, khắc nghiệt, vất vả",
+      "vi_du": "親友が病気になってしまい、とてもつらい｡ (Bạn thân tôi bị bệnh, thật buồn.)",
+      "vi_du_ruby": "親友が病気になってしまい、とても<ruby>つらい<rt>つらい</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "心細い",
+      "doc": "こころぼそい",
+      "doc_marked": "こころぼそい",
+      "han_viet": "",
+      "nghia": "Cô đơn, trơ trọi",
+      "vi_du": "日本へ来たばかりの頃は、とても心細かった｡ (Khi mới đến Nhật, tôi rất cô đơn.)",
+      "vi_du_ruby": "日本へ来たばかりの頃は、とても心細かった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "弱気（な）",
+      "doc": "よわき",
+      "doc_marked": "よわき",
+      "han_viet": "",
+      "nghia": "Sự yếu đuối, nhát gan",
+      "vi_du": "いつもは強気な彼が、今日はなぜか弱気だ｡ (Lúc nào cũng mạnh mẽ vậy mà không hiểu sao hôm nay lại yếu đuối.)",
+      "vi_du_ruby": "いつもは強気な彼が、今日はなぜか弱気だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "落ち込む",
+      "doc": "おちこむ",
+      "doc_marked": "おちこむ",
+      "han_viet": "",
+      "nghia": "Buồn bã, suy sụp",
+      "vi_du": "彼女にふられて、落ち込んでいる｡ (Tôi bị bạn gái chia tay, nên buồn bã.)",
+      "vi_du_ruby": "彼女にふられて、落ち込んでいる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "失望（する）",
+      "doc": "しつぼう",
+      "doc_marked": "しつぼ**う**",
+      "han_viet": "",
+      "nghia": "Sự thất vọng",
+      "vi_du": "友達のひきょうなやり方に心から失望した｡ (Tôi thật sự thất vọng với cách làm hèn hạ của bạn mình.)",
+      "vi_du_ruby": "友達のひきょうなやり方に心から失望した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "絶望（する）",
+      "doc": "ぜつぼう",
+      "doc_marked": "ぜつぼ**う**",
+      "han_viet": "",
+      "nghia": "Sự tuyệt vọng",
+      "vi_du": "何をやってもうまくいかない。人生に絶望してしまいそうだ｡ (Làm gì cũng không suôn sẻ. Gần như tuyệt vọng với cuộc đời.)",
+      "vi_du_ruby": "何をやってもうまくいかない。人生に絶望してしまいそうだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "傷つく",
+      "doc": "きずつく",
+      "doc_marked": "きずつく",
+      "han_viet": "",
+      "nghia": "Tổn thương",
+      "vi_du": "弟は、すぐに傷つくタイプだ｡ (Em trai tôi thuộc típ người dễ tổn thương.)",
+      "vi_du_ruby": "弟は、すぐに<ruby>傷つく<rt>きずつく</rt></ruby>タイプだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "わずらわしい",
+      "doc": "わずらわしい",
+      "doc_marked": "わずらわしい",
+      "han_viet": "",
+      "nghia": "Phiền phức, phiền toái",
+      "vi_du": "ときどき、人間関係がわずらわしくなる｡ (Thỉnh thoảng, quan hệ con người trở nên phiền phức.)",
+      "vi_du_ruby": "ときどき、人間関係がわずらわしくなる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "うんざり（する）",
+      "doc": "うんざり",
+      "doc_marked": "うんざり",
+      "han_viet": "",
+      "nghia": "Chán ngán, ngán ngẩm",
+      "vi_du": "彼の言い訳には、もううんざりだ｡ (Ngụy biện của anh ấy thật ngán ngẩm.)",
+      "vi_du_ruby": "彼の言い訳には、もううんざりだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "戸惑う",
+      "doc": "とまどう",
+      "doc_marked": "とまど**う**",
+      "han_viet": "",
+      "nghia": "Phân vân, băn khoăn",
+      "vi_du": "初めての仕事で戸惑ってしまった｡ (Là công việc đầu tiên nên tôi cứ băn khoăn.)",
+      "vi_du_ruby": "初めての仕事で戸惑ってしまった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ためらう",
+      "doc": "ためらう",
+      "doc_marked": "ためらう",
+      "han_viet": "",
+      "nghia": "Do dự, lưỡng lự",
+      "vi_du": "街で部長に会ったが、声をかけるのをためらった｡ (Tôi gặp trưởng phòng ở phố mà cứ do dự chuyện gọi hay không.)",
+      "vi_du_ruby": "街で部長に会ったが、声をかけるのをためらった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "申し訳ない",
+      "doc": "もうしわけない",
+      "doc_marked": "も**う**しわけない",
+      "han_viet": "",
+      "nghia": "Cảm thấy có lỗi, khó tha thứ",
+      "vi_du": "去年は帰国せず、両親には申し訳ないことをした｡ (Năm ngoái tôi không về nước, thấy thật có lỗi với bố mẹ.)",
+      "vi_du_ruby": "去年は帰国せず、両親には<ruby>申し訳ない<rt>もうしわけない</rt></ruby>ことをした｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "すまない",
+      "doc": "すまない",
+      "doc_marked": "すまない",
+      "han_viet": "",
+      "nghia": "Xin lỗi",
+      "vi_du": "長い間苦労をかけて、すまなかったね｡ (Bắt anh phải lao động cực nhọc thời gian dài, xin lỗi nhé.)",
+      "vi_du_ruby": "長い間苦労をかけて、すまなかったね｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "仕方[が]ない",
+      "doc": "しかた[が]ない",
+      "doc_marked": "しかた[が]ない",
+      "han_viet": "",
+      "nghia": "Đành chịu, không còn cách nào khác",
+      "vi_du": "私がうそをついたのだから、彼が怒っても仕方ない｡ (Vì tôi nói dối nên anh ấy giận cũng đành chịu.)",
+      "vi_du_ruby": "私がうそをついたのだから、彼が怒っても仕方ない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "しまった",
+      "doc": "しまった",
+      "doc_marked": "しまった",
+      "han_viet": "",
+      "nghia": "Tiêu rồi, chết rồi, thôi rồi",
+      "vi_du": "しまった！宿題、忘れた！ (Thôi rồi! Quên bài tập rồi!)",
+      "vi_du_ruby": "<ruby>しまった<rt>しまった</rt></ruby>！宿題、忘れた！",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "恐れる",
+      "doc": "おそれる",
+      "doc_marked": "おそれる",
+      "han_viet": "",
+      "nghia": "Sợ, e sợ, khiếp sợ",
+      "vi_du": "私は、いつも失敗を恐れている｡ (Tôi luôn sợ thất bại.)",
+      "vi_du_ruby": "私は、いつも失敗を恐れている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "情けない",
+      "doc": "なさけない",
+      "doc_marked": "なさけない",
+      "han_viet": "",
+      "nghia": "Đáng buồn, đáng trách, tội nghiệp",
+      "vi_du": "テストで0点を取るなんて、情けない｡ (Bài kiểm tra mà 0 điểm thì thật đáng trách.)",
+      "vi_du_ruby": "テストで0点を取るなんて、<ruby>情けない<rt>なさけない</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "恥",
+      "doc": "はじ",
+      "doc_marked": "はじ",
+      "han_viet": "",
+      "nghia": "Sự xấu hổ, mắc cỡ",
+      "vi_du": "駅の階段で転んで、恥をかいた｡ (Tôi bị ngã ở cầu thang nhà ga, thật xấu hổ.)",
+      "vi_du_ruby": "駅の階段で転んで、<ruby>恥<rt>はじ</rt></ruby>をかいた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "別に（〜ない）",
+      "doc": "べつに",
+      "doc_marked": "べつに",
+      "han_viet": "",
+      "nghia": "Ngoài ra, (không có gì) đặc biệt",
+      "vi_du": "今、別に悩みはない｡ (Bây giờ tôi không có trăn trở gì đặc biệt .)",
+      "vi_du_ruby": "今、別に悩みはない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "構わない",
+      "doc": "かまわない",
+      "doc_marked": "かまわない",
+      "han_viet": "",
+      "nghia": "Không sao, không bận tâm",
+      "vi_du": "あんな人に何を言われても、構わない｡ (Bị người như thế nói gì cũng chẳng sao.)",
+      "vi_du_ruby": "あんな人に何を言われても、<ruby>構わない<rt>かまわない</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Quê hương",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "故郷",
+      "doc": "こきょう",
+      "doc_marked": "こきょう",
+      "han_viet": "",
+      "nghia": "Quê hương, quê nhà",
+      "vi_du": "故郷の母から荷物が届いた｡ (Bưu kiện được gửi đến từ mẹ tôi ở quê nhà.)",
+      "vi_du_ruby": "<ruby>故郷<rt>こきょう</rt></ruby>の母から荷物が届いた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "地元",
+      "doc": "じもと",
+      "doc_marked": "じもと",
+      "han_viet": "",
+      "nghia": "Địa phương, bản địa, bản xứ",
+      "vi_du": "①帰省して、地元の友達と会うのが楽しみだ。 ②食料品は地元のスーパーで買う｡ (①Tôi rất mong được về nhà và gặp gỡ bạn bè địa phương. ② Mua hàng tạp hóa tại siêu thị địa phương.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "離れる",
+      "doc": "はなれる",
+      "doc_marked": "はなれる",
+      "han_viet": "",
+      "nghia": "Rời xa, cách xa",
+      "vi_du": "①ふるさとを離れて、もう10年になる。 ②駅と商店街は、かなり離れている｡ (①Tôi rời quê hương cũng đã 10 năm. ②Nhà ga và phố mua bán cách nhau khá xa.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "つかむ",
+      "doc": "つかむ",
+      "doc_marked": "つかむ",
+      "han_viet": "",
+      "nghia": "Nắm bắt, nắm",
+      "vi_du": "①日本でチャンスをつかんで、親に家を買いたい。 ②バスで隣にいた赤ちゃんが、私の腕わかんだ｡ (①Tôi muốn nắm bắt cơ hội ở Nhật Bản và mua nhà cho bố mẹ. ②Đứa bé cạnh tôi trên xe buýt nắm lấy cánh tay tôi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "帰省（する）",
+      "doc": "きせい",
+      "doc_marked": "き**せい**",
+      "han_viet": "",
+      "nghia": "Sự về quê",
+      "vi_du": "夏休みと年末の年2回は帰省する｡ (Một năm tôi về quê 2 lần, kỳ nghỉ hè và cuối năm.)",
+      "vi_du_ruby": "夏休みと年末の年2回は帰省する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "アクセス（する）",
+      "doc": "あくせす",
+      "doc_marked": "あくせす",
+      "han_viet": "",
+      "nghia": "Đường đi, truy cập, tiếp cận",
+      "vi_du": "①この地域は東京からのアクセスが悪い。 ②市のホームページにアクセスする｡ (①Đường đi từ Tokyo đến khu vực này không tiện. ②Tôi truy cập vào trang chủ của thành phố.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "改善（する）",
+      "doc": "かいぜん",
+      "doc_marked": "かいぜん",
+      "han_viet": "",
+      "nghia": "Sự cải thiện, làm cho tốt lên",
+      "vi_du": "子どもやお年寄りのために、町の交通が改善された｡ (Giao thông được cải thiện vì trẻ em và người già.)",
+      "vi_du_ruby": "子どもやお年寄りのために、町の交通が改善された｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "行事",
+      "doc": "ぎょうじ",
+      "doc_marked": "ぎょうじ",
+      "han_viet": "",
+      "nghia": "Sự kiện",
+      "vi_du": "私の国には、いろいろな行事がある｡ (Ở đất nước tôi có nhiều sự kiện khác nhau.)",
+      "vi_du_ruby": "私の国には、いろいろな<ruby>行事<rt>ぎょうじ</rt></ruby>がある｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "はるか（な）",
+      "doc": "はるか",
+      "doc_marked": "はるか",
+      "han_viet": "",
+      "nghia": "Xa, xa xôi",
+      "vi_du": "この地方の祭りははるか昔から続いている｡ (Lễ hội địa phương này kế tục từ xa xưa.)",
+      "vi_du_ruby": "この地方の祭りははるか昔から続いている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "誇り",
+      "doc": "ほこり",
+      "doc_marked": "ほこり",
+      "han_viet": "",
+      "nghia": "Sự tự hào",
+      "vi_du": "自分のふるさとを誇りに思っている｡ (Tôi tự hào về quê hương của mình.)",
+      "vi_du_ruby": "自分のふるさとを<ruby>誇り<rt>ほこり</rt></ruby>に思っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "載る",
+      "doc": "のる",
+      "doc_marked": "のる",
+      "han_viet": "",
+      "nghia": "Đăng, đăng tải",
+      "vi_du": "新聞に私の国の記事が載っていて、うれしかった｡ (Trên báo có đăng phóng sự về nước của tôi, tôi rất vui.)",
+      "vi_du_ruby": "新聞に私の国の記事が載っていて、うれしかった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "宣伝（する）",
+      "doc": "せんでん",
+      "doc_marked": "せんでん",
+      "han_viet": "",
+      "nghia": "Sự quảng cáo, tuyên truyền",
+      "vi_du": "ふるさとの良さを、もっと宣伝したい｡ (Tôi muốn quảng cáo sự tốt đẹp của quê hương mình hơn nữa.)",
+      "vi_du_ruby": "ふるさとの良さを、もっと宣伝したい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "作成（する）",
+      "doc": "さくせい",
+      "doc_marked": "さく**せい**",
+      "han_viet": "",
+      "nghia": "Sự soạn thảo, tạo, làm",
+      "vi_du": "国の文化を紹介するポスターを作成した｡ (Tôi làm áp phích giới thiệu văn hóa đất nước.)",
+      "vi_du_ruby": "国の文化を紹介するポスターを作成した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "見慣れる",
+      "doc": "みなれる",
+      "doc_marked": "みなれる",
+      "han_viet": "",
+      "nghia": "Nhìn quen, quen thuộc",
+      "vi_du": "国に帰ると、見慣れた景色が変わっていた｡ (Khi về nước, những cảnh sắc quen thuộc đã thay đổi.)",
+      "vi_du_ruby": "国に帰ると、見慣れた景色が変わっていた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "近郊",
+      "doc": "きんこう",
+      "doc_marked": "きんこ**う**",
+      "han_viet": "",
+      "nghia": "Ngoại ô",
+      "vi_du": "実家は東京の近郊にある｡ (Nhà bố mẹ ruột ở ngoại ô Tokyo.)",
+      "vi_du_ruby": "実家は東京の<ruby>近郊<rt>きんこう</rt></ruby>にある｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "描く",
+      "doc": "えがく",
+      "doc_marked": "えがく",
+      "han_viet": "",
+      "nghia": "Vẽ, miêu tả",
+      "vi_du": "日本での留学生活を夢見ていた｡ (Ở quê hương, tôi từng mơ đến cuộc sống du học tại Nhật.)",
+      "vi_du_ruby": "日本での留学生活を夢見ていた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "若者",
+      "doc": "わかもの",
+      "doc_marked": "わかもの",
+      "han_viet": "",
+      "nghia": "giới trẻ, thanh niên",
+      "vi_du": "私の故郷では若者が減少している｡ (Ở quê tôi số người trẻ đang giảm.)",
+      "vi_du_ruby": "私の故郷では<ruby>若者<rt>わかもの</rt></ruby>が減少している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "Uターン（する）",
+      "doc": "Uたーん",
+      "doc_marked": "Uたーん",
+      "han_viet": "",
+      "nghia": "Quay về quê, quay đầu",
+      "vi_du": "",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "行き来（する）",
+      "doc": "いきき",
+      "doc_marked": "いきき",
+      "han_viet": "",
+      "nghia": "Sự đi lại",
+      "vi_du": "月に数回、故郷と東京を行き来している｡ (Một tháng vài lần tôi đi lại giữa quê nhà và Tokyo.)",
+      "vi_du_ruby": "月に数回、故郷と東京を行き来している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "担う",
+      "doc": "になう",
+      "doc_marked": "になう",
+      "han_viet": "",
+      "nghia": "Gánh vác",
+      "vi_du": "国の将来を担うために、日本に留学した｡ (Để gánh vác tương lai đất nước, tôi đã du học Nhật Bản.)",
+      "vi_du_ruby": "国の将来を<ruby>担う<rt>になう</rt></ruby>ために、日本に留学した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

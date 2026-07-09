@@ -1,0 +1,250 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Thiên nhiên",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "大地",
+      "doc": "だいち",
+      "doc_marked": "だいち",
+      "han_viet": "",
+      "nghia": "Trái đất, vùng đất",
+      "vi_du": "アフリカの大地を、いつか訪れたい｡ (Tôi muốn tham quan vùng đất Châu Phi một ngày nào đó.)",
+      "vi_du_ruby": "アフリカの<ruby>大地<rt>だいち</rt></ruby>を、いつか訪れたい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "広大な",
+      "doc": "こうだいな",
+      "doc_marked": "こ**う**だいな",
+      "han_viet": "",
+      "nghia": "Bao la, rộng lớn",
+      "vi_du": "広大な森林には多くの動物がいる｡ (Khu rừng bao la có nhiều động vật.)",
+      "vi_du_ruby": "<ruby>広大な<rt>こうだいな</rt></ruby>森林には多くの動物がいる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "砂漠",
+      "doc": "さばく",
+      "doc_marked": "さばく",
+      "han_viet": "",
+      "nghia": "Sa mạc",
+      "vi_du": "ここから先は砂漠が、どこまでも続いている｡ (Từ đây trở đi là sa mạc kéo dài đến vô tận.)",
+      "vi_du_ruby": "ここから先は<ruby>砂漠<rt>さばく</rt></ruby>が、どこまでも続いている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "谷",
+      "doc": "たに",
+      "doc_marked": "たに",
+      "han_viet": "",
+      "nghia": "Thung lũng",
+      "vi_du": "谷の間を川が流れている｡ (Giữa thung lũng có dòng sông chảy.)",
+      "vi_du_ruby": "<ruby>谷<rt>たに</rt></ruby>の間を川が流れている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "滝",
+      "doc": "たき",
+      "doc_marked": "たき",
+      "han_viet": "",
+      "nghia": "Thác nước",
+      "vi_du": "ナイアガラの滝はカナダとアメリカの境にある｡ (Thác Niagara nằm ở ranh giới Canada và Mỹ.)",
+      "vi_du_ruby": "ナイアガラの<ruby>滝<rt>たき</rt></ruby>はカナダとアメリカの境にある｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "岸",
+      "doc": "きし",
+      "doc_marked": "きし",
+      "han_viet": "",
+      "nghia": "Bờ, ven",
+      "vi_du": "川の向こうの岸まで泳げるだろうか｡ (Liệu có thể bơi đến bờ bên kia của dòng sông.)",
+      "vi_du_ruby": "川の向こうの<ruby>岸<rt>きし</rt></ruby>まで泳げるだろうか｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "海辺",
+      "doc": "うみべ",
+      "doc_marked": "うみべ",
+      "han_viet": "",
+      "nghia": "Ven biển, bờ biển",
+      "vi_du": "海辺の町に住むのが昔からの夢だ｡ (Sống ở thành phố ven biển là ước mơ từ xưa của tôi.)",
+      "vi_du_ruby": "<ruby>海辺<rt>うみべ</rt></ruby>の町に住むのが昔からの夢だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "透明な",
+      "doc": "とうめいな",
+      "doc_marked": "とう**めい**な",
+      "han_viet": "",
+      "nghia": "Trong suốt",
+      "vi_du": "海が透明で、魚が泳いでいるのが見える｡ (Biển trong suốt, có thể thấy cá đang bơi lội.)",
+      "vi_du_ruby": "海が透明で、魚が泳いでいるのが見える｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "底",
+      "doc": "そこ",
+      "doc_marked": "そこ",
+      "han_viet": "",
+      "nghia": "Đáy",
+      "vi_du": "この海は透明で、底まで見えそうだ｡ (Biển này trong suốt có thể nhìn thấy tận đáy biển.)",
+      "vi_du_ruby": "この海は透明で、<ruby>底<rt>そこ</rt></ruby>まで見えそうだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "生き物",
+      "doc": "いきもの",
+      "doc_marked": "いきもの",
+      "han_viet": "",
+      "nghia": "Sinh vật, động vật",
+      "vi_du": "生き物は大切に飼わなければならない｡ (Phải nuôi các con vật một cách cẩn thận.)",
+      "vi_du_ruby": "<ruby>生き物<rt>いきもの</rt></ruby>は大切に飼わなければならない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "生物",
+      "doc": "せいぶつ",
+      "doc_marked": "**せい**ぶつ",
+      "han_viet": "",
+      "nghia": "Sinh vật",
+      "vi_du": "研究者が森林で生物に関する調査を行う｡ (Nhà nghiêng cứu tiến hành khảo sát liên quan đến sinh vật ở rừng rậm.)",
+      "vi_du_ruby": "研究者が森林で<ruby>生物<rt>せいぶつ</rt></ruby>に関する調査を行う｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "植物",
+      "doc": "しょくぶつ",
+      "doc_marked": "しょくぶつ",
+      "han_viet": "",
+      "nghia": "Thực vật",
+      "vi_du": "庭で、いろいろな植物を育てている｡ (Trong vườn, trồng nhiều loại thực vật.)",
+      "vi_du_ruby": "庭で、いろいろな<ruby>植物<rt>しょくぶつ</rt></ruby>を育てている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "芽",
+      "doc": "め",
+      "doc_marked": "め",
+      "han_viet": "",
+      "nghia": "Mầm",
+      "vi_du": "春が訪れて、花の芽が出た｡ (Mùa xuân đến, mầm hoa xuất hiện.)",
+      "vi_du_ruby": "春が訪れて、花の<ruby>芽<rt>め</rt></ruby>が出た｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "人間",
+      "doc": "にんげん",
+      "doc_marked": "にんげん",
+      "han_viet": "",
+      "nghia": "Con người",
+      "vi_du": "人間は自然とうまく付き合いながら生きてきた｡ (Con người sống hoà hợp với thiên nhiên.)",
+      "vi_du_ruby": "<ruby>人間<rt>にんげん</rt></ruby>は自然とうまく付き合いながら生きてきた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "天然",
+      "doc": "てんねん",
+      "doc_marked": "てんねん",
+      "han_viet": "",
+      "nghia": "Thiên nhiên",
+      "vi_du": "天然の資源を大事に使う｡ (Sử dụng trân trọng nguồn tài nguyên thiên nhiên.)",
+      "vi_du_ruby": "<ruby>天然<rt>てんねん</rt></ruby>の資源を大事に使う｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "日光",
+      "doc": "にっこう",
+      "doc_marked": "にっこ**う**",
+      "han_viet": "",
+      "nghia": "Ánh nắng mặt trời, nắng",
+      "vi_du": "公園に行って、日光をたくさん浴びる｡ (Đi công viên và tắm thật nhiều ánh nắng mặt trời.)",
+      "vi_du_ruby": "公園に行って、<ruby>日光<rt>にっこう</rt></ruby>をたくさん浴びる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "昇る",
+      "doc": "のぼる",
+      "doc_marked": "のぼる",
+      "han_viet": "",
+      "nghia": "Lên, (mặt trời) mọc",
+      "vi_du": "朝日が昇るこ景は美しい｡ (Khung cảnh mặt trời mọc thật đẹp.)",
+      "vi_du_ruby": "朝日が<ruby>昇る<rt>のぼる</rt></ruby>こ景は美しい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "日陰",
+      "doc": "ひかげ",
+      "doc_marked": "ひかげ",
+      "han_viet": "",
+      "nghia": "Bóng râm",
+      "vi_du": "日陰と日なたでは気温が3度くらい違う｡ (Nhiệt độ bóng râm và ánh nắng khác nhau khoảng 3 độ.)",
+      "vi_du_ruby": "<ruby>日陰<rt>ひかげ</rt></ruby>と日なたでは気温が3度くらい違う｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "夕焼け",
+      "doc": "ゆうやけ",
+      "doc_marked": "**ゆう**やけ",
+      "han_viet": "",
+      "nghia": "Hoàng hôn đỏ rực",
+      "vi_du": "夕焼けがきれいだ。明日は晴れるだろう｡ (Hoàng hôn đỏ thật đẹp. Hẳn là ngày mai trời sẽ nắng ráo.)",
+      "vi_du_ruby": "<ruby>夕焼け<rt>ゆうやけ</rt></ruby>がきれいだ。明日は晴れるだろう｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "飛び回る",
+      "doc": "とびまわる",
+      "doc_marked": "とびまわる",
+      "han_viet": "",
+      "nghia": "Bay quanh, bay khắp nơi",
+      "vi_du": "①この島では、いろいろな種類の鳥が飛び回っている。 ②彼は一年中、仕事で世界を飛び回っている｡ (①Hòn đảo này có nhiều loài chim bay lượn. ②Suốt năm, vì công việc anh ấy bay khắp thế giới.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "鳴く",
+      "doc": "なく",
+      "doc_marked": "なく",
+      "han_viet": "",
+      "nghia": "(Động vật) kêu, hót, hú, gáy",
+      "vi_du": "森の中で鳥が鳴ている｡ (Chim đang hót trong rừng.)",
+      "vi_du_ruby": "森の中で鳥が鳴ている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "し[い]んと（する）",
+      "doc": "し[い]んと",
+      "doc_marked": "し[い]んと",
+      "han_viet": "",
+      "nghia": "Im lặng, lặng phắc như tờ",
+      "vi_du": "森の中は何も聞こえず、しんとしている｡ (Trong rừng, không nghe thấy gì cả, lặng phắc như tờ.)",
+      "vi_du_ruby": "森の中は何も聞こえず、しんとしている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Hình ảnh tiêu cực",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "憎らしい",
+      "doc": "にくらしい",
+      "doc_marked": "にくらしい",
+      "han_viet": "",
+      "nghia": "Đáng ghét, ghê tởm",
+      "vi_du": "兄は、いつも憎らしいことを言う｡ (Anh tôi luôn nói những chuyện đáng ghét.)",
+      "vi_du_ruby": "兄は、いつも<ruby>憎らしい<rt>にくらしい</rt></ruby>ことを言う｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "強引な",
+      "doc": "ごういんな",
+      "doc_marked": "ご**う**いんな",
+      "han_viet": "",
+      "nghia": "Ép buộc",
+      "vi_du": "兄の友人に強引に食事に誘われた｡ (Tôi bị bạn của anh trai ép đi dùng bữa.)",
+      "vi_du_ruby": "兄の友人に強引に食事に誘われた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "うっとうしい",
+      "doc": "うっとうしい",
+      "doc_marked": "うっと**う**しい",
+      "han_viet": "",
+      "nghia": "U ám, buồn rầu, ủ dột, nhặng xị, ồn ào",
+      "vi_du": "①梅雨に入って、うっとうしい天気が続く。 ②彼はおしゃべりで、うっとうしい｡ (①Vào mùa mưa, thời tiết cứ u ám kéo dài. ②Anh ấy nói nhiều, thật nhặng xị.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "やっかい（な）",
+      "doc": "やっかい",
+      "doc_marked": "やっかい",
+      "han_viet": "",
+      "nghia": "Sự phiền phức, rắc rối",
+      "vi_du": "やっかいな仕事を引き受けてしまった。（ナ形） (Tôi lỡ nhận công việc phiền phức.)",
+      "vi_du_ruby": "やっかいな仕事を引き受けてしまった。（ナ形）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "とんでもない",
+      "doc": "とんでもない",
+      "doc_marked": "とんでもない",
+      "han_viet": "",
+      "nghia": "Quá đáng không thể nào, không dám đâu",
+      "vi_du": "①彼は非常識で、とんでもないやつだ。 (②A「合格できたのは先生のおかげです。」B「とんでもない。Aさんの努力の結果ですよ」 ①Anh ấy là người thiếu nhận thức, thật quá đáng. ②A: Em thi đậu là nhờ thầy / cô. B : Không đâu. Đó là kết quả nỗ lực của A đấy.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "安易な",
+      "doc": "あんいな",
+      "doc_marked": "あんいな",
+      "han_viet": "",
+      "nghia": "Dễ dàng, đơn giản",
+      "vi_du": "安易に人を信じて、だまされてしまった｡ (Tôi dễ dàng tin người nên đã bị lừa.)",
+      "vi_du_ruby": "安易に人を信じて、だまされてしまった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "無難な",
+      "doc": "ぶなんな",
+      "doc_marked": "ぶなんな",
+      "han_viet": "",
+      "nghia": "An toàn, vừa phải, chấp nhận được",
+      "vi_du": "彼の答えは、いつも無難だ｡ (Câu trả lời của anh ta luôn chấp nhận được.)",
+      "vi_du_ruby": "彼の答えは、いつも無難だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "平凡な",
+      "doc": "へいぼんな",
+      "doc_marked": "**へい**ぼんな",
+      "han_viet": "",
+      "nghia": "Bình thường, bình lặng",
+      "vi_du": "平凡な毎日で退屈だ｡ (Mỗi ngày bình lặng thật buồn tẻ.)",
+      "vi_du_ruby": "<ruby>平凡な<rt>へいぼんな</rt></ruby>毎日で退屈だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "みっともない",
+      "doc": "みっともない",
+      "doc_marked": "みっともない",
+      "han_viet": "",
+      "nghia": "Thiếu lịch sự, không đứng đắn, hổ thẹn",
+      "vi_du": "そんなみっともない服装で出かけるの？ (Đi ra ngoài với bộ quần áo không đứng đắn như vậy sao?)",
+      "vi_du_ruby": "そんな<ruby>みっともない<rt>みっともない</rt></ruby>服装で出かけるの？",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "見苦しい",
+      "doc": "みぐるしい",
+      "doc_marked": "みぐるしい",
+      "han_viet": "",
+      "nghia": "Xấu, khó coi",
+      "vi_du": "彼は負けたくせに怒っている。見苦しい｡ (Anh ấy đã thua mà còn tức giận. Thật khó coi.)",
+      "vi_du_ruby": "彼は負けたくせに怒っている。<ruby>見苦しい<rt>みぐるしい</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "みにくい",
+      "doc": "みにくい",
+      "doc_marked": "みにくい",
+      "han_viet": "",
+      "nghia": "Xấu xí, khó coi",
+      "vi_du": "兄弟だから、お金のことでみにくい争いをしたくない｡ (Vì là anh em nên tôi không muốn cãi vã khó coi vì chuyện tiền bạc.)",
+      "vi_du_ruby": "兄弟だから、お金のことで<ruby>みにくい<rt>みにくい</rt></ruby>争いをしたくない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ぼろぼろな",
+      "doc": "ぼろぼろな",
+      "doc_marked": "ぼろぼろな",
+      "han_viet": "",
+      "nghia": "Rách nát, tả tơi",
+      "vi_du": "このコートはぼろぼろだ。もう捨てよう｡ (Cái áo vest này tả tơi rồi, vứt nó thôi)",
+      "vi_du_ruby": "このコートはぼろぼろだ。もう捨てよう｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "あわれな",
+      "doc": "あわれな",
+      "doc_marked": "あわれな",
+      "han_viet": "",
+      "nghia": "Đáng thương",
+      "vi_du": "あわれな子どもの話を聞き、涙が出た｡ (Nghe câu chuyện về đứa bé đáng thương, tôi chảy nước mắt.)",
+      "vi_du_ruby": "<ruby>あわれな<rt>あわれな</rt></ruby>子どもの話を聞き、涙が出た｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "乏しい",
+      "doc": "とぼしい",
+      "doc_marked": "とぼしい",
+      "han_viet": "",
+      "nghia": "Thiếu thốn, hạn hẹp, keo kiệt, bần cùng",
+      "vi_du": "彼は想像力が乏しく、話していてもつまらない｡ (Anh ấy nghèo trí tưởng tượng, có nói chuyện cũng chán.)",
+      "vi_du_ruby": "彼は想像力が乏しく、話していてもつまらない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "中途半端（な）",
+      "doc": "ちゅうとはんぱ",
+      "doc_marked": "**ちゅう**とはんぱ",
+      "han_viet": "",
+      "nghia": "Nửa chừng, nửa vời",
+      "vi_du": "弟とは、することがいつも中途半端だ。（ナ形） (Em trai tôi lúc nào cũng làm việc gì cũng dở dang.)",
+      "vi_du_ruby": "弟とは、することがいつも中途半端だ。（ナ形）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "まごまご（する）",
+      "doc": "まごまご",
+      "doc_marked": "まごまご",
+      "han_viet": "",
+      "nghia": "Lúng túng, hoang mang, loay hoay",
+      "vi_du": "",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "矛盾（する）",
+      "doc": "むじゅん",
+      "doc_marked": "むじゅん",
+      "han_viet": "",
+      "nghia": "Mâu thuẫn, trái ngược",
+      "vi_du": "彼の話は矛盾している｡ (Câu chuyện của anh ấy thật mâu thuẫn.)",
+      "vi_du_ruby": "彼の話は矛盾している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "にやにや（する）",
+      "doc": "にやにや",
+      "doc_marked": "にやにや",
+      "han_viet": "",
+      "nghia": "Cười giả tạo, màu mè",
+      "vi_du": "人を見て、にやにやするのはやめなさい｡ (Hãy ngưng ngay cái trò nhìn người ta rồi cười giả tạo đi.)",
+      "vi_du_ruby": "人を見て、にやにやするのはやめなさい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "でこぼこ（な/する）",
+      "doc": "でこぼこ",
+      "doc_marked": "でこぼこ",
+      "han_viet": "",
+      "nghia": "Lồi lõm, gập ghềnh",
+      "vi_du": "学校の前の道はでこぼこだ。（ナ形） (Con đường trước trường gập ghềnh.)",
+      "vi_du_ruby": "学校の前の道はでこぼこだ。（ナ形）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "それなり",
+      "doc": "それなり",
+      "doc_marked": "それなり",
+      "han_viet": "",
+      "nghia": "Trong chừng mực nào đó",
+      "vi_du": "このドラマは評判が悪いが、それなりに面白い｡ (Bộ phim truyền hình này tuy bị đánh giá thấp nhưng trong chừng mực nào đó thì thú vị.)",
+      "vi_du_ruby": "このドラマは評判が悪いが、<ruby>それなり<rt>それなり</rt></ruby>に面白い｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

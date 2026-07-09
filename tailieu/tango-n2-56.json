@@ -1,0 +1,228 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Thành ngữ ① Tính khí, tâm hồn, tâm trạng",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "気が早い",
+      "doc": "きがはやい",
+      "doc_marked": "きがはやい",
+      "han_viet": "",
+      "nghia": "Nôn nóng",
+      "vi_du": "旅行は来週なのに、もう準備するなんて気が早い｡ (Tuần sau mới đi du lịch mà bây giờ đã chuẩn bị rồi thì đúng là nôn nóng.)",
+      "vi_du_ruby": "旅行は来週なのに、もう準備するなんて<ruby>気が早い<rt>きがはやい</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "気が重い",
+      "doc": "きがおもい",
+      "doc_marked": "きがおもい",
+      "han_viet": "",
+      "nghia": "Cảm thấy chán nản, nặng nề",
+      "vi_du": "仕事でミスした翌朝は、とても気が重い｡ (Buổi sáng sau khi mắc sai lầm trong công việc thì lòng thật nặng nề.)",
+      "vi_du_ruby": "仕事でミスした翌朝は、とても<ruby>気が重い<rt>きがおもい</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "気が合う",
+      "doc": "きがあう",
+      "doc_marked": "きがあう",
+      "han_viet": "",
+      "nghia": "Hợp tính",
+      "vi_du": "鈴木さんとは、とても気が合う｡ (Tôi rất hợp tính với anh / chị Suzuki.)",
+      "vi_du_ruby": "鈴木さんとは、とても<ruby>気が合う<rt>きがあう</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "気が利く",
+      "doc": "きがきく",
+      "doc_marked": "きがきく",
+      "han_viet": "",
+      "nghia": "Chu đáo, quan tâm, ân cần",
+      "vi_du": "木村さんは、よく気が利く人だ｡ (Anh / chị Kimura là người rất ân cần.)",
+      "vi_du_ruby": "木村さんは、よく<ruby>気が利く<rt>きがきく</rt></ruby>人だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "気がつく",
+      "doc": "きがつく",
+      "doc_marked": "きがつく",
+      "han_viet": "",
+      "nghia": "Nhận thấy, nhớ ra, để ý, chu đáo",
+      "vi_du": "①駅に着いてから、忘れ物に気がついた。 ②彼女は、よく気がつく人だ｡ (①Sau khi đến nhà ga, tôi mới nhận ra để quên đồ. ②Cô ấy là người rất chu đáo.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "気が強い",
+      "doc": "きがつよい",
+      "doc_marked": "きがつよい",
+      "han_viet": "",
+      "nghia": "Cá tính, mạnh mẽ",
+      "vi_du": "妹は気が強いが、そんなところも可愛いと思う｡ (Em gái tôi mạnh mẽ nhưng tôi nghĩ điểm đó cũng đáng yêu.)",
+      "vi_du_ruby": "妹は<ruby>気が強い<rt>きがつよい</rt></ruby>が、そんなところも可愛いと思う｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "気が小さい",
+      "doc": "きがちーさい",
+      "doc_marked": "きがちーさい",
+      "han_viet": "",
+      "nghia": "Nhỏ nhen, hẹp bụng",
+      "vi_du": "彼は、気が小さいのに、大きなことを言う｡ (Anh ấy tính tình nhỏ nhen mà toàn nói chuyện to tát.)",
+      "vi_du_ruby": "彼は、<ruby>気が小さい<rt>きがちーさい</rt></ruby>のに、大きなことを言う｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "気を遣う",
+      "doc": "きをつかう",
+      "doc_marked": "きをつかう",
+      "han_viet": "",
+      "nghia": "giữ ý, lo lắng",
+      "vi_du": "そんなに気を遣わないでください｡ (Xin đừng giữ ý như thế.)",
+      "vi_du_ruby": "そんなに気を遣わないでください｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "気が進まない",
+      "doc": "きがすすまない",
+      "doc_marked": "きがすすまない",
+      "han_viet": "",
+      "nghia": "Không hứng thú",
+      "vi_du": "飲み会に誘われたが、あまり、気が進まない｡ (Tôi được mời đi ăn uống nhưng không hứng thú lắm.)",
+      "vi_du_ruby": "飲み会に誘われたが、あまり、<ruby>気が進まない<rt>きがすすまない</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "気にかかる",
+      "doc": "きにかかる",
+      "doc_marked": "きにかかる",
+      "han_viet": "",
+      "nghia": "Lo lắng",
+      "vi_du": "昨日のテストの結果が気にかかる (Tôi lo lắng về kết quả bài kiểm tra hôm qua.)",
+      "vi_du_ruby": "昨日のテストの結果が<ruby>気にかかる<rt>きにかかる</rt></ruby>",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "気にくわない",
+      "doc": "きにくわない",
+      "doc_marked": "きにくわない",
+      "han_viet": "",
+      "nghia": "Bất mãn, không ưa",
+      "vi_du": "あの人の態度は気にくわない｡ (Thái độ của người đó thật không ưa.)",
+      "vi_du_ruby": "あの人の態度は<ruby>気にくわない<rt>きにくわない</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "心が通う",
+      "doc": "こころがかよう",
+      "doc_marked": "こころがかよ**う**",
+      "han_viet": "",
+      "nghia": "Thấu hiểu nhau",
+      "vi_du": "二人は言葉はわからなくても、心が通っている｡ (Hai người tuy ngôn ngữ không hiểu nhưng tâm hồn thì thấu hiểu nhau.)",
+      "vi_du_ruby": "二人は言葉はわからなくても、心が通っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "心が狭い",
+      "doc": "こころがせまい",
+      "doc_marked": "こころがせまい",
+      "han_viet": "",
+      "nghia": "Hẹp lòng, hẹp hòi",
+      "vi_du": "人のミスが許せないなんて、心が狭い人だ｡ (Không thể tha thứ cho lỗi lầm của người khác thật là người hẹp hòi.)",
+      "vi_du_ruby": "人のミスが許せないなんて、<ruby>心が狭い<rt>こころがせまい</rt></ruby>人だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "心が動く",
+      "doc": "こころがうごく",
+      "doc_marked": "こころがうごく",
+      "han_viet": "",
+      "nghia": "Dao động, xáo động",
+      "vi_du": "試験の前日に飲み会に誘われ、心が動いた｡ (Tôi bị dao động khi được mời đi ăn uống trước ngày thi.)",
+      "vi_du_ruby": "試験の前日に飲み会に誘われ、心が動いた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "心を配る",
+      "doc": "こころをくばる",
+      "doc_marked": "こころをくばる",
+      "han_viet": "",
+      "nghia": "Quan tâm, chu đáo",
+      "vi_du": "彼女は常に周囲に心を配っている｡ (Cô ấy thường quan tâm đến xung quanh.)",
+      "vi_du_ruby": "彼女は常に周囲に心を配っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "心を引かれる",
+      "doc": "こころをひかれる",
+      "doc_marked": "こころをひかれる",
+      "han_viet": "",
+      "nghia": "Bị thu hút",
+      "vi_du": "日本に来て、茶道に心を引かれた｡ (Đến Nhật, tôi bị thu hút bởi trà đạo.)",
+      "vi_du_ruby": "日本に来て、茶道に心を引かれた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "心を許す",
+      "doc": "こころをゆるす",
+      "doc_marked": "こころをゆるす",
+      "han_viet": "",
+      "nghia": "Tin tưởng, thật lòng",
+      "vi_du": "佐藤さんは田中さんにだけ心を許している｡ (Anh / chị Sato thật lòng tin tưởng mỗi anh / chị Tanaka.)",
+      "vi_du_ruby": "佐藤さんは田中さんにだけ心を許している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "胸が痛む",
+      "doc": "むねがいたむ",
+      "doc_marked": "むねがいたむ",
+      "han_viet": "",
+      "nghia": "Đau lòng, xót xa",
+      "vi_du": "ニュースで事件を知って、胸が痛んだ｡ (Qua tin tức tôi biết về vụ án và thấy thật đau lòng.)",
+      "vi_du_ruby": "ニュースで事件を知って、胸が痛んだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "胸が一杯になる",
+      "doc": "むねがいっぱいになる",
+      "doc_marked": "むねがいっぱいになる",
+      "han_viet": "",
+      "nghia": "Xúc động, cảm xúc dâng trào",
+      "vi_du": "両親のやさしい言葉に胸が一杯になった｡ (Tôi trở nên xúc động trước những lời nói yêu thương của bố mẹ.)",
+      "vi_du_ruby": "両親のやさしい言葉に胸が一杯になった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "胸をはずませる",
+      "doc": "むねをはずませる",
+      "doc_marked": "むねをはずませる",
+      "han_viet": "",
+      "nghia": "Hồi hộp, náo nức, lòng rộn ràng",
+      "vi_du": "留学生活を前に胸をはずませている｡ (Lòng tôi rộn ràng trước cuộc sống du học.)",
+      "vi_du_ruby": "留学生活を前に胸をはずませている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

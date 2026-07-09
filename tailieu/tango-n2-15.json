@@ -1,0 +1,250 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Chuyển nhà",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "処分（する）",
+      "doc": "しょぶん",
+      "doc_marked": "しょぶん",
+      "han_viet": "",
+      "nghia": "Sự bỏ đi, xử lý, giải quyết, xử phạt",
+      "vi_du": "①壊れたコピー機を処分した。 ②学校の規則を破ったので、処分を受けた｡ (①Tôi đã bỏ cái máy photo bị hư đi. ②Vì vi phạm kỷ luật nhà trường nên tôi chịu xử phạt.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "不用品",
+      "doc": "ふようひん",
+      "doc_marked": "ふよ**う**ひん",
+      "han_viet": "",
+      "nghia": "Đồ dùng không cần thiết",
+      "vi_du": "不用品はリサイクルショップに売ろう｡ (Hãy bán các đồ dùng không cần thiết cho cửa hàng tái chế (tiệm ve chai).)",
+      "vi_du_ruby": "<ruby>不用品<rt>ふようひん</rt></ruby>はリサイクルショップに売ろう｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "はがす",
+      "doc": "はがす",
+      "doc_marked": "はがす",
+      "han_viet": "",
+      "nghia": "Gỡ ra",
+      "vi_du": "ポスターを壁からきれいにはがす｡ (Tôi đã gỡ tấm áp phích ra khỏi tường sạch sẽ.)",
+      "vi_du_ruby": "ポスターを壁からきれいに<ruby>はがす<rt>はがす</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "束",
+      "doc": "そく",
+      "doc_marked": "そく",
+      "han_viet": "",
+      "nghia": "Bó",
+      "vi_du": "本は束にして、ひもでしばる｡ (Sách thì bó lại và cột bằng dây.)",
+      "vi_du_ruby": "本は<ruby>束<rt>そく</rt></ruby>にして、ひもでしばる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "しばる",
+      "doc": "しばる",
+      "doc_marked": "しばる",
+      "han_viet": "",
+      "nghia": "Trói, bó, buộc",
+      "vi_du": "荷物のひもを、きちんとしばって運ぶ｡ (Tôi buộc dây hành lý lại thật chặt và khiêng đi.)",
+      "vi_du_ruby": "荷物のひもを、きちんとしばって運ぶ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "段ボール",
+      "doc": "だんぼーる",
+      "doc_marked": "だんぼーる",
+      "han_viet": "",
+      "nghia": "Thùng các-tông, thùng giấy",
+      "vi_du": "本を段ボールに入れて、トラックに積む｡ (Tôi cho sách vào thùng các-tông và cho lên xe.)",
+      "vi_du_ruby": "本を<ruby>段ボール<rt>だんぼーる</rt></ruby>に入れて、トラックに積む｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ガムテープ",
+      "doc": "がむてーぷ",
+      "doc_marked": "がむてーぷ",
+      "han_viet": "",
+      "nghia": "Băng keo vải",
+      "vi_du": "段ボールのふたをガムテープで留める｡ (Tôi đóng nắp thùng các-tông bằng băng keo vải.)",
+      "vi_du_ruby": "段ボールのふたを<ruby>ガムテープ<rt>がむてーぷ</rt></ruby>で留める｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "押し込む",
+      "doc": "おしこむ",
+      "doc_marked": "おしこむ",
+      "han_viet": "",
+      "nghia": "Nhấn vào, ấn vào, nhét vào",
+      "vi_du": "段ボールに洋服を押し込んだ｡ (Tôi đã nhét quần áo vào thùng các-tông.)",
+      "vi_du_ruby": "段ボールに洋服を押し込んだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "リスト",
+      "doc": "りすと",
+      "doc_marked": "りすと",
+      "han_viet": "",
+      "nghia": "Danh sách",
+      "vi_du": "引っ越しのときに、することをリストに書く｡ (Khi chuyển nhà, viết danh sách những việc cần làm.)",
+      "vi_du_ruby": "引っ越しのときに、することを<ruby>リスト<rt>りすと</rt></ruby>に書く｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "引っ掛かる",
+      "doc": "ひっかかる",
+      "doc_marked": "ひっかかる",
+      "han_viet": "",
+      "nghia": "Mắc phải, vướng",
+      "vi_du": "①机の足が引っ掛かって、部屋に入らない。 ②あんな話に引っ掛かってしまうなんて｡ (①Chân bàn bị vướng nên không vào phòng được. ②Không ngờ lại vướng phải chuyện như thế.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "持ち上げる",
+      "doc": "もちあげる",
+      "doc_marked": "もちあげる",
+      "han_viet": "",
+      "nghia": "Cầm lên, nâng lên",
+      "vi_du": "ベッドを持ち上げて、掃除機をかける｡ (Tôi nâng giường lên để hút bụi.)",
+      "vi_du_ruby": "ベッドを持ち上げて、掃除機をかける｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "担ぐ",
+      "doc": "かつぐ",
+      "doc_marked": "かつぐ",
+      "han_viet": "",
+      "nghia": "Vác, nâng",
+      "vi_du": "隣のアパートに引っ越したので、荷物は担いで運んだ｡ (Vì đã chuyển nhà sang căn hộ bên cạnh nên tôi vác hành lý chuyển đi.)",
+      "vi_du_ruby": "隣のアパートに引っ越したので、荷物は担いで運んだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "くたびれる",
+      "doc": "くたびれる",
+      "doc_marked": "くたびれる",
+      "han_viet": "",
+      "nghia": "Mệt nhoài, kiệt sức, tả tơi",
+      "vi_du": "①くたびれたので、少し休もう。 ②このコートは10年着たので、くたびれている｡ (①Đã mệt nhoài rồi, hãy nghỉ ngơi chút nào. ②Tôi mặc cái áo khoác này 10 năm rồi nên nó đã tả tơi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "すき間",
+      "doc": "すきかん",
+      "doc_marked": "すきかん",
+      "han_viet": "",
+      "nghia": "Khoảng trống",
+      "vi_du": "家具のすき間に、たまったほこりを掃く｡ (Tôi lâu bụi phủ ở các khoảng trống giữa đồ gia dụng.)",
+      "vi_du_ruby": "家具の<ruby>すき間<rt>すきかん</rt></ruby>に、たまったほこりを掃く｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "中身",
+      "doc": "なかみ",
+      "doc_marked": "なかみ",
+      "han_viet": "",
+      "nghia": "Bên trong",
+      "vi_du": "段ボールから中身を出して、引き出しに入れる｡ (Tôi lấy đồ bên trong thùng các-tông ra cho vào ngăn kéo.)",
+      "vi_du_ruby": "段ボールから<ruby>中身<rt>なかみ</rt></ruby>を出して、引き出しに入れる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "さっさと（する）",
+      "doc": "さっさと",
+      "doc_marked": "さっさと",
+      "han_viet": "",
+      "nghia": "Mau chóng",
+      "vi_du": "さっさと荷物を片付けて、のんびりしたい｡ (Tôi muốn mau chóng dọn dẹp hành lý rồi mau chóng nghỉ ngơi.)",
+      "vi_du_ruby": "さっさと荷物を片付けて、のんびりしたい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "吊るす",
+      "doc": "つるす",
+      "doc_marked": "つるす",
+      "han_viet": "",
+      "nghia": "Treo",
+      "vi_du": "クローゼットに服を吊るす｡ (Tôi treo quần áo vào tủ.)",
+      "vi_du_ruby": "クローゼットに服を<ruby>吊るす<rt>つるす</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "まさに",
+      "doc": "まさに",
+      "doc_marked": "まさに",
+      "han_viet": "",
+      "nghia": "Đúng là, chính xác, đúng là",
+      "vi_du": "①この部屋は駅が近いし家賃も安い。まさに理想的だ。 ②まさに家を出ようとしていたとき、地震が起きた｡ (①Căn phòng này tiền thuê vừa rẻ vừa gần nhà ga. Đúng là lý tưởng. ②Đúng lúc định rời khỏi nhà thì động đất.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "居心地",
+      "doc": "いごこち",
+      "doc_marked": "いごこち",
+      "han_viet": "",
+      "nghia": "Ở cảm thấy thoải mái, dễ chịu",
+      "vi_du": "今度の部屋は、とても居心地がいい｡ (Căn phòng lần này cảm giác ở rất dễ chịu.)",
+      "vi_du_ruby": "今度の部屋は、とても<ruby>居心地<rt>いごこち</rt></ruby>がいい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "一変（する）",
+      "doc": "いっぺん",
+      "doc_marked": "いっぺん",
+      "han_viet": "",
+      "nghia": "Hoàn toàn thay đổi",
+      "vi_du": "日本で暮らし始めた日から、生活が一変した｡ (Từ ngày bắt đầu sống ở Nhật, cuộc sống đã hoàn toàn thay đổi.)",
+      "vi_du_ruby": "日本で暮らし始めた日から、生活が一変した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "アンテナ",
+      "doc": "あんてな",
+      "doc_marked": "あんてな",
+      "han_viet": "",
+      "nghia": "Ăng-ten",
+      "vi_du": "①テレビのアンテナが古かったので、取り替えた。 ② 彼女は好奇心旺盛で、いつもアンテナを張っている｡ (①Ăng-ten ti vi đã cũ nên tôi thay. ②Cô ấy rất hiếu kỳ, lúc nào cũng chú ý theo dõi mọi thứ xung quanh.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "いっそ",
+      "doc": "いっそ",
+      "doc_marked": "いっそ",
+      "han_viet": "",
+      "nghia": "Thà vậy, thà rằng",
+      "vi_du": "また海に行ったの？いっそ沖縄で暮らしたら？ (Lại đi biển nữa à? Vậy thà sống ở Okinawa luôn đi?)",
+      "vi_du_ruby": "また海に行ったの？<ruby>いっそ<rt>いっそ</rt></ruby>沖縄で暮らしたら？",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

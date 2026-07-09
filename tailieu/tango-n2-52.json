@@ -1,0 +1,206 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Cảm giác thoải mái",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "快適な",
+      "doc": "かいてきな",
+      "doc_marked": "かいてきな",
+      "han_viet": "",
+      "nghia": "Sảng khoái, dễ chịu, thoải mái",
+      "vi_du": "このホテルは、とても快適だ｡ (Khách sạn này rất thoải mái.)",
+      "vi_du_ruby": "このホテルは、とても快適だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "快い",
+      "doc": "こころよい",
+      "doc_marked": "こころよい",
+      "han_viet": "",
+      "nghia": "Dễ chịu, du dương",
+      "vi_du": "この音楽は快い気分にさせてくれる｡ (Âm nhạc này khiến tôi có cảm giác dễ chịu.)",
+      "vi_du_ruby": "この音楽は<ruby>快い<rt>こころよい</rt></ruby>気分にさせてくれる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "心地よい",
+      "doc": "ここちよい",
+      "doc_marked": "ここちよい",
+      "han_viet": "",
+      "nghia": "Dễ chịu, thích thú, êm ái",
+      "vi_du": "窓から心地よい風が入ってきた｡ (Từ cửa sổ, làn gió dễ chịu thổi vào.)",
+      "vi_du_ruby": "窓から<ruby>心地よい<rt>ここちよい</rt></ruby>風が入ってきた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "すがすがしい",
+      "doc": "すがすがしい",
+      "doc_marked": "すがすがしい",
+      "han_viet": "",
+      "nghia": "Khỏe khoắn, sảng khoái",
+      "vi_du": "試験が終わって、すがすがしい気分だ｡ (Kết thúc kỳ thi, tâm trạng thật sảng khoái.)",
+      "vi_du_ruby": "試験が終わって、<ruby>すがすがしい<rt>すがすがしい</rt></ruby>気分だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "リフレッシュ（する）",
+      "doc": "りふれっしゅ",
+      "doc_marked": "りふれっしゅ",
+      "han_viet": "",
+      "nghia": "Sự làm mới, làm cho tỉnh người",
+      "vi_du": "週末はテニスをして、リフレッシュする｡ (Cuối tuần tôi chơi quần vợt cho tỉnh người.)",
+      "vi_du_ruby": "週末はテニスをして、リフレッシュする｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "穏やかな",
+      "doc": "おだやかな",
+      "doc_marked": "おだやかな",
+      "han_viet": "",
+      "nghia": "Ôn hòa, thanh thản, yên ả",
+      "vi_du": "いつも穏やかな気持ちでいたい｡ (Tôi muốn lúc nào cũng trong tâm trạng thanh thản.)",
+      "vi_du_ruby": "いつも<ruby>穏やかな<rt>おだやかな</rt></ruby>気持ちでいたい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "心強い",
+      "doc": "こころづよい",
+      "doc_marked": "こころづよい",
+      "han_viet": "",
+      "nghia": "Ủng hộ, động viên tinh thần",
+      "vi_du": "彼がいてくれると、とても心強い｡ (Khi có anh ấy, tôi cảm thấy được động viên tinh thần mạnh mẽ.)",
+      "vi_du_ruby": "彼がいてくれると、とても<ruby>心強い<rt>こころづよい</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "恋しい",
+      "doc": "こいしい",
+      "doc_marked": "こいしい",
+      "han_viet": "",
+      "nghia": "Nhung nhớ",
+      "vi_du": "さっきまで会っていたのに、彼女が恋しい｡ (Mới gặp lúc nãy mà đã nhung nhớ cô ấy rồi.)",
+      "vi_du_ruby": "さっきまで会っていたのに、彼女が<ruby>恋しい<rt>こいしい</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "前向き",
+      "doc": "まえむき",
+      "doc_marked": "まえむき",
+      "han_viet": "",
+      "nghia": "Tích cực, hướng về phía trước",
+      "vi_du": "彼はいつでも前向きに努力する｡ (Anh ấy luôn nỗ lực hướng về phía trước.)",
+      "vi_du_ruby": "彼はいつでも<ruby>前向き<rt>まえむき</rt></ruby>に努力する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "めでたい",
+      "doc": "めでたい",
+      "doc_marked": "めでたい",
+      "han_viet": "",
+      "nghia": "Đáng mừng, vui mừng",
+      "vi_du": "最近、家族にめでたいことが続いている｡ (Gần đây, liên tục có nhiều việc đáng mừng trong gia đình.)",
+      "vi_du_ruby": "最近、家族に<ruby>めでたい<rt>めでたい</rt></ruby>ことが続いている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ラッキーな",
+      "doc": "らっきーな",
+      "doc_marked": "らっきーな",
+      "han_viet": "",
+      "nghia": "May mắn",
+      "vi_du": "今日は何だかラッキーな日だ｡ (Hôm nay là ngày may mắn sao đó.)",
+      "vi_du_ruby": "今日は何だか<ruby>ラッキーな<rt>らっきーな</rt></ruby>日だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "幸福（な）",
+      "doc": "こうふく",
+      "doc_marked": "こ**う**ふく",
+      "han_viet": "",
+      "nghia": "Niềm hạnh phúc, hạnh phúc",
+      "vi_du": "彼女と出会ってから、穏やかで幸福な毎日だ。（け形） (Sau khi gặp gỡ cô ấy, mỗi ngày của tôi đều êm ả và hạnh phúc.)",
+      "vi_du_ruby": "彼女と出会ってから、穏やかで幸福な毎日だ。（け形）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "張り切る",
+      "doc": "はりきる",
+      "doc_marked": "はりきる",
+      "han_viet": "",
+      "nghia": "Hăng hái, sẵn sàng",
+      "vi_du": "彼は入社後、張り切って仕事に取り組んでいる｡ (Sau khi vào công ty, anh ấy hăng hái nỗ lực làm việc.)",
+      "vi_du_ruby": "彼は入社後、張り切って仕事に取り組んでいる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "わくわく（する）",
+      "doc": "わくわく",
+      "doc_marked": "わくわく",
+      "han_viet": "",
+      "nghia": "Hồi hộp, phấn khởi",
+      "vi_du": "もうすぐ夏休みだ。わくわくする｡ (Sắp đến mùa hè rồi. Thật phấn khởi.)",
+      "vi_du_ruby": "もうすぐ夏休みだ。わくわくする｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "そわそわ（と）（する）",
+      "doc": "そわそわ",
+      "doc_marked": "そわそわ",
+      "han_viet": "",
+      "nghia": "Sốt ruột",
+      "vi_du": "デートの日の朝はそわそわと落ち着かない｡ (Sáng hôm hẹn hò, tôi sốt ruột đứng ngồi không yên.)",
+      "vi_du_ruby": "デートの日の朝はそわそわと落ち着かない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "うっとり（と）（する）",
+      "doc": "うっとり",
+      "doc_marked": "うっとり",
+      "han_viet": "",
+      "nghia": "Như bị thôi miên, say đắm, lãng đãng",
+      "vi_du": "好きな歌手のコンサートで、うっとりした気分になる｡ (Tôi như bị thôi miên trong buổi hòa nhạc của ca sỹ mình yêu thích.)",
+      "vi_du_ruby": "好きな歌手のコンサートで、うっとりした気分になる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "すっと（する）",
+      "doc": "すっと",
+      "doc_marked": "すっと",
+      "han_viet": "",
+      "nghia": "Nhẹ nhàng, nhẹ nhõm",
+      "vi_du": "言いたいことを全部言って、胸がすっとした｡ (Tôi nói hết những gì muốn nói và thấy trong lòng nhẹ nhõm.)",
+      "vi_du_ruby": "言いたいことを全部言って、胸がすっとした｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "気分転換（する）",
+      "doc": "きぶんてんかん",
+      "doc_marked": "きぶんてんかん",
+      "han_viet": "",
+      "nghia": "Sự thay đổi tâm trạng",
+      "vi_du": "カラオケで気分転換して、すっきりした｡ (Tôi thay đổi tâm trạng bằng cách hát karaoke và thấy sảng khoái.)",
+      "vi_du_ruby": "カラオケで気分転換して、すっきりした｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

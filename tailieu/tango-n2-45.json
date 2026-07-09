@@ -1,0 +1,239 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Làm đẹp",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "肌",
+      "doc": "はだ",
+      "doc_marked": "はだ",
+      "han_viet": "",
+      "nghia": "Da",
+      "vi_du": "冬は肌が乾燥しやすい｡ (Mùa đông da dẻ dễ bị khô.)",
+      "vi_du_ruby": "冬は<ruby>肌<rt>はだ</rt></ruby>が乾燥しやすい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手入れ（する）",
+      "doc": "ていれ",
+      "doc_marked": "**てい**れ",
+      "han_viet": "",
+      "nghia": "Sự chăm sóc",
+      "vi_du": "毎日、素肌の手入れに時間をかける｡ (Hàng ngày tôi bỏ thời gian để chăm sóc làn da tự nhiên.)",
+      "vi_du_ruby": "毎日、素肌の手入れに時間をかける｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ケア（する）",
+      "doc": "けあ",
+      "doc_marked": "けあ",
+      "han_viet": "",
+      "nghia": "Sự chăm sóc",
+      "vi_du": "お風呂の後の素肌のケアは欠かせない｡ (Sau khi tắm, không thể thiếu chăm sóc làn da tự nhiên.)",
+      "vi_du_ruby": "お風呂の後の素肌のケアは欠かせない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "維持（する）",
+      "doc": "いじ",
+      "doc_marked": "いじ",
+      "han_viet": "",
+      "nghia": "Sự duy trì",
+      "vi_du": "きれいな肌を維持したい｡ (Tôi muốn duy trì làn da đẹp.)",
+      "vi_du_ruby": "きれいな肌を維持したい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "機能（する）",
+      "doc": "きのう",
+      "doc_marked": "きの**う**",
+      "han_viet": "",
+      "nghia": "Tính năng, chức năng",
+      "vi_du": "ようやく肌の機能が回復した｡ (Cuối cùng chức năng của làn da đã hồi phục.)",
+      "vi_du_ruby": "ようやく肌の機能が回復した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "かえって",
+      "doc": "かえって",
+      "doc_marked": "かえって",
+      "han_viet": "",
+      "nghia": "Ngược lại",
+      "vi_du": "マッサージをしたら、かえって顔にしわが増えた｡ (Mát-xa rồi thì ngược lại nếp nhăn trên mặt tăng lên.)",
+      "vi_du_ruby": "マッサージをしたら、<ruby>かえって<rt>かえって</rt></ruby>顔にしわが増えた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "刺激",
+      "doc": "しげき",
+      "doc_marked": "しげき",
+      "han_viet": "",
+      "nghia": "Sự kích thích, thức đẩy, động lực",
+      "vi_du": "①この化粧品は刺激が強くて、肌が赤くなる。 ②旅行は、いろいろな刺激を受けるので楽しい｡ (①Loại mỹ phẩm này kích thích mạnh nên da trở nên đỏ. ②Vì nhận được nhiều động lực khi du lịch nên rất vui.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "かさかさ（な/する）",
+      "doc": "かさかさ",
+      "doc_marked": "かさかさ",
+      "han_viet": "",
+      "nghia": "Khô ráp, nhám",
+      "vi_du": "かかとが乾燥して、かさかさだ。（ナ形） (Gót chân bị khô nên nhám.)",
+      "vi_du_ruby": "かかとが乾燥して、かさかさだ。（ナ形）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "低下（する）",
+      "doc": "ていか",
+      "doc_marked": "**てい**か",
+      "han_viet": "",
+      "nghia": "Sự suy giảm, kém đi",
+      "vi_du": "素肌の機能が低下している｡ (Chức năng làn da bị suy giảm.)",
+      "vi_du_ruby": "素肌の機能が低下している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "くっきり（する）",
+      "doc": "くっきり",
+      "doc_marked": "くっきり",
+      "han_viet": "",
+      "nghia": "Rõ ràng",
+      "vi_du": "日焼けの跡がくっきりついてしまった｡ (Viết rám nắng bị thấy rõ ràng.)",
+      "vi_du_ruby": "日焼けの跡がくっきりついてしまった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "つや",
+      "doc": "つや",
+      "doc_marked": "つや",
+      "han_viet": "",
+      "nghia": "Độ bóng",
+      "vi_du": "皮膚のつやが、だんだんなくなってきた｡ (Độ bóng của da dần dần mất đi.)",
+      "vi_du_ruby": "皮膚の<ruby>つや<rt>つや</rt></ruby>が、だんだんなくなってきた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "脂肪",
+      "doc": "しぼう",
+      "doc_marked": "しぼ**う**",
+      "han_viet": "",
+      "nghia": "Mỡ, chất béo",
+      "vi_du": "運動を止めたら、脂肪がついてしまった｡ (Nếu ngưng vận động thì mỡ xuất hiện.)",
+      "vi_du_ruby": "運動を止めたら、<ruby>脂肪<rt>しぼう</rt></ruby>がついてしまった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "肥満（する）",
+      "doc": "ひまん",
+      "doc_marked": "ひまん",
+      "han_viet": "",
+      "nghia": "Béo phì",
+      "vi_du": "肥満は健康によくない｡ (Béo phì không tốt cho sức khỏe.)",
+      "vi_du_ruby": "肥満は健康によくない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "減量（する）",
+      "doc": "げんりょう",
+      "doc_marked": "げんりょう",
+      "han_viet": "",
+      "nghia": "Sự giảm cân, giảm trọng lượng",
+      "vi_du": "ダイエットで減量に成功した｡ (Tôi đã giảm cân thành công nhờ ăn kiêng.)",
+      "vi_du_ruby": "ダイエットで減量に成功した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "急激な",
+      "doc": "きゅうげきな",
+      "doc_marked": "**きゅう**げきな",
+      "han_viet": "",
+      "nghia": "Cấp tốc, khẩn cấp",
+      "vi_du": "急激なダイエットは、かえって後で太る｡ (Ăn kiêng cấp tốc thì ngược lại về sau sẽ mập hơn.)",
+      "vi_du_ruby": "<ruby>急激な<rt>きゅうげきな</rt></ruby>ダイエットは、かえって後で太る｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "一向に（〜ない）",
+      "doc": "いっこうに",
+      "doc_marked": "いっこ**う**に",
+      "han_viet": "",
+      "nghia": "Hoàn toàn (không ~)",
+      "vi_du": "半年もダイエットしているのに、一向ににやせない｡ (Đã ăn kiêng nửa năm rồi mà hoàn toàn không ốm đi.)",
+      "vi_du_ruby": "半年もダイエットしているのに、一向ににやせない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "疑わしい",
+      "doc": "うたがわしい",
+      "doc_marked": "うたがわしい",
+      "han_viet": "",
+      "nghia": "Đáng nghi, khả nghi",
+      "vi_du": "このダイエット食品の効果は疑わしい｡ (Hiệu quả của thực phẩm ăn kiêng này thật đáng nghi ngờ.)",
+      "vi_du_ruby": "このダイエット食品の効果は<ruby>疑わしい<rt>うたがわしい</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "姿勢",
+      "doc": "しせい",
+      "doc_marked": "し**せい**",
+      "han_viet": "",
+      "nghia": "Tư thế, thái độ",
+      "vi_du": "①姿勢をよすれば、太らない。 ②人間は、いくつになっても学ぶな姿勢が大切だ｡ (①Nếu tư thế đúng sẽ không bị mập. ②Con người quan trọng là thái độ học tập dù có bao nhiêu tuổi đi nữa.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "（医者に）かかる",
+      "doc": "（いしゃに）かかる",
+      "doc_marked": "（いしゃに）かかる",
+      "han_viet": "",
+      "nghia": "Đi (bác sỹ), đi bác sỹ điều trị",
+      "vi_du": "去年から、美容外科の医者にかかっている｡ (Từ năm ngoái, tôi đi bác sỹ thẩm mỹ ngoại khoa.)",
+      "vi_du_ruby": "去年から、美容外科の医者にかかっている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "依存（する）",
+      "doc": "いぞん",
+      "doc_marked": "いぞん",
+      "han_viet": "",
+      "nghia": "Sự phụ thuộc, lệ thuộc, nghiện ~",
+      "vi_du": "きれいになるために手術に依存する女性が多い｡ (Nhiều phụ nữ nghiện phẫu thuật để trở nên đẹp hơn.)",
+      "vi_du_ruby": "きれいになるために手術に依存する女性が多い｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "映す",
+      "doc": "うつす",
+      "doc_marked": "うつす",
+      "han_viet": "",
+      "nghia": "Soi, chiếu",
+      "vi_du": "鏡に顔を映しながら、笑顔を作る｡ (Tôi vừa soi mặt trong gương vừa tạo mặt cười.)",
+      "vi_du_ruby": "鏡に顔を映しながら、笑顔を作る｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

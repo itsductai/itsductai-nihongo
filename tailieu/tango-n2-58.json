@@ -1,0 +1,239 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Thành ngữ ③ Cơ thể",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "手がふさがる",
+      "doc": "てがふさがる",
+      "doc_marked": "てがふさがる",
+      "han_viet": "",
+      "nghia": "Bận rộn",
+      "vi_du": "今手がふさがっているので、後でお手伝いします｡ (Bây giờ tôi đang bận, để tí nữa tôi sẽ giúp.)",
+      "vi_du_ruby": "今手がふさがっているので、後でお手伝いします｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手が空く",
+      "doc": "てがあく",
+      "doc_marked": "てがあく",
+      "han_viet": "",
+      "nghia": "Rảnh tay",
+      "vi_du": "手が空いたので、何かお手伝いしましょうか｡ (Tôi đang rảnh, tôi giúp bạn làm cái gì đó nhé!)",
+      "vi_du_ruby": "手が空いたので、何かお手伝いしましょうか｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手がかかる",
+      "doc": "てがかかる",
+      "doc_marked": "てがかかる",
+      "han_viet": "",
+      "nghia": "Khó, tốn công",
+      "vi_du": "これは、ずいぶん手がかかる仕事だ｡ (Đây là công việc khá tốn công.)",
+      "vi_du_ruby": "これは、ずいぶん<ruby>手がかかる<rt>てがかかる</rt></ruby>仕事だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手が離せない",
+      "doc": "てがはなせない",
+      "doc_marked": "てがはなせない",
+      "han_viet": "",
+      "nghia": "Đang dở tay, không thể rời",
+      "vi_du": "すみません。今、手が離せないんですが・・・｡ (Xin lỗi. Bây giờ tôi đang dở tay nên…)",
+      "vi_du_ruby": "すみません。今、<ruby>手が離せない<rt>てがはなせない</rt></ruby>んですが・・・｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手に入れる",
+      "doc": "てにいれる",
+      "doc_marked": "てにいれる",
+      "han_viet": "",
+      "nghia": "Đạt được, có được",
+      "vi_du": "ずっと欲しかったバッグを手に入れた｡ (Tôi đã có được cái túi mà tôi hằng mong muốn.)",
+      "vi_du_ruby": "ずっと欲しかったバッグを手に入れた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手にする",
+      "doc": "てにする",
+      "doc_marked": "てにする",
+      "han_viet": "",
+      "nghia": "Cầm lên, giành lên, đạt được",
+      "vi_du": "①デパートの売り場で、きれいなピアスを手にした。 ②サッカーの大会で優勝を手にした｡ (①Ở quầy bán trong trung tâm thương mại, tôi cầm đôi bông tai đẹp lên. ②Chúng tôi đã giành được chức vô địch ở giải bóng đá.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手につかない",
+      "doc": "てにつかない",
+      "doc_marked": "てにつかない",
+      "han_viet": "",
+      "nghia": "Không hứng thú, không tập trung",
+      "vi_du": "彼女のことを思うと、勉強が手につかない｡ (Cứ nghĩ đến cô ấy là tôi không tập trung học được.)",
+      "vi_du_ruby": "彼女のことを思うと、勉強が<ruby>手につかない<rt>てにつかない</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手をつける",
+      "doc": "てをつける",
+      "doc_marked": "てをつける",
+      "han_viet": "",
+      "nghia": "Đụng tay đến",
+      "vi_du": "おとといからゲームに夢中で、宿題に手をつけていない｡ (Từ hôm kia tôi say sưa chơi game mà không đụng tay đến bài tập.)",
+      "vi_du_ruby": "おとといからゲームに夢中で、宿題に手をつけていない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手を貸す",
+      "doc": "てをかす",
+      "doc_marked": "てをかす",
+      "han_viet": "",
+      "nghia": "Cho mượn đỡ một tay, giúp đỡ",
+      "vi_du": "悪いけど、ちょっと手を貸してくれない？ (Xin lỗi nhưng có thể cho tôi mượn đỡ một tay một chút không?)",
+      "vi_du_ruby": "悪いけど、ちょっと手を貸してくれない？",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手を休める",
+      "doc": "てをやすめる",
+      "doc_marked": "てをやすめる",
+      "han_viet": "",
+      "nghia": "Nghỉ tay",
+      "vi_du": "仕事の手を休めて、コーヒーを飲んだ｡ (Nghỉ tay làm việc, uống cà phê.)",
+      "vi_du_ruby": "仕事の手を休めて、コーヒーを飲んだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手を抜く",
+      "doc": "てをぬく",
+      "doc_marked": "てをぬく",
+      "han_viet": "",
+      "nghia": "Chiếu lệ, qua loa, nơi tay",
+      "vi_du": "手を抜かないで、最後まで努力しなさい｡ (Đừng có qua loa, hãy nỗ lực đến cùng.)",
+      "vi_du_ruby": "手を抜かないで、最後まで努力しなさい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "腕がいい",
+      "doc": "うでがいい",
+      "doc_marked": "うでがいい",
+      "han_viet": "",
+      "nghia": "Có tay nghề, giỏi",
+      "vi_du": "彼は料理の腕がいい｡ (Anh ấy có tay nghề nấu ăn giỏi.)",
+      "vi_du_ruby": "彼は料理の<ruby>腕がいい<rt>うでがいい</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "腕を磨く",
+      "doc": "うでをみがく",
+      "doc_marked": "うでをみがく",
+      "han_viet": "",
+      "nghia": "Luyện tay nghề, nâng cao kỹ năng",
+      "vi_du": "料理の腕を磨こうと、教室に通っている｡ (Tôi đến lớp học để rèn luyện tay nghề nấu ăn.)",
+      "vi_du_ruby": "料理の腕を磨こうと、教室に通っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "腕が上がる",
+      "doc": "うでがあがる",
+      "doc_marked": "うでがあがる",
+      "han_viet": "",
+      "nghia": "Tay nghề, trình độ tăng cao",
+      "vi_du": "いつの間にか料理の腕が上がった｡ (Chẳng mấy chốc, tay nghề đã tăng lên.)",
+      "vi_du_ruby": "いつの間にか料理の腕が上がった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "肩を落とす",
+      "doc": "かたをおとす",
+      "doc_marked": "かたをおとす",
+      "han_viet": "",
+      "nghia": "Buông xuôi hai vai, thất vọng",
+      "vi_du": "弟はテストで不合格になり、肩を落とした｡ (Em trai tôi không đậu bài kiểm tra, buông xuôi cả hai vai.)",
+      "vi_du_ruby": "弟はテストで不合格になり、肩を落とした｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "腹が立つ",
+      "doc": "はらがたつ",
+      "doc_marked": "はらがたつ",
+      "han_viet": "",
+      "nghia": "Tức giận, bụng tức anh ách",
+      "vi_du": "兄の言葉に、いちいち腹が立つ｡ (Tôi cứ phát cáu với từng lời nói của anh trai.)",
+      "vi_du_ruby": "兄の言葉に、いちいち<ruby>腹が立つ<rt>はらがたつ</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "腹を抱える",
+      "doc": "はらをかかえる",
+      "doc_marked": "はらをかかえる",
+      "han_viet": "",
+      "nghia": "Ôm bụng mà cười",
+      "vi_du": "テレビ番組を見て、腹を抱えて笑った｡ (Tôi đã ôm bụng cười khi xem chương trình tivi.)",
+      "vi_du_ruby": "テレビ番組を見て、腹を抱えて笑った｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "足が出る",
+      "doc": "あしがでる",
+      "doc_marked": "あしがでる",
+      "han_viet": "",
+      "nghia": "Đi quá giới hạn, quá độ",
+      "vi_du": "買い物をしすぎて、足が出てしまった｡ (Tôi đã đi quá giới hạn khi mua sắm quá nhiều.)",
+      "vi_du_ruby": "買い物をしすぎて、足が出てしまった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "足を伸ばす",
+      "doc": "あしをのばす",
+      "doc_marked": "あしをのばす",
+      "han_viet": "",
+      "nghia": "Đi thêm một chút",
+      "vi_du": "散歩のついでに、美術館まで足を伸ばした｡ (Sẵn tiện đi dạo, tôi đi thêm chút đến bảo tàng mỹ thuật.)",
+      "vi_du_ruby": "散歩のついでに、美術館まで足を伸ばした｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "足を運ぶ",
+      "doc": "あしをはこぶ",
+      "doc_marked": "あしをはこぶ",
+      "han_viet": "",
+      "nghia": "Đến, quá bộ",
+      "vi_du": "暑い、足を運んでいただき、申し訳ありません｡ (Thật có lỗi khi để anh / chị quá bộ đến đây trong trời nóng bức.)",
+      "vi_du_ruby": "暑い、足を運んでいただき、申し訳ありません｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "足を引っ張る",
+      "doc": "あしをひっぱる",
+      "doc_marked": "あしをひっぱる",
+      "han_viet": "",
+      "nghia": "Gây cản trở, ngáng chân",
+      "vi_du": "自分のミスでチームの足を引っ張った｡ (Do lỗi của bản thân, tôi đã kéo lùi cả đội.)",
+      "vi_du_ruby": "自分のミスでチームの足を引っ張った｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

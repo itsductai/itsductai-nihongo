@@ -1,0 +1,250 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Triệu chứng bệnh",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "具体的な",
+      "doc": "ぐたいてきな",
+      "doc_marked": "ぐたいてきな",
+      "han_viet": "",
+      "nghia": "Một cách cụ thể, chi tiết",
+      "vi_du": "今の症状を具体的に教えてください｡ (Vui lòng cho tôi biết cụ thể triệu chứng bệnh hiện nay.)",
+      "vi_du_ruby": "今の症状を具体的に教えてください｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "程度",
+      "doc": "ていど",
+      "doc_marked": "**てい**ど",
+      "han_viet": "",
+      "nghia": "Mức độ",
+      "vi_du": "痛みの程度を人に説明するのは難しい｡ (Khó mà giải thích cho người khác biết mức độ cơn đau.)",
+      "vi_du_ruby": "痛みの<ruby>程度<rt>ていど</rt></ruby>を人に説明するのは難しい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ぼうっと（する）",
+      "doc": "ぼうっと",
+      "doc_marked": "ぼ**う**っと",
+      "han_viet": "",
+      "nghia": "Thẫn thờ, lờ mờ",
+      "vi_du": "①最近、祖父はぼうっとしていることが多い。 ②向こうにぼうっと山が見える｡ (①Gần đây, ông tôi nhiều lúc thẫn thờ. ②Có thể thấy lờ mờ ngọn núi đằng kia.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ふらふら（な/する）",
+      "doc": "ふらふら",
+      "doc_marked": "ふらふら",
+      "han_viet": "",
+      "nghia": "Hoa mắt, choáng váng",
+      "vi_du": "今朝から頭がふらふらしている。（副） (Từ sáng nay đầu óc tôi quay cuồng / choáng váng.)",
+      "vi_du_ruby": "今朝から頭がふらふらしている。（副）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "意識",
+      "doc": "いしき",
+      "doc_marked": "いしき",
+      "han_viet": "",
+      "nghia": "Ý thức, sự nhận biết",
+      "vi_du": "頭を打って、意識を失った｡ (Bị té dập đầy, bất tỉnh (mất ý thức).)",
+      "vi_du_ruby": "頭を打って、<ruby>意識<rt>いしき</rt></ruby>を失った｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "しゃがむ",
+      "doc": "しゃがむ",
+      "doc_marked": "しゃがむ",
+      "han_viet": "",
+      "nghia": "Khuỵu xuống, cúi xuống",
+      "vi_du": "めまいがして、その場にしゃがんだ｡ (Tôi chóng mặt và khuỵu xuống tại đó.)",
+      "vi_du_ruby": "めまいがして、その場にしゃがんだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "視野",
+      "doc": "しや",
+      "doc_marked": "しや",
+      "han_viet": "",
+      "nghia": "Tầm nhìn, tầm mắt",
+      "vi_du": "①最近周りが見えにくく、視野が狭くなった。 ②視野を広げるために留学を決めた｡ (①Gần đây, khó nhìn thấy xung quanh, tầm nhìn trở nên hẹp đi. ②Để mở rộng tầm mắt, tôi quyết định du học.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "呼吸（する）",
+      "doc": "こきゅう",
+      "doc_marked": "こ**きゅう**",
+      "han_viet": "",
+      "nghia": "Hô hấp, hít thở",
+      "vi_du": "寝ている間に呼吸が止まることがあるらしい｡ (Nghe nói có lúc ngừng thở trong khi ngủ.)",
+      "vi_du_ruby": "寝ている間に呼吸が止まることがあるらしい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "詰まる",
+      "doc": "つまる",
+      "doc_marked": "つまる",
+      "han_viet": "",
+      "nghia": "Nghẹt, đầy ắp",
+      "vi_du": "①鼻が詰まって、苦しい。 ②スーツケースにお土産が詰まっている｡ (①Mũi nghẹt khiến tôi rất khó chịu. ②Vali đầy ắp quà lưu niệm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "耐える",
+      "doc": "たえる",
+      "doc_marked": "たえる",
+      "han_viet": "",
+      "nghia": "Chịu đựng",
+      "vi_du": "腹痛がひどく、耐えられない｡ (Tôi đau bụng kinh khủng, không thể chịu nổi.)",
+      "vi_du_ruby": "腹痛がひどく、耐えられない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "便秘（する）",
+      "doc": "べんぴ",
+      "doc_marked": "べんぴ",
+      "han_viet": "",
+      "nghia": "Bón",
+      "vi_du": "便秘が続いているので、薬を飲んだ｡ (Do táo bón kéo dài nên tôi đã uống thuốc.)",
+      "vi_du_ruby": "便秘が続いているので、薬を飲んだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "～気味",
+      "doc": "～きみ",
+      "doc_marked": "～きみ",
+      "han_viet": "",
+      "nghia": "Cảm giác, hơi có vẻ",
+      "vi_du": "かぜ気味で、気分がすっきりしない｡ (Có vẻ bị cảm nên người cảm thấy không được khỏe.)",
+      "vi_du_ruby": "かぜ気味で、気分がすっきりしない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "寒気",
+      "doc": "さむけ",
+      "doc_marked": "さむけ",
+      "han_viet": "",
+      "nghia": "Sự ớn lạnh, cơn ớn lạnh",
+      "vi_du": "かぜなのか、寒気がする｡ (Không biết có phải bị cảm lạnh không mà thấy ớn lạnh.)",
+      "vi_du_ruby": "かぜなのか、<ruby>寒気<rt>さむけ</rt></ruby>がする｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ねじる",
+      "doc": "ねじる",
+      "doc_marked": "ねじる",
+      "han_viet": "",
+      "nghia": "Trặc, xoay, vặn",
+      "vi_du": "転んで、足をねじった｡ (Tôi bị té trặc chân.)",
+      "vi_du_ruby": "転んで、足をねじった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "しっしん",
+      "doc": "しっしん",
+      "doc_marked": "しっしん",
+      "han_viet": "",
+      "nghia": "Phát ban, nổi mẩn",
+      "vi_du": "腕のしっしんが、かゆくて寝られない｡ (Cánh tay nổi mẩn ngứa không thể nào ngủ được.)",
+      "vi_du_ruby": "腕の<ruby>しっしん<rt>しっしん</rt></ruby>が、かゆくて寝られない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "はれる",
+      "doc": "はれる",
+      "doc_marked": "はれる",
+      "han_viet": "",
+      "nghia": "Sưng",
+      "vi_du": "ねじったところが赤くはれてきた｡ (Chỗ bị trặc sưng đỏ lên.)",
+      "vi_du_ruby": "ねじったところが赤くはれてきた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "しきりに",
+      "doc": "しきりに",
+      "doc_marked": "しきりに",
+      "han_viet": "",
+      "nghia": "Không ngừng, liên tục",
+      "vi_du": "彼は腕のしっしんをしきりにかいている｡ (Anh ấy không ngừng gãi chỗ nổi mẩn ở cánh tay.)",
+      "vi_du_ruby": "彼は腕のしっしんを<ruby>しきりに<rt>しきりに</rt></ruby>かいている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "異常（な）",
+      "doc": "いじょう",
+      "doc_marked": "いじょう",
+      "han_viet": "",
+      "nghia": "Sự bất thường, bất thường",
+      "vi_du": "検査で心臓に異常が見つかった｡ (Phát hiện bất thường ở tim nhờ xét nghiệm.)",
+      "vi_du_ruby": "検査で心臓に異常が見つかった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "伴う",
+      "doc": "ともなう",
+      "doc_marked": "ともなう",
+      "han_viet": "",
+      "nghia": "Phát sinh, kèm theo, có",
+      "vi_du": "この病気は痛みを伴うようだ｡ (Hình như bệnh này kèm theo đau đớn.)",
+      "vi_du_ruby": "この病気は痛みを<ruby>伴う<rt>ともなう</rt></ruby>ようだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "単なる",
+      "doc": "たんなる",
+      "doc_marked": "たんなる",
+      "han_viet": "",
+      "nghia": "Đơn thuần",
+      "vi_du": "彼の症状は単なるかぜではないようだ｡ (Triệu chứng bệnh của anh ấy xem ra không đơn thuần là bị cảm.)",
+      "vi_du_ruby": "彼の症状は<ruby>単なる<rt>たんなる</rt></ruby>かぜではないようだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "伝染（する）",
+      "doc": "でんせん",
+      "doc_marked": "でんせん",
+      "han_viet": "",
+      "nghia": "Sự truyền nhiễm",
+      "vi_du": "この病気は伝染する可能性はないそうだ｡ (Nghe nói bệnh này không có khả năng truyền nhiễm.)",
+      "vi_du_ruby": "この病気は伝染する可能性はないそうだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "反応（する）",
+      "doc": "はんのう",
+      "doc_marked": "はんの**う**",
+      "han_viet": "",
+      "nghia": "Phản ứng",
+      "vi_du": "くしゃみや鼻水は、花粉のアレルギー反応の症状だ｡ (Hắt hơi, sổ mũi là triệu chứng bệnh phản ứng dị ứng với phấn hoa.)",
+      "vi_du_ruby": "くしゃみや鼻水は、花粉のアレルギー反応の症状だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

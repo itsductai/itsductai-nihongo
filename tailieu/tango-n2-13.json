@@ -1,0 +1,261 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Nấu ăn",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "炊事（する）",
+      "doc": "すいじ",
+      "doc_marked": "すいじ",
+      "han_viet": "",
+      "nghia": "Nấu ăn, việc bếp núc",
+      "vi_du": "家事の中で炊事が一番好きだ｡ (Tôi thích nấu ăn nhất trong các công việc nhà.)",
+      "vi_du_ruby": "家事の中で炊事が一番好きだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "献立",
+      "doc": "こんだて",
+      "doc_marked": "こんだて",
+      "han_viet": "",
+      "nghia": "Thực đơn",
+      "vi_du": "毎日献立を考えるのは大変だ｡ (Hàng ngày, suy nghĩ thực đơn thật vất vả.)",
+      "vi_du_ruby": "毎日<ruby>献立<rt>こんだて</rt></ruby>を考えるのは大変だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "リクエスト（する）",
+      "doc": "りくえすと",
+      "doc_marked": "りくえすと",
+      "han_viet": "",
+      "nghia": "Yêu cầu",
+      "vi_du": "家族のリクエストで、メニューを決める｡ (Tôi quyết định thực đơn theo yêu cầu của gia đình.)",
+      "vi_du_ruby": "家族のリクエストで、メニューを決める｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "流し",
+      "doc": "ながし",
+      "doc_marked": "ながし",
+      "han_viet": "",
+      "nghia": "Bồn rửa",
+      "vi_du": "流しで野菜を洗う｡ (Tôi rửa rau ở bồn rửa.)",
+      "vi_du_ruby": "<ruby>流し<rt>ながし</rt></ruby>で野菜を洗う｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ちぎる",
+      "doc": "ちぎる",
+      "doc_marked": "ちぎる",
+      "han_viet": "",
+      "nghia": "Xé",
+      "vi_du": "キャベツをちぎって、鍋に入れる｡ (Tôi xé bắp cải cho vào nồi.)",
+      "vi_du_ruby": "キャベツをちぎって、鍋に入れる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "冷ます",
+      "doc": "さます",
+      "doc_marked": "さます",
+      "han_viet": "",
+      "nghia": "Làm lạnh, làm nguội",
+      "vi_du": "材料を冷ましてから、野菜で包む｡ (Sau khi làm nguội nguyên liệu thì cuốn bằng rau.)",
+      "vi_du_ruby": "材料を冷ましてから、野菜で包む｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "煮える",
+      "doc": "にえる",
+      "doc_marked": "にえる",
+      "han_viet": "",
+      "nghia": "Nấu chín",
+      "vi_du": "魚が煮えて、いい匂いがする｡ (Cá chín rồi tỏa mùi thơm.)",
+      "vi_du_ruby": "魚が煮えて、いい匂いがする｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "味付け（する）",
+      "doc": "あじつけ",
+      "doc_marked": "あじつけ",
+      "han_viet": "",
+      "nghia": "Sự nêm nếm",
+      "vi_du": "我が家の味付けは、ちょっと薄い｡ (Nhà tôi nêm nếm thức ăn hơi lạt một chút.)",
+      "vi_du_ruby": "我が家の味付けは、ちょっと薄い｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "薄める",
+      "doc": "うすめる",
+      "doc_marked": "うすめる",
+      "han_viet": "",
+      "nghia": "Làm cho nhạt, loãng",
+      "vi_du": "味が少し濃いので、水で薄めた｡ (Vị hơi đậm nên tôi đã làm nhạt bằng nước.)",
+      "vi_du_ruby": "味が少し濃いので、水で薄めた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "甘み",
+      "doc": "かんみ",
+      "doc_marked": "かんみ",
+      "han_viet": "",
+      "nghia": "Vị ngọt",
+      "vi_du": "ケーキをよく作るが、甘みは控えている｡ (Tôi thường làm bánh nhưng hạn chế độ ngọt.)",
+      "vi_du_ruby": "ケーキをよく作るが、<ruby>甘み<rt>かんみ</rt></ruby>は控えている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "工夫（する）",
+      "doc": "くふう",
+      "doc_marked": "くふう",
+      "han_viet": "",
+      "nghia": "Công phu, bỏ công",
+      "vi_du": "安い材料でも、工夫すれば、おいしくなる｡ (Dù nguyên liệu rẻ tiền nhưng nếu bỏ công một chút sẽ trở trở nên ngon.)",
+      "vi_du_ruby": "安い材料でも、工夫すれば、おいしくなる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "添える",
+      "doc": "そえる",
+      "doc_marked": "そえる",
+      "han_viet": "",
+      "nghia": "Thêm vào, đính kèm",
+      "vi_du": "ハンバーグに、にんじんを添える｡ (Tôi thêm cà rốt vào thịt hăm-bơ-gơ.)",
+      "vi_du_ruby": "ハンバーグに、にんじんを<ruby>添える<rt>そえる</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "挟む",
+      "doc": "はさむ",
+      "doc_marked": "はさむ",
+      "han_viet": "",
+      "nghia": "Kẹp",
+      "vi_du": "パンに、いろいろな材料を挟む｡ (Tôi kẹp nhiều loại nguyên liệu vào bánh mì.)",
+      "vi_du_ruby": "パンに、いろいろな材料を<ruby>挟む<rt>はさむ</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "加減（する）",
+      "doc": "かげん",
+      "doc_marked": "かげん",
+      "han_viet": "",
+      "nghia": "Mức độ, sự điều chỉnh, tăng giảm",
+      "vi_du": "この料理は調味料の加減が、ちょうどいい｡ (Món ăn này mức độ gia vị vừa ngon.)",
+      "vi_du_ruby": "この料理は調味料の加減が、ちょうどいい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "固まる",
+      "doc": "かたまる",
+      "doc_marked": "かたまる",
+      "han_viet": "",
+      "nghia": "Đông cứng",
+      "vi_du": "冷蔵庫に入れておいたゼリーが固まった｡ (Món rau câu cất trong tủ lạnh đã đông lại.)",
+      "vi_du_ruby": "冷蔵庫に入れておいたゼリーが固まった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "なめる",
+      "doc": "なめる",
+      "doc_marked": "なめる",
+      "han_viet": "",
+      "nghia": "Liếm, nếm",
+      "vi_du": "ソースを作りながら、少しなめて、味を確かめる｡ (Tôi vừa làm nước sốt vừa nếm một chút để kiểm tra vị.)",
+      "vi_du_ruby": "ソースを作りながら、少しなめて、味を確かめる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "臭い",
+      "doc": "くさい",
+      "doc_marked": "くさい",
+      "han_viet": "",
+      "nghia": "Hôi, thối",
+      "vi_du": "魚が焦げて、台所が臭い｡ (Cá bị cháy nên nhà bếp bị hôi.)",
+      "vi_du_ruby": "魚が焦げて、台所が<ruby>臭い<rt>くさい</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "冷める",
+      "doc": "さめる",
+      "doc_marked": "さめる",
+      "han_viet": "",
+      "nghia": "Nguội",
+      "vi_du": "スープが冷めたので、食事の前に温めた｡ (Vì phần canh đã nguội nên trước bữa ăn tôi đã hâm nóng lại.)",
+      "vi_du_ruby": "スープが冷めたので、食事の前に温めた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "余分な",
+      "doc": "よぶんな",
+      "doc_marked": "よぶんな",
+      "han_viet": "",
+      "nghia": "Phần dư, thừa",
+      "vi_du": "少し余分にカレーを作って、冷凍しておく｡ (Tôi làm cà ri hơi dư một chút và để đông.)",
+      "vi_du_ruby": "少し余分にカレーを作って、冷凍しておく｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "容器",
+      "doc": "ようき",
+      "doc_marked": "よ**う**き",
+      "han_viet": "",
+      "nghia": "Đồ đựng",
+      "vi_du": "この容器は料理を冷凍するのに便利だ｡ (Đồ đựng này tiện cho việc để đông thức ăn.)",
+      "vi_du_ruby": "この<ruby>容器<rt>ようき</rt></ruby>は料理を冷凍するのに便利だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "賞味期限",
+      "doc": "しょうみきげん",
+      "doc_marked": "しょうみきげん",
+      "han_viet": "",
+      "nghia": "Thời hạn sử dụng tốt nhất",
+      "vi_du": "この缶詰は賞味期限が切れている｡ (Món đồ hộp này đã hết thời hạn sử dụng tốt nhất.)",
+      "vi_du_ruby": "この缶詰は<ruby>賞味期限<rt>しょうみきげん</rt></ruby>が切れている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手作り",
+      "doc": "てづくり",
+      "doc_marked": "てづくり",
+      "han_viet": "",
+      "nghia": "Tự tay làm, làm thủ công",
+      "vi_du": "姉の手作りケーキはプロのような味だ｡ (Bánh do chị tôi làm có hương vị như của đầu bếp chuyên nghiệp.)",
+      "vi_du_ruby": "姉の<ruby>手作り<rt>てづくり</rt></ruby>ケーキはプロのような味だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "もてなす",
+      "doc": "もてなす",
+      "doc_marked": "もてなす",
+      "han_viet": "",
+      "nghia": "Đối đãi, tiếp đãi",
+      "vi_du": "先日、手料理でお客様をもてなした｡ (Hôm trước, tôi đã đãi khách bằng đồ ăn tự nấu.)",
+      "vi_du_ruby": "先日、手料理でお客様をもてなした｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

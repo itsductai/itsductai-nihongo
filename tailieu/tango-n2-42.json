@@ -1,0 +1,261 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Trước khi đổ bệnh",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "休養（する）",
+      "doc": "きゅうよう",
+      "doc_marked": "**きゅう**よう",
+      "han_viet": "",
+      "nghia": "Sự nghỉ dưỡng, nghỉ ngơi",
+      "vi_du": "医者に、少し休養をとった方がいいと言われた｡ (Tôi được bác sỹ nói nên nghỉ ngơi một chút.)",
+      "vi_du_ruby": "医者に、少し休養をとった方がいいと言われた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "疲労（する）",
+      "doc": "ひろう",
+      "doc_marked": "ひろ**う**",
+      "han_viet": "",
+      "nghia": "Sự mệt mỏi, lao lực",
+      "vi_du": "疲労がたまる前に休むようにしている｡ (Trước khi mệt mỏi dồn lại, tôi cố gắng nghỉ ngơi.)",
+      "vi_du_ruby": "疲労がたまる前に休むようにしている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "不調（な）",
+      "doc": "ふちょう",
+      "doc_marked": "ふちょう",
+      "han_viet": "",
+      "nghia": "(Tình trạng) không khỏe",
+      "vi_du": "体の不調を感じたら、すぐに病院に行く。（名） (Nếu cảm thấy cơ thể không khỏe thì đi bệnh viện ngay.)",
+      "vi_du_ruby": "体の不調を感じたら、すぐに病院に行く。（名）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "体調",
+      "doc": "たいちょう",
+      "doc_marked": "たいちょう",
+      "han_viet": "",
+      "nghia": "Tình trạng cơ thể, sức khỏe",
+      "vi_du": "体調を崩したので、会社を休んだ｡ (Vì cơ thể không khỏe nên tôi đã nghỉ làm.)",
+      "vi_du_ruby": "<ruby>体調<rt>たいちょう</rt></ruby>を崩したので、会社を休んだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "やや",
+      "doc": "やや",
+      "doc_marked": "やや",
+      "han_viet": "",
+      "nghia": "Hơi chút chút",
+      "vi_du": "少し寝たら、体がやや楽になった｡ (Ngủ một chút thì tôi thấy cơ thể hơi khỏe hơn.)",
+      "vi_du_ruby": "少し寝たら、体が<ruby>やや<rt>やや</rt></ruby>楽になった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "寝心地",
+      "doc": "ねごこち",
+      "doc_marked": "ねごこち",
+      "han_viet": "",
+      "nghia": "Nằm thoải mái, dễ chịu",
+      "vi_du": "寝心地のいい枕を買ったら、よく寝られるようになった｡ (Mua được cái gối nằm thoải mái, tôi đã có thể ngủ ngon.)",
+      "vi_du_ruby": "<ruby>寝心地<rt>ねごこち</rt></ruby>のいい枕を買ったら、よく寝られるようになった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "大した",
+      "doc": "たいした",
+      "doc_marked": "たいした",
+      "han_viet": "",
+      "nghia": "To tát, trọng đại, đáng kể",
+      "vi_du": "①大したことはないと思っても、病院に行く。 ②中学生でオリンピック選手とは、大したものだ｡ (①Dù cho là không đáng gì nhưng vẫn đi bệnh viện. ②Học sinh cấp II mà là vận động viên Olympic thì thật là đáng kể.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "念のため",
+      "doc": "ねんのため",
+      "doc_marked": "ねんのため",
+      "han_viet": "",
+      "nghia": "Để đảm bảo, để chắc chắn",
+      "vi_du": "症状は軽いが、念のため病院で診てもらう｡ (Triệu chứng bệnh tuy nhẹ nhưng để chắc chắn tôi khám ở bệnh viện.)",
+      "vi_du_ruby": "症状は軽いが、<ruby>念のため<rt>ねんのため</rt></ruby>病院で診てもらう｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "通院（する）",
+      "doc": "つういん",
+      "doc_marked": "つういん",
+      "han_viet": "",
+      "nghia": "Đi bệnh viện",
+      "vi_du": "月に1回、検査のために通院している｡ (Mỗi tháng 1 lần, tôi đi bệnh viện để xét nghiệm.)",
+      "vi_du_ruby": "月に1回、検査のために通院している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "レントゲン",
+      "doc": "れんとげん",
+      "doc_marked": "れんとげん",
+      "han_viet": "",
+      "nghia": "X-quang",
+      "vi_du": "念のため、レントゲンを撮ってもらった｡ (Để cho chắc, tôi đã chụp X-quang.)",
+      "vi_du_ruby": "念のため、<ruby>レントゲン<rt>れんとげん</rt></ruby>を撮ってもらった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "さらに",
+      "doc": "さらに",
+      "doc_marked": "さらに",
+      "han_viet": "",
+      "nghia": "Hơn nữa",
+      "vi_du": "①一度検査をして、さらに詳しく検査する。 ②雨はさらに強くなってきた｡ (①Xét nghiệm 1 lần rồi còn xét nghiệm kỹ hơn nữa. ②Mưa trở nên lớn hơn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "おとろえる",
+      "doc": "おとろえる",
+      "doc_marked": "おとろえる",
+      "han_viet": "",
+      "nghia": "Sa sút, yếu đi, suy nhược",
+      "vi_du": "筋肉がおとろえないように運動している｡ (Tôi vận động để cơ bắp không bị yếu đi.)",
+      "vi_du_ruby": "筋肉がおとろえないように運動している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "きたえる",
+      "doc": "きたえる",
+      "doc_marked": "きたえる",
+      "han_viet": "",
+      "nghia": "Rèn luyện, mài giũa",
+      "vi_du": "かぜをひかないように体をきたえる｡ (Tôi rèn luyện cơ thể để không bị cảm.)",
+      "vi_du_ruby": "かぜをひかないように体を<ruby>きたえる<rt>きたえる</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "適度な",
+      "doc": "てきどな",
+      "doc_marked": "てきどな",
+      "han_viet": "",
+      "nghia": "Vừa phải, chừng mực",
+      "vi_du": "健康のために適度な運動が必要だ｡ (Vì sức khỏe, cần vận động vừa phải.)",
+      "vi_du_ruby": "健康のために<ruby>適度な<rt>てきどな</rt></ruby>運動が必要だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "予防（する）",
+      "doc": "よぼう",
+      "doc_marked": "よぼ**う**",
+      "han_viet": "",
+      "nghia": "Sự phòng chống, ngừa",
+      "vi_du": "クリームで日焼けを予防する｡ (Tôi phòng ngừa rám nắng bằng kem chống nắng.)",
+      "vi_du_ruby": "クリームで日焼けを予防する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "補給（する）",
+      "doc": "ほきゅう",
+      "doc_marked": "ほ**きゅう**",
+      "han_viet": "",
+      "nghia": "Sự bổ sung, thêm vào",
+      "vi_du": "熱中症を防ぐために水分を補給した｡ (Để phòng chứng sốc nhiệt, tôi đã bổ sung nước.)",
+      "vi_du_ruby": "熱中症を防ぐために水分を補給した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "不足（する）",
+      "doc": "ふそく",
+      "doc_marked": "ふそく",
+      "han_viet": "",
+      "nghia": "Sự thiếu",
+      "vi_du": "ビタミンが不足しているようだ｡ (Xem ra thiếu vitamin.)",
+      "vi_du_ruby": "ビタミンが不足しているようだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "サプリメント",
+      "doc": "さぷりめんと",
+      "doc_marked": "さぷりめんと",
+      "han_viet": "",
+      "nghia": "Viên bổ trợ, thuốc bổ",
+      "vi_du": "毎日、サプリメントをとっている｡ (Hàng ngày tôi uống thuốc bổ.)",
+      "vi_du_ruby": "毎日、<ruby>サプリメント<rt>さぷりめんと</rt></ruby>をとっている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "取り戻す",
+      "doc": "とりもどす",
+      "doc_marked": "とりもどす",
+      "han_viet": "",
+      "nghia": "Lấy lại",
+      "vi_du": "規則正しい生活をして、健康を取り戻した｡ (Nhờ sinh hoạt đúng giờ giấc mà tôi đã lấy lại sức khỏe.)",
+      "vi_du_ruby": "規則正しい生活をして、健康を取り戻した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ワクチン",
+      "doc": "わくちん",
+      "doc_marked": "わくちん",
+      "han_viet": "",
+      "nghia": "Vắc-xin",
+      "vi_du": "病院で新しいワクチンを注射してもらった｡ (Tôi được tiêm vắc-xin mới ở bệnh viện.)",
+      "vi_du_ruby": "病院で新しい<ruby>ワクチン<rt>わくちん</rt></ruby>を注射してもらった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "加入（する）",
+      "doc": "かにゅう",
+      "doc_marked": "か**にゅう**",
+      "han_viet": "",
+      "nghia": "Tham gia, gia nhập, vào",
+      "vi_du": "保険に加入して、病気の治療に備えている｡ (Tôi vào bảo hiểm để trang bị cho việc chữa bệnh.)",
+      "vi_du_ruby": "保険に加入して、病気の治療に備えている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "医師",
+      "doc": "いし",
+      "doc_marked": "いし",
+      "han_viet": "",
+      "nghia": "Bác sỹ",
+      "vi_du": "よい医師がいる病院を探している｡ (Tôi đang tìm bệnh viện có bác sỹ giỏi.)",
+      "vi_du_ruby": "よい<ruby>医師<rt>いし</rt></ruby>がいる病院を探している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "くれぐれも",
+      "doc": "くれぐれも",
+      "doc_marked": "くれぐれも",
+      "han_viet": "",
+      "nghia": "Lúc nào cũng, luôn luôn",
+      "vi_du": "くれぐれもお体をお大事になさってください｡ (Vui lòng lúc nào cũng giữ gìn sức khỏe.)",
+      "vi_du_ruby": "<ruby>くれぐれも<rt>くれぐれも</rt></ruby>お体をお大事になさってください｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

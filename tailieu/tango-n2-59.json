@@ -1,0 +1,184 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Phó từ",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "何かと",
+      "doc": "なにかと",
+      "doc_marked": "なにかと",
+      "han_viet": "",
+      "nghia": "Cách này hay cách khác, gì thì gì, kiểu gì cũng",
+      "vi_du": "最近、何かと忙しい｡ (Gần đây kiểu gì cũng bận.)",
+      "vi_du_ruby": "最近、<ruby>何かと<rt>なにかと</rt></ruby>忙しい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "何だかんだ",
+      "doc": "なんだかんだ",
+      "doc_marked": "なんだかんだ",
+      "han_viet": "",
+      "nghia": "Chuyện gì cũng, chuyện này chuyện kia",
+      "vi_du": "母は何だかんだとうるさい｡ (Mẹ tôi chuyện gì cũng ồn ào.)",
+      "vi_du_ruby": "母は<ruby>何だかんだ<rt>なんだかんだ</rt></ruby>とうるさい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "なぜか",
+      "doc": "なぜか",
+      "doc_marked": "なぜか",
+      "han_viet": "",
+      "nghia": "Tại sao đó",
+      "vi_du": "今日はなぜか食欲がない｡ (Hôm nay chẳng hiểu sao không muốn ăn.)",
+      "vi_du_ruby": "今日は<ruby>なぜか<rt>なぜか</rt></ruby>食欲がない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "何だか",
+      "doc": "なんだか",
+      "doc_marked": "なんだか",
+      "han_viet": "",
+      "nghia": "Có chút gì đó",
+      "vi_du": "何だか今日は気が重い｡ (Hôm nay có chút gì đó nặng nề trong lòng.)",
+      "vi_du_ruby": "<ruby>何だか<rt>なんだか</rt></ruby>今日は気が重い｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "何しろ",
+      "doc": "なにしろ",
+      "doc_marked": "なにしろ",
+      "han_viet": "",
+      "nghia": "Dù gì đi nữa",
+      "vi_du": "最近、疲れ気味だ。何しろ仕事が忙しい｡ (Gần đây, cảm giác mệt mỏi. Dù gì đi nữa, là do công việc bận rộn.)",
+      "vi_du_ruby": "最近、疲れ気味だ。<ruby>何しろ<rt>なにしろ</rt></ruby>仕事が忙しい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "何とも（〜ない）",
+      "doc": "なんとも",
+      "doc_marked": "なんとも",
+      "han_viet": "",
+      "nghia": "(Không ~) chút nào",
+      "vi_du": "彼のことなんて、もう何とも思っていない｡ (Tôi chẳng còn cảm xúc gì với anh ấy nữa.)",
+      "vi_du_ruby": "彼のことなんて、もう何とも思っていない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "どうか",
+      "doc": "どうか",
+      "doc_marked": "ど**う**か",
+      "han_viet": "",
+      "nghia": "Vui lòng",
+      "vi_du": "この件、どうかよろしくお願いいたします｡ (Vụ việc này, xin vui lòng giúp đỡ.)",
+      "vi_du_ruby": "この件、<ruby>どうか<rt>どうか</rt></ruby>よろしくお願いいたします｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "どうにか",
+      "doc": "どうにか",
+      "doc_marked": "ど**う**にか",
+      "han_viet": "",
+      "nghia": "Bằng cách nào đó, cuối cùng rồi cũng",
+      "vi_du": "ぎりぎりの点だったが、どうにか試験に合格できた｡ (Dù điểm chỉ vừa đủ, nhưng cuối cùng tôi vẫn đậu kỳ thi.)",
+      "vi_du_ruby": "ぎりぎりの点だったが、<ruby>どうにか<rt>どうにか</rt></ruby>試験に合格できた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "どうしても",
+      "doc": "どうしても",
+      "doc_marked": "ど**う**しても",
+      "han_viet": "",
+      "nghia": "Bằng mọi giá, nhất định, làm cách nào cũng (không thể)",
+      "vi_du": "①どうしても志望大学に合格したい。 ②どうしても論文が書けない｡ (①Tôi muốn bằng mọi giá đậu đại học nguyện vọng. ②Làm cách nào cũng không thể viết được luận văn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "どうせ",
+      "doc": "どうせ",
+      "doc_marked": "ど**う**せ",
+      "han_viet": "",
+      "nghia": "Đằng nào cũng, tiện thể",
+      "vi_du": "うちのチームなんか、どうせ勝てない｡ (Đội mình đằng nào cũng không thể thắng.)",
+      "vi_du_ruby": "うちのチームなんか、<ruby>どうせ<rt>どうせ</rt></ruby>勝てない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "どうやら",
+      "doc": "どうやら",
+      "doc_marked": "ど**う**やら",
+      "han_viet": "",
+      "nghia": "Xem ra, có vẻ",
+      "vi_du": "どうやら明日は暑くなりそうだ｡ (Xem ra ngày mai trời có vẻ nóng.)",
+      "vi_du_ruby": "<ruby>どうやら<rt>どうやら</rt></ruby>明日は暑くなりそうだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "とにかく",
+      "doc": "とにかく",
+      "doc_marked": "とにかく",
+      "han_viet": "",
+      "nghia": "Tóm lại, nói chung, dù thế nào",
+      "vi_du": "店は満席かもしれないが、とにかく行ってみよう｡ (Có thể tiệm hết chỗ nhưng dù thế nào thì cũng đi thử đã.)",
+      "vi_du_ruby": "店は満席かもしれないが、<ruby>とにかく<rt>とにかく</rt></ruby>行ってみよう｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "とても（〜ない）",
+      "doc": "とても",
+      "doc_marked": "とても",
+      "han_viet": "",
+      "nghia": "Hoàn toàn (không thể ~)",
+      "vi_du": "今の日本語力では、とても日本で就職できない｡ (Với năng lực tiếng Nhật bây giờ thì hoàn toàn không thể kiếm việc làm ở Nhật.)",
+      "vi_du_ruby": "今の日本語力では、とても日本で就職できない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "より",
+      "doc": "より",
+      "doc_marked": "より",
+      "han_viet": "",
+      "nghia": "Hơn nữa",
+      "vi_du": "今後はよりいっそう努力するつもりだ｡ (Từ nay về sau, tôi định sẽ nỗ lực hơn nữa.)",
+      "vi_du_ruby": "今後は<ruby>より<rt>より</rt></ruby>いっそう努力するつもりだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "いかに",
+      "doc": "いかに",
+      "doc_marked": "いかに",
+      "han_viet": "",
+      "nghia": "Như thế nào, biết bao nhiêu",
+      "vi_du": "日本の技術がいかに進んでいるか、よくわかった｡ (Tôi đã hiểu rõ kỹ thuật của Nhật phát triển biết bao nhiêu.)",
+      "vi_du_ruby": "日本の技術が<ruby>いかに<rt>いかに</rt></ruby>進んでいるか、よくわかった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "いかにも",
+      "doc": "いかにも",
+      "doc_marked": "いかにも",
+      "han_viet": "",
+      "nghia": "Quả thật, đúng là",
+      "vi_du": "あの子はいかにも賢そうだ｡ (Đứa bé đó quả thật thông minh.)",
+      "vi_du_ruby": "あの子は<ruby>いかにも<rt>いかにも</rt></ruby>賢そうだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

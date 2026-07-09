@@ -1,0 +1,261 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Máy tính (Điện thoại thông minh)",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "起動（する）",
+      "doc": "きどう",
+      "doc_marked": "きど**う**",
+      "han_viet": "",
+      "nghia": "Sự khởi động",
+      "vi_du": "パソコン起動する｡ (Khởi động máy tính.)",
+      "vi_du_ruby": "パソコン起動する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "本体",
+      "doc": "ほんたい",
+      "doc_marked": "ほんたい",
+      "han_viet": "",
+      "nghia": "Phần chính, đầu máy (vi tính v.v.)",
+      "vi_du": "このパソコンの本体は日本製だ｡ (Đầu máy tính là hàng sản xuất tại Nhật.)",
+      "vi_du_ruby": "このパソコンの<ruby>本体<rt>ほんたい</rt></ruby>は日本製だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "キーボード",
+      "doc": "きーぼーど",
+      "doc_marked": "きーぼーど",
+      "han_viet": "",
+      "nghia": "Bàn phím",
+      "vi_du": "彼はキーボードを見ずに入力できる｡ (Anh ấy có thể đánh máy mà không nhìn bàn phím.)",
+      "vi_du_ruby": "彼は<ruby>キーボード<rt>きーぼーど</rt></ruby>を見ずに入力できる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ディスプレイ",
+      "doc": "でぃすぷれい",
+      "doc_marked": "でぃすぷ**れい**",
+      "han_viet": "",
+      "nghia": "Màn hình, sự hiển thị",
+      "vi_du": "大きなディスプレイだと、画面が見やすい｡ (Nếu là màn hình lớn thì giao diện dễ xem.)",
+      "vi_du_ruby": "大きな<ruby>ディスプレイ<rt>でぃすぷれい</rt></ruby>だと、画面が見やすい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "接続（する）",
+      "doc": "せつぞく",
+      "doc_marked": "せつぞく",
+      "han_viet": "",
+      "nghia": "Sự kết nối",
+      "vi_du": "インターネットに接続して、検索する｡ (Kết nối mạng internet để tìm kiếm.)",
+      "vi_du_ruby": "インターネットに接続して、検索する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "検索（する）",
+      "doc": "けんさく",
+      "doc_marked": "けんさく",
+      "han_viet": "",
+      "nghia": "Sự tìm kiếm",
+      "vi_du": "日本語研究の論文を検索する｡ (Tìm kiếm luận văn nghiêm cứu tiếng Nhật.)",
+      "vi_du_ruby": "日本語研究の論文を検索する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "転送（する）",
+      "doc": "てんそう",
+      "doc_marked": "てんそ**う**",
+      "han_viet": "",
+      "nghia": "Sự gửi chuyển tiếp",
+      "vi_du": "役に立ちそうな情報を友人に転送した｡ (Tôi đã gửi chuyển tiếp thông tin có vẻ có ích cho người bạn thân.)",
+      "vi_du_ruby": "役に立ちそうな情報を友人に転送した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "文書",
+      "doc": "ぶんしょ",
+      "doc_marked": "ぶんしょ",
+      "han_viet": "",
+      "nghia": "Văn bản",
+      "vi_du": "パソコンで文書を作る｡ (Soạn thảo văn bản bằng máy tính.)",
+      "vi_du_ruby": "パソコンで<ruby>文書<rt>ぶんしょ</rt></ruby>を作る｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "設定（する）",
+      "doc": "せってい",
+      "doc_marked": "せっ**てい**",
+      "han_viet": "",
+      "nghia": "Sự định dạng",
+      "vi_du": "文字の設定を、もう少し大きくする｡ (Định dạng chữ lớn hơn một chút.)",
+      "vi_du_ruby": "文字の設定を、もう少し大きくする｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "余白",
+      "doc": "よはく",
+      "doc_marked": "よはく",
+      "han_viet": "",
+      "nghia": "Lề giấy, sự chừa lề, canh lề",
+      "vi_du": "上下の余白を2センチにする｡ (Canh lề trên dưới 2 cm.)",
+      "vi_du_ruby": "上下の<ruby>余白<rt>よはく</rt></ruby>を2センチにする｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "フォント",
+      "doc": "ふぉんと",
+      "doc_marked": "ふぉんと",
+      "han_viet": "",
+      "nghia": "Kiểu chữ, phông chữ",
+      "vi_du": "細いフォントを選んで、メールを書く｡ (Chọn kiểu chữ hẹp và viết e-mail.)",
+      "vi_du_ruby": "細い<ruby>フォント<rt>ふぉんと</rt></ruby>を選んで、メールを書く｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "カーソル",
+      "doc": "かーそる",
+      "doc_marked": "かーそる",
+      "han_viet": "",
+      "nghia": "Con trỏ",
+      "vi_du": "カーソルが、うまく動かない｡ (Con trỏ hoạt động không tốt.)",
+      "vi_du_ruby": "<ruby>カーソル<rt>かーそる</rt></ruby>が、うまく動かない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "改行（する）",
+      "doc": "かいぎょう",
+      "doc_marked": "かいぎょう",
+      "han_viet": "",
+      "nghia": "Sự xuống hàng",
+      "vi_du": "文章が読みやすいように改行する｡ (Xuống hàng để dễ đọc câu văn.)",
+      "vi_du_ruby": "文章が読みやすいように改行する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "区切る",
+      "doc": "くぎる",
+      "doc_marked": "くぎる",
+      "han_viet": "",
+      "nghia": "Cách đoạn",
+      "vi_du": "段落を区切るときには、改行して1字下げる｡ (Khi cách đoạn thì xuống hàng, hạ khoảng cách xuống 1 ký tự.)",
+      "vi_du_ruby": "段落を<ruby>区切る<rt>くぎる</rt></ruby>ときには、改行して1字下げる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "貼り付ける",
+      "doc": "はりつける",
+      "doc_marked": "はりつける",
+      "han_viet": "",
+      "nghia": "Dán",
+      "vi_du": "画像をコピーして、新規ファイルに貼り付ける｡ (Sao chép hình ảnh và dán vào tập tin mới.)",
+      "vi_du_ruby": "画像をコピーして、新規ファイルに<ruby>貼り付ける<rt>はりつける</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "強調（する）",
+      "doc": "きょうちょう",
+      "doc_marked": "きょうちょう",
+      "han_viet": "",
+      "nghia": "Sự nhấn mạnh",
+      "vi_du": "文章の中で協調したい文字を太くする｡ (Làm đậm chữ muốn nhấn mạnh trong đoạn văn.)",
+      "vi_du_ruby": "文章の中で協調したい文字を太くする｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "拡大（する）",
+      "doc": "かくだい",
+      "doc_marked": "かくだい",
+      "han_viet": "",
+      "nghia": "Sự mở rộng, làm lớn, phóng lớn",
+      "vi_du": "写真を少し拡大して、保存する｡ (Phóng lớn hình một chút và lưu lại.)",
+      "vi_du_ruby": "写真を少し拡大して、保存する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "消去（する）",
+      "doc": "しょうきょ",
+      "doc_marked": "しょうきょ",
+      "han_viet": "",
+      "nghia": "Sự xóa bỏ",
+      "vi_du": "過去のメールを消去した｡ (Tôi đã xóa các e-mail cũ.)",
+      "vi_du_ruby": "過去のメールを消去した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "上書き保存（する）",
+      "doc": "うわかきほぞん",
+      "doc_marked": "うわかきほぞん",
+      "han_viet": "",
+      "nghia": "Sự lưu đè (lên dữ liệu cũ)",
+      "vi_du": "作った上書き保存した｡ (Tôi đã lưu đè văn bản đã soạn.)",
+      "vi_du_ruby": "作った上書き保存した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "順序",
+      "doc": "じゅんじょ",
+      "doc_marked": "じゅんじょ",
+      "han_viet": "",
+      "nghia": "Thứ tự, trật tự, tuần tự",
+      "vi_du": "スマホのアイコンの順序を並び替える｡ (Sắp xếp lại thứ tự các biểu tượng trên điện thoại thông minh.)",
+      "vi_du_ruby": "スマホのアイコンの<ruby>順序<rt>じゅんじょ</rt></ruby>を並び替える｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "印刷（する）",
+      "doc": "いんさつ",
+      "doc_marked": "いんさつ",
+      "han_viet": "",
+      "nghia": "Việc in",
+      "vi_du": "完成した文書を印刷する｡ (In văn bản đã hoàn thành.)",
+      "vi_du_ruby": "完成した文書を印刷する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "プリンター",
+      "doc": "ぷりんたー",
+      "doc_marked": "ぷりんたー",
+      "han_viet": "",
+      "nghia": "Máy in",
+      "vi_du": "最近、プリンターの調子が悪い｡ (Gần đây, tình trạng máy in không tốt.)",
+      "vi_du_ruby": "最近、<ruby>プリンター<rt>ぷりんたー</rt></ruby>の調子が悪い｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "インク",
+      "doc": "いんく",
+      "doc_marked": "いんく",
+      "han_viet": "",
+      "nghia": "Mực",
+      "vi_du": "インクが少なくなってきたので、買っておこう｡ (Vì mực gần hết nên mua để sẵn thôi.)",
+      "vi_du_ruby": "<ruby>インク<rt>いんく</rt></ruby>が少なくなってきたので、買っておこう｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

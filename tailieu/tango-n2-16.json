@@ -1,0 +1,272 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Phố xá",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "街",
+      "doc": "まち",
+      "doc_marked": "まち",
+      "han_viet": "",
+      "nghia": "Phố, khu phố, thị trấn",
+      "vi_du": "午後から街にショッピングに出かけた｡ (Từ buổi chiều, tôi ra phố mua sắm.)",
+      "vi_du_ruby": "午後から<ruby>街<rt>まち</rt></ruby>にショッピングに出かけた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "都市",
+      "doc": "とし",
+      "doc_marked": "とし",
+      "han_viet": "",
+      "nghia": "Thành phố, đô thị",
+      "vi_du": "この町は人口も増えて、立派な都市になった｡ (Thành phố này dân số cũng tăng lên, trở thành một thành phố tuyệt vời.)",
+      "vi_du_ruby": "この町は人口も増えて、立派な<ruby>都市<rt>とし</rt></ruby>になった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "下町",
+      "doc": "したまち",
+      "doc_marked": "したまち",
+      "han_viet": "",
+      "nghia": "Khu phố cổ, phố cổ",
+      "vi_du": "私は東京の下町生まれだ｡ (Tôi sinh ra ở khu phố cổ Tokyo.)",
+      "vi_du_ruby": "私は東京の<ruby>下町<rt>したまち</rt></ruby>生まれだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "土地",
+      "doc": "とち",
+      "doc_marked": "とち",
+      "han_viet": "",
+      "nghia": "Đất, đất đai",
+      "vi_du": "東京は土地の値段がとても高い｡ (Giá đất ở Tokyo rất đắt.)",
+      "vi_du_ruby": "東京は<ruby>土地<rt>とち</rt></ruby>の値段がとても高い｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "活気",
+      "doc": "かっき",
+      "doc_marked": "かっき",
+      "han_viet": "",
+      "nghia": "Sức sống, hoạt bát",
+      "vi_du": "若者が多い町は活気がある｡ (Thành phố có nhiều người trẻ thì có sức sống.)",
+      "vi_du_ruby": "若者が多い町は<ruby>活気<rt>かっき</rt></ruby>がある｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "人通り",
+      "doc": "ひとどおり",
+      "doc_marked": "ひとどおり",
+      "han_viet": "",
+      "nghia": "Người đi đường",
+      "vi_du": "商店街は人通りが多くて、にぎやかだ｡ (Phố mua bán thì đông nguời qua lại, nhộn nhịp.)",
+      "vi_du_ruby": "商店街は<ruby>人通り<rt>ひとどおり</rt></ruby>が多くて、にぎやかだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "絶える",
+      "doc": "たえる",
+      "doc_marked": "たえる",
+      "han_viet": "",
+      "nghia": "Tuyệt giao, chia rẽ, căt đứt",
+      "vi_du": "電車が出発すると、駅前の人通りが絶えた｡ (Khi tàu điện xuất phát, người đi qua lại trước ga cũng ít hẳn.)",
+      "vi_du_ruby": "電車が出発すると、駅前の人通りが絶えた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "坂",
+      "doc": "さか",
+      "doc_marked": "さか",
+      "han_viet": "",
+      "nghia": "Dốc",
+      "vi_du": "ここは坂の多い町として知られている｡ (Nơi đây được biết là thành phố có nhiều dốc.)",
+      "vi_du_ruby": "ここは<ruby>坂<rt>さか</rt></ruby>の多い町として知られている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "辺り",
+      "doc": "あたり",
+      "doc_marked": "あたり",
+      "han_viet": "",
+      "nghia": "Xung quanh, quanh",
+      "vi_du": "この辺りは公園が多く、散歩にぴったりだ｡ (Xung quanh đây có nhiều công viên, rất hợp với việc đi dạo.)",
+      "vi_du_ruby": "この<ruby>辺り<rt>あたり</rt></ruby>は公園が多く、散歩にぴったりだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "付近",
+      "doc": "ふきん",
+      "doc_marked": "ふきん",
+      "han_viet": "",
+      "nghia": "Khu vực lân cận, gần",
+      "vi_du": "公園の付近に桜が咲いている｡ (Khu vực gần công viên, hoa sakura đang nở.)",
+      "vi_du_ruby": "公園の<ruby>付近<rt>ふきん</rt></ruby>に桜が咲いている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "住宅",
+      "doc": "じゅうたく",
+      "doc_marked": "**じゅう**たく",
+      "han_viet": "",
+      "nghia": "Nhà ở",
+      "vi_du": "この辺りは高級な住宅が多い｡ (Khu vực nầy có nhiều nhà ở cao cấp.)",
+      "vi_du_ruby": "この辺りは高級な<ruby>住宅<rt>じゅうたく</rt></ruby>が多い｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "地区",
+      "doc": "ちく",
+      "doc_marked": "ちく",
+      "han_viet": "",
+      "nghia": "Khu vực",
+      "vi_du": "ここは学校や幼稚園が多い地区だ｡ (Đây là khu vực nhiều trường học và mẫu giáo.)",
+      "vi_du_ruby": "ここは学校や幼稚園が多い<ruby>地区<rt>ちく</rt></ruby>だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "エリア",
+      "doc": "えりあ",
+      "doc_marked": "えりあ",
+      "han_viet": "",
+      "nghia": "Vùng, khu vực",
+      "vi_du": "公園の中に入ってはいけないエリアがある｡ (Trong công viên có khu vực không được vào.)",
+      "vi_du_ruby": "公園の中に入ってはいけない<ruby>エリア<rt>えりあ</rt></ruby>がある｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "中間",
+      "doc": "ちゅうかん",
+      "doc_marked": "**ちゅう**かん",
+      "han_viet": "",
+      "nghia": "Khoảng giữa, giữa",
+      "vi_du": "家と駅の中間に、おしゃれなカフェがある｡ (Giữa nhà và nhà ga có quán cà phê sành điệu.)",
+      "vi_du_ruby": "家と駅の<ruby>中間<rt>ちゅうかん</rt></ruby>に、おしゃれなカフェがある｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "境",
+      "doc": "さかい",
+      "doc_marked": "さかい",
+      "han_viet": "",
+      "nghia": "Ranh giới",
+      "vi_du": "隣の町との境に川が流れている｡ (Ở ranh giới với thành phố bên cạnh có dòng sông chảy qua.)",
+      "vi_du_ruby": "隣の町との<ruby>境<rt>さかい</rt></ruby>に川が流れている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "斜めくな＞",
+      "doc": "ななめくな＞",
+      "doc_marked": "ななめくな＞",
+      "han_viet": "",
+      "nghia": "Xéo, chéo",
+      "vi_du": "郵便局の斜め前に新しいコンビニができた。（名） (Xéo phía trước bưu điện có cửa hàng tiện lợi mới.)",
+      "vi_du_ruby": "郵便局の斜め前に新しいコンビニができた。（名）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "抽選（する）",
+      "doc": "ちゅうせん",
+      "doc_marked": "**ちゅう**せん",
+      "han_viet": "",
+      "nghia": "Sự bốc thăm",
+      "vi_du": "商店街の抽選で温泉旅行が当たった｡ (Tôi trúng chuyến du lịch suối nước nóng nhờ bốc thăm ở phố mua bán.)",
+      "vi_du_ruby": "商店街の抽選で温泉旅行が当たった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "避難（する）",
+      "doc": "ひなん",
+      "doc_marked": "ひなん",
+      "han_viet": "",
+      "nghia": "Sự lánh nạn",
+      "vi_du": "地震のときは、近くの公園に避難する｡ (Khi có động đất, lánh nạn ở công viên gần đó.)",
+      "vi_du_ruby": "地震のときは、近くの公園に避難する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "訓練（する）",
+      "doc": "くんれん",
+      "doc_marked": "くんれん",
+      "han_viet": "",
+      "nghia": "Sự huấn luyện, tập huấn",
+      "vi_du": "この町では一年に一回、避難訓練を行う｡ (Ở thành phố này, 1 năm 1 lần, tổ chức tập huấn lánh nạn.)",
+      "vi_du_ruby": "この町では一年に一回、避難訓練を行う｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "見回る",
+      "doc": "みまわる",
+      "doc_marked": "みまわる",
+      "han_viet": "",
+      "nghia": "Nhìn quanh, theo dõi",
+      "vi_du": "毎晩パトカーが住宅地を見回っている｡ (Mỗi tối, xe cảnh sát theo dõi quanh khu nhà ở.)",
+      "vi_du_ruby": "毎晩パトカーが住宅地を見回っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "築く",
+      "doc": "きづく",
+      "doc_marked": "きづく",
+      "han_viet": "",
+      "nghia": "Xây dựng",
+      "vi_du": "ここでは住民同士がいい関係を築いている｡ (Ở đây cư dân với nhau xây dựng được mối quan hệ tốt đẹp.)",
+      "vi_du_ruby": "ここでは住民同士がいい関係を築いている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "見当",
+      "doc": "けんとう",
+      "doc_marked": "けんと**う**",
+      "han_viet": "",
+      "nghia": "Sự dự đoán, tiên đoán",
+      "vi_du": "この町が20年後にどうなっているか、見当がつかない｡ (Không thể đoán được thành phố này 20 năm sau sẽ ra sao.)",
+      "vi_du_ruby": "この町が20年後にどうなっているか、<ruby>見当<rt>けんとう</rt></ruby>がつかない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "落書き（する）",
+      "doc": "らくがき",
+      "doc_marked": "らくがき",
+      "han_viet": "",
+      "nghia": "Sự viết, vẽ bậy",
+      "vi_du": "近所で何軒かの家が壁に落書きされた｡ (Có mấy nhà hàng xóm bị viết bậy trên tường.)",
+      "vi_du_ruby": "近所で何軒かの家が壁に落書きされた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "強化（する）",
+      "doc": "きょうか",
+      "doc_marked": "きょうか",
+      "han_viet": "",
+      "nghia": "Sự đẩy mạnh",
+      "vi_du": "最近犯罪が多いので、住民が見回りを強化している｡ (Gần đây do có nhiều tội phạm nên cư dân đẩy mạnh việc theo dõi.)",
+      "vi_du_ruby": "最近犯罪が多いので、住民が見回りを強化している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

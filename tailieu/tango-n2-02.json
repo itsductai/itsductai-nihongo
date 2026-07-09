@@ -1,0 +1,261 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Bạn bè",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "友人",
+      "doc": "ゆうじん",
+      "doc_marked": "**ゆう**じん",
+      "han_viet": "",
+      "nghia": "Bạn thân",
+      "vi_du": "国から友人が遊びに来た｡ (Bạn thân từ quê nhà sang chơi.)",
+      "vi_du_ruby": "国から<ruby>友人<rt>ゆうじん</rt></ruby>が遊びに来た｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "仲",
+      "doc": "なか",
+      "doc_marked": "なか",
+      "han_viet": "",
+      "nghia": "Tình cảm, mối quan hệ",
+      "vi_du": "このクラスの生徒は、とても仲がいい｡ (Học sinh lớp này rất thân thiện.)",
+      "vi_du_ruby": "このクラスの生徒は、とても<ruby>仲<rt>なか</rt></ruby>がいい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "縁",
+      "doc": "えん",
+      "doc_marked": "えん",
+      "han_viet": "",
+      "nghia": "Duyên",
+      "vi_du": "縁があって、彼女と親友になれた｡ (Có duyên mà tôi trở thành bạn thân với cô ấy.)",
+      "vi_du_ruby": "<ruby>縁<rt>えん</rt></ruby>があって、彼女と親友になれた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ニックネーム",
+      "doc": "にっくねーむ",
+      "doc_marked": "にっくねーむ",
+      "han_viet": "",
+      "nghia": "Biệt danh, tên thân mật",
+      "vi_du": "彼と私はニックネームで呼び合っている｡ (Anh ấy và tôi gọi nhau bằng biệt danh.)",
+      "vi_du_ruby": "彼と私は<ruby>ニックネーム<rt>にっくねーむ</rt></ruby>で呼び合っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "大半",
+      "doc": "たいはん",
+      "doc_marked": "たいはん",
+      "han_viet": "",
+      "nghia": "Hơn nửa, phần lớn",
+      "vi_du": "一日の大半の時間を友達と過ごしている｡ (Tôi dành phần lớn thời gian trong ngày với bạn bè.)",
+      "vi_du_ruby": "一日の<ruby>大半<rt>たいはん</rt></ruby>の時間を友達と過ごしている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "恵まれる",
+      "doc": "めぐまれる",
+      "doc_marked": "めぐまれる",
+      "han_viet": "",
+      "nghia": "Được ban cho, may mắn",
+      "vi_du": "私は、いつも友人に恵まれている｡ (Tôi luôn may mắn có được bạn bè.)",
+      "vi_du_ruby": "私は、いつも友人に恵まれている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "頼る",
+      "doc": "たよる",
+      "doc_marked": "たよる",
+      "han_viet": "",
+      "nghia": "Trông cậy, dựa vào",
+      "vi_du": "私達は親友なのだから、困ったときは頼ってほしい｡ (Chúng ta là bạn thân nên khi gặp khó khăn, mong bạn dựa vào tôi.)",
+      "vi_du_ruby": "私達は親友なのだから、困ったときは頼ってほしい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "頼もしい",
+      "doc": "たのもしい",
+      "doc_marked": "たのもしい",
+      "han_viet": "",
+      "nghia": "Đáng tin, đáng trông cậy",
+      "vi_du": "彼女は何でも相談できる頼もしい存在だ｡ (Cô ấy là người đáng trông cậy, có thể trao đổi bất kỳ chuyện gì.)",
+      "vi_du_ruby": "彼女は何でも相談できる<ruby>頼もしい<rt>たのもしい</rt></ruby>存在だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "見習う",
+      "doc": "みならう",
+      "doc_marked": "みならう",
+      "han_viet": "",
+      "nghia": "Noi gương",
+      "vi_du": "私には見習うべき友人が何人かいる｡ (Tôi có mấy người bạn phải noi gương học tập.)",
+      "vi_du_ruby": "私には<ruby>見習う<rt>みならう</rt></ruby>べき友人が何人かいる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "打ち明ける",
+      "doc": "うちあける",
+      "doc_marked": "うちあける",
+      "han_viet": "",
+      "nghia": "Nói thẳng, bày tỏ, mở lòng",
+      "vi_du": "親友だけに秘密を打ち明けた｡ (Tôi chỉ bày tỏ bí mật với bạn thân.)",
+      "vi_du_ruby": "親友だけに秘密を打ち明けた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "励ます",
+      "doc": "はげます",
+      "doc_marked": "はげます",
+      "han_viet": "",
+      "nghia": "Động viên, khích lệ",
+      "vi_du": "私が試験に落ちたとき、友達が励ましてくれた｡ (Khi tôi thi rớt, bạn bè đã động viên tôi.)",
+      "vi_du_ruby": "私が試験に落ちたとき、友達が励ましてくれた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "あえて",
+      "doc": "あえて",
+      "doc_marked": "あえて",
+      "han_viet": "",
+      "nghia": "Dám, mạnh dạn",
+      "vi_du": "大切な友達だから、あえて厳しい忠告もする｡ (Vì là bạn bè quan trọng, mới dám cảnh báo nghiêm khắc.)",
+      "vi_du_ruby": "大切な友達だから、<ruby>あえて<rt>あえて</rt></ruby>厳しい忠告もする｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "なぐさめる",
+      "doc": "なぐさめる",
+      "doc_marked": "なぐさめる",
+      "han_viet": "",
+      "nghia": "An ủi, động viên",
+      "vi_du": "彼女にふられたとき、友達がなぐさめてくれた｡ (Khi bạn gái chia tay, bạn bè đã an ủi tôi.)",
+      "vi_du_ruby": "彼女にふられたとき、友達がなぐさめてくれた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "察する",
+      "doc": "さっする",
+      "doc_marked": "さっする",
+      "han_viet": "",
+      "nghia": "Thông cảm, đồng cảm",
+      "vi_du": "彼女の気持ちを察して、何も言わなかった｡ (Đồng cảm với tâm trạng của cô ấy, tôi đã không nói gì.)",
+      "vi_du_ruby": "彼女の気持ちを察して、何も言わなかった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "思いやり",
+      "doc": "おもいやり",
+      "doc_marked": "おもいやり",
+      "han_viet": "",
+      "nghia": "Sự quan tâm",
+      "vi_du": "周りの人への思いやりを大切にしたい｡ (Tôi muốn gìn giữ cẩn thận sự quan tâm đến người xung quanh.)",
+      "vi_du_ruby": "周りの人への<ruby>思いやり<rt>おもいやり</rt></ruby>を大切にしたい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "何気ない",
+      "doc": "なにげない",
+      "doc_marked": "なにげない",
+      "han_viet": "",
+      "nghia": "Thoải mái, vô tư",
+      "vi_du": "友達との何気ない会話が楽しい｡ (Những cuộc trò chuyện vô tư với bạn bè thật là vui.)",
+      "vi_du_ruby": "友達との<ruby>何気ない<rt>なにげない</rt></ruby>会話が楽しい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "からかう",
+      "doc": "からかう",
+      "doc_marked": "からかう",
+      "han_viet": "",
+      "nghia": "Trêu chọc",
+      "vi_du": "彼女ができて、友達にからかわれた｡ (Có bạn gái rồi thì tôi bị bạn bè trêu chọc.)",
+      "vi_du_ruby": "彼女ができて、友達にからかわれた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "幹事",
+      "doc": "かんじ",
+      "doc_marked": "かんじ",
+      "han_viet": "",
+      "nghia": "Cán sự, quản lý",
+      "vi_du": "仲間の飲み会では、いつも私が幹事だ｡ (Những buổi ăn uống với bạn bè, tôi luôn làm cán sự.)",
+      "vi_du_ruby": "仲間の飲み会では、いつも私が<ruby>幹事<rt>かんじ</rt></ruby>だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "呼び出す",
+      "doc": "よびだす",
+      "doc_marked": "よびだす",
+      "han_viet": "",
+      "nghia": "Gọi, kêu ra",
+      "vi_du": "夜遅く、親友に「飲みに行こう」と呼び出されだ｡ (Tối khuya, tôi bị đứa bạn thân gọi 'đi nhậu thôi'.)",
+      "vi_du_ruby": "夜遅く、親友に「飲みに行こう」と呼び出されだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "盛り上がる",
+      "doc": "もりあがる",
+      "doc_marked": "もりあがる",
+      "han_viet": "",
+      "nghia": "Hào hứng, dâng lên, sôi động",
+      "vi_du": "①パーティーは盛り上がって、夜中まで続いた。 ②地震で道が盛り上がった｡ (①Bữa tiệc trở nên sôi động, kéo dài đến nữa đêm.②Mặt đường dâng lên do động đất.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "あきれる",
+      "doc": "あきれる",
+      "doc_marked": "あきれる",
+      "han_viet": "",
+      "nghia": "Ngạc nhiên, sốc",
+      "vi_du": "彼はいつも遅刻するので、あきれてしまう｡ (Anh ấy lúc nào cũng trễ giờ, thật đáng ngạc nhiên.)",
+      "vi_du_ruby": "彼はいつも遅刻するので、あきれてしまう｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ふざける",
+      "doc": "ふざける",
+      "doc_marked": "ふざける",
+      "han_viet": "",
+      "nghia": "Hiếu động, đùa giỡn",
+      "vi_du": "友達とふざけていたら、転んで足の骨を折った｡ (Tôi đùa giỡn với bạn, té ngã và gãy xương chân.)",
+      "vi_du_ruby": "友達とふざけていたら、転んで足の骨を折った｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "久しい",
+      "doc": "ひさしい",
+      "doc_marked": "ひさしい",
+      "han_viet": "",
+      "nghia": "Lâu ngày, đã bao lâu",
+      "vi_du": "高校時代のクラスメートと久しく会っていない｡ (Đã lâu tôi không gặp bạn bè thời cấp III.)",
+      "vi_du_ruby": "高校時代のクラスメートと久しく会っていない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

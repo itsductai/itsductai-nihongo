@@ -1,0 +1,283 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Nghỉ việc, chuyển chỗ làm",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "退職（する）",
+      "doc": "たいしょく",
+      "doc_marked": "たいしょく",
+      "han_viet": "",
+      "nghia": "Sự nghỉ việc",
+      "vi_du": "来月で今の会社を退職する｡ (Tháng tới, tôi nghỉ việc công ty bây giờ.)",
+      "vi_du_ruby": "来月で今の会社を退職する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "転職（する）",
+      "doc": "てんしょく",
+      "doc_marked": "てんしょく",
+      "han_viet": "",
+      "nghia": "Sự chuyển việc",
+      "vi_du": "もっとかせげる会社に転職したい｡ (Tôi muốn chuyển việc sang công ty có thể kiếm nhiều tiền hơn.)",
+      "vi_du_ruby": "もっとかせげる会社に転職したい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "首になる",
+      "doc": "くびになる",
+      "doc_marked": "くびになる",
+      "han_viet": "",
+      "nghia": "Bị đuổi việc, bị sa thải",
+      "vi_du": "先週、会社を首になってしまった｡ (Tuần trước, tôi bị công ty sa thải mất rồi.)",
+      "vi_du_ruby": "先週、会社を首になってしまった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "リストラ（する）",
+      "doc": "りすとら",
+      "doc_marked": "りすとら",
+      "han_viet": "",
+      "nghia": "Người bị sa thải, sự sa thải (do cơ cấu lại)",
+      "vi_du": "会社の売り上げが下がり、リストラされた｡ (Doanh thu công ty giảm, tôi bị sa thải do cơ cấu lại.)",
+      "vi_du_ruby": "会社の売り上げが下がり、リストラされた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "独立（する）",
+      "doc": "どくりつ",
+      "doc_marked": "どくりつ",
+      "han_viet": "",
+      "nghia": "Độc lập",
+      "vi_du": "いつか独立して、自分の会社を持ちたい｡ (Tôi muốn ngày nào đó sẽ độc lập, có công ty của riêng mình.)",
+      "vi_du_ruby": "いつか独立して、自分の会社を持ちたい｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "着々（と）",
+      "doc": "ちゃくちゃく",
+      "doc_marked": "ちゃくちゃく",
+      "han_viet": "",
+      "nghia": "Từng bước vững chắc",
+      "vi_du": "独立する準備を着々と進めている｡ (Từng bước chuẩn bị độc lập.)",
+      "vi_du_ruby": "独立する準備を着々と進めている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "フリー（な）",
+      "doc": "ふりー",
+      "doc_marked": "ふりー",
+      "han_viet": "",
+      "nghia": "Tự do, miễn phí",
+      "vi_du": "①今はフリーで仕事をしている。（名）②この雑誌はフリーです。ご自由にどうぞ。（け形） (①Bây giờ tôi đang làm việc tự do. ②Tạp chí này miễn phí. Xin mời tự nhiên.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "不平",
+      "doc": "ふへい",
+      "doc_marked": "ふ**へい**",
+      "han_viet": "",
+      "nghia": "Sự bất bình",
+      "vi_du": "彼は会社への不平を並べた末、辞めた。（名） (Sau những bất bình với công ty, anh ấy nghỉ việc.)",
+      "vi_du_ruby": "彼は会社への<ruby>不平<rt>ふへい</rt></ruby>を並べた末、辞めた。（名）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "満足（な/する）",
+      "doc": "まんぞく",
+      "doc_marked": "まんぞく",
+      "han_viet": "",
+      "nghia": "Sự hài lòng, thỏa mãn",
+      "vi_du": "今の仕事に満足していないので、転職したい。（名） (Vì không hài lòng với công việc bây giờ, nên tôi muốn chuyển việc.)",
+      "vi_du_ruby": "今の仕事に満足していないので、転職したい。（名）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "辛抱（する）",
+      "doc": "しんぼう",
+      "doc_marked": "しんぼ**う**",
+      "han_viet": "",
+      "nghia": "Nhẫn nhục, chịu đựng",
+      "vi_du": "あと3年は、この会社で辛抱するつもりだ｡ (Tôi nhất định chịu đựng ở công ty này 3 năm nữa.)",
+      "vi_du_ruby": "あと3年は、この会社で辛抱するつもりだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ぐっと",
+      "doc": "ぐっと",
+      "doc_marked": "ぐっと",
+      "han_viet": "",
+      "nghia": "Đè nén, chặt, nhiều",
+      "vi_du": "嫌なことがあっても、辞めずにぐっと我慢する｡ (Dù có chuyện khó chịu đi nữa, tôi cố gắng đè nén, không nghỉ việc.)",
+      "vi_du_ruby": "嫌なことがあっても、辞めずに<ruby>ぐっと<rt>ぐっと</rt></ruby>我慢する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "負う",
+      "doc": "おう",
+      "doc_marked": "お**う**",
+      "han_viet": "",
+      "nghia": "Gánh chịu",
+      "vi_du": "彼は仕事のミスの責任を負って、退職した｡ (Anh ấy gánh chịu trách nhiệm phần lỗi trong công việc và nghỉ việc.)",
+      "vi_du_ruby": "彼は仕事のミスの責任を負って、退職した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "溶け込む",
+      "doc": "とけこむ",
+      "doc_marked": "とけこむ",
+      "han_viet": "",
+      "nghia": "Hòa nhập",
+      "vi_du": "会社の雰囲気に溶け込めず、転職した｡ (Tôi không thể hòa nhập vào bầu không khí của công ty nên đã chuyển việc.)",
+      "vi_du_ruby": "会社の雰囲気に溶け込めず、転職した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "やむを得ず",
+      "doc": "やむをえず",
+      "doc_marked": "やむをえず",
+      "han_viet": "",
+      "nghia": "Bất đắc dĩ, không còn cách nào khác",
+      "vi_du": "やむを得ず、あと半年会社に残ることにした｡ (Bất đắc dĩ, tôi quyết định ở lại công ty thêm nửa năm.)",
+      "vi_du_ruby": "<ruby>やむを得ず<rt>やむをえず</rt></ruby>、あと半年会社に残ることにした｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "立ち上げる",
+      "doc": "たちあげる",
+      "doc_marked": "たちあげる",
+      "han_viet": "",
+      "nghia": "Thành lập, khởi động",
+      "vi_du": "①退職して、自分の会社を立ち上げた。 ②パソコンを立ち上げる｡ (①Tôi muốn nghỉ việc và đã thành lập công ty của mình. ②Tôi mở máy tính.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "試みる",
+      "doc": "こころみる",
+      "doc_marked": "こころみる",
+      "han_viet": "",
+      "nghia": "Thử",
+      "vi_du": "来年、独立を試みるつもりだ｡ (Sang năm tôi định thử làm riêng.)",
+      "vi_du_ruby": "来年、独立を<ruby>試みる<rt>こころみる</rt></ruby>つもりだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "専念（する）",
+      "doc": "せんねん",
+      "doc_marked": "せんねん",
+      "han_viet": "",
+      "nghia": "Sự chuyên tâm, tập trung",
+      "vi_du": "しばらく会社を休んで、育児に専念しようと思う｡ (Tôi muốn nghỉ công ty một thời gian để tập trung nuôi dạy con.)",
+      "vi_du_ruby": "しばらく会社を休んで、育児に専念しようと思う｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "悔やむ",
+      "doc": "くやむ",
+      "doc_marked": "くやむ",
+      "han_viet": "",
+      "nghia": "Hối hận, tiếc nuối",
+      "vi_du": "前の会社を辞めたことを悔やんでいる｡ (Tôi hối hận vì đã nghỉ việc công ty trước đây.)",
+      "vi_du_ruby": "前の会社を辞めたことを悔やんでいる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "見送る",
+      "doc": "みおくる",
+      "doc_marked": "みおくる",
+      "han_viet": "",
+      "nghia": "Theo dõi, xem xét lại, tiễn",
+      "vi_du": "①退職は、しばらく見送ることにした。 ②友達を見送りに空港まで行った｡ (①Tôi quyết định xem xét lại chuyện nghỉ việc. ②Tôi đi đến sân bay để tiễn bạn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "逃す",
+      "doc": "のがす",
+      "doc_marked": "のがす",
+      "han_viet": "",
+      "nghia": "Bỏ lỡ",
+      "vi_du": "この転職のチャンスを逃したくない｡ (Tôi không muốn bỏ lỡ cơ hội chuyển việc này.)",
+      "vi_du_ruby": "この転職のチャンスを逃したくない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "重なる",
+      "doc": "おもなる",
+      "doc_marked": "おもなる",
+      "han_viet": "",
+      "nghia": "Chồng chất",
+      "vi_du": "仕事でミスが重なり、自信を失った｡ (Tôi đánh mất tự tin khi lỗi chồng chất trong công việc.)",
+      "vi_du_ruby": "仕事でミスが重なり、自信を失った｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "引き止める",
+      "doc": "ひきやめる",
+      "doc_marked": "ひきやめる",
+      "han_viet": "",
+      "nghia": "Ngăn chặn, can ngăn",
+      "vi_du": "退職したかったが、上司に引き止められた｡ (Tôi muốn nghỉ việc nhưng bị cấp trên ngăn lại.)",
+      "vi_du_ruby": "退職したかったが、上司に引き止められた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "特殊（な）",
+      "doc": "とくしゅ",
+      "doc_marked": "とくしゅ",
+      "han_viet": "",
+      "nghia": "Đặc thù",
+      "vi_du": "この仕事には特殊な能力が必要だ。（ナ形） (Công việc này cần có năng lực đặc thù.)",
+      "vi_du_ruby": "この仕事には特殊な能力が必要だ。（ナ形）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "身の回り",
+      "doc": "みのまわり",
+      "doc_marked": "みのまわり",
+      "han_viet": "",
+      "nghia": "Xung quanh mình",
+      "vi_du": "明日退職するので、身の回りの物を片付ける｡ (Ngày mai tôi sẽ nghỉ việc nên dọn dẹp những đồ đạc xung quanh mình.)",
+      "vi_du_ruby": "明日退職するので、<ruby>身の回り<rt>みのまわり</rt></ruby>の物を片付ける｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "状況",
+      "doc": "じょうきょう",
+      "doc_marked": "じょうきょう",
+      "han_viet": "",
+      "nghia": "Tình trạng, tình hình",
+      "vi_du": "会社の状況を見て、退職届を出すつもりだ｡ (Tôi định xem tình hình công ty rồi đưa đơn nghỉ việc.)",
+      "vi_du_ruby": "会社の<ruby>状況<rt>じょうきょう</rt></ruby>を見て、退職届を出すつもりだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

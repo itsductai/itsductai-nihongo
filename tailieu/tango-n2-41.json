@@ -1,0 +1,239 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Cơ thể và sức khỏe",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "測定（する）",
+      "doc": "そくてい",
+      "doc_marked": "そく**てい**",
+      "han_viet": "",
+      "nghia": "Sự đo lường, đo đạc",
+      "vi_du": "学校で身長と体重を測定した｡ (Tôi đã đo cân nặng và chiều cao ở trường.)",
+      "vi_du_ruby": "学校で身長と体重を測定した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "定期的な",
+      "doc": "ていきてきな",
+      "doc_marked": "**てい**きてきな",
+      "han_viet": "",
+      "nghia": "Một cách định kỳ",
+      "vi_du": "定期的に健康診断を受けている｡ (Khám sức khỏe theo định kỳ.)",
+      "vi_du_ruby": "定期的に健康診断を受けている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "血圧",
+      "doc": "けつあつ",
+      "doc_marked": "けつあつ",
+      "han_viet": "",
+      "nghia": "Huyết áp",
+      "vi_du": "最近、血圧が高い｡ (Gần đây, huyết áp cao.)",
+      "vi_du_ruby": "最近、<ruby>血圧<rt>けつあつ</rt></ruby>が高い｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "体力",
+      "doc": "たいりょく",
+      "doc_marked": "たいりょく",
+      "han_viet": "",
+      "nghia": "Thể lực",
+      "vi_du": "体力も気力も問題ない｡ (Cả thể lực và khí lực điều không có vấn đề.)",
+      "vi_du_ruby": "<ruby>体力<rt>たいりょく</rt></ruby>も気力も問題ない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "心身",
+      "doc": "しんしん",
+      "doc_marked": "しんしん",
+      "han_viet": "",
+      "nghia": "Tinh thần và thể chất",
+      "vi_du": "健康のためには心身のバランスが大切だ｡ (Để có sức khoẻ tốt, sự cân bằng tinh thần và thể chất là quan trọng.)",
+      "vi_du_ruby": "健康のためには<ruby>心身<rt>しんしん</rt></ruby>のバランスが大切だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "健やかな",
+      "doc": "すこやかな",
+      "doc_marked": "すこやかな",
+      "han_viet": "",
+      "nghia": "Mạnh khỏe",
+      "vi_du": "子ども達はみんな、健やかに成長した｡ (Con cái tất cả đều trưởng thành mạnh mẽ.)",
+      "vi_du_ruby": "子ども達はみんな、健やかに成長した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "かたよる",
+      "doc": "かたよる",
+      "doc_marked": "かたよる",
+      "han_viet": "",
+      "nghia": "Chênh lệch, mất cân bằng",
+      "vi_du": "最近、栄養がかたよっている｡ (Gần đây, tôi bị mất cân bằng dinh dưỡng.)",
+      "vi_du_ruby": "最近、栄養がかたよっている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "小柄な",
+      "doc": "こがらな",
+      "doc_marked": "こがらな",
+      "han_viet": "",
+      "nghia": "Nhỏ con, nhỏ người",
+      "vi_du": "彼女は、どちらかと言うと小柄な方だ｡ (Cô ấy nếu mà nói thì thuộc dạng nhỏ con.)",
+      "vi_du_ruby": "彼女は、どちらかと言うと<ruby>小柄な<rt>こがらな</rt></ruby>方だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "寿命",
+      "doc": "じゅみょう",
+      "doc_marked": "じゅみょう",
+      "han_viet": "",
+      "nghia": "Tuổi thọ",
+      "vi_du": "日本人女性は世界一寿命が長い｡ (Phụ nữ Nhật có tuổi thọ cao nhất thế giới.)",
+      "vi_du_ruby": "日本人女性は世界一<ruby>寿命<rt>じゅみょう</rt></ruby>が長い｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "一般に",
+      "doc": "いっぱんに",
+      "doc_marked": "いっぱんに",
+      "han_viet": "",
+      "nghia": "Thông thường",
+      "vi_du": "一般に、男性より女性の方が寿命が長い｡ (Thông thường nữ giới có tuổi thọ cao hơn nam giới.)",
+      "vi_du_ruby": "<ruby>一般に<rt>いっぱんに</rt></ruby>、男性より女性の方が寿命が長い｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "手首",
+      "doc": "てくび",
+      "doc_marked": "てくび",
+      "han_viet": "",
+      "nghia": "Cổ tay",
+      "vi_du": "毎日、手首で血圧を測っている｡ (Hàng ngày tôi đo huyết áp ở cổ tay.)",
+      "vi_du_ruby": "毎日、<ruby>手首<rt>てくび</rt></ruby>で血圧を測っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "かかと",
+      "doc": "かかと",
+      "doc_marked": "かかと",
+      "han_viet": "",
+      "nghia": "Gót chân",
+      "vi_du": "歩きすぎて、かかとが痛む｡ (Đi bộ quá nhiều nên gót chân bị đau.)",
+      "vi_du_ruby": "歩きすぎて、<ruby>かかと<rt>かかと</rt></ruby>が痛む｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "つま先",
+      "doc": "つまさき",
+      "doc_marked": "つまさき",
+      "han_viet": "",
+      "nghia": "Đầu ngón chân",
+      "vi_du": "靴を脱いで、つま先を伸ばす｡ (Tháo giày và duỗi ngón chân.)",
+      "vi_du_ruby": "靴を脱いで、<ruby>つま先<rt>つまさき</rt></ruby>を伸ばす｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "血管",
+      "doc": "けっかん",
+      "doc_marked": "けっかん",
+      "han_viet": "",
+      "nghia": "Huyết quản",
+      "vi_du": "年とともに血管が弱くなる｡ (Cùng với thời gian (tuổi tác), huyết quản trở nên yếu đi.)",
+      "vi_du_ruby": "年とともに<ruby>血管<rt>けっかん</rt></ruby>が弱くなる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "さらさら（な/する）",
+      "doc": "さらさら",
+      "doc_marked": "さらさら",
+      "han_viet": "",
+      "nghia": "Mềm mại, trơn tru, thông suốt",
+      "vi_du": "たまねぎを食べると、血液がさらさらになるらしい。（ナ形） (Nghe nói ăn hành tây thì máu lưu thông tốt.)",
+      "vi_du_ruby": "たまねぎを食べると、血液がさらさらになるらしい。（ナ形）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "筋肉",
+      "doc": "きんにく",
+      "doc_marked": "きんにく",
+      "han_viet": "",
+      "nghia": "Cơ bắp",
+      "vi_du": "毎日、筋肉をトレーニングしている｡ (Hàng ngày, tôi rèn luyện cơ bắp.)",
+      "vi_du_ruby": "毎日、<ruby>筋肉<rt>きんにく</rt></ruby>をトレーニングしている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "障がい",
+      "doc": "しょうがい",
+      "doc_marked": "しょうがい",
+      "han_viet": "",
+      "nghia": "Khuyết tật",
+      "vi_du": "耳に軽い障がいを持っている｡ (Tôi có khuyết tật nhẹ ở tai.)",
+      "vi_du_ruby": "耳に軽い<ruby>障がい<rt>しょうがい</rt></ruby>を持っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "乗り越える",
+      "doc": "のりこえる",
+      "doc_marked": "のりこえる",
+      "han_viet": "",
+      "nghia": "Vượt qua",
+      "vi_du": "人より努力して、障がいを乗り越えた｡ (Tôi đã nỗ lực hơn người để vượt qua khuyết tật.)",
+      "vi_du_ruby": "人より努力して、障がいを乗り越えた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "傷跡",
+      "doc": "きずあと",
+      "doc_marked": "きずあと",
+      "han_viet": "",
+      "nghia": "Vết thẹo",
+      "vi_du": "かいたところに傷跡が残った｡ (Ở chỗ gãi còn lại vết thẹo.)",
+      "vi_du_ruby": "かいたところに<ruby>傷跡<rt>きずあと</rt></ruby>が残った｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "いびき",
+      "doc": "いびき",
+      "doc_marked": "いびき",
+      "han_viet": "",
+      "nghia": "Tiếng ngáy",
+      "vi_du": "自分のいびきの音で目が覚めた｡ (Tôi choàng tỉnh vì tiếng ngáy của mình.)",
+      "vi_du_ruby": "自分の<ruby>いびき<rt>いびき</rt></ruby>の音で目が覚めた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "体が持つ",
+      "doc": "からだがもつ",
+      "doc_marked": "からだがもつ",
+      "han_viet": "",
+      "nghia": "Đủ sức",
+      "vi_du": "この忙しさでは体が持たない｡ (Bận rộn như thế này thì cơ thể không chịu nổi.)",
+      "vi_du_ruby": "この忙しさでは体が持たない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

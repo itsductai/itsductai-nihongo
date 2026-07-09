@@ -1,0 +1,239 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Buổi sáng",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "夜明け",
+      "doc": "よあけ",
+      "doc_marked": "よあけ",
+      "han_viet": "",
+      "nghia": "Ban mai, rạng sáng",
+      "vi_du": "最近、夜明け頃に一度目が覚める｡ (Gần đây khoảng rạng sáng là tôi thức dậy 1 lần.)",
+      "vi_du_ruby": "最近、<ruby>夜明け<rt>よあけ</rt></ruby>頃に一度目が覚める｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "起床（する）",
+      "doc": "きしょう",
+      "doc_marked": "きしょう",
+      "han_viet": "",
+      "nghia": "Sự thức dậy",
+      "vi_du": "毎朝、6時に起床している｡ (Mỗi sáng, tôi thức dậy lúc 6 giờ.)",
+      "vi_du_ruby": "毎朝、6時に起床している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "もたれる",
+      "doc": "もたれる",
+      "doc_marked": "もたれる",
+      "han_viet": "",
+      "nghia": "Dựa vào, nặng (bụng)",
+      "vi_du": "①壁にもたれて、歯をみがく。 ②この料理は胃にもたれる｡ (①Tôi dựa lưng vào tường và đánh răng. ②Món ăn này nặng bụng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "フレッシュな",
+      "doc": "ふれっしゅな",
+      "doc_marked": "ふれっしゅな",
+      "han_viet": "",
+      "nghia": "Tươi ngon, tươi mát",
+      "vi_du": "毎朝、フレッシュな野菜ジュースを作って飲んでいる｡ (Mỗi sáng, tôi làm nước trái cây tươi để uống.)",
+      "vi_du_ruby": "毎朝、<ruby>フレッシュな<rt>ふれっしゅな</rt></ruby>野菜ジュースを作って飲んでいる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "乳製品",
+      "doc": "にゅうせいひん",
+      "doc_marked": "にゅう**せい**ひん",
+      "han_viet": "",
+      "nghia": "Sản phẩm làm từ sữa",
+      "vi_du": "朝ご飯は乳製品とサラダだ｡ (Cơm sáng là sản phẩm làm từ sữa và rau trộn.)",
+      "vi_du_ruby": "朝ご飯は<ruby>乳製品<rt>にゅうせいひん</rt></ruby>とサラダだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "洗い物",
+      "doc": "あらいもの",
+      "doc_marked": "あらいもの",
+      "han_viet": "",
+      "nghia": "Đồ để rửa, việc rửa",
+      "vi_du": "食事が終わったら、洗い物をする｡ (Sau khi ăn xong, tôi rửa chén bát.)",
+      "vi_du_ruby": "食事が終わったら、<ruby>洗い物<rt>あらいもの</rt></ruby>をする｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "欠かす",
+      "doc": "かかす",
+      "doc_marked": "かかす",
+      "han_viet": "",
+      "nghia": "Thiếu, khuyết, bỏ sót",
+      "vi_du": "毎朝欠かさず、ジョギングをする｡ (Mỗi sáng tôi không bỏ việc chạy bộ.)",
+      "vi_du_ruby": "毎朝欠かさず、ジョギングをする｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "配達（する）",
+      "doc": "はいたつ",
+      "doc_marked": "はいたつ",
+      "han_viet": "",
+      "nghia": "Sự phát, phân phối",
+      "vi_du": "朝、新聞配達のバイトをしている｡ (Buổi sáng, tôi làm thêm công việc phát báo.)",
+      "vi_du_ruby": "朝、新聞配達のバイトをしている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "見出し",
+      "doc": "みだし",
+      "doc_marked": "みだし",
+      "han_viet": "",
+      "nghia": "Đầu đề",
+      "vi_du": "ネットニュースの見出しをざっと見る｡ (Tôi đọc sơ các đầu đề tin tức trên mạng.)",
+      "vi_du_ruby": "ネットニュースの<ruby>見出し<rt>みだし</rt></ruby>をざっと見る｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "一切（〜ない）",
+      "doc": "いっさい",
+      "doc_marked": "いっさい",
+      "han_viet": "",
+      "nghia": "Hoàn toàn (không ~)",
+      "vi_du": "私は新聞を一切読まない｡ (Tôi hoàn toàn không đọc báo.)",
+      "vi_du_ruby": "私は新聞を一切読まない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "合間",
+      "doc": "あいま",
+      "doc_marked": "あいま",
+      "han_viet": "",
+      "nghia": "Thời gian trống, thời gian rảnh",
+      "vi_du": "洗濯の合間にネットでニュースを読む｡ (Trong lúc giặt đồ, tôi đọc tin tức trên mạng.)",
+      "vi_du_ruby": "洗濯の<ruby>合間<rt>あいま</rt></ruby>にネットでニュースを読む｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "てきぱき（と）（する）",
+      "doc": "てきぱき（と）",
+      "doc_marked": "てきぱき（と）",
+      "han_viet": "",
+      "nghia": "Nhanh chóng, mau lẹ",
+      "vi_du": "家事をてきぱきと片付け、出かける準備をする｡ (Tôi nhanh chóng làm việc nhà để chuẩn bị đi ra ngoài.)",
+      "vi_du_ruby": "家事をてきぱきと片付け、出かける準備をする｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "問",
+      "doc": "とん",
+      "doc_marked": "とん",
+      "han_viet": "",
+      "nghia": "Thời gian, khoảng trống",
+      "vi_du": "出かけるまでに少し間がある｡ (Có chút thời gian trống cho đến khi ra ngoài)",
+      "vi_du_ruby": "出かけるまでに少し間がある｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "周辺",
+      "doc": "しゅうへん",
+      "doc_marked": "**しゅう**へん",
+      "han_viet": "",
+      "nghia": "Xung quanh, quanh",
+      "vi_du": "毎日、公園の周辺を30分歩く｡ (Mỗi sáng tôi đi bộ vòng quanh công viên 30 phút.)",
+      "vi_du_ruby": "毎日、公園の<ruby>周辺<rt>しゅうへん</rt></ruby>を30分歩く｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "周囲",
+      "doc": "しゅうい",
+      "doc_marked": "**しゅう**い",
+      "han_viet": "",
+      "nghia": "Xung quanh, chu vi",
+      "vi_du": "朝ご飯の前に、家の周囲を犬と散歩する｡ (Trước bữa sáng, tôi dắt chó đi dạo quanh nhà.)",
+      "vi_du_ruby": "朝ご飯の前に、家の<ruby>周囲<rt>しゅうい</rt></ruby>を犬と散歩する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "あと",
+      "doc": "あと",
+      "doc_marked": "あと",
+      "han_viet": "",
+      "nghia": "Nữa, sau",
+      "vi_du": "あと5分でバスが来る。急がなきゃ｡ (Còn 5 phút nữa là xe buýt đến. Phải mau lên.)",
+      "vi_du_ruby": "<ruby>あと<rt>あと</rt></ruby>5分でバスが来る。急がなきゃ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "すれ違う",
+      "doc": "すれちがう",
+      "doc_marked": "すれちがう",
+      "han_viet": "",
+      "nghia": "(Đi, gặp) ngược chiều",
+      "vi_du": "ごみを出しに行くと、いつも隣の人とすれ違う｡ (Khi đi đổ rác tôi luôn gặp người hàng xóm đi ngược chiều lại.)",
+      "vi_du_ruby": "ごみを出しに行くと、いつも隣の人と<ruby>すれ違う<rt>すれちがう</rt></ruby>｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "はう",
+      "doc": "はう",
+      "doc_marked": "はう",
+      "han_viet": "",
+      "nghia": "Bò ra",
+      "vi_du": "コンタクトを落として、床の上をはって探した｡ (Tôi làm rơi kính sát tròng nên bò ra sàn để tìm.)",
+      "vi_du_ruby": "コンタクトを落として、床の上をはって探した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "替える",
+      "doc": "かえる",
+      "doc_marked": "かえる",
+      "han_viet": "",
+      "nghia": "Thay, đổi",
+      "vi_du": "出かける前にバッグを替えた｡ (Trước khi đi ra ngoài, tôi đổi túi xách.)",
+      "vi_du_ruby": "出かける前にバッグを替えた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "整える",
+      "doc": "ととのえる",
+      "doc_marked": "ととのえる",
+      "han_viet": "",
+      "nghia": "Chỉnh đốn, trang bị",
+      "vi_du": "①服装を整えて、出かける。 ②この病院は最新の設備を整えている｡ (①Tôi chỉnh đốn trang phục để đi ra ngoài. ②Bệnh viện này được trang bị cơ sở vật chất tối tân.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ろくに（〜ない）",
+      "doc": "ろくに",
+      "doc_marked": "ろくに",
+      "han_viet": "",
+      "nghia": "Đầy đủ, tốt",
+      "vi_du": "この頃ろくに寝ていないので、午前中は眠い｡ (Thời gian gần đây, do không ngủ đầy đủ nên buổi sáng tôi buồn ngủ.)",
+      "vi_du_ruby": "この頃ろくに寝ていないので、午前中は眠い｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

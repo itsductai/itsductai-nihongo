@@ -1,0 +1,261 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Bão, động đất",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "接近（する）",
+      "doc": "せっきん",
+      "doc_marked": "せっきん",
+      "han_viet": "",
+      "nghia": "Sự tiếp cận, đến gần",
+      "vi_du": "台風が日本に接近している｡ (Bão đang đến gần Nhật Bản.)",
+      "vi_du_ruby": "台風が日本に接近している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "備える",
+      "doc": "そなえる",
+      "doc_marked": "そなえる",
+      "han_viet": "",
+      "nghia": "Chuẩn bị, phòng bị, đối phó với",
+      "vi_du": "台風に備えて、社員は早めに退社した｡ (Để đối phó với ơn bão, nhân viên công ty đã về sớm.)",
+      "vi_du_ruby": "台風に備えて、社員は早めに退社した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "砂",
+      "doc": "すな",
+      "doc_marked": "すな",
+      "han_viet": "",
+      "nghia": "Cát",
+      "vi_du": "砂を袋に詰めて、家の前に積む｡ (Nén cát vào bao và chất trước nhà.)",
+      "vi_du_ruby": "<ruby>砂<rt>すな</rt></ruby>を袋に詰めて、家の前に積む｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "あふれる",
+      "doc": "あふれる",
+      "doc_marked": "あふれる",
+      "han_viet": "",
+      "nghia": "Tràn, ngập",
+      "vi_du": "大雨で川の水があふれている｡ (Nước sông tràn đầy vì cơn mưa lớn.)",
+      "vi_du_ruby": "大雨で川の水があふれている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "降水量",
+      "doc": "こうすいりょう",
+      "doc_marked": "こ**う**すいりょう",
+      "han_viet": "",
+      "nghia": "Lượng nước mưa",
+      "vi_du": "今月、この地域では例年にない降水量を記録した｡ (Tháng này, khu vực này đã ghi kỷ lục về lượng nước mưa chưa từng coa hàng năm.)",
+      "vi_du_ruby": "今月、この地域では例年にない<ruby>降水量<rt>こうすいりょう</rt></ruby>を記録した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "観測（する）",
+      "doc": "かんそく",
+      "doc_marked": "かんそく",
+      "han_viet": "",
+      "nghia": "Sự quan trắc, đo đạc",
+      "vi_du": "最近、日本の各地で地震を観測している｡ (Gần đây người ta đo đạc động đất ở các địa phương trong Nhật Bản.)",
+      "vi_du_ruby": "最近、日本の各地で地震を観測している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "大気",
+      "doc": "たいき",
+      "doc_marked": "たいき",
+      "han_viet": "",
+      "nghia": "Không khí, khí trời",
+      "vi_du": "今週は大気が不安定だ｡ (Tuần này không khí không ổn định.)",
+      "vi_du_ruby": "今週は<ruby>大気<rt>たいき</rt></ruby>が不安定だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "荒れる",
+      "doc": "あれる",
+      "doc_marked": "あれる",
+      "han_viet": "",
+      "nghia": "(Biển) động, (da) khô, nứt nẻ",
+      "vi_du": "①天気予報によると、明日は海が荒れるそうだ。 ②最近、肌が荒れて仕方ない｡ (①Theo dự báo thời tiết, ngày mai biển động. ②Gần đây da tôi bị khô không chịu nổi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "傾く",
+      "doc": "かたむく",
+      "doc_marked": "かたむく",
+      "han_viet": "",
+      "nghia": "Nghiêng, có chiều hướng đi xuống",
+      "vi_du": "①台風で大きな木が傾いた。 ②不景気で会社が傾いている｡ (①Cái cây lớn đã bị nghiêng vì bão. ②Công ty trở nên sa sút vì tình hình kinh tế ảm đạm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "またぐ",
+      "doc": "またぐ",
+      "doc_marked": "またぐ",
+      "han_viet": "",
+      "nghia": "Băng qua, vượt qua",
+      "vi_du": "倒れた木をまたいで、先に進む｡ (Tôi băng qua cái cây bị ngã để tiến về phía trước.)",
+      "vi_du_ruby": "倒れた木をまたいで、先に進む｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "応答（する）",
+      "doc": "おうとう",
+      "doc_marked": "おうと**う**",
+      "han_viet": "",
+      "nghia": "Tiếng đáp trả, sự hồi âm",
+      "vi_du": "家が崩れた現場で名前を呼んだが、応答がない｡ (Ở hiện trường nhà bị sụp đổ, tôi gọi tên mà không có tiếng đáp trả.)",
+      "vi_du_ruby": "家が崩れた現場で名前を呼んだが、応答がない｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "静まる",
+      "doc": "しずまる",
+      "doc_marked": "しずまる",
+      "han_viet": "",
+      "nghia": "Tĩnh lặng, lắng xuống, dịu đi",
+      "vi_du": "夜になって、雨も風も静まった｡ (Trời tối thì mưa, gió cũng dịu đi.)",
+      "vi_du_ruby": "夜になって、雨も風も静まった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "もたらす",
+      "doc": "もたらす",
+      "doc_marked": "もたらす",
+      "han_viet": "",
+      "nghia": "Gây nên, mang đến",
+      "vi_du": "台風が、この地域に大きな被害をもたらした｡ (Cơn bão đã gây nên thiệt hại lớn cho khu vực này.)",
+      "vi_du_ruby": "台風が、この地域に大きな被害をもたらした｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "及ぼす",
+      "doc": "およぼす",
+      "doc_marked": "およぼす",
+      "han_viet": "",
+      "nghia": "Gây hại, gây ảnh hưởng",
+      "vi_du": "台風が農業に大きな被害を及ぼした｡ (Cơn bão đã gây ảnh hưởng to lớn đến nông nghiệp.)",
+      "vi_du_ruby": "台風が農業に大きな被害を及ぼした｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "及ぶ",
+      "doc": "およぶ",
+      "doc_marked": "およぶ",
+      "han_viet": "",
+      "nghia": "Đến mức, đạt mức",
+      "vi_du": "地震の被害は数十億円に及んだ｡ (Thiệt hại do động đất đạt mức tỉ yên.)",
+      "vi_du_ruby": "地震の被害は数十億円に及んだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "去る",
+      "doc": "さる",
+      "doc_marked": "さる",
+      "han_viet": "",
+      "nghia": "Rời đi, bỏ đi",
+      "vi_du": "大型咍風が、ようやく去った｡ (Cuối cùng, cơn bão lớn cũng rời đi.)",
+      "vi_du_ruby": "大型咍風が、ようやく去った｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ひとまず",
+      "doc": "ひとまず",
+      "doc_marked": "ひとまず",
+      "han_viet": "",
+      "nghia": "Tạm thời, trước mắt",
+      "vi_du": "台風が去り、ひとまず安心だ｡ (Cơn bão đi rồi, tạm thời yên tâm.)",
+      "vi_du_ruby": "台風が去り、<ruby>ひとまず<rt>ひとまず</rt></ruby>安心だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "直後",
+      "doc": "ちょくご",
+      "doc_marked": "ちょくご",
+      "han_viet": "",
+      "nghia": "Ngay sau khi",
+      "vi_du": "スマホが鳴った直後、地震が起きた｡ (Ngay sau khi điện thoại thông minh reo lên thì động đất xảy ra.)",
+      "vi_du_ruby": "スマホが鳴った<ruby>直後<rt>ちょくご</rt></ruby>、地震が起きた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "行動（する）",
+      "doc": "こうどう",
+      "doc_marked": "こ**う**どう",
+      "han_viet": "",
+      "nghia": "Hành động, hoạt động",
+      "vi_du": "地震です。皆さん、落ち着いて行動してください｡ (Động đất! Mọi người hãy bình tĩnh hành động!)",
+      "vi_du_ruby": "地震です。皆さん、落ち着いて行動してください｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "万一",
+      "doc": "まんいち",
+      "doc_marked": "まんいち",
+      "han_viet": "",
+      "nghia": "Chẳng may",
+      "vi_du": "万一、大地震が起きたときに備えておく。（副） (Chuẩn bị sẵn để chẳng may, động đất xảy ra.)",
+      "vi_du_ruby": "<ruby>万一<rt>まんいち</rt></ruby>、大地震が起きたときに備えておく。（副）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "傾向",
+      "doc": "けいこう",
+      "doc_marked": "**けい**こう",
+      "han_viet": "",
+      "nghia": "Khuynh hướng",
+      "vi_du": "台風などの天災が最近増える傾向にある｡ (Gần đây, thiên tai như bão v.v. có khuynh hướng tăng lên.)",
+      "vi_du_ruby": "台風などの天災が最近増える<ruby>傾向<rt>けいこう</rt></ruby>にある｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "達する",
+      "doc": "たっする",
+      "doc_marked": "たっする",
+      "han_viet": "",
+      "nghia": "Đạt",
+      "vi_du": "台風の被害は5億円に達した｡ (Thiệt hại của cơn bão đến 500 triệu yên.)",
+      "vi_du_ruby": "台風の被害は5億円に達した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "災害",
+      "doc": "さいがい",
+      "doc_marked": "さいがい",
+      "han_viet": "",
+      "nghia": "Tai họa",
+      "vi_du": "常に災害に備えておくことが大切だ｡ (Luôn chuẩn bị sẵn phòng tai họa là việc quan trọng.)",
+      "vi_du_ruby": "常に<ruby>災害<rt>さいがい</rt></ruby>に備えておくことが大切だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

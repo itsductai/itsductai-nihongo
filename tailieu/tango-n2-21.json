@@ -1,0 +1,250 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Trường học",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "教わる",
+      "doc": "おそわる",
+      "doc_marked": "おそわる",
+      "han_viet": "",
+      "nghia": "Được dạy, học",
+      "vi_du": "この学校で日本語だけでなく文化や習慣も教わった｡ (Ở trường này, không chỉ tiếng Nhật mà cả văn hóa và phong tục cũng được dạy.)",
+      "vi_du_ruby": "この学校で日本語だけでなく文化や習慣も教わった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "願書",
+      "doc": "がんしょ",
+      "doc_marked": "がんしょ",
+      "han_viet": "",
+      "nghia": "Đơn, đơn xin",
+      "vi_du": "大学の願書を締め切りまでに提出する｡ (Cho đến khi hết hạn, tôi sẽ nộp đơn vào đại học.)",
+      "vi_du_ruby": "大学の<ruby>願書<rt>がんしょ</rt></ruby>を締め切りまでに提出する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "推薦（する）",
+      "doc": "すいせん",
+      "doc_marked": "すいせん",
+      "han_viet": "",
+      "nghia": "Sự tiến cử, giới thiệu",
+      "vi_du": "高校から大学に推薦してもらえることになった｡ (Tôi đã nhận được sự tiến cử vào đại học từ trường cấp III.)",
+      "vi_du_ruby": "高校から大学に推薦してもらえることになった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "狙う",
+      "doc": "ねらう",
+      "doc_marked": "ねらう",
+      "han_viet": "",
+      "nghia": "Nhắm đến, hướng đến",
+      "vi_du": "彼は有名な私立大学を狙っている｡ (Anh ấy nhắm đến trường đại học tư nổi tiếng.)",
+      "vi_du_ruby": "彼は有名な私立大学を狙っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "意志",
+      "doc": "いし",
+      "doc_marked": "いし",
+      "han_viet": "",
+      "nghia": "Ý chí",
+      "vi_du": "弟は強い意志で留学を決めた｡ (Em trai tôi quyết định du học với ý chí mạnh mẽ.)",
+      "vi_du_ruby": "弟は強い<ruby>意志<rt>いし</rt></ruby>で留学を決めた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "開始（する）",
+      "doc": "かいし",
+      "doc_marked": "かいし",
+      "han_viet": "",
+      "nghia": "Sự bắt đầu",
+      "vi_du": "この学校は9時に授業を開始する｡ (Trường này bắt đầu giờ học từ 9 giờ.)",
+      "vi_du_ruby": "この学校は9時に授業を開始する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "通常",
+      "doc": "つうじょう",
+      "doc_marked": "つうじょう",
+      "han_viet": "",
+      "nghia": "Sự thông thường",
+      "vi_du": "学校は通常、土日と祝日が休みだ。（副） (Trường học thông thường nghỉ ngày thứ bảy, chủ nhật và ngày lễ.)",
+      "vi_du_ruby": "学校は<ruby>通常<rt>つうじょう</rt></ruby>、土日と祝日が休みだ。（副）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "担任（する）",
+      "doc": "たんにん",
+      "doc_marked": "たんにん",
+      "han_viet": "",
+      "nghia": "giáo viên chủ nhiệm",
+      "vi_du": "私のクラスの担任は小林先生だ｡ (Giáo viên chủ nhiệm lớp tôi là thầy / cô Kobayashi.)",
+      "vi_du_ruby": "私のクラスの担任は小林先生だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "受け持つ",
+      "doc": "うけもつ",
+      "doc_marked": "うけもつ",
+      "han_viet": "",
+      "nghia": "Đảm nhiệm, tiếp nhận",
+      "vi_du": "田中先生は上級クラスを受け持っている｡ (Thầy / cô Tanaka đảm nhận lớp bậc cao.)",
+      "vi_du_ruby": "田中先生は上級クラスを受け持っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "委員",
+      "doc": "いいん",
+      "doc_marked": "いいん",
+      "han_viet": "",
+      "nghia": "Ủy viên, cán sự",
+      "vi_du": "今年はクラス委員になった｡ (Năm nay tôi trở thành cán sự lớp.)",
+      "vi_du_ruby": "今年はクラス<ruby>委員<rt>いいん</rt></ruby>になった｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "なじむ",
+      "doc": "なじむ",
+      "doc_marked": "なじむ",
+      "han_viet": "",
+      "nghia": "Quen, quen thuộc",
+      "vi_du": "学校生活に、やっとなじんできた｡ (Cuối cùng tôi đã quen với đời sống học đường.)",
+      "vi_du_ruby": "学校生活に、やっとなじんできた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "充実（する）",
+      "doc": "じゅうじつ",
+      "doc_marked": "**じゅう**じつ",
+      "han_viet": "",
+      "nghia": "Sự đầy đủ, ý nghĩa, trọn vẹn",
+      "vi_du": "日本に留学して以来、毎日が充実している｡ (Kể từ sau khi du học Nhật, mỗi ngày đều thật ý nghĩa.)",
+      "vi_du_ruby": "日本に留学して以来、毎日が充実している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "高等（な）",
+      "doc": "こうとう",
+      "doc_marked": "こ**う**とう",
+      "han_viet": "",
+      "nghia": "Cấp cao, trình độ cao",
+      "vi_du": "日本で高等な技術を学びたい。（ナ形） (Tôi muốn học kỹ thuật cao ở Nhật.)",
+      "vi_du_ruby": "日本で高等な技術を学びたい。（ナ形）",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ステップ",
+      "doc": "すてっぷ",
+      "doc_marked": "すてっぷ",
+      "han_viet": "",
+      "nghia": "Bước tiến, bậc tiến lên",
+      "vi_du": "①進学は夢へのステップだ。 ②パスのステップが低いと、高齢者が乗りやすい｡ (①Việc học lên là một bước tiến đến ước mơ. ②Bậc bước lên xe buýt thấp thì người cao tuổi dễ đi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "過程",
+      "doc": "かてい",
+      "doc_marked": "か**てい**",
+      "han_viet": "",
+      "nghia": "Quá trình",
+      "vi_du": "仕事の過程を上司に報告する｡ (Tôi sẽ báo cáo quá trình công việc lên cấp trên.)",
+      "vi_du_ruby": "仕事の<ruby>過程<rt>かてい</rt></ruby>を上司に報告する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "取り上げる",
+      "doc": "とりあげる",
+      "doc_marked": "とりあげる",
+      "han_viet": "",
+      "nghia": "Đưa vào, lấy đi, tịch thu",
+      "vi_du": "①授業で日本の若者文化を取り上げた。 ②子どもからゲームを取り上げた｡ (①Trong giờ học, văn hóa giới trẻ Nhật Bản đã được đưa vào. ②Tôi đã tịch thu game của con.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "欠ける",
+      "doc": "かける",
+      "doc_marked": "かける",
+      "han_viet": "",
+      "nghia": "Thiếu, mất, khuyết, rụng",
+      "vi_du": "①彼が欠けたら、大会に出られない。 ②固いものを食べたら、歯が欠けた。③無断で休むなんて、常識に欠ける｡ (①Nếu thiếu anh ấy thì không thể tham gia đại hội. ②Tôi ăn món cứng thì cái răng rụng mất tiêu. ③Nghỉ không phép thì thật thiếu ý thức.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "優勝な",
+      "doc": "ゆうしょうな",
+      "doc_marked": "**ゆう**しょうな",
+      "han_viet": "",
+      "nghia": "Ưu tú, xuất sắc",
+      "vi_du": "優秀（ゆうしゅう）な学生 このクラスには優秀な学生が多い｡ ()",
+      "vi_du_ruby": "優秀（ゆうしゅう）な学生 このクラスには優秀な学生が多い｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "修了（する）",
+      "doc": "しゅうりょう",
+      "doc_marked": "**しゅう**りょう",
+      "han_viet": "",
+      "nghia": "Sự kết thúc, hoàn thành (việc học nói chung)",
+      "vi_du": "3月で日本語学校を修了する｡ (ôi sẽ hoàn tất trường tiếng Nhật vào tháng 3.)",
+      "vi_du_ruby": "3月で日本語学校を修了する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ふさわしい",
+      "doc": "ふさわしい",
+      "doc_marked": "ふさわしい",
+      "han_viet": "",
+      "nghia": "Phù hợp",
+      "vi_du": "卒業式にふさわしい服装で出席する｡ (Tôi dự lễ tốt nghiệp với trang phục phù hợp.)",
+      "vi_du_ruby": "卒業式に<ruby>ふさわしい<rt>ふさわしい</rt></ruby>服装で出席する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "認識（する）",
+      "doc": "にんしき",
+      "doc_marked": "にんしき",
+      "han_viet": "",
+      "nghia": "Nhận thức, ý thức",
+      "vi_du": "学校では規則を守るように生徒に認識させる｡ (Làm cho học sinh có ý thức giữ gìn quy định ở trường.)",
+      "vi_du_ruby": "学校では規則を守るように生徒に認識させる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "語学学校",
+      "doc": "ごがくがっこう",
+      "doc_marked": "ごがくがっこ**う**",
+      "han_viet": "",
+      "nghia": "Trường học tiếng (ngoại ngữ)",
+      "vi_du": "東京の語学学校で勉強している｡ (Tôi đang học tại trường học tiếng ở Tokyo.)",
+      "vi_du_ruby": "東京の<ruby>語学学校<rt>ごがくがっこう</rt></ruby>で勉強している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Công việc hàng ngày",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "めりはり",
+      "doc": "めりはり",
+      "doc_marked": "めりはり",
+      "han_viet": "",
+      "nghia": "Nhịp độ, sự rõ ràng, tách bạch",
+      "vi_du": "日課を決めて、生活にめりはりをつけている｡ (Quyết định công việc hàng ngày để tạo nhịp độ trong cuộc sống.)",
+      "vi_du_ruby": "日課を決めて、生活に<ruby>めりはり<rt>めりはり</rt></ruby>をつけている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "何度も",
+      "doc": "なんども",
+      "doc_marked": "なんども",
+      "han_viet": "",
+      "nghia": "Bao nhiêu lần",
+      "vi_du": "一日に何度も歯をみがく｡ (Một ngày tôi đánh răng không biết bao nhiêu lần.)",
+      "vi_du_ruby": "一日に<ruby>何度も<rt>なんども</rt></ruby>歯をみがく｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ほぼ",
+      "doc": "ほぼ",
+      "doc_marked": "ほぼ",
+      "han_viet": "",
+      "nghia": "Hầu như",
+      "vi_du": "",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "寄り道（する）",
+      "doc": "よりみち",
+      "doc_marked": "よりみち",
+      "han_viet": "",
+      "nghia": "Sự tiện đường, ghé ngang, ghé qua",
+      "vi_du": "帰る途中でスーパーに寄り道する｡ (Trên đường về nhà, tôi ghé siêu thị.)",
+      "vi_du_ruby": "帰る途中でスーパーに寄り道する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "食物",
+      "doc": "たべもの",
+      "doc_marked": "たべもの",
+      "han_viet": "",
+      "nghia": "Đồ ăn",
+      "vi_du": "食物アレルギーの表示を見ながら買い物をする｡ (Tôi vừa xem nhãn hiển thị dị ứng đồ ăn vừa đi chợ.)",
+      "vi_du_ruby": "<ruby>食物<rt>たべもの</rt></ruby>アレルギーの表示を見ながら買い物をする｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "換気（する）",
+      "doc": "かんき",
+      "doc_marked": "かんき",
+      "han_viet": "",
+      "nghia": "Sự thông gió",
+      "vi_du": "家に帰ったら、まず窓を開けて換気する｡ (Sau khi về nhà, trước tiên tôi mở cửa sổ để thông gió.)",
+      "vi_du_ruby": "家に帰ったら、まず窓を開けて換気する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "いったん",
+      "doc": "いったん",
+      "doc_marked": "いったん",
+      "han_viet": "",
+      "nghia": "Tạm, một chút",
+      "vi_du": "いったん家に帰ってから、食事に出かける｡ (Tôi về nhà một chút rồi ra ngoài đi ăn.)",
+      "vi_du_ruby": "<ruby>いったん<rt>いったん</rt></ruby>家に帰ってから、食事に出かける｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "物干し",
+      "doc": "ものほし",
+      "doc_marked": "ものほし",
+      "han_viet": "",
+      "nghia": "Dây, chỗ phơi đồ",
+      "vi_du": "洗濯物を物干しから外して、中にしまう｡ (Tôi rút đồ giặt từ dây phơi và cất vào trong.)",
+      "vi_du_ruby": "洗濯物を<ruby>物干し<rt>ものほし</rt></ruby>から外して、中にしまう｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "食卓",
+      "doc": "しょくたく",
+      "doc_marked": "しょくたく",
+      "han_viet": "",
+      "nghia": "Bàn ăn",
+      "vi_du": "ご飯を食べる前に、食卓をきれいにふく｡ (Trước khi ăn cơm, tôi lau bàn ăn cho sạch.)",
+      "vi_du_ruby": "ご飯を食べる前に、<ruby>食卓<rt>しょくたく</rt></ruby>をきれいにふく｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "後回し",
+      "doc": "あとまわし",
+      "doc_marked": "あとまわし",
+      "han_viet": "",
+      "nghia": "Sự để sau, hoãn",
+      "vi_du": "食事を後回しにして、宿題を片付ける｡ (Việc ăn uống để sau, tôi làm cho xong bài tập.)",
+      "vi_du_ruby": "食事を<ruby>後回し<rt>あとまわし</rt></ruby>にして、宿題を片付ける｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "削る",
+      "doc": "けずる",
+      "doc_marked": "けずる",
+      "han_viet": "",
+      "nghia": "Cắt bớt, gọt",
+      "vi_du": "①寝る時間を削って、受験勉強をしている。 ②弟は鉛筆が上手に削れない｡ (①Tôi giảm bớt thời gian ngủ để ôn thi. ②Em trai tôi không gọt bút chì giỏi được.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "かなえる",
+      "doc": "かなえる",
+      "doc_marked": "かなえる",
+      "han_viet": "",
+      "nghia": "Đạt nguyện vọng, mục đích",
+      "vi_du": "夢をかなえるために、毎日一生懸命勉強している｡ (Tôi cố gắng học tập hết mình mỗi ngày để thực hiện ước mơ.)",
+      "vi_du_ruby": "夢を<ruby>かなえる<rt>かなえる</rt></ruby>ために、毎日一生懸命勉強している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "調節（する）",
+      "doc": "ちょうせつ",
+      "doc_marked": "ちょうせつ",
+      "han_viet": "",
+      "nghia": "Sự điều chỉnh",
+      "vi_du": "エアコンの温度を調節する｡ (Tôi điều chỉnh nhiệt độ của máy điều hòa.)",
+      "vi_du_ruby": "エアコンの温度を調節する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "ゆったり（と）（する）",
+      "doc": "ゆったり",
+      "doc_marked": "ゆったり",
+      "han_viet": "",
+      "nghia": "Thong thả, chậm rãi, rộng rãi",
+      "vi_du": "①家に帰ったら、ゆったりした気分で過ごす。 ②このパジャマはゆったりしている｡ (①Về đến nhà rồi thì cảm giác thong thả. ②Bộ đồ này rộng rãi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "売り買い（する）",
+      "doc": "うりかい",
+      "doc_marked": "うりかい",
+      "han_viet": "",
+      "nghia": "Sự mua bán",
+      "vi_du": "毎日ネットのオークションで売り買いしている｡ (Hàng ngày tôi mua bán đấu giá trên mạng.)",
+      "vi_du_ruby": "毎日ネットのオークションで売り買いしている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "思い浮かべる",
+      "doc": "おもいうかべる",
+      "doc_marked": "おもいうかべる",
+      "han_viet": "",
+      "nghia": "Nhớ ra, hồi tưởng",
+      "vi_du": "その日の出来事を思い浮かべて、日記を書く｡ (Tôi hồi tưởng những sự kiện trong ngày và viết nhật ký.)",
+      "vi_du_ruby": "その日の出来事を思い浮かべて、日記を書く｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "独り言",
+      "doc": "ひとりごと",
+      "doc_marked": "ひとりごと",
+      "han_viet": "",
+      "nghia": "Sự nói một mình",
+      "vi_du": "テレビを見ながら、つい独り言を言ってしまう｡ (Tôi vừa xem tivi vừa nói chuyện một mình.)",
+      "vi_du_ruby": "テレビを見ながら、つい<ruby>独り言<rt>ひとりごと</rt></ruby>を言ってしまう｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "風呂場",
+      "doc": "ふろば",
+      "doc_marked": "ふろば",
+      "han_viet": "",
+      "nghia": "Phòng tắm",
+      "vi_du": "毎晩、風呂場で歌を歌っている｡ (Mỗi tối tôi đều hát trong phòng tắm.)",
+      "vi_du_ruby": "毎晩、<ruby>風呂場<rt>ふろば</rt></ruby>で歌を歌っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "かぐ",
+      "doc": "かぐ",
+      "doc_marked": "かぐ",
+      "han_viet": "",
+      "nghia": "Ngửi, hít",
+      "vi_du": "ハーブの匂いをかいで、リラックスする｡ (Tôi hít mùi thảo mộc và thư giãn.)",
+      "vi_du_ruby": "ハーブの匂いをかいで、リラックスする｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "寝つき",
+      "doc": "ねつき",
+      "doc_marked": "ねつき",
+      "han_viet": "",
+      "nghia": "Sự ngủ, dỗ giấc ngủ",
+      "vi_du": "寝つきが悪いので、寝るときに薬を飲む｡ (Vì khó ngủ nên tôi uống thuốc khi ngủ.)",
+      "vi_du_ruby": "<ruby>寝つき<rt>ねつき</rt></ruby>が悪いので、寝るときに薬を飲む｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "用心（する）",
+      "doc": "ようじん",
+      "doc_marked": "よ**う**じん",
+      "han_viet": "",
+      "nghia": "Sự chú ý, cẩn thận",
+      "vi_du": "一人暮らしなので、いつも用心している｡ (Vì tôi sống một mình nên luôn cẩn thận.)",
+      "vi_du_ruby": "一人暮らしなので、いつも用心している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "メッセージ",
+      "doc": "めっせーじ",
+      "doc_marked": "めっせーじ",
+      "han_viet": "",
+      "nghia": "Thông điệp, tin nhắn",
+      "vi_du": "寝る前に、国の家族からメッセージが届いた｡ (Trước khi ngủ, có tin nhắn từ gia đình bên nước gửi đến.)",
+      "vi_du_ruby": "寝る前に、国の家族から<ruby>メッセージ<rt>めっせーじ</rt></ruby>が届いた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

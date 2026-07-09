@@ -1,0 +1,250 @@
+{
+  "type": "TUVUNG",
+  "series": "tango",
+  "title": "Tango N2 - Các ngành công nghiệp",
+  "level": "N2",
+  "words": [
+    {
+      "kanji": "生産（する）",
+      "doc": "せいさん",
+      "doc_marked": "**せい**さん",
+      "han_viet": "",
+      "nghia": "Sự sản xuất",
+      "vi_du": "私の田舎では米の生産が盛んだ｡ (Quê tôi phát triển sản xuất gạo.)",
+      "vi_du_ruby": "私の田舎では米の生産が盛んだ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "供給（する）",
+      "doc": "きょうきゅう",
+      "doc_marked": "きょう**きゅう**",
+      "han_viet": "",
+      "nghia": "Sự cung cấp",
+      "vi_du": "需要と供給のバランスは重要だ｡ (Sự cân bằng giữa nhu cầu và cung cấp rất quan trọng.)",
+      "vi_du_ruby": "需要と供給のバランスは重要だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "栽培（する）",
+      "doc": "さいばい",
+      "doc_marked": "さいばい",
+      "han_viet": "",
+      "nghia": "Sự trồng trọt",
+      "vi_du": "この地域では、いちごを栽培している｡ (Vùng này trồng dâu.)",
+      "vi_du_ruby": "この地域では、いちごを栽培している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "農家",
+      "doc": "のうか",
+      "doc_marked": "の**う**か",
+      "han_viet": "",
+      "nghia": "Nông dân",
+      "vi_du": "野菜は知り合いの農家から直接買っている｡ (Tôi mua rau trực tiếp từ những nhà nông quen biết.)",
+      "vi_du_ruby": "野菜は知り合いの<ruby>農家<rt>のうか</rt></ruby>から直接買っている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "作物",
+      "doc": "さくもつ",
+      "doc_marked": "さくもつ",
+      "han_viet": "",
+      "nghia": "Hoa màu, cây trồng",
+      "vi_du": "農家の人達は愛情を込めて作物を育てている｡ (Những người nông dân trồng hoa màu với nhiều tình cảm.)",
+      "vi_du_ruby": "農家の人達は愛情を込めて<ruby>作物<rt>さくもつ</rt></ruby>を育てている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "漁業",
+      "doc": "ぎょぎょう",
+      "doc_marked": "ぎょぎょう",
+      "han_viet": "",
+      "nghia": "Ngư nghiệp, nghề chài lưới",
+      "vi_du": "父は漁業で一家を支えている｡ (Cha tôi cáng đáng cả nhà bằng nghề chaì lưới.)",
+      "vi_du_ruby": "父は<ruby>漁業<rt>ぎょぎょう</rt></ruby>で一家を支えている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "栄える",
+      "doc": "さかえる",
+      "doc_marked": "さかえる",
+      "han_viet": "",
+      "nghia": "Phồn vinh, hưng thịnh",
+      "vi_du": "この島は漁業で栄えている｡ (Hòn đảo này hưng thịnh nhờ nghề chài lưới.)",
+      "vi_du_ruby": "この島は漁業で栄えている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "普及（する）",
+      "doc": "ふきゅう",
+      "doc_marked": "ふ**きゅう**",
+      "han_viet": "",
+      "nghia": "Sự phổ cập, phổ biến",
+      "vi_du": "",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "急増（する）",
+      "doc": "きゅうぞう",
+      "doc_marked": "**きゅう**ぞう",
+      "han_viet": "",
+      "nghia": "Sự tăng nhanh, tăng đột ngột",
+      "vi_du": "この辺りは最近観光客が急増している｡ (Gần đây, khu vực này khách du lịch tăng đột ngột.)",
+      "vi_du_ruby": "この辺りは最近観光客が急増している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "情緒",
+      "doc": "じょうしょ",
+      "doc_marked": "じょうしょ",
+      "han_viet": "",
+      "nghia": "Trữ tình, cảm xúc",
+      "vi_du": "この町は情緒があるので、観光客が多く訪れる｡ (Thành phố này trữ tình nên có nhiều khách du lịch thăm quan.)",
+      "vi_du_ruby": "この町は<ruby>情緒<rt>じょうしょ</rt></ruby>があるので、観光客が多く訪れる｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "向上（する）",
+      "doc": "こうじょう",
+      "doc_marked": "こ**う**じょう",
+      "han_viet": "",
+      "nghia": "Sự tăng cường, nâng cao",
+      "vi_du": "新しい技術で、この工場の生産性が向上した｡ (Bằng kỹ thuật mới, việc sản xuất của nhà máy này được nâng cao.)",
+      "vi_du_ruby": "新しい技術で、この工場の生産性が向上した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "構成（する）",
+      "doc": "こうせい",
+      "doc_marked": "こう**せい**",
+      "han_viet": "",
+      "nghia": "Sự hình thành, tạo thành",
+      "vi_du": "地元の商品を開発するため、チームが構成された｡ (Để khai thác sản phẩm của địa phương, đội đã được hình thành)",
+      "vi_du_ruby": "地元の商品を開発するため、チームが構成された｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "重視（する）",
+      "doc": "じゅうし",
+      "doc_marked": "**じゅう**し",
+      "han_viet": "",
+      "nghia": "Sự xem trọng",
+      "vi_du": "",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "提案（する）",
+      "doc": "ていあん",
+      "doc_marked": "**てい**あん",
+      "han_viet": "",
+      "nghia": "Đề án",
+      "vi_du": "地元の産業を生かした商品を提案する｡ (Đưa ra đề án sản phẩm phát huy ngành công nghiệp của địa phương.)",
+      "vi_du_ruby": "地元の産業を生かした商品を提案する｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "検討（する）",
+      "doc": "けんとう",
+      "doc_marked": "けんと**う**",
+      "han_viet": "",
+      "nghia": "Sự cân nhắc, nghiên cứu, bàn thảo",
+      "vi_du": "私の会社では新しい工場の建設を検討している｡ (Công ty tôi đang bàn thảo về việc xây dựng nhà máy mới.)",
+      "vi_du_ruby": "私の会社では新しい工場の建設を検討している｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "不可欠な",
+      "doc": "ふかけつな",
+      "doc_marked": "ふかけつな",
+      "han_viet": "",
+      "nghia": "Không thể thiếu",
+      "vi_du": "この国には新しい産業が不可欠だ｡ (Ở nước này, ngành công nghiệp mới là không thể thiếu.)",
+      "vi_du_ruby": "この国には新しい産業が不可欠だ｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "妨げる",
+      "doc": "さまたげる",
+      "doc_marked": "さまたげる",
+      "han_viet": "",
+      "nghia": "Gây trở ngại, ảnh hưởng",
+      "vi_du": "古いルールが新しい産業の発展を妨げている｡ (Quy định cũ gây trở ngại cho sự phát triển của ngành công nghiệp mới.)",
+      "vi_du_ruby": "古いルールが新しい産業の発展を妨げている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "生える",
+      "doc": "はえる",
+      "doc_marked": "はえる",
+      "han_viet": "",
+      "nghia": "Mọc",
+      "vi_du": "春になって、畑に雑草が生えてきた｡ (Đến mùa xuân, cỏ dại mọc đầy ruộng đồng.)",
+      "vi_du_ruby": "春になって、畑に雑草が生えてきた｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "著しい",
+      "doc": "いちじるしい",
+      "doc_marked": "いちじるしい",
+      "han_viet": "",
+      "nghia": "Đáng kể",
+      "vi_du": "1960年代の頃から機械工業が著しく進歩した｡ (Từ khoảng những năm 1960, ngành công nghiệp cơ khí đã tiến bộ đáng kể.)",
+      "vi_du_ruby": "1960年代の頃から機械工業が著しく進歩した｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "参考",
+      "doc": "さんこう",
+      "doc_marked": "さんこ**う**",
+      "han_viet": "",
+      "nghia": "Sự thăm khảo",
+      "vi_du": "このロボットは人間や動物の動きを参考にしている｡ (Người máy này, chúng tôi đã tham khảo cử động của người và động vật.)",
+      "vi_du_ruby": "このロボットは人間や動物の動きを<ruby>参考<rt>さんこう</rt></ruby>にしている｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "リスク",
+      "doc": "りすく",
+      "doc_marked": "りすく",
+      "han_viet": "",
+      "nghia": "Rủi ro",
+      "vi_du": "農業には常に自然災害というリスクがある｡ (Trong ngành nông nghiệp thường có rủi ro về thiên tai.)",
+      "vi_du_ruby": "農業には常に自然災害という<ruby>リスク<rt>りすく</rt></ruby>がある｡",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "kanji": "現地",
+      "doc": "げんち",
+      "doc_marked": "げんち",
+      "han_viet": "",
+      "nghia": "(Nước, địa phương) sở tại, địa bàn",
+      "vi_du": "",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}
