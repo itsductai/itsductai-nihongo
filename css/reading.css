@@ -5,6 +5,25 @@
 
 .dokkai-phase { max-width: 1180px; margin: 0 auto; padding: 20px 16px 60px; position: relative; }
 
+/* FIX "bị bó hẹp" — #view-reading trước đây CHƯA có CSS riêng nào, vẫn dùng
+   nguyên .view{max-width:920px} gốc khiến .dokkai-phase{max-width:1180px}
+   bên trong vô nghĩa (đã bị kẹp từ ngoài). Giờ theo đúng pattern game.css:
+   mặc định nới rộng vừa đủ (không đè navbar), CHỈ full 100vw/100vh thật khi
+   bấm nút phóng to (focus-mode, navbar đã ẩn). */
+#view-reading {
+  position: relative; max-width: none;
+  margin: -28px -36px; width: calc(100% + 72px); min-height: calc(100vh - 100px);
+}
+#app.focus-mode #view-reading {
+  position: fixed !important; inset: 0 !important; z-index: 30 !important;
+  margin: 0 !important; width: 100vw !important; max-width: none !important;
+  height: 100vh !important; min-height: 100vh !important; overflow-y: auto;
+  background: var(--bg-0); padding: 20px;
+}
+@media (max-width: 860px) {
+  #view-reading { margin: -16px -12px; width: calc(100% + 24px); }
+}
+
 /* ---- Màn chọn bài đọc ---- */
 .dokkai-article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin-top: 16px; }
 .dokkai-article-card {
@@ -53,6 +72,18 @@
 }
 .dokkai-translate-btn:hover { border-color: var(--accent); color: var(--text-0); }
 .dokkai-translate-btn.is-active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.dokkai-furigana-toggle {
+  font-size: 12px; font-weight: 700; padding: 6px 12px; border-radius: 999px;
+  background: var(--bg-2); border: 1px solid var(--border-soft); color: var(--text-2); cursor: pointer;
+}
+.dokkai-furigana-toggle.is-active { background: var(--good-soft); border-color: var(--good); color: var(--good); }
+.dokkai-furigana-hidden rt { display: none; }
+
+/* Furigana-only (cú pháp {{chữ|đọc}} 2 phần, không có nghĩa riêng) — không
+   click được, chỉ hiện cách đọc như furigana thông thường, không viền chấm
+   như .dokkai-gloss (để phân biệt rõ: có viền = có thể click xem nghĩa). */
+.dokkai-furigana-only rt { color: var(--text-2); font-weight: 500; }
 
 /* ---- Layout 3 CỘT: từ vựng | bài đọc + quiz | ngữ pháp ---- */
 .dokkai-3col { display: grid; grid-template-columns: 220px 1fr 220px; gap: 20px; align-items: start; }
