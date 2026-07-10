@@ -1,0 +1,224 @@
+{
+  "id": "reading-18",
+  "title": "泥道からハイウェイへ：NTTが挑む「光の革命」",
+  "titleVi": "Từ đường lầy đến cao tốc: Cuộc \"cách mạng ánh sáng\" của NTT",
+  "level": "N1",
+  "category": "経済",
+  "date": "2026-07-10",
+  "source": "ai",
+  "private": true,
+  "sourceNote": "Dựa trên thông tin thực tế về công nghệ IOWN của NTT (NTT DATA Group, IEEE ComSoc, mục tiêu hiệu suất 100x/125x/1-200, đối tác ETSI tháng 3/2026) — bài viết do AI viết lại hoàn toàn bằng văn phong riêng theo đúng chuẩn bẫy JLPT, không sao chép nguyên văn nguồn.",
+  "paragraphs": [
+    "{{生成|せいせい|sinh thành, tạo ra}}AIの{{爆発的|ばくはつてき|mang tính bùng nổ}}な{{普及|ふきゅう|phổ biến}}により、{{世界中|せかいじゅう|khắp thế giới}}の{{データセンター|でーたせんたー|trung tâm dữ liệu}}は「{{電力消費|でんりょくしょうひ|tiêu thụ điện năng}}の{{壁|かべ|bức tường, rào cản}}」に{{直面|ちょくめん|đối mặt}}している。{{現在|げんざい|hiện tại}}の{{通信|つうしん|thông tin liên lạc}}{{網|もう|mạng lưới}}は、{{渋滞|じゅうたい|tắc nghẽn}}が{{日常化|にちじょうか|trở thành thường nhật}}した{{細|ほそ}}い{{泥道|どろみち|đường lầy lội}}のようなものだと{{例|たと}}えられる。{{電気信号|でんきしんごう|tín hiệu điện}}は{{交差点|こうさてん|giao lộ, ngã tư}}——すなわち{{通信機器|つうしんきき|thiết bị viễn thông}}の{{中継地点|ちゅうけいちてん|điểm trung chuyển}}——を{{通|とお}}るたびに、いったん{{速度|そくど|tốc độ}}を{{落|お}}とさなければならず、そこで{{膨大|ぼうだい|khổng lồ, to lớn}}な{{電力|でんりょく|điện năng}}が{{消費|しょうひ|tiêu hao}}されてしまう。",
+    "この{{危機|きき|nguy cơ, khủng hoảng}}を{{打破|だは|đánh phá, xóa bỏ}}するため、NTTが{{世界|せかい}}を{{リード|りーど|dẫn đầu}}して{{開発|かいはつ|phát triển}}を{{進|すす}}めているのが「IOWN」{{構想|こうそう|tầm nhìn, kế hoạch}}である。これは、{{従来|じゅうらい|trước nay}}の{{電子信号|でんししんごう|tín hiệu điện tử}}を{{光信号|ひかりしんごう|tín hiệu ánh sáng}}へと{{完全|かんぜん|hoàn toàn}}に{{置|お}}き{{換|か}}える{{技術|ぎじゅつ|kỹ thuật, công nghệ}}であり、{{例|たと}}えるなら「{{渋滞|じゅうたい}}が{{日常化|にちじょうか}}した{{細|ほそ}}い{{泥道|どろみち}}を、{{光|ひかり}}の{{速|はや}}さで{{移動|いどう|di chuyển}}できる{{無重力|むじゅうりょく|không trọng lực}}の{{ハイウェイ|はいうぇい|đường cao tốc}}に{{作|つく}}り{{変|か}}える」ようなものだ。{{電子|でんし|điện tử}}の{{代|か}}わりに{{光|ひかり}}の{{粒子|りゅうし|hạt, phân tử}}（{{光子|こうし|photon}}）を{{使|つか}}うことで、{{電力消費|でんりょくしょうひ}}を{{現在|げんざい}}の100{{分|ぶん}}の1に{{抑|おさ}}えつつ、{{通信容量|つうしんようりょう|dung lượng truyền tải}}を125{{倍|ばい}}に{{引|ひ}}き{{上|あ}}げることを{{目標|もくひょう|mục tiêu}}に{{掲|かか}}げている。",
+    "{{注目|ちゅうもく|chú ý, quan tâm}}すべきは、これが{{単|たん}}なる「{{通信速度|つうしんそくど|tốc độ liên lạc}}の{{向上|こうじょう|nâng cao}}」を{{意味|いみ}}するのではないという{{点|てん|điểm}}である。{{泥道|どろみち}}が{{無重力|むじゅうりょく}}のハイウェイに{{変|か}}われば、これまで{{速度|そくど}}の{{制約|せいやく|hạn chế, ràng buộc}}によって{{実現|じつげん|hiện thực hóa}}できなかった{{移動|いどう}}——{{遠隔手術|えんかくしゅじゅつ|phẫu thuật từ xa}}や{{完全自動運転|かんぜんじどううんてん|lái xe tự động hoàn toàn}}——が、{{初|はじ}}めて{{可能|かのう|khả thi}}になる。2026{{年|ねん}}には、NTTは{{半導体|はんどうたい|chất bán dẫn}}{{大手|おおて|hãng lớn}}のブロードコム{{社|しゃ}}と{{共同|きょうどう|hợp tác}}で、{{光|ひかり}}と{{電気|でんき}}の{{変換|へんかん|chuyển đổi}}を1つの{{部品|ぶひん|linh kiện}}に{{集約|しゅうやく|tập trung, cô đọng}}する{{機器|きき|thiết bị}}（PEC）の{{販売|はんばい|bán, kinh doanh}}を{{開始|かいし|bắt đầu}}する{{予定|よてい|dự định}}であり、まずはGoogleやAmazonといった{{巨大|きょだい|khổng lồ}}な{{クラウド事業者|くらうどじぎょうしゃ|nhà cung cấp dịch vụ đám mây}}への{{導入|どうにゅう|áp dụng, đưa vào}}を{{狙|ねら}}っているという。",
+    "このIOWN{{構想|こうそう}}は、NTT{{単独|たんどく|đơn độc, một mình}}の{{取|と}}り{{組|く}}みにとどまらない。2020{{年|ねん}}にNTT、ソニー、インテルの3{{社|しゃ}}が{{共同|きょうどう}}で{{設立|せつりつ|thành lập}}した「IOWNグローバルフォーラム」には、{{現在|げんざい}}{{世界中|せかいじゅう}}から170{{社|しゃ}}{{近|ちか}}くの{{企業|きぎょう|doanh nghiệp}}・{{団体|だんたい|đoàn thể, tổ chức}}が{{参加|さんか|tham gia}}している。さらに2026{{年|ねん}}3{{月|がつ}}には、ヨーロッパの{{標準化|ひょうじゅんか|tiêu chuẩn hóa}}{{団体|だんたい}}であるETSIとの{{提携|ていけい|hợp tác, liên minh}}も{{発表|はっぴょう|công bố}}された。{{電力|でんりょく}}という「{{見|み}}えない{{制約|せいやく}}」を{{取|と}}り{{払|はら}}おうとするこの{{挑戦|ちょうせん|thử thách}}は、もはや1{{企業|きぎょう}}{{単独|たんどく}}の{{野望|やぼう|tham vọng}}ではなく、{{通信|つうしん}}インフラの{{未来|みらい|tương lai}}を{{左右|さゆう|chi phối, ảnh hưởng đến}}しかねない、{{国境|こっきょう|biên giới quốc gia}}を{{越|こ}}えた{{潮流|ちょうりゅう|trào lưu, xu hướng}}になりつつあると言えるだろう。"
+  ],
+  "paragraphsVi": [
+    "Do sự phổ biến bùng nổ của AI tạo sinh, các trung tâm dữ liệu trên toàn thế giới đang đối mặt với \"bức tường tiêu thụ điện năng\". Mạng lưới viễn thông hiện tại có thể được ví như một con đường lầy lội hẹp mà tắc nghẽn đã trở thành chuyện thường nhật. Mỗi khi tín hiệu điện đi qua một giao lộ — tức điểm trung chuyển của thiết bị viễn thông — nó buộc phải giảm tốc độ, và tại đó một lượng điện năng khổng lồ bị tiêu hao.",
+    "Để phá vỡ nguy cơ này, tầm nhìn mà NTT đang dẫn đầu thế giới để phát triển chính là kế hoạch \"IOWN\". Đây là công nghệ thay thế hoàn toàn tín hiệu điện tử truyền thống bằng tín hiệu ánh sáng, có thể ví như \"biến con đường lầy lội hẹp nơi tắc nghẽn đã thành thường nhật, thành đường cao tốc không trọng lực có thể di chuyển với tốc độ ánh sáng\". Bằng việc sử dụng hạt ánh sáng (photon) thay cho điện tử, họ đề ra mục tiêu vừa giảm tiêu thụ điện xuống còn 1/100 hiện tại, vừa nâng dung lượng truyền tải lên gấp 125 lần.",
+    "Điều đáng chú ý là điều này không chỉ có nghĩa là \"nâng cao tốc độ liên lạc\" đơn thuần. Khi con đường lầy chuyển thành cao tốc không trọng lực, những sự di chuyển trước đây không thể hiện thực hóa được do giới hạn về tốc độ — như phẫu thuật từ xa hay lái xe tự động hoàn toàn — lần đầu tiên trở nên khả thi. Vào năm 2026, NTT dự định cùng hãng bán dẫn lớn Broadcom bắt đầu bán ra thiết bị (PEC) tích hợp việc chuyển đổi ánh sáng-điện vào một linh kiện duy nhất, nhắm trước tiên tới việc đưa vào sử dụng ở các nhà cung cấp dịch vụ đám mây khổng lồ như Google và Amazon.",
+    "Tầm nhìn IOWN này không dừng lại ở nỗ lực đơn độc của riêng NTT. \"Diễn đàn Toàn cầu IOWN\" được ba công ty NTT, Sony, Intel cùng thành lập năm 2020, hiện có gần 170 doanh nghiệp và tổ chức từ khắp thế giới tham gia. Hơn nữa, vào tháng 3 năm 2026, việc hợp tác với ETSI — tổ chức tiêu chuẩn hóa của châu Âu — cũng đã được công bố. Thử thách nhằm xóa bỏ \"giới hạn vô hình\" mang tên điện năng này có thể nói không còn là tham vọng đơn độc của một doanh nghiệp nữa, mà đang dần trở thành một trào lưu vượt biên giới quốc gia, có khả năng chi phối tương lai của hạ tầng viễn thông."
+  ],
+  "questions": [
+    {
+      "difficulty": 2,
+      "type": "referent",
+      "q": "第1段落の「電力消費の壁」とは、具体的にどのような状況を指すか。",
+      "options": [
+        "生成AIの普及で、データセンターの電力消費が深刻な課題となっている状況",
+        "世界中で電気料金の値上げが相次いでいる状況",
+        "光ファイバー製造に必要な資源が不足している状況",
+        "通信機器の故障が世界的に増加している状況"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 3,
+      "type": "reason",
+      "q": "電気信号が交差点（中継地点）を通るたびに、なぜ膨大な電力が消費されてしまうのか。",
+      "options": [
+        "信号が中継地点を通るたびに速度を落とさなければならないから",
+        "中継地点にある機器が、そもそも古い型式のものばかりだから",
+        "光信号は電気信号よりも消費電力が大きいから",
+        "通信会社が意図的に電力消費を増やす設定にしているから"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 3,
+      "q": "「泥道を、無重力のハイウェイに作り変える」という表現は、具体的にどのような技術を指しているか。",
+      "options": [
+        "電子信号を光信号に完全に置き換える技術",
+        "既存の道路網を全面的に改修する土木技術",
+        "自動車の燃費を大幅に向上させる技術",
+        "宇宙空間での通信を可能にする技術"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 4,
+      "q": "IOWNの実現によって初めて可能になると本文で述べられているのはどれか。",
+      "options": [
+        "遠隔手術や完全自動運転といった、速度の制約で実現できなかった応用",
+        "すべての家庭に無料でネットを提供すること",
+        "電気料金を完全に無料にすること",
+        "世界中のデータセンターを統合すること"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 5,
+      "type": "main_idea",
+      "q": "この文章で筆者が最も伝えたいことはどれか。",
+      "options": [
+        "IOWNは電力という見えない制約を取り払う、国境を越えた潮流になりつつある。",
+        "NTTは日本国内だけで通用する独自技術の開発に専念すべきだ。",
+        "AIの普及は電力問題を悪化させるだけで、何の恩恵ももたらさない。",
+        "光信号による通信は、まだ実用化にはほど遠い未来の技術である。"
+      ],
+      "answer": 0
+    }
+  ],
+  "n2VocabList": [
+    {
+      "kanji": "電力消費",
+      "hanviet": "ĐIỆN LỰC TIÊU PHÍ",
+      "reading": "でんりょくしょうひ",
+      "meaning": "[IT] tiêu thụ điện năng",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "光信号",
+      "hanviet": "QUANG TÍN HIỆU",
+      "reading": "ひかりしんごう",
+      "meaning": "[IT] tín hiệu ánh sáng",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "電子信号",
+      "hanviet": "ĐIỆN TỬ TÍN HIỆU",
+      "reading": "でんししんごう",
+      "meaning": "[IT] tín hiệu điện tử",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "通信容量",
+      "hanviet": "THÔNG TÍN DUNG LƯỢNG",
+      "reading": "つうしんようりょう",
+      "meaning": "[IT] dung lượng truyền tải",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "中継地点",
+      "hanviet": "TRUNG KẾ ĐỊA ĐIỂM",
+      "reading": "ちゅうけいちてん",
+      "meaning": "[IT] điểm trung chuyển mạng",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "半導体",
+      "hanviet": "BÁN ĐẠO THỂ",
+      "reading": "はんどうたい",
+      "meaning": "[IT] chất bán dẫn",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "遠隔手術",
+      "hanviet": "VIỄN CÁCH THỦ THUẬT",
+      "reading": "えんかくしゅじゅつ",
+      "meaning": "[IT] phẫu thuật từ xa",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "完全自動運転",
+      "hanviet": "HOÀN TOÀN TỰ ĐỘNG VẬN CHUYỂN",
+      "reading": "かんぜんじどううんてん",
+      "meaning": "[IT] lái xe tự động hoàn toàn",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "構想",
+      "hanviet": "CẤU TƯỞNG",
+      "reading": "こうそう",
+      "meaning": "[Business] tầm nhìn, kế hoạch lớn",
+      "colorTag": "yellow"
+    },
+    {
+      "kanji": "打破",
+      "hanviet": "ĐÃ PHÁ",
+      "reading": "だは",
+      "meaning": "[Business] đánh phá, xóa bỏ (rào cản)",
+      "colorTag": "yellow"
+    },
+    {
+      "kanji": "集約",
+      "hanviet": "TẬP ƯỚC",
+      "reading": "しゅうやく",
+      "meaning": "[Business] tập trung, cô đọng lại",
+      "colorTag": "yellow"
+    },
+    {
+      "kanji": "標準化",
+      "hanviet": "TIÊU CHUẨN HÓA",
+      "reading": "ひょうじゅんか",
+      "meaning": "[Business] tiêu chuẩn hóa",
+      "colorTag": "yellow"
+    },
+    {
+      "kanji": "提携",
+      "hanviet": "ĐỀ HUỀ",
+      "reading": "ていけい",
+      "meaning": "[Business] hợp tác, liên minh doanh nghiệp",
+      "colorTag": "yellow"
+    },
+    {
+      "kanji": "潮流",
+      "hanviet": "TRÀO LƯU",
+      "reading": "ちょうりゅう",
+      "meaning": "[Business] trào lưu, xu hướng lớn",
+      "colorTag": "yellow"
+    },
+    {
+      "kanji": "野望",
+      "hanviet": "DÃ VỌNG",
+      "reading": "やぼう",
+      "meaning": "[Business] tham vọng",
+      "colorTag": "yellow"
+    }
+  ],
+  "grammarList": [
+    {
+      "pattern": "〜に直面している",
+      "meaning": "đang đối mặt với..."
+    },
+    {
+      "pattern": "〜のようなものだと例えられる",
+      "meaning": "được ví như là..."
+    },
+    {
+      "pattern": "〜つつ、〜を目標に掲げている",
+      "meaning": "vừa..., vừa đề ra mục tiêu..."
+    },
+    {
+      "pattern": "〜べきは、〜という点である",
+      "meaning": "điều cần chú ý là ở điểm rằng..."
+    },
+    {
+      "pattern": "〜によって、初めて〜になる",
+      "meaning": "nhờ..., lần đầu tiên mới trở nên..."
+    },
+    {
+      "pattern": "〜という予定であり、〜を狙っているという",
+      "meaning": "dự định là..., và được cho là đang nhắm tới..."
+    },
+    {
+      "pattern": "〜にとどまらない",
+      "meaning": "không dừng lại ở..."
+    },
+    {
+      "pattern": "〜になりつつあると言えるだろう",
+      "meaning": "có thể nói là đang dần trở thành..."
+    }
+  ]
+}
