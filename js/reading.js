@@ -158,7 +158,8 @@ function renderDokkaiPicker() {
   const filter = App.dokkaiCategoryFilter || "all";
   let list = filter === "all" ? App.dokkaiArticles : App.dokkaiArticles.filter((a) => a.category === filter);
   // Sắp CŨ NHẤT -> MỚI NHẤT theo field date (yêu cầu rõ ràng).
-  list = list.slice().sort((a, b) => (a.date || "").localeCompare(b.date || ""));
+  // Sắp MỚI NHẤT -> CŨ NHẤT (đảo lại theo đúng yêu cầu mới nhất).
+  list = list.slice().sort((a, b) => (b.date || "").localeCompare(a.date || ""));
   if (!list.length) {
     grid.innerHTML = `<div class="dash-chart-empty">Chưa có bài đọc nào ở chủ đề này.</div>`;
     return;
@@ -169,8 +170,11 @@ function renderDokkaiPicker() {
 
   function cardHtml(a) {
     const isRead = !!history[a.id];
+    const daysSince = a.date ? (Date.now() - new Date(a.date).getTime()) / 86400000 : 999;
+    const isNew = daysSince <= 7;
     return `
       <button class="dokkai-article-card${isRead ? " is-read" : ""}" data-article-id="${a.id}">
+        ${isNew ? `<span class="dokkai-new-badge">NEW</span>` : ""}
         <div class="dokkai-article-card-illust">${getDokkaiCategoryIcon(a.category)}</div>
         <div class="dokkai-article-card-head">
           <span class="dokkai-level-badge" style="background:${DOKKAI_LEVEL_COLORS[a.level] || "var(--accent)"}22; color:${DOKKAI_LEVEL_COLORS[a.level] || "var(--accent)"}">${a.level}</span>
@@ -555,6 +559,48 @@ function addToDokkaiNotebook(vocab, article) {
   });
   saveDokkaiNotebook(notebook);
 }
+
+function openDokkaiNotebookModal() {
+  renderDokkaiNotebookList();
+  document.getElementById("dokkaiNotebookModalOverlay").classList.remove("hidden");
+}
+
+function renderDokkaiNotebookList() {
+  const notebook = loadDokkaiNotebook();
+  document.getElementById("dokkaiNotebookCount").textContent = `${notebook.length} từ đã ghi chú`;
+  const wrap = document.getElementById("dokkaiNotebookList");
+  if (!notebook.length) {
+    wrap.innerHTML = `<div class="dash-chart-empty">Sổ tay đang trống — bấm "+" cạnh từ vựng trong bài đọc để thêm.</div>`;
+    return;
+  }
+  // Mới thêm hiện TRƯỚC (dễ thấy từ vừa lưu), khác với danh sách bài đọc (cũ->mới).
+  const sorted = notebook.slice().sort((a, b) => b.addedAt - a.addedAt);
+  wrap.innerHTML = sorted.map((n, i) => `
+    <div class="dokkai-notebook-item">
+      <div class="dokkai-notebook-item-head">
+        <span class="dokkai-notebook-kanji">${n.kanji}</span>
+        <span class="dokkai-notebook-reading">${n.reading}</span>
+        <span class="dokkai-notebook-hanviet">${n.hanviet || ""}</span>
+        <button class="dokkai-notebook-del-btn" data-idx="${i}" title="Xóa khỏi sổ tay">✕</button>
+      </div>
+      <div class="dokkai-notebook-meaning">${n.meaning}</div>
+      ${n.exampleJp ? `<div class="dokkai-notebook-example">${n.exampleJp}</div>` : ""}
+      ${n.exampleVi ? `<div class="dokkai-notebook-example-vi">${n.exampleVi}</div>` : ""}
+      <div class="dokkai-notebook-source">Từ bài: ${n.fromArticle}</div>
+    </div>
+  `).join("");
+  wrap.querySelectorAll(".dokkai-notebook-del-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const idx = parseInt(btn.dataset.idx, 10);
+      const current = loadDokkaiNotebook().slice().sort((a, b) => b.addedAt - a.addedAt);
+      const target = current[idx];
+      const original = loadDokkaiNotebook().filter((n) => !(n.kanji === target.kanji && n.addedAt === target.addedAt));
+      saveDokkaiNotebook(original);
+      renderDokkaiNotebookList();
+    });
+  });
+}
+
 function exportDokkaiNotebookTxt() {
   const notebook = loadDokkaiNotebook();
   if (!notebook.length) { alert("Sổ tay đang trống."); return; }
