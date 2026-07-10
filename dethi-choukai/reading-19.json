@@ -1,0 +1,196 @@
+{
+  "id": "reading-19",
+  "title": "チェス盤の上で未来を先読みする",
+  "titleVi": "Đọc trước tương lai trên bàn cờ vua",
+  "level": "N1",
+  "category": "経済",
+  "date": "2026-07-10",
+  "source": "ai",
+  "private": true,
+  "sourceNote": "Dựa trên khái niệm Digital Twin/Smart City thực tế của NTT DATA — bài viết do AI viết lại hoàn toàn bằng văn phong riêng theo chuẩn bẫy JLPT, không sao chép nguyên văn.",
+  "paragraphs": [
+    "{{チェス|ちぇす|cờ vua}}の{{名人|めいじん|kỳ thủ đại tài, cao thủ}}は、{{目|め}}の{{前|まえ}}の１{{手|て}}だけでなく、{{数十手|すうじって|hàng chục nước đi}}{{先|さき}}まで{{盤面|ばんめん|thế cờ, tình huống trên bàn cờ}}を{{読|よ}}み、{{相手|あいて|đối phương}}がどう{{動|うご}}くかを{{予測|よそく|dự đoán}}しながら{{戦|たたか}}うという。もし、{{実際|じっさい|thực tế}}に{{石|いし}}を{{動|うご}}かす{{前|まえ}}に、あらゆる{{展開|てんかい|diễn biến, khai triển}}を{{頭|あたま}}の{{中|なか}}で{{何度|なんど|nhiều lần}}も{{試|ため}}すことができたなら——{{都市|とし|đô thị, thành phố}}{{計画|けいかく|kế hoạch}}という「{{現実|げんじつ|hiện thực}}」の{{領域|りょういき|lĩnh vực}}にも、この{{発想|はっそう|lối tư duy}}を{{持|も}}ち{{込|こ}}もうとする{{試|こころ}}みが{{進|すす}}んでいる。",
+    "「デジタルツイン（{{仮想|かそう|ảo, giả tưởng}}の{{双子|ふたご|sinh đôi}}）」と{{呼|よ}}ばれるこの{{技術|ぎじゅつ|kỹ thuật, công nghệ}}は、{{現実|げんじつ}}の{{都市|とし}}から{{交通量|こうつうりょう|lưu lượng giao thông}}、{{気象|きしょう|thời tiết, khí tượng}}、{{人|ひと}}の{{流|なが}}れといった{{膨大|ぼうだい|khổng lồ, to lớn}}な{{データ|でーた|dữ liệu}}を{{リアルタイム|りあるたいむ|thời gian thực}}で{{収集|しゅうしゅう|thu thập}}し、サイバー{{空間|くうかん|không gian}}{{上|じょう}}に、それと{{全|まった}}く{{同|おな}}じ{{都市|とし}}を{{再現|さいげん|tái hiện}}するという{{取|と}}り{{組|く}}みである。この{{仮想|かそう}}の「もう{{一|ひと}}つの{{都市|とし}}」があれば、{{現実|げんじつ}}を{{動|うご}}かす{{前|まえ}}に、{{様々|さまざま|đa dạng, nhiều loại}}な{{政策|せいさく|chính sách}}や{{災害|さいがい|thảm họa}}への{{対応|たいおう|ứng phó}}を、{{何度|なんど}}でも{{試|ため}}すことができる。",
+    "たとえば、{{巨大|きょだい|khổng lồ}}な{{台風|たいふう|bão}}が{{接近|せっきん|tiếp cận, gần tới}}した{{際|さい|khi, lúc}}、この{{仮想|かそう}}{{都市|とし}}{{上|じょう}}で{{浸水|しんすい|ngập nước}}{{経路|けいろ|đường đi, tuyến đường}}や{{避難|ひなん|lánh nạn}}{{時|じ}}の{{渋滞|じゅうたい|tắc nghẽn}}を{{瞬時|しゅんじ|tức thì}}に{{計算|けいさん|tính toán}}し、{{現実|げんじつ}}{{世界|せかい}}での{{最適|さいてき|tối ưu}}な{{避難指示|ひなんしじ|chỉ thị lánh nạn}}を{{導|みちび}}き{{出|だ}}すことができるという。ただし、この{{技術|ぎじゅつ}}が{{意味|いみ}}するのは、{{単|たん}}に{{災害対策|さいがいたいさく|đối sách thiên tai}}が{{便利|べんり|tiện lợi}}になったということだけではない。{{都市計画|としけいかく|kế hoạch đô thị}}という{{行為|こうい|hành vi}}そのものが、{{一度|いちど}}{{作|つく}}ったら{{固定|こてい|cố định}}される「{{建築|けんちく|kiến trúc}}」から、データによって{{絶|た}}えず{{更新|こうしん|cập nhật}}され{{続|つづ}}ける「{{生命体|せいめいたい|sinh mệnh thể, cơ thể sống}}」{{へ|へ}}と、その{{性質|せいしつ|tính chất}}を{{変|か}}えつつあるという{{点|てん|điểm}}にある。",
+    "{{従来|じゅうらい|trước nay}}の{{都市計画|としけいかく}}は、{{完成|かんせい|hoàn thành}}した{{時点|じてん|thời điểm}}で{{一区切|ひとくぎ}}りがつく、いわば「{{静的|せいてき|mang tính tĩnh}}」な{{営|いとな}}みであった。しかし、デジタルツインが{{前提|ぜんてい|tiền đề}}とする{{世界|せかい}}では、{{都市|とし}}は{{常|つね}}に{{変化|へんか|thay đổi}}し{{続|つづ}}ける{{データ|でーた}}を{{取|と}}り{{込|こ}}みながら、{{絶|た}}えず{{自|みずか}}らの{{姿|すがた}}を{{見直|みなお}}し{{続|つづ}}ける「{{動的|どうてき|mang tính động}}」な{{存在|そんざい|sự tồn tại}}へと{{変|か}}わっていく。{{石|いし}}を{{一|ひと}}つ{{動|うご}}かすたびに{{盤面|ばんめん}}{{全体|ぜんたい|toàn thể}}を{{読|よ}}み{{直|なお}}すチェスの{{名人|めいじん}}のように、これからの{{都市|とし}}もまた、{{絶|た}}えず{{自|みずか}}らを{{読|よ}}み{{直|なお}}し{{続|つづ}}ける{{存在|そんざい}}になっていくのかもしれない。"
+  ],
+  "paragraphsVi": [
+    "Người ta nói rằng đại kỳ thủ cờ vua không chỉ đọc nước đi ngay trước mắt, mà còn đọc thế cờ tới hàng chục nước tiếp theo, vừa dự đoán đối phương sẽ di chuyển ra sao vừa chiến đấu. Nếu như, trước khi thực sự di chuyển quân cờ, có thể thử đi thử lại mọi diễn biến trong đầu nhiều lần — thì nỗ lực đưa lối tư duy này vào lĩnh vực \"hiện thực\" mang tên quy hoạch đô thị cũng đang được tiến hành.",
+    "Công nghệ được gọi là \"Digital Twin\" (cặp song sinh ảo) này là nỗ lực thu thập theo thời gian thực một lượng dữ liệu khổng lồ từ thành phố thực — như lưu lượng giao thông, thời tiết, dòng người — rồi tái hiện lại chính xác thành phố đó trên không gian mạng. Nếu có \"thành phố khác\" ảo này, người ta có thể thử nghiệm nhiều lần các chính sách khác nhau hay cách ứng phó thiên tai, trước khi thực sự vận hành trong thực tế.",
+    "Ví dụ, khi một cơn bão lớn tiếp cận, trên thành phố ảo này có thể tính toán tức thì tuyến đường ngập nước hay tình trạng tắc nghẽn lúc lánh nạn, từ đó đưa ra chỉ thị lánh nạn tối ưu cho thế giới thực. Tuy nhiên, điều mà công nghệ này mang lại ý nghĩa không chỉ đơn thuần là đối sách thiên tai trở nên tiện lợi hơn. Bản thân hành vi quy hoạch đô thị đang dần thay đổi tính chất — từ \"kiến trúc\" một khi đã xây thì cố định, chuyển sang \"sinh mệnh thể\" liên tục được cập nhật bởi dữ liệu.",
+    "Quy hoạch đô thị truyền thống là một hoạt động mang tính \"tĩnh\", có thể nói là khép lại một đoạn tại thời điểm hoàn thành. Nhưng trong thế giới mà Digital Twin lấy làm tiền đề, thành phố sẽ chuyển thành một sự tồn tại mang tính \"động\" — luôn tiếp nhận dữ liệu thay đổi không ngừng, liên tục nhìn nhận lại chính hình dáng của mình. Giống như đại kỳ thủ cờ vua đọc lại toàn bộ thế cờ mỗi khi di chuyển một quân cờ, có lẽ thành phố từ nay về sau cũng sẽ trở thành một sự tồn tại liên tục tự đọc lại chính mình."
+  ],
+  "questions": [
+    {
+      "difficulty": 2,
+      "type": "referent",
+      "q": "第2段落の「この仮想の『もう一つの都市』」とは、具体的に何を指すか。",
+      "options": [
+        "現実の都市データを収集し、サイバー空間上に再現した都市",
+        "実際に建設された、現実世界のもう一つの都市",
+        "過去に存在していた、歴史上の都市の記録",
+        "都市計画の専門家が描いた、紙の上の設計図"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 3,
+      "type": "reason",
+      "q": "台風接近時にデジタルツインが役立つと述べられているが、その理由として本文が挙げているのはどれか。",
+      "options": [
+        "浸水経路や避難時の渋滞を瞬時に計算し、最適な避難指示を導けるから",
+        "台風の進路を完全に変えることができる技術だから",
+        "台風による被害を金銭的に補償してくれる制度だから",
+        "台風が来る前に、必ず建物を頑丈にできるから"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 4,
+      "q": "第3段落で、都市計画という行為の性質が変わりつつあると述べられているが、どのように変わるのか。",
+      "options": [
+        "完成後は固定される「建築」から、データで更新され続ける「生命体」へ",
+        "個人が担う仕事から、AIがすべてを代行する仕事へ",
+        "国が管理する事業から、民間企業だけが担う事業へ",
+        "紙の上の設計から、口頭のみで完結する作業へ"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 4,
+      "q": "従来の都市計画は「静的」な営みであったと述べられているが、どういう意味か。",
+      "options": [
+        "完成した時点で一区切りがつく、変化の少ない性質のものであった",
+        "常に大きな音を立てながら進められる工事であった",
+        "住民の意見を一切反映せずに進められるものであった",
+        "毎年必ず全面的に作り直される必要があるものであった"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 5,
+      "type": "main_idea",
+      "q": "この文章で筆者が最も言いたいことはどれか。",
+      "options": [
+        "デジタルツインにより、都市は常に自らを読み直し続ける動的な存在になっていくと考えられる。",
+        "チェスの技術を学べば、誰でも優れた都市計画ができるようになる。",
+        "デジタルツインは災害対策以外には何の役にも立たない技術である。",
+        "都市計画は今後も、完成すれば変える必要のない静的なものであり続ける。"
+      ],
+      "answer": 0
+    }
+  ],
+  "n2VocabList": [
+    {
+      "kanji": "盤面",
+      "hanviet": "BÀN DIỆN",
+      "reading": "ばんめん",
+      "meaning": "[IT] thế cờ, tình huống trên bàn cờ",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "仮想",
+      "hanviet": "GIẢ TƯỞNG",
+      "reading": "かそう",
+      "meaning": "[IT] ảo, giả tưởng",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "リアルタイム",
+      "hanviet": "",
+      "reading": "りあるたいむ",
+      "meaning": "[IT] thời gian thực",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "再現",
+      "hanviet": "TÁI HIỆN",
+      "reading": "さいげん",
+      "meaning": "[IT] tái hiện",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "浸水",
+      "hanviet": "XÂM THỦY",
+      "reading": "しんすい",
+      "meaning": "[IT] ngập nước",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "避難指示",
+      "hanviet": "TỴ NẠN CHỈ THỊ",
+      "reading": "ひなんしじ",
+      "meaning": "[IT] chỉ thị lánh nạn",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "都市計画",
+      "hanviet": "ĐÔ THỊ KẾ HOẠCH",
+      "reading": "としけいかく",
+      "meaning": "[Business] kế hoạch đô thị",
+      "colorTag": "yellow"
+    },
+    {
+      "kanji": "生命体",
+      "hanviet": "SINH MỆNH THỂ",
+      "reading": "せいめいたい",
+      "meaning": "[Business] sinh mệnh thể, cơ thể sống",
+      "colorTag": "yellow"
+    },
+    {
+      "kanji": "静的",
+      "hanviet": "TĨNH ĐÍCH",
+      "reading": "せいてき",
+      "meaning": "[Business] mang tính tĩnh",
+      "colorTag": "yellow"
+    },
+    {
+      "kanji": "動的",
+      "hanviet": "ĐỘNG ĐÍCH",
+      "reading": "どうてき",
+      "meaning": "[Business] mang tính động",
+      "colorTag": "yellow"
+    },
+    {
+      "kanji": "前提",
+      "hanviet": "TIỀN ĐỀ",
+      "reading": "ぜんてい",
+      "meaning": "[Business] tiền đề",
+      "colorTag": "yellow"
+    }
+  ],
+  "grammarList": [
+    {
+      "pattern": "もし〜たなら",
+      "meaning": "nếu như... thì"
+    },
+    {
+      "pattern": "〜と呼ばれるこの技術",
+      "meaning": "công nghệ được gọi là..."
+    },
+    {
+      "pattern": "〜という取り組みである",
+      "meaning": "là nỗ lực..."
+    },
+    {
+      "pattern": "〜際",
+      "meaning": "khi, lúc..."
+    },
+    {
+      "pattern": "〜ということだけではない",
+      "meaning": "không chỉ đơn thuần là..."
+    },
+    {
+      "pattern": "〜つつあるという点にある",
+      "meaning": "nằm ở điểm đang dần..."
+    },
+    {
+      "pattern": "いわば〜であった",
+      "meaning": "có thể nói là đã..."
+    },
+    {
+      "pattern": "〜のかもしれない",
+      "meaning": "có lẽ..."
+    }
+  ]
+}
