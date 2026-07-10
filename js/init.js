@@ -603,6 +603,14 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // ----- Đọc hiểu (読解モード) -----
   document.getElementById("btnDokkaiBackToPickerTop").addEventListener("click", backToDokkaiPicker);
+  document.getElementById("btnDokkaiOpenNotebook").addEventListener("click", openDokkaiNotebookModal);
+  document.getElementById("btnDokkaiExportNotebook").addEventListener("click", exportDokkaiNotebookTxt);
+  document.getElementById("btnDokkaiNotebookClose").addEventListener("click", () => {
+    document.getElementById("dokkaiNotebookModalOverlay").classList.add("hidden");
+  });
+  document.getElementById("dokkaiNotebookModalOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "dokkaiNotebookModalOverlay") e.target.classList.add("hidden");
+  });
   document.querySelectorAll(".dokkai-translate-btn").forEach((btn) => {
     btn.addEventListener("click", () => setDokkaiTranslateMode(btn.dataset.translateMode));
   });

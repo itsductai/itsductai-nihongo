@@ -115,7 +115,29 @@ const DOKKAI_CATEGORY_ICONS = {
   "文化": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><circle cx="100" cy="60" r="42" fill="none" stroke="#7de8ff" stroke-width="2"/><path d="M58 60 Q100 30 142 60 Q100 90 58 60Z" fill="none" stroke="#7de8ff" stroke-width="1.5"/><path d="M100 18 L100 102 M100 18 Q130 40 100 60 Q70 80 100 102" stroke="#7de8ff" stroke-width="1.5" fill="none"/></svg>`,
   "健康": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><path d="M40 60 L70 60 L80 30 L95 90 L108 45 L118 60 L160 60" stroke="#48c98c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="150" cy="35" r="16" fill="none" stroke="#ffd15c" stroke-width="2"/><path d="M150 27 L150 43 M142 35 L158 35" stroke="#ffd15c" stroke-width="2"/></svg>`,
 };
-function getDokkaiCategoryIcon(category) {
+// Minh họa RIÊNG CHO TỪNG BÀI (không dùng chung theo chủ đề nữa — dễ nhận
+// diện hơn khi nhìn lướt qua danh sách). Vẫn giữ tông màu theo category để
+// nhất quán, nhưng mỗi bài có hình khác nhau gắn với nội dung cụ thể.
+const DOKKAI_ARTICLE_ICONS = {
+  "reading-01": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><rect x="60" y="50" width="80" height="55" fill="none" stroke="#a98bff" stroke-width="2.5"/><path d="M50 55 L100 25 L150 55" stroke="#a98bff" stroke-width="2.5" fill="none"/><rect x="90" y="75" width="20" height="30" fill="#a98bff" opacity="0.5"/><circle cx="130" cy="35" r="10" fill="#48c98c" opacity="0.7"/></svg>`,
+  "reading-02": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><path d="M100 25 L100 95 M70 40 L130 40 M70 55 L130 55" stroke="#6b93ff" stroke-width="2"/><circle cx="100" cy="60" r="35" fill="none" stroke="#6b93ff" stroke-width="2.5"/><path d="M85 60 L95 70 L118 45" stroke="#ffd15c" stroke-width="3" fill="none" stroke-linecap="round"/></svg>`,
+  "reading-03": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><text x="100" y="70" font-size="40" fill="#6b93ff" text-anchor="middle" font-weight="bold">¥</text><path d="M40 90 L60 60 L90 80 L160 30" stroke="#ff6b6b" stroke-width="2.5" fill="none"/><path d="M150 30 L160 30 L160 40" stroke="#ff6b6b" stroke-width="2.5" fill="none"/></svg>`,
+  "reading-04": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><circle cx="80" cy="55" r="20" fill="none" stroke="#48c98c" stroke-width="2.5"/><rect x="65" y="75" width="30" height="30" rx="6" fill="#48c98c" opacity="0.5"/><rect x="115" y="40" width="45" height="60" rx="8" fill="none" stroke="#ffd15c" stroke-width="2"/><circle cx="137" cy="55" r="6" fill="#ffd15c"/><path d="M125 75 L150 75 M125 85 L150 85" stroke="#ffd15c" stroke-width="1.5"/></svg>`,
+  "reading-05": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><path d="M100 20 C60 20 40 50 45 75 C48 90 60 95 65 100 L70 110 L130 110 L135 100 C140 95 152 90 155 75 C160 50 140 20 100 20Z" fill="none" stroke="#ff6b6b" stroke-width="2.5"/><circle cx="80" cy="55" r="4" fill="#ffd15c"/><circle cx="105" cy="45" r="4" fill="#ffd15c"/><circle cx="125" cy="60" r="4" fill="#ffd15c"/></svg>`,
+  "reading-06": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><circle cx="100" cy="60" r="40" fill="none" stroke="#7de8ff" stroke-width="2"/><path d="M60 60 Q100 35 140 60 Q100 85 60 60Z" fill="none" stroke="#7de8ff" stroke-width="1.5"/><circle cx="100" cy="60" r="6" fill="#7de8ff"/></svg>`,
+  "reading-07": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><rect x="55" y="45" width="35" height="45" rx="4" fill="none" stroke="#48c98c" stroke-width="2"/><rect x="100" y="55" width="45" height="35" rx="4" fill="none" stroke="#ffd15c" stroke-width="2"/><path d="M65 55 L80 55 M65 65 L80 65 M65 75 L80 75" stroke="#48c98c" stroke-width="1.5"/></svg>`,
+  "reading-08": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><ellipse cx="100" cy="70" rx="55" ry="18" fill="none" stroke="#ff9f6b" stroke-width="2.5"/><circle cx="80" cy="70" r="8" fill="#ff9f6b" opacity="0.6"/><circle cx="105" cy="65" r="6" fill="#48c98c" opacity="0.6"/><circle cx="125" cy="72" r="7" fill="#ffd15c" opacity="0.6"/></svg>`,
+  "reading-09": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><path d="M70 40 L130 40 L140 100 L60 100Z" fill="none" stroke="#6b93ff" stroke-width="2.5"/><path d="M80 40 C80 25 120 25 120 40" stroke="#6b93ff" stroke-width="2" fill="none"/><circle cx="100" cy="70" r="4" fill="#ffd15c"/></svg>`,
+  "reading-10": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><circle cx="100" cy="60" r="38" fill="none" stroke="#a98bff" stroke-width="2.5"/><path d="M100 40 L100 60 L118 70" stroke="#a98bff" stroke-width="3" fill="none" stroke-linecap="round"/><circle cx="100" cy="60" r="3" fill="#a98bff"/></svg>`,
+  "reading-11": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><path d="M100 25 L112 55 L145 55 L118 75 L128 108 L100 88 L72 108 L82 75 L55 55 L88 55Z" fill="none" stroke="#ffd15c" stroke-width="2.5"/></svg>`,
+  "reading-12": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><circle cx="70" cy="60" r="22" fill="none" stroke="#48c98c" stroke-width="2"/><circle cx="130" cy="60" r="22" fill="none" stroke="#ff6b6b" stroke-width="2" opacity="0.6"/><circle cx="100" cy="60" r="10" fill="#a98bff" opacity="0.4"/></svg>`,
+  "reading-13": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><path d="M60 75 Q55 55 75 52 Q78 35 100 38 Q118 35 122 52 Q145 52 143 75Z" fill="none" stroke="#6b93ff" stroke-width="2.5"/><path d="M90 85 L90 95 M100 85 L100 100 M110 85 L110 95" stroke="#6b93ff" stroke-width="2"/></svg>`,
+  "reading-14": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><circle cx="100" cy="55" r="25" fill="none" stroke="#ff9f6b" stroke-width="2.5"/><path d="M90 52 L96 58 L112 42" stroke="#ffd15c" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M75 95 Q100 80 125 95" stroke="#ff9f6b" stroke-width="2" fill="none"/></svg>`,
+  "reading-15": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><path d="M60 50 A40 40 0 1 1 59 51" fill="none" stroke="#48c98c" stroke-width="2.5"/><path d="M55 45 L60 50 L68 40" stroke="#48c98c" stroke-width="2" fill="none"/></svg>`,
+  "reading-16": `<svg viewBox="0 0 200 120"><rect width="200" height="120" fill="#0a0c1a"/><circle cx="75" cy="55" r="18" fill="none" stroke="#ff6b6b" stroke-width="2"/><circle cx="105" cy="55" r="18" fill="none" stroke="#6b93ff" stroke-width="2"/><circle cx="90" cy="80" r="18" fill="none" stroke="#48c98c" stroke-width="2"/></svg>`,
+};
+function getDokkaiCategoryIcon(category, articleId) {
+  if (articleId && DOKKAI_ARTICLE_ICONS[articleId]) return DOKKAI_ARTICLE_ICONS[articleId];
   return DOKKAI_CATEGORY_ICONS[category] || DOKKAI_CATEGORY_ICONS["社会"];
 }
 
@@ -175,7 +197,7 @@ function renderDokkaiPicker() {
     return `
       <button class="dokkai-article-card${isRead ? " is-read" : ""}" data-article-id="${a.id}">
         ${isNew ? `<span class="dokkai-new-badge">NEW</span>` : ""}
-        <div class="dokkai-article-card-illust">${getDokkaiCategoryIcon(a.category)}</div>
+        <div class="dokkai-article-card-illust">${getDokkaiCategoryIcon(a.category, a.id)}</div>
         <div class="dokkai-article-card-head">
           <span class="dokkai-level-badge" style="background:${DOKKAI_LEVEL_COLORS[a.level] || "var(--accent)"}22; color:${DOKKAI_LEVEL_COLORS[a.level] || "var(--accent)"}">${a.level}</span>
           <span class="dokkai-source-badge dokkai-source-${a.source}">${a.source === "ai" ? "AI" : "Zane"}</span>
@@ -207,7 +229,7 @@ function startReadingArticle(articleId) {
   document.getElementById("dokkaiPhasePicker").classList.add("hidden");
   document.getElementById("dokkaiPhaseRead").classList.remove("hidden");
   document.getElementById("dokkaiReadTitle").textContent = article.title;
-  document.getElementById("dokkaiReadIllust").innerHTML = getDokkaiCategoryIcon(article.category);
+  document.getElementById("dokkaiReadIllust").innerHTML = getDokkaiCategoryIcon(article.category, article.id);
   const noteEl = document.getElementById("dokkaiSourceNote");
   noteEl.textContent = article.sourceNote || "";
   noteEl.classList.toggle("hidden", !article.sourceNote);
