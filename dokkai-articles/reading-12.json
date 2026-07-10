@@ -26,10 +26,10 @@
       "type": "reason",
       "q": "第2段落で、SNSの利用時間が長い人ほど孤独感を強く訴える傾向があるとされているが、その背景として筆者が挙げている理由は何か。",
       "options": [
-        "SNS上の他人の生活は編集された一部分に過ぎず、それと自分の現実を無意識に比較してしまうから",
-        "SNSを使う人は元々人間関係を築くのが苦手な性格だから",
-        "SNSの利用時間が長いと、実際の友人と会う時間が物理的に減ってしまうから",
-        "SNS上ではすべての人が必ず嘘の情報を発信しているから"
+        "他人の生活の見せかけと自分の現実とを無意識に比較してしまうから",
+        "SNSを使う人は人間関係を築くのがそもそも苦手だから",
+        "SNSを使うと実際に友人と会う時間が物理的に減るから",
+        "SNS上では誰もが必ず偽りの情報を発信しているから"
       ],
       "answer": 0,
       "trap_analysis": "Đáp án 2 là bẫy \"đạo lý đời thực\" (nghe hợp lý nhưng bài không hề nhắc tới việc SNS làm giảm thời gian gặp bạn thực). Đáp án 3 là bẫy \"tuyệt đối hóa\" (từ \"すべて\" + \"必ず\" biến một khả năng thành tuyệt đối, và bài không nói ai cũng nói dối). Đáp án 0 diễn đạt lại đúng ý đoạn 2 (biên tập → so sánh vô thức) bằng cách paraphrase, không copy nguyên văn."
@@ -39,10 +39,10 @@
       "type": "reason",
       "q": "第3段落で、つながりの数が増えても関係の「深さ」とは比例しないと述べられているが、その理由として本文が挙げているのはどれか。",
       "options": [
-        "人間が安定的に維持できる親密な関係の数には、そもそも認知的な限界があるから",
-        "現代人は忙しすぎて、誰とも深い関係を築く時間がまったくないから",
-        "SNSの運営会社が意図的に人間関係を希薄化させる仕組みを作っているから",
-        "友人の数が多い人は、常に浅い関係しか築けないと決まっているから"
+        "安定的に維持できる親密な関係の数には認知的な限界があるから",
+        "現代人は忙しすぎて深い関係を築く時間がまったくないから",
+        "運営会社が意図的に関係を希薄化させる仕組みを作っているから",
+        "友人が多い人は必ず浅い関係しか築けないと決まっているから"
       ],
       "answer": 0,
       "trap_analysis": "Đáp án 3 là bẫy tuyệt đối hóa (\"決まっている\" = luôn luôn cố định như vậy, trong khi bài chỉ nói \"恐れさえある\" = CHỈ CÓ NGUY CƠ, không phải chắc chắn). Đáp án 1 và 2 là thông tin bịa, không có trong bài (bẫy đạo lý đời thực nghe hợp lý về xã hội hiện đại bận rộn, nhưng tác giả không hề đề cập nguyên nhân này). Đáp án 0 paraphrase đúng câu gốc về giới hạn nhận thức của nhà nhân học."
@@ -52,10 +52,10 @@
       "type": "referent",
       "q": "第2段落の「この絶え間ない比較」とあるが、何と何との比較か。",
       "options": [
-        "他人の見せかけの充実と、自分の現実",
-        "自分の過去の生活と、自分の現在の生活",
+        "他人の見せかけの充実と、自分自身の現実",
+        "自分自身の過去の生活と、現在の生活",
         "SNS上の友人の数と、実際に会う友人の数",
-        "他人の年収と、自分の年収"
+        "他人の得ている年収と、自分の年収"
       ],
       "answer": 0,
       "trap_analysis": "Đáp án 2 (SNS友人数 vs 実際友人数) và đáp án 3 (thu nhập) là bẫy nhiễu — đều là những chủ đề \"so sánh mạng xã hội\" quen thuộc trong đời thực, dễ khiến người đọc chọn theo phản xạ chứ không theo đúng văn bản. Đáp án 0 lấy đúng nội dung câu ngay trước đó."
@@ -65,10 +65,10 @@
       "type": "reason",
       "q": "第4段落で、孤独感への対処法として「つながりの数を増やす」ことは「的外れ」だと述べられているが、なぜか。",
       "options": [
-        "真に孤独から解放される道は、多くの人とつながることではなく、限られた関係を深めることにあると考えられるから",
-        "つながりを増やす行為自体が、他人に迷惑をかける行為だから",
-        "孤独感は病気の一種であり、人間関係では絶対に解決できないから",
-        "SNSを使っている人は皆すでに十分な数の友人を持っているから"
+        "多くの人とつながることより、限られた関係を深める方が孤独から解放されるから",
+        "つながりを増やす行為そのものが、他人の迷惑になるから",
+        "孤独感は病気であり、人間関係では絶対に解決できないから",
+        "SNSを使う人は皆すでに十分な数の友人を持っているから"
       ],
       "answer": 0,
       "trap_analysis": "Đáp án 2 (絶対に解決できない) là bẫy tuyệt đối hóa kết hợp với thông tin không có trong bài (bài không hề nói cô đơn là bệnh lý). Đáp án 1 và 3 là thông tin bịa hoàn toàn, không liên quan tới lập luận trong bài. Đáp án 0 paraphrase đúng câu kết luận cuối bài."
@@ -78,12 +78,12 @@
       "type": "main_idea",
       "q": "この文章で筆者が最も言いたいことはどれか。",
       "options": [
+        "限られた関係の質を深めることが、人間関係の豊かさをもたらす。",
         "SNSは孤立を防ぐ有効な手段であり、利用時間を増やすべきだ。",
-        "人間関係の豊かさは、つながりの数ではなく、限られた関係の質を深めることによってもたらされる。",
         "現代人は皆、SNSのせいで必ず孤独感に苦しむようになる。",
-        "孤独感をなくすためには、SNSの利用を完全にやめるべきだ。"
+        "孤独感をなくすには、SNSの利用を完全にやめるべきだ。"
       ],
-      "answer": 1,
+      "answer": 0,
       "trap_analysis": "Đáp án 0 là bẫy nhiễu lấy từ câu MỞ ĐẦU bài (trước 一方で) — đây là ý DẪN DẮT bị phủ định ngay sau đó bởi luận điểm chính, người đọc lười đọc hết bài dễ chọn nhầm. Đáp án 2 là bẫy tuyệt đối hóa (皆...必ず). Đáp án 3 là bẫy đạo lý đời thực (nghe hợp lý về 'cai SNS' nhưng tác giả không hề đề xuất giải pháp cực đoan này — bài đề xuất tăng CHẤT LƯỢNG quan hệ, không phải từ bỏ SNS). Đáp án 1 tóm lược đúng luận điểm xuyên suốt cả bài, đặc biệt đoạn kết."
     }
   ],

@@ -26,10 +26,10 @@
       "type": "reason",
       "q": "第2段落で、遠隔勤務が主流となった今、上司の評価が「結果」だけになりつつあると述べられているが、その理由は何か。",
       "options": [
-        "遠隔勤務では、部下が働く日常的な様子を目にする機会が失われ、提出された成果物しか見えなくなったから",
-        "上司が部下を信頼しなくなり、結果しか信じないようになったから",
+        "遠隔勤務では日常の様子を見る機会が失われ、成果物しか見えなくなったから",
+        "上司が部下への信頼を失い、結果しか信じなくなったから",
         "遠隔勤務をする社員は、そもそも真剣に働いていないから",
-        "会社の規則で、プロセスを評価することが禁止されるようになったから"
+        "会社の規則でプロセス評価が禁止されるようになったから"
       ],
       "answer": 0,
       "trap_analysis": "Đáp án 1 (上司不信任) và đáp án 2 (社員不認真) là bẫy đạo lý đời thực — nghe hợp lý về tâm lý con người nhưng bài không hề nói cấp trên mất niềm tin hay nhân viên không nghiêm túc; nguyên nhân THẬT là do CƠ CHẾ nhìn thấy thay đổi, không phải do lòng tin/thái độ. Đáp án 3 là thông tin bịa hoàn toàn. Đáp án 0 diễn đạt lại đúng ý đoạn 2."
@@ -39,10 +39,10 @@
       "type": "reason",
       "q": "第3段落で、結果のみが評価対象となる環境では、社員が長期的な視点を要する挑戦を避けるようになる恐れがあると指摘されているが、なぜそうなるのか。",
       "options": [
-        "失敗につながる可能性のある挑戦や時間のかかる改善活動は、結果重視の評価では評価されにくくなるから",
-        "長期的な挑戦をする社員は、必ず会社から解雇されてしまうから",
+        "失敗につながる挑戦や時間のかかる改善は評価されにくくなるから",
+        "長期的な挑戦をする社員は、必ず会社から解雇されるから",
         "社員は皆、そもそも挑戦する意欲を持っていないから",
-        "クラウド技術が、長期的な計画を立てることを技術的に不可能にしているから"
+        "クラウド技術が長期計画を技術的に不可能にしているから"
       ],
       "answer": 0,
       "trap_analysis": "Đáp án 1 là bẫy tuyệt đối hóa (必ず...解雇 = chắc chắn bị sa thải, thông tin bịa và tuyệt đối hóa quá mức). Đáp án 2 là bẫy đạo lý đời thực (định kiến tiêu cực về nhân viên, không có trong bài). Đáp án 3 hiểu sai hoàn toàn — công nghệ không NGĂN CẢN kỹ thuật, mà ảnh hưởng tới CƠ CHẾ ĐÁNH GIÁ. Đáp án 0 paraphrase đúng."
@@ -52,10 +52,10 @@
       "type": "referent",
       "q": "第4段落の「テクノロジーが奪いがちな『見えるもの』」とは、具体的に何を指すか。",
       "options": [
-        "部下が働く日常的な様子や、結果に至るまでの努力・試行錯誤の過程",
+        "日常の様子や、結果に至るまでの努力・試行錯誤の過程",
         "会社の売上や利益といった経営データ全般",
-        "社員それぞれの給料の金額",
-        "オフィスの場所そのもの"
+        "社員それぞれに支払われる給料の金額",
+        "オフィスが置かれている場所そのもの"
       ],
       "answer": 0,
       "trap_analysis": "Đáp án 2 (kinh doanh nói chung) và đáp án 3 (lương) là bẫy nhiễu — nghe như \"những thứ nhìn thấy được\" trong bối cảnh công ty nhưng không khớp với NGỮ CẢNH CỤ THỂ của đoạn văn (về đánh giá quá trình làm việc). Đáp án 0 khớp đúng với nội dung được nhắc xuyên suốt bài."
@@ -65,10 +65,10 @@
       "type": "reason",
       "q": "一部の企業が定期的な1対1面談を行うようになった理由として、本文が挙げているのはどれか。",
       "options": [
-        "数値に表れない努力や試行錯誤の過程を、対話によって意図的に可視化するため",
+        "数値に表れない努力の過程を、対話によって意図的に可視化するため",
         "社員同士の仲を深め、会社の雰囲気を良くするため",
         "遠隔勤務を廃止し、全員を出社させるきっかけを作るため",
-        "上司の権威を高め、部下に対する管理を強化するため"
+        "上司の権威を高め、部下への管理を強化するため"
       ],
       "answer": 0,
       "trap_analysis": "Đáp án 1 là bẫy đạo lý đời thực (nghe rất hợp lý về văn hóa công ty nhưng không phải lý do trong bài). Đáp án 2 và 3 là thông tin bịa hoàn toàn, đi ngược với tinh thần bài (bài không đề xuất bỏ làm từ xa hay tăng quyền lực quản lý). Đáp án 0 paraphrase đúng câu cuối bài."
@@ -78,12 +78,12 @@
       "type": "main_idea",
       "q": "この文章のテーマとして最も適切なものはどれか。",
       "options": [
-        "クラウド技術は働く場所の自由度を高めた点で、常に良い影響しかもたらさない。",
-        "クラウド化による働き方の変化は評価の仕組みを結果重視に変え、それが組織の長期的成長を阻害しかねないという矛盾を生んでいる。",
-        "遠隔勤務は必ず社員の生産性を低下させるため、廃止すべきだ。",
-        "上司は部下の働く様子を毎日直接監視すべきだ。"
+        "評価が結果重視に変わり、長期的成長を阻害しかねない矛盾が生じている。",
+        "クラウド技術は自由度を高め、常に良い影響しかもたらさない。",
+        "遠隔勤務は必ず生産性を下げるため、廃止すべきだ。",
+        "上司は部下の様子を毎日、直接に監視すべきだ。"
       ],
-      "answer": 1,
+      "answer": 0,
       "trap_analysis": "Đáp án 0 là bẫy nhiễu lấy từ câu MỞ ĐẦU bài (trước しかし ở đoạn 2) — đây là ý dẫn dắt tích cực bị đảo ngược ngay sau đó, và có thêm từ tuyệt đối hóa \"常に\"/\"しか\". Đáp án 2 là bẫy tuyệt đối hóa (必ず) kết hợp kết luận cực đoan không có trong bài (bài không đề xuất BỎ làm từ xa). Đáp án 3 là bẫy đạo lý đời thực nghe hợp lý theo lối quản lý truyền thống nhưng đi ngược tinh thần bài (bài đề xuất ĐỐI THOẠI, không phải giám sát). Đáp án 1 tóm lược đúng toàn bộ mạch lập luận: cơ hội → mâu thuẫn → giải pháp đối thoại."
     }
   ],
