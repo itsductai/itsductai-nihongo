@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="css/theme-plus.css?v=9" id="themeClassicLink">
 <link rel="stylesheet" href="css/theme-new.css?v=4" id="themeNewLink" disabled>
 <link rel="stylesheet" href="css/game.css?v=8">
-<link rel="stylesheet" href="css/reading.css?v=9">
+<link rel="stylesheet" href="css/reading.css?v=11">
 </head>
 <body>
 
@@ -504,7 +504,7 @@
     <section class="view hidden" id="view-reading">
 
       <div class="dokkai-phase" id="dokkaiPhasePicker">
-        <div class="dash-side-title">📰 読解モード — chọn bài đọc</div>
+        <div class="dash-side-title">📰 読解モード — chọn bài đọc <button class="dokkai-notebook-export-btn" id="btnDokkaiOpenNotebook">📓 Sổ tay từ vựng</button></div>
         <div class="dokkai-category-filter" id="dokkaiCategoryFilter"></div>
         <div class="dokkai-article-grid" id="dokkaiArticleGrid"></div>
       </div>
@@ -735,6 +735,23 @@
 
     <!-- Popup NHỎ chọn chương khác NGAY TRONG lúc đang ở SRS — cùng series
          với bộ đang học, không cần thoát ra trang chọn tài liệu full lại. -->
+    <!-- Modal xem sổ tay từ vựng đã ghi chú từ các bài đọc -->
+    <div class="modal-overlay hidden" id="dokkaiNotebookModalOverlay">
+      <div class="modal-box dokkai-notebook-modal-box">
+        <div class="modal-head">
+          <div class="modal-title">📓 Sổ tay từ vựng</div>
+          <button class="modal-close-btn" id="btnDokkaiNotebookClose">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="dokkai-notebook-toolbar">
+            <span id="dokkaiNotebookCount"></span>
+            <button class="dokkai-notebook-export-btn" id="btnDokkaiExportNotebook">⬇ Xuất file .txt</button>
+          </div>
+          <div id="dokkaiNotebookList" class="dokkai-notebook-list"></div>
+        </div>
+      </div>
+    </div>
+
     <div class="modal-overlay hidden" id="srsChapterSwitchModalOverlay">
       <div class="modal-box">
         <div class="modal-head">
@@ -1154,7 +1171,7 @@
 <script src="js/dashboard.js?v=12"></script>
 <script src="js/game.js?v=7"></script>
 <script src="js/listen-game.js?v=3"></script>
-<script src="js/reading.js?v=12"></script>
+<script src="js/reading.js?v=14"></script>
 <script src="js/config-focus.js?v=1"></script>
 <script src="js/loader-nav.js?v=28"></script>
 <script src="js/flashcard-edit.js?v=6"></script>
@@ -1163,6 +1180,6 @@
 <script src="js/exam.js?v=8"></script>
 <script src="js/choukai.js?v=12"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=39"></script>
+<script src="js/init.js?v=40"></script>
 </body>
 </html>
