@@ -504,13 +504,14 @@
     <section class="view hidden" id="view-reading">
 
       <div class="dokkai-phase" id="dokkaiPhasePicker">
-        <div class="dash-side-title">📰 読解モード — chọn bài đọc <button class="dokkai-notebook-export-btn" id="btnDokkaiExportNotebook">📓 Xuất sổ tay (.txt)</button></div>
+        <div class="dash-side-title">📰 読解モード — chọn bài đọc</div>
         <div class="dokkai-category-filter" id="dokkaiCategoryFilter"></div>
         <div class="dokkai-article-grid" id="dokkaiArticleGrid"></div>
       </div>
 
       <div class="dokkai-phase hidden" id="dokkaiPhaseRead">
         <div class="dokkai-read-illust" id="dokkaiReadIllust"></div>
+        <button class="level-picker-back-btn" id="btnDokkaiBackToPickerTop">← Quay lại chọn bài đọc</button>
         <div class="dokkai-read-head">
           <div class="dokkai-read-title" id="dokkaiReadTitle"></div>
           <div class="dokkai-translate-toggle" id="dokkaiTranslateToggle">
@@ -547,14 +548,6 @@
             <div class="dokkai-sidebar-title">📕 文法リスト (N2/N1)</div>
             <div id="dokkaiGrammarList" class="dokkai-sidebar-list"></div>
           </aside>
-        </div>
-      </div>
-
-      <div class="dokkai-phase hidden" id="dokkaiPhaseResult">
-        <div class="lg-result-box">
-          <div class="lg-result-title">結果</div>
-          <div id="dokkaiResultStats"></div>
-          <button class="game-start-btn" id="btnDokkaiBackToPicker">← 他の記事を読む</button>
         </div>
       </div>
     </section>
@@ -1161,7 +1154,7 @@
 <script src="js/dashboard.js?v=12"></script>
 <script src="js/game.js?v=7"></script>
 <script src="js/listen-game.js?v=3"></script>
-<script src="js/reading.js?v=11"></script>
+<script src="js/reading.js?v=12"></script>
 <script src="js/config-focus.js?v=1"></script>
 <script src="js/loader-nav.js?v=28"></script>
 <script src="js/flashcard-edit.js?v=6"></script>
@@ -1170,6 +1163,6 @@
 <script src="js/exam.js?v=8"></script>
 <script src="js/choukai.js?v=12"></script>
 <script src="js/grammar-groups.js?v=3"></script>
-<script src="js/init.js?v=38"></script>
+<script src="js/init.js?v=39"></script>
 </body>
 </html>
