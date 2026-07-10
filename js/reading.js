@@ -18,11 +18,14 @@ async function loadDokkaiArticles() {
   try {
     const idxRes = await fetch("dokkai-articles/index.json");
     const idx = await idxRes.json();
-    const articles = await Promise.all(idx.files.map(async (filename) => {
+    const results = await Promise.all(idx.files.map(async (filename) => {
       const r = await fetch(`dokkai-articles/${filename}`);
       return r.json();
     }));
-    return articles;
+    // FIX: trước đây loader này CHƯA lọc "private" như loadDecks()/loadExams()/
+    // loadChoukaiTests() đã làm — bài đọc riêng tư sẽ hiện công khai dù chưa
+    // mở khóa key. Thêm đúng cùng quy tắc filter với các loader khác.
+    return results.filter((a) => !(a.private === true && !isPrivateContentUnlocked()));
   } catch (e) {
     return [];
   }
