@@ -179,6 +179,48 @@
 }
 .dokkai-quiz-opt:hover:not(.disabled) { border-color: var(--accent); background: var(--accent-soft); }
 .dokkai-quiz-opt.disabled { cursor: default; }
+.dokkai-quiz-opt.is-selected { border-color: var(--accent); background: var(--accent-soft); }
+.dokkai-quiz-check-btn {
+  margin-top: 10px; padding: 8px 16px; border-radius: 8px; font-size: 12.5px; font-weight: 700;
+  background: var(--accent); color: #fff; border: none; cursor: pointer;
+}
+.dokkai-quiz-check-btn:disabled { background: var(--bg-3); color: var(--text-2); cursor: not-allowed; }
+.dokkai-quiz-summary { margin-top: 24px; padding: 20px; text-align: center; border-radius: var(--radius); background: var(--bg-1); border: 1px solid var(--border-soft); }
+
+.dokkai-article-card-date { font-size: 10.5px; color: var(--text-2); margin-top: 4px; }
+.dokkai-article-card.is-read { opacity: 0.65; }
+.dokkai-read-badge { font-size: 10px; color: var(--good); font-weight: 700; margin-top: 6px; }
+.dokkai-read-divider { grid-column: 1 / -1; font-size: 12px; font-weight: 800; color: var(--text-2); margin: 10px 0 4px; padding-top: 10px; border-top: 1px dashed var(--border); }
+
+.dokkai-notebook-export-btn {
+  font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 999px; margin-left: 12px;
+  background: var(--bg-2); border: 1px solid var(--border-soft); color: var(--text-2); cursor: pointer;
+}
+.dokkai-notebook-export-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+.dokkai-level-stats { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px dashed var(--border); }
+.dokkai-level-stats-title { font-size: 11px; font-weight: 800; color: var(--text-0); margin-bottom: 8px; }
+.dokkai-level-stats-row { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
+.dokkai-level-stats-label { font-size: 10.5px; font-weight: 800; width: 20px; }
+.dokkai-level-stats-bar { flex: 1; height: 5px; border-radius: 999px; background: var(--bg-3); overflow: hidden; }
+.dokkai-level-stats-fill { height: 100%; border-radius: 999px; }
+.dokkai-level-stats-pct { font-size: 10px; color: var(--text-2); width: 30px; text-align: right; }
+
+.dokkai-vocab-add-btn {
+  font-size: 12px; font-weight: 900; width: 18px; height: 18px; border-radius: 50%; line-height: 1;
+  background: var(--bg-3); color: var(--text-2); border: none; cursor: pointer; margin-left: auto;
+}
+.dokkai-vocab-add-btn:hover { background: var(--accent); color: #fff; }
+.dokkai-vocab-add-btn:disabled { background: var(--good); color: #fff; }
+
+.dokkai-grammar-auto-title { font-size: 11px; font-weight: 800; color: var(--text-0); margin: 10px 0 6px; }
+.dokkai-grammar-tick {
+  display: flex; align-items: center; gap: 6px; width: 100%; text-align: left;
+  padding: 7px 10px; border-radius: 8px; background: var(--good-soft); border: 1px solid var(--good);
+  cursor: pointer; margin-bottom: 6px;
+}
+.dokkai-grammar-tick-icon { color: var(--good); font-weight: 900; }
+.dokkai-grammar-tick-pattern { font-size: 12px; font-weight: 700; color: var(--good); }
 .dokkai-quiz-opt.correct { background: var(--good-soft); border-color: var(--good); color: var(--good); }
 .dokkai-quiz-opt.wrong { background: var(--bad-soft); border-color: var(--bad); color: var(--bad); }
 .dokkai-submit-btn { width: 100%; margin-top: 10px; }
