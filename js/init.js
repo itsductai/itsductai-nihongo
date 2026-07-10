@@ -603,6 +603,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // ----- Đọc hiểu (読解モード) -----
   document.getElementById("btnDokkaiBackToPicker").addEventListener("click", backToDokkaiPicker);
+  document.getElementById("btnDokkaiExportNotebook").addEventListener("click", exportDokkaiNotebookTxt);
   document.querySelectorAll(".dokkai-translate-btn").forEach((btn) => {
     btn.addEventListener("click", () => setDokkaiTranslateMode(btn.dataset.translateMode));
   });
@@ -871,6 +872,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       // — cố ý, vì export file không nên trở thành cách bypass gate ẩn.
       gameAchievements: loadGameAchievements(),
       dailyActivity: loadDailyActivity(),
+      dokkaiHistory: loadDokkaiHistory(),
+      dokkaiNotebook: loadDokkaiNotebook(),
     };
     const blob = new Blob([JSON.stringify(exportPayload, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -1094,6 +1097,23 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
           });
           localStorage.setItem(DAILY_ACTIVITY_STORAGE_KEY, JSON.stringify(currentActivity));
+        }
+        // Lịch sử đọc — merge theo articleId, giữ mốc readAt SỚM NHẤT (lần đầu đọc thật)
+        if (data.dokkaiHistory) {
+          const currentHistory = loadDokkaiHistory();
+          Object.keys(data.dokkaiHistory).forEach((articleId) => {
+            if (!currentHistory[articleId] || data.dokkaiHistory[articleId].readAt < currentHistory[articleId].readAt) {
+              currentHistory[articleId] = data.dokkaiHistory[articleId];
+            }
+          });
+          localStorage.setItem(DOKKAI_HISTORY_KEY, JSON.stringify(currentHistory));
+        }
+        // Sổ tay từ vựng — nối thêm, không trùng (so theo kanji+fromArticle+addedAt)
+        if (data.dokkaiNotebook) {
+          const currentNotebook = loadDokkaiNotebook();
+          const existingKeys = new Set(currentNotebook.map((n) => `${n.kanji}::${n.fromArticle}::${n.addedAt}`));
+          const merged = currentNotebook.concat(data.dokkaiNotebook.filter((n) => !existingKeys.has(`${n.kanji}::${n.fromArticle}::${n.addedAt}`)));
+          saveDokkaiNotebook(merged);
         }
 
         App.progress = SRS.loadProgress(App.currentDeckId);

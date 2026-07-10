@@ -72,12 +72,23 @@ async function loadDecks() {
 // vi_du_ruby, han_viet) vào ĐÚNG từ đang có trong App.decks theo _id khớp
 // tuyệt đối (cùng công thức wordId() với lúc sinh manifest-thin.json).
 // KHÔNG tải lại nếu đã tải rồi (cache trong App.deckThickLoaded).
+App.deckLoadingPromises = App.deckLoadingPromises || {}; // deckId -> Promise đang chạy (chống gọi trùng)
+
 async function ensureDeckLoaded(deckId) {
   if (App.deckThickLoaded[deckId]) return; // đã có đủ rồi, khỏi tải lại
-  const deck = App.decks.find((d) => d.id === deckId);
-  if (!deck) return;
-  try {
-    const r = await fetch(`tailieu/${deckId}.json`);
+  // CHỐT CHẶN RACE CONDITION: nếu hàm này đang được gọi CHỒNG LẤN cho CÙNG 1
+  // deckId (vd bấm chuyển bộ nhanh, mạng chậm chưa kịp tải xong lần trước) —
+  // trả về ĐÚNG promise đang chạy, KHÔNG bắt đầu fetch+merge thứ 2. Nếu để 2
+  // lệnh "deck.words.length=0; push()" đua nhau trên CÙNG 1 mảng, kết quả có
+  // thể trùng lặp hoặc rỗng tùy thời điểm — đây là lỗ hổng tiềm ẩn thật sự dù
+  // khó tái hiện bằng test (mạng local quá nhanh để lộ race condition).
+  if (App.deckLoadingPromises[deckId]) return App.deckLoadingPromises[deckId];
+
+  const promise = (async () => {
+    const deck = App.decks.find((d) => d.id === deckId);
+    if (!deck) return;
+    try {
+      const r = await fetch(`tailieu/${deckId}.json`);
     const data = await r.json();
     const seenIds = {};
     const fullWordsById = {};
@@ -98,21 +109,28 @@ async function ensureDeckLoaded(deckId) {
       const full = fullWordsById[thinWord._id];
       if (full) Object.assign(thinWord, full, { _id: thinWord._id });
     });
-    // FIX BUG NGHIÊM TRỌNG: applyPatchesToWords() khi deck KHÔNG có sửa tạm
-    // nào (trường hợp thường gặp) trả về CÙNG THAM CHIẾU mảng deck.words (tối
-    // ưu, không copy nếu không cần). Nếu giữ nguyên logic cũ
-    // "deck.words.length = 0" ngay sau đó sẽ ĐỒNG THỜI xóa rỗng luôn
-    // patchedWords (vì là CÙNG 1 mảng trong bộ nhớ) — khiến push() sau đó
-    // không còn gì để đẩy vào, deck.words VĨNH VIỄN RỖNG. Đây chính là bug
-    // "dữ liệu biến mất sau khi tải xong" đã báo. Fix: .slice() ép tạo bản
-    // sao THẬT SỰ trước khi đụng vào deck.words gốc.
-    const patchedWords = applyPatchesToWords(deckId, deck.words).slice();
-    deck.words.length = 0;
-    deck.words.push(...patchedWords);
+    // Áp patch (sửa tạm) TRỰC TIẾP từng phần tử — CÙNG kiểu mutate in-place an
+    // toàn như bước merge dữ liệu nặng ở trên, bỏ HẲN kiểu "xóa rỗng mảng rồi
+    // nhồi lại" (length=0 + push) từng gây bug nghiêm trọng (2 lệnh đua nhau
+    // trên cùng 1 mảng khi có nhiều lệnh gọi chồng lấn). Giờ không còn thao
+    // tác nào đụng vào ĐỘ DÀI mảng nữa — an toàn tuyệt đối kể cả khi có gọi
+    // chồng lấn (concurrent), dù đã chặn ở App.deckLoadingPromises phía trên.
+    const patchesForDeck = App.editPatches[deckId];
+    if (patchesForDeck) {
+      deck.words.forEach((w) => {
+        const patch = patchesForDeck[w._id];
+        if (patch) Object.assign(w, patch);
+      });
+    }
     App.deckThickLoaded[deckId] = true;
   } catch (e) {
     console.error("Lỗi tải đầy đủ bộ", deckId, e);
+  } finally {
+    delete App.deckLoadingPromises[deckId]; // xong (dù thành công hay lỗi) -> xóa cache in-flight
   }
+  })();
+  App.deckLoadingPromises[deckId] = promise;
+  return promise;
 }
 
 async function loadExams() {
@@ -489,30 +507,36 @@ function switchDeck(deckId) {
   renderNav();
   buildFieldConfigPanel();
   buildColConfigPanel();
-  initFlashMode();
-  renderTable();
-  initSrsMode();
 
   App.quizNeedsReset = true;
   App.matchNeedsReset = true;
+  setMode("flash"); // luôn mở Flashcard sau khi đổi bộ (chuyển view TRƯỚC, nội dung tính sau)
 
-  // Mặc định mở Flashcard sau khi đổi bộ
-  setMode("flash");
-
-  // ----- LAZY LOAD tầng đầy đủ (thick) NGẦM — switchDeck() vẫn đồng bộ như
-  // cũ (không phá vỡ hàng chục nơi đang gọi nó), chỉ kích hoạt tải NGẦM. Nếu
-  // đã tải rồi (ensureDeckLoaded tự kiểm tra App.deckThickLoaded) thì Promise
-  // resolve gần như ngay lập tức, không có gì để làm thêm. Nếu CHƯA tải,
-  // hiện spinner nhỏ ở view đang mở, tải xong thì render lại ĐÚNG view đang
-  // active LÚC ĐÓ (không phải lúc gọi — người dùng có thể đã chuyển tab khác
-  // trong lúc chờ tải). -----
-  if (!App.deckThickLoaded[deckId]) {
+  // FIX ĐÚNG GỐC RỄ (không phải chắp vá): trước đây initFlashMode()/renderTable()/
+  // initSrsMode() được gọi NGAY LẬP TỨC dù dữ liệu CHỈ MỚI Ở TẦNG MỎNG (thiếu
+  // vi_du/han_viet/đồng-trái nghĩa) — nếu người dùng lật thẻ ĐÚNG lúc đó
+  // (trước khi tầng đầy đủ tải xong ngầm, ~1-3 giây), mặt sau thẻ trống trơn,
+  // trông y hệt "mất dữ liệu". Giờ tách rõ 2 nhánh:
+  //   - ĐÃ có đủ dữ liệu rồi (App.deckThickLoaded[deckId] === true) -> render
+  //     NGAY, không cần chờ gì cả (đúng yêu cầu: có sẵn thì lấy ra dùng luôn).
+  //   - CHƯA có -> KHÔNG render dở dang, hiện loading rõ ràng, đợi tải THẬT
+  //     SỰ xong hẳn rồi mới gọi render (đúng yêu cầu: chưa có thì gọi lấy
+  //     đúng bộ đó về, xong xuôi mới dùng, không hiện nửa vời).
+  if (App.deckThickLoaded[deckId]) {
+    initFlashMode();
+    renderTable();
+    initSrsMode();
+  } else {
     const activeViewEl = document.querySelector(".view:not(.hidden)");
     if (activeViewEl) showLoadingOverlay(activeViewEl, true);
     ensureDeckLoaded(deckId).then(() => {
+      // Kiểm tra người dùng vẫn còn đang ở ĐÚNG bộ này (có thể đã bấm sang bộ
+      // khác trong lúc chờ) — tránh render nhầm dữ liệu bộ cũ đè lên bộ mới.
+      if (App.currentDeckId !== deckId) return;
+      initFlashMode();
+      renderTable();
+      initSrsMode();
       if (activeViewEl) showLoadingOverlay(activeViewEl, false);
-      // Render lại ĐÚNG mode đang active tại thời điểm tải xong (không phải
-      // lúc bắt đầu gọi), để hiện đủ vi_du/dong_nghia/... vừa merge vào.
       const nowMode = document.querySelector(".view:not(.hidden)")?.id.replace("view-", "");
       if (nowMode === "flash") renderFlashCard();
       else if (nowMode === "table") renderTable();

@@ -47,7 +47,7 @@ function buildDokkaiVocabIndex() {
     deck.words.forEach((w) => {
       const word = w.kanji;
       if (word && word.length >= 2 && !DOKKAI_AUXILIARY_BLOCKLIST.has(word)) {
-        list.push({ word, level: deck.level, deckTitle: deck.title, reading: w.doc || "", meaning: w.nghia || "" });
+        list.push({ word, level: deck.level, deckTitle: deck.title, series: deck.series || "khac", reading: w.doc || "", meaning: w.nghia || "" });
       }
     });
   });
@@ -140,26 +140,51 @@ function renderDokkaiCategoryFilter() {
   });
 }
 
+const DOKKAI_HISTORY_KEY = "n2vocab_reading_history";
+function loadDokkaiHistory() {
+  try { return JSON.parse(localStorage.getItem(DOKKAI_HISTORY_KEY)) || {}; } catch (e) { return {}; }
+}
+function markDokkaiArticleRead(articleId) {
+  const hist = loadDokkaiHistory();
+  hist[articleId] = { readAt: Date.now() };
+  localStorage.setItem(DOKKAI_HISTORY_KEY, JSON.stringify(hist));
+}
+
 function renderDokkaiPicker() {
   const grid = document.getElementById("dokkaiArticleGrid");
   const filter = App.dokkaiCategoryFilter || "all";
-  const list = filter === "all" ? App.dokkaiArticles : App.dokkaiArticles.filter((a) => a.category === filter);
+  let list = filter === "all" ? App.dokkaiArticles : App.dokkaiArticles.filter((a) => a.category === filter);
+  // Sắp CŨ NHẤT -> MỚI NHẤT theo field date (yêu cầu rõ ràng).
+  list = list.slice().sort((a, b) => (a.date || "").localeCompare(b.date || ""));
   if (!list.length) {
     grid.innerHTML = `<div class="dash-chart-empty">Chưa có bài đọc nào ở chủ đề này.</div>`;
     return;
   }
-  grid.innerHTML = list.map((a) => `
-    <button class="dokkai-article-card" data-article-id="${a.id}">
-      <div class="dokkai-article-card-illust">${getDokkaiCategoryIcon(a.category)}</div>
-      <div class="dokkai-article-card-head">
-        <span class="dokkai-level-badge" style="background:${DOKKAI_LEVEL_COLORS[a.level] || "var(--accent)"}22; color:${DOKKAI_LEVEL_COLORS[a.level] || "var(--accent)"}">${a.level}</span>
-        <span class="dokkai-source-badge dokkai-source-${a.source}">${a.source === "ai" ? "AI" : "Zane"}</span>
-        ${a.category ? `<span class="dokkai-category-badge">${a.category}</span>` : ""}
-      </div>
-      <div class="dokkai-article-card-title">${a.title}</div>
-      <div class="dokkai-article-card-sub">${a.titleVi || ""}</div>
-    </button>
-  `).join("");
+  const history = loadDokkaiHistory();
+  const unread = list.filter((a) => !history[a.id]);
+  const read = list.filter((a) => history[a.id]);
+
+  function cardHtml(a) {
+    const isRead = !!history[a.id];
+    return `
+      <button class="dokkai-article-card${isRead ? " is-read" : ""}" data-article-id="${a.id}">
+        <div class="dokkai-article-card-illust">${getDokkaiCategoryIcon(a.category)}</div>
+        <div class="dokkai-article-card-head">
+          <span class="dokkai-level-badge" style="background:${DOKKAI_LEVEL_COLORS[a.level] || "var(--accent)"}22; color:${DOKKAI_LEVEL_COLORS[a.level] || "var(--accent)"}">${a.level}</span>
+          <span class="dokkai-source-badge dokkai-source-${a.source}">${a.source === "ai" ? "AI" : "Zane"}</span>
+          ${a.category ? `<span class="dokkai-category-badge">${a.category}</span>` : ""}
+        </div>
+        <div class="dokkai-article-card-title">${a.title}</div>
+        <div class="dokkai-article-card-sub">${a.titleVi || ""}</div>
+        <div class="dokkai-article-card-date">${a.date || ""}</div>
+        ${isRead ? `<div class="dokkai-read-badge">✓ Đã đọc lúc ${new Date(history[a.id].readAt).toLocaleString("vi-VN")}</div>` : ""}
+      </button>`;
+  }
+
+  grid.innerHTML = `
+    ${unread.map(cardHtml).join("")}
+    ${read.length ? `<div class="dokkai-read-divider">📖 Đã đọc</div>${read.map(cardHtml).join("")}` : ""}
+  `;
   grid.querySelectorAll("[data-article-id]").forEach((btn) => {
     btn.addEventListener("click", () => startReadingArticle(btn.dataset.articleId));
   });
@@ -170,6 +195,7 @@ function startReadingArticle(articleId) {
   if (!article) return;
   App.reading = { article, answers: {} }; // answers: qIndex -> {chosenIdx, correct}
   App.dokkaiTranslateMode = "none";
+  markDokkaiArticleRead(articleId); // đánh dấu đã đọc NGAY khi mở bài (không cần đọc xong quiz)
 
   document.getElementById("dokkaiPhasePicker").classList.add("hidden");
   document.getElementById("dokkaiPhaseRead").classList.remove("hidden");
@@ -306,23 +332,36 @@ function renderDokkaiVocabSidebar(vocabIndex) {
   const article = App.reading.article;
   const list = article.n2VocabList || [];
   const wrap = document.getElementById("dokkaiVocabList");
+  const statsHtml = renderDokkaiLevelStats(article, vocabIndex);
   if (!list.length) {
-    wrap.innerHTML = `<div class="dokkai-sidebar-empty">Chưa có danh sách từ vựng cho bài này.</div>`;
+    wrap.innerHTML = statsHtml + `<div class="dokkai-sidebar-empty">Chưa có danh sách từ vựng cho bài này.</div>`;
     return;
   }
-  wrap.innerHTML = list.map((v) => {
+  const SERIES_COLORS = { tango: "#ff6b6b", mimi: "#48c98c" }; // đỏ=Tango, xanh lá=Mimi theo đúng yêu cầu
+  wrap.innerHTML = statsHtml + list.map((v) => {
     const deckMatch = vocabIndex.find((e) => e.word === v.kanji);
+    const srcColor = deckMatch ? (SERIES_COLORS[deckMatch.series] || "var(--text-2)") : null;
     return `
-      <div class="dokkai-vocab-item">
+      <div class="dokkai-vocab-item" ${srcColor ? `style="border-left:3px solid ${srcColor}"` : ""}>
         <div class="dokkai-vocab-item-head">
           <span class="dokkai-vocab-kanji">${v.kanji}</span>
           <span class="dokkai-vocab-reading">${v.reading}</span>
-          ${deckMatch ? `<button class="dokkai-vocab-deck-badge" data-deck-title="${deckMatch.deckTitle.replace(/"/g, "&quot;")}" title="Bấm để xem chương cụ thể">mimi</button>` : ""}
+          <button class="dokkai-vocab-add-btn" data-word="${v.kanji}" title="Thêm vào sổ tay">+</button>
+          ${deckMatch ? `<button class="dokkai-vocab-deck-badge" style="background:${srcColor}22;color:${srcColor}" data-deck-title="${deckMatch.deckTitle.replace(/"/g, "&quot;")}" title="Bấm để xem chương cụ thể">${deckMatch.series}</button>` : ""}
         </div>
         <div class="dokkai-vocab-hanviet">${v.hanviet || ""}</div>
         <div class="dokkai-vocab-meaning">${v.meaning}</div>
       </div>`;
   }).join("");
+  wrap.querySelectorAll(".dokkai-vocab-add-btn").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const vocab = list.find((v) => v.kanji === btn.dataset.word);
+      if (vocab) addToDokkaiNotebook(vocab, article);
+      btn.textContent = "✓";
+      btn.disabled = true;
+    });
+  });
   wrap.querySelectorAll(".dokkai-vocab-deck-badge").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -335,10 +374,7 @@ function renderDokkaiVocabSidebar(vocabIndex) {
       pop.style.left = Math.min(rect.left, window.innerWidth - pop.offsetWidth - 12) + "px";
       pop.style.top = rect.bottom + 6 + "px";
       setTimeout(() => {
-        document.addEventListener("click", function closeOnce() {
-          pop.remove();
-          document.removeEventListener("click", closeOnce);
-        }, { once: true });
+        document.addEventListener("click", function closeOnce() { pop.remove(); document.removeEventListener("click", closeOnce); }, { once: true });
       }, 0);
     });
   });
@@ -347,26 +383,190 @@ function renderDokkaiVocabSidebar(vocabIndex) {
 /* ===================================================================
    SIDEBAR PHẢI — ngữ pháp N2/N1 của CHÍNH bài đọc (article.grammarList).
 =================================================================== */
+// Rà NGỮ PHÁP thông minh theo CỤM — không gạch chân trong bài (khác từ vựng),
+// chỉ gán TICK XANH nếu tìm thấy mẫu trong tài liệu ngữ pháp đã load. Mỗi
+// cautruc có thể chứa NHIỀU biến thể cách nhau bởi "/", còn kèm phần đọc
+// trong ngoặc hoặc hậu tố chia — phải TÁCH ĐÚNG từng biến thể rồi LÀM SẠCH
+// (bỏ 〜/～ đầu, bỏ (...) chú thích đọc, bỏ khoảng trắng thừa) trước khi so
+// khớp, nếu không sẽ không bao giờ khớp được (vd tìm nguyên cụm "〜次第（しだい）
+// / 〜しだいで" sẽ KHÔNG BAO GIỜ khớp vì bài viết không chứa dấu "/").
+function cleanGrammarVariant(raw) {
+  return raw
+    .replace(/^[〜～]+/, "")          // bỏ dấu sóng đầu cụm
+    .replace(/（[^）]*）/g, "")        // bỏ chú thích đọc trong ngoặc tròn
+    .replace(/[！!。、\s]+$/g, "")    // bỏ dấu câu/khoảng trắng thừa cuối
+    .trim();
+}
+function buildDokkaiGrammarIndex() {
+  const list = [];
+  App.decks.filter((d) => d.type === "NGUPHAP").forEach((deck) => {
+    deck.words.forEach((w) => {
+      const raw = w.cautruc || "";
+      raw.split(/[\/／]/).forEach((variant) => {
+        const cleaned = cleanGrammarVariant(variant);
+        if (cleaned && cleaned.length >= 2) {
+          list.push({ pattern: cleaned, original: raw, deckTitle: deck.title, nghia: w.nghia || "" });
+        }
+      });
+    });
+  });
+  list.sort((a, b) => b.pattern.length - a.pattern.length);
+  return list;
+}
+function scanDokkaiGrammarMatches(article, grammarIndex) {
+  const plainText = article.paragraphs.map((p) => p.replace(/\{\{[^}]*\}\}/g, (m) => {
+    const parts = m.slice(2, -2).split("|");
+    return parts[0]; // chỉ lấy phần chữ Hán/kana, bỏ phần đọc/nghĩa khi quét ngữ pháp
+  })).join("");
+  const found = [];
+  const seen = new Set();
+  grammarIndex.forEach((g) => {
+    if (!seen.has(g.pattern) && plainText.includes(g.pattern)) {
+      seen.add(g.pattern);
+      found.push(g);
+    }
+  });
+  return found;
+}
+
+// % thống kê trình độ (N5-N1) theo TỪ VỰNG auto-scan được trong bài — cho
+// biết bài này thiên về mức nào, phục vụ đánh giá độ khó tổng quan.
+function computeDokkaiLevelStats(article, vocabIndex) {
+  const counts = { N1: 0, N2: 0, N3: 0, N4: 0, N5: 0 };
+  let total = 0;
+  article.paragraphs.forEach((p) => {
+    const text = p.replace(/\{\{[^}]*\}\}/g, "");
+    let i = 0;
+    while (i < text.length) {
+      let matched = null;
+      for (const entry of vocabIndex) {
+        if (text.startsWith(entry.word, i)) { matched = entry; break; }
+      }
+      if (matched) {
+        counts[matched.level] = (counts[matched.level] || 0) + 1;
+        total++;
+        i += matched.word.length;
+      } else i++;
+    }
+  });
+  if (!total) return null;
+  const pct = {};
+  Object.keys(counts).forEach((lv) => { pct[lv] = Math.round((counts[lv] / total) * 100); });
+  return pct;
+}
+
+function renderDokkaiLevelStats(article, vocabIndex) {
+  const pct = computeDokkaiLevelStats(article, vocabIndex);
+  if (!pct) return "";
+  const order = ["N1", "N2", "N3", "N4", "N5"];
+  return `
+    <div class="dokkai-level-stats">
+      <div class="dokkai-level-stats-title">📊 Độ khó từ vựng trong bài</div>
+      ${order.filter((lv) => pct[lv] > 0).map((lv) => `
+        <div class="dokkai-level-stats-row">
+          <span class="dokkai-level-stats-label" style="color:${DOKKAI_LEVEL_COLORS[lv]}">${lv}</span>
+          <div class="dokkai-level-stats-bar"><div class="dokkai-level-stats-fill" style="width:${pct[lv]}%; background:${DOKKAI_LEVEL_COLORS[lv]}"></div></div>
+          <span class="dokkai-level-stats-pct">${pct[lv]}%</span>
+        </div>
+      `).join("")}
+    </div>`;
+}
+
 function renderDokkaiGrammarSidebar() {
   const article = App.reading.article;
-  const list = article.grammarList || [];
+  const manualList = article.grammarList || [];
+  const grammarIndex = buildDokkaiGrammarIndex();
+  const autoFound = scanDokkaiGrammarMatches(article, grammarIndex);
   const wrap = document.getElementById("dokkaiGrammarList");
-  if (!list.length) {
-    wrap.innerHTML = `<div class="dokkai-sidebar-empty">Chưa có danh sách ngữ pháp cho bài này.</div>`;
-    return;
+
+  let html = "";
+  if (autoFound.length) {
+    html += `<div class="dokkai-grammar-auto-title">✓ Có trong tài liệu ngữ pháp</div>`;
+    html += autoFound.map((g) => `
+      <button class="dokkai-grammar-tick" data-deck="${g.deckTitle}">
+        <span class="dokkai-grammar-tick-icon">✓</span>
+        <span class="dokkai-grammar-tick-pattern">${g.original}</span>
+      </button>
+    `).join("");
   }
-  wrap.innerHTML = list.map((g) => `
-    <div class="dokkai-grammar-item">
-      <div class="dokkai-grammar-pattern">${g.pattern}</div>
-      <div class="dokkai-grammar-meaning">${g.meaning}</div>
-    </div>
-  `).join("");
+  if (manualList.length) {
+    html += `<div class="dokkai-grammar-auto-title">📕 Ngữ pháp khác trong bài</div>`;
+    html += manualList.map((g) => `
+      <div class="dokkai-grammar-item">
+        <div class="dokkai-grammar-pattern">${g.pattern}</div>
+        <div class="dokkai-grammar-meaning">${g.meaning}</div>
+      </div>
+    `).join("");
+  }
+  wrap.innerHTML = html || `<div class="dokkai-sidebar-empty">Chưa có ngữ pháp nào được phát hiện cho bài này.</div>`;
+  wrap.querySelectorAll(".dokkai-grammar-tick").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      document.querySelectorAll(".dokkai-deck-badge-popover").forEach((p) => p.remove());
+      const pop = document.createElement("div");
+      pop.className = "dokkai-deck-badge-popover";
+      pop.textContent = `📚 ${btn.dataset.deck}`;
+      document.body.appendChild(pop);
+      const rect = btn.getBoundingClientRect();
+      pop.style.left = Math.min(rect.left, window.innerWidth - pop.offsetWidth - 12) + "px";
+      pop.style.top = rect.bottom + 6 + "px";
+      setTimeout(() => {
+        document.addEventListener("click", function closeOnce() { pop.remove(); document.removeEventListener("click", closeOnce); }, { once: true });
+      }, 0);
+    });
+  });
 }
 
 /* ===================================================================
    QUIZ INLINE — TẤT CẢ câu hỏi hiện 1 lượt ngay dưới bài đọc (không chuyển
    màn riêng nữa), trả lời câu nào khóa câu đó, dễ cuộn lên dò lại bài.
 =================================================================== */
+/* ===================================================================
+   SỔ TAY TỪ VỰNG — bấm "+" ở sidebar từ vựng bài đọc để thêm vào, tự động
+   trích câu chứa từ đó trong bài (kèm bản dịch nếu bài có paragraphsVi) làm
+   ví dụ tường minh. Xuất được file .txt để tự làm bộ flashcard riêng.
+=================================================================== */
+const DOKKAI_NOTEBOOK_KEY = "n2vocab_reading_notebook";
+function loadDokkaiNotebook() {
+  try { return JSON.parse(localStorage.getItem(DOKKAI_NOTEBOOK_KEY)) || []; } catch (e) { return []; }
+}
+function saveDokkaiNotebook(list) {
+  localStorage.setItem(DOKKAI_NOTEBOOK_KEY, JSON.stringify(list));
+}
+function addToDokkaiNotebook(vocab, article) {
+  const notebook = loadDokkaiNotebook();
+  // Tự động trích câu CHỨA từ này trong bài (ưu tiên đoạn nào có từ xuất hiện),
+  // kèm bản dịch tương ứng nếu bài có paragraphsVi.
+  let exampleJp = "", exampleVi = "";
+  article.paragraphs.forEach((p, i) => {
+    if (exampleJp) return;
+    const plain = p.replace(/\{\{[^|}]*\|[^|}]*(?:\|[^}]*)?\}\}/g, (m) => m.match(/\{\{([^|}]+)/)[1]);
+    if (plain.includes(vocab.kanji)) {
+      exampleJp = plain;
+      exampleVi = (article.paragraphsVi && article.paragraphsVi[i]) || "";
+    }
+  });
+  notebook.push({
+    kanji: vocab.kanji, reading: vocab.reading, hanviet: vocab.hanviet || "", meaning: vocab.meaning,
+    exampleJp, exampleVi, fromArticle: article.title, addedAt: Date.now(),
+  });
+  saveDokkaiNotebook(notebook);
+}
+function exportDokkaiNotebookTxt() {
+  const notebook = loadDokkaiNotebook();
+  if (!notebook.length) { alert("Sổ tay đang trống."); return; }
+  const lines = notebook.map((n, i) =>
+    `${i + 1}. ${n.kanji} (${n.reading}) — ${n.hanviet}\n   Nghĩa: ${n.meaning}\n   Ví dụ: ${n.exampleJp}\n   Dịch: ${n.exampleVi}\n   (Từ bài: ${n.fromArticle})\n`
+  );
+  const blob = new Blob([lines.join("\n")], { type: "text/plain;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `so-tay-tu-vung-${new Date().toISOString().slice(0, 10)}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
 function renderDokkaiInlineQuiz() {
   const article = App.reading.article;
   const wrap = document.getElementById("dokkaiInlineQuiz");
@@ -382,46 +582,65 @@ function renderDokkaiInlineQuiz() {
         <div class="dokkai-quiz-options" data-qi="${qi}">
           ${q.options.map((opt, oi) => `<button class="dokkai-quiz-opt" data-qi="${qi}" data-oi="${oi}">${opt}</button>`).join("")}
         </div>
+        <button class="dokkai-quiz-check-btn" data-qi="${qi}" disabled>答え合わせ</button>
       </div>
     `).join("")}
-    <button class="game-start-btn dokkai-submit-btn" id="btnDokkaiSubmitQuiz">結果を見る →</button>
+    <div class="dokkai-quiz-summary hidden" id="dokkaiQuizSummary"></div>
   `;
+  // Chọn đáp án CHỈ highlight (chưa chấm) — đúng yêu cầu "chọn không ra đúng
+  // sai liền", phải bấm nút "答え合わせ" (chấm điểm) riêng mới lộ đúng/sai.
   wrap.querySelectorAll(".dokkai-quiz-opt").forEach((btn) => {
-    btn.addEventListener("click", () => handleDokkaiInlineAnswer(btn));
+    btn.addEventListener("click", () => selectDokkaiOption(btn));
   });
-  document.getElementById("btnDokkaiSubmitQuiz").addEventListener("click", finishDokkaiQuiz);
+  wrap.querySelectorAll(".dokkai-quiz-check-btn").forEach((btn) => {
+    btn.addEventListener("click", () => checkDokkaiAnswer(parseInt(btn.dataset.qi, 10)));
+  });
 }
 
-function handleDokkaiInlineAnswer(btn) {
+function selectDokkaiOption(btn) {
   const qi = parseInt(btn.dataset.qi, 10);
-  if (App.reading.answers[qi] !== undefined) return; // đã trả lời câu này rồi, khóa lại
-  const oi = parseInt(btn.dataset.oi, 10);
+  if (App.reading.answers[qi]) return; // câu này đã chấm rồi (khóa), không cho chọn lại
+  const group = document.querySelector(`.dokkai-quiz-options[data-qi="${qi}"]`);
+  group.querySelectorAll(".dokkai-quiz-opt").forEach((b) => b.classList.remove("is-selected"));
+  btn.classList.add("is-selected");
+  document.querySelector(`.dokkai-quiz-check-btn[data-qi="${qi}"]`).disabled = false;
+}
+
+// Chấm điểm ĐÚNG lúc bấm "答え合わせ" — KHÔNG tự động lộ khi vừa chọn. Kết
+// quả hiện NGAY TẠI CHỖ (cùng trang), không chuyển màn nào cả.
+function checkDokkaiAnswer(qi) {
+  if (App.reading.answers[qi]) return;
+  const group = document.querySelector(`.dokkai-quiz-options[data-qi="${qi}"]`);
+  const selected = group.querySelector(".is-selected");
+  if (!selected) return;
+  const oi = parseInt(selected.dataset.oi, 10);
   const q = App.reading.article.questions[qi];
   const isCorrect = oi === q.answer;
   App.reading.answers[qi] = { chosenIdx: oi, correct: isCorrect };
 
-  const group = document.querySelector(`.dokkai-quiz-options[data-qi="${qi}"]`);
   group.querySelectorAll(".dokkai-quiz-opt").forEach((b, i) => {
     b.classList.add("disabled");
     if (i === q.answer) b.classList.add("correct");
     else if (i === oi) b.classList.add("wrong");
   });
+  document.querySelector(`.dokkai-quiz-check-btn[data-qi="${qi}"]`).remove();
+
+  const allAnswered = Object.keys(App.reading.answers).length === App.reading.article.questions.length;
+  if (allAnswered) showDokkaiInlineSummary();
 }
 
-function finishDokkaiQuiz() {
+// Tổng kết hiện NGAY DƯỚI cùng trang (không chuyển sang phase/màn khác nữa)
+// — đúng yêu cầu "không nhảy đi đâu hết".
+function showDokkaiInlineSummary() {
   const article = App.reading.article;
-  const answered = Object.keys(App.reading.answers).length;
-  if (answered < article.questions.length) {
-    const ok = confirm(`まだ${article.questions.length - answered}問未回答です。結果を見ますか？`);
-    if (!ok) return;
-  }
   const score = Object.values(App.reading.answers).filter((a) => a.correct).length;
-  document.getElementById("dokkaiPhaseRead").classList.add("hidden");
-  document.getElementById("dokkaiPhaseResult").classList.remove("hidden");
-  document.getElementById("dokkaiResultStats").innerHTML = `
+  const box = document.getElementById("dokkaiQuizSummary");
+  box.classList.remove("hidden");
+  box.innerHTML = `
     <div class="lg-result-score">${score} / ${article.questions.length}</div>
     <div class="lg-result-pct">${Math.round((score / article.questions.length) * 100)}%</div>
   `;
+  box.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
 function backToDokkaiPicker() {
