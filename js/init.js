@@ -602,8 +602,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("btnLgBackFromResult").addEventListener("click", backToListenGameSetup);
 
   // ----- Đọc hiểu (読解モード) -----
-  document.getElementById("btnDokkaiBackToPicker").addEventListener("click", backToDokkaiPicker);
-  document.getElementById("btnDokkaiExportNotebook").addEventListener("click", exportDokkaiNotebookTxt);
+  document.getElementById("btnDokkaiBackToPickerTop").addEventListener("click", backToDokkaiPicker);
   document.querySelectorAll(".dokkai-translate-btn").forEach((btn) => {
     btn.addEventListener("click", () => setDokkaiTranslateMode(btn.dataset.translateMode));
   });
