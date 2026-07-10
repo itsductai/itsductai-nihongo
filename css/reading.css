@@ -176,12 +176,12 @@
 .dokkai-quiz-block-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
 .dokkai-quiz-block-num { font-size: 12px; font-weight: 800; color: var(--accent); }
 .dokkai-quiz-difficulty { font-size: 12px; color: var(--warn); letter-spacing: 1px; }
-.dokkai-quiz-question { font-size: 14.5px; font-weight: 700; color: var(--text-0); margin-bottom: 14px; line-height: 1.6; }
+.dokkai-quiz-question { font-size: 14.5px; font-weight: 700; color: var(--text-0); margin-bottom: 14px; line-height: 1.6; user-select: text; -webkit-user-select: text; }
 .dokkai-quiz-options { display: flex; flex-direction: column; gap: 8px; }
 .dokkai-quiz-opt {
   padding: 11px 14px; border-radius: 10px; font-size: 13.5px; font-weight: 600; color: var(--text-1);
   background: var(--bg-2); border: 1.5px solid var(--border-soft); cursor: pointer;
-  text-align: left; transition: all .15s ease;
+  text-align: left; transition: all .15s ease; user-select: text; -webkit-user-select: text;
 }
 .dokkai-quiz-opt:hover:not(.disabled) { border-color: var(--accent); background: var(--accent-soft); }
 .dokkai-quiz-opt.disabled { cursor: default; }
