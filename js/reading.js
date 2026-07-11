@@ -369,7 +369,7 @@ function renderDokkaiVocabSidebar(vocabIndex) {
     wrap.innerHTML = statsHtml + `<div class="dokkai-sidebar-empty">Chưa có danh sách từ vựng cho bài này.</div>`;
     return;
   }
-  const SERIES_COLORS = { tango: "#ff6b6b", mimi: "#48c98c" }; // đỏ=Tango, xanh lá=Mimi theo đúng yêu cầu
+  const SERIES_COLORS = { mimi: "#48c98c", tango: "#ff6b6b", n2vocab: "#a98bff", n1vocab: "#a98bff", khac: "var(--text-2)" }; // xanh=Mimi, đỏ=Tango, tím=JLPT N2 (cả N2/N1 import), xám=Khác
   wrap.innerHTML = statsHtml + list.map((v) => {
     const deckMatch = vocabIndex.find((e) => e.word === v.kanji);
     const srcColor = deckMatch ? (SERIES_COLORS[deckMatch.series] || "var(--text-2)") : null;

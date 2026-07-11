@@ -57,8 +57,9 @@ Nếu một đáp án (kể cả đáp án sai/bẫy) dùng từ vựng hoặc n
 |---|---|
 | reading-01, 02 | ✅ Đã sửa |
 | reading-03 | ✅ Đã đạt chuẩn (kiểm tra thấy ổn, không cần sửa) |
-| reading-04 → 10 | ❌ **Chưa rà** — cần kiểm tra độ dài đáp án + paraphrase |
+| reading-04 → 10 | ✅ Đã rà và sửa xong (chênh lệch tối đa giờ dưới 10 ký tự) |
 | reading-11, 12, 13, 14 | ✅ Đã sửa (viết theo bẫy đúng nhưng ban đầu quên cân bằng độ dài, đã fix) |
 | reading-15, 16 | ✅ Viết mới, áp dụng đúng quy tắc ngay từ đầu |
+| reading-17, 18, 19 | ✅ Viết mới, áp dụng đúng quy tắc ngay từ đầu |
 
-Việc rà soát reading-04 → reading-10 vẫn còn tồn đọng, cần làm ở các lượt tiếp theo.
+Toàn bộ 19 bài đọc hiện tại đã đạt chuẩn cân bằng độ dài đáp án.

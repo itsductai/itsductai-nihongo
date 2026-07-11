@@ -878,9 +878,15 @@ function renderStatsGroup(decks, donutRowId, tbodyId, accentLabel) {
 // có 1 biểu đồ tròn (donut) tổng quan + bảng chi tiết từng bộ riêng.
 function renderStatsOverviewTable() {
   const mimiDecks = App.decks.filter((d) => d.series === "mimi");
-  const otherDecks = App.decks.filter((d) => d.series !== "mimi");
+  const tangoDecks = App.decks.filter((d) => d.series === "tango");
+  const jlptN2Decks = App.decks.filter((d) => d.series === "n2vocab" || d.series === "n1vocab");
+  const otherDecks = App.decks.filter((d) => !["mimi", "tango", "n2vocab", "n1vocab"].includes(d.series));
   document.querySelector(".stats-group-mimi").classList.toggle("hidden", mimiDecks.length === 0);
-  renderStatsGroup(mimiDecks, "statsDonutRowMimi", "statsOverviewBodyMimi", "Mimi N2");
+  document.querySelector(".stats-group-tango").classList.toggle("hidden", tangoDecks.length === 0);
+  document.querySelector(".stats-group-jlptn2").classList.toggle("hidden", jlptN2Decks.length === 0);
+  renderStatsGroup(mimiDecks, "statsDonutRowMimi", "statsOverviewBodyMimi", "Mimikara oboeru");
+  renderStatsGroup(tangoDecks, "statsDonutRowTango", "statsOverviewBodyTango", "Tango N2");
+  renderStatsGroup(jlptN2Decks, "statsDonutRowJlptN2", "statsOverviewBodyJlptN2", "JLPT N2 (import)");
   renderStatsGroup(otherDecks, "statsDonutRowOther", "statsOverviewBodyOther", "Tài liệu khác");
 }
 

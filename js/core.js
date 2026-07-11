@@ -600,7 +600,13 @@ function speakWord(w) {
   const text = w.doc || w.cautruc || w.kanji;
   const example = typeof getFirstExampleSentencePlain === "function" ? getFirstExampleSentencePlain(w) : null;
   if (example && example.jp) {
-    speakJapaneseForced(text, () => speakJapaneseForced(example.jp));
+    // FIX BUG: speakJapaneseForced() gọi speechSynthesis.cancel() ngay đầu mỗi
+    // lần — nếu gọi lại NGAY trong onend (cancel + speak liên tiếp cùng 1 tick)
+    // thì nhiều trình duyệt (đặc biệt Chrome) ÂM THẦM BỎ QUA utterance thứ 2,
+    // đây chính là lý do câu ví dụ không được đọc dù dữ liệu vi_du có đầy đủ.
+    // Thêm độ trễ nhỏ (100ms) để speech engine kịp "ổn định" trước khi phát
+    // tiếp — cách khắc phục phổ biến cho quirk này của Web Speech API.
+    speakJapaneseForced(text, () => setTimeout(() => speakJapaneseForced(example.jp), 100));
   } else {
     speakJapaneseForced(text);
   }

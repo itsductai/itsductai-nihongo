@@ -67,10 +67,14 @@ function getDailyActivitySeries(numDays) {
    — tự động xuất hiện thành nhóm riêng ở đây, không cần sửa code.
 =================================================================== */
 const CURRICULUM_LABELS = {
-  mimi: "📘 Mimi N2",
+  mimi: "📘 Mimikara oboeru",
+  tango: "📕 Tango N2 (nut-that)",
+  n2vocab: "📗 JLPT N2 (import)",
+  n1vocab: "📗 JLPT N2 (import) - N1",
   __tuvung_other__: "📚 Từ vựng khác",
   __nguphap_other__: "📖 Ngữ pháp khác",
 };
+const CURRICULUM_COLORS = { mimi: "#48c98c", tango: "#ff6b6b", n2vocab: "#a98bff", n1vocab: "#a98bff" };
 
 function getCurriculumGroups() {
   const groups = {};
@@ -81,7 +85,15 @@ function getCurriculumGroups() {
     }
     groups[key].decks.push(deck);
   });
-  return Object.values(groups);
+  // Thứ tự cố định: Mimi -> Tango -> JLPT N2 (import N2/N1) -> nhóm khác
+  const ORDER = ["mimi", "tango", "n2vocab", "n1vocab"];
+  return Object.values(groups).sort((a, b) => {
+    const ia = ORDER.indexOf(a.key), ib = ORDER.indexOf(b.key);
+    if (ia === -1 && ib === -1) return 0;
+    if (ia === -1) return 1;
+    if (ib === -1) return -1;
+    return ia - ib;
+  });
 }
 
 // % hoàn thành trung bình của 1 nhóm giáo trình — tính theo tỉ lệ từ known+mastered
@@ -122,7 +134,7 @@ function buildCurriculumBarChart(groups) {
   if (!groups.length) return `<div class="dash-chart-empty">Chưa có bộ nào để thống kê.</div>`;
   const rows = groups.map((g) => {
     const { known, total, pct } = computeCurriculumProgress(g);
-    const color = g.type === "NGUPHAP" ? "var(--purple)" : "var(--accent)";
+    const color = CURRICULUM_COLORS[g.key] || (g.type === "NGUPHAP" ? "var(--purple)" : "var(--accent)");
     return `
       <div class="dash-hbar-row">
         <div class="dash-hbar-label">${g.label}</div>
@@ -464,9 +476,12 @@ function renderLevelPickerSeriesGrid() {
     if (!bySeries[key]) bySeries[key] = [];
     bySeries[key].push(d);
   });
-  const SERIES_LABELS = { mimi: "Mimikara oboeru", tango: "Tango N2 (nut-that)", khac: "Khác" };
+  const SERIES_LABELS = { mimi: "Mimikara oboeru", tango: "Tango N2 (nut-that)", n2vocab: "JLPT N2 (import mới)", n1vocab: "JLPT N2 (import mới)", khac: "Khác" };
+  const SERIES_COLORS = { mimi: "#48c98c", tango: "#ff6b6b", n2vocab: "#a98bff", n1vocab: "#a98bff", khac: "var(--text-2)" };
+  // Thứ tự cố định hiển thị: Mimi -> Tango -> JLPT N2 (import N2/N1) -> Khác
+  const SERIES_ORDER = ["mimi", "tango", "n2vocab", "n1vocab", "khac"];
 
-  const seriesKeys = Object.keys(bySeries);
+  const seriesKeys = Object.keys(bySeries).sort((a, b) => SERIES_ORDER.indexOf(a) - SERIES_ORDER.indexOf(b));
   if (!seriesKeys.length) {
     grid.innerHTML = `<div class="dash-chart-empty">Chưa có bộ nào ở trình độ này.</div>`;
     return;
@@ -474,11 +489,12 @@ function renderLevelPickerSeriesGrid() {
   grid.innerHTML = seriesKeys.map((key) => {
     const seriesDecks = bySeries[key];
     const totalWords = seriesDecks.reduce((s, d) => s + d.words.length, 0);
+    const color = SERIES_COLORS[key] || "var(--text-2)";
     return `
-      <button class="level-picker-series-card" data-series="${key}">
+      <button class="level-picker-series-card" data-series="${key}" style="border-left: 4px solid ${color}">
         <div class="level-picker-series-card-title">${SERIES_LABELS[key] || key}</div>
         <div class="level-picker-series-card-sub">Từ vựng ${seriesDecks.length} chương</div>
-        <div class="level-picker-series-card-meta">${totalWords} từ vựng</div>
+        <div class="level-picker-series-card-meta" style="background:${color}22; color:${color}">${totalWords} từ vựng</div>
         <div class="level-picker-series-card-link">Xem danh sách từ →</div>
       </button>`;
   }).join("");
