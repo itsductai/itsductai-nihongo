@@ -315,7 +315,13 @@
       "doc_marked": "とらえる",
       "vi_du": "チャンスをしっかり捉えた。 (Tôi đã nắm bắt cơ hội một cách chắc chắn.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "つかむ",
+          "doc": "つかむ",
+          "nghia": "nắm bắt"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -433,7 +439,13 @@
       "vi_du": "気温が下降している。 (Nhiệt độ đang giảm xuống.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "上昇",
+          "doc": "じょうしょう",
+          "nghia": "tăng lên"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-18::街角",
@@ -484,7 +496,13 @@
       "doc_marked": "あやうい",
       "vi_du": "命が危うい状態だった。 (Tính mạng đã ở trong tình trạng nguy hiểm.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "危険",
+          "doc": "きけん",
+          "nghia": "nguy hiểm"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -536,7 +554,13 @@
       "doc_marked": "よびかける",
       "vi_du": "参加を呼びかけるポスターを作った。 (Tôi đã làm áp phích kêu gọi tham gia.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "訴える",
+          "doc": "うったえる",
+          "nghia": "kêu gọi"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -562,7 +586,13 @@
       "doc_marked": "まぜる",
       "vi_du": "小麦粉に卵を混ぜた。 (Tôi đã trộn trứng vào bột mì.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "混ざる",
+          "doc": "まざる",
+          "nghia": "trộn lẫn"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -654,7 +684,13 @@
       "vi_du": "大雑把な計画しか立てていない。 (Tôi mới chỉ lập kế hoạch một cách qua loa.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "丁寧",
+          "doc": "ていねい",
+          "nghia": "tỉ mỉ, cẩn thận"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-18::地名",
@@ -718,7 +754,13 @@
       "doc_marked": "ひにく",
       "vi_du": "彼は皮肉を込めて言った。 (Anh ấy đã nói với hàm ý mỉa mai.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "からかい",
+          "doc": "からかい",
+          "nghia": "trêu chọc"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -784,7 +826,13 @@
       "vi_du": "宇宙は無限に広がっている。 (Vũ trụ đang mở rộng vô hạn.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "有限",
+          "doc": "ゆうげん",
+          "nghia": "hữu hạn"
+        }
+      ]
     }
   ]
 }

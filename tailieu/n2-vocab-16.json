@@ -198,7 +198,13 @@
       "doc_marked": "わかれる",
       "vi_du": "意見が二つに分かれた。 (Ý kiến đã chia thành hai phe.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "別れる",
+          "doc": "わかれる",
+          "nghia": "chia tay, tách ra"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -238,7 +244,13 @@
       "vi_du": "この液体は無色透明だ。 (Chất lỏng này không màu và trong suốt.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "固体",
+          "doc": "こたい",
+          "nghia": "thể rắn"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-16::殴る",
@@ -264,7 +276,13 @@
       "vi_du": "新しい法案が可決された。 (Dự luật mới đã được thông qua.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "否決",
+          "doc": "ひけつ",
+          "nghia": "bác bỏ"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-16::家屋",
@@ -289,7 +307,13 @@
       "doc_marked": "あらためる",
       "vi_du": "悪い習慣を改めた。 (Tôi đã sửa đổi thói quen xấu.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "直す",
+          "doc": "なおす",
+          "nghia": "sửa lại"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -315,7 +339,13 @@
       "doc_marked": "かく**ちょう**",
       "vi_du": "道路の拡張工事が行われている。 (Công trình mở rộng đường đang được tiến hành.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "拡大",
+          "doc": "かくだい",
+          "nghia": "mở rộng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -459,7 +489,13 @@
       "vi_du": "もっと合理的な方法を考えた。 (Tôi đã nghĩ ra một cách hợp lý hơn.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "不合理",
+          "doc": "ふごうり",
+          "nghia": "vô lý"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-16::紺",
@@ -536,8 +572,20 @@
       "doc_marked": "じゃくてん",
       "vi_du": "自分の弱点を克服したい。 (Tôi muốn khắc phục điểm yếu của bản thân.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
-      "trai_nghia": []
+      "dong_nghia": [
+        {
+          "kanji": "欠点",
+          "doc": "けってん",
+          "nghia": "khuyết điểm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "長所",
+          "doc": "ちょうしょ",
+          "nghia": "điểm mạnh"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-16::汁",
@@ -562,7 +610,13 @@
       "doc_marked": "じゅんかん",
       "vi_du": "血液が全身を循環している。 (Máu đang tuần hoàn khắp cơ thể.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "回る",
+          "doc": "まわる",
+          "nghia": "xoay vòng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -758,7 +812,13 @@
       "vi_du": "内科で診察を受けた。 (Tôi đã được khám ở khoa nội.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "外科",
+          "doc": "げか",
+          "nghia": "khoa ngoại"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-16::内線",

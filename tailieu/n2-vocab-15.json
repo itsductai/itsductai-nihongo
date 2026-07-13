@@ -42,7 +42,13 @@
       "doc_marked": "みぶん",
       "vi_du": "身分を証明する書類が必要だ。 (Cần có giấy tờ chứng minh thân phận.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "地位",
+          "doc": "ちい",
+          "nghia": "địa vị"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -81,7 +87,13 @@
       "doc_marked": "せっきん",
       "vi_du": "台風が本州に接近している。 (Cơn bão đang tiến gần đến đảo Honshu.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "近づく",
+          "doc": "ちかづく",
+          "nghia": "tiến gần"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -121,7 +133,13 @@
       "vi_du": "彼女はいつも地味な服を着る。 (Cô ấy luôn mặc quần áo giản dị.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "派手",
+          "doc": "はで",
+          "nghia": "lòe loẹt"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-15::長短",
@@ -147,7 +165,13 @@
       "vi_du": "南極の氷が溶けている。 (Băng ở Nam Cực đang tan chảy.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "北極",
+          "doc": "ほっきょく",
+          "nghia": "Bắc Cực"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-15::発射",
@@ -173,7 +197,13 @@
       "vi_du": "平日は仕事で忙しい。 (Ngày thường tôi bận rộn với công việc.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "休日",
+          "doc": "きゅうじつ",
+          "nghia": "ngày nghỉ"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-15::平野",
@@ -212,7 +242,13 @@
       "vi_du": "電車はいつも満員だ。 (Tàu điện lúc nào cũng chật ních người.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "空席",
+          "doc": "くうせき",
+          "nghia": "ghế trống"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-15::溶岩",
@@ -524,7 +560,13 @@
       "vi_du": "彼はその意見を肯定した。 (Anh ấy đã khẳng định ý kiến đó.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "否定",
+          "doc": "ひてい",
+          "nghia": "phủ định"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-15::高める",
@@ -537,7 +579,13 @@
       "vi_du": "集中力を高める工夫をした。 (Tôi đã tìm cách nâng cao khả năng tập trung.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "低める",
+          "doc": "ひくめる",
+          "nghia": "hạ thấp"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-15::四季",
@@ -614,7 +662,13 @@
       "doc_marked": "**しょう**はい",
       "vi_du": "試合の勝敗が決まった。 (Thắng bại của trận đấu đã được định đoạt.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "勝負",
+          "doc": "しょうぶ",
+          "nghia": "thắng thua"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -628,7 +682,13 @@
       "vi_du": "上りの電車に乗った。 (Tôi đã lên tàu chiều đi vào trung tâm.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "下り",
+          "doc": "くだり",
+          "nghia": "chiều xuống, chiều đi ra"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-15::上級",
@@ -641,7 +701,13 @@
       "vi_du": "上級クラスに進んだ。 (Tôi đã lên lớp trình độ cao hơn.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "初級",
+          "doc": "しょきゅう",
+          "nghia": "sơ cấp"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-15::心身",

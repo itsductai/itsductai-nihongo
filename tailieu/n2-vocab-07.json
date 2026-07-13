@@ -16,7 +16,13 @@
       "doc_marked": "だます",
       "vi_du": "彼は詐欺師に騙された。 (Anh ấy đã bị kẻ lừa đảo lừa gạt.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "欺く",
+          "doc": "あざむく",
+          "nghia": "lừa dối"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -56,7 +62,13 @@
       "vi_du": "スープを電子レンジで温めた。 (Tôi đã hâm nóng súp bằng lò vi sóng.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "冷やす",
+          "doc": "ひやす",
+          "nghia": "làm lạnh"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-07::宛名",
@@ -224,7 +236,13 @@
       "doc_marked": "ずうずうしい",
       "vi_du": "そんな図々しい態度は良くない。 (Thái độ trơ trẽn như vậy không tốt.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "厚かましい",
+          "doc": "あつかましい",
+          "nghia": "trơ trẽn"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -342,7 +360,13 @@
       "vi_du": "小学生に引き算を教える。 (Dạy phép trừ cho học sinh tiểu học.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "足し算",
+          "doc": "たしざん",
+          "nghia": "phép cộng"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-07::引き止める",
@@ -380,7 +404,13 @@
       "doc_marked": "ひとまず",
       "vi_du": "ひとまず落ち着いて話しましょう。 (Trước hết hãy bình tĩnh rồi nói chuyện.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "とりあえず",
+          "doc": "とりあえず",
+          "nghia": "trước mắt"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -394,7 +424,13 @@
       "vi_du": "道が工事でふさがっている。 (Con đường bị chặn kín vì đang thi công.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "空く",
+          "doc": "あく",
+          "nghia": "trống, rảnh"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-07::塞ぐ",
@@ -420,7 +456,13 @@
       "vi_du": "日焼けして肌が真っ黒になった。 (Da đã trở nên đen sạm vì cháy nắng.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "真っ白",
+          "doc": "まっしろ",
+          "nghia": "trắng tinh"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-07::もったいない",
@@ -471,7 +513,13 @@
       "doc_marked": "わく",
       "vi_du": "疑問が次々に湧いてきた。 (Những nghi vấn đã liên tục nảy sinh.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "生じる",
+          "doc": "しょうじる",
+          "nghia": "nảy sinh"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -498,7 +546,13 @@
       "vi_du": "この問題は割り算を使う。 (Bài toán này dùng phép chia.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "掛け算",
+          "doc": "かけざん",
+          "nghia": "phép nhân"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-07::めでたい",
@@ -641,7 +695,13 @@
       "vi_du": "彼は良い環境に恵まれている。 (Anh ấy được ban cho một môi trường tốt.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "恵まれない",
+          "doc": "めぐまれない",
+          "nghia": "thiếu thốn, không may mắn"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-07::やむを得ない",
@@ -653,7 +713,13 @@
       "doc_marked": "やむをえない",
       "vi_du": "やむを得ない事情で欠席した。 (Vì lý do bất khả kháng nên tôi đã vắng mặt.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "仕方がない",
+          "doc": "しかたがない",
+          "nghia": "không còn cách nào khác"
+        }
+      ],
       "trai_nghia": []
     },
     {

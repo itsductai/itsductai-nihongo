@@ -42,7 +42,13 @@
       "doc_marked": "みかけ",
       "vi_du": "見かけによらず、彼は力持ちだ。 (Không như vẻ ngoài, anh ấy khỏe hơn tưởng tượng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "外見",
+          "doc": "がいけん",
+          "nghia": "vẻ ngoài"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -81,7 +87,13 @@
       "doc_marked": "**ゆう****ゆう**",
       "vi_du": "彼は悠々とした態度で歩いていた。 (Anh ấy đi bộ với thái độ ung dung, thong thả.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "ゆったり",
+          "doc": "ゆったり",
+          "nghia": "thong thả"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -95,7 +107,13 @@
       "vi_du": "彼女はいつも若々しい印象を与える。 (Cô ấy luôn tạo ấn tượng trẻ trung đầy sức sống.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "老けた",
+          "doc": "ふけた",
+          "nghia": "già dặn"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-03::嫌がる",
@@ -108,7 +126,13 @@
       "vi_du": "子供が病院に行くのを嫌がった。 (Đứa trẻ đã không muốn đi bệnh viện.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "喜ぶ",
+          "doc": "よろこぶ",
+          "nghia": "vui mừng"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-03::打ち消す",
@@ -120,7 +144,13 @@
       "doc_marked": "うちけす",
       "vi_du": "彼はうわさを打ち消した。 (Anh ấy đã phủ nhận tin đồn.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "否定する",
+          "doc": "ひていする",
+          "nghia": "phủ định"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -133,7 +163,13 @@
       "doc_marked": "**おう**ずる",
       "vi_du": "要求に応じて対応した。 (Chúng tôi đã ứng phó theo yêu cầu.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "応じる",
+          "doc": "おうじる",
+          "nghia": "đáp ứng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -146,7 +182,13 @@
       "doc_marked": "かんずる",
       "vi_du": "彼の言葉に不安を感じた。 (Tôi đã cảm thấy bất an trước lời nói của anh ấy.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "感じる",
+          "doc": "かんじる",
+          "nghia": "cảm nhận"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -159,7 +201,13 @@
       "doc_marked": "しおからい",
       "vi_du": "この味噌汁は少し塩辛い。 (Canh miso này hơi mặn.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "しょっぱい",
+          "doc": "しょっぱい",
+          "nghia": "mặn"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -185,7 +233,13 @@
       "doc_marked": "ながびく",
       "vi_du": "会議が予想以上に長引いた。 (Cuộc họp kéo dài hơn dự tính.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "延びる",
+          "doc": "のびる",
+          "nghia": "kéo dài"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -198,7 +252,13 @@
       "doc_marked": "のこらず",
       "vi_du": "料理を残らず食べてしまった。 (Tôi đã ăn hết sạch sành sanh phần ăn.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "すべて",
+          "doc": "すべて",
+          "nghia": "tất cả"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -289,7 +349,13 @@
       "doc_marked": "おのおの",
       "vi_du": "各々の意見を発表した。 (Mỗi người đã trình bày ý kiến riêng của mình.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "それぞれ",
+          "doc": "それぞれ",
+          "nghia": "mỗi cái, mỗi người"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -420,7 +486,13 @@
       "vi_du": "二つの川がこの地点で合流する。 (Hai con sông gặp nhau tại điểm này.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "分岐",
+          "doc": "ぶんき",
+          "nghia": "phân nhánh, tách ra"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-03::斬る",
@@ -511,7 +583,13 @@
       "vi_du": "抽象的な表現で分かりにくい。 (Cách diễn đạt trừu tượng nên khó hiểu.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "具体",
+          "doc": "ぐたい",
+          "nghia": "cụ thể"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-03::気をつける",
@@ -523,7 +601,13 @@
       "doc_marked": "きをつける",
       "vi_du": "車に気をつけて渡ってください。 (Hãy chú ý xe cộ khi qua đường.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "注意する",
+          "doc": "ちゅういする",
+          "nghia": "chú ý"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -576,7 +660,13 @@
       "vi_du": "彼はいつものんきに構えている。 (Anh ấy lúc nào cũng có thái độ ung dung, thoải mái.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "心配性",
+          "doc": "しんぱいしょう",
+          "nghia": "hay lo lắng"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-03::追いかける",
@@ -732,7 +822,13 @@
       "vi_du": "彼はいつもだらしない格好をしている。 (Anh ấy lúc nào cũng ăn mặc lôi thôi.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "きちんと",
+          "doc": "きちんと",
+          "nghia": "ngăn nắp, gọn gàng"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-03::ぶつかる",

@@ -1,0 +1,862 @@
+{
+  "id": "n3-vocab-05",
+  "title": "N3 Vocab - Chương 5",
+  "type": "TUVUNG",
+  "series": "n3vocab",
+  "level": "N3",
+  "private": false,
+  "words": [
+    {
+      "_id": "n3-vocab-05::回す",
+      "kanji": "回す",
+      "cautruc": null,
+      "doc": "まわす",
+      "doc_marked": "まわす",
+      "han_viet": "HỒI",
+      "nghia": "xoay chuyển; chuyền cho; quay",
+      "vi_du": "ハンドルを回した。 (Tôi đã xoay vô lăng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::咳",
+      "kanji": "咳",
+      "cautruc": null,
+      "doc": "せき",
+      "doc_marked": "せき",
+      "han_viet": "KHÁI",
+      "nghia": "ho khan",
+      "vi_du": "咳が止まらない。 (Tôi ho không ngừng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::害",
+      "kanji": "害",
+      "cautruc": null,
+      "doc": "がい",
+      "doc_marked": "がい",
+      "han_viet": "HẠI",
+      "nghia": "hại; cái hại",
+      "vi_du": "タバコは体に害がある。 (Thuốc lá có hại cho cơ thể.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::確かめる",
+      "kanji": "確かめる",
+      "cautruc": null,
+      "doc": "たしかめる",
+      "doc_marked": "たしかめる",
+      "han_viet": "XÁC",
+      "nghia": "xác nhận; làm cho rõ ràng",
+      "vi_du": "事実を確かめた。 (Tôi đã xác nhận sự thật.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::覚ます",
+      "kanji": "覚ます",
+      "cautruc": null,
+      "doc": "さます",
+      "doc_marked": "さます",
+      "han_viet": "GIÁC",
+      "nghia": "đánh thức dậy; làm cho tỉnh lại",
+      "vi_du": "目を覚ました。 (Tôi đã tỉnh giấc.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "眠る",
+          "doc": "ねむる",
+          "nghia": "ngủ"
+        }
+      ]
+    },
+    {
+      "_id": "n3-vocab-05::覚める",
+      "kanji": "覚める",
+      "cautruc": null,
+      "doc": "さめる",
+      "doc_marked": "さめる",
+      "han_viet": "GIÁC",
+      "nghia": "tỉnh dậy; tỉnh giấc",
+      "vi_du": "夢から覚めた。 (Tôi đã tỉnh khỏi giấc mơ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "起きる",
+          "doc": "おきる",
+          "nghia": "thức dậy"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::学ぶ",
+      "kanji": "学ぶ",
+      "cautruc": null,
+      "doc": "まなぶ",
+      "doc_marked": "まなぶ",
+      "han_viet": "HỌC",
+      "nghia": "học",
+      "vi_du": "大学で経済を学んでいる。 (Tôi đang học kinh tế ở đại học.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::学期",
+      "kanji": "学期",
+      "cautruc": null,
+      "doc": "がっき",
+      "doc_marked": "がっき",
+      "han_viet": "HỌC KÌ",
+      "nghia": "học kỳ",
+      "vi_du": "新学期が始まった。 (Học kỳ mới đã bắt đầu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::割る",
+      "kanji": "割る",
+      "cautruc": null,
+      "doc": "わる",
+      "doc_marked": "わる",
+      "han_viet": "CÁT",
+      "nghia": "làm gãy; bửa; chia ra; cắt ra; làm vỡ; phân chia; làm nứt; đập; búng; chia; đánh vỡ; đánh bễ",
+      "vi_du": "卵を割った。 (Tôi đã đập trứng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::刈る",
+      "kanji": "刈る",
+      "cautruc": null,
+      "doc": "かる",
+      "doc_marked": "かる",
+      "han_viet": "NGẢI",
+      "nghia": "húi; gặt; cắt; tỉa; phát",
+      "vi_du": "庭の草を刈った。 (Tôi đã cắt cỏ trong vườn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::完了",
+      "kanji": "完了",
+      "cautruc": null,
+      "doc": "かんりょう",
+      "doc_marked": "かん**りょう**",
+      "han_viet": "HOÀN LIỄU",
+      "nghia": "sự xong xuôi; sự kết thúc; sự hoàn thành; xong xuôi; kết thúc; hoàn thành",
+      "vi_du": "作業が完了した。 (Công việc đã hoàn thành.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "終了",
+          "doc": "しゅうりょう",
+          "nghia": "kết thúc"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::関する",
+      "kanji": "関する",
+      "cautruc": null,
+      "doc": "かんする",
+      "doc_marked": "かんする",
+      "han_viet": "QUAN",
+      "nghia": "liên quan đến; về (vấn đề)",
+      "vi_du": "経済に関する記事を読んだ。 (Tôi đã đọc bài báo liên quan đến kinh tế.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::含む",
+      "kanji": "含む",
+      "cautruc": null,
+      "doc": "ふくむ",
+      "doc_marked": "ふくむ",
+      "han_viet": "HÀM",
+      "nghia": "bao gồm; gồm có; gồm; đựng; kể",
+      "vi_du": "税金を含む価格だ。 (Đây là giá bao gồm cả thuế.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::願う",
+      "kanji": "願う",
+      "cautruc": null,
+      "doc": "ねがう",
+      "doc_marked": "ねがう",
+      "han_viet": "NGUYỆN",
+      "nghia": "ao ước; cầu mong; cầu xin; năn nỉ; xin; nguyện",
+      "vi_du": "成功を願っている。 (Tôi cầu mong thành công.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::器用",
+      "kanji": "器用",
+      "cautruc": null,
+      "doc": "きよう",
+      "doc_marked": "き**よう**",
+      "han_viet": "KHÍ DỤNG",
+      "nghia": "sự tinh xảo; tinh xảo; khéo léo; khéo tay; khéo; có kỹ xảo; có tay nghề; giỏi; sự khéo léo; khéo léo",
+      "vi_du": "彼は手先が器用だ。 (Anh ấy khéo tay.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "不器用",
+          "doc": "ぶきよう",
+          "nghia": "vụng về"
+        }
+      ]
+    },
+    {
+      "_id": "n3-vocab-05::機嫌",
+      "kanji": "機嫌",
+      "cautruc": null,
+      "doc": "きげん",
+      "doc_marked": "きげん",
+      "han_viet": "KI HIỀM",
+      "nghia": "sắc mặt; tâm trạng; tính khí; tâm tình; tính tình; sức khỏe",
+      "vi_du": "今日は機嫌がいい。 (Hôm nay tâm trạng tốt.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::気に入る",
+      "kanji": "気に入る",
+      "cautruc": null,
+      "doc": "きにいる",
+      "doc_marked": "きにいる",
+      "han_viet": "KHÍ NHẬP",
+      "nghia": "yêu thích; ưa thích",
+      "vi_du": "このデザインが気に入った。 (Tôi đã thích thiết kế này.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::気の毒",
+      "kanji": "気の毒",
+      "cautruc": null,
+      "doc": "きのどく",
+      "doc_marked": "きのどく",
+      "han_viet": "KHÍ ĐỘC",
+      "nghia": "sự đáng thương; sự bi thảm; sự không may; đáng thương; bi thảm; không may; tội nghiệp; đáng thương; bi thảm; không may; rủi ro",
+      "vi_du": "彼女の境遇が気の毒だ。 (Hoàn cảnh của cô ấy thật đáng thương.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::記入",
+      "kanji": "記入",
+      "cautruc": null,
+      "doc": "きにゅう",
+      "doc_marked": "きに**ゅう**",
+      "han_viet": "KÍ NHẬP",
+      "nghia": "sự ghi vào; sự điền vào; sự viết vào; sự nhập vào; ghi vào; điền vào; viết vào; nhập vào",
+      "vi_du": "用紙に記入した。 (Tôi đã điền vào biểu mẫu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::起こる",
+      "kanji": "起こる",
+      "cautruc": null,
+      "doc": "おこる",
+      "doc_marked": "おこる",
+      "han_viet": "KHỞI",
+      "nghia": "xảy ra; nhúc nhích; xẩy; xẩy ra; xảy",
+      "vi_du": "事故が起こった。 (Tai nạn đã xảy ra.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::逆らう",
+      "kanji": "逆らう",
+      "cautruc": null,
+      "doc": "さからう",
+      "doc_marked": "さからう",
+      "han_viet": "NGHỊCH",
+      "nghia": "ngược; ngược lại; đảo lộn; chống đối lại; gàn",
+      "vi_du": "親に逆らった。 (Tôi đã chống đối lại cha mẹ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::及ぼす",
+      "kanji": "及ぼす",
+      "cautruc": null,
+      "doc": "およぼす",
+      "doc_marked": "およぼす",
+      "han_viet": "CẬP",
+      "nghia": "gây (ảnh hưởng; hại)",
+      "vi_du": "健康に悪影響を及ぼす。 (Gây ảnh hưởng xấu đến sức khỏe.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::救う",
+      "kanji": "救う",
+      "cautruc": null,
+      "doc": "すくう",
+      "doc_marked": "す**くう**",
+      "han_viet": "CỨU",
+      "nghia": "cứu giúp; cứu tế; cứu trợ",
+      "vi_du": "命を救った。 (Tôi đã cứu sống một mạng người.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::去る",
+      "kanji": "去る",
+      "cautruc": null,
+      "doc": "さる",
+      "doc_marked": "さる",
+      "han_viet": "KHỨ",
+      "nghia": "lui gót; rời; lui bước; cút; ra khỏi; ra đi; bỏ đi; đi xa; rời xa",
+      "vi_du": "彼は町を去った。 (Anh ấy đã rời khỏi thị trấn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "離れる",
+          "doc": "はなれる",
+          "nghia": "rời khỏi"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::居眠り",
+      "kanji": "居眠り",
+      "cautruc": null,
+      "doc": "いねむり",
+      "doc_marked": "いねむり",
+      "han_viet": "CƯ MIÊN",
+      "nghia": "sự ngủ gật",
+      "vi_du": "授業中に居眠りをした。 (Tôi đã ngủ gật trong giờ học.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::強調",
+      "kanji": "強調",
+      "cautruc": null,
+      "doc": "きょうちょう",
+      "doc_marked": "**きょう****ちょう**",
+      "han_viet": "CƯỜNG ĐIỀU",
+      "nghia": "sự nhấn mạnh; nhấn mạnh; sự nhấn giọng; nhấn giọng",
+      "vi_du": "重要性を強調した。 (Tôi đã nhấn mạnh tầm quan trọng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::おそらく",
+      "kanji": "おそらく",
+      "cautruc": null,
+      "doc": "おそらく",
+      "doc_marked": "おそらく",
+      "han_viet": "",
+      "nghia": "《「恐らくは」của từ viết tắt. Sau đó là động từ diễn tả sự suy đoán》 Có thể. Chắc chắn. Có lẽ. Không sai. 〔Từ đồng nghĩa〕おおかた·たぶん·たいてい·きっと",
+      "vi_du": "おそらく彼は来ないだろう。 (Có lẽ anh ấy sẽ không đến.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::恐ろしい",
+      "kanji": "恐ろしい",
+      "cautruc": null,
+      "doc": "おそろしい",
+      "doc_marked": "おそろしい",
+      "han_viet": "KHỦNG",
+      "nghia": "khiếp; gớm; hãi hùng; đáng sợ; kinh khủng; sợ; rùng rợn",
+      "vi_du": "恐ろしい夢を見た。 (Tôi đã thấy một giấc mơ đáng sợ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "怖い",
+          "doc": "こわい",
+          "nghia": "đáng sợ"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::狂う",
+      "kanji": "狂う",
+      "cautruc": null,
+      "doc": "くるう",
+      "doc_marked": "くるう",
+      "han_viet": "CUỒNG",
+      "nghia": "điên; điên khùng; mất trí; hỏng hóc; trục trặc",
+      "vi_du": "計画が狂ってしまった。 (Kế hoạch đã bị đảo lộn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::苦しい",
+      "kanji": "苦しい",
+      "cautruc": null,
+      "doc": "くるしい",
+      "doc_marked": "くるしい",
+      "han_viet": "KHỔ",
+      "nghia": "đắng cay; khổ cực; cực khổ; đau đớn; đau khổ; khó khăn; lam lũ",
+      "vi_du": "生活が苦しい。 (Cuộc sống khó khăn, cực khổ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "つらい",
+          "doc": "つらい",
+          "nghia": "khổ sở"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::苦しむ",
+      "kanji": "苦しむ",
+      "cautruc": null,
+      "doc": "くるしむ",
+      "doc_marked": "くるしむ",
+      "han_viet": "KHỔ",
+      "nghia": "xót dạ; cắn rứt; buồn phiền; đau; đau đớn; đau khổ; thống khổ; gặp khó khăn; lao tâm; khổ sở; canh cánh",
+      "vi_du": "病気で苦しんでいる。 (Anh ấy đang đau khổ vì bệnh tật.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::経つ",
+      "kanji": "経つ",
+      "cautruc": null,
+      "doc": "たつ",
+      "doc_marked": "たつ",
+      "han_viet": "KINH",
+      "nghia": "đã; đã qua; trải qua; trôi qua",
+      "vi_du": "時間が経った。 (Thời gian đã trôi qua.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::決心",
+      "kanji": "決心",
+      "cautruc": null,
+      "doc": "けっしん",
+      "doc_marked": "けっしん",
+      "han_viet": "QUYẾT TÂM",
+      "nghia": "sự quyết tâm; quyết tâm; quyết chí",
+      "vi_du": "留学する決心をした。 (Tôi đã quyết tâm đi du học.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::券",
+      "kanji": "券",
+      "cautruc": null,
+      "doc": "けん",
+      "doc_marked": "けん",
+      "han_viet": "KHOÁN",
+      "nghia": "vé; phiếu; bản",
+      "vi_du": "映画の券を買った。 (Tôi đã mua vé xem phim.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::嫌う",
+      "kanji": "嫌う",
+      "cautruc": null,
+      "doc": "きらう",
+      "doc_marked": "きらう",
+      "han_viet": "HIỀM",
+      "nghia": "chán ghét; ghét; không thích; không ưa; hiềm; chê",
+      "vi_du": "彼は嘘を嫌う。 (Anh ấy ghét sự dối trá.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "好む",
+          "doc": "このむ",
+          "nghia": "yêu thích"
+        }
+      ]
+    },
+    {
+      "_id": "n3-vocab-05::見当",
+      "kanji": "見当",
+      "cautruc": null,
+      "doc": "けんとう",
+      "doc_marked": "けん**とう**",
+      "han_viet": "KIẾN ĐƯƠNG",
+      "nghia": "hướng; phương hướng; sự ước tính; sự ước đoán; khoảng; khoảng chừng; ước chừng; trên dưới",
+      "vi_du": "犯人の見当がついた。 (Tôi đã ước đoán được thủ phạm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::賢い",
+      "kanji": "賢い",
+      "cautruc": null,
+      "doc": "かしこい",
+      "doc_marked": "かしこい",
+      "han_viet": "HIỀN",
+      "nghia": "thông minh; khôn ngoan; khôn; khôn khéo",
+      "vi_du": "彼は賢い子供だ。 (Cậu bé đó rất thông minh.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "愚か",
+          "doc": "おろか",
+          "nghia": "ngu ngốc"
+        }
+      ]
+    },
+    {
+      "_id": "n3-vocab-05::軒",
+      "kanji": "軒",
+      "cautruc": null,
+      "doc": "のき",
+      "doc_marked": "のき",
+      "han_viet": "HIÊN",
+      "nghia": "(cửa sổ·cửa ra vào v.v.) mái che đưa ra ngoài tòa nhà; mái hiên",
+      "vi_du": "店が三軒並んでいる。 (Ba cửa hàng đứng cạnh nhau.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::減らす",
+      "kanji": "減らす",
+      "cautruc": null,
+      "doc": "へらす",
+      "doc_marked": "へらす",
+      "han_viet": "GIẢM",
+      "nghia": "nới bớt; làm giảm; giảm bớt; thu nhỏ; cắt bớt; xuống; nới",
+      "vi_du": "体重を減らした。 (Tôi đã giảm cân.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "増やす",
+          "doc": "ふやす",
+          "nghia": "tăng thêm"
+        }
+      ]
+    },
+    {
+      "_id": "n3-vocab-05::減る",
+      "kanji": "減る",
+      "cautruc": null,
+      "doc": "へる",
+      "doc_marked": "へる",
+      "han_viet": "GIẢM",
+      "nghia": "giảm; suy giảm; giảm bớt; sút; sút đi; ít đi",
+      "vi_du": "収入が減った。 (Thu nhập đã giảm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "増える",
+          "doc": "ふえる",
+          "nghia": "tăng lên"
+        }
+      ]
+    },
+    {
+      "_id": "n3-vocab-05::現れる",
+      "kanji": "現れる",
+      "cautruc": null,
+      "doc": "あらわれる",
+      "doc_marked": "あらわれる",
+      "han_viet": "HIỆN",
+      "nghia": "xuất hiện; lộ ra; xuất đầu lộ diện; ló dạng; lộ; hiện",
+      "vi_du": "突然彼が現れた。 (Anh ấy đã đột nhiên xuất hiện.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::語",
+      "kanji": "語",
+      "cautruc": null,
+      "doc": "ご",
+      "doc_marked": "ご",
+      "han_viet": "NGỮ",
+      "nghia": "Nói chuyện; Nói; Thông báo; Từ viết tắt của ‘物語(=이야기)’; Lời nói; Câu chuyện; Từ; Cách nói",
+      "vi_du": "この語の意味を調べた。 (Tôi đã tra nghĩa của từ này.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::好む",
+      "kanji": "好む",
+      "cautruc": null,
+      "doc": "このむ",
+      "doc_marked": "このむ",
+      "han_viet": "HẢO",
+      "nghia": "thích; thích hơn; yêu thích",
+      "vi_du": "彼は静かな場所を好む。 (Anh ấy thích nơi yên tĩnh.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "嫌う",
+          "doc": "きらう",
+          "nghia": "ghét"
+        }
+      ]
+    },
+    {
+      "_id": "n3-vocab-05::幸い",
+      "kanji": "幸い",
+      "cautruc": null,
+      "doc": "さいわい",
+      "doc_marked": "さいわい",
+      "han_viet": "HẠNH",
+      "nghia": "hên; hân hạnh; may; gặp may; may mắn; hanh thông; sự may; sự gặp may; sự may mắn",
+      "vi_du": "幸い、けがはなかった。 (May mắn là không bị thương.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::さらに",
+      "kanji": "さらに",
+      "cautruc": null,
+      "doc": "さらに",
+      "doc_marked": "さらに",
+      "han_viet": "",
+      "nghia": "Một lần nữa lặp lại hoặc thêm mới. Lặp lại. Lại một lần nữa. Mới mẻ. Thêm một lần nữa. 〔Đồng nghĩa〕重ねて; 〈sau có từ phủ định〉 một chút cũng không. Hoàn toàn không. Tuyệt đối không. Hai lần nữa; biểu thị mức độ trở nên nghiêm trọng hơn. Thêm một bậc. Hơn nữa. Càng hơn nữa.",
+      "vi_du": "さらに努力を続けた。 (Tôi đã tiếp tục nỗ lực hơn nữa.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::硬貨",
+      "kanji": "硬貨",
+      "cautruc": null,
+      "doc": "こうか",
+      "doc_marked": "**こう**か",
+      "han_viet": "NGẠNH HÓA",
+      "nghia": "tiền kim loại; đồng tiền",
+      "vi_du": "財布に硬貨が入っている。 (Trong ví có tiền xu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::行儀",
+      "kanji": "行儀",
+      "cautruc": null,
+      "doc": "ぎょうぎ",
+      "doc_marked": "**ぎょう**ぎ",
+      "han_viet": "HÀNH NGHI",
+      "nghia": "cách cư xử",
+      "vi_du": "行儀よく座った。 (Tôi đã ngồi ngay ngắn, lễ phép.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::合図",
+      "kanji": "合図",
+      "cautruc": null,
+      "doc": "あいず",
+      "doc_marked": "あいず",
+      "han_viet": "HỢP ĐỒ",
+      "nghia": "dấu hiệu; hiệu lệnh",
+      "vi_du": "手で合図を送った。 (Tôi đã ra dấu hiệu bằng tay.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::黒板",
+      "kanji": "黒板",
+      "cautruc": null,
+      "doc": "こくばん",
+      "doc_marked": "こくばん",
+      "han_viet": "HẮC BẢN",
+      "nghia": "bảng đen; bảng",
+      "vi_du": "黒板に字を書いた。 (Tôi đã viết chữ lên bảng đen.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::今に",
+      "kanji": "今に",
+      "cautruc": null,
+      "doc": "いまに",
+      "doc_marked": "いまに",
+      "han_viet": "KIM",
+      "nghia": "Sớm thôi; một ngày nào đó; sớm; trong thời gian tới; bây giờ",
+      "vi_du": "今に分かるだろう。 (Rồi sẽ hiểu thôi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::鎖",
+      "kanji": "鎖",
+      "cautruc": null,
+      "doc": "くさり",
+      "doc_marked": "くさり",
+      "han_viet": "TỎA",
+      "nghia": "loạt; cái xích; xích; chuỗi; dãy; xiềng",
+      "vi_du": "犬を鎖でつないだ。 (Tôi đã xích con chó lại.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::作物",
+      "kanji": "作物",
+      "cautruc": null,
+      "doc": "さくもつ",
+      "doc_marked": "さくもつ",
+      "han_viet": "TÁC VẬT",
+      "nghia": "(tác phẩm như tranh, điêu khắc, câu văn v.v.)",
+      "vi_du": "この畑では様々な作物を育てている。 (Nhiều loại nông sản được trồng trên cánh đồng này.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::伺う",
+      "kanji": "伺う",
+      "cautruc": null,
+      "doc": "うかがう",
+      "doc_marked": "うかがう",
+      "han_viet": "TÝ",
+      "nghia": "nghe; đến thăm; hỏi; thăm hỏi; hỏi thăm; thăm viếng",
+      "vi_du": "お宅に伺います。 (Tôi sẽ đến thăm nhà quý vị.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::指す",
+      "kanji": "指す",
+      "cautruc": null,
+      "doc": "さす",
+      "doc_marked": "さす",
+      "han_viet": "CHỈ",
+      "nghia": "chỉ ra; chỉ ra; dâng lên; nhằm hướng",
+      "vi_du": "彼が指す方向を見た。 (Tôi đã nhìn theo hướng anh ấy chỉ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::支度",
+      "kanji": "支度",
+      "cautruc": null,
+      "doc": "したく",
+      "doc_marked": "したく",
+      "han_viet": "CHI ĐỘ",
+      "nghia": "sự chuẩn bị; sự sửa soạn",
+      "vi_du": "旅行の支度をした。 (Tôi đã chuẩn bị cho chuyến du lịch.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::至る",
+      "kanji": "至る",
+      "cautruc": null,
+      "doc": "いたる",
+      "doc_marked": "いたる",
+      "han_viet": "CHÍ",
+      "nghia": "đạt tới; đạt đến; đến nơi",
+      "vi_du": "結論に至った。 (Tôi đã đi đến kết luận.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::試し",
+      "kanji": "試し",
+      "cautruc": null,
+      "doc": "ためし",
+      "doc_marked": "ためし",
+      "han_viet": "THÍ",
+      "nghia": "việc thử; việc nếm thử",
+      "vi_du": "試しにやってみた。 (Tôi đã thử làm xem sao.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::試す",
+      "kanji": "試す",
+      "cautruc": null,
+      "doc": "ためす",
+      "doc_marked": "ためす",
+      "han_viet": "THÍ",
+      "nghia": "thử; thử nghiệm",
+      "vi_du": "新しい方法を試した。 (Tôi đã thử phương pháp mới.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::飼う",
+      "kanji": "飼う",
+      "cautruc": null,
+      "doc": "かう",
+      "doc_marked": "かう",
+      "han_viet": "TỰ",
+      "nghia": "nuôi; chăn nuôi; cho ăn; chăn",
+      "vi_du": "犬を飼っている。 (Tôi đang nuôi một con chó.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "n3-vocab-05::似合う",
+      "kanji": "似合う",
+      "cautruc": null,
+      "doc": "にあう",
+      "doc_marked": "にあう",
+      "han_viet": "TỰ HỢP",
+      "nghia": "hợp; tương xứng; vừa",
+      "vi_du": "この服はあなたに似合う。 (Bộ quần áo này hợp với bạn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

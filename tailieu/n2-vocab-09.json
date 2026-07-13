@@ -82,7 +82,13 @@
       "vi_du": "この機器は直流電源を使う。 (Thiết bị này dùng nguồn điện một chiều.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "交流",
+          "doc": "こうりゅう",
+          "nghia": "dòng điện xoay chiều"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-09::同格",
@@ -290,7 +296,13 @@
       "vi_du": "寒帯には特有の動物が生息する。 (Ở vùng hàn đới có những loài động vật đặc trưng sinh sống.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "熱帯",
+          "doc": "ねったい",
+          "nghia": "nhiệt đới"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-09::関東",
@@ -380,7 +392,13 @@
       "doc_marked": "じゅんじゅん",
       "vi_du": "順々に名前を呼びます。 (Tôi sẽ gọi tên lần lượt.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "次々",
+          "doc": "つぎつぎ",
+          "nghia": "liên tiếp"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -393,7 +411,13 @@
       "doc_marked": "うらやむ",
       "vi_du": "友達の幸せを羨んでしまった。 (Tôi đã lỡ đố kỵ với hạnh phúc của bạn.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "妬む",
+          "doc": "ねたむ",
+          "nghia": "đố kỵ"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -419,7 +443,13 @@
       "doc_marked": "おおよそ",
       "vi_du": "おおよその予算を計算した。 (Tôi đã tính toán ngân sách ước chừng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "だいたい",
+          "doc": "だいたい",
+          "nghia": "đại khái"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -575,7 +605,13 @@
       "doc_marked": "なだらか",
       "vi_du": "なだらかな坂道を歩いた。 (Tôi đã đi bộ trên con dốc thoai thoải.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "緩やか",
+          "doc": "ゆるやか",
+          "nghia": "thoai thoải, êm dịu"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -666,7 +702,13 @@
       "doc_marked": "ぞんずる",
       "vi_du": "その件については存じております。 (Về việc đó tôi đã biết rồi ạ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "存じる",
+          "doc": "ぞんじる",
+          "nghia": "biết, nghĩ (khiêm ngữ)"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -692,7 +734,13 @@
       "doc_marked": "**つう**ずる",
       "vi_du": "この道は駅に通じている。 (Con đường này thông tới ga.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "通じる",
+          "doc": "つうじる",
+          "nghia": "thông suốt, hiểu nhau"
+        }
+      ],
       "trai_nghia": []
     },
     {

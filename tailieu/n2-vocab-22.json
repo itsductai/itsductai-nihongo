@@ -264,7 +264,13 @@
       "vi_du": "バスの終点で降りた。 (Tôi đã xuống ở trạm cuối cùng của xe buýt.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "始発",
+          "doc": "しはつ",
+          "nghia": "trạm xuất phát"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-22::醜い",
@@ -277,7 +283,13 @@
       "vi_du": "その争いは醜いものだった。 (Cuộc tranh chấp đó thật xấu xa.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "美しい",
+          "doc": "うつくしい",
+          "nghia": "đẹp"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-22::重なる",
@@ -316,7 +328,13 @@
       "vi_du": "洗濯してセーターが縮んだ。 (Áo len đã bị co lại sau khi giặt.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "伸びる",
+          "doc": "のびる",
+          "nghia": "dãn ra"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-22::熟語",
@@ -420,7 +438,13 @@
       "vi_du": "日本語の初級クラスに通っている。 (Tôi đang học lớp tiếng Nhật sơ cấp.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "上級",
+          "doc": "じょうきゅう",
+          "nghia": "cao cấp"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-22::助かる",
@@ -432,7 +456,13 @@
       "doc_marked": "たすかる",
       "vi_du": "手伝ってもらって助かった。 (Được giúp đỡ tôi đã cảm thấy nhẹ nhõm.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "救われる",
+          "doc": "すくわれる",
+          "nghia": "được cứu"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -549,7 +579,13 @@
       "doc_marked": "**しょう**りゃく",
       "vi_du": "説明の一部を省略した。 (Tôi đã lược bỏ một phần giải thích.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "簡略",
+          "doc": "かんりゃく",
+          "nghia": "đơn giản hóa"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -601,7 +637,13 @@
       "doc_marked": "むしあつい",
       "vi_du": "今日はとても蒸し暑い。 (Hôm nay thật nóng ẩm.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "むし暑い",
+          "doc": "むしあつい",
+          "nghia": "nóng ẩm"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -692,7 +734,13 @@
       "doc_marked": "ふかまる",
       "vi_du": "秋が深まってきた。 (Mùa thu đã trở nên sâu đậm hơn.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "深くなる",
+          "doc": "ふかくなる",
+          "nghia": "sâu sắc thêm"
+        }
+      ],
       "trai_nghia": []
     },
     {

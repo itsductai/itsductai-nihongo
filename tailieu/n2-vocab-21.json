@@ -121,7 +121,13 @@
       "vi_du": "急な質問に慌ててしまった。 (Tôi đã bối rối trước câu hỏi bất ngờ.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "落ち着く",
+          "doc": "おちつく",
+          "nghia": "bình tĩnh"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-21::更ける",
@@ -173,7 +179,13 @@
       "vi_du": "彼の運転は荒い。 (Cách lái xe của anh ấy khá thô bạo.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "穏やか",
+          "doc": "おだやか",
+          "nghia": "êm dịu"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-21::いきなり",
@@ -263,7 +275,13 @@
       "doc_marked": "うらむ",
       "vi_du": "彼を恨む気持ちはない。 (Tôi không có cảm giác oán hận anh ấy.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "憎む",
+          "doc": "にくむ",
+          "nghia": "căm ghét"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -458,7 +476,13 @@
       "doc_marked": "みじめ",
       "vi_du": "試合に負けて惨めな気持ちになった。 (Thua trận tôi đã cảm thấy thật đáng thương.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "気の毒",
+          "doc": "きのどく",
+          "nghia": "đáng thương"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -472,7 +496,13 @@
       "vi_du": "部屋がすっかり散らかっていた。 (Căn phòng đã bừa bộn hoàn toàn.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "片付く",
+          "doc": "かたづく",
+          "nghia": "gọn gàng"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-21::散らす",
@@ -575,7 +605,13 @@
       "doc_marked": "しかくい",
       "vi_du": "四角いテーブルを買った。 (Tôi đã mua một cái bàn hình vuông.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "四角",
+          "doc": "しかく",
+          "nghia": "hình vuông"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -640,7 +676,13 @@
       "doc_marked": "しき**ゅう**",
       "vi_du": "至急ご連絡ください。 (Xin hãy liên hệ ngay lập tức.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "緊急",
+          "doc": "きんきゅう",
+          "nghia": "khẩn cấp"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -771,7 +813,13 @@
       "vi_du": "雨で地面が湿っている。 (Mặt đất bị ẩm ướt vì mưa.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "乾く",
+          "doc": "かわく",
+          "nghia": "khô"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-21::湿気",
@@ -784,7 +832,13 @@
       "vi_du": "梅雨の時期は湿気が多い。 (Vào mùa mưa độ ẩm rất cao.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "乾燥",
+          "doc": "かんそう",
+          "nghia": "khô ráo"
+        }
+      ]
     }
   ]
 }

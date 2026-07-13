@@ -69,7 +69,13 @@
       "vi_du": "洗濯物を日光で乾かした。 (Tôi đã phơi khô quần áo giặt dưới ánh nắng.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "濡らす",
+          "doc": "ぬらす",
+          "nghia": "làm ướt"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-20::乾電池",
@@ -147,7 +153,13 @@
       "vi_du": "このズボンは少し緩い。 (Cái quần này hơi rộng một chút.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "きつい",
+          "doc": "きつい",
+          "nghia": "chật, khắt khe"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-20::観念",
@@ -380,7 +392,13 @@
       "doc_marked": "ちかよる",
       "vi_du": "犬が私に近寄ってきた。 (Con chó đã tiến lại gần tôi.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "近づく",
+          "doc": "ちかづく",
+          "nghia": "tiến gần"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -432,7 +450,13 @@
       "doc_marked": "からっぽ",
       "vi_du": "財布が空っぽになった。 (Chiếc ví đã trống rỗng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "からっぽ",
+          "doc": "からっぽ",
+          "nghia": "trống rỗng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -459,7 +483,13 @@
       "vi_du": "偶数だけを選んでください。 (Xin hãy chọn ra chỉ những số chẵn.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "奇数",
+          "doc": "きすう",
+          "nghia": "số lẻ"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-20::櫛",
@@ -666,7 +696,13 @@
       "doc_marked": "けわしい",
       "vi_du": "険しい山道を登った。 (Tôi đã leo lên con đường núi hiểm trở.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "厳しい",
+          "doc": "きびしい",
+          "nghia": "nghiêm khắc, khắc nghiệt"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -745,7 +781,13 @@
       "vi_du": "セメントが固まった。 (Xi măng đã đông cứng lại.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "溶ける",
+          "doc": "とける",
+          "nghia": "tan chảy"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-20::戸棚",
@@ -771,7 +813,13 @@
       "vi_du": "水をやり忘れて花が枯れた。 (Hoa đã héo vì quên tưới nước.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "育つ",
+          "doc": "そだつ",
+          "nghia": "phát triển tươi tốt"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-20::糊",

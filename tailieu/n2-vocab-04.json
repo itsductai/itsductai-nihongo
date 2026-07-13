@@ -68,7 +68,13 @@
       "doc_marked": "なぐさめる",
       "vi_du": "泣いている友達を慰めた。 (Tôi đã an ủi người bạn đang khóc.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "励ます",
+          "doc": "はげます",
+          "nghia": "động viên"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -107,7 +113,13 @@
       "doc_marked": "あふれる",
       "vi_du": "川の水が堤防からあふれた。 (Nước sông đã tràn qua đê.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "満ちる",
+          "doc": "みちる",
+          "nghia": "tràn đầy"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -159,7 +171,13 @@
       "doc_marked": "くだらない",
       "vi_du": "くだらない話で時間を無駄にした。 (Tôi đã lãng phí thời gian vì câu chuyện vô nghĩa.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "つまらない",
+          "doc": "つまらない",
+          "nghia": "vô vị, nhàm chán"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -186,7 +204,13 @@
       "vi_du": "祖母は孫をとても可愛がっている。 (Bà rất yêu thương cháu.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "いじめる",
+          "doc": "いじめる",
+          "nghia": "bắt nạt"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-04::ほどく",
@@ -251,7 +275,13 @@
       "vi_du": "運動して喉が渇いた。 (Tập thể dục xong tôi khát khô cổ.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "潤う",
+          "doc": "うるおう",
+          "nghia": "thấm ướt, ẩm"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-04::巻く",
@@ -276,7 +306,13 @@
       "doc_marked": "やかましい",
       "vi_du": "外の工事がやかましい。 (Công trình bên ngoài ồn ào quá.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "うるさい",
+          "doc": "うるさい",
+          "nghia": "ồn ào"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -302,7 +338,13 @@
       "doc_marked": "ふくめる",
       "vi_du": "税金を含めた金額を計算した。 (Tôi đã tính số tiền bao gồm cả thuế.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "含む",
+          "doc": "ふくむ",
+          "nghia": "bao gồm"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -315,7 +357,13 @@
       "doc_marked": "かえって",
       "vi_du": "薬を飲んだら、かえって具合が悪くなった。 (Uống thuốc xong lại trở nên khó chịu hơn.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "むしろ",
+          "doc": "むしろ",
+          "nghia": "ngược lại, thà rằng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -380,8 +428,20 @@
       "doc_marked": "うやまう",
       "vi_du": "目上の人を敬うべきだ。 (Nên kính trọng người bề trên.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
-      "trai_nghia": []
+      "dong_nghia": [
+        {
+          "kanji": "尊敬する",
+          "doc": "そんけいする",
+          "nghia": "tôn kính"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "軽蔑する",
+          "doc": "けいべつする",
+          "nghia": "khinh thường"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-04::つながり",
@@ -406,7 +466,13 @@
       "doc_marked": "つながる",
       "vi_du": "努力が成功につながった。 (Nỗ lực đã dẫn tới thành công.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "つながり",
+          "doc": "つながり",
+          "nghia": "sự kết nối"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -446,7 +512,13 @@
       "vi_du": "彼は謙遜して自分の実力を認めない。 (Anh ấy khiêm tốn không thừa nhận thực lực của mình.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "自慢",
+          "doc": "じまん",
+          "nghia": "khoe khoang"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-04::こしょう",
@@ -536,7 +608,13 @@
       "doc_marked": "あつかましい",
       "vi_du": "そんな厚かましいお願いはできない。 (Không thể đưa ra yêu cầu trơ trẽn như vậy.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "図々しい",
+          "doc": "ずうずうしい",
+          "nghia": "trơ trẽn"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -549,7 +627,13 @@
       "doc_marked": "たちまち",
       "vi_du": "うわさはたちまち広がった。 (Tin đồn đã lan ra ngay lập tức.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "すぐに",
+          "doc": "すぐに",
+          "nghia": "ngay lập tức"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -770,8 +854,20 @@
       "doc_marked": "おもたい",
       "vi_du": "この荷物はとても重たい。 (Hành lý này rất nặng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
-      "trai_nghia": []
+      "dong_nghia": [
+        {
+          "kanji": "重い",
+          "doc": "おもい",
+          "nghia": "nặng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "軽い",
+          "doc": "かるい",
+          "nghia": "nhẹ"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-04::縮める",
@@ -784,7 +880,13 @@
       "vi_du": "作業時間を縮める工夫をした。 (Tôi đã tìm cách rút ngắn thời gian làm việc.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "伸ばす",
+          "doc": "のばす",
+          "nghia": "kéo dài"
+        }
+      ]
     }
   ]
 }

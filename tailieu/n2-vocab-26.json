@@ -134,7 +134,13 @@
       "vi_du": "意見を統一することにした。 (Chúng tôi đã quyết định thống nhất ý kiến.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "分裂",
+          "doc": "ぶんれつ",
+          "nghia": "chia rẽ"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-26::方針",
@@ -251,7 +257,13 @@
       "vi_du": "公園が一般に開放された。 (Công viên đã được mở cửa cho mọi người.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "閉鎖",
+          "doc": "へいさ",
+          "nghia": "đóng cửa"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-26::学部",
@@ -368,7 +380,13 @@
       "vi_du": "彼は国立大学に通っている。 (Anh ấy đang học ở trường đại học quốc lập.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "私立",
+          "doc": "しりつ",
+          "nghia": "dân lập, tư thục"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-26::資料",
@@ -419,7 +437,13 @@
       "doc_marked": "じつりょく",
       "vi_du": "実力を発揮するチャンスだ。 (Đây là cơ hội để phát huy thực lực.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "能力",
+          "doc": "のうりょく",
+          "nghia": "năng lực"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -523,7 +547,13 @@
       "doc_marked": "たいりつ",
       "vi_du": "両者の意見が対立している。 (Ý kiến của hai bên đang đối lập nhau.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "衝突",
+          "doc": "しょうとつ",
+          "nghia": "xung đột"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -550,7 +580,13 @@
       "vi_du": "事故の直後に救急車が来た。 (Xe cứu thương đã đến ngay sau vụ tai nạn.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "直前",
+          "doc": "ちょくぜん",
+          "nghia": "ngay trước đó"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-26::直前",
@@ -563,7 +599,13 @@
       "vi_du": "試験の直前に緊張した。 (Tôi đã hồi hộp ngay trước kỳ thi.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "直後",
+          "doc": "ちょくご",
+          "nghia": "ngay sau đó"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-26::通貨",
@@ -588,7 +630,13 @@
       "doc_marked": "**てい**し",
       "vi_du": "サービスが一時停止された。 (Dịch vụ đã tạm thời bị đình chỉ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "中止",
+          "doc": "ちゅうし",
+          "nghia": "dừng lại"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -667,7 +715,13 @@
       "vi_du": "臨時のバスが運行された。 (Xe buýt tạm thời đã được vận hành.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "常時",
+          "doc": "じょうじ",
+          "nghia": "thường xuyên"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-26::天皇",

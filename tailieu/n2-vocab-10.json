@@ -56,7 +56,13 @@
       "vi_du": "この商品には課税される。 (Sản phẩm này bị đánh thuế.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "免税",
+          "doc": "めんぜい",
+          "nghia": "miễn thuế"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-10::過程",
@@ -82,7 +88,13 @@
       "vi_du": "人質がようやく解放された。 (Con tin cuối cùng đã được giải phóng.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "拘束",
+          "doc": "こうそく",
+          "nghia": "trói buộc, giam giữ"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-10::関西",
@@ -133,8 +145,20 @@
       "doc_marked": "**けい**ぞく",
       "vi_du": "この活動は継続して行われる。 (Hoạt động này được tiến hành liên tục.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
-      "trai_nghia": []
+      "dong_nghia": [
+        {
+          "kanji": "持続",
+          "doc": "じぞく",
+          "nghia": "duy trì liên tục"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "中断",
+          "doc": "ちゅうだん",
+          "nghia": "gián đoạn"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-10::講師",
@@ -212,7 +236,13 @@
       "vi_du": "彼は私立大学に通っている。 (Anh ấy đang học ở trường đại học tư.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "国立",
+          "doc": "こくりつ",
+          "nghia": "quốc lập"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-10::児童",
@@ -316,7 +346,13 @@
       "vi_du": "集中力の低下を感じる。 (Tôi cảm thấy khả năng tập trung bị suy giảm.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "向上",
+          "doc": "こうじょう",
+          "nghia": "nâng cao"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-10::電力",
@@ -354,7 +390,13 @@
       "doc_marked": "とく**てい**",
       "vi_du": "原因を特定するのは難しい。 (Việc xác định nguyên nhân thật khó khăn.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "限定",
+          "doc": "げんてい",
+          "nghia": "giới hạn, xác định"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -432,7 +474,13 @@
       "doc_marked": "ふき**ゅう**",
       "vi_du": "スマートフォンが急速に普及した。 (Điện thoại thông minh đã phổ cập nhanh chóng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "広まる",
+          "doc": "ひろまる",
+          "nghia": "lan rộng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -459,7 +507,13 @@
       "vi_du": "複数の候補から一つを選んだ。 (Tôi đã chọn một trong số nhiều ứng viên.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "単数",
+          "doc": "たんすう",
+          "nghia": "số ít"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-10::本来",
@@ -575,7 +629,13 @@
       "doc_marked": "いてん",
       "vi_du": "会社が新しい場所に移転した。 (Công ty đã chuyển đến địa điểm mới.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "引っ越し",
+          "doc": "ひっこし",
+          "nghia": "chuyển nhà/chuyển địa điểm"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -615,7 +675,13 @@
       "vi_du": "賛成が過半数を占めた。 (Số phiếu tán thành đã chiếm quá bán.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "少数",
+          "doc": "しょうすう",
+          "nghia": "thiểu số"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-10::解説",
@@ -679,7 +745,13 @@
       "doc_marked": "かつやく",
       "vi_du": "彼は世界的に活躍している。 (Anh ấy đang hoạt động tích cực trên toàn thế giới.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "成功",
+          "doc": "せいこう",
+          "nghia": "thành công"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -758,7 +830,13 @@
       "vi_du": "彼は高級レストランで食事をした。 (Anh ấy đã dùng bữa ở nhà hàng cao cấp.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "低級",
+          "doc": "ていきゅう",
+          "nghia": "hạng thấp"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-10::重点",

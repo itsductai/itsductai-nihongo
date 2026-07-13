@@ -133,7 +133,13 @@
       "doc_marked": "まねる",
       "vi_du": "子供は親の行動を真似る。 (Trẻ con bắt chước hành động của cha mẹ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "まねる",
+          "doc": "まねる",
+          "nghia": "bắt chước"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -198,7 +204,13 @@
       "doc_marked": "**しょう**ずる",
       "vi_du": "問題が生じたら報告してください。 (Nếu phát sinh vấn đề xin hãy báo cáo.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "生じる",
+          "doc": "しょうじる",
+          "nghia": "phát sinh"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -211,7 +223,13 @@
       "doc_marked": "たえず",
       "vi_du": "彼は絶えず努力し続けている。 (Anh ấy liên tục nỗ lực không ngừng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "常に",
+          "doc": "つねに",
+          "nghia": "luôn luôn"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -250,7 +268,13 @@
       "doc_marked": "うらやましい",
       "vi_du": "彼の才能がうらやましい。 (Tôi ghen tị với tài năng của anh ấy.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "妬ましい",
+          "doc": "ねたましい",
+          "nghia": "ghen tị"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -263,7 +287,13 @@
       "doc_marked": "**よう**やく",
       "vi_du": "ようやく仕事が終わった。 (Cuối cùng công việc cũng đã xong.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "やっと",
+          "doc": "やっと",
+          "nghia": "cuối cùng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -289,7 +319,13 @@
       "doc_marked": "さわやか",
       "vi_du": "さわやかな朝の空気を感じた。 (Tôi đã cảm nhận không khí sảng khoái buổi sáng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "すがすがしい",
+          "doc": "すがすがしい",
+          "nghia": "sảng khoái"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -342,7 +378,13 @@
       "vi_du": "彼の態度が憎らしいと感じた。 (Tôi cảm thấy thái độ của anh ấy thật đáng ghét.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "可愛らしい",
+          "doc": "かわいらしい",
+          "nghia": "đáng yêu"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-05::揃う",
@@ -354,7 +396,13 @@
       "doc_marked": "そ**ろう**",
       "vi_du": "メンバーが全員揃った。 (Tất cả thành viên đã tập hợp đầy đủ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "集まる",
+          "doc": "あつまる",
+          "nghia": "tụ tập đông đủ"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -420,7 +468,13 @@
       "vi_du": "彼女はおとなしい性格だ。 (Cô ấy có tính cách hiền lành, ngoan ngoãn.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "乱暴",
+          "doc": "らんぼう",
+          "nghia": "thô bạo"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-05::たいそう",
@@ -472,7 +526,13 @@
       "vi_du": "英語では単数と複数を区別する。 (Trong tiếng Anh phân biệt số ít và số nhiều.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "複数",
+          "doc": "ふくすう",
+          "nghia": "số nhiều"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-05::淡水",
@@ -485,7 +545,13 @@
       "vi_du": "この魚は淡水に生息している。 (Loài cá này sống ở nước ngọt.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "海水",
+          "doc": "かいすい",
+          "nghia": "nước biển"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-05::仲直り",
@@ -549,7 +615,13 @@
       "doc_marked": "つぶれる",
       "vi_du": "空き缶が踏まれて潰れた。 (Lon rỗng đã bị đè bẹp.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "壊れる",
+          "doc": "こわれる",
+          "nghia": "bị hỏng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -680,7 +752,13 @@
       "vi_du": "寒さで手が凍えてしまった。 (Tay tôi đã lạnh cóng vì thời tiết rét.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "温まる",
+          "doc": "あたたまる",
+          "nghia": "ấm lên"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-05::当てはまる",
@@ -705,7 +783,13 @@
       "doc_marked": "あこがれる",
       "vi_du": "私は彼女の生き方に憧れている。 (Tôi ngưỡng mộ cách sống của cô ấy.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "慕う",
+          "doc": "したう",
+          "nghia": "ngưỡng mộ, quyến luyến"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -771,7 +855,13 @@
       "vi_du": "雨が服を濡らした。 (Cơn mưa đã làm ướt quần áo.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "乾かす",
+          "doc": "かわかす",
+          "nghia": "làm khô"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-05::ひねる",

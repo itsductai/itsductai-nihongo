@@ -16,7 +16,13 @@
       "doc_marked": "覗く",
       "vi_du": "鍵穴から部屋の中を覗いた。 (Tôi đã nhìn trộm vào trong phòng qua lỗ khóa.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "見る",
+          "doc": "みる",
+          "nghia": "nhìn"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -29,7 +35,13 @@
       "doc_marked": "やぶれる",
       "vi_du": "彼の夢は破れてしまった。 (Ước mơ của anh ấy đã tan vỡ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "敗れる",
+          "doc": "やぶれる",
+          "nghia": "thua, thất bại"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -173,7 +185,13 @@
       "vi_du": "木の葉が水に浮いている。 (Chiếc lá cây đang nổi trên mặt nước.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "沈む",
+          "doc": "しずむ",
+          "nghia": "chìm"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-06::撫でる",
@@ -250,7 +268,13 @@
       "doc_marked": "あきれる",
       "vi_du": "彼の行動に呆れてしまった。 (Tôi đã ngạc nhiên sốc trước hành động của anh ấy.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "驚く",
+          "doc": "おどろく",
+          "nghia": "ngạc nhiên"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -315,8 +339,20 @@
       "doc_marked": "**もう**かる",
       "vi_du": "この商売はよく儲かる。 (Việc kinh doanh này rất có lời.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
-      "trai_nghia": []
+      "dong_nghia": [
+        {
+          "kanji": "儲ける",
+          "doc": "もうける",
+          "nghia": "kiếm lời"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "損する",
+          "doc": "そんする",
+          "nghia": "bị lỗ"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-06::儲ける",
@@ -367,7 +403,13 @@
       "doc_marked": "とける",
       "vi_du": "氷が太陽で溶けた。 (Đá đã tan chảy dưới nắng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "溶く",
+          "doc": "とく",
+          "nghia": "làm tan"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -393,7 +435,13 @@
       "doc_marked": "はやる",
       "vi_du": "最近このスタイルが流行っている。 (Gần đây phong cách này đang thịnh hành.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "はやる",
+          "doc": "はやる",
+          "nghia": "thịnh hành"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -459,7 +507,13 @@
       "vi_du": "熱いお茶を冷ました。 (Tôi đã làm nguội trà nóng.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "温める",
+          "doc": "あたためる",
+          "nghia": "làm ấm"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-06::こぼす",
@@ -510,8 +564,20 @@
       "doc_marked": "ほがらか",
       "vi_du": "彼女はいつも朗らかに笑う。 (Cô ấy luôn cười một cách vui vẻ, tươi sáng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
-      "trai_nghia": []
+      "dong_nghia": [
+        {
+          "kanji": "陽気",
+          "doc": "ようき",
+          "nghia": "vui vẻ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "陰気",
+          "doc": "いんき",
+          "nghia": "u ám"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-06::ろうそく",
@@ -653,7 +719,13 @@
       "doc_marked": "ずるい",
       "vi_du": "そんなずるいやり方は嫌いだ。 (Tôi ghét cách làm xảo quyệt như vậy.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "狡猾",
+          "doc": "こうかつ",
+          "nghia": "xảo quyệt"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -667,7 +739,13 @@
       "vi_du": "蚊に刺された所がかゆい。 (Chỗ bị muỗi đốt đang ngứa.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "痛い",
+          "doc": "いたい",
+          "nghia": "đau"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-06::しびれる",
@@ -692,7 +770,13 @@
       "doc_marked": "まぶしい",
       "vi_du": "朝日が眩しくて目を細めた。 (Ánh nắng buổi sáng chói quá nên tôi đã nheo mắt.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "まぶしい",
+          "doc": "まぶしい",
+          "nghia": "chói mắt"
+        }
+      ],
       "trai_nghia": []
     },
     {

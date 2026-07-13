@@ -173,7 +173,13 @@
       "vi_du": "この川の水は澄んでいる。 (Nước sông này trong vắt.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "濁る",
+          "doc": "にごる",
+          "nghia": "đục"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-23::寸法",
@@ -224,7 +230,13 @@
       "doc_marked": "きよい",
       "vi_du": "清い川の水で顔を洗った。 (Tôi đã rửa mặt bằng nước sông trong sạch.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "澄む",
+          "doc": "すむ",
+          "nghia": "trong sạch"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -238,7 +250,13 @@
       "vi_du": "彼は生意気な態度をとる。 (Anh ấy có thái độ hỗn xược.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "謙虚",
+          "doc": "けんきょ",
+          "nghia": "khiêm tốn"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-23::生長",
@@ -316,7 +334,13 @@
       "vi_du": "彼の顔が青白くなった。 (Mặt anh ấy đã trở nên tái xanh.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "赤い",
+          "doc": "あかい",
+          "nghia": "đỏ, hồng hào"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-23::惜しい",
@@ -328,7 +352,13 @@
       "doc_marked": "おしい",
       "vi_du": "あと少しで惜しいところだった。 (Chỉ còn một chút nữa là tiếc đứt ruột.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "残念",
+          "doc": "ざんねん",
+          "nghia": "tiếc nuối"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -497,7 +527,13 @@
       "doc_marked": "さっそく",
       "vi_du": "早速お返事いたします。 (Tôi xin phản hồi ngay lập tức.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "直ちに",
+          "doc": "ただちに",
+          "nghia": "ngay lập tức"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -537,7 +573,13 @@
       "vi_du": "外が騒がしくて眠れない。 (Bên ngoài ồn ào nên tôi không ngủ được.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "静か",
+          "doc": "しずか",
+          "nghia": "yên tĩnh"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-23::増減",
@@ -588,7 +630,13 @@
       "doc_marked": "たる",
       "vi_du": "この量で十分に足りる。 (Số lượng này là đủ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "十分",
+          "doc": "じゅうぶん",
+          "nghia": "đầy đủ"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -640,7 +688,13 @@
       "doc_marked": "だ**とう**",
       "vi_du": "その判断は妥当だと思う。 (Tôi nghĩ quyết định đó là hợp lý.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "適切",
+          "doc": "てきせつ",
+          "nghia": "thích hợp"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -693,7 +747,13 @@
       "vi_du": "勉強を怠ってしまった。 (Tôi đã lơ là việc học.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "励む",
+          "doc": "はげむ",
+          "nghia": "nỗ lực chăm chỉ"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-23::代名詞",
@@ -745,7 +805,13 @@
       "vi_du": "川の水が濁っている。 (Nước sông đang bị đục.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "澄む",
+          "doc": "すむ",
+          "nghia": "trong sạch"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-23::脱線",

@@ -16,8 +16,20 @@
       "doc_marked": "たんしょ",
       "vi_du": "自分の短所を理解している。 (Tôi hiểu rõ nhược điểm của bản thân.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
-      "trai_nghia": []
+      "dong_nghia": [
+        {
+          "kanji": "欠点",
+          "doc": "けってん",
+          "nghia": "khuyết điểm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "長所",
+          "doc": "ちょうしょ",
+          "nghia": "điểm mạnh"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-24::たんす",
@@ -108,7 +120,13 @@
       "vi_du": "この液体は中性だ。 (Chất lỏng này có tính trung tính.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "酸性",
+          "doc": "さんせい",
+          "nghia": "tính axit"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-24::仲良し",
@@ -212,7 +230,13 @@
       "vi_du": "彼の長所は誠実さだ。 (Điểm mạnh của anh ấy là sự chân thành.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "短所",
+          "doc": "たんしょ",
+          "nghia": "điểm yếu"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-24::長方形",
@@ -432,7 +456,13 @@
       "doc_marked": "つたわる",
       "vi_du": "その話は町中に伝わった。 (Câu chuyện đó đã lan truyền khắp thị trấn.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "広まる",
+          "doc": "ひろまる",
+          "nghia": "lan truyền"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -614,7 +644,13 @@
       "doc_marked": "すきとおる",
       "vi_du": "透き通る水が流れている。 (Dòng nước trong suốt đang chảy.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "澄む",
+          "doc": "すむ",
+          "nghia": "trong sạch"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -693,7 +729,13 @@
       "vi_du": "山頂で日の出を見た。 (Tôi đã ngắm mặt trời mọc trên đỉnh núi.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "日の入り",
+          "doc": "ひのいり",
+          "nghia": "mặt trời lặn"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-24::日陰",
@@ -706,7 +748,13 @@
       "vi_du": "日陰で休憩した。 (Tôi đã nghỉ ngơi dưới bóng râm.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "日向",
+          "doc": "ひなた",
+          "nghia": "chỗ có nắng"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-24::日課",

@@ -42,7 +42,13 @@
       "doc_marked": "ちからづよい",
       "vi_du": "彼は力強い声で演説した。 (Anh ấy đã diễn thuyết với giọng nói mạnh mẽ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "頼もしい",
+          "doc": "たのもしい",
+          "nghia": "đáng tin cậy"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -133,7 +139,13 @@
       "doc_marked": "とと**のう**",
       "vi_du": "準備がようやく整った。 (Cuối cùng công việc chuẩn bị đã sẵn sàng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "準備できる",
+          "doc": "じゅんびできる",
+          "nghia": "sẵn sàng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -224,7 +236,13 @@
       "doc_marked": "あんがい",
       "vi_du": "試験は案外簡単だった。 (Kỳ thi bất ngờ lại dễ hơn tôi tưởng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "意外",
+          "doc": "いがい",
+          "nghia": "bất ngờ"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -250,7 +268,13 @@
       "doc_marked": "いばる",
       "vi_du": "彼はいつも威張っている。 (Anh ấy lúc nào cũng tỏ ra kiêu ngạo.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "自慢する",
+          "doc": "じまんする",
+          "nghia": "khoe khoang"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -315,7 +339,13 @@
       "doc_marked": "ひきかえす",
       "vi_du": "忘れ物をして家に引き返した。 (Tôi đã quay lại nhà vì quên đồ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "戻る",
+          "doc": "もどる",
+          "nghia": "quay lại"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -498,7 +528,13 @@
       "vi_du": "日本は温帯に位置している。 (Nhật Bản nằm ở vùng ôn đới.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "熱帯",
+          "doc": "ねったい",
+          "nghia": "nhiệt đới"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-19::下る",
@@ -563,7 +599,13 @@
       "vi_du": "その言葉遣いは下品だ。 (Cách dùng từ đó thật thô tục.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "上品",
+          "doc": "じょうひん",
+          "nghia": "thanh lịch"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-19::仮定",
@@ -679,7 +721,13 @@
       "doc_marked": "かい**せい**",
       "vi_du": "今日は快晴で気持ちがいい。 (Hôm nay trời quang đãng thật dễ chịu.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "晴天",
+          "doc": "せいてん",
+          "nghia": "trời quang đãng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -692,7 +740,13 @@
       "doc_marked": "なつかしい",
       "vi_du": "懐かしい写真を見つけた。 (Tôi đã tìm thấy những tấm ảnh khiến tôi hoài niệm.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "恋しい",
+          "doc": "こいしい",
+          "nghia": "hoài niệm, nhớ nhung"
+        }
+      ],
       "trai_nghia": []
     },
     {

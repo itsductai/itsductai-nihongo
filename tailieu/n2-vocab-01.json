@@ -55,7 +55,13 @@
       "doc_marked": "あじわう",
       "vi_du": "旅行先で地元の料理をゆっくり味わった。 (Ở nơi du lịch, tôi đã thong thả thưởng thức món ăn địa phương.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "楽しむ",
+          "doc": "たのしむ",
+          "nghia": "tận hưởng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -69,7 +75,13 @@
       "vi_du": "無地のシャツは、どんな服とも合わせやすい。 (Áo sơ mi trơn dễ phối với mọi loại trang phục.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "柄物",
+          "doc": "がらもの",
+          "nghia": "đồ có họa tiết"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-01::名詞",
@@ -94,7 +106,13 @@
       "doc_marked": "**めい**ずる",
       "vi_du": "上司が新しいプロジェクトを命じた。 (Cấp trên đã ra lệnh thực hiện dự án mới.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "命令する",
+          "doc": "めいれいする",
+          "nghia": "ra lệnh"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -107,8 +125,20 @@
       "doc_marked": "あけがた",
       "vi_du": "明け方に地震があり、目が覚めた。 (Có trận động đất lúc rạng sáng, tôi đã tỉnh giấc.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
-      "trai_nghia": []
+      "dong_nghia": [
+        {
+          "kanji": "夜明け",
+          "doc": "よあけ",
+          "nghia": "rạng sáng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "夕方",
+          "doc": "ゆうがた",
+          "nghia": "chiều tối"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-01::迷信",
@@ -251,7 +281,13 @@
       "vi_du": "目上の人には敬語を使うべきだ。 (Nên dùng kính ngữ với người bề trên.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "目下",
+          "doc": "めした",
+          "nghia": "cấp dưới, bề dưới"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-01::目立つ",
@@ -263,7 +299,13 @@
       "doc_marked": "めだつ",
       "vi_du": "彼女は人混みの中でも目立つ。 (Cô ấy nổi bật ngay cả giữa đám đông.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "際立つ",
+          "doc": "きわだつ",
+          "nghia": "nổi bật"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -341,7 +383,13 @@
       "doc_marked": "やくす",
       "vi_du": "この文章を日本語に訳してください。 (Hãy dịch đoạn văn này sang tiếng Nhật.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "翻訳する",
+          "doc": "ほんやくする",
+          "nghia": "phiên dịch"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -355,7 +403,13 @@
       "vi_du": "試合に勝っていても油断してはいけない。 (Dù đang thắng trận cũng không được lơ là.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "用心",
+          "doc": "ようじん",
+          "nghia": "cẩn thận"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-01::輸血",
@@ -380,8 +434,20 @@
       "doc_marked": "いさましい",
       "vi_du": "彼は勇ましい態度で危険に立ち向かった。 (Anh ấy đối mặt với nguy hiểm bằng thái độ dũng cảm.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
-      "trai_nghia": []
+      "dong_nghia": [
+        {
+          "kanji": "勇敢",
+          "doc": "ゆうかん",
+          "nghia": "dũng cảm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "臆病",
+          "doc": "おくびょう",
+          "nghia": "nhút nhát"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-01::ありがたい",
@@ -420,7 +486,13 @@
       "vi_du": "海に沈む夕日がきれいだった。 (Mặt trời lặn trên biển đẹp vô cùng.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "朝日",
+          "doc": "あさひ",
+          "nghia": "nắng sớm, mặt trời buổi sáng"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-01::夕立",
@@ -446,7 +518,13 @@
       "vi_du": "料理が余ったので、冷蔵庫に入れた。 (Vì thức ăn còn dư nên tôi đã cho vào tủ lạnh.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "足りる",
+          "doc": "たりる",
+          "nghia": "đủ"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-01::預かる",
@@ -471,8 +549,20 @@
       "doc_marked": "**よう**ち",
       "vi_du": "その考え方はあまりに幼稚だ。 (Cách suy nghĩ đó quá là non nớt.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
-      "trai_nghia": []
+      "dong_nghia": [
+        {
+          "kanji": "子供っぽい",
+          "doc": "こどもっぽい",
+          "nghia": "trẻ con"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "成熟",
+          "doc": "せいじゅく",
+          "nghia": "trưởng thành, chín chắn"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-01::容積",
@@ -536,7 +626,13 @@
       "doc_marked": "たのもしい",
       "vi_du": "彼は若いのに頼もしい存在だ。 (Anh ấy còn trẻ nhưng là người đáng tin cậy.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "信頼できる",
+          "doc": "しんらいできる",
+          "nghia": "đáng tin cậy"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -550,7 +646,13 @@
       "vi_du": "勉強不足で試験に落第してしまった。 (Vì học không đủ nên đã bị trượt kỳ thi.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "合格",
+          "doc": "ごうかく",
+          "nghia": "đỗ, đậu"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-01::乱暴",
@@ -563,7 +665,13 @@
       "vi_du": "そんな乱暴な言葉を使わないでください。 (Xin đừng dùng những từ ngữ thô lỗ như vậy.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "丁寧",
+          "doc": "ていねい",
+          "nghia": "lịch sự, cẩn thận"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-01::裏口",
@@ -641,7 +749,13 @@
       "vi_du": "スープが冷める前に食べてください。 (Hãy ăn trước khi súp nguội đi.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "温まる",
+          "doc": "あたたまる",
+          "nghia": "ấm lên"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-01::冷やす",
@@ -654,7 +768,13 @@
       "vi_du": "スイカを冷蔵庫で冷やしておいた。 (Tôi đã để dưa hấu vào tủ lạnh cho lạnh sẵn.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "温める",
+          "doc": "あたためる",
+          "nghia": "làm ấm"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-01::恋しい",
@@ -666,7 +786,13 @@
       "doc_marked": "こいしい",
       "vi_du": "故郷の味が恋しくなった。 (Tôi bỗng nhớ hương vị quê nhà.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "懐かしい",
+          "doc": "なつかしい",
+          "nghia": "hoài niệm, nhớ nhung"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -745,7 +871,13 @@
       "vi_du": "彼の返事はいつも曖昧だ。 (Câu trả lời của anh ấy lúc nào cũng mơ hồ.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "明確",
+          "doc": "めいかく",
+          "nghia": "rõ ràng"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-01::洒落",

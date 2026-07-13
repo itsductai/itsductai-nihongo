@@ -17,7 +17,13 @@
       "vi_du": "後輩に仕事を教えた。 (Tôi đã hướng dẫn công việc cho đàn em.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "先輩",
+          "doc": "せんぱい",
+          "nghia": "tiền bối"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-14::工芸",
@@ -120,7 +126,13 @@
       "doc_marked": "じっかん",
       "vi_du": "成功をようやく実感した。 (Cuối cùng tôi đã cảm nhận thực sự về thành công.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "実際に感じる",
+          "doc": "じっさいにかんじる",
+          "nghia": "cảm nhận thực sự"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -212,7 +224,13 @@
       "vi_du": "需要が増大している。 (Nhu cầu đang tăng lên.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "減少",
+          "doc": "げんしょう",
+          "nghia": "giảm thiểu"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-14::造船",
@@ -263,7 +281,13 @@
       "doc_marked": "ち**ゅう**ねん",
       "vi_du": "中年になっても健康に気を配る。 (Dù đã trung niên tôi vẫn chú ý đến sức khỏe.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "壮年",
+          "doc": "そうねん",
+          "nghia": "trung niên, tráng niên"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -316,7 +340,13 @@
       "vi_du": "彼女は派手な服を着ている。 (Cô ấy đang mặc quần áo lòe loẹt.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "地味",
+          "doc": "じみ",
+          "nghia": "giản dị"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-14::皮膚",
@@ -575,7 +605,13 @@
       "doc_marked": "かくじ**ゅう**",
       "vi_du": "サービスの拡充を図る。 (Chúng tôi đang tính đến việc mở rộng dịch vụ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "拡大",
+          "doc": "かくだい",
+          "nghia": "mở rộng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -653,7 +689,13 @@
       "doc_marked": "げんじ**ゅう**",
       "vi_du": "厳重に警備されている。 (Nơi đây được canh gác nghiêm ngặt.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "厳格",
+          "doc": "げんかく",
+          "nghia": "nghiêm khắc"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -666,7 +708,13 @@
       "doc_marked": "ごらく",
       "vi_du": "読書は私の娯楽の一つだ。 (Đọc sách là một thú vui giải trí của tôi.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "楽しみ",
+          "doc": "たのしみ",
+          "nghia": "niềm vui, giải trí"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -693,7 +741,13 @@
       "vi_du": "彼はまだ大学に在学中だ。 (Anh ấy vẫn đang là sinh viên đại học.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "卒業",
+          "doc": "そつぎょう",
+          "nghia": "tốt nghiệp"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-14::私鉄",
@@ -758,7 +812,13 @@
       "vi_du": "彼は純粋な気持ちで助けてくれた。 (Anh ấy đã giúp tôi với tấm lòng thuần khiết.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "不純",
+          "doc": "ふじゅん",
+          "nghia": "không thuần khiết"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-14::巡査",

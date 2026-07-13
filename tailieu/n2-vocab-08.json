@@ -29,7 +29,13 @@
       "doc_marked": "とどまる",
       "vi_du": "彼はまだこの町にとどまっている。 (Anh ấy vẫn còn ở lại thị trấn này.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "残る",
+          "doc": "のこる",
+          "nghia": "ở lại"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -68,7 +74,13 @@
       "doc_marked": "なくす",
       "vi_du": "彼は若くして父を亡くした。 (Anh ấy đã mất cha khi còn trẻ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "失う",
+          "doc": "うしなう",
+          "nghia": "mất đi"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -172,7 +184,13 @@
       "doc_marked": "**しょう**がない",
       "vi_du": "失敗してしまったが、しょうがない。 (Tôi đã thất bại, nhưng đành chịu vậy.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "仕方がない",
+          "doc": "しかたがない",
+          "nghia": "không còn cách nào khác"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -198,7 +216,13 @@
       "doc_marked": "てごろ",
       "vi_du": "手ごろな値段の店を見つけた。 (Tôi đã tìm được cửa hàng với giá cả phải chăng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "適当",
+          "doc": "てきとう",
+          "nghia": "phù hợp"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -277,7 +301,13 @@
       "vi_du": "真空パックの食品を買った。 (Tôi đã mua thực phẩm đóng gói chân không.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "充満",
+          "doc": "じゅうまん",
+          "nghia": "đầy ắp"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-08::図鑑",
@@ -381,7 +411,13 @@
       "vi_du": "広々とした公園を散歩した。 (Tôi đã đi dạo trong công viên rộng rãi.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "狭い",
+          "doc": "せまい",
+          "nghia": "hẹp"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-08::栓",
@@ -419,7 +455,13 @@
       "doc_marked": "わりと",
       "vi_du": "この本は割と読みやすい。 (Cuốn sách này tương đối dễ đọc.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "比較的",
+          "doc": "ひかくてき",
+          "nghia": "tương đối"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -446,7 +488,13 @@
       "vi_du": "その国は専制政治が続いている。 (Đất nước đó vẫn tiếp tục chế độ chuyên chế.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "民主",
+          "doc": "みんしゅ",
+          "nghia": "dân chủ"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-08::悔やむ",
@@ -550,7 +598,13 @@
       "vi_du": "彼のことがどうしても憎い。 (Dù thế nào tôi cũng thấy ghét anh ấy.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "愛しい",
+          "doc": "いとしい",
+          "nghia": "đáng yêu"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-08::足袋",
@@ -654,7 +708,13 @@
       "vi_du": "この景色はもう見慣れた。 (Cảnh này tôi đã quen mắt rồi.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "見慣れない",
+          "doc": "みなれない",
+          "nghia": "chưa quen mắt, xa lạ"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-08::言いつける",
@@ -731,7 +791,13 @@
       "doc_marked": "さかさま",
       "vi_du": "写真を逆さまに貼ってしまった。 (Tôi đã dán ảnh ngược lại.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "逆",
+          "doc": "ぎゃく",
+          "nghia": "ngược lại"
+        }
+      ],
       "trai_nghia": []
     },
     {

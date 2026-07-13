@@ -16,7 +16,13 @@
       "doc_marked": "おどかす",
       "vi_du": "彼の脅すような態度に驚いた。 (Tôi đã bất ngờ trước thái độ mang tính đe dọa của anh ấy.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "脅迫する",
+          "doc": "きょうはくする",
+          "nghia": "uy hiếp"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -55,7 +61,13 @@
       "doc_marked": "**しょう****もう**",
       "vi_du": "長時間の運動で体力を消耗した。 (Tập thể dục lâu đã tiêu hao thể lực.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "疲労",
+          "doc": "ひろう",
+          "nghia": "mệt mỏi"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -82,7 +94,13 @@
       "vi_du": "雪で山が真っ白になった。 (Ngọn núi đã trắng tinh vì tuyết.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "真っ黒",
+          "doc": "まっくろ",
+          "nghia": "đen tuyền"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-02::中指",
@@ -121,7 +139,13 @@
       "vi_du": "彼は反応が鈍いところがある。 (Anh ấy có phần phản ứng chậm chạp.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "鋭い",
+          "doc": "するどい",
+          "nghia": "sắc bén"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-02::燃やす",
@@ -147,7 +171,13 @@
       "vi_du": "最近、白髪が増えてきた。 (Gần đây tóc bạc của tôi ngày càng nhiều.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "黒髪",
+          "doc": "くろかみ",
+          "nghia": "tóc đen"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-02::末っ子",
@@ -199,7 +229,13 @@
       "vi_du": "お風呂に入って体が温まった。 (Tắm xong cơ thể đã ấm lên.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "冷える",
+          "doc": "ひえる",
+          "nghia": "lạnh đi"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-02::編み物",
@@ -224,7 +260,13 @@
       "doc_marked": "あやしい",
       "vi_du": "あの人の行動は怪しい。 (Hành động của người đó thật đáng ngờ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "疑わしい",
+          "doc": "うたがわしい",
+          "nghia": "đáng ngờ"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -290,7 +332,13 @@
       "vi_du": "深呼吸をして気持ちを落ち着けた。 (Tôi đã hít thở sâu để trấn tĩnh tâm trạng.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "慌てる",
+          "doc": "あわてる",
+          "nghia": "hốt hoảng"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-02::落とし物",
@@ -329,7 +377,13 @@
       "vi_du": "彼の意見はやや偏っている。 (Ý kiến của anh ấy hơi lệch lạc.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "均等",
+          "doc": "きんとう",
+          "nghia": "đồng đều"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-02::替わる",
@@ -393,7 +447,13 @@
       "doc_marked": "くやしい",
       "vi_du": "試合に負けて悔しい思いをした。 (Thua trận tôi đã cảm thấy thật cay cú.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "残念",
+          "doc": "ざんねん",
+          "nghia": "tiếc nuối"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -445,7 +505,13 @@
       "doc_marked": "しずまる",
       "vi_du": "騒ぎがようやく静まった。 (Cuối cùng sự ồn ào cũng đã lắng xuống.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "落ち着く",
+          "doc": "おちつく",
+          "nghia": "lắng xuống, bình tĩnh"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -484,8 +550,20 @@
       "doc_marked": "**そう****ぞう**しい",
       "vi_du": "外が騒々しくて眠れない。 (Bên ngoài ồn ào nên tôi không ngủ được.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
-      "trai_nghia": []
+      "dong_nghia": [
+        {
+          "kanji": "うるさい",
+          "doc": "うるさい",
+          "nghia": "ồn ào"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "静か",
+          "doc": "しずか",
+          "nghia": "yên tĩnh"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-02::蓄える",
@@ -497,7 +575,13 @@
       "doc_marked": "たくわえる",
       "vi_du": "将来のためにお金を蓄えている。 (Tôi đang tích trữ tiền cho tương lai.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "貯める",
+          "doc": "ためる",
+          "nghia": "tích trữ"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -706,7 +790,13 @@
       "vi_du": "運動量を少しずつ増やしている。 (Tôi đang tăng dần lượng vận động.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "減らす",
+          "doc": "へらす",
+          "nghia": "giảm bớt"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-02::振る舞う",
@@ -770,7 +860,13 @@
       "doc_marked": "まざる",
       "vi_du": "水と油は混ざらない。 (Nước và dầu không hòa trộn với nhau.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "混じる",
+          "doc": "まじる",
+          "nghia": "trộn lẫn"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -783,7 +879,13 @@
       "doc_marked": "まじる",
       "vi_du": "雨に雪が混じって降った。 (Mưa rơi lẫn với tuyết.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "混ざる",
+          "doc": "まざる",
+          "nghia": "trộn lẫn"
+        }
+      ],
       "trai_nghia": []
     }
   ]

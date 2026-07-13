@@ -56,7 +56,13 @@
       "vi_du": "薄暗い部屋で本を読んだ。 (Tôi đã đọc sách trong căn phòng hơi tối.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "明るい",
+          "doc": "あかるい",
+          "nghia": "sáng sủa"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-25::肌着",
@@ -199,7 +205,13 @@
       "vi_du": "彼は不運にも試験に落ちた。 (Thật không may anh ấy đã trượt kỳ thi.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "幸運",
+          "doc": "こううん",
+          "nghia": "may mắn"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-25::不規則",
@@ -225,7 +237,13 @@
       "vi_du": "その部屋は不潔だった。 (Căn phòng đó không sạch sẽ.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "清潔",
+          "doc": "せいけつ",
+          "nghia": "sạch sẽ"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-25::不通",
@@ -458,7 +476,13 @@
       "doc_marked": "**へい**き",
       "vi_du": "彼は失敗しても平気な顔をしている。 (Dù thất bại anh ấy vẫn tỏ ra bình thản.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "冷静",
+          "doc": "れいせい",
+          "nghia": "bình tĩnh"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -472,7 +496,13 @@
       "vi_du": "平凡な一日を過ごした。 (Tôi đã trải qua một ngày bình thường.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "非凡",
+          "doc": "ひぼん",
+          "nghia": "phi thường"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-25::並行",
@@ -511,7 +541,13 @@
       "vi_du": "片道切符を買った。 (Tôi đã mua vé một chiều.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "往復",
+          "doc": "おうふく",
+          "nghia": "khứ hồi"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-25::片付く",
@@ -615,7 +651,13 @@
       "vi_du": "体調を崩してしまった。 (Tôi đã bị suy giảm sức khỏe.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "整える",
+          "doc": "ととのえる",
+          "nghia": "chỉnh đốn"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-25::方角",
@@ -719,7 +761,13 @@
       "vi_du": "パンの生地が膨らんだ。 (Bột bánh mì đã nở phồng lên.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "しぼむ",
+          "doc": "しぼむ",
+          "nghia": "xẹp xuống"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-25::北極",
@@ -732,7 +780,13 @@
       "vi_du": "北極は一年中寒い。 (Bắc Cực lạnh quanh năm.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "南極",
+          "doc": "なんきょく",
+          "nghia": "Nam Cực"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-25::牧畜",

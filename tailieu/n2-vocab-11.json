@@ -95,7 +95,13 @@
       "vi_du": "深夜まで仕事をしていた。 (Tôi đã làm việc đến tận đêm khuya.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "真昼",
+          "doc": "まひる",
+          "nghia": "giữa trưa"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-11::正面",
@@ -160,7 +166,13 @@
       "vi_du": "短期のアルバイトを探している。 (Tôi đang tìm việc làm thêm ngắn hạn.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "長期",
+          "doc": "ちょうき",
+          "nghia": "dài hạn"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-11::知人",
@@ -264,7 +276,13 @@
       "vi_du": "これは特殊な状況だ。 (Đây là một tình huống đặc biệt.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "一般",
+          "doc": "いっぱん",
+          "nghia": "thông thường"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-11::入社",
@@ -277,7 +295,13 @@
       "vi_du": "来月からこの会社に入社する。 (Tôi sẽ vào làm việc ở công ty này từ tháng sau.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "退社",
+          "doc": "たいしゃ",
+          "nghia": "nghỉ việc, rời công ty"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-11::農村",
@@ -290,7 +314,13 @@
       "vi_du": "農村で自然に囲まれて育った。 (Tôi đã lớn lên được thiên nhiên bao quanh ở nông thôn.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "都市",
+          "doc": "とし",
+          "nghia": "thành thị"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-11::発想",
@@ -315,7 +345,13 @@
       "doc_marked": "はん**せい**",
       "vi_du": "自分の行動を反省した。 (Tôi đã suy ngẫm lại hành động của mình.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "自省",
+          "doc": "じせい",
+          "nghia": "tự xem xét lại"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -380,7 +416,13 @@
       "doc_marked": "まさつ",
       "vi_du": "二国間の貿易摩擦が続いている。 (Xung đột thương mại giữa hai nước vẫn tiếp diễn.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "衝突",
+          "doc": "しょうとつ",
+          "nghia": "xung đột"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -406,7 +448,13 @@
       "doc_marked": "よび",
       "vi_du": "予備の電池を持ってきた。 (Tôi đã mang theo pin dự phòng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "予め",
+          "doc": "あらかじめ",
+          "nghia": "trước, dự phòng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -420,7 +468,13 @@
       "vi_du": "彼は列の先頭に並んだ。 (Anh ấy đã đứng ở đầu hàng.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "最後尾",
+          "doc": "さいこうび",
+          "nghia": "cuối hàng"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-11::中身",
@@ -732,7 +786,13 @@
       "vi_du": "会議は五時に終了した。 (Cuộc họp đã kết thúc lúc năm giờ.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "開始",
+          "doc": "かいし",
+          "nghia": "bắt đầu"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-11::商店",
@@ -771,7 +831,13 @@
       "vi_du": "彼はいつも消極的な態度をとる。 (Anh ấy luôn có thái độ tiêu cực, thụ động.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "積極的",
+          "doc": "せっきょくてき",
+          "nghia": "tích cực"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-11::上下",

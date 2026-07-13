@@ -30,7 +30,13 @@
       "vi_du": "大会は無事に閉会した。 (Đại hội đã bế mạc thành công tốt đẹp.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "開会",
+          "doc": "かいかい",
+          "nghia": "khai mạc"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-17::包装",
@@ -147,7 +153,13 @@
       "vi_du": "彼女は生き生きとした表情で話した。 (Cô ấy đã nói chuyện với vẻ mặt đầy sức sống.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "だるい",
+          "doc": "だるい",
+          "nghia": "uể oải"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-17::引き分け",
@@ -186,7 +198,13 @@
       "vi_du": "屋外でバーベキューをした。 (Chúng tôi đã tổ chức tiệc nướng ngoài trời.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "屋内",
+          "doc": "おくない",
+          "nghia": "trong nhà"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-17::乾燥",
@@ -238,7 +256,13 @@
       "vi_du": "彼の意見を間接的に聞いた。 (Tôi đã nghe ý kiến của anh ấy một cách gián tiếp.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "直接",
+          "doc": "ちょくせつ",
+          "nghia": "trực tiếp"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-17::区分",
@@ -289,7 +313,13 @@
       "doc_marked": "こん**ごう**",
       "vi_du": "二つの色を混合して新しい色を作った。 (Tôi đã pha trộn hai màu để tạo ra màu mới.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "混ぜる",
+          "doc": "まぜる",
+          "nghia": "pha trộn"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -549,7 +579,13 @@
       "doc_marked": "むすう",
       "vi_du": "夜空に無数の星が輝いていた。 (Vô số ngôi sao đã lấp lánh trên bầu trời đêm.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "たくさん",
+          "doc": "たくさん",
+          "nghia": "nhiều"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -588,7 +624,13 @@
       "doc_marked": "よ**けい**",
       "vi_du": "余計なことを言ってしまった。 (Tôi đã lỡ nói điều thừa thãi.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "余分",
+          "doc": "よぶん",
+          "nghia": "dư thừa"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -627,7 +669,13 @@
       "doc_marked": "じ**ゅう**たい",
       "vi_du": "事故で重体に陥った。 (Anh ấy đã rơi vào tình trạng nguy kịch vì tai nạn.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "重症",
+          "doc": "じゅうしょう",
+          "nghia": "bệnh nặng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -784,7 +832,13 @@
       "vi_du": "彼はいつも謙虚な態度だ。 (Anh ấy luôn có thái độ khiêm tốn.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "傲慢",
+          "doc": "ごうまん",
+          "nghia": "kiêu ngạo"
+        }
+      ]
     }
   ]
 }

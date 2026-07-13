@@ -56,7 +56,13 @@
       "vi_du": "安易に決めるべきではない。 (Không nên quyết định một cách dễ dãi.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "困難",
+          "doc": "こんなん",
+          "nghia": "khó khăn"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-13::一流",
@@ -211,7 +217,13 @@
       "doc_marked": "**こう****せい**",
       "vi_du": "公正な審査が行われた。 (Cuộc thẩm định công bằng đã được tiến hành.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "公平",
+          "doc": "こうへい",
+          "nghia": "công bằng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -380,7 +392,13 @@
       "doc_marked": "すなお",
       "vi_du": "彼は素直な性格だ。 (Anh ấy có tính cách thật thà, dễ bảo.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "従順",
+          "doc": "じゅうじゅん",
+          "nghia": "ngoan ngoãn, dễ bảo"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -497,7 +515,13 @@
       "doc_marked": "むじゅん",
       "vi_du": "彼の話には矛盾がある。 (Câu chuyện của anh ấy có mâu thuẫn.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "食い違い",
+          "doc": "くいちがい",
+          "nghia": "sự khác biệt, mâu thuẫn"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -563,7 +587,13 @@
       "vi_du": "この駐車場は有料だ。 (Bãi đỗ xe này có phí.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "無料",
+          "doc": "むりょう",
+          "nghia": "miễn phí"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-13::幼児",
@@ -680,7 +710,13 @@
       "vi_du": "過剰な期待はしない方がいい。 (Không nên kỳ vọng quá mức.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "不足",
+          "doc": "ふそく",
+          "nghia": "thiếu hụt"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-13::学術",
@@ -718,7 +754,13 @@
       "doc_marked": "**ごう**いん",
       "vi_du": "彼は強引に計画を進めた。 (Anh ấy đã cưỡng ép tiến hành kế hoạch.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "無理やり",
+          "doc": "むりやり",
+          "nghia": "cưỡng ép"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -744,7 +786,13 @@
       "doc_marked": "けんがく",
       "vi_du": "工場を見学した。 (Tôi đã đi tham quan nhà máy.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "視察",
+          "doc": "しさつ",
+          "nghia": "thị sát"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -771,7 +819,13 @@
       "vi_du": "空港で友人を見送った。 (Tôi đã tiễn bạn tại sân bay.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "出迎える",
+          "doc": "でむかえる",
+          "nghia": "đón tiếp"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-13::見舞う",
