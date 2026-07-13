@@ -192,8 +192,8 @@ function populateDeckPicker() {
   // Thứ tự A-Z trong từng nhóm vẫn giữ nguyên (App.decks đã được sort sẵn).
   const mimiDecks = App.decks.filter((d) => d.series === "mimi");
   const tangoDecks = App.decks.filter((d) => d.series === "tango");
-  const jlptN2Decks = App.decks.filter((d) => d.series === "n2vocab" || d.series === "n1vocab");
-  const otherDecks = App.decks.filter((d) => !["mimi", "tango", "n2vocab", "n1vocab"].includes(d.series));
+  const jlptN2Decks = App.decks.filter((d) => ["n2vocab", "n1vocab", "n3vocab"].includes(d.series));
+  const otherDecks = App.decks.filter((d) => !["mimi", "tango", "n2vocab", "n1vocab", "n3vocab"].includes(d.series));
 
   const renderGroup = (label, decks) => {
     if (decks.length === 0) return;
@@ -209,10 +209,10 @@ function populateDeckPicker() {
     picker.appendChild(group);
   };
 
-  // Thứ tự cố định: Mimi -> Tango -> JLPT N2 (import) -> Tài liệu khác
+  // Thứ tự cố định: Mimi -> Tango -> JLPT N2 -> Tài liệu khác
   renderGroup("📘 Mimikara oboeru", mimiDecks);
-  renderGroup("📕 Tango N2 (nut-that)", tangoDecks);
-  renderGroup("📗 JLPT N2 (import)", jlptN2Decks);
+  renderGroup("📕 Tango N2", tangoDecks);
+  renderGroup("📗 JLPT (N1-N3)", jlptN2Decks);
   renderGroup("Tài liệu khác", otherDecks);
 
   picker.value = App.currentDeckId;

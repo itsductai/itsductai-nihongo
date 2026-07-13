@@ -68,13 +68,14 @@ function getDailyActivitySeries(numDays) {
 =================================================================== */
 const CURRICULUM_LABELS = {
   mimi: "📘 Mimikara oboeru",
-  tango: "📕 Tango N2 (nut-that)",
-  n2vocab: "📗 JLPT N2 (import)",
-  n1vocab: "📗 JLPT N2 (import) - N1",
+  tango: "📕 Tango N2",
+  n2vocab: "📗 JLPT N2",
+  n1vocab: "📗 JLPT N1",
+  n3vocab: "📗 JLPT N3",
   __tuvung_other__: "📚 Từ vựng khác",
   __nguphap_other__: "📖 Ngữ pháp khác",
 };
-const CURRICULUM_COLORS = { mimi: "#48c98c", tango: "#ff6b6b", n2vocab: "#a98bff", n1vocab: "#a98bff" };
+const CURRICULUM_COLORS = { mimi: "#48c98c", tango: "#ff6b6b", n2vocab: "#a98bff", n1vocab: "#a98bff", n3vocab: "#a98bff" };
 
 function getCurriculumGroups() {
   const groups = {};
@@ -86,7 +87,7 @@ function getCurriculumGroups() {
     groups[key].decks.push(deck);
   });
   // Thứ tự cố định: Mimi -> Tango -> JLPT N2 (import N2/N1) -> nhóm khác
-  const ORDER = ["mimi", "tango", "n2vocab", "n1vocab"];
+  const ORDER = ["mimi", "tango", "n2vocab", "n1vocab", "n3vocab"];
   return Object.values(groups).sort((a, b) => {
     const ia = ORDER.indexOf(a.key), ib = ORDER.indexOf(b.key);
     if (ia === -1 && ib === -1) return 0;
@@ -476,10 +477,10 @@ function renderLevelPickerSeriesGrid() {
     if (!bySeries[key]) bySeries[key] = [];
     bySeries[key].push(d);
   });
-  const SERIES_LABELS = { mimi: "Mimikara oboeru", tango: "Tango N2 (nut-that)", n2vocab: "JLPT N2 (import mới)", n1vocab: "JLPT N2 (import mới)", khac: "Khác" };
-  const SERIES_COLORS = { mimi: "#48c98c", tango: "#ff6b6b", n2vocab: "#a98bff", n1vocab: "#a98bff", khac: "var(--text-2)" };
+  const SERIES_LABELS = { mimi: "Mimikara oboeru", tango: "Tango N2", n2vocab: "JLPT N2", n1vocab: "JLPT N1", n3vocab: "JLPT N3", khac: "Khác" };
+  const SERIES_COLORS = { mimi: "#48c98c", tango: "#ff6b6b", n2vocab: "#a98bff", n1vocab: "#a98bff", n3vocab: "#a98bff", khac: "var(--text-2)" };
   // Thứ tự cố định hiển thị: Mimi -> Tango -> JLPT N2 (import N2/N1) -> Khác
-  const SERIES_ORDER = ["mimi", "tango", "n2vocab", "n1vocab", "khac"];
+  const SERIES_ORDER = ["mimi", "tango", "n2vocab", "n1vocab", "n3vocab", "khac"];
 
   const seriesKeys = Object.keys(bySeries).sort((a, b) => SERIES_ORDER.indexOf(a) - SERIES_ORDER.indexOf(b));
   if (!seriesKeys.length) {
