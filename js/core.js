@@ -199,8 +199,8 @@ const FIELD_META = {
   TUVUNG: {
     kanji: { label: "Kanji", render: (w) => `<div class="cf-kanji">${w.kanji}</div>` },
     doc: { label: "Hiragana (trường âm đỏ)", render: (w) => `<div class="cf-doc">${renderChoon(w.doc_marked || w.doc)}</div>` },
-    han_viet: { label: "Hán Việt", render: (w) => `<div class="cf-hanviet">${w.han_viet}</div>` },
-    nghia: { label: "Nghĩa tiếng Việt", render: (w) => `<div class="cf-nghia">${w.nghia}</div>` },
+    han_viet: { label: "Hán Việt", render: (w) => (w.han_viet ? `<div class="cf-hanviet">${w.han_viet}</div>` : "") },
+    nghia: { label: "Nghĩa tiếng Việt", render: (w) => (w.nghia ? `<div class="cf-nghia">${w.nghia}</div>` : "") },
     vi_du: { label: "Ví dụ (furigana + dịch)", render: (w) => `<div class="cf-vidu">${renderExampleSentencesForCard(w)}</div>` },
     dong_nghia: {
       label: "Từ đồng nghĩa",
@@ -214,11 +214,11 @@ const FIELD_META = {
     },
   },
   NGUPHAP: {
-    cautruc: { label: "Cấu trúc", render: (w) => `<div class="cf-cautruc">${w.cautruc}</div>` },
-    nghia: { label: "Ý nghĩa", render: (w) => `<div class="cf-nghia">${w.nghia}</div>` },
+    cautruc: { label: "Cấu trúc", render: (w) => (w.cautruc ? `<div class="cf-cautruc">${w.cautruc}</div>` : "") },
+    nghia: { label: "Ý nghĩa", render: (w) => (w.nghia ? `<div class="cf-nghia">${w.nghia}</div>` : "") },
     muc_do: { label: "Mức độ trang trọng", render: (w) => (w.muc_do ? `<div class="cf-mucdo">${w.muc_do}</div>` : "") },
     cau_truc_ngu_phap: { label: "Công thức ngữ pháp", render: (w) => (w.cau_truc_ngu_phap ? `<div class="cf-ngphap-structure">${w.cau_truc_ngu_phap}</div>` : "") },
-    vi_du: { label: "Ví dụ (furigana)", render: (w) => `<div class="cf-vidu">${renderExampleSentences(w.vi_du)}</div>` },
+    vi_du: { label: "Ví dụ (furigana)", render: (w) => (w.vi_du ? `<div class="cf-vidu">${renderExampleSentences(w.vi_du)}</div>` : "") },
     so_sanh_de_nham: {
       label: "So sánh cấu trúc dễ nhầm",
       render: (w) => {

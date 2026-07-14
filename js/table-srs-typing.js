@@ -16,9 +16,15 @@
    hàng đợi, không trộn thêm từ mới (khác hành vi combo thủ công thường thêm
    tối đa 10 từ mới, ở đây mục đích thuần là dọn hết nợ ôn tập).
 =================================================================== */
-function startComboSrs(deckIds, dueOnly) {
+async function startComboSrs(deckIds, dueOnly) {
   const decks = deckIds.map((id) => App.decks.find((d) => d.id === id)).filter(Boolean);
   if (!decks.length) return;
+
+  // FIX BUG (thẻ hiện "UNDEFINED"): App.decks ban đầu chỉ chứa dữ liệu MỎNG từ
+  // manifest-thin.json (thiếu han_viet / vi_du / dong_nghia / trai_nghia). Trước
+  // đây hàm này lấy thẳng deck.words nên khi ôn tổng hợp, thẻ render các field
+  // nặng đó ra "undefined". Phải tải deck DÀY cho TẤT CẢ bộ trước rồi mới gom từ.
+  await Promise.all(decks.map((d) => ensureDeckLoaded(d.id)));
 
   const comboWords = [];
   const comboProgress = {};
