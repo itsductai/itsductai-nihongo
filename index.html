@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Nihongo Lab — Luyện thi JLPT</title>
-<link rel="stylesheet" href="css/style.css?v=17">
+<link rel="stylesheet" href="css/style.css?v=18">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
@@ -1049,6 +1049,39 @@
         <div class="weakness-title">Thống kê tổng quan — nhìn 1 lần biết hết</div>
       </div>
 
+      <!-- ---- ĐỘ BAO PHỦ TỪ VỰNG — biểu đồ Euler (vòng tròn chồng lấn) ---- -->
+      <div class="stats-section">
+        <div class="stats-section-title">🔵 Độ bao phủ từ vựng — các bộ chồng lấn nhau
+          <span class="stats-section-hint">(diện tích vòng = số từ; phần chồng lấn = từ trùng nhau. Bấm vào vùng bất kỳ để xem danh sách từ)</span>
+        </div>
+
+        <div class="cov-toolbar">
+          <div class="cov-tabs" id="covScopeTabs">
+            <button class="cov-tab active" data-scope="series">Theo bộ giáo trình</button>
+            <button class="cov-tab" data-scope="level">Theo cấp độ (N1/N2/N3)</button>
+          </div>
+          <label class="cov-legend-toggle">
+            <input type="checkbox" id="covHideSmall" checked>
+            <span>Ẩn bộ nhỏ (&lt; 50 từ)</span>
+          </label>
+        </div>
+
+        <div class="cov-wrap">
+          <svg id="covVenn" class="cov-venn" viewBox="0 0 640 460" preserveAspectRatio="xMidYMid meet"></svg>
+          <div class="cov-side">
+            <div class="cov-legend" id="covLegend"></div>
+            <div class="cov-detail" id="covDetail">
+              <div class="cov-detail-empty">Bấm vào một vòng tròn hoặc vùng giao nhau để xem chi tiết từ vựng.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cov-matrix-wrap">
+          <div class="cov-matrix-title">Ma trận từ trùng nhau <span class="stats-section-hint">(bấm 1 ô để xem danh sách từ trùng)</span></div>
+          <div class="cov-matrix-scroll"><table class="cov-matrix" id="covMatrix"></table></div>
+        </div>
+      </div>
+
       <div class="stats-section stats-group-mimi">
         <div class="stats-section-title">📘 Mimikara oboeru <span class="stats-section-hint">(bấm tên bộ để ôn ngay)</span></div>
         <div class="stats-donut-row" id="statsDonutRowMimi"></div>
@@ -1193,7 +1226,8 @@
      README.md để biết module nào phụ trách phần nào. -->
 <script src="js/core.js?v=19"></script>
 <script src="js/scoring.js?v=1"></script>
-<script src="js/stats-weakness.js?v=7"></script>
+<script src="js/coverage.js?v=1"></script>
+<script src="js/stats-weakness.js?v=8"></script>
 <script src="js/dashboard.js?v=15"></script>
 <script src="js/game.js?v=7"></script>
 <script src="js/listen-game.js?v=3"></script>

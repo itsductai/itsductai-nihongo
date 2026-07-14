@@ -1939,3 +1939,61 @@ mark.exam-note-mark {
 @media (prefers-reduced-motion: reduce) {
   .app-loading-spinner::before, .app-loading-spinner::after { animation-duration: 1.8s; }
 }
+
+
+/* ============ ĐỘ BAO PHỦ TỪ VỰNG (biểu đồ Euler) ============ */
+.cov-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:10px 0 14px}
+.cov-tabs{display:flex;gap:6px;background:var(--bg-2);padding:4px;border-radius:10px}
+.cov-tab{padding:7px 14px;border:0;background:transparent;color:var(--text-2);border-radius:7px;cursor:pointer;font-size:13px;font-weight:600}
+.cov-tab.active{background:var(--bg-1);color:var(--text-1);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.cov-legend-toggle{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-2);cursor:pointer}
+
+.cov-wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px;align-items:start}
+@media(max-width:900px){.cov-wrap{grid-template-columns:1fr}}
+
+.cov-venn{width:100%;height:auto;background:var(--bg-2);border-radius:14px;display:block}
+.cov-circle{fill-opacity:.34;stroke-width:2.5;cursor:pointer;transition:fill-opacity .15s}
+.cov-circle:hover{fill-opacity:.5}
+.cov-circle.selected{fill-opacity:.62;stroke-width:4}
+.cov-circle-label{font-size:13px;font-weight:800;fill:var(--text-1);pointer-events:none;paint-order:stroke;stroke:var(--bg-2);stroke-width:3.5px;stroke-linejoin:round}
+.cov-circle-count{font-size:11px;font-weight:600;fill:var(--text-2);pointer-events:none;paint-order:stroke;stroke:var(--bg-2);stroke-width:3px;stroke-linejoin:round}
+
+.cov-side{display:flex;flex-direction:column;gap:12px;min-width:0}
+.cov-legend{display:flex;flex-direction:column;gap:4px}
+.cov-legend-item{display:flex;align-items:center;gap:8px;padding:7px 10px;border:1px solid var(--border);background:var(--bg-1);border-radius:9px;cursor:pointer;text-align:left;width:100%}
+.cov-legend-item:hover{background:var(--bg-2)}
+.cov-legend-item.active{border-color:var(--accent);background:var(--bg-2)}
+.cov-legend-name{flex:1;font-size:13px;font-weight:600;color:var(--text-1)}
+.cov-legend-num{font-size:12px;font-weight:700;color:var(--text-2)}
+.cov-dot{width:11px;height:11px;border-radius:50%;flex:0 0 auto;display:inline-block;margin-right:5px;vertical-align:-1px}
+.cov-total{margin-top:6px;padding:9px 11px;background:var(--bg-2);border-radius:9px;font-size:12.5px;color:var(--text-2)}
+.cov-total b{color:var(--text-1)}
+.cov-total-sub{display:block;font-size:11.5px;opacity:.75;margin-top:2px}
+
+.cov-detail{border:1px solid var(--border);border-radius:12px;padding:12px;background:var(--bg-1);max-height:520px;overflow-y:auto}
+.cov-detail-empty{color:var(--text-2);font-size:13px;text-align:center;padding:18px 8px}
+.cov-detail-head{display:flex;align-items:center;gap:5px;flex-wrap:wrap;font-size:14px;padding-bottom:9px;margin-bottom:10px;border-bottom:2px solid var(--border)}
+.cov-vs{color:var(--text-2);font-weight:800;margin:0 3px}
+.cov-stat-row{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.cov-stat{flex:1;min-width:88px;background:var(--bg-2);border-radius:9px;padding:8px 10px;display:flex;flex-direction:column;gap:2px}
+.cov-stat span{font-size:11px;color:var(--text-2)}
+.cov-stat b{font-size:17px;color:var(--text-1)}
+.cov-detail-sub{font-size:12.5px;color:var(--text-2);margin:12px 0 7px;font-weight:600}
+.cov-words{display:flex;flex-wrap:wrap;gap:5px}
+.cov-word{font-size:13px;padding:3px 8px;background:var(--bg-2);border-radius:6px;color:var(--text-1)}
+.cov-more{font-size:12px;color:var(--text-2);margin-top:6px;font-style:italic}
+
+.cov-matrix-wrap{margin-top:18px}
+.cov-matrix-title{font-size:13.5px;font-weight:700;color:var(--text-1);margin-bottom:8px}
+.cov-matrix-scroll{overflow-x:auto}
+.cov-matrix{border-collapse:collapse;font-size:12.5px;min-width:100%}
+.cov-matrix th,.cov-matrix td{border:1px solid var(--border);padding:7px 10px;text-align:center;white-space:nowrap}
+.cov-matrix thead th{background:var(--bg-2);font-weight:700;color:var(--text-1)}
+.cov-matrix tbody th{background:var(--bg-2);text-align:left;font-weight:700;color:var(--text-1)}
+.cov-cell-self{background:var(--bg-2);font-weight:800;color:var(--text-2)}
+.cov-cell{color:var(--text-1)}
+.cov-cell.clickable{cursor:pointer}
+.cov-cell.clickable:hover{outline:2px solid var(--accent);outline-offset:-2px}
+.cov-cell-pct{display:block;font-size:10.5px;color:var(--text-2);margin-top:1px}
+.cov-leader{stroke-width:1.2;stroke-dasharray:3 3;opacity:.8;pointer-events:none}
+.cov-leader-dot{pointer-events:none}

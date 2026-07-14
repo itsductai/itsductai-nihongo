@@ -655,6 +655,7 @@ function computeDeckStats(deck) {
 }
 
 function renderStatsMode() {
+  if (typeof Coverage !== "undefined") Coverage.init();
   renderStatsOverviewTable();
   renderStatsGrammarItems();
   renderStatsExamHistory();
