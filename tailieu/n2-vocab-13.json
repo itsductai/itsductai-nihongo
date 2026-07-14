@@ -12,11 +12,17 @@
       "cautruc": null,
       "doc": "じばん",
       "han_viet": "ĐỊA BÀN",
-      "nghia": "nền đất; địa bàn; phạm vi ảnh hưởng",
+      "nghia": "nền đất; địa bàn, phạm vi ảnh hưởng",
       "doc_marked": "じばん",
-      "vi_du": "この地域は地盤が弱い。 (Khu vực này nền đất yếu.)",
+      "vi_du": "地盤が緩んで崩れた。 (Nền đất bị lỏng nên đã sạt lở.) 選挙の地盤を固めた。 (Anh ấy đã củng cố địa bàn tranh cử.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "土台",
+          "doc": "どだい",
+          "nghia": "nền móng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -27,9 +33,15 @@
       "han_viet": "NÔNG SẢN VẬT",
       "nghia": "Nông sản; hàng nông sản; điền sản",
       "doc_marked": "**のう**さんぶつ",
-      "vi_du": "この店は地元の農産物を売っている。 (Cửa hàng này bán nông sản của địa phương.)",
+      "vi_du": "この店は地元の農産物を売っている。 (Cửa hàng này bán nông sản của địa phương.) 農産物を輸出している。 (Chúng tôi đang xuất khẩu nông sản.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "作物",
+          "doc": "さくもつ",
+          "nghia": "nông sản"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -40,9 +52,15 @@
       "han_viet": "MẠI HÀNH",
       "nghia": "những hàng bán; tình trạng bán hàng hóa",
       "doc_marked": "うれゆき",
-      "vi_du": "新商品の売れ行きが好調だ。 (Tình hình bán hàng của sản phẩm mới đang tốt.)",
+      "vi_du": "商品の売れ行きを調べた。 (Tôi đã kiểm tra tình hình tiêu thụ sản phẩm.) 新商品の売れ行きが好調だ。 (Doanh số sản phẩm mới đang rất tốt.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "販売実績",
+          "doc": "はんばいじっせき",
+          "nghia": "kết quả bán hàng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -53,7 +71,7 @@
       "han_viet": "AN DỊCH",
       "nghia": "dễ dàng; đơn giản; sự dễ dàng; sự đơn giản",
       "doc_marked": "あんい",
-      "vi_du": "安易に決めるべきではない。 (Không nên quyết định một cách dễ dãi.)",
+      "vi_du": "安易に決めるべきではない。 (Không nên quyết định một cách dễ dãi.) 安易な考えは危険だ。 (Suy nghĩ dễ dãi thật nguy hiểm.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
       "trai_nghia": [
@@ -72,10 +90,16 @@
       "han_viet": "NHẤT LƯU",
       "nghia": "bậc nhất; theo cách riêng; hạng nhất; hàng đầu; cao cấp",
       "doc_marked": "いちり**ゅう**",
-      "vi_du": "彼は一流のシェフだ。 (Anh ấy là đầu bếp hạng nhất.)",
+      "vi_du": "彼は一流のシェフだ。 (Anh ấy là đầu bếp hạng nhất.) 一流のホテルに泊まった。 (Tôi đã ở khách sạn hạng nhất.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "三流",
+          "doc": "さんりゅう",
+          "nghia": "hạng ba"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-13::架空",
@@ -85,10 +109,16 @@
       "han_viet": "GIÁ KHÔNG",
       "nghia": "ở trên trời; điều hư cấu; điều tưởng tượng; ma; trong tưởng tượng",
       "doc_marked": "か**くう**",
-      "vi_du": "これは架空の人物を描いた小説だ。 (Đây là tiểu thuyết miêu tả nhân vật hư cấu.)",
+      "vi_du": "これは架空の人物を描いた小説だ。 (Đây là tiểu thuyết miêu tả nhân vật hư cấu.) 架空の人物を描いた。 (Tôi đã khắc họa một nhân vật hư cấu.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "実在",
+          "doc": "じつざい",
+          "nghia": "có thật"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-13::回転",
@@ -98,9 +128,15 @@
       "han_viet": "HỒI CHUYỂN",
       "nghia": "回転椅子:ghế xoay; sự chuyển động quay; sự quay; sự xoay vòng; 回転木馬:trò chơi ngựa gỗ xoay; sự xoay chuyển; sự xoay vòng; sự quay vòng",
       "doc_marked": "かいてん",
-      "vi_du": "観覧車がゆっくり回転している。 (Vòng quay ma sát đang quay chậm rãi.)",
+      "vi_du": "観覧車がゆっくり回転している。 (Vòng quay ma sát đang quay chậm rãi.) 頭の回転が速い。 (Đầu óc anh ấy xoay chuyển nhanh.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "回る",
+          "doc": "まわる",
+          "nghia": "xoay"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -111,10 +147,16 @@
       "han_viet": "NGOẠI KHOA",
       "nghia": "ngoại khoa; khoa",
       "doc_marked": "げか",
-      "vi_du": "外科で手術を受けた。 (Tôi đã được phẫu thuật ở khoa ngoại.)",
+      "vi_du": "外科で手術を受けた。 (Tôi đã được phẫu thuật ở khoa ngoại.) 外科で手術を受けた。 (Tôi đã phẫu thuật ở khoa ngoại.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "内科",
+          "doc": "ないか",
+          "nghia": "khoa nội"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-13::楽器",
@@ -124,9 +166,15 @@
       "han_viet": "LẠC KHÍ",
       "nghia": "nhạc khí; nhạc cụ",
       "doc_marked": "がっき",
-      "vi_du": "彼は複数の楽器を演奏できる。 (Anh ấy có thể chơi nhiều loại nhạc cụ.)",
+      "vi_du": "彼は複数の楽器を演奏できる。 (Anh ấy có thể chơi nhiều loại nhạc cụ.) 楽器を演奏した。 (Tôi đã chơi nhạc cụ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "琴",
+          "doc": "こと",
+          "nghia": "đàn koto"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -137,10 +185,16 @@
       "han_viet": "HƯU NGHIỆP",
       "nghia": "sự đóng cửa không kinh doanh; đóng cửa; ngừng kinh doanh; chấm dứt kinh doanh; nghỉ kinh doanh; nghỉ",
       "doc_marked": "き**ゅう****ぎょう**",
-      "vi_du": "その店は本日休業だ。 (Cửa hàng đó hôm nay nghỉ bán.)",
+      "vi_du": "その店は本日休業だ。 (Cửa hàng đó hôm nay nghỉ bán.) 本日休業だ。 (Hôm nay nghỉ kinh doanh.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "営業",
+          "doc": "えいぎょう",
+          "nghia": "kinh doanh"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-13::苦情",
@@ -150,9 +204,15 @@
       "han_viet": "KHỔ TÌNH",
       "nghia": "sự than phiền; lời than phiền",
       "doc_marked": "く**じょう**",
-      "vi_du": "お客様から苦情が来た。 (Đã có lời than phiền từ khách hàng.)",
+      "vi_du": "お客様から苦情が来た。 (Đã có lời than phiền từ khách hàng.) 苦情を受け付けた。 (Chúng tôi đã tiếp nhận khiếu nại.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "クレーム",
+          "doc": "くれーむ",
+          "nghia": "khiếu nại"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -163,10 +223,16 @@
       "han_viet": "KHÔNG TRUNG",
       "nghia": "không trung; bầu trời; không gian",
       "doc_marked": "**くう**ち**ゅう**",
-      "vi_du": "鳥が空中を飛んでいる。 (Con chim đang bay trên không trung.)",
+      "vi_du": "鳥が空中を飛んでいる。 (Con chim đang bay trên không trung.) 空中に浮かんでいる。 (Đang lơ lửng trên không.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "地上",
+          "doc": "ちじょう",
+          "nghia": "mặt đất"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-13::原料",
@@ -176,9 +242,15 @@
       "han_viet": "NGUYÊN LIÊU",
       "nghia": "nguyên liệu; chất liệu; nguyên liệu; thành phần",
       "doc_marked": "げん**りょう**",
-      "vi_du": "この製品はどんな原料でできているか。 (Sản phẩm này được làm từ nguyên liệu gì.)",
+      "vi_du": "この製品はどんな原料でできているか。 (Sản phẩm này được làm từ nguyên liệu gì.) 原料を輸入している。 (Chúng tôi nhập khẩu nguyên liệu.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "材料",
+          "doc": "ざいりょう",
+          "nghia": "vật liệu"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -189,9 +261,15 @@
       "han_viet": "HẠN ĐỘ",
       "nghia": "điều độ; hạn độ; giới hạn; mức độ hạn chế",
       "doc_marked": "げんど",
-      "vi_du": "我慢にも限度がある。 (Nhẫn nhịn cũng có giới hạn.)",
+      "vi_du": "我慢にも限度がある。 (Nhẫn nhịn cũng có giới hạn.) 我慢にも限度がある。 (Sự chịu đựng cũng có giới hạn.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "限界",
+          "doc": "げんかい",
+          "nghia": "giới hạn"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -202,10 +280,16 @@
       "han_viet": "CỔ ĐIỂN",
       "nghia": "sách cũ; điển cố; điển tích; cổ điển",
       "doc_marked": "こてん",
-      "vi_du": "大学で古典文学を学んでいる。 (Tôi đang học văn học cổ điển ở đại học.)",
+      "vi_du": "大学で古典文学を学んでいる。 (Tôi đang học văn học cổ điển ở đại học.) 古典文学を研究している。 (Tôi đang nghiên cứu văn học cổ điển.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "現代",
+          "doc": "げんだい",
+          "nghia": "hiện đại"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-13::公正",
@@ -215,7 +299,7 @@
       "han_viet": "CÔNG CHÁNH",
       "nghia": "sự công bằng; sự công bình; sự không thiên vị; công bằng; công bình; không thiên vị",
       "doc_marked": "**こう****せい**",
-      "vi_du": "公正な審査が行われた。 (Cuộc thẩm định công bằng đã được tiến hành.)",
+      "vi_du": "公正な立場で審査した。 (Tôi đã thẩm định ở lập trường công bằng.) 公正な判断を下した。 (Đã đưa ra phán quyết công bằng.)",
       "vi_du_ruby": "",
       "dong_nghia": [
         {
@@ -234,9 +318,15 @@
       "han_viet": "TÁI TAM",
       "nghia": "dăm ba bận; ba bốn lượt; vài lần",
       "doc_marked": "さいさん",
-      "vi_du": "再三注意したが直らなかった。 (Dù đã nhắc nhở nhiều lần nhưng vẫn không sửa.)",
+      "vi_du": "再三注意したが直らなかった。 (Dù đã nhắc nhở nhiều lần nhưng vẫn không sửa.) 再三注意した。 (Tôi đã nhắc nhở nhiều lần.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "何度も",
+          "doc": "なんども",
+          "nghia": "nhiều lần"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -247,9 +337,15 @@
       "han_viet": "SẢN ĐỊA",
       "nghia": "nơi sản xuất",
       "doc_marked": "さんち",
-      "vi_du": "この野菜の産地はどこですか。 (Nơi sản xuất loại rau này ở đâu.)",
+      "vi_du": "この野菜の産地はどこですか。 (Nơi sản xuất loại rau này ở đâu.) この米の産地は新潟だ。 (Nơi sản xuất gạo này là Niigata.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "原産",
+          "doc": "げんさん",
+          "nghia": "nguồn gốc xuất xứ"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -260,9 +356,15 @@
       "han_viet": "THÌ TỐC",
       "nghia": "tốc độ tính theo giờ",
       "doc_marked": "じそく",
-      "vi_du": "車は時速60キロで走った。 (Chiếc xe đã chạy với tốc độ 60 km/giờ.)",
+      "vi_du": "車は時速60キロで走った。 (Chiếc xe đã chạy với tốc độ 60 km/giờ.) 時速百キロで走った。 (Xe đã chạy với vận tốc 100km/h.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "速度",
+          "doc": "そくど",
+          "nghia": "tốc độ"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -273,9 +375,15 @@
       "han_viet": "TỰ VỆ",
       "nghia": "sự tự vệ; tự vệ",
       "doc_marked": "じ**えい**",
-      "vi_du": "自衛のために護身術を習った。 (Tôi đã học võ tự vệ để phòng thân.)",
+      "vi_du": "自衛のために護身術を習った。 (Tôi đã học võ tự vệ để phòng thân.) 自衛のために武器を持った。 (Anh ta đã mang vũ khí để tự vệ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "防衛",
+          "doc": "ぼうえい",
+          "nghia": "phòng vệ"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -286,9 +394,15 @@
       "han_viet": "TRỌNG LƯỢNG",
       "nghia": "sức nặng; trọng lượng",
       "doc_marked": "じ**ゅう****りょう**",
-      "vi_du": "荷物の重量を計った。 (Tôi đã đo trọng lượng của hành lý.)",
+      "vi_du": "荷物の重量を計った。 (Tôi đã đo trọng lượng của hành lý.) 重量を量った。 (Tôi đã cân trọng lượng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "重さ",
+          "doc": "おもさ",
+          "nghia": "độ nặng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -299,9 +413,15 @@
       "han_viet": "XUẤT TRƯƠNG",
       "nghia": "việc đi công tác; chuyến đi kinh doanh",
       "doc_marked": "しゅっ**ちょう**",
-      "vi_du": "来週大阪へ出張する。 (Tuần sau tôi sẽ đi công tác Osaka.)",
+      "vi_du": "来週大阪へ出張する。 (Tuần sau tôi sẽ đi công tác Osaka.) 大阪に出張した。 (Tôi đã đi công tác Osaka.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "外勤",
+          "doc": "がいきん",
+          "nghia": "làm việc ngoài công ty"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -312,9 +432,15 @@
       "han_viet": "THƯ ĐẠO",
       "nghia": "thư pháp; thư đạo; thuật viết chữ đẹp",
       "doc_marked": "しょ**どう**",
-      "vi_du": "習い事として書道を始めた。 (Tôi đã bắt đầu học thư pháp như một sở thích.)",
+      "vi_du": "習い事として書道を始めた。 (Tôi đã bắt đầu học thư pháp như một sở thích.) 書道を習っている。 (Tôi đang học thư pháp.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "習字",
+          "doc": "しゅうじ",
+          "nghia": "luyện viết chữ"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -325,9 +451,15 @@
       "han_viet": "TÍNH",
       "nghia": "Họ; 姓",
       "doc_marked": "**せい**",
-      "vi_du": "結婚しても姓は変えなかった。 (Dù kết hôn tôi vẫn không đổi họ.)",
+      "vi_du": "結婚しても姓は変えなかった。 (Dù kết hôn tôi vẫn không đổi họ.) 結婚して姓が変わった。 (Sau khi kết hôn họ của tôi đã đổi.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "名字",
+          "doc": "みょうじ",
+          "nghia": "họ"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -338,9 +470,15 @@
       "han_viet": "THÀNH PHÂN",
       "nghia": "thành phần",
       "doc_marked": "**せい**ぶん",
-      "vi_du": "この薬の成分を確認した。 (Tôi đã kiểm tra thành phần của loại thuốc này.)",
+      "vi_du": "この薬の成分を確認した。 (Tôi đã kiểm tra thành phần của loại thuốc này.) 薬の成分を確認した。 (Tôi đã kiểm tra thành phần thuốc.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "要素",
+          "doc": "ようそ",
+          "nghia": "yếu tố"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -351,10 +489,16 @@
       "han_viet": "SANH TỒN",
       "nghia": "sự sống sót; sự sinh tồn",
       "doc_marked": "**せい**ぞん",
-      "vi_du": "彼らは無事に生存が確認された。 (Việc họ sống sót an toàn đã được xác nhận.)",
+      "vi_du": "彼らは無事に生存が確認された。 (Việc họ sống sót an toàn đã được xác nhận.) 生存者が救出された。 (Người sống sót đã được cứu.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "死亡",
+          "doc": "しぼう",
+          "nghia": "tử vong"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-13::先端",
@@ -364,9 +508,15 @@
       "han_viet": "TIÊN ĐOAN",
       "nghia": "先端産業:ngành mũi nhọn; 先端技術:kĩ thuật tiên tiến; mũi nhọn; điểm mút; rìa ngoài",
       "doc_marked": "せんたん",
-      "vi_du": "先端技術を使った製品だ。 (Đây là sản phẩm dùng công nghệ tiên tiến.)",
+      "vi_du": "先端技術を使った製品だ。 (Đây là sản phẩm dùng công nghệ tiên tiến.) 先端技術を導入した。 (Chúng tôi đã đưa vào công nghệ tiên tiến.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "最先端",
+          "doc": "さいせんたん",
+          "nghia": "tiên tiến nhất"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -377,9 +527,15 @@
       "han_viet": "TOÀN BÀN",
       "nghia": "tổng quát; toàn bộ; sự tổng quát; toàn bộ",
       "doc_marked": "ぜんぱん",
-      "vi_du": "業務全般を担当している。 (Tôi đang phụ trách toàn bộ công việc nói chung.)",
+      "vi_du": "業務全般を担当している。 (Tôi đang phụ trách toàn bộ công việc nói chung.) 業務全般を担当している。 (Tôi phụ trách toàn bộ nghiệp vụ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "全体",
+          "doc": "ぜんたい",
+          "nghia": "toàn thể"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -388,9 +544,9 @@
       "cautruc": null,
       "doc": "すなお",
       "han_viet": "TỐ TRỰC",
-      "nghia": "thản nhiên; không xúc động; không động lòng; dễ bảo; ngoan ngoãn; dễ sai khiến; sự ngoan ngoãn; sự dễ bảo; sự dễ sai khiến; sự thản nhiên; sự không xúc động; sự không động lòng",
+      "nghia": "ngoan ngoãn, thật thà, dễ tiếp thu",
       "doc_marked": "すなお",
-      "vi_du": "彼は素直な性格だ。 (Anh ấy có tính cách thật thà, dễ bảo.)",
+      "vi_du": "素直に謝った。 (Tôi đã thành thật xin lỗi.) 素直な子供だ。 (Đó là đứa trẻ ngoan ngoãn.)",
       "vi_du_ruby": "",
       "dong_nghia": [
         {
@@ -399,7 +555,13 @@
           "nghia": "ngoan ngoãn, dễ bảo"
         }
       ],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "頑固",
+          "doc": "がんこ",
+          "nghia": "cứng đầu"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-13::倉庫",
@@ -409,9 +571,15 @@
       "han_viet": "THƯƠNG KHỐ",
       "nghia": "thương khố; vựa; kho; nhà kho; thương; kho hàng; kho tư nhân",
       "doc_marked": "**そう**こ",
-      "vi_du": "荷物を倉庫に保管した。 (Tôi đã bảo quản hàng hóa trong kho.)",
+      "vi_du": "荷物を倉庫に保管した。 (Tôi đã bảo quản hàng hóa trong kho.) 倉庫に商品を保管した。 (Tôi đã cất hàng vào kho.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "物置",
+          "doc": "ものおき",
+          "nghia": "nhà kho"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -422,9 +590,15 @@
       "han_viet": "TƯƠNG BIẾN",
       "nghia": "như bình thường; như mọi khi",
       "doc_marked": "あいかわらず",
-      "vi_du": "彼は相変わらず元気だ。 (Anh ấy vẫn khỏe mạnh như thường lệ.)",
+      "vi_du": "彼は相変わらず元気だ。 (Anh ấy vẫn khỏe mạnh như thường lệ.) 相変わらず忙しい。 (Tôi vẫn bận rộn như thường lệ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "いつも通り",
+          "doc": "いつもどおり",
+          "nghia": "như mọi khi"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -435,9 +609,15 @@
       "han_viet": "THỂ HỆ",
       "nghia": "hệ thống; cấu tạo",
       "doc_marked": "たい**けい**",
-      "vi_du": "新しい教育体系を導入した。 (Chúng tôi đã áp dụng hệ thống giáo dục mới.)",
+      "vi_du": "新しい教育体系を導入した。 (Chúng tôi đã áp dụng hệ thống giáo dục mới.) 理論を体系化した。 (Tôi đã hệ thống hóa lý thuyết.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "システム",
+          "doc": "しすてむ",
+          "nghia": "hệ thống"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -448,9 +628,15 @@
       "han_viet": "THỂ THAO",
       "nghia": "môn thể dục; bài tập thể dục; thể dục; bài tập thể dục; tập thể dục",
       "doc_marked": "たい**そう**",
-      "vi_du": "朝、ラジオ体操をしている。 (Buổi sáng tôi tập thể dục theo đài.)",
+      "vi_du": "朝、ラジオ体操をしている。 (Buổi sáng tôi tập thể dục theo đài.) 毎朝体操をしている。 (Mỗi sáng tôi đều tập thể dục.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "運動",
+          "doc": "うんどう",
+          "nghia": "vận động"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -459,11 +645,17 @@
       "cautruc": null,
       "doc": "だいく",
       "han_viet": "ĐẠI CÔNG",
-      "nghia": "người xây dựng và sửa chữa các công trình kiến trúc bằng gỗ",
+      "nghia": "thợ mộc",
       "doc_marked": "だいく",
-      "vi_du": "大工が家を建てている。 (Người thợ mộc đang xây nhà.)",
+      "vi_du": "大工が家を建てている。 (Thợ mộc đang xây nhà.) 大工に修理を頼んだ。 (Tôi đã nhờ thợ mộc sửa chữa.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "職人",
+          "doc": "しょくにん",
+          "nghia": "thợ thủ công"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -474,9 +666,15 @@
       "han_viet": "THÔNG TRI",
       "nghia": "sự thông báo; sự thông tri",
       "doc_marked": "**つう**ち",
-      "vi_du": "結果の通知が届いた。 (Thông báo kết quả đã đến.)",
+      "vi_du": "結果の通知が届いた。 (Thông báo kết quả đã đến.) 合格通知が届いた。 (Thông báo trúng tuyển đã đến.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "知らせ",
+          "doc": "しらせ",
+          "nghia": "tin báo"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -487,9 +685,15 @@
       "han_viet": "THÔNG DỊCH",
       "nghia": "việc phiên dịch; người phiên dịch; thông dịch viên; phiên dịch viên",
       "doc_marked": "**つう**やく",
-      "vi_du": "会議で通訳をお願いした。 (Tôi đã nhờ phiên dịch trong cuộc họp.)",
+      "vi_du": "会議で通訳をお願いした。 (Tôi đã nhờ phiên dịch trong cuộc họp.) 会議で通訳をした。 (Tôi đã phiên dịch trong cuộc họp.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "翻訳",
+          "doc": "ほんやく",
+          "nghia": "biên dịch"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -500,9 +704,15 @@
       "han_viet": "ĐẶC SẮC",
       "nghia": "đặc điểm; ưu điểm nổi bật; đặc sắc",
       "doc_marked": "とくしょく",
-      "vi_du": "この地方の特色ある料理を食べた。 (Tôi đã ăn món ăn mang đặc sắc vùng này.)",
+      "vi_du": "この地方の特色ある料理を食べた。 (Tôi đã ăn món ăn mang đặc sắc vùng này.) この学校の特色を説明した。 (Tôi đã giải thích đặc sắc của trường này.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "特徴",
+          "doc": "とくちょう",
+          "nghia": "đặc trưng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -513,7 +723,7 @@
       "han_viet": "MÂU THUẪN",
       "nghia": "mâu thuẫn; sự mâu thuẫn; sự trái ngược",
       "doc_marked": "むじゅん",
-      "vi_du": "彼の話には矛盾がある。 (Câu chuyện của anh ấy có mâu thuẫn.)",
+      "vi_du": "彼の話には矛盾がある。 (Câu chuyện của anh ấy có mâu thuẫn.) 話に矛盾がある。 (Câu chuyện có mâu thuẫn.)",
       "vi_du_ruby": "",
       "dong_nghia": [
         {
@@ -532,9 +742,15 @@
       "han_viet": "DIỆN TIẾP",
       "nghia": "sự phỏng vấn",
       "doc_marked": "めんせつ",
-      "vi_du": "明日、就職の面接がある。 (Ngày mai tôi có buổi phỏng vấn xin việc.)",
+      "vi_du": "明日、就職の面接がある。 (Ngày mai tôi có buổi phỏng vấn xin việc.) 面接を受けた。 (Tôi đã đi phỏng vấn.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "インタビュー",
+          "doc": "いんたびゅー",
+          "nghia": "phỏng vấn"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -545,9 +761,15 @@
       "han_viet": "MỘC TÀI",
       "nghia": "vật liệu gỗ; mộc; gỗ; gỗ tấm; gỗ cây",
       "doc_marked": "もくざい",
-      "vi_du": "木材を使って机を作った。 (Tôi đã dùng gỗ để làm bàn.)",
+      "vi_du": "木材を使って机を作った。 (Tôi đã dùng gỗ để làm bàn.) 木材で家具を作った。 (Tôi đã làm đồ nội thất bằng gỗ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "材木",
+          "doc": "ざいもく",
+          "nghia": "gỗ xây dựng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -558,9 +780,15 @@
       "han_viet": "DỊCH GIẢ",
       "nghia": "diễn viên",
       "doc_marked": "やくしゃ",
-      "vi_du": "彼は舞台役者として有名だ。 (Anh ấy nổi tiếng là diễn viên sân khấu.)",
+      "vi_du": "彼は舞台役者として有名だ。 (Anh ấy nổi tiếng là diễn viên sân khấu.) 彼は有名な役者だ。 (Anh ấy là diễn viên nổi tiếng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "俳優",
+          "doc": "はいゆう",
+          "nghia": "diễn viên"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -571,9 +799,15 @@
       "han_viet": "HỮU VÔ",
       "nghia": "tồn tại hay không tồn tại",
       "doc_marked": "うむ",
-      "vi_du": "参加の有無を教えてください。 (Xin cho biết có tham gia hay không.)",
+      "vi_du": "参加の有無を教えてください。 (Xin cho biết có tham gia hay không.) 経験の有無を尋ねた。 (Tôi đã hỏi có kinh nghiệm hay không.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "存否",
+          "doc": "そんぴ",
+          "nghia": "có hay không"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -584,7 +818,7 @@
       "han_viet": "HỮU LIÊU",
       "nghia": "sự phải trả chi phí",
       "doc_marked": "**ゆう****りょう**",
-      "vi_du": "この駐車場は有料だ。 (Bãi đỗ xe này có phí.)",
+      "vi_du": "この駐車場は有料だ。 (Bãi đỗ xe này có phí.) 駐車場は有料だ。 (Bãi đỗ xe có thu phí.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
       "trai_nghia": [
@@ -603,9 +837,15 @@
       "han_viet": "ẤU NHI",
       "nghia": "trẻ từ 1 tuổi đến khi bước vào trường tiểu học; trẻ em",
       "doc_marked": "**よう**じ",
-      "vi_du": "幼児向けの絵本を選んだ。 (Tôi đã chọn sách tranh dành cho trẻ nhỏ.)",
+      "vi_du": "幼児向けの絵本を選んだ。 (Tôi đã chọn sách tranh dành cho trẻ nhỏ.) 幼児向けの本を買った。 (Tôi đã mua sách dành cho trẻ nhỏ.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "赤ちゃん",
+          "doc": "あかちゃん",
+          "nghia": "em bé"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -616,9 +856,15 @@
       "han_viet": "ẤU TRĨ VIÊN",
       "nghia": "mẫu giáo; nhà trẻ; vườn trẻ; trường mẫu giáo",
       "doc_marked": "**よう**ちえん",
-      "vi_du": "娘は幼稚園に通っている。 (Con gái tôi đang học mẫu giáo.)",
+      "vi_du": "娘は幼稚園に通っている。 (Con gái tôi đang học mẫu giáo.) 子供を幼稚園に送った。 (Tôi đã đưa con đến trường mẫu giáo.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "保育園",
+          "doc": "ほいくえん",
+          "nghia": "nhà trẻ"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -629,9 +875,15 @@
       "han_viet": "DUNG KHÍ",
       "nghia": "đồ đựng; hộp chứa",
       "doc_marked": "**よう**き",
-      "vi_du": "食品を容器に入れて保存した。 (Tôi đã cho thực phẩm vào hộp đựng để bảo quản.)",
+      "vi_du": "食品を容器に入れて保存した。 (Tôi đã cho thực phẩm vào hộp đựng để bảo quản.) 容器に食品を入れた。 (Tôi đã cho thực phẩm vào hộp đựng.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "入れ物",
+          "doc": "いれもの",
+          "nghia": "đồ đựng"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -642,9 +894,15 @@
       "han_viet": "DỤNG NGỮ",
       "nghia": "thuật ngữ",
       "doc_marked": "**よう**ご",
-      "vi_du": "専門用語が多くて難しい。 (Nhiều thuật ngữ chuyên môn nên khó hiểu.)",
+      "vi_du": "専門用語が多くて難しい。 (Nhiều thuật ngữ chuyên môn nên khó hiểu.) 専門用語が多くて難しい。 (Nhiều thuật ngữ chuyên môn nên khó.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "言葉",
+          "doc": "ことば",
+          "nghia": "từ ngữ"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -655,9 +913,15 @@
       "han_viet": "LIÊU",
       "nghia": "ký túc xá; ký túc sinh viên; nhà ở của công nhân",
       "doc_marked": "**りょう**",
-      "vi_du": "大学の寮に住んでいる。 (Tôi đang sống ở ký túc xá đại học.)",
+      "vi_du": "大学の寮に住んでいる。 (Tôi đang sống ở ký túc xá đại học.) 会社の寮に住んでいる。 (Tôi đang ở ký túc xá công ty.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "宿舎",
+          "doc": "しゅくしゃ",
+          "nghia": "nhà ở tập thể"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -668,10 +932,16 @@
       "han_viet": "QUẢNG",
       "nghia": "kéo; bạnh ra; mở rộng ra; giãn rộng ra; làm cho rộng ra; xoè ra; trải ra; vươn; bành; chia; mở rộng",
       "doc_marked": "ひろげる",
-      "vi_du": "地図を机の上に広げた。 (Tôi đã trải bản đồ ra trên bàn.)",
+      "vi_du": "地図を机の上に広げた。 (Tôi đã trải bản đồ ra trên bàn.) 地図を広げて見た。 (Tôi đã mở bản đồ ra xem.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "たたむ",
+          "doc": "たたむ",
+          "nghia": "gấp lại"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-13::なる",
@@ -679,11 +949,17 @@
       "cautruc": null,
       "doc": "なる",
       "han_viet": "",
-      "nghia": "(文語 助動詞 ‘なり’の連体形) …thì; …là; …ở; (gắn với danh từ riêng) …(là)",
+      "nghia": "trở thành, trở nên",
       "doc_marked": "なる",
-      "vi_du": "彼は医者になるつもりだ。 (Anh ấy dự định sẽ trở thành bác sĩ.)",
+      "vi_du": "医者になりたい。 (Tôi muốn trở thành bác sĩ.) 春になると桜が咲く。 (Cứ đến mùa xuân là hoa anh đào nở.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "変わる",
+          "doc": "かわる",
+          "nghia": "thay đổi"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -694,10 +970,16 @@
       "han_viet": "QUÁ THẤT",
       "nghia": "điều sai lầm; lỗi; sự rủi ro",
       "doc_marked": "かしつ",
-      "vi_du": "彼の過失で事故が起きた。 (Tai nạn đã xảy ra do lỗi của anh ấy.)",
+      "vi_du": "彼の過失で事故が起きた。 (Tai nạn đã xảy ra do lỗi của anh ấy.) 過失を認めた。 (Tôi đã thừa nhận sai sót.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
-      "trai_nghia": []
+      "trai_nghia": [
+        {
+          "kanji": "故意",
+          "doc": "こい",
+          "nghia": "cố ý"
+        }
+      ]
     },
     {
       "_id": "n2-vocab-13::過剰",
@@ -707,7 +989,7 @@
       "han_viet": "QUÁ THẶNG",
       "nghia": "sự vượt quá; sự dư thừa; sự dồi dào; vượt quá; quá; thừa",
       "doc_marked": "か**じょう**",
-      "vi_du": "過剰な期待はしない方がいい。 (Không nên kỳ vọng quá mức.)",
+      "vi_du": "過剰な期待はしない方がいい。 (Không nên kỳ vọng quá mức.) 過剰な期待は禁物だ。 (Kỳ vọng quá mức là điều tối kỵ.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
       "trai_nghia": [
@@ -726,9 +1008,15 @@
       "han_viet": "HỌC THUẬT",
       "nghia": "học thuật; khoa học nghệ thuật; lý thuyết",
       "doc_marked": "がくじゅつ",
-      "vi_du": "学術的な研究を行っている。 (Tôi đang tiến hành nghiên cứu mang tính học thuật.)",
+      "vi_du": "学術的な研究を行っている。 (Tôi đang tiến hành nghiên cứu mang tính học thuật.) 学術論文を発表した。 (Tôi đã công bố luận văn học thuật.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "学問",
+          "doc": "がくもん",
+          "nghia": "học vấn"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -739,9 +1027,15 @@
       "han_viet": "HOẠT LỰC",
       "nghia": "sức sống; sinh khí; sự tồn tại lâu dài",
       "doc_marked": "かつりょく",
-      "vi_du": "運動は体に活力を与える。 (Tập thể dục mang lại sức sống cho cơ thể.)",
+      "vi_du": "運動は体に活力を与える。 (Tập thể dục mang lại sức sống cho cơ thể.) 活力に満ちている。 (Tràn đầy sức sống.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "元気",
+          "doc": "げんき",
+          "nghia": "khỏe khoắn"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -752,7 +1046,7 @@
       "han_viet": "CƯỜNG DẪN",
       "nghia": "cưỡng bức; bắt buộc; bằng vũ lực; sử dụng quyền lực; cậy quyền cậy thế; cậy quyền; gia trưởng; ép buộc; sự cưỡng bức; sự bắt buộc; sự ép làm bằng vũ lực",
       "doc_marked": "**ごう**いん",
-      "vi_du": "彼は強引に計画を進めた。 (Anh ấy đã cưỡng ép tiến hành kế hoạch.)",
+      "vi_du": "彼は強引に計画を進めた。 (Anh ấy đã cưỡng ép tiến hành kế hoạch.) 強引に押し切った。 (Anh ta đã cưỡng ép thông qua.)",
       "vi_du_ruby": "",
       "dong_nghia": [
         {
@@ -771,9 +1065,15 @@
       "han_viet": "GIÁO DƯỠNG",
       "nghia": "sự nuôi dưỡng; sự giáo dục; sự giáo dưỡng",
       "doc_marked": "**きょう****よう**",
-      "vi_du": "彼は幅広い教養を持っている。 (Anh ấy có kiến thức văn hóa rộng.)",
+      "vi_du": "彼は幅広い教養を持っている。 (Anh ấy có kiến thức văn hóa rộng.) 教養のある人だ。 (Đó là người có học thức.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "知識",
+          "doc": "ちしき",
+          "nghia": "kiến thức"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -784,7 +1084,7 @@
       "han_viet": "KIẾN HỌC",
       "nghia": "tham quan với mục đích học tập; tham quan",
       "doc_marked": "けんがく",
-      "vi_du": "工場を見学した。 (Tôi đã đi tham quan nhà máy.)",
+      "vi_du": "工場を見学した。 (Tôi đã đi tham quan nhà máy.) 工場を見学した。 (Tôi đã tham quan nhà máy.)",
       "vi_du_ruby": "",
       "dong_nghia": [
         {
@@ -803,9 +1103,15 @@
       "han_viet": "KIẾN XUẤT",
       "nghia": "đầu đề",
       "doc_marked": "みだし",
-      "vi_du": "新聞の見出しに注目した。 (Tôi đã chú ý đến tiêu đề bài báo.)",
+      "vi_du": "新聞の見出しに注目した。 (Tôi đã chú ý đến tiêu đề bài báo.) 新聞の見出しを読んだ。 (Tôi đã đọc tiêu đề báo.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "タイトル",
+          "doc": "たいとる",
+          "nghia": "tiêu đề"
+        }
+      ],
       "trai_nghia": []
     },
     {
@@ -814,9 +1120,9 @@
       "cautruc": null,
       "doc": "みおくる",
       "han_viet": "KIẾN TỐNG",
-      "nghia": "chờ đợi; mong đợi; tiễn đưa; tiễn; đưa tiễn; nhìn theo; theo dõi; tiễn chân; tiễn biệt",
+      "nghia": "tiễn đưa; (nghĩa khác) hoãn lại, bỏ qua cơ hội",
       "doc_marked": "みおくる",
-      "vi_du": "空港で友人を見送った。 (Tôi đã tiễn bạn tại sân bay.)",
+      "vi_du": "駅まで友人を見送った。 (Tôi đã tiễn bạn ra ga.) 今回の採用は見送った。 (Chúng tôi đã hoãn việc tuyển dụng lần này.)",
       "vi_du_ruby": "",
       "dong_nghia": [],
       "trai_nghia": [
@@ -835,9 +1141,15 @@
       "han_viet": "KIẾN VŨ",
       "nghia": "đi thăm người ốm",
       "doc_marked": "みまう",
-      "vi_du": "入院した友達を見舞った。 (Tôi đã đi thăm người bạn nhập viện.)",
+      "vi_du": "入院した友達を見舞った。 (Tôi đã đi thăm người bạn nhập viện.) 入院中の友人を見舞った。 (Tôi đã đi thăm người bạn đang nằm viện.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "訪問する",
+          "doc": "ほうもんする",
+          "nghia": "thăm viếng"
+        }
+      ],
       "trai_nghia": []
     }
   ]
