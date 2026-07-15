@@ -263,7 +263,18 @@
       "doc_marked": "**こう**りつ",
       "vi_du": "作業の効率を上げた。 (Chúng tôi đã nâng cao hiệu suất công việc.)",
       "vi_du_ruby": "",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "能率",
+          "doc": "のうりつ",
+          "nghia": "năng suất, hiệu quả làm việc"
+        },
+        {
+          "kanji": "生産性",
+          "doc": "せいさんせい",
+          "nghia": "năng suất, hiệu suất sản xuất"
+        }
+      ],
       "trai_nghia": []
     },
     {

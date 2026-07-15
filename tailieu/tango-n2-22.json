@@ -199,7 +199,18 @@
       "nghia": "Một cách hiệu quả",
       "vi_du": "時間を上手に使って、効率的に勉強する｡ (Sử dụng thời gian khéo léo để học một cách hiệu quả.)",
       "vi_du_ruby": "時間を上手に使って、効率的に勉強する｡",
-      "dong_nghia": [],
+      "dong_nghia": [
+        {
+          "kanji": "能率的な",
+          "doc": "のうりつてきな",
+          "nghia": "hiệu quả, năng suất cao"
+        },
+        {
+          "kanji": "生産性",
+          "doc": "せいさんせい",
+          "nghia": "năng suất, hiệu suất sản xuất"
+        }
+      ],
       "trai_nghia": []
     },
     {

@@ -999,6 +999,11 @@
           "kanji": "効率",
           "doc": "こうりつ",
           "nghia": "hiệu suất"
+        },
+        {
+          "kanji": "生産性",
+          "doc": "せいさんせい",
+          "nghia": "năng suất, hiệu suất sản xuất"
         }
       ],
       "trai_nghia": []
