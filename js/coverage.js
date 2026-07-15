@@ -27,6 +27,7 @@ const Coverage = (() => {
     n2vocab: "JLPT N2",
     n1vocab: "JLPT N1",
     n3vocab: "JLPT N3",
+    business: "Business 会話",
     khac: "Tài liệu khác",
   };
   const SERIES_COLORS = {
@@ -35,10 +36,11 @@ const Coverage = (() => {
     n2vocab: "#a98bff",  // tím
     n1vocab: "#ff9f43",  // cam  (KHÔNG dùng tím nữa: 3 sắc tím cạnh nhau nhìn không phân biệt được)
     n3vocab: "#4dabf7",  // xanh dương
+    business: "#f0932b", // cam đất
     khac: "#94a3b8",     // xám
   };
-  const LEVEL_COLORS = { N1: "#ff9f43", N2: "#a98bff", N3: "#4dabf7", KHAC: "#94a3b8" };
-  const ORDER = ["mimi", "tango", "n2vocab", "n1vocab", "n3vocab", "khac"];
+  const LEVEL_COLORS = { N1: "#ff9f43", N2: "#a98bff", N3: "#4dabf7", BUSINESS: "#f0932b", KHAC: "#94a3b8" };
+  const ORDER = ["mimi", "tango", "n2vocab", "n1vocab", "n3vocab", "business", "khac"];
 
   let state = {
     scope: "series", hideSmall: true, sets: [], selection: null,

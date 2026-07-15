@@ -428,7 +428,7 @@ App.levelPickerFilter = App.levelPickerFilter || null;
 App.levelPickerSeries = null;
 
 function initLevelPickerPage() {
-  const levels = ["N1", "N2", "N3", "N4", "N5"].filter((lv) =>
+  const levels = ["N1", "N2", "N3", "BUSINESS", "N4", "N5"].filter((lv) =>
     App.decks.some((d) => d.type === "TUVUNG" && d.level === lv)
   );
   if (!App.levelPickerFilter || !levels.includes(App.levelPickerFilter)) {
@@ -477,10 +477,10 @@ function renderLevelPickerSeriesGrid() {
     if (!bySeries[key]) bySeries[key] = [];
     bySeries[key].push(d);
   });
-  const SERIES_LABELS = { mimi: "Mimikara oboeru", tango: "Tango N2", n2vocab: "JLPT N2", n1vocab: "JLPT N1", n3vocab: "JLPT N3", khac: "Khác" };
-  const SERIES_COLORS = { mimi: "#48c98c", tango: "#ff6b6b", n2vocab: "#a98bff", n1vocab: "#a98bff", n3vocab: "#a98bff", khac: "var(--text-2)" };
-  // Thứ tự cố định hiển thị: Mimi -> Tango -> JLPT N2 (import N2/N1) -> Khác
-  const SERIES_ORDER = ["mimi", "tango", "n2vocab", "n1vocab", "n3vocab", "khac"];
+  const SERIES_LABELS = { mimi: "Mimikara oboeru", tango: "Tango N2", n2vocab: "JLPT N2", n1vocab: "JLPT N1", n3vocab: "JLPT N3", business: "Business 会話", khac: "Khác" };
+  const SERIES_COLORS = { mimi: "#48c98c", tango: "#ff6b6b", n2vocab: "#a98bff", n1vocab: "#a98bff", n3vocab: "#a98bff", business: "#f0932b", khac: "var(--text-2)" };
+  // Thứ tự cố định hiển thị: Mimi -> Tango -> JLPT N2 (import N2/N1) -> Business -> Khác
+  const SERIES_ORDER = ["mimi", "tango", "n2vocab", "n1vocab", "n3vocab", "business", "khac"];
 
   const seriesKeys = Object.keys(bySeries).sort((a, b) => SERIES_ORDER.indexOf(a) - SERIES_ORDER.indexOf(b));
   if (!seriesKeys.length) {

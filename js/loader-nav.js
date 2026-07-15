@@ -193,7 +193,8 @@ function populateDeckPicker() {
   const mimiDecks = App.decks.filter((d) => d.series === "mimi");
   const tangoDecks = App.decks.filter((d) => d.series === "tango");
   const jlptN2Decks = App.decks.filter((d) => ["n2vocab", "n1vocab", "n3vocab"].includes(d.series));
-  const otherDecks = App.decks.filter((d) => !["mimi", "tango", "n2vocab", "n1vocab", "n3vocab"].includes(d.series));
+  const businessDecks = App.decks.filter((d) => d.series === "business");
+  const otherDecks = App.decks.filter((d) => !["mimi", "tango", "n2vocab", "n1vocab", "n3vocab", "business"].includes(d.series));
 
   const renderGroup = (label, decks) => {
     if (decks.length === 0) return;
@@ -213,6 +214,7 @@ function populateDeckPicker() {
   renderGroup("📘 Mimikara oboeru", mimiDecks);
   renderGroup("📕 Tango N2", tangoDecks);
   renderGroup("📗 JLPT (N1-N3)", jlptN2Decks);
+  renderGroup("💼 Business 会話", businessDecks);
   renderGroup("Tài liệu khác", otherDecks);
 
   picker.value = App.currentDeckId;
