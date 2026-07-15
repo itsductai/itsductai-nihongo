@@ -1059,11 +1059,19 @@
           <div class="cov-tabs" id="covScopeTabs">
             <button class="cov-tab active" data-scope="series">Theo bộ giáo trình</button>
             <button class="cov-tab" data-scope="level">Theo cấp độ (N1/N2/N3)</button>
+            <button class="cov-tab" data-scope="levelSeries">Bộ trong từng cấp</button>
           </div>
           <label class="cov-legend-toggle">
             <input type="checkbox" id="covHideSmall" checked>
             <span>Ẩn bộ nhỏ (&lt; 50 từ)</span>
           </label>
+        </div>
+
+        <div class="cov-level-pick" id="covLevelPick" style="display:none">
+          <span class="cov-level-lbl">Cấp độ:</span>
+          <button class="cov-level-btn active" data-level="N2">N2</button>
+          <button class="cov-level-btn" data-level="N1">N1</button>
+          <button class="cov-level-btn" data-level="N3">N3</button>
         </div>
 
         <div class="cov-wrap">
@@ -1079,6 +1087,26 @@
         <div class="cov-matrix-wrap">
           <div class="cov-matrix-title">Ma trận từ trùng nhau <span class="stats-section-hint">(bấm 1 ô để xem danh sách từ trùng)</span></div>
           <div class="cov-matrix-scroll"><table class="cov-matrix" id="covMatrix"></table></div>
+        </div>
+
+        <!-- ---- SƠ ĐỒ TÙY CHỌN: chọn tối đa 3 bộ, vẽ CHÍNH XÁC ---- -->
+        <div class="cov-custom">
+          <div class="cov-matrix-title">🎯 Sơ đồ tùy chọn — so sánh 3 bộ (vẽ chính xác)
+            <span class="stats-section-hint">(hình tổng quan phía trên là xấp xỉ vì có 6 vòng; chọn đúng 2–3 bộ ở đây thì phần chồng lấn hiện đúng số liệu)</span>
+          </div>
+          <div class="cov-custom-picks">
+            <select class="cov-pick" id="covPick0"></select>
+            <select class="cov-pick" id="covPick1"></select>
+            <select class="cov-pick" id="covPick2"></select>
+          </div>
+          <div class="cov-wrap">
+            <svg id="covCustomVenn" class="cov-venn" viewBox="0 0 560 420" preserveAspectRatio="xMidYMid meet"></svg>
+            <div class="cov-side">
+              <div class="cov-detail" id="covCustomDetail">
+                <div class="cov-detail-empty">Chọn các bộ rồi bấm vào từng vùng để xem danh sách từ.</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -1226,7 +1254,7 @@
      README.md để biết module nào phụ trách phần nào. -->
 <script src="js/core.js?v=19"></script>
 <script src="js/scoring.js?v=1"></script>
-<script src="js/coverage.js?v=1"></script>
+<script src="js/coverage.js?v=2"></script>
 <script src="js/stats-weakness.js?v=8"></script>
 <script src="js/dashboard.js?v=15"></script>
 <script src="js/game.js?v=7"></script>
