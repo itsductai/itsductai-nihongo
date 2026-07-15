@@ -40,7 +40,36 @@ const Coverage = (() => {
   const LEVEL_COLORS = { N1: "#ff9f43", N2: "#a98bff", N3: "#4dabf7", KHAC: "#94a3b8" };
   const ORDER = ["mimi", "tango", "n2vocab", "n1vocab", "n3vocab", "khac"];
 
-  let state = { scope: "series", hideSmall: true, sets: [], selection: null };
+  let state = {
+    scope: "series", hideSmall: true, sets: [], selection: null,
+    levelFilter: "N2",                        // dùng cho tab "Bộ trong từng cấp"
+    custom: { keys: ["mimi", "tango", "n2vocab"], selection: null }, // sơ đồ tùy chọn ≤3 bộ
+  };
+
+  // Danh sách bộ có thể chọn ở sơ đồ tùy chọn (đủ 6 bộ theo giáo trình)
+  function allSeriesOptions() {
+    const seen = new Map(); // key -> size
+    (App.decks || []).forEach((deck) => {
+      if (deck.type !== "TUVUNG") return;
+      const key = deck.series || "khac";
+      const set = seen.get(key) || new Set();
+      (deck.words || []).forEach((w) => { const k = (w.kanji || "").trim(); if (k) set.add(k); });
+      seen.set(key, set);
+    });
+    return ORDER.filter((k) => seen.has(k)).map((k) => ({
+      key: k, label: SERIES_LABELS[k] || k, color: SERIES_COLORS[k] || "#94a3b8", size: seen.get(k).size,
+    }));
+  }
+  // Lấy Set(kanji) của 1 bộ theo series-key
+  function seriesWordSet(key) {
+    const out = new Set();
+    (App.decks || []).forEach((deck) => {
+      if (deck.type !== "TUVUNG") return;
+      if ((deck.series || "khac") !== key) return;
+      (deck.words || []).forEach((w) => { const k = (w.kanji || "").trim(); if (k) out.add(k); });
+    });
+    return out;
+  }
 
   /* ---------- 1. GOM DỮ LIỆU ----------
      Dùng App.decks (đã nạp từ manifest-thin) — manifest-thin CÓ sẵn `kanji`,
@@ -49,10 +78,13 @@ const Coverage = (() => {
     const map = new Map(); // key -> Set(kanji)
     (App.decks || []).forEach((deck) => {
       if (deck.type !== "TUVUNG") return;
+      // tab "Bộ trong từng cấp": chỉ lấy các bộ thuộc cấp đang chọn, gom theo series
+      if (scope === "levelSeries" && (deck.level || "KHAC") !== state.levelFilter) return;
       let key;
       if (scope === "level") {
         key = deck.level || "KHAC";
       } else {
+        // "series" và "levelSeries" đều gom theo series
         key = deck.series || "khac";
       }
       if (!map.has(key)) map.set(key, new Set());
@@ -75,7 +107,7 @@ const Coverage = (() => {
 
     // thứ tự cố định (Mimi -> Tango -> JLPT -> khác), bộ to vẽ trước (nằm dưới)
     sets.sort((a, b) => {
-      if (scope === "series") {
+      if (scope === "series" || scope === "levelSeries") {
         const d = ORDER.indexOf(a.key) - ORDER.indexOf(b.key);
         if (d !== 0) return d;
       }
@@ -179,6 +211,10 @@ const Coverage = (() => {
 
   /* ---------- 4. VẼ ---------- */
   function render() {
+    // hiện bộ chọn cấp độ chỉ khi ở tab "Bộ trong từng cấp"
+    const lp = document.getElementById("covLevelPick");
+    if (lp) lp.style.display = state.scope === "levelSeries" ? "flex" : "none";
+
     const svg = document.getElementById("covVenn");
     if (!svg) return;
     const W = 640, H = 460;
@@ -378,6 +414,209 @@ const Coverage = (() => {
       ${wordChips(onlyB, 200)}`;
   }
 
+  /* =======================================================================
+     SƠ ĐỒ TÙY CHỌN — chọn tối đa 3 bộ để so sánh CHÍNH XÁC
+     -----------------------------------------------------------------------
+     Vì sao phần này vẽ đúng còn biểu đồ tổng quan phía trên chỉ xấp xỉ:
+       - Với 6 vòng, không tồn tại cách xếp hình tròn thoả MỌI vùng giao
+         (đó là lý do Tango N2 và JLPT N1 nhìn như không chạm nhau dù bảng
+         vẫn có số trùng — lực kéo của các cặp khác đã "ép" chúng ra xa).
+       - Với ĐÚNG 2–3 bộ thì số ràng buộc ít, ta dựng được TAM GIÁC khoảng
+         cách tâm khớp từng cặp => phần chồng lấn hiện đúng như số liệu.
+     ===================================================================== */
+
+  // Dựng vị trí tâm cho 2–3 vòng từ khoảng cách tâm mong muốn của từng cặp.
+  function layoutCustom(nodes, W, H) {
+    const n = nodes.length;
+    if (n === 0) return;
+    if (n === 1) { nodes[0].x = W / 2; nodes[0].y = H / 2; return; }
+
+    const dist = (a, b) => {
+      const shared = intersect(a.words, b.words).size;
+      const rSmall = Math.min(a.r, b.r);
+      const sizeSmall = Math.min(a.size, b.size);
+      const frac = sizeSmall ? shared / sizeSmall : 0;
+      return distanceForOverlap(a.r, b.r, frac * Math.PI * rSmall * rSmall);
+    };
+
+    if (n === 2) {
+      const d = dist(nodes[0], nodes[1]);
+      nodes[0].x = W / 2 - d / 2; nodes[0].y = H / 2;
+      nodes[1].x = W / 2 + d / 2; nodes[1].y = H / 2;
+    } else {
+      // tam giác: cạnh AB, AC, BC đã biết -> toạ độ C
+      const dAB = dist(nodes[0], nodes[1]);
+      const dAC = dist(nodes[0], nodes[2]);
+      const dBC = dist(nodes[1], nodes[2]);
+      let ax = 0, ay = 0, bx = dAB, by = 0;
+      let cx = dAB ? (dAC * dAC - dBC * dBC + dAB * dAB) / (2 * dAB) : 0;
+      let cy2 = dAC * dAC - cx * cx;
+      let cy = cy2 > 0 ? Math.sqrt(cy2) : 0; // nếu bất đẳng thức tam giác hỏng -> thẳng hàng
+      nodes[0].x = ax; nodes[0].y = ay;
+      nodes[1].x = bx; nodes[1].y = by;
+      nodes[2].x = cx; nodes[2].y = cy;
+    }
+    // căn giữa + co cho vừa khung
+    const xs = nodes.map((d) => d.x), ys = nodes.map((d) => d.y);
+    const minX = Math.min(...nodes.map((d) => d.x - d.r)), maxX = Math.max(...nodes.map((d) => d.x + d.r));
+    const minY = Math.min(...nodes.map((d) => d.y - d.r)), maxY = Math.max(...nodes.map((d) => d.y + d.r));
+    const bw = maxX - minX || 1, bh = maxY - minY || 1;
+    const pad = 26;
+    const scale = Math.min((W - pad * 2) / bw, (H - pad * 2) / bh, 1.6);
+    const gx = (minX + maxX) / 2, gy = (minY + maxY) / 2;
+    nodes.forEach((d) => {
+      d.x = W / 2 + (d.x - gx) * scale;
+      d.y = H / 2 + (d.y - gy) * scale;
+      d.r = d.r * scale;
+    });
+  }
+
+  // Tính đủ các vùng (Euler) cho ≤3 tập, trả về mảng {id,label,count,words,anchor}
+  function customRegions(nodes) {
+    const has = (nd, w) => nd.words.has(w);
+    const all = new Set(); nodes.forEach((nd) => nd.words.forEach((w) => all.add(w)));
+    const regions = [];
+    const centroid = (arr) => ({
+      x: arr.reduce((s, i) => s + nodes[i].x, 0) / arr.length,
+      y: arr.reduce((s, i) => s + nodes[i].y, 0) / arr.length,
+    });
+    const G = centroid(nodes.map((_, i) => i));
+    const push = (idx, member) => {
+      const words = new Set();
+      all.forEach((w) => {
+        const inAll = idx.every((i) => has(nodes[i], w));
+        const inNone = nodes.every((nd, k) => idx.includes(k) ? true : !has(nd, w));
+        if (inAll && inNone) words.add(w);
+      });
+      if (!words.size) return;
+      let anchor;
+      if (idx.length === 1) {
+        const c = nodes[idx[0]];
+        anchor = { x: c.x + (c.x - G.x) * 0.55, y: c.y + (c.y - G.y) * 0.55 };
+      } else if (idx.length === nodes.length) {
+        anchor = { x: G.x, y: G.y };
+      } else {
+        const m = centroid(idx);
+        // đẩy nhẹ ra xa các vòng KHÔNG thuộc vùng này để tách khỏi vùng giao 3
+        const out = nodes.map((_, i) => i).filter((i) => !idx.includes(i));
+        const O = out.length ? centroid(out) : G;
+        anchor = { x: m.x + (m.x - O.x) * 0.35, y: m.y + (m.y - O.y) * 0.35 };
+      }
+      regions.push({ id: idx.join("-"), idx, label: member, count: words.size, words, anchor });
+    };
+    const N = nodes.length;
+    const names = nodes.map((n) => n.label);
+    if (N >= 1) push([0], `Chỉ ${names[0]}`);
+    if (N >= 2) { push([1], `Chỉ ${names[1]}`); push([0, 1], `${names[0]} ∩ ${names[1]}`); }
+    if (N >= 3) {
+      push([2], `Chỉ ${names[2]}`);
+      push([0, 2], `${names[0]} ∩ ${names[2]}`);
+      push([1, 2], `${names[1]} ∩ ${names[2]}`);
+      push([0, 1, 2], `Cả 3 bộ`);
+    }
+    return regions;
+  }
+
+  function renderCustom() {
+    const svg = document.getElementById("covCustomVenn");
+    if (!svg) return;
+    const opts = allSeriesOptions();
+    const chosen = state.custom.keys.filter(Boolean);
+    // build node list
+    const W = 560, H = 420;
+    let nodes = chosen.map((key) => {
+      const o = opts.find((x) => x.key === key);
+      const words = seriesWordSet(key);
+      return { key, label: o ? o.label : key, color: o ? o.color : "#94a3b8", words, size: words.size };
+    }).filter((nd) => nd.size > 0);
+
+    if (!nodes.length) {
+      svg.innerHTML = `<text x="${W / 2}" y="${H / 2}" text-anchor="middle" fill="var(--text-2)">Chọn 2–3 bộ ở trên để so sánh.</text>`;
+      const d = document.getElementById("covCustomDetail");
+      if (d) d.innerHTML = `<div class="cov-detail-empty">Chọn các bộ rồi bấm vào từng vùng để xem danh sách từ.</div>`;
+      return;
+    }
+
+    // bán kính theo √số từ, chuẩn hoá theo bộ lớn nhất
+    const maxR = Math.min(W, H) * 0.32;
+    const kR = maxR / Math.sqrt(Math.max(...nodes.map((n) => n.size)));
+    nodes.forEach((n) => { n.r = Math.max(26, kR * Math.sqrt(n.size)); });
+
+    layoutCustom(nodes, W, H);
+    const regions = customRegions(nodes);
+
+    // vẽ vòng (to trước)
+    const drawOrder = [...nodes].sort((a, b) => b.r - a.r);
+    let html = "";
+    drawOrder.forEach((nd) => {
+      const sel = state.custom.selection && state.custom.selection.type === "set" && state.custom.selection.key === nd.key;
+      html += `<circle class="cov-circle${sel ? " selected" : ""}" data-ckey="${nd.key}"
+                 cx="${nd.x.toFixed(1)}" cy="${nd.y.toFixed(1)}" r="${nd.r.toFixed(1)}"
+                 fill="${nd.color}" stroke="${nd.color}"></circle>`;
+    });
+    // nhãn tên bộ (đặt ở mép trên mỗi vòng)
+    nodes.forEach((nd) => {
+      html += `<text class="cov-circle-label" x="${nd.x.toFixed(1)}" y="${(nd.y - nd.r + 16).toFixed(1)}" text-anchor="middle">${nd.label}</text>
+               <text class="cov-circle-count" x="${nd.x.toFixed(1)}" y="${(nd.y - nd.r + 30).toFixed(1)}" text-anchor="middle">${nd.size} từ</text>`;
+    });
+    // badge số ở mỗi vùng
+    regions.forEach((rg) => {
+      const selected = state.custom.selection && state.custom.selection.type === "region" && state.custom.selection.id === rg.id;
+      html += `<g class="cov-region-badge${selected ? " selected" : ""}" data-region="${rg.id}" style="cursor:pointer">
+                 <circle cx="${rg.anchor.x.toFixed(1)}" cy="${rg.anchor.y.toFixed(1)}" r="15"></circle>
+                 <text x="${rg.anchor.x.toFixed(1)}" y="${(rg.anchor.y + 4).toFixed(1)}" text-anchor="middle">${rg.count}</text>
+               </g>`;
+    });
+    svg.innerHTML = html;
+
+    svg.querySelectorAll("[data-ckey]").forEach((c) =>
+      c.addEventListener("click", () => selectCustom({ type: "set", key: c.dataset.ckey })));
+    svg.querySelectorAll("[data-region]").forEach((g) =>
+      g.addEventListener("click", () => selectCustom({ type: "region", id: g.dataset.region })));
+
+    renderCustomDetail(nodes, regions);
+  }
+
+  function renderCustomDetail(nodes, regions) {
+    const el = document.getElementById("covCustomDetail");
+    if (!el) return;
+    const total = new Set(); nodes.forEach((n) => n.words.forEach((w) => total.add(w)));
+
+    // bảng liệt kê MỌI vùng (chính xác 100%) — bấm để xem từ
+    let list = `<div class="cov-region-list">` + regions.map((rg) => {
+      const sel = state.custom.selection && state.custom.selection.type === "region" && state.custom.selection.id === rg.id;
+      return `<button class="cov-region-item${sel ? " active" : ""}" data-region="${rg.id}">
+                <span class="cov-region-name">${rg.label}</span>
+                <span class="cov-region-num">${rg.count}</span>
+              </button>`;
+    }).join("") + `</div>
+      <div class="cov-total">Tổng từ <b>không trùng lặp</b> của ${nodes.length} bộ đã chọn: <b>${total.size}</b></div>`;
+
+    // phần từ chi tiết theo lựa chọn
+    let detail = "";
+    const sel = state.custom.selection;
+    if (sel && sel.type === "region") {
+      const rg = regions.find((r) => r.id === sel.id);
+      if (rg) detail = `<div class="cov-detail-sub"><b>${rg.label}</b> — ${rg.count} từ:</div>${wordChips(rg.words)}`;
+    } else if (sel && sel.type === "set") {
+      const nd = nodes.find((n) => n.key === sel.key);
+      if (nd) detail = `<div class="cov-detail-sub">Toàn bộ <b>${nd.label}</b> — ${nd.size} từ:</div>${wordChips(nd.words)}`;
+    } else {
+      detail = `<div class="cov-detail-empty">Bấm 1 vùng (badge số trên hình) hoặc 1 dòng bên trên để xem danh sách từ.</div>`;
+    }
+    el.innerHTML = list + `<div class="cov-region-detail">${detail}</div>`;
+    el.querySelectorAll("[data-region]").forEach((b) =>
+      b.addEventListener("click", () => selectCustom({ type: "region", id: b.dataset.region })));
+  }
+
+  function selectCustom(sel) {
+    const cur = state.custom.selection;
+    const same = cur && sel.type === cur.type &&
+      (sel.type === "region" ? sel.id === cur.id : sel.key === cur.key);
+    state.custom.selection = same ? null : sel;
+    renderCustom();
+  }
+
   /* ---------- 6. KHỞI TẠO ---------- */
   function init() {
     const tabs = document.getElementById("covScopeTabs");
@@ -402,8 +641,44 @@ const Coverage = (() => {
         render();
       });
     }
+
+    // --- bộ chọn cấp độ cho tab "Bộ trong từng cấp" ---
+    const lp = document.getElementById("covLevelPick");
+    if (lp && !lp.dataset.bound) {
+      lp.dataset.bound = "1";
+      lp.querySelectorAll(".cov-level-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          lp.querySelectorAll(".cov-level-btn").forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+          state.levelFilter = btn.dataset.level;
+          state.selection = null;
+          render();
+        });
+      });
+    }
+
+    // --- sơ đồ tùy chọn: 3 dropdown ---
+    const selEls = ["covPick0", "covPick1", "covPick2"].map((id) => document.getElementById(id));
+    if (selEls[0] && !selEls[0].dataset.bound) {
+      const opts = allSeriesOptions();
+      const optionHtml = (selectedKey) =>
+        `<option value="">— (không chọn) —</option>` +
+        opts.map((o) => `<option value="${o.key}"${o.key === selectedKey ? " selected" : ""}>${o.label} (${o.size})</option>`).join("");
+      selEls.forEach((sel, i) => {
+        if (!sel) return;
+        sel.dataset.bound = "1";
+        sel.innerHTML = optionHtml(state.custom.keys[i] || "");
+        sel.addEventListener("change", () => {
+          state.custom.keys[i] = sel.value;
+          state.custom.selection = null;
+          renderCustom();
+        });
+      });
+    }
+
     render();
+    renderCustom();
   }
 
-  return { init, render };
+  return { init, render, renderCustom };
 })();
