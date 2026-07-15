@@ -1,0 +1,714 @@
+{
+  "id": "business-01",
+  "title": "Business - Bài 1: 新人を歓迎する",
+  "type": "TUVUNG",
+  "series": "business",
+  "level": "BUSINESS",
+  "private": false,
+  "words": [
+    {
+      "_id": "business-01::歓迎する",
+      "kanji": "歓迎する",
+      "cautruc": null,
+      "doc": "かんげいする",
+      "han_viet": "HOAN NGHÊNH",
+      "nghia": "hoan nghênh; chào mừng",
+      "doc_marked": "かん**げい**する",
+      "vi_du": "朱さんを歓迎して、乾杯！ (Cạn ly chào mừng chị Shu!)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "迎える",
+          "doc": "むかえる",
+          "nghia": "đón; nghênh đón"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::～に慣れる",
+      "kanji": "～に慣れる",
+      "cautruc": null,
+      "doc": "～になれる",
+      "han_viet": "QUÁN",
+      "nghia": "quen với…",
+      "doc_marked": "～になれる",
+      "vi_du": "仕事にはもう慣れましたか。 (Bạn đã quen với công việc chưa?)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::おかげさまで",
+      "kanji": "おかげさまで",
+      "cautruc": null,
+      "doc": "おかげさまで",
+      "han_viet": "",
+      "nghia": "ơn trời; nhờ trời (nhờ có…)",
+      "doc_marked": "おかげさまで",
+      "vi_du": "ええ、おかげさまで。 (Vâng, nhờ trời (nhờ có mọi người giúp đỡ).)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::よくしてくれる",
+      "kanji": "よくしてくれる",
+      "cautruc": null,
+      "doc": "よくしてくれる",
+      "han_viet": "",
+      "nghia": "nhận được sự giúp đỡ; đối xử tử tế (từ ai đó)",
+      "doc_marked": "よくしてくれる",
+      "vi_du": "皆さん、よくしてくださいますから。 (Vì mọi người đều đối xử rất tốt với tôi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::担当する",
+      "kanji": "担当する",
+      "cautruc": null,
+      "doc": "たんとうする",
+      "han_viet": "ĐẢM ĐƯƠNG",
+      "nghia": "phụ trách",
+      "doc_marked": "たん**とう**する",
+      "vi_du": "明日から朱さんには、丸山工業を担当してもらいます。 (Từ ngày mai, tôi sẽ để chị Shu phụ trách công ty Maruyama.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "受け持つ",
+          "doc": "うけもつ",
+          "nghia": "đảm nhận; phụ trách"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::引き継ぎ",
+      "kanji": "引き継ぎ",
+      "cautruc": null,
+      "doc": "ひきつぎ",
+      "han_viet": "DẪN KẾ",
+      "nghia": "tiếp nhận (tiếp nối)",
+      "doc_marked": "ひきつぎ",
+      "vi_du": "アナンさん、引き継ぎをよろしくお願いします。 (Anh Anan, nhờ anh bàn giao công việc nhé.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::先方",
+      "kanji": "先方",
+      "cautruc": null,
+      "doc": "せんぽう",
+      "han_viet": "TIÊN PHƯƠNG",
+      "nghia": "đối phương (khách hàng; người tiêu dùng…)",
+      "doc_marked": "せん**ぽう**",
+      "vi_du": "先方へのごあいさつは、できれば一緒に行っていただきたいんですが。 (Lời chào hỏi với đối phương, nếu được tôi muốn anh đi cùng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "相手",
+          "doc": "あいて",
+          "nghia": "đối phương"
+        },
+        {
+          "kanji": "取引先",
+          "doc": "とりひきさき",
+          "nghia": "đối tác; khách hàng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::融資",
+      "kanji": "融資",
+      "cautruc": null,
+      "doc": "ゆうし",
+      "han_viet": "DUNG TƯ",
+      "nghia": "cho vay",
+      "doc_marked": "**ゆう**し",
+      "vi_du": "融資のご経験は長いんですか。 (Kinh nghiệm làm về mảng cho vay của anh có lâu không?)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::経験",
+      "kanji": "経験",
+      "cautruc": null,
+      "doc": "けいけん",
+      "han_viet": "KINH NGHIỆM",
+      "nghia": "kinh nghiệm",
+      "doc_marked": "**けい**けん",
+      "vi_du": "融資のご経験は長いんですか。 (Kinh nghiệm làm về mảng cho vay của anh có lâu không?)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::入行する",
+      "kanji": "入行する",
+      "cautruc": null,
+      "doc": "にゅうこうする",
+      "han_viet": "NHẬP HÀNH",
+      "nghia": "vào làm ngân hàng",
+      "doc_marked": "**にゅう****こう**する",
+      "vi_du": "入行して以来、ずっと融資畑だったから。 (Kể từ khi vào ngân hàng, tôi luôn làm ở mảng cho vay.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::融資畑",
+      "kanji": "融資畑",
+      "cautruc": null,
+      "doc": "ゆうしばたけ",
+      "han_viet": "DUNG TƯ ĐIỀN",
+      "nghia": "bộ phân làm các thủ tục cho vay",
+      "doc_marked": "**ゆう**しばたけ",
+      "vi_du": "入行して以来、ずっと融資畑だったから。 (Kể từ khi vào ngân hàng, tôi luôn làm ở mảng cho vay.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::我が～",
+      "kanji": "我が～",
+      "cautruc": null,
+      "doc": "わが～",
+      "han_viet": "NGÃ",
+      "nghia": "… của chúng tôi",
+      "doc_marked": "わが～",
+      "vi_du": "アナンさんは、我が営業1部のエースですよ。 (Anh Anan là át chủ bài của phòng kinh doanh số 1 của chúng ta đấy.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::エース",
+      "kanji": "エース",
+      "cautruc": null,
+      "doc": "えーす",
+      "han_viet": "",
+      "nghia": "át chủ bài (nhân vật quan trọng)",
+      "doc_marked": "えーす",
+      "vi_du": "アナンさんは、我が営業1部のエースですよ。 (Anh Anan là át chủ bài của phòng kinh doanh số 1 của chúng ta đấy.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::やる気",
+      "kanji": "やる気",
+      "cautruc": null,
+      "doc": "やるき",
+      "han_viet": "KHÍ",
+      "nghia": "động lực; chí khí",
+      "doc_marked": "やるき",
+      "vi_du": "やる気さえあれば、大丈夫。 (Chỉ cần có chí khí (động lực) thì không sao đâu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::期待する",
+      "kanji": "期待する",
+      "cautruc": null,
+      "doc": "きたいする",
+      "han_viet": "KỲ ĐÃI",
+      "nghia": "hy vọng; kỳ vọng",
+      "doc_marked": "きたいする",
+      "vi_du": "朱さん、期待していますよ。 (Chị Shu, tôi kỳ vọng vào chị đấy.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::厳しい",
+      "kanji": "厳しい",
+      "cautruc": null,
+      "doc": "きびしい",
+      "han_viet": "NGHIÊM",
+      "nghia": "khó; nghiêm khắc",
+      "doc_marked": "きびしい",
+      "vi_du": "厳しいこともけっこうあるかもしれないなあ。 (Chắc cũng sẽ có khá nhiều điều khắc nghiệt đấy.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "シビア",
+          "doc": "しびあ",
+          "nghia": "khắc nghiệt; gắt gao"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "甘い",
+          "doc": "あまい",
+          "nghia": "dễ dãi; nhẹ nhàng"
+        }
+      ]
+    },
+    {
+      "_id": "business-01::（できれば）～ていただきたいんですが",
+      "kanji": "（できれば）～ていただきたいんですが",
+      "cautruc": null,
+      "doc": "（できれば）～ていただきたいんですが",
+      "han_viet": "",
+      "nghia": "(nếu có thể) tôi muốn được nhận…",
+      "doc_marked": "（できれば）～ていただきたいんですが",
+      "vi_du": "先日お願いした見積もりの件なんですが、できれば、今日中に送っていただきたいんですが。 (Về bản báo giá tôi nhờ hôm trước, nếu được thì tôi muốn bạn gửi trong ngày hôm nay.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::～て以来",
+      "kanji": "～て以来",
+      "cautruc": null,
+      "doc": "～ていらい",
+      "han_viet": "DĨ LAI",
+      "nghia": "từ lúc…; kể từ…",
+      "doc_marked": "～ていらい",
+      "vi_du": "入社して以来、営業の仕事をしております。 (Kể từ khi vào công ty, tôi làm công việc kinh doanh.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::～なんか",
+      "kanji": "～なんか",
+      "cautruc": null,
+      "doc": "～なんか",
+      "han_viet": "",
+      "nghia": "cỡ như… (cách nói khiêm tốn)",
+      "doc_marked": "～なんか",
+      "vi_du": "私なんかエースじゃありませんよ。 (Cỡ như tôi thì không phải là át chủ bài đâu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::～さえ…ば",
+      "kanji": "～さえ…ば",
+      "cautruc": null,
+      "doc": "～さえ…ば",
+      "han_viet": "",
+      "nghia": "chỉ cần… thì",
+      "doc_marked": "～さえ…ば",
+      "vi_du": "やる気さえあれば、大丈夫。 (Chỉ cần có động lực thì không sao đâu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::～次第",
+      "kanji": "～次第",
+      "cautruc": null,
+      "doc": "～しだい",
+      "han_viet": "THỨ ĐỆ",
+      "nghia": "phụ thuộc vào…",
+      "doc_marked": "～しだい",
+      "vi_du": "この仕事はお客さん次第だからなあ。 (Công việc này còn phụ thuộc vào khách hàng nữa.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::～でも",
+      "kanji": "～でも",
+      "cautruc": null,
+      "doc": "～でも",
+      "han_viet": "",
+      "nghia": "hoặc gì đó…",
+      "doc_marked": "～でも",
+      "vi_du": "あっちでお茶でも飲みながら話しましょうか。 (Chúng ta ra đằng kia vừa uống trà hay gì đó vừa nói chuyện nhé.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::先日",
+      "kanji": "先日",
+      "cautruc": null,
+      "doc": "せんじつ",
+      "han_viet": "TIÊN NHẬT",
+      "nghia": "ngày hôm trước",
+      "doc_marked": "せんじつ",
+      "vi_du": "先日お願いした見積もりの件なんですが... (Về bản báo giá tôi đã nhờ ngày hôm trước...)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::見積もり",
+      "kanji": "見積もり",
+      "cautruc": null,
+      "doc": "みつもり",
+      "han_viet": "KIẾN TOÁN",
+      "nghia": "bảng báo giá; bảng dự toán",
+      "doc_marked": "みつもり",
+      "vi_du": "先日お願いした見積もりの件なんですが... (Về bản báo giá tôi đã nhờ ngày hôm trước...)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::件",
+      "kanji": "件",
+      "cautruc": null,
+      "doc": "けん",
+      "han_viet": "KIỆN",
+      "nghia": "về việc",
+      "doc_marked": "けん",
+      "vi_du": "先日お願いした見積もりの件なんですが... (Về bản báo giá tôi đã nhờ ngày hôm trước...)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::承知しました",
+      "kanji": "承知しました",
+      "cautruc": null,
+      "doc": "しょうちしました",
+      "han_viet": "THỪA TRI",
+      "nghia": "Tôi đã hiểu rồi ạ. (cách nói khiêm nhường)",
+      "doc_marked": "**しょう**ちしました",
+      "vi_du": "承知いたしました。 (Tôi đã hiểu rồi ạ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::引き受ける",
+      "kanji": "引き受ける",
+      "cautruc": null,
+      "doc": "ひきうける",
+      "han_viet": "DẪN THỤ",
+      "nghia": "đảm nhận; đảm nhiệm",
+      "doc_marked": "ひきうける",
+      "vi_du": "私の結婚式でスピーチをお願いしたいんだけど。引き受けてくれない？ (Tôi muốn nhờ bạn phát biểu tại lễ cưới của tôi. Bạn có thể đảm nhận không?)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "担う",
+          "doc": "になう",
+          "nghia": "gánh vác; đảm nhận"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::非常食",
+      "kanji": "非常食",
+      "cautruc": null,
+      "doc": "ひじょうしょく",
+      "han_viet": "PHI THƯỜNG THỰC",
+      "nghia": "đồ ăn dùng lúc khẩn cấp",
+      "doc_marked": "ひ**じょう**しょく",
+      "vi_du": "この商品は非常食として、開発されました。 (Sản phẩm này đã được phát triển như một loại đồ ăn dùng lúc khẩn cấp.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::開発する",
+      "kanji": "開発する",
+      "cautruc": null,
+      "doc": "かいはつする",
+      "han_viet": "KHAI PHÁT",
+      "nghia": "phát minh; sáng chế",
+      "doc_marked": "かいはつする",
+      "vi_du": "この商品は非常食として、開発されました。 (Sản phẩm này đã được phát triển như một loại đồ ăn dùng lúc khẩn cấp.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::努力",
+      "kanji": "努力",
+      "cautruc": null,
+      "doc": "どりょく",
+      "han_viet": "NỖ LỰC",
+      "nghia": "nỗ lực; cố gắng",
+      "doc_marked": "どりょく",
+      "vi_du": "それは、あなたの努力次第ですね。 (Điều đó phụ thuộc vào sự nỗ lực của bạn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "尽力",
+          "doc": "じんりょく",
+          "nghia": "nỗ lực; ra sức"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::周りの方",
+      "kanji": "周りの方",
+      "cautruc": null,
+      "doc": "まわりのかた",
+      "han_viet": "CHU PHƯƠNG",
+      "nghia": "những người xung quanh (cách nói kính ngữ)",
+      "doc_marked": "まわりのかた",
+      "vi_du": "周りの方がいろいろ助けてくださいますから。 (Vì những người xung quanh đã giúp đỡ tôi rất nhiều.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::声をかける",
+      "kanji": "声をかける",
+      "cautruc": null,
+      "doc": "こえをかける",
+      "han_viet": "THANH",
+      "nghia": "nói với (ai đó)",
+      "doc_marked": "こえをかける",
+      "vi_du": "困ったことがあったら、いつでも声をかけてください。 (Nếu có khó khăn gì, hãy cứ nói với tôi bất cứ lúc nào.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::ホストファミリー",
+      "kanji": "ホストファミリー",
+      "cautruc": null,
+      "doc": "ほすとふぁみりー",
+      "han_viet": "",
+      "nghia": "gia đình chủ nhà",
+      "doc_marked": "ほすとふぁみりー",
+      "vi_du": "留学中はホストファミリーに大変お世話になりました。 (Trong thời gian du học, tôi đã được gia đình chủ nhà chăm sóc rất nhiều.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::順調",
+      "kanji": "順調",
+      "cautruc": null,
+      "doc": "じゅんちょう",
+      "han_viet": "THUẬN ĐIỀU",
+      "nghia": "tiến triển tốt; thuận lợi",
+      "doc_marked": "じゅん**ちょう**",
+      "vi_du": "日本語能力試験の勉強は順調ですか。 (Việc học cho kỳ thi năng lực tiếng Nhật có thuận lợi không?)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": [
+        {
+          "kanji": "不調",
+          "doc": "ふちょう",
+          "nghia": "trục trặc; không suôn sẻ"
+        }
+      ]
+    },
+    {
+      "_id": "business-01::就職",
+      "kanji": "就職",
+      "cautruc": null,
+      "doc": "しゅうしょく",
+      "han_viet": "TỰU CHỨC",
+      "nghia": "tìm việc làm",
+      "doc_marked": "**しゅう**しょく",
+      "vi_du": "試験に合格すると、就職の時、役に立ちますから。 (Nếu thi đỗ thì lúc tìm việc làm sẽ rất có ích đấy.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::親切にする",
+      "kanji": "親切にする",
+      "cautruc": null,
+      "doc": "しんせつにする",
+      "han_viet": "THÂN THIẾT",
+      "nghia": "đối xử tử tế; tốt bụng (với ai đó)",
+      "doc_marked": "しんせつにする",
+      "vi_du": "皆さん、親切にしてくださいますから。 (Vì mọi người đều đối xử tử tế với tôi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::しっかり",
+      "kanji": "しっかり",
+      "cautruc": null,
+      "doc": "しっかり",
+      "han_viet": "",
+      "nghia": "làm cẩn thận; chu đáo; chăm chỉ",
+      "doc_marked": "しっかり",
+      "vi_du": "これから忙しくなりますが、しっかりやってください。 (Từ giờ sẽ bận rộn hơn nhưng hãy làm việc chăm chỉ nhé.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::同僚",
+      "kanji": "同僚",
+      "cautruc": null,
+      "doc": "どうりょう",
+      "han_viet": "ĐỒNG LIÊU",
+      "nghia": "đồng nghiệp; đồng sự",
+      "doc_marked": "**どう****りょう**",
+      "vi_du": "残業している同僚と話す。 (Nói chuyện với người đồng nghiệp đang làm thêm giờ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "仲間",
+          "doc": "なかま",
+          "nghia": "đồng đội; bạn bè cùng nhóm"
+        },
+        {
+          "kanji": "同期",
+          "doc": "どうき",
+          "nghia": "người cùng khóa/cùng đợt vào công ty"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::～同士",
+      "kanji": "～同士",
+      "cautruc": null,
+      "doc": "～どうし",
+      "han_viet": "ĐỒNG SĨ",
+      "nghia": "cùng là… (những người đồng nghiệp; khách hàng)",
+      "doc_marked": "～どうし",
+      "vi_du": "同僚同士で話す。 (Những người đồng nghiệp nói chuyện với nhau.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::絶対",
+      "kanji": "絶対",
+      "cautruc": null,
+      "doc": "ぜったい",
+      "han_viet": "TUYỆT ĐỐI",
+      "nghia": "tuyệt đối",
+      "doc_marked": "ぜったい",
+      "vi_du": "いやいや、私なんか絶対無理です。 (Không không, cỡ như tôi thì tuyệt đối không làm được đâu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::不器用",
+      "kanji": "不器用",
+      "cautruc": null,
+      "doc": "ぶきよう",
+      "han_viet": "BẤT KHÍ DỤNG",
+      "nghia": "vụng về; hậu đậu",
+      "doc_marked": "ぶき**よう**",
+      "vi_du": "いやいや、私なんか絶対無理です。不器用ですから。 (Không không, cỡ như tôi thì tuyệt đối không làm được đâu. Vì tôi vụng về lắm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::取引先",
+      "kanji": "取引先",
+      "cautruc": null,
+      "doc": "とりひきさき",
+      "han_viet": "THỦ DẪN TIÊN",
+      "nghia": "đối tác; khách hàng",
+      "doc_marked": "とりひきさき",
+      "vi_du": "大事な取引先だからね。 (Vì đó là khách hàng (đối tác) quan trọng mà.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "顧客",
+          "doc": "こきゃく",
+          "nghia": "khách hàng"
+        },
+        {
+          "kanji": "得意先",
+          "doc": "とくいさき",
+          "nghia": "khách quen; mối làm ăn"
+        },
+        {
+          "kanji": "先方",
+          "doc": "せんぽう",
+          "nghia": "đối phương; phía khách"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::登山",
+      "kanji": "登山",
+      "cautruc": null,
+      "doc": "とざん",
+      "han_viet": "ĐĂNG SƠN",
+      "nghia": "leo núi",
+      "doc_marked": "とざん",
+      "vi_du": "登山は天気次第ですからね。 (Việc leo núi phụ thuộc vào thời tiết mà.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::しばらく",
+      "kanji": "しばらく",
+      "cautruc": null,
+      "doc": "しばらく",
+      "han_viet": "",
+      "nghia": "trong một thời gian",
+      "doc_marked": "しばらく",
+      "vi_du": "しばらくは、山の映画でも見て、楽しむことにしますよ。 (Trong một thời gian, chắc tôi sẽ đành xem phim về núi để giải trí vậy.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::盆栽",
+      "kanji": "盆栽",
+      "cautruc": null,
+      "doc": "ぼんさい",
+      "han_viet": "BỒN TÀI",
+      "nghia": "cây cảnh",
+      "doc_marked": "ぼんさい",
+      "vi_du": "いつも盆栽の雑誌を持ってますけど、盆栽をやってるんですか。 (Lúc nào anh cũng mang theo tạp chí cây cảnh, anh đang chơi cây cảnh à?)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::夢中になる",
+      "kanji": "夢中になる",
+      "cautruc": null,
+      "doc": "むちゅうになる",
+      "han_viet": "MỘNG TRUNG",
+      "nghia": "bị cuốn hút (vào việc gì đó)",
+      "doc_marked": "むちゅうになる",
+      "vi_du": "日本に来て以来、すっかり夢中になってしまって。 (Từ lúc đến Nhật, tôi hoàn toàn bị cuốn hút vào nó.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::うまくいく",
+      "kanji": "うまくいく",
+      "cautruc": null,
+      "doc": "うまくいく",
+      "han_viet": "",
+      "nghia": "suôn sẻ; thuận lợi",
+      "doc_marked": "うまくいく",
+      "vi_du": "でも、雑誌のようにはなかなかうまくいきませんね。 (Nhưng mà mãi vẫn không suôn sẻ được như trên tạp chí nhỉ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-01::奥が深い",
+      "kanji": "奥が深い",
+      "cautruc": null,
+      "doc": "おくがふかい",
+      "han_viet": "ÁO THÂM",
+      "nghia": "sâu sắc; mang nhiều ý nghĩa",
+      "doc_marked": "おくがふかい",
+      "vi_du": "ええ、盆栽は奥が深いです。 (Vâng, cây cảnh mang nhiều ý nghĩa sâu sắc lắm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    }
+  ]
+}

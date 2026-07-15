@@ -1,0 +1,705 @@
+{
+  "id": "business-08",
+  "title": "Business - Bài 8: 人材紹介会社の人と面談をする",
+  "type": "TUVUNG",
+  "series": "business",
+  "level": "BUSINESS",
+  "private": false,
+  "words": [
+    {
+      "_id": "business-08::案件",
+      "kanji": "案件",
+      "cautruc": null,
+      "doc": "あんけん",
+      "han_viet": "ÁN KIỆN",
+      "nghia": "đề án",
+      "doc_marked": "あんけん",
+      "vi_du": "M&A案件をはじめとした戦略系コンサルティング業務を中心に展開している会社です。 (Đây là công ty đang triển khai tập trung vào nghiệp vụ tư vấn chiến lược, tiêu biểu là các đề án M&A.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::～系",
+      "kanji": "～系",
+      "cautruc": null,
+      "doc": "～けい",
+      "han_viet": "HỆ",
+      "nghia": "loại…; dạng… (thường đi kèm với danh từ)",
+      "doc_marked": "～けい",
+      "vi_du": "彼はIT系の企業への転職を考えているそうです。 (Nghe nói anh ấy đang suy nghĩ đến việc chuyển việc sang một doanh nghiệp thuộc hệ (mảng) IT.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::給与面",
+      "kanji": "給与面",
+      "cautruc": null,
+      "doc": "きゅうよめん",
+      "han_viet": "CẤP DỮ DIỆN",
+      "nghia": "về mặt; khía cạnh tiền lương",
+      "doc_marked": "**きゅう**よめん",
+      "vi_du": "今回のお話は、給与面でもアナンさんのご希望を満たすものだと思います。 (Câu chuyện lần này, tôi nghĩ về khía cạnh tiền lương cũng sẽ đáp ứng đầy đủ mong muốn của anh Anan.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::満たす",
+      "kanji": "満たす",
+      "cautruc": null,
+      "doc": "みたす",
+      "han_viet": "MÃN",
+      "nghia": "đáp ứng đủ",
+      "doc_marked": "みたす",
+      "vi_du": "お客様のニーズを満たすために、製品の改良を続ける。 (Tiếp tục cải tiến sản phẩm nhằm đáp ứng đầy đủ nhu cầu của khách hàng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "満足させる",
+          "doc": "まんぞくさせる",
+          "nghia": "làm thỏa mãn"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::ご存じの通り",
+      "kanji": "ご存じの通り",
+      "cautruc": null,
+      "doc": "ごぞんじのとおり",
+      "han_viet": "TỒN THÔNG",
+      "nghia": "theo như bạn biết (cách nói kính ngữ)",
+      "doc_marked": "ごぞんじのとおり",
+      "vi_du": "ご存じの通り、グローバル化に伴って、コンサルティング業務の需要は高まっています。 (Theo như anh biết, cùng với quá trình toàn cầu hóa, nhu cầu về công việc tư vấn đang ngày càng tăng cao.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::グローバル化",
+      "kanji": "グローバル化",
+      "cautruc": null,
+      "doc": "ぐろーばるか",
+      "han_viet": "HÓA",
+      "nghia": "toàn cầu hóa",
+      "doc_marked": "ぐろーばるか",
+      "vi_du": "企業のグローバル化が進み、英語力の重要性が増している。 (Quá trình toàn cầu hóa doanh nghiệp đang tiến triển, nên tầm quan trọng của năng lực tiếng Anh cũng tăng lên.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::年々",
+      "kanji": "年々",
+      "cautruc": null,
+      "doc": "ねんねん",
+      "han_viet": "NIÊN",
+      "nghia": "hàng năm",
+      "doc_marked": "ねんねん",
+      "vi_du": "海外からの観光客は年々増加しています。 (Lượng du khách từ nước ngoài đang tăng lên hàng năm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::高まる",
+      "kanji": "高まる",
+      "cautruc": null,
+      "doc": "たかまる",
+      "han_viet": "CAO",
+      "nghia": "tăng cao; tăng lên",
+      "doc_marked": "たかまる",
+      "vi_du": "環境保護に対する消費者の意識が高まっている。 (Ý thức của người tiêu dùng đối với việc bảo vệ môi trường đang tăng cao.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "向上する",
+          "doc": "こうじょうする",
+          "nghia": "nâng cấp; cải thiện"
+        },
+        {
+          "kanji": "増す",
+          "doc": "ます",
+          "nghia": "gia tăng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "下がる",
+          "doc": "さがる",
+          "nghia": "giảm; hạ xuống"
+        }
+      ]
+    },
+    {
+      "_id": "business-08::大手",
+      "kanji": "大手",
+      "cautruc": null,
+      "doc": "おおて",
+      "han_viet": "ĐẠI THỦ",
+      "nghia": "công ty lớn",
+      "doc_marked": "おおて",
+      "vi_du": "この会社は大手ではありませんが、経営陣が若いながらも優秀です。 (Công ty này không phải là công ty lớn, thế nhưng đội ngũ quản lý dù trẻ mà lại rất xuất sắc.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "大企業",
+          "doc": "だいきぎょう",
+          "nghia": "doanh nghiệp lớn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "中小",
+          "doc": "ちゅうしょう",
+          "nghia": "(doanh nghiệp) vừa và nhỏ"
+        }
+      ]
+    },
+    {
+      "_id": "business-08::経営陣",
+      "kanji": "経営陣",
+      "cautruc": null,
+      "doc": "けいえいじん",
+      "han_viet": "KINH DOANH TRẬN",
+      "nghia": "đội ngũ quản lý",
+      "doc_marked": "**けい****えい**じん",
+      "vi_du": "来月の株主総会で、新しい経営陣が発表される予定だ。 (Tại cuộc họp hội đồng cổ đông tháng sau, một đội ngũ quản lý mới dự kiến sẽ được công bố.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::将来性",
+      "kanji": "将来性",
+      "cautruc": null,
+      "doc": "しょうらいせい",
+      "han_viet": "TƯƠNG LAI TÍNH",
+      "nghia": "tính tương lai",
+      "doc_marked": "**しょう**らい**せい**",
+      "vi_du": "将来性の点でも期待ができます。 (Về điểm (tính) tương lai cũng có thể kỳ vọng nhiều.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::～の点で",
+      "kanji": "～の点で",
+      "cautruc": null,
+      "doc": "～のてんで",
+      "han_viet": "ĐIỂM",
+      "nghia": "về điểm…",
+      "doc_marked": "～のてんで",
+      "vi_du": "コストと品質の点で、A社の提案が一番優れている。 (Xét về điểm chi phí và chất lượng, đề án của công ty A là xuất sắc nhất.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::調整",
+      "kanji": "調整",
+      "cautruc": null,
+      "doc": "ちょうせい",
+      "han_viet": "ĐIỀU CHỈNH",
+      "nghia": "điều chỉnh",
+      "doc_marked": "**ちょう****せい**",
+      "vi_du": "開始時期については、先方と調整は可能です。 (Về thời điểm bắt đầu, chúng ta hoàn toàn có thể điều chỉnh với đối tác.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "調節",
+          "doc": "ちょうせつ",
+          "nghia": "điều chỉnh; điều tiết"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::結論が出る",
+      "kanji": "結論が出る",
+      "cautruc": null,
+      "doc": "けつろんがでる",
+      "han_viet": "KẾT LUẬN XUẤT",
+      "nghia": "đưa ra kết luận",
+      "doc_marked": "けつろんがでる",
+      "vi_du": "結論が出次第、お返事をいたします。 (Chừng nào đưa ra được kết luận, tôi sẽ trả lời lại.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::～をはじめ（として／とした）",
+      "kanji": "～をはじめ（として／とした）",
+      "cautruc": null,
+      "doc": "～をはじめ（として／とした）",
+      "han_viet": "",
+      "nghia": "đại điện là…; tiêu biểu là…",
+      "doc_marked": "～をはじめ（として／とした）",
+      "vi_du": "当社はアジアをはじめとした世界各国に支店を持っています。 (Công ty chúng tôi có chi nhánh ở các quốc gia trên thế giới, tiêu biểu là khu vực Châu Á.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::～のみならず",
+      "kanji": "～のみならず",
+      "cautruc": null,
+      "doc": "～のみならず",
+      "han_viet": "",
+      "nghia": "không chỉ… mà cả; không chỉ… mà còn",
+      "doc_marked": "～のみならず",
+      "vi_du": "今回のお話は、業務のみならず、給与面でも条件が良いです。 (Lời đề nghị lần này không chỉ về mặt công việc mà khía cạnh tiền lương điều kiện cũng rất tốt.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::～限り（では）",
+      "kanji": "～限り（では）",
+      "cautruc": null,
+      "doc": "～かぎり（では）",
+      "han_viet": "HẠN",
+      "nghia": "theo như tôi… thì",
+      "doc_marked": "～かぎり（では）",
+      "vi_du": "お話をお聞きした限りでは、面白そうなところですね。 (Theo như tôi nghe chuyện thì đó có vẻ là một nơi thú vị đấy.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::～に伴って",
+      "kanji": "～に伴って",
+      "cautruc": null,
+      "doc": "～にともなって",
+      "han_viet": "BẠN",
+      "nghia": "cùng với…; đồng thời với…",
+      "doc_marked": "～にともなって",
+      "vi_du": "売上の増加に伴って、新しいスタッフを採用することになった。 (Đồng thời với việc doanh thu tăng lên, chúng tôi đã quyết định tuyển dụng thêm nhân viên mới.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::～ながら（も）",
+      "kanji": "～ながら（も）",
+      "cautruc": null,
+      "doc": "～ながら（も）",
+      "han_viet": "",
+      "nghia": "tuy… nhưng; mặc dù… nhưng",
+      "doc_marked": "～ながら（も）",
+      "vi_du": "残念ながら、今回のプロジェクトは見送ることになりました。 (Tuy rất tiếc nhưng dự án lần này đã phải bị hoãn lại.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::（もし）～としたら",
+      "kanji": "（もし）～としたら",
+      "cautruc": null,
+      "doc": "（もし）～としたら",
+      "han_viet": "",
+      "nghia": "giả sử…; nếu…",
+      "doc_marked": "（もし）～としたら",
+      "vi_du": "もし入社するとしたら、いつから働くことになりますか。 (Nếu như vào công ty, tôi sẽ bắt đầu làm việc từ khi nào?)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::～次第",
+      "kanji": "～次第",
+      "cautruc": null,
+      "doc": "～しだい",
+      "han_viet": "THỨ ĐỆ",
+      "nghia": "chừng nào (ngay sau khi)… thì sẽ",
+      "doc_marked": "～しだい",
+      "vi_du": "会議の資料が完成し次第、皆様にメールで送付いたします。 (Ngay sau khi hoàn thành tài liệu cuộc họp, tôi sẽ gửi nó qua email cho mọi người.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::和食",
+      "kanji": "和食",
+      "cautruc": null,
+      "doc": "わしょく",
+      "han_viet": "HÒA THỰC",
+      "nghia": "món ăn Nhật Bản",
+      "doc_marked": "わしょく",
+      "vi_du": "すしをはじめとした和食が素晴らしい。 (Các món ăn Nhật, tiêu biểu là sushi, thực sự tuyệt vời.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::被害",
+      "kanji": "被害",
+      "cautruc": null,
+      "doc": "ひがい",
+      "han_viet": "BỊ HẠI",
+      "nghia": "thiệt hại",
+      "doc_marked": "ひがい",
+      "vi_du": "工場のみならず、隣の研究所も大きな被害を受けました。 (Không chỉ nhà máy mà cả viện nghiên cứu bên cạnh cũng chịu thiệt hại nặng nề.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::程度",
+      "kanji": "程度",
+      "cautruc": null,
+      "doc": "ていど",
+      "han_viet": "TRÌNH ĐỘ",
+      "nghia": "mức độ",
+      "doc_marked": "**てい**ど",
+      "vi_du": "火事の被害は、どの程度だったんですか。 (Mức độ thiệt hại do vụ hỏa hoạn khoảng chừng nào vậy?)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::合併する",
+      "kanji": "合併する",
+      "cautruc": null,
+      "doc": "がっぺいする",
+      "han_viet": "HỢP TINH",
+      "nghia": "sát nhập",
+      "doc_marked": "がっ**ぺい**する",
+      "vi_du": "うちの会社がA社と合併するかもしれないと聞きました。 (Tôi nghe nói có thể công ty chúng ta sẽ sát nhập với công ty A.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::貿易の自由化",
+      "kanji": "貿易の自由化",
+      "cautruc": null,
+      "doc": "ぼうえきのじゆうか",
+      "han_viet": "MẬU DỊCH TỰ DO HÓA",
+      "nghia": "tự do hóa thương mại",
+      "doc_marked": "ぼうえきのじゆうか",
+      "vi_du": "貿易の自由化に伴って、どんなメリットが期待できますか。 (Cùng với tự do hóa thương mại, ta có thể kỳ vọng được những lợi ích gì?)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::メリット",
+      "kanji": "メリット",
+      "cautruc": null,
+      "doc": "めりっと",
+      "han_viet": "",
+      "nghia": "lợi ích; ưu điểm",
+      "doc_marked": "めりっと",
+      "vi_du": "このシステムを導入する最大のメリットは、コスト削減です。 (Lợi ích lớn nhất khi đưa hệ thống này vào sử dụng là giảm thiểu chi phí.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::農産物",
+      "kanji": "農産物",
+      "cautruc": null,
+      "doc": "のうさんぶつ",
+      "han_viet": "NÔNG SẢN VẬT",
+      "nghia": "hàng nông sản",
+      "doc_marked": "**のう**さんぶつ",
+      "vi_du": "農産物の価格が下がることが期待できます。 (Ta có thể kỳ vọng giá hàng nông sản sẽ giảm xuống.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::快適",
+      "kanji": "快適",
+      "cautruc": null,
+      "doc": "かいてき",
+      "han_viet": "KHOÁI THÍCH",
+      "nghia": "thoải mái; dễ chịu",
+      "doc_marked": "かいてき",
+      "vi_du": "狭いながらも快適なオフィス環境を整えたい。 (Tôi muốn tổ chức một môi trường văn phòng tuy hẹp nhưng thoải mái.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "心地よい",
+          "doc": "ここちよい",
+          "nghia": "dễ chịu; thoải mái"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "不快",
+          "doc": "ふかい",
+          "nghia": "khó chịu"
+        }
+      ]
+    },
+    {
+      "_id": "business-08::転職する",
+      "kanji": "転職する",
+      "cautruc": null,
+      "doc": "てんしょくする",
+      "han_viet": "CHUYỂN CHỨC",
+      "nghia": "chuyển việc",
+      "doc_marked": "てんしょくする",
+      "vi_du": "自分のキャリアアップのために、転職することを決意しました。 (Tôi đã quyết định chuyển việc để nâng cấp sự nghiệp của bản thân.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "職を変える",
+          "doc": "しょくをかえる",
+          "nghia": "đổi việc"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::マーケティング",
+      "kanji": "マーケティング",
+      "cautruc": null,
+      "doc": "まーけてぃんぐ",
+      "han_viet": "",
+      "nghia": "tiếp thị",
+      "doc_marked": "まーけてぃんぐ",
+      "vi_du": "マーケティングの仕事に就きたいです。 (Tôi muốn làm công việc về tiếp thị (Marketing).)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::仕事に就く",
+      "kanji": "仕事に就く",
+      "cautruc": null,
+      "doc": "しごとにつく",
+      "han_viet": "SĨ SỰ TỰU",
+      "nghia": "bắt đầu công việc",
+      "doc_marked": "しごとにつく",
+      "vi_du": "大学卒業後、希望していたITエンジニアの仕事に就くことができた。 (Sau khi tốt nghiệp đại học, tôi đã có thể bắt đầu công việc Kỹ sư IT đúng như mong muốn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::人材",
+      "kanji": "人材",
+      "cautruc": null,
+      "doc": "じんざい",
+      "han_viet": "NHÂN TÀI",
+      "nghia": "nguồn nhân lực",
+      "doc_marked": "じんざい",
+      "vi_du": "専門性の高い産業分野が扱える人材を求めている。 (Họ đang tìm kiếm nguồn nhân lực có thể xử lý các lĩnh vực công nghiệp có tính chuyên môn cao.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::求職者",
+      "kanji": "求職者",
+      "cautruc": null,
+      "doc": "きゅうしょくしゃ",
+      "han_viet": "CẦU CHỨC GIẢ",
+      "nghia": "người tìm việc",
+      "doc_marked": "**きゅう**しょくしゃ",
+      "vi_du": "求職者に対して、丁寧な面談を行う。 (Tiến hành phỏng vấn (trao đổi) kỹ lưỡng đối với những người tìm việc.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::出向先",
+      "kanji": "出向先",
+      "cautruc": null,
+      "doc": "しゅっこうさき",
+      "han_viet": "XUẤT HƯỚNG TIÊN",
+      "nghia": "nơi chuyển đến làm việc",
+      "doc_marked": "しゅっ**こう**さき",
+      "vi_du": "今回の出向先は、確かな技術力を持った会社です。 (Nơi chuyển đến làm việc lần này là một công ty có năng lực kỹ thuật vững chắc.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::財務面",
+      "kanji": "財務面",
+      "cautruc": null,
+      "doc": "ざいむめん",
+      "han_viet": "TÀI VỤ DIỆN",
+      "nghia": "mặt (khía cạnh) tài chính",
+      "doc_marked": "ざいむめん",
+      "vi_du": "資料を読む限り、財務面に問題がありますね。 (Theo như tôi đọc tài liệu thì có vẻ họ đang gặp vấn đề về mặt tài chính.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::立て直し",
+      "kanji": "立て直し",
+      "cautruc": null,
+      "doc": "たてなおし",
+      "han_viet": "LẬP TRỰC",
+      "nghia": "xây dựng lại",
+      "doc_marked": "たてなおし",
+      "vi_du": "あなたに財務の立て直しをお願いしたいと考えています。 (Tôi đang có suy nghĩ muốn nhờ cậu xây dựng lại bộ phận tài chính.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::注目を集める",
+      "kanji": "注目を集める",
+      "cautruc": null,
+      "doc": "ちゅうもくをあつめる",
+      "han_viet": "CHÚ MỤC TẬP",
+      "nghia": "tập trung sự chú ý",
+      "doc_marked": "ちゅうもくをあつめる",
+      "vi_du": "この会社は、業界で注目を集めている企業です。 (Đây là doanh nghiệp đang thu hút sự chú ý trong ngành.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::環境技術",
+      "kanji": "環境技術",
+      "cautruc": null,
+      "doc": "かんきょうぎじゅつ",
+      "han_viet": "HOÀN CẢNH KỸ THUẬT",
+      "nghia": "công nghệ môi trường",
+      "doc_marked": "かん**きょう**ぎじゅつ",
+      "vi_du": "最近、環境技術に関する特許を取得しました。 (Gần đây họ đã lấy được bằng sáng chế liên quan đến công nghệ môi trường.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::特許を取得する",
+      "kanji": "特許を取得する",
+      "cautruc": null,
+      "doc": "とっきょをしゅとくする",
+      "han_viet": "ĐẶC HỨA THỦ ĐẮC",
+      "nghia": "lấy được bằng sáng chế",
+      "doc_marked": "とっきょをしゅとくする",
+      "vi_du": "新製品の独自技術について、特許を取得する手続きを進めている。 (Chúng tôi đang tiến hành thủ tục lấy bằng sáng chế cho công nghệ độc quyền của sản phẩm mới.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::充実する",
+      "kanji": "充実する",
+      "cautruc": null,
+      "doc": "じゅうじつする",
+      "han_viet": "SUNG THỰC",
+      "nghia": "phong phú; đầy đủ",
+      "doc_marked": "**じゅう**じつする",
+      "vi_du": "休暇制度も充実していますし、社員教育にも力を入れています。 (Chế độ nghỉ phép ở đó cũng rất đầy đủ phong phú, hình như họ còn tập trung vào giáo dục nhân viên nữa đấy.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::研究機関",
+      "kanji": "研究機関",
+      "cautruc": null,
+      "doc": "けんきゅうきかん",
+      "han_viet": "NGHIÊN CỨU CƠ QUAN",
+      "nghia": "tổ chức nghiên cứu",
+      "doc_marked": "けん**きゅう**きかん",
+      "vi_du": "大学院はもちろん、研究機関への派遣もあると聞いています。 (Nghe nói không chỉ học cao học mà còn có đợt phái cử tới các tổ chức nghiên cứu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::派遣",
+      "kanji": "派遣",
+      "cautruc": null,
+      "doc": "はけん",
+      "han_viet": "PHÁI KHIỂN",
+      "nghia": "phái cử",
+      "doc_marked": "はけん",
+      "vi_du": "忙しい時期は、派遣社員にお願いして業務をサポートしてもらう。 (Vào thời kỳ bận rộn, chúng tôi nhờ các nhân viên phái cử hỗ trợ nghiệp vụ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "出向",
+          "doc": "しゅっこう",
+          "nghia": "điều chuyển sang làm ở nơi khác"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::日時",
+      "kanji": "日時",
+      "cautruc": null,
+      "doc": "にちじ",
+      "han_viet": "NHẬT THỜI",
+      "nghia": "ngày giờ",
+      "doc_marked": "にちじ",
+      "vi_du": "打ち合わせの日時はいかがいたしましょうか。 (Chúng ta chốt ngày giờ buổi họp ra sao nhỉ?)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::家電量販店",
+      "kanji": "家電量販店",
+      "cautruc": null,
+      "doc": "かでんりょうはんてん",
+      "han_viet": "GIA ĐIỆN LƯỢNG PHÁN ĐIẾM",
+      "nghia": "đại lý bán đồ điện tử",
+      "doc_marked": "かでん**りょう**はんてん",
+      "vi_du": "家電量販店で新しいパソコンの価格を比較する。 (Tôi so sánh giá của chiếc máy tính mới tại đại lý bán đồ điện tử.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::立て込む",
+      "kanji": "立て込む",
+      "cautruc": null,
+      "doc": "たてこむ",
+      "han_viet": "LẬP VÀO",
+      "nghia": "bận rộn; bề bộn",
+      "doc_marked": "たてこむ",
+      "vi_du": "少し立て込んでおりまして、空き状況を確認し次第お電話いたします。 (Chúng tôi đang hơi bề bộn việc, ngay sau khi kiểm tra tình trạng trống lịch chúng tôi sẽ gọi lại.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::空き状況",
+      "kanji": "空き状況",
+      "cautruc": null,
+      "doc": "あきじょうきょう",
+      "han_viet": "KHÔNG TRẠNG HUỐNG",
+      "nghia": "tình hình còn trống (lịch trình)",
+      "doc_marked": "あき**じょう****きょう**",
+      "vi_du": "会議室の空き状況をシステムで確認して予約してください。 (Hãy xác nhận tình trạng trống của phòng họp trên hệ thống rồi đặt chỗ nhé.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [],
+      "trai_nghia": []
+    },
+    {
+      "_id": "business-08::大至急",
+      "kanji": "大至急",
+      "cautruc": null,
+      "doc": "だいしきゅう",
+      "han_viet": "ĐẠI CHÍ CẤP",
+      "nghia": "rất khẩn cấp",
+      "doc_marked": "だいし**きゅう**",
+      "vi_du": "クレームの対応なので、大至急お願いします。 (Vì là giải quyết khiếu nại nên xin hãy xử lý khẩn cấp giúp tôi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "至急",
+          "doc": "しきゅう",
+          "nghia": "khẩn cấp"
+        }
+      ],
+      "trai_nghia": []
+    }
+  ]
+}
