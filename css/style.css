@@ -1997,3 +1997,28 @@ mark.exam-note-mark {
 .cov-cell-pct{display:block;font-size:10.5px;color:var(--text-2);margin-top:1px}
 .cov-leader{stroke-width:1.2;stroke-dasharray:3 3;opacity:.8;pointer-events:none}
 .cov-leader-dot{pointer-events:none}
+
+/* ---- Bộ chọn cấp độ (tab "Bộ trong từng cấp") ---- */
+.cov-level-pick{display:flex;align-items:center;gap:6px;margin:0 0 12px}
+.cov-level-lbl{font-size:13px;color:var(--text-2);margin-right:2px}
+.cov-level-btn{padding:5px 14px;border:1px solid var(--border);background:var(--bg-1);color:var(--text-2);border-radius:8px;cursor:pointer;font-size:13px;font-weight:700}
+.cov-level-btn:hover{background:var(--bg-2)}
+.cov-level-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+
+/* ---- Sơ đồ tùy chọn (so sánh ≤3 bộ chính xác) ---- */
+.cov-custom{margin-top:22px;padding-top:18px;border-top:2px dashed var(--border)}
+.cov-custom-picks{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 14px}
+.cov-pick{flex:1;min-width:150px;padding:8px 10px;border:1px solid var(--border);background:var(--bg-1);color:var(--text-1);border-radius:9px;font-size:13px;font-weight:600;cursor:pointer}
+.cov-pick:focus{outline:2px solid var(--accent);outline-offset:-2px}
+.cov-region-badge circle{fill:var(--bg-1);stroke:var(--text-2);stroke-width:1.5;opacity:.92}
+.cov-region-badge text{font-size:12px;font-weight:800;fill:var(--text-1)}
+.cov-region-badge:hover circle{stroke:var(--accent);stroke-width:2.5}
+.cov-region-badge.selected circle{fill:var(--accent);stroke:var(--accent)}
+.cov-region-badge.selected text{fill:#fff}
+.cov-region-list{display:flex;flex-direction:column;gap:4px;margin-bottom:8px}
+.cov-region-item{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 11px;border:1px solid var(--border);background:var(--bg-1);border-radius:9px;cursor:pointer;text-align:left;width:100%}
+.cov-region-item:hover{background:var(--bg-2)}
+.cov-region-item.active{border-color:var(--accent);background:var(--bg-2)}
+.cov-region-name{font-size:12.5px;font-weight:600;color:var(--text-1)}
+.cov-region-num{font-size:13px;font-weight:800;color:var(--accent)}
+.cov-region-detail{margin-top:6px}
