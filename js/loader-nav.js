@@ -193,8 +193,9 @@ function populateDeckPicker() {
   const mimiDecks = App.decks.filter((d) => d.series === "mimi");
   const tangoDecks = App.decks.filter((d) => d.series === "tango");
   const jlptN2Decks = App.decks.filter((d) => ["n2vocab", "n1vocab", "n3vocab"].includes(d.series));
+  const chukyu3Decks = App.decks.filter((d) => d.series === "chukyu3");
   const businessDecks = App.decks.filter((d) => d.series === "business");
-  const otherDecks = App.decks.filter((d) => !["mimi", "tango", "n2vocab", "n1vocab", "n3vocab", "business"].includes(d.series));
+  const otherDecks = App.decks.filter((d) => !["mimi", "tango", "n2vocab", "n1vocab", "n3vocab", "chukyu3", "business"].includes(d.series));
 
   const renderGroup = (label, decks) => {
     if (decks.length === 0) return;
@@ -214,6 +215,7 @@ function populateDeckPicker() {
   renderGroup("📘 Mimikara oboeru", mimiDecks);
   renderGroup("📕 Tango N2", tangoDecks);
   renderGroup("📗 JLPT (N1-N3)", jlptN2Decks);
+  renderGroup("📙 Chuukyuu 3 (N2)", chukyu3Decks);
   renderGroup("💼 Business 会話", businessDecks);
   renderGroup("Tài liệu khác", otherDecks);
 
@@ -481,15 +483,21 @@ function performGlobalSearch(query) {
 function jumpToSearchResult(deckId, wordId) {
   const deck = App.decks.find((d) => d.id === deckId);
   if (!deck) return;
-  switchDeck(deckId); // switchDeck() đã tự gọi initFlashMode() bên trong, xáo lại queue mới
-  // Đưa ĐÚNG từ vừa tìm lên đầu queue (App.flashQueue[0] luôn là thẻ đang hiện,
-  // xem renderFlashCard()) — không cần sửa initFlashMode(), chỉ cần sắp lại
-  // thứ tự hàng đợi sau khi nó đã được tạo.
-  App.flashQueue = [wordId, ...App.flashQueue.filter((id) => id !== wordId)];
-  setMode("flash");
-  renderFlashCard();
+  // Đóng ô search ngay
   document.getElementById("globalSearchResults").classList.add("hidden");
   document.getElementById("globalSearchInput").value = "";
+  // FIX BUG: trước đây gọi switchDeck() rồi sắp thẻ lên đầu NGAY. Nhưng nếu bộ CHƯA
+  // tải, switchDeck() đi nhánh bất đồng bộ và initFlashMode() dựng lại flashQueue
+  // SAU đó (~1-3s) -> ghi đè mất thứ tự ta vừa sắp, nên lần đầu bấm chỉ mở đúng bộ
+  // chứ KHÔNG nhảy tới thẻ; phải search lần 2 (lúc bộ đã tải, switchDeck chạy đồng
+  // bộ) mới trúng. Cách sửa gốc rễ: TẢI ĐẦY ĐỦ bộ TRƯỚC, rồi switchDeck() sẽ đi
+  // nhánh đồng bộ (queue dựng xong hẳn), sau đó sắp thẻ tìm được lên đầu -> chắc ăn.
+  ensureDeckLoaded(deckId).then(() => {
+    switchDeck(deckId);
+    App.flashQueue = [wordId, ...App.flashQueue.filter((id) => id !== wordId)];
+    setMode("flash");
+    renderFlashCard();
+  });
 }
 
 function switchDeck(deckId) {

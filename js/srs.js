@@ -31,6 +31,12 @@ const SRS = (() => {
   const MAX_EASE = 3.5;
   const DEFAULT_EASE = 2.5;
   const GRADUATE_THRESHOLD = 1440; // 1 ngày (phút) — sau ngưỡng này coi là đã "trưởng thành"
+  // Khi QUÊN một từ ĐÃ CHÍN (intervalMin đã >= GRADUATE_THRESHOLD, tức đã tích lũy
+  // tới hàng chục ngày): KHÔNG xóa sạch về 1 phút. Giữ lại phần này của quãng cũ
+  // làm "mốc đã học" để lần nhớ lại kế tiếp mọc lên TỪ ĐÓ (không phải từ 0). 0.5 =
+  // trừ đi một nửa (vừa phải): 90 ngày -> còn 45, 40 ngày -> còn 20. Chỉnh số này
+  // để phạt nặng/nhẹ hơn (thấp hơn = trừ nhiều hơn).
+  const LAPSE_RETAIN = 0.5;
   // "Đã thuộc" — dành cho từ ĐÃ học trước ở nơi khác (Anki/Quizlet/sách giấy...),
   // không muốn đi từng bước Quên→Khó→Dễ như từ hoàn toàn mới. Đẩy thẳng lên mốc
   // RẤT XA (60 ngày) để gần như không xuất hiện lại, nhưng vẫn nằm trong hệ thống
@@ -106,14 +112,33 @@ const SRS = (() => {
     // học rate lại bằng Quên/Khó/Dễ (ví dụ 60 ngày sau từ đó quay lại due), coi như
     // đang ôn THẬT lại, không còn ở trạng thái "đã thuộc, bỏ qua bước" nữa.
     next.mastered = false;
+    // dueMin = số phút TỚI KHI thẻ xuất hiện lại. Thường bằng intervalMin, NHƯNG khi
+    // "quên" từ đã chín thì tách ra: intervalMin (mốc mọc tiếp) vẫn cao, còn dueMin
+    // vẫn ngắn để được ôn lại ngay.
+    let dueMin;
 
     if (rating === "again") {
-      next.intervalMin = MIN_INTERVAL;
       next.ease = Math.max(MIN_EASE, entry.ease - 0.2);
+      if (entry.intervalMin >= GRADUATE_THRESHOLD) {
+        // Từ ĐÃ CHÍN mà nay quên -> chỉ TRỪ BỚT một phần vừa phải (giữ LAPSE_RETAIN),
+        // không reset về 1 phút. intervalMin mới = mốc "đã học" đã giảm, để lần nhớ
+        // lại kế tiếp (Khó/Dễ) nhân LÊN TỪ ĐÓ chứ không từ 0. Vẫn cho gặp lại NGAY
+        // (dueMin = MIN_INTERVAL) để drill lại liền.
+        next.intervalMin = Math.max(GRADUATE_THRESHOLD, Math.round(entry.intervalMin * LAPSE_RETAIN));
+        next.relearning = true;
+        dueMin = MIN_INTERVAL;
+      } else {
+        // Từ còn non (chưa qua 1 ngày) -> quên thì học lại từ đầu như cũ.
+        next.intervalMin = MIN_INTERVAL;
+        next.relearning = false;
+        dueMin = MIN_INTERVAL;
+      }
     } else if (rating === "hard") {
       next.intervalMin =
         entry.intervalMin === 0 ? FIRST_HARD : Math.round(entry.intervalMin * HARD_MULTIPLIER);
       next.ease = Math.max(MIN_EASE, entry.ease - 0.05);
+      next.relearning = false;
+      dueMin = next.intervalMin;
     } else if (rating === "easy") {
       if (entry.intervalMin === 0) {
         next.intervalMin = FIRST_EASY;
@@ -124,14 +149,18 @@ const SRS = (() => {
         next.intervalMin = Math.min(MAX_REVIEW_INTERVAL, Math.round(entry.intervalMin * entry.ease));
       }
       next.ease = Math.min(MAX_EASE, entry.ease + 0.1);
+      next.relearning = false;
+      dueMin = next.intervalMin;
     } else if (rating === "mastered") {
       // Bỏ qua hoàn toàn các bước tăng dần — đẩy thẳng lên mốc rất xa, không đụng
       // tới ease (giữ nguyên, vì đây không phải kết quả của 1 lần ôn thật).
       next.intervalMin = MASTERED_INTERVAL;
       next.mastered = true;
+      next.relearning = false;
+      dueMin = next.intervalMin;
     }
 
-    next.due = now() + next.intervalMin * 60 * 1000;
+    next.due = now() + dueMin * 60 * 1000;
     return next;
   }
 
@@ -176,7 +205,11 @@ const SRS = (() => {
   function previewLabel(progress, wordId, rating) {
     const entry = peekEntry(progress, wordId);
     const next = computeNextEntry(entry, rating);
-    return fmtInterval(next.intervalMin);
+    // Hiện ĐÚNG thời điểm thẻ xuất hiện lại (dựa trên due), không phải intervalMin —
+    // vì khi "quên" từ đã chín, intervalMin (mốc mọc tiếp) vẫn cao nhưng thẻ được
+    // cho gặp lại ngay, nên nút Quên vẫn hiển thị ~1 phút cho đúng thực tế.
+    const dueMin = Math.max(0, Math.round((next.due - now()) / 60000));
+    return fmtInterval(dueMin);
   }
 
   function exportAll() {

@@ -477,10 +477,10 @@ function renderLevelPickerSeriesGrid() {
     if (!bySeries[key]) bySeries[key] = [];
     bySeries[key].push(d);
   });
-  const SERIES_LABELS = { mimi: "Mimikara oboeru", tango: "Tango N2", n2vocab: "JLPT N2", n1vocab: "JLPT N1", n3vocab: "JLPT N3", business: "Business 会話", khac: "Khác" };
-  const SERIES_COLORS = { mimi: "#48c98c", tango: "#ff6b6b", n2vocab: "#a98bff", n1vocab: "#a98bff", n3vocab: "#a98bff", business: "#f0932b", khac: "var(--text-2)" };
+  const SERIES_LABELS = { mimi: "Mimikara oboeru", tango: "Tango N2", n2vocab: "JLPT N2", n1vocab: "JLPT N1", n3vocab: "JLPT N3", chukyu3: "Chuukyuu 3", business: "Business 会話", khac: "Khác" };
+  const SERIES_COLORS = { mimi: "#48c98c", tango: "#ff6b6b", n2vocab: "#a98bff", n1vocab: "#a98bff", n3vocab: "#a98bff", chukyu3: "#20bf9f", business: "#f0932b", khac: "var(--text-2)" };
   // Thứ tự cố định hiển thị: Mimi -> Tango -> JLPT N2 (import N2/N1) -> Business -> Khác
-  const SERIES_ORDER = ["mimi", "tango", "n2vocab", "n1vocab", "n3vocab", "business", "khac"];
+  const SERIES_ORDER = ["mimi", "tango", "n2vocab", "n1vocab", "n3vocab", "chukyu3", "business", "khac"];
 
   const seriesKeys = Object.keys(bySeries).sort((a, b) => SERIES_ORDER.indexOf(a) - SERIES_ORDER.indexOf(b));
   if (!seriesKeys.length) {
