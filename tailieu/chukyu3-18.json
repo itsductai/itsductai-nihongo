@@ -1,0 +1,1111 @@
+{
+  "id": "chukyu3-18",
+  "title": "Chukyu3 - Bài 18",
+  "type": "TUVUNG",
+  "series": "chukyu3",
+  "level": "N2",
+  "private": false,
+  "words": [
+    {
+      "_id": "chukyu3-18::漁村",
+      "kanji": "漁村",
+      "cautruc": null,
+      "doc": "ぎょそん",
+      "han_viet": "",
+      "nghia": "làng chài",
+      "doc_marked": "ぎょそん",
+      "vi_du": "小さな漁村で育つ。(Lớn lên ở làng chài nhỏ.) 漁村の暮らしは静かだ。(Cuộc sống làng chài yên bình.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "漁師町",
+          "doc": "りょうしまち",
+          "nghia": "thị trấn đánh cá"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "農村",
+          "doc": "のうそん",
+          "nghia": "làng nông"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::促す",
+      "kanji": "促す",
+      "cautruc": null,
+      "doc": "うながす",
+      "han_viet": "",
+      "nghia": "thúc đẩy; giục",
+      "doc_marked": "うながす",
+      "vi_du": "注意を促す。(Nhắc nhở; lưu ý.) 成長を促す。(Thúc đẩy sự phát triển.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "促進する",
+          "doc": "そくしんする",
+          "nghia": "thúc đẩy"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "抑える",
+          "doc": "おさえる",
+          "nghia": "kìm hãm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::夕陽",
+      "kanji": "夕陽",
+      "cautruc": null,
+      "doc": "ゆうひ",
+      "han_viet": "",
+      "nghia": "mặt trời chiều",
+      "doc_marked": "**ゆう**ひ",
+      "vi_du": "夕陽が海に沈む。(Mặt trời chiều lặn xuống biển.) 夕陽が美しい。(Nắng chiều thật đẹp.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "入り日",
+          "doc": "いりひ",
+          "nghia": "mặt trời lặn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "朝日",
+          "doc": "あさひ",
+          "nghia": "mặt trời sáng"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::染まる",
+      "kanji": "染まる",
+      "cautruc": null,
+      "doc": "そまる",
+      "han_viet": "",
+      "nghia": "nhuộm màu; bị ảnh hưởng",
+      "doc_marked": "そまる",
+      "vi_du": "空が赤く染まる。(Trời nhuộm đỏ.) 悪い習慣に染まる。(Nhiễm thói quen xấu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "色づく",
+          "doc": "いろづく",
+          "nghia": "chuyển màu"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::口が重い",
+      "kanji": "口が重い",
+      "cautruc": null,
+      "doc": "くちがおもい",
+      "han_viet": "",
+      "nghia": "ít nói; kiệm lời",
+      "doc_marked": "くちがおもい",
+      "vi_du": "彼は口が重い。(Anh ấy ít nói.) 口が重くて本音を言わない。(Kiệm lời, không nói thật lòng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "無口な",
+          "doc": "むくちな",
+          "nghia": "ít nói"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "口が軽い",
+          "doc": "くちがかるい",
+          "nghia": "hớt lẻo; nhiều lời"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::かせぐ",
+      "kanji": "かせぐ",
+      "cautruc": null,
+      "doc": "かせぐ",
+      "han_viet": "",
+      "nghia": "kiếm tiền",
+      "doc_marked": "かせぐ",
+      "vi_du": "働いてお金をかせぐ。(Đi làm kiếm tiền.) 生活費をかせぐ。(Kiếm tiền sinh hoạt.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "収入を得る",
+          "doc": "しゅうにゅうをえる",
+          "nghia": "kiếm thu nhập"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "浪費する",
+          "doc": "ろうひする",
+          "nghia": "tiêu xài phung phí"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::勢い",
+      "kanji": "勢い",
+      "cautruc": null,
+      "doc": "いきおい",
+      "han_viet": "",
+      "nghia": "khí thế; đà",
+      "doc_marked": "いきおい",
+      "vi_du": "勢いよく走り出す。(Chạy đi đầy khí thế.) 火が勢いを増す。(Lửa bùng mạnh thêm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "弾み",
+          "doc": "はずみ",
+          "nghia": "đà; trớn"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::先のこと",
+      "kanji": "先のこと",
+      "cautruc": null,
+      "doc": "さきのこと",
+      "han_viet": "",
+      "nghia": "chuyện tương lai",
+      "doc_marked": "さきのこと",
+      "vi_du": "先のことは分からない。(Không biết trước tương lai.) 先のことを考える。(Nghĩ về sau này.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "将来のこと",
+          "doc": "しょうらいのこと",
+          "nghia": "chuyện tương lai"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "過去のこと",
+          "doc": "かこのこと",
+          "nghia": "chuyện quá khứ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::～たばかりに",
+      "kanji": "～たばかりに",
+      "cautruc": null,
+      "doc": "～たばかりに",
+      "han_viet": "",
+      "nghia": "chỉ vì ...",
+      "doc_marked": "～たばかりに",
+      "vi_du": "油断したばかりに失敗した。(Chỉ vì chủ quan mà hỏng.) 一言言ったばかりに、けんかになった。(Chỉ vì một câu mà cãi nhau.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～せいで",
+          "doc": "～せいで",
+          "nghia": "tại vì ..."
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "～おかげで",
+          "doc": "～おかげで",
+          "nghia": "nhờ ..."
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::水平な",
+      "kanji": "水平な",
+      "cautruc": null,
+      "doc": "すいへいな",
+      "han_viet": "",
+      "nghia": "nằm ngang",
+      "doc_marked": "すい**へい**な",
+      "vi_du": "水平な線を引く。(Kẻ đường ngang.) 板を水平に置く。(Đặt tấm ván nằm ngang.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "平らな",
+          "doc": "たいらな",
+          "nghia": "bằng phẳng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "垂直な",
+          "doc": "すいちょくな",
+          "nghia": "thẳng đứng"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::姿を消す",
+      "kanji": "姿を消す",
+      "cautruc": null,
+      "doc": "すがたをけす",
+      "han_viet": "",
+      "nghia": "biến mất",
+      "doc_marked": "すがたをけす",
+      "vi_du": "彼は突然姿を消した。(Anh ấy đột nhiên biến mất.) 古い店が姿を消す。(Những tiệm cũ biến mất dần.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "いなくなる",
+          "doc": "いなくなる",
+          "nghia": "không còn nữa"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "現れる",
+          "doc": "あらわれる",
+          "nghia": "xuất hiện"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::何もかも",
+      "kanji": "何もかも",
+      "cautruc": null,
+      "doc": "なにもかも",
+      "han_viet": "",
+      "nghia": "tất cả mọi thứ",
+      "doc_marked": "なにもかも",
+      "vi_du": "何もかもうまくいく。(Mọi thứ đều suôn sẻ.) 何もかも失った。(Mất hết tất cả.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "すべて",
+          "doc": "すべて",
+          "nghia": "tất cả"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "何一つ",
+          "doc": "なにひとつ",
+          "nghia": "không một cái gì"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::ぽつりと",
+      "kanji": "ぽつりと",
+      "cautruc": null,
+      "doc": "ぽつりと",
+      "han_viet": "",
+      "nghia": "lặng lẽ; lác đác",
+      "doc_marked": "ぽつりと",
+      "vi_du": "一人ぽつりと立っている。(Đứng lẻ loi một mình.) ぽつりと本音を漏らす。(Buột miệng nói khẽ điều thật lòng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "ぽつんと",
+          "doc": "ぽつんと",
+          "nghia": "đơn độc; lẻ loi"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::農村",
+      "kanji": "農村",
+      "cautruc": null,
+      "doc": "のうそん",
+      "han_viet": "",
+      "nghia": "làng nông; nông thôn",
+      "doc_marked": "**のう**そん",
+      "vi_du": "農村を訪ねる。(Ghé thăm làng quê.) 農村の人口が減る。(Dân số nông thôn giảm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "田舎",
+          "doc": "いなか",
+          "nghia": "vùng quê"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "都会",
+          "doc": "とかい",
+          "nghia": "đô thị"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::事情",
+      "kanji": "事情",
+      "cautruc": null,
+      "doc": "じじょう",
+      "han_viet": "",
+      "nghia": "tình hình; hoàn cảnh",
+      "doc_marked": "じ**じょう**",
+      "vi_du": "家庭の事情で欠席する。(Vắng vì hoàn cảnh gia đình.) 詳しい事情を聞く。(Hỏi rõ hoàn cảnh.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "わけ",
+          "doc": "わけ",
+          "nghia": "lí do; nguyên do"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::減る",
+      "kanji": "減る",
+      "cautruc": null,
+      "doc": "へる",
+      "han_viet": "",
+      "nghia": "giảm",
+      "doc_marked": "へる",
+      "vi_du": "人口が減る。(Dân số giảm.) 体重が減った。(Cân nặng giảm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "減少する",
+          "doc": "げんしょうする",
+          "nghia": "giảm sút"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "増える",
+          "doc": "ふえる",
+          "nghia": "tăng"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::ふるさと",
+      "kanji": "ふるさと",
+      "cautruc": null,
+      "doc": "ふるさと",
+      "han_viet": "",
+      "nghia": "quê hương",
+      "doc_marked": "ふるさと",
+      "vi_du": "ふるさとが恋しい。(Nhớ quê hương.) ふるさとに帰る。(Trở về quê.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "故郷",
+          "doc": "こきょう",
+          "nghia": "cố hương"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::足を運ぶ",
+      "kanji": "足を運ぶ",
+      "cautruc": null,
+      "doc": "あしをはこぶ",
+      "han_viet": "",
+      "nghia": "đích thân đến",
+      "doc_marked": "あしをはこぶ",
+      "vi_du": "わざわざ足を運んでくれた。(Cất công đến tận nơi.) 何度も足を運ぶ。(Đến tận nơi nhiều lần.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "出向く",
+          "doc": "でむく",
+          "nghia": "đích thân đi tới"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::近所",
+      "kanji": "近所",
+      "cautruc": null,
+      "doc": "きんじょ",
+      "han_viet": "",
+      "nghia": "hàng xóm; lân cận",
+      "doc_marked": "きんじょ",
+      "vi_du": "近所に住む友達。(Người bạn ở gần.) 近所づきあいを大切にする。(Coi trọng tình làng nghĩa xóm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "近辺",
+          "doc": "きんぺん",
+          "nghia": "vùng lân cận"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "遠方",
+          "doc": "えんぽう",
+          "nghia": "nơi xa"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::～てならない",
+      "kanji": "～てならない",
+      "cautruc": null,
+      "doc": "～てならない",
+      "han_viet": "",
+      "nghia": "rất ...; ... không thôi",
+      "doc_marked": "～てならない",
+      "vi_du": "将来が心配でならない。(Lo cho tương lai không thôi.) 残念でならない。(Tiếc vô cùng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～てしかたがない",
+          "doc": "～てしかたがない",
+          "nghia": "... không chịu được"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::過疎",
+      "kanji": "過疎",
+      "cautruc": null,
+      "doc": "かそ",
+      "han_viet": "",
+      "nghia": "thưa dân; giảm dân",
+      "doc_marked": "かそ",
+      "vi_du": "過疎が進む村。(Ngôi làng ngày càng vắng người.) 過疎地域を支援する。(Hỗ trợ vùng thưa dân.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "人口減少",
+          "doc": "じんこうげんしょう",
+          "nghia": "sụt giảm dân số"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "過密",
+          "doc": "かみつ",
+          "nghia": "quá đông đúc"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::活性化する",
+      "kanji": "活性化する",
+      "cautruc": null,
+      "doc": "かっせいかする",
+      "han_viet": "",
+      "nghia": "làm sôi động; vực dậy",
+      "doc_marked": "かっ**せい**かする",
+      "vi_du": "地域を活性化する。(Vực dậy địa phương.) 商店街を活性化する。(Làm sôi động khu phố mua sắm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "盛んにする",
+          "doc": "さかんにする",
+          "nghia": "làm cho hưng thịnh"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "衰退する",
+          "doc": "すいたいする",
+          "nghia": "suy thoái"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::地方",
+      "kanji": "地方",
+      "cautruc": null,
+      "doc": "ちほう",
+      "han_viet": "",
+      "nghia": "địa phương; vùng",
+      "doc_marked": "ち**ほう**",
+      "vi_du": "地方に移り住む。(Chuyển về sống ở địa phương.) 地方の特産品。(Đặc sản vùng miền.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "地域",
+          "doc": "ちいき",
+          "nghia": "khu vực"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "中央",
+          "doc": "ちゅうおう",
+          "nghia": "trung ương"
+        },
+        {
+          "kanji": "都会",
+          "doc": "とかい",
+          "nghia": "đô thị"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::自治体",
+      "kanji": "自治体",
+      "cautruc": null,
+      "doc": "じちたい",
+      "han_viet": "",
+      "nghia": "chính quyền địa phương",
+      "doc_marked": "じちたい",
+      "vi_du": "自治体が支援する。(Chính quyền địa phương hỗ trợ.) 地方自治体に相談する。(Bàn với chính quyền địa phương.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "地方公共団体",
+          "doc": "ちほうこうきょうだんたい",
+          "nghia": "cơ quan tự trị địa phương"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::支援",
+      "kanji": "支援",
+      "cautruc": null,
+      "doc": "しえん",
+      "han_viet": "",
+      "nghia": "hỗ trợ",
+      "doc_marked": "しえん",
+      "vi_du": "被災地を支援する。(Hỗ trợ vùng thiên tai.) 資金を支援する。(Hỗ trợ vốn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "援助",
+          "doc": "えんじょ",
+          "nghia": "viện trợ"
+        },
+        {
+          "kanji": "サポート",
+          "doc": "サポート",
+          "nghia": "hỗ trợ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "妨害",
+          "doc": "ぼうがい",
+          "nghia": "cản trở"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::力を入れる",
+      "kanji": "力を入れる",
+      "cautruc": null,
+      "doc": "ちからをいれる",
+      "han_viet": "",
+      "nghia": "dồn sức vào",
+      "doc_marked": "ちからをいれる",
+      "vi_du": "教育に力を入れる。(Chú trọng vào giáo dục.) 新事業に力を入れる。(Dồn sức cho việc mới.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "注力する",
+          "doc": "ちゅうりょくする",
+          "nghia": "dốc sức"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "手を抜く",
+          "doc": "てをぬく",
+          "nghia": "làm qua loa"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::現状",
+      "kanji": "現状",
+      "cautruc": null,
+      "doc": "げんじょう",
+      "han_viet": "",
+      "nghia": "hiện trạng",
+      "doc_marked": "げん**じょう**",
+      "vi_du": "現状を分析する。(Phân tích hiện trạng.) 現状のままでは苦しい。(Cứ như hiện tại thì khó.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "今の状態",
+          "doc": "いまのじょうたい",
+          "nghia": "tình trạng hiện tại"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::調査",
+      "kanji": "調査",
+      "cautruc": null,
+      "doc": "ちょうさ",
+      "han_viet": "",
+      "nghia": "điều tra; khảo sát",
+      "doc_marked": "**ちょう**さ",
+      "vi_du": "市場を調査する。(Khảo sát thị trường.) 事故の原因を調査する。(Điều tra nguyên nhân tai nạn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "リサーチ",
+          "doc": "リサーチ",
+          "nghia": "nghiên cứu; khảo sát"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::呼び戻す",
+      "kanji": "呼び戻す",
+      "cautruc": null,
+      "doc": "よびもどす",
+      "han_viet": "",
+      "nghia": "gọi về",
+      "doc_marked": "よびもどす",
+      "vi_du": "若者を地方に呼び戻す。(Gọi người trẻ về địa phương.) 記憶を呼び戻す。(Gợi lại kí ức.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "呼び返す",
+          "doc": "よびかえす",
+          "nghia": "gọi quay lại"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "追い出す",
+          "doc": "おいだす",
+          "nghia": "đuổi đi"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::呼びかける",
+      "kanji": "呼びかける",
+      "cautruc": null,
+      "doc": "よびかける",
+      "han_viet": "",
+      "nghia": "kêu gọi",
+      "doc_marked": "よびかける",
+      "vi_du": "協力を呼びかける。(Kêu gọi hợp tác.) 節電を呼びかける。(Kêu gọi tiết kiệm điện.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "訴える",
+          "doc": "うったえる",
+          "nghia": "kêu gọi; kiến nghị"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::あこがれる",
+      "kanji": "あこがれる",
+      "cautruc": null,
+      "doc": "あこがれる",
+      "han_viet": "",
+      "nghia": "ngưỡng mộ; khao khát",
+      "doc_marked": "あこがれる",
+      "vi_du": "都会の生活にあこがれる。(Khao khát cuộc sống đô thị.) スターにあこがれる。(Ngưỡng mộ ngôi sao.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "慕う",
+          "doc": "したう",
+          "nghia": "mến mộ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "軽蔑する",
+          "doc": "けいべつする",
+          "nghia": "khinh thường"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::退職",
+      "kanji": "退職",
+      "cautruc": null,
+      "doc": "たいしょく",
+      "han_viet": "",
+      "nghia": "nghỉ việc; nghỉ hưu",
+      "doc_marked": "たいしょく",
+      "vi_du": "定年で退職する。(Nghỉ hưu theo chế độ.) 退職して田舎に帰る。(Nghỉ việc về quê.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "離職",
+          "doc": "りしょく",
+          "nghia": "rời việc"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "就職",
+          "doc": "しゅうしょく",
+          "nghia": "đi làm; xin việc"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::住まい",
+      "kanji": "住まい",
+      "cautruc": null,
+      "doc": "すまい",
+      "han_viet": "",
+      "nghia": "nơi ở",
+      "doc_marked": "すまい",
+      "vi_du": "新しい住まいを探す。(Tìm chỗ ở mới.) 住まいを郊外に移す。(Chuyển nơi ở ra ngoại ô.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "住居",
+          "doc": "じゅうきょ",
+          "nghia": "nơi cư trú"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::就職",
+      "kanji": "就職",
+      "cautruc": null,
+      "doc": "しゅうしょく",
+      "han_viet": "",
+      "nghia": "xin việc; đi làm",
+      "doc_marked": "**しゅう**しょく",
+      "vi_du": "大手企業に就職する。(Vào làm công ty lớn.) 就職活動を始める。(Bắt đầu tìm việc.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "就業",
+          "doc": "しゅうぎょう",
+          "nghia": "đi làm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "退職",
+          "doc": "たいしょく",
+          "nghia": "nghỉ việc"
+        },
+        {
+          "kanji": "失業",
+          "doc": "しつぎょう",
+          "nghia": "thất nghiệp"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::いったん",
+      "kanji": "いったん",
+      "cautruc": null,
+      "doc": "いったん",
+      "han_viet": "",
+      "nghia": "một khi; tạm thời",
+      "doc_marked": "いったん",
+      "vi_du": "いったん決めたら変えない。(Một khi đã quyết thì không đổi.) いったん家に帰る。(Tạm về nhà đã.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "ひとまず",
+          "doc": "ひとまず",
+          "nghia": "tạm thời"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::～としても",
+      "kanji": "～としても",
+      "cautruc": null,
+      "doc": "～としても",
+      "han_viet": "",
+      "nghia": "dù ...",
+      "doc_marked": "～としても",
+      "vi_du": "失敗したとしても後悔しない。(Dù thất bại cũng không hối tiếc.) 安いとしても買わない。(Dù rẻ cũng không mua.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "たとえ～ても",
+          "doc": "たとえ～ても",
+          "nghia": "cho dù ... đi nữa"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::地域",
+      "kanji": "地域",
+      "cautruc": null,
+      "doc": "ちいき",
+      "han_viet": "",
+      "nghia": "khu vực; cộng đồng",
+      "doc_marked": "ちいき",
+      "vi_du": "地域の行事に参加する。(Tham gia sự kiện cộng đồng.) この地域は雪が多い。(Vùng này nhiều tuyết.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "エリア",
+          "doc": "エリア",
+          "nghia": "khu vực"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::根づく",
+      "kanji": "根づく",
+      "cautruc": null,
+      "doc": "ねづく",
+      "han_viet": "",
+      "nghia": "bén rễ; ăn sâu",
+      "doc_marked": "ねづく",
+      "vi_du": "文化が地域に根づく。(Văn hóa bén rễ ở địa phương.) 習慣が根づく。(Thói quen ăn sâu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "定着する",
+          "doc": "ていちゃくする",
+          "nghia": "cắm rễ; ổn định"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::伝統",
+      "kanji": "伝統",
+      "cautruc": null,
+      "doc": "でんとう",
+      "han_viet": "",
+      "nghia": "truyền thống",
+      "doc_marked": "でん**とう**",
+      "vi_du": "伝統を守る。(Giữ gìn truyền thống.) 伝統的な祭り。(Lễ hội truyền thống.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "しきたり",
+          "doc": "しきたり",
+          "nghia": "lệ; tục lệ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "革新",
+          "doc": "かくしん",
+          "nghia": "đổi mới; cách tân"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::少子高齢化",
+      "kanji": "少子高齢化",
+      "cautruc": null,
+      "doc": "しょうしこうれいか",
+      "han_viet": "",
+      "nghia": "già hóa và ít trẻ em",
+      "doc_marked": "**しょう**し**こう****れい**か",
+      "vi_du": "少子高齢化が深刻だ。(Vấn đề ít trẻ, già hóa nghiêm trọng.) 少子高齢化が進む。(Xu hướng ít trẻ, dân số già tăng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "人口の高齢化",
+          "doc": "じんこうのこうれいか",
+          "nghia": "già hóa dân số"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::波",
+      "kanji": "波",
+      "cautruc": null,
+      "doc": "なみ",
+      "han_viet": "",
+      "nghia": "sóng; làn sóng",
+      "doc_marked": "なみ",
+      "vi_du": "高い波が押し寄せる。(Sóng lớn ập vào.) 不況の波が来る。(Làn sóng suy thoái ập đến.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "うねり",
+          "doc": "うねり",
+          "nghia": "sóng cuộn"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::例外",
+      "kanji": "例外",
+      "cautruc": null,
+      "doc": "れいがい",
+      "han_viet": "",
+      "nghia": "ngoại lệ",
+      "doc_marked": "**れい**がい",
+      "vi_du": "例外は認めない。(Không chấp nhận ngoại lệ.) 誰にでも例外はある。(Ai cũng có ngoại lệ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "特例",
+          "doc": "とくれい",
+          "nghia": "trường hợp đặc biệt"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "原則",
+          "doc": "げんそく",
+          "nghia": "nguyên tắc"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::押し寄せる",
+      "kanji": "押し寄せる",
+      "cautruc": null,
+      "doc": "おしよせる",
+      "han_viet": "",
+      "nghia": "ập đến; đổ dồn",
+      "doc_marked": "おしよせる",
+      "vi_du": "観光客が押し寄せる。(Du khách đổ dồn tới.) 不安が押し寄せる。(Lo lắng ập đến.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "殺到する",
+          "doc": "さっとうする",
+          "nghia": "đổ xô; ùa tới"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "引く",
+          "doc": "ひく",
+          "nghia": "rút đi"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::手遅れ",
+      "kanji": "手遅れ",
+      "cautruc": null,
+      "doc": "ておくれ",
+      "han_viet": "",
+      "nghia": "muộn màng",
+      "doc_marked": "ておくれ",
+      "vi_du": "治療が手遅れになる。(Điều trị đã quá muộn.) 手遅れになる前に対策を取る。(Có biện pháp trước khi quá muộn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "遅すぎる",
+          "doc": "おそすぎる",
+          "nghia": "quá muộn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "間に合う",
+          "doc": "まにあう",
+          "nghia": "kịp lúc"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::恐れ",
+      "kanji": "恐れ",
+      "cautruc": null,
+      "doc": "おそれ",
+      "han_viet": "",
+      "nghia": "nỗi sợ; nguy cơ",
+      "doc_marked": "おそれ",
+      "vi_du": "失敗する恐れがある。(Có nguy cơ thất bại.) 恐れを抱く。(Ôm nỗi sợ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "危険性",
+          "doc": "きけんせい",
+          "nghia": "nguy cơ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "安心",
+          "doc": "あんしん",
+          "nghia": "sự yên tâm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::手を打つ",
+      "kanji": "手を打つ",
+      "cautruc": null,
+      "doc": "てをうつ",
+      "han_viet": "",
+      "nghia": "ra tay đối phó; xử trí",
+      "doc_marked": "てをうつ",
+      "vi_du": "早めに手を打つ。(Sớm có biện pháp.) 問題に手を打つ。(Xử trí vấn đề.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "対処する",
+          "doc": "たいしょする",
+          "nghia": "xử lí; đối phó"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "放置する",
+          "doc": "ほうちする",
+          "nghia": "bỏ mặc"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-18::～ないことには",
+      "kanji": "～ないことには",
+      "cautruc": null,
+      "doc": "～ないことには",
+      "han_viet": "",
+      "nghia": "nếu không ... thì",
+      "doc_marked": "～ないことには",
+      "vi_du": "やってみないことには分からない。(Không thử thì không biết.) 資金がないことには始められない。(Không có vốn thì không khởi động được.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～なければ",
+          "doc": "～なければ",
+          "nghia": "nếu không ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-18::片ときも～ない",
+      "kanji": "片ときも～ない",
+      "cautruc": null,
+      "doc": "かたときも～ない",
+      "han_viet": "",
+      "nghia": "không lúc nào ...",
+      "doc_marked": "かたときも～ない",
+      "vi_du": "片ときも忘れない。(Không lúc nào quên.) 片ときもじっとしていない。(Không lúc nào chịu ngồi yên.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "少しも～ない",
+          "doc": "すこしも～ない",
+          "nghia": "không hề ..."
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "いつも",
+          "doc": "いつも",
+          "nghia": "luôn luôn"
+        }
+      ]
+    }
+  ]
+}

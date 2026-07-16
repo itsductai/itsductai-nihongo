@@ -1,0 +1,1124 @@
+{
+  "id": "chukyu3-08",
+  "title": "Chukyu3 - Bài 8",
+  "type": "TUVUNG",
+  "series": "chukyu3",
+  "level": "N2",
+  "private": false,
+  "words": [
+    {
+      "_id": "chukyu3-08::娘",
+      "kanji": "娘",
+      "cautruc": null,
+      "doc": "むすめ",
+      "han_viet": "",
+      "nghia": "con gái",
+      "doc_marked": "むすめ",
+      "vi_du": "娘が今年、成人した。(Con gái tôi năm nay trưởng thành.) 二人の娘がいる。(Tôi có hai cô con gái.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "女の子",
+          "doc": "おんなのこ",
+          "nghia": "con gái; bé gái"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "息子",
+          "doc": "むすこ",
+          "nghia": "con trai"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::許可",
+      "kanji": "許可",
+      "cautruc": null,
+      "doc": "きょか",
+      "han_viet": "",
+      "nghia": "sự cho phép",
+      "doc_marked": "きょか",
+      "vi_du": "入場には許可が必要だ。(Vào cửa cần được cho phép.) 使用の許可を得た。(Đã xin được phép sử dụng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "承認",
+          "doc": "しょうにん",
+          "nghia": "sự phê chuẩn"
+        },
+        {
+          "kanji": "認可",
+          "doc": "にんか",
+          "nghia": "sự chấp thuận"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "禁止",
+          "doc": "きんし",
+          "nghia": "cấm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::求める",
+      "kanji": "求める",
+      "cautruc": null,
+      "doc": "もとめる",
+      "han_viet": "",
+      "nghia": "tìm kiếm; yêu cầu",
+      "doc_marked": "もとめる",
+      "vi_du": "助けを求める。(Cầu cứu; tìm sự giúp đỡ.) 会社は優秀な人材を求めている。(Công ty đang tìm nhân tài giỏi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "要求する",
+          "doc": "ようきゅうする",
+          "nghia": "yêu cầu"
+        },
+        {
+          "kanji": "探す",
+          "doc": "さがす",
+          "nghia": "tìm kiếm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "与える",
+          "doc": "あたえる",
+          "nghia": "cho; trao"
+        },
+        {
+          "kanji": "提供する",
+          "doc": "ていきょうする",
+          "nghia": "cung cấp"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::体つき",
+      "kanji": "体つき",
+      "cautruc": null,
+      "doc": "からだつき",
+      "han_viet": "",
+      "nghia": "vóc dáng",
+      "doc_marked": "からだつき",
+      "vi_du": "がっしりした体つきの男性。(Người đàn ông vóc dáng vạm vỡ.) 体つきが父に似ている。(Vóc dáng giống bố.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "体格",
+          "doc": "たいかく",
+          "nghia": "thể hình"
+        },
+        {
+          "kanji": "スタイル",
+          "doc": "スタイル",
+          "nghia": "dáng người"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::共有する",
+      "kanji": "共有する",
+      "cautruc": null,
+      "doc": "きょうゆうする",
+      "han_viet": "",
+      "nghia": "chia sẻ; dùng chung",
+      "doc_marked": "**きょう****ゆう**する",
+      "vi_du": "情報をチームで共有する。(Chia sẻ thông tin trong nhóm.) 一つの部屋を兄と共有している。(Tôi dùng chung phòng với anh.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "分かち合う",
+          "doc": "わかちあう",
+          "nghia": "cùng chia sẻ"
+        },
+        {
+          "kanji": "シェアする",
+          "doc": "シェアする",
+          "nghia": "chia sẻ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "独占する",
+          "doc": "どくせんする",
+          "nghia": "chiếm riêng"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::区別",
+      "kanji": "区別",
+      "cautruc": null,
+      "doc": "くべつ",
+      "han_viet": "",
+      "nghia": "sự phân biệt",
+      "doc_marked": "くべつ",
+      "vi_du": "善悪を区別する。(Phân biệt thiện ác.) 二つの色の区別がつかない。(Không phân biệt được hai màu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "見分け",
+          "doc": "みわけ",
+          "nghia": "sự phân biệt"
+        },
+        {
+          "kanji": "識別",
+          "doc": "しきべつ",
+          "nghia": "sự nhận biết"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "混同",
+          "doc": "こんどう",
+          "nghia": "sự lẫn lộn"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::男物",
+      "kanji": "男物",
+      "cautruc": null,
+      "doc": "おとこもの",
+      "han_viet": "",
+      "nghia": "đồ nam",
+      "doc_marked": "おとこもの",
+      "vi_du": "男物のかばんを買う。(Mua chiếc túi đồ nam.) これは男物の時計だ。(Đây là đồng hồ nam.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "紳士用",
+          "doc": "しんしよう",
+          "nghia": "dành cho nam giới"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "女物",
+          "doc": "おんなもの",
+          "nghia": "đồ nữ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::描く",
+      "kanji": "描く",
+      "cautruc": null,
+      "doc": "えがく",
+      "han_viet": "",
+      "nghia": "vẽ; khắc họa",
+      "doc_marked": "えがく",
+      "vi_du": "未来の自分を思い描く。(Hình dung bản thân trong tương lai.) 小説家が人間の心を描く。(Nhà văn khắc họa nội tâm con người.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "描写する",
+          "doc": "びょうしゃする",
+          "nghia": "miêu tả"
+        },
+        {
+          "kanji": "表現する",
+          "doc": "ひょうげんする",
+          "nghia": "biểu đạt"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::リボン",
+      "kanji": "リボン",
+      "cautruc": null,
+      "doc": "リボン",
+      "han_viet": "",
+      "nghia": "ruy băng; nơ",
+      "doc_marked": "リボン",
+      "vi_du": "髪にリボンをつける。(Buộc nơ lên tóc.) 箱にリボンをかける。(Thắt nơ lên hộp.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "ちょう結び",
+          "doc": "ちょうむすび",
+          "nghia": "nút thắt nơ"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::いったい",
+      "kanji": "いったい",
+      "cautruc": null,
+      "doc": "いったい",
+      "han_viet": "",
+      "nghia": "rốt cuộc (là gì/thế nào)",
+      "doc_marked": "いったい",
+      "vi_du": "いったい何が起きたのか。(Rốt cuộc đã xảy ra chuyện gì?) いったいどうすればいいの。(Rốt cuộc phải làm sao đây?)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "一体全体",
+          "doc": "いったいぜんたい",
+          "nghia": "rốt cuộc là (nhấn mạnh)"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::基準",
+      "kanji": "基準",
+      "cautruc": null,
+      "doc": "きじゅん",
+      "han_viet": "",
+      "nghia": "tiêu chuẩn; chuẩn mực",
+      "doc_marked": "きじゅん",
+      "vi_du": "合格の基準を満たす。(Đạt tiêu chuẩn đỗ.) 判断の基準がはっきりしない。(Chuẩn để đánh giá không rõ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "標準",
+          "doc": "ひょうじゅん",
+          "nghia": "tiêu chuẩn"
+        },
+        {
+          "kanji": "ものさし",
+          "doc": "ものさし",
+          "nghia": "thước đo"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::いつの間にか",
+      "kanji": "いつの間にか",
+      "cautruc": null,
+      "doc": "いつのまにか",
+      "han_viet": "",
+      "nghia": "tự lúc nào không hay",
+      "doc_marked": "いつのまにか",
+      "vi_du": "いつの間にか日が暮れていた。(Trời tối tự lúc nào không hay.) いつの間にか眠っていた。(Tôi ngủ mất từ lúc nào không biết.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "知らないうちに",
+          "doc": "しらないうちに",
+          "nghia": "trong lúc không hay"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::身につく",
+      "kanji": "身につく",
+      "cautruc": null,
+      "doc": "みにつく",
+      "han_viet": "",
+      "nghia": "thấm; thành thạo (kĩ năng)",
+      "doc_marked": "みにつく",
+      "vi_du": "習慣が身につく。(Thói quen ăn sâu vào người.) 練習して技術が身についた。(Luyện tập nên đã thành thạo kĩ thuật.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "習得する",
+          "doc": "しゅうとくする",
+          "nghia": "học được; nắm được"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "忘れる",
+          "doc": "わすれる",
+          "nghia": "quên"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::～ようがない",
+      "kanji": "～ようがない",
+      "cautruc": null,
+      "doc": "～ようがない",
+      "han_viet": "",
+      "nghia": "không có cách nào để ...",
+      "doc_marked": "～ようがない",
+      "vi_du": "連絡先が分からず、伝えようがない。(Không biết liên lạc nên chẳng có cách báo.) 直しようがないほど壊れた。(Hỏng đến mức không sửa được.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～ようもない",
+          "doc": "～ようもない",
+          "nghia": "không thể nào ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::年代",
+      "kanji": "年代",
+      "cautruc": null,
+      "doc": "ねんだい",
+      "han_viet": "",
+      "nghia": "thế hệ; niên đại",
+      "doc_marked": "ねんだい",
+      "vi_du": "若い年代に人気がある。(Được thế hệ trẻ ưa thích.) この曲は50年代のものだ。(Bài này thuộc thập niên 50.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "世代",
+          "doc": "せだい",
+          "nghia": "thế hệ"
+        },
+        {
+          "kanji": "時代",
+          "doc": "じだい",
+          "nghia": "thời đại"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::～にとって",
+      "kanji": "～にとって",
+      "cautruc": null,
+      "doc": "～にとって",
+      "han_viet": "",
+      "nghia": "đối với ...",
+      "doc_marked": "～にとって",
+      "vi_du": "私にとって家族が一番だ。(Đối với tôi, gia đình là số một.) 子供にとって遊びは大切だ。(Chơi rất quan trọng đối với trẻ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～にしてみれば",
+          "doc": "～にしてみれば",
+          "nghia": "đối với ...; theo góc nhìn của ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::とても～ない",
+      "kanji": "とても～ない",
+      "cautruc": null,
+      "doc": "とても～ない",
+      "han_viet": "",
+      "nghia": "không thể nào ...",
+      "doc_marked": "とても～ない",
+      "vi_du": "この量はとても食べきれない。(Lượng này không thể nào ăn hết.) 今日中にはとても終わらない。(Trong hôm nay không tài nào xong.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "どうしても～ない",
+          "doc": "どうしても～ない",
+          "nghia": "dù thế nào cũng không ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::理解する",
+      "kanji": "理解する",
+      "cautruc": null,
+      "doc": "りかいする",
+      "han_viet": "",
+      "nghia": "hiểu",
+      "doc_marked": "りかいする",
+      "vi_du": "彼の気持ちを理解する。(Hiểu tâm trạng của anh ấy.) 説明を聞いてやっと理解した。(Nghe giải thích mới hiểu ra.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "分かる",
+          "doc": "わかる",
+          "nghia": "hiểu"
+        },
+        {
+          "kanji": "把握する",
+          "doc": "はあくする",
+          "nghia": "nắm bắt"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "誤解する",
+          "doc": "ごかいする",
+          "nghia": "hiểu lầm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::全員",
+      "kanji": "全員",
+      "cautruc": null,
+      "doc": "ぜんいん",
+      "han_viet": "",
+      "nghia": "toàn thể; tất cả mọi người",
+      "doc_marked": "ぜんいん",
+      "vi_du": "クラス全員が合格した。(Cả lớp đều đỗ.) 全員で写真を撮る。(Chụp ảnh tất cả mọi người.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "皆",
+          "doc": "みんな",
+          "nghia": "mọi người"
+        },
+        {
+          "kanji": "全体",
+          "doc": "ぜんたい",
+          "nghia": "toàn bộ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "一部",
+          "doc": "いちぶ",
+          "nghia": "một phần"
+        },
+        {
+          "kanji": "個人",
+          "doc": "こじん",
+          "nghia": "cá nhân"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::顔をそろえる",
+      "kanji": "顔をそろえる",
+      "cautruc": null,
+      "doc": "かおをそろえる",
+      "han_viet": "",
+      "nghia": "tề tựu đông đủ",
+      "doc_marked": "かおをそろえる",
+      "vi_du": "家族全員が顔をそろえた。(Cả gia đình tề tựu đông đủ.) 珍しく全員が顔をそろえた。(Hiếm khi mọi người có mặt đủ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "勢ぞろいする",
+          "doc": "せいぞろいする",
+          "nghia": "tụ họp đông đủ"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::口癖",
+      "kanji": "口癖",
+      "cautruc": null,
+      "doc": "くちぐせ",
+      "han_viet": "",
+      "nghia": "câu cửa miệng",
+      "doc_marked": "くちぐせ",
+      "vi_du": "「大丈夫」が彼の口癖だ。(\"Không sao\" là câu cửa miệng của anh ấy.) 口癖はなかなか直らない。(Câu cửa miệng khó bỏ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "決まり文句",
+          "doc": "きまりもんく",
+          "nghia": "câu nói quen dùng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::時には",
+      "kanji": "時には",
+      "cautruc": null,
+      "doc": "ときには",
+      "han_viet": "",
+      "nghia": "đôi khi; có lúc",
+      "doc_marked": "ときには",
+      "vi_du": "時には休むことも大切だ。(Đôi khi nghỉ ngơi cũng quan trọng.) 時には厳しく叱る。(Có lúc mắng nghiêm khắc.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "たまに",
+          "doc": "たまに",
+          "nghia": "thỉnh thoảng"
+        },
+        {
+          "kanji": "時折",
+          "doc": "ときおり",
+          "nghia": "đôi lúc"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "いつも",
+          "doc": "いつも",
+          "nghia": "luôn luôn"
+        },
+        {
+          "kanji": "常に",
+          "doc": "つねに",
+          "nghia": "thường xuyên"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::長男",
+      "kanji": "長男",
+      "cautruc": null,
+      "doc": "ちょうなん",
+      "han_viet": "",
+      "nghia": "con trai cả",
+      "doc_marked": "**ちょう**なん",
+      "vi_du": "彼は長男として育った。(Anh ấy lớn lên với vai con cả.) 長男が家業を継ぐ。(Con trai cả nối nghiệp nhà.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "総領",
+          "doc": "そうりょう",
+          "nghia": "con trưởng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "末っ子",
+          "doc": "すえっこ",
+          "nghia": "con út"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::決まる",
+      "kanji": "決まる",
+      "cautruc": null,
+      "doc": "きまる",
+      "han_viet": "",
+      "nghia": "được quyết định; định đoạt",
+      "doc_marked": "きまる",
+      "vi_du": "会議の日が決まった。(Ngày họp đã được định.) 就職先が決まってほっとした。(Chốt được chỗ làm nên nhẹ nhõm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "定まる",
+          "doc": "さだまる",
+          "nghia": "được ấn định"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "未定",
+          "doc": "みてい",
+          "nghia": "chưa định"
+        },
+        {
+          "kanji": "迷う",
+          "doc": "まよう",
+          "nghia": "phân vân"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::首を長くする",
+      "kanji": "首を長くする",
+      "cautruc": null,
+      "doc": "くびをながくする",
+      "han_viet": "",
+      "nghia": "mòn mỏi trông chờ",
+      "doc_marked": "くびをながくする",
+      "vi_du": "合格の知らせを首を長くして待つ。(Mòn mỏi chờ tin đỗ.) 子供は遠足を首を長くして待っていた。(Bọn trẻ háo hức chờ dã ngoại.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "待ちわびる",
+          "doc": "まちわびる",
+          "nghia": "chờ đợi mòn mỏi"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::わけ",
+      "kanji": "わけ",
+      "cautruc": null,
+      "doc": "わけ",
+      "han_viet": "",
+      "nghia": "lí do; lẽ",
+      "doc_marked": "わけ",
+      "vi_du": "泣いているわけを聞く。(Hỏi lí do khóc.) 遅れたのにはわけがある。(Việc đến trễ là có lí do.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "理由",
+          "doc": "りゆう",
+          "nghia": "lí do"
+        },
+        {
+          "kanji": "事情",
+          "doc": "じじょう",
+          "nghia": "hoàn cảnh; lí do"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::とうとう",
+      "kanji": "とうとう",
+      "cautruc": null,
+      "doc": "とうとう",
+      "han_viet": "",
+      "nghia": "cuối cùng; rốt cuộc",
+      "doc_marked": "とうとう",
+      "vi_du": "とうとう完成した。(Cuối cùng cũng hoàn thành.) 待ったが、とうとう来なかった。(Chờ mãi nhưng rốt cuộc không tới.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "ついに",
+          "doc": "ついに",
+          "nghia": "cuối cùng"
+        },
+        {
+          "kanji": "ようやく",
+          "doc": "ようやく",
+          "nghia": "rốt cuộc; mãi mới"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::聞かずじまい",
+      "kanji": "聞かずじまい",
+      "cautruc": null,
+      "doc": "きかずじまい",
+      "han_viet": "",
+      "nghia": "rốt cuộc không hỏi được",
+      "doc_marked": "きかずじまい",
+      "vi_du": "忙しくて、聞かずじまいになった。(Bận quá nên rốt cuộc không hỏi.) 名前を聞かずじまいだった。(Cuối cùng không hỏi được tên.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～ないままになる",
+          "doc": "～ないままになる",
+          "nghia": "cứ để nguyên không làm gì"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::何となく",
+      "kanji": "何となく",
+      "cautruc": null,
+      "doc": "なんとなく",
+      "han_viet": "",
+      "nghia": "không hiểu sao; mơ hồ",
+      "doc_marked": "なんとなく",
+      "vi_du": "何となく気分が悪い。(Không hiểu sao thấy khó chịu.) 何となく彼のことが気になる。(Chẳng hiểu sao cứ để ý anh ấy.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "なぜか",
+          "doc": "なぜか",
+          "nghia": "không rõ vì sao"
+        },
+        {
+          "kanji": "漠然と",
+          "doc": "ばくぜんと",
+          "nghia": "một cách mơ hồ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "はっきりと",
+          "doc": "はっきりと",
+          "nghia": "một cách rõ ràng"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::納得する",
+      "kanji": "納得する",
+      "cautruc": null,
+      "doc": "なっとくする",
+      "han_viet": "",
+      "nghia": "thông; chấp nhận",
+      "doc_marked": "なっとくする",
+      "vi_du": "説明を聞いて納得した。(Nghe giải thích tôi đã thông.) どうしても納得できない。(Dù sao cũng không chấp nhận được.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "理解する",
+          "doc": "りかいする",
+          "nghia": "hiểu"
+        },
+        {
+          "kanji": "得心する",
+          "doc": "とくしんする",
+          "nghia": "tâm phục"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "反発する",
+          "doc": "はんぱつする",
+          "nghia": "phản đối"
+        },
+        {
+          "kanji": "疑問に思う",
+          "doc": "ぎもんにおもう",
+          "nghia": "thấy nghi ngờ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::派手な",
+      "kanji": "派手な",
+      "cautruc": null,
+      "doc": "はでな",
+      "han_viet": "",
+      "nghia": "sặc sỡ; hào nhoáng",
+      "doc_marked": "はでな",
+      "vi_du": "派手な服を着る。(Mặc đồ sặc sỡ.) 派手に転んでしまった。(Tôi ngã một cú rõ đau.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "華やかな",
+          "doc": "はなやかな",
+          "nghia": "lộng lẫy"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "地味な",
+          "doc": "じみな",
+          "nghia": "giản dị; trơn"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::身につける",
+      "kanji": "身につける",
+      "cautruc": null,
+      "doc": "みにつける",
+      "han_viet": "",
+      "nghia": "mặc lên người; học được",
+      "doc_marked": "みにつける",
+      "vi_du": "スーツを身につける。(Mặc bộ vest.) 外国語を身につける。(Học được một ngoại ngữ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "着る",
+          "doc": "きる",
+          "nghia": "mặc"
+        },
+        {
+          "kanji": "習得する",
+          "doc": "しゅうとくする",
+          "nghia": "học được"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "脱ぐ",
+          "doc": "ぬぐ",
+          "nghia": "cởi"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::～たところ",
+      "kanji": "～たところ",
+      "cautruc": null,
+      "doc": "～たところ",
+      "han_viet": "",
+      "nghia": "khi (vừa) ...; kết quả là",
+      "doc_marked": "～たところ",
+      "vi_du": "調べたところ、間違いが見つかった。(Khi kiểm tra thì phát hiện lỗi.) 問い合わせたところ、在庫はなかった。(Hỏi thì hết hàng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～た結果",
+          "doc": "～たけっか",
+          "nghia": "kết quả của việc ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::くせに",
+      "kanji": "くせに",
+      "cautruc": null,
+      "doc": "くせに",
+      "han_viet": "",
+      "nghia": "thế mà; vậy mà (chê trách)",
+      "doc_marked": "くせに",
+      "vi_du": "知っているくせに教えてくれない。(Biết thế mà không chỉ.) 子供のくせに生意気だ。(Trẻ con vậy mà hỗn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "のに",
+          "doc": "のに",
+          "nghia": "vậy mà"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::仲間",
+      "kanji": "仲間",
+      "cautruc": null,
+      "doc": "なかま",
+      "han_viet": "",
+      "nghia": "bạn; đồng đội",
+      "doc_marked": "なかま",
+      "vi_du": "仲間と力を合わせる。(Cùng đồng đội chung sức.) 新しい仲間が増えた。(Có thêm bạn mới.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "同僚",
+          "doc": "どうりょう",
+          "nghia": "đồng nghiệp"
+        },
+        {
+          "kanji": "友達",
+          "doc": "ともだち",
+          "nghia": "bạn bè"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "よそ者",
+          "doc": "よそもの",
+          "nghia": "người ngoài"
+        },
+        {
+          "kanji": "敵",
+          "doc": "てき",
+          "nghia": "kẻ địch"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::からかう",
+      "kanji": "からかう",
+      "cautruc": null,
+      "doc": "からかう",
+      "han_viet": "",
+      "nghia": "trêu chọc; ghẹo",
+      "doc_marked": "からかう",
+      "vi_du": "友達をからかって怒らせた。(Trêu bạn làm nó giận.) 冗談でからかっただけだ。(Chỉ đùa ghẹo thôi mà.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "いじる",
+          "doc": "いじる",
+          "nghia": "chọc; ghẹo"
+        },
+        {
+          "kanji": "冷やかす",
+          "doc": "ひやかす",
+          "nghia": "chọc ghẹo"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::経験",
+      "kanji": "経験",
+      "cautruc": null,
+      "doc": "けいけん",
+      "han_viet": "",
+      "nghia": "kinh nghiệm; trải nghiệm",
+      "doc_marked": "**けい**けん",
+      "vi_du": "貴重な経験をした。(Tôi có trải nghiệm quý.) 経験を積んで成長する。(Tích lũy kinh nghiệm mà trưởng thành.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "体験",
+          "doc": "たいけん",
+          "nghia": "trải nghiệm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "未経験",
+          "doc": "みけいけん",
+          "nghia": "chưa có kinh nghiệm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::ちゃんと",
+      "kanji": "ちゃんと",
+      "cautruc": null,
+      "doc": "ちゃんと",
+      "han_viet": "",
+      "nghia": "tử tế; đàng hoàng; đầy đủ",
+      "doc_marked": "ちゃんと",
+      "vi_du": "ちゃんと勉強しなさい。(Học hành cho đàng hoàng vào.) 約束はちゃんと守る。(Giữ lời hứa đầy đủ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "きちんと",
+          "doc": "きちんと",
+          "nghia": "chỉnh chu"
+        },
+        {
+          "kanji": "しっかり",
+          "doc": "しっかり",
+          "nghia": "kĩ càng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "いい加減に",
+          "doc": "いいかげんに",
+          "nghia": "qua loa; ẩu"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::男性用",
+      "kanji": "男性用",
+      "cautruc": null,
+      "doc": "だんせいよう",
+      "han_viet": "",
+      "nghia": "dành cho nam giới",
+      "doc_marked": "だん**せい****よう**",
+      "vi_du": "男性用のトイレはあちらだ。(Nhà vệ sinh nam ở đằng kia.) これは男性用の商品だ。(Đây là sản phẩm dành cho nam.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "男物",
+          "doc": "おとこもの",
+          "nghia": "đồ nam"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "女性用",
+          "doc": "じょせいよう",
+          "nghia": "dành cho nữ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::個性",
+      "kanji": "個性",
+      "cautruc": null,
+      "doc": "こせい",
+      "han_viet": "",
+      "nghia": "cá tính",
+      "doc_marked": "こ**せい**",
+      "vi_du": "一人一人の個性を大切にする。(Trân trọng cá tính từng người.) 個性を生かした作品だ。(Tác phẩm phát huy cá tính.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "特徴",
+          "doc": "とくちょう",
+          "nghia": "đặc trưng"
+        },
+        {
+          "kanji": "持ち味",
+          "doc": "もちあじ",
+          "nghia": "nét riêng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "平凡",
+          "doc": "へいぼん",
+          "nghia": "tầm thường; không nổi bật"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::なるほど",
+      "kanji": "なるほど",
+      "cautruc": null,
+      "doc": "なるほど",
+      "han_viet": "",
+      "nghia": "quả thật; ra vậy",
+      "doc_marked": "なるほど",
+      "vi_du": "なるほど、そういうことか。(Ra là vậy.) なるほど、彼の言う通りだ。(Quả đúng như anh ấy nói.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "たしかに",
+          "doc": "たしかに",
+          "nghia": "đúng là"
+        },
+        {
+          "kanji": "その通り",
+          "doc": "そのとおり",
+          "nghia": "đúng vậy"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-08::知らず知らずのうちに",
+      "kanji": "知らず知らずのうちに",
+      "cautruc": null,
+      "doc": "しらずしらずのうちに",
+      "han_viet": "",
+      "nghia": "một cách vô thức",
+      "doc_marked": "しらずしらずのうちに",
+      "vi_du": "知らず知らずのうちに口癖がうつった。(Vô thức bị lây câu cửa miệng.) 知らず知らずのうちに涙が出た。(Nước mắt tự trào ra lúc nào không hay.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "無意識に",
+          "doc": "むいしきに",
+          "nghia": "một cách vô thức"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "意識的に",
+          "doc": "いしきてきに",
+          "nghia": "một cách có ý thức"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::当たり前",
+      "kanji": "当たり前",
+      "cautruc": null,
+      "doc": "あたりまえ",
+      "han_viet": "",
+      "nghia": "đương nhiên; lẽ thường",
+      "doc_marked": "あたりまえ",
+      "vi_du": "あいさつをするのは当たり前だ。(Chào hỏi là chuyện đương nhiên.) 努力して成功するのは当たり前だ。(Nỗ lực rồi thành công là lẽ thường.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "当然",
+          "doc": "とうぜん",
+          "nghia": "đương nhiên"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "例外",
+          "doc": "れいがい",
+          "nghia": "ngoại lệ"
+        },
+        {
+          "kanji": "特別",
+          "doc": "とくべつ",
+          "nghia": "đặc biệt"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-08::思い込む",
+      "kanji": "思い込む",
+      "cautruc": null,
+      "doc": "おもいこむ",
+      "han_viet": "",
+      "nghia": "đinh ninh; ngỡ là",
+      "doc_marked": "おもいこむ",
+      "vi_du": "彼が犯人だと思い込んでいた。(Tôi cứ đinh ninh anh ấy là thủ phạm.) だめだと思い込まないで。(Đừng đinh ninh là không được.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "決めつける",
+          "doc": "きめつける",
+          "nghia": "phán chắc; áp đặt"
+        }
+      ],
+      "trai_nghia": []
+    }
+  ]
+}

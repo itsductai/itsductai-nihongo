@@ -1,0 +1,1107 @@
+{
+  "id": "chukyu3-17",
+  "title": "Chukyu3 - Bài 17",
+  "type": "TUVUNG",
+  "series": "chukyu3",
+  "level": "N2",
+  "private": false,
+  "words": [
+    {
+      "_id": "chukyu3-17::長生き",
+      "kanji": "長生き",
+      "cautruc": null,
+      "doc": "ながいき",
+      "han_viet": "",
+      "nghia": "sống lâu",
+      "doc_marked": "ながいき",
+      "vi_du": "祖母は長生きした。(Bà tôi sống thọ.) 長生きの秘訣を聞く。(Hỏi bí quyết sống lâu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "長寿",
+          "doc": "ちょうじゅ",
+          "nghia": "trường thọ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "早死に",
+          "doc": "はやじに",
+          "nghia": "chết yểu"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::かなえる",
+      "kanji": "かなえる",
+      "cautruc": null,
+      "doc": "かなえる",
+      "han_viet": "",
+      "nghia": "thực hiện (ước mơ)",
+      "doc_marked": "かなえる",
+      "vi_du": "夢をかなえる。(Thực hiện ước mơ.) 願いをかなえてくれた。(Đã giúp tôi toại nguyện.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "実現する",
+          "doc": "じつげんする",
+          "nghia": "thực hiện"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "あきらめる",
+          "doc": "あきらめる",
+          "nghia": "từ bỏ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::医療",
+      "kanji": "医療",
+      "cautruc": null,
+      "doc": "いりょう",
+      "han_viet": "",
+      "nghia": "y tế",
+      "doc_marked": "い**りょう**",
+      "vi_du": "医療が進歩する。(Y tế tiến bộ.) 医療費が高い。(Chi phí y tế cao.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "医学",
+          "doc": "いがく",
+          "nghia": "y học"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::目覚ましい",
+      "kanji": "目覚ましい",
+      "cautruc": null,
+      "doc": "めざましい",
+      "han_viet": "",
+      "nghia": "đáng chú ý; đột phá",
+      "doc_marked": "めざましい",
+      "vi_du": "目覚ましい進歩を遂げる。(Đạt tiến bộ vượt bậc.) 目覚ましい活躍を見せる。(Thể hiện phong độ nổi bật.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "著しい",
+          "doc": "いちじるしい",
+          "nghia": "rõ rệt; đáng kể"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "わずかな",
+          "doc": "わずかな",
+          "nghia": "ít ỏi"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::遂げる",
+      "kanji": "遂げる",
+      "cautruc": null,
+      "doc": "とげる",
+      "han_viet": "",
+      "nghia": "đạt được (thành tựu)",
+      "doc_marked": "とげる",
+      "vi_du": "成長を遂げる。(Đạt được sự trưởng thành.) 目的を遂げる。(Đạt mục đích.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "成し遂げる",
+          "doc": "なしとげる",
+          "nghia": "hoàn thành trọn vẹn"
+        },
+        {
+          "kanji": "達成する",
+          "doc": "たっせいする",
+          "nghia": "đạt được"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "失敗する",
+          "doc": "しっぱいする",
+          "nghia": "thất bại"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::救う",
+      "kanji": "救う",
+      "cautruc": null,
+      "doc": "すくう",
+      "han_viet": "",
+      "nghia": "cứu",
+      "doc_marked": "すくう",
+      "vi_du": "命を救う。(Cứu mạng.) 多くの人を救った。(Đã cứu nhiều người.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "助ける",
+          "doc": "たすける",
+          "nghia": "cứu giúp"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "見捨てる",
+          "doc": "みすてる",
+          "nghia": "bỏ mặc"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::助かる",
+      "kanji": "助かる",
+      "cautruc": null,
+      "doc": "たすかる",
+      "han_viet": "",
+      "nghia": "được cứu; đỡ đần",
+      "doc_marked": "たすかる",
+      "vi_du": "手伝ってもらって助かった。(Được giúp nên đỡ hẳn.) 早く見つかって助かった。(May mà tìm được sớm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "救われる",
+          "doc": "すくわれる",
+          "nghia": "được cứu"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "困る",
+          "doc": "こまる",
+          "nghia": "gặp khó khăn"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::治す",
+      "kanji": "治す",
+      "cautruc": null,
+      "doc": "なおす",
+      "han_viet": "",
+      "nghia": "chữa (bệnh)",
+      "doc_marked": "なおす",
+      "vi_du": "病気を治す。(Chữa bệnh.) 早く治して仕事に戻る。(Chữa nhanh để quay lại làm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "治療する",
+          "doc": "ちりょうする",
+          "nghia": "điều trị"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "悪化させる",
+          "doc": "あっかさせる",
+          "nghia": "làm nặng thêm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::平均",
+      "kanji": "平均",
+      "cautruc": null,
+      "doc": "へいきん",
+      "han_viet": "",
+      "nghia": "trung bình",
+      "doc_marked": "**へい**きん",
+      "vi_du": "平均点を計算する。(Tính điểm trung bình.) 平均寿命が延びる。(Tuổi thọ trung bình tăng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "平均値",
+          "doc": "へいきんち",
+          "nghia": "giá trị trung bình"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "極端",
+          "doc": "きょくたん",
+          "nghia": "cực đoan"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::寿命",
+      "kanji": "寿命",
+      "cautruc": null,
+      "doc": "じゅみょう",
+      "han_viet": "",
+      "nghia": "tuổi thọ",
+      "doc_marked": "じゅ**みょう**",
+      "vi_du": "日本人の寿命は長い。(Người Nhật tuổi thọ cao.) 電池の寿命が切れた。(Pin đã hết tuổi thọ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "命の長さ",
+          "doc": "いのちのながさ",
+          "nghia": "độ dài sinh mệnh"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::伸び",
+      "kanji": "伸び",
+      "cautruc": null,
+      "doc": "のび",
+      "han_viet": "",
+      "nghia": "sự tăng trưởng; kéo dài",
+      "doc_marked": "のび",
+      "vi_du": "売り上げの伸びが大きい。(Doanh thu tăng mạnh.) 記録の伸びが止まった。(Kỉ lục ngừng tăng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "成長",
+          "doc": "せいちょう",
+          "nghia": "tăng trưởng"
+        },
+        {
+          "kanji": "増加",
+          "doc": "ぞうか",
+          "nghia": "gia tăng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "減少",
+          "doc": "げんしょう",
+          "nghia": "giảm sút"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::明らかな",
+      "kanji": "明らかな",
+      "cautruc": null,
+      "doc": "あきらかな",
+      "han_viet": "",
+      "nghia": "rõ ràng; hiển nhiên",
+      "doc_marked": "あきらかな",
+      "vi_du": "原因は明らかだ。(Nguyên nhân đã rõ.) 明らかな間違いだ。(Là lỗi rành rành.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "明白な",
+          "doc": "めいはくな",
+          "nghia": "rành mạch"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "あいまいな",
+          "doc": "あいまいな",
+          "nghia": "mơ hồ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::高齢",
+      "kanji": "高齢",
+      "cautruc": null,
+      "doc": "こうれい",
+      "han_viet": "",
+      "nghia": "cao tuổi",
+      "doc_marked": "**こう****れい**",
+      "vi_du": "高齢の両親を介護する。(Chăm sóc cha mẹ già.) 高齢のドライバーが増える。(Tài xế cao tuổi tăng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "年配",
+          "doc": "ねんぱい",
+          "nghia": "có tuổi"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "若年",
+          "doc": "じゃくねん",
+          "nghia": "trẻ tuổi"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::高齢化",
+      "kanji": "高齢化",
+      "cautruc": null,
+      "doc": "こうれいか",
+      "han_viet": "",
+      "nghia": "già hóa (dân số)",
+      "doc_marked": "**こう****れい**か",
+      "vi_du": "社会の高齢化が進む。(Xã hội già hóa.) 高齢化に対応する。(Ứng phó với già hóa.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "高齢社会化",
+          "doc": "こうれいしゃかいか",
+          "nghia": "già hóa xã hội"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::生きる",
+      "kanji": "生きる",
+      "cautruc": null,
+      "doc": "いきる",
+      "han_viet": "",
+      "nghia": "sống",
+      "doc_marked": "いきる",
+      "vi_du": "精一杯生きる。(Sống hết mình.) 人は一人では生きられない。(Người ta không thể sống một mình.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "暮らす",
+          "doc": "くらす",
+          "nghia": "sinh sống"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "死ぬ",
+          "doc": "しぬ",
+          "nghia": "chết"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::問う",
+      "kanji": "問う",
+      "cautruc": null,
+      "doc": "とう",
+      "han_viet": "",
+      "nghia": "hỏi; truy vấn",
+      "doc_marked": "とう",
+      "vi_du": "責任を問う。(Truy cứu trách nhiệm.) 意義を問う声が上がる。(Có tiếng chất vấn về ý nghĩa.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "尋ねる",
+          "doc": "たずねる",
+          "nghia": "hỏi han"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "答える",
+          "doc": "こたえる",
+          "nghia": "trả lời"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::状況",
+      "kanji": "状況",
+      "cautruc": null,
+      "doc": "じょうきょう",
+      "han_viet": "",
+      "nghia": "tình hình",
+      "doc_marked": "**じょう****きょう**",
+      "vi_du": "状況を説明する。(Giải thích tình hình.) 状況が悪化した。(Tình hình xấu đi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "事態",
+          "doc": "じたい",
+          "nghia": "cục diện"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::本来",
+      "kanji": "本来",
+      "cautruc": null,
+      "doc": "ほんらい",
+      "han_viet": "",
+      "nghia": "vốn dĩ",
+      "doc_marked": "ほんらい",
+      "vi_du": "本来の目的を忘れる。(Quên mục đích ban đầu.) 本来なら参加するはずだった。(Lẽ ra tôi phải tham gia.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "もともと",
+          "doc": "もともと",
+          "nghia": "vốn là"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::患者",
+      "kanji": "患者",
+      "cautruc": null,
+      "doc": "かんじゃ",
+      "han_viet": "",
+      "nghia": "bệnh nhân",
+      "doc_marked": "かんじゃ",
+      "vi_du": "患者を診察する。(Khám cho bệnh nhân.) 患者に優しく接する。(Đối xử dịu dàng với bệnh nhân.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "病人",
+          "doc": "びょうにん",
+          "nghia": "người bệnh"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "医者",
+          "doc": "いしゃ",
+          "nghia": "bác sĩ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::苦しみ",
+      "kanji": "苦しみ",
+      "cautruc": null,
+      "doc": "くるしみ",
+      "han_viet": "",
+      "nghia": "nỗi đau khổ",
+      "doc_marked": "くるしみ",
+      "vi_du": "苦しみに耐える。(Chịu đựng nỗi khổ.) 苦しみを乗り越える。(Vượt qua đau khổ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "苦痛",
+          "doc": "くつう",
+          "nghia": "sự đau đớn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "喜び",
+          "doc": "よろこび",
+          "nghia": "niềm vui"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::健康な",
+      "kanji": "健康な",
+      "cautruc": null,
+      "doc": "けんこうな",
+      "han_viet": "",
+      "nghia": "khỏe mạnh",
+      "doc_marked": "けん**こう**な",
+      "vi_du": "健康な体を保つ。(Giữ cơ thể khỏe mạnh.) 健康な生活を送る。(Sống lành mạnh.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "丈夫な",
+          "doc": "じょうぶな",
+          "nghia": "khỏe khoắn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "不健康な",
+          "doc": "ふけんこうな",
+          "nghia": "không khỏe; hại sức khỏe"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::元",
+      "kanji": "元",
+      "cautruc": null,
+      "doc": "もと",
+      "han_viet": "",
+      "nghia": "nguyên; gốc; trước kia",
+      "doc_marked": "もと",
+      "vi_du": "元の場所に戻す。(Trả về chỗ cũ.) 彼は元教師だ。(Anh ấy vốn là giáo viên.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "元来",
+          "doc": "がんらい",
+          "nghia": "vốn dĩ"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::目指す",
+      "kanji": "目指す",
+      "cautruc": null,
+      "doc": "めざす",
+      "han_viet": "",
+      "nghia": "hướng đến; nhắm tới",
+      "doc_marked": "めざす",
+      "vi_du": "優勝を目指す。(Nhắm tới chức vô địch.) 医者を目指して勉強する。(Học để thành bác sĩ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "志す",
+          "doc": "こころざす",
+          "nghia": "chí hướng tới"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::いわゆる",
+      "kanji": "いわゆる",
+      "cautruc": null,
+      "doc": "いわゆる",
+      "han_viet": "",
+      "nghia": "cái gọi là",
+      "doc_marked": "いわゆる",
+      "vi_du": "彼はいわゆる天才だ。(Anh ấy đúng là thiên tài.) いわゆる勝ち組に入る。(Thuộc nhóm gọi là kẻ thắng cuộc.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "俗に言う",
+          "doc": "ぞくにいう",
+          "nghia": "nói nôm na là"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::状態",
+      "kanji": "状態",
+      "cautruc": null,
+      "doc": "じょうたい",
+      "han_viet": "",
+      "nghia": "trạng thái",
+      "doc_marked": "**じょう**たい",
+      "vi_du": "健康状態を確認する。(Kiểm tra tình trạng sức khỏe.) 危険な状態が続く。(Trạng thái nguy hiểm kéo dài.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "コンディション",
+          "doc": "コンディション",
+          "nghia": "tình trạng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::治療",
+      "kanji": "治療",
+      "cautruc": null,
+      "doc": "ちりょう",
+      "han_viet": "",
+      "nghia": "trị liệu",
+      "doc_marked": "ち**りょう**",
+      "vi_du": "入院して治療を受ける。(Nhập viện điều trị.) 治療を続ける。(Tiếp tục trị liệu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "手当て",
+          "doc": "てあて",
+          "nghia": "sự chữa trị; sơ cứu"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "放置",
+          "doc": "ほうち",
+          "nghia": "bỏ mặc"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::生かす",
+      "kanji": "生かす",
+      "cautruc": null,
+      "doc": "いかす",
+      "han_viet": "",
+      "nghia": "kéo dài sự sống; vận dụng",
+      "doc_marked": "いかす",
+      "vi_du": "経験を仕事に生かす。(Vận dụng kinh nghiệm vào việc.) 命を生かす医療。(Y tế kéo dài sự sống.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "活用する",
+          "doc": "かつようする",
+          "nghia": "tận dụng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "無駄にする",
+          "doc": "むだにする",
+          "nghia": "làm lãng phí"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::無理な",
+      "kanji": "無理な",
+      "cautruc": null,
+      "doc": "むりな",
+      "han_viet": "",
+      "nghia": "vô lí; quá sức",
+      "doc_marked": "むりな",
+      "vi_du": "無理な要求をする。(Đưa đòi hỏi vô lí.) 無理なダイエットは体に悪い。(Ăn kiêng quá sức hại cơ thể.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "むちゃな",
+          "doc": "むちゃな",
+          "nghia": "liều lĩnh; quá đáng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "可能な",
+          "doc": "かのうな",
+          "nghia": "khả thi"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::器具",
+      "kanji": "器具",
+      "cautruc": null,
+      "doc": "きぐ",
+      "han_viet": "",
+      "nghia": "dụng cụ; thiết bị",
+      "doc_marked": "きぐ",
+      "vi_du": "医療器具を消毒する。(Khử trùng dụng cụ y tế.) 運動器具を使う。(Dùng dụng cụ thể thao.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "道具",
+          "doc": "どうぐ",
+          "nghia": "dụng cụ"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::いかに",
+      "kanji": "いかに",
+      "cautruc": null,
+      "doc": "いかに",
+      "han_viet": "",
+      "nghia": "đến thế nào; ra sao",
+      "doc_marked": "いかに",
+      "vi_du": "いかに難しいか分かった。(Hiểu ra nó khó thế nào.) いかに生きるかを考える。(Suy nghĩ về việc sống thế nào.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "どれほど",
+          "doc": "どれほど",
+          "nghia": "đến mức nào"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::重要な",
+      "kanji": "重要な",
+      "cautruc": null,
+      "doc": "じゅうような",
+      "han_viet": "",
+      "nghia": "quan trọng",
+      "doc_marked": "**じゅう****よう**な",
+      "vi_du": "重要な決定を下す。(Đưa ra quyết định quan trọng.) 健康は何より重要だ。(Sức khỏe quan trọng hơn cả.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "大切な",
+          "doc": "たいせつな",
+          "nghia": "quan trọng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "ささいな",
+          "doc": "ささいな",
+          "nghia": "nhỏ nhặt"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::～たきり",
+      "kanji": "～たきり",
+      "cautruc": null,
+      "doc": "～たきり",
+      "han_viet": "",
+      "nghia": "... suốt (giữ nguyên trạng)",
+      "doc_marked": "～たきり",
+      "vi_du": "祖父は寝たきりだ。(Ông tôi nằm liệt giường.) 出て行ったきり戻らない。(Đi rồi không quay lại.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～まま",
+          "doc": "～まま",
+          "nghia": "cứ nguyên ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::意思",
+      "kanji": "意思",
+      "cautruc": null,
+      "doc": "いし",
+      "han_viet": "",
+      "nghia": "ý chí; ý muốn",
+      "doc_marked": "いし",
+      "vi_du": "本人の意思を尊重する。(Tôn trọng ý muốn của đương sự.) 意思の疎通を図る。(Cố gắng thông hiểu ý nhau.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "意志",
+          "doc": "いし",
+          "nghia": "ý chí"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::動かす",
+      "kanji": "動かす",
+      "cautruc": null,
+      "doc": "うごかす",
+      "han_viet": "",
+      "nghia": "làm chuyển động; điều khiển",
+      "doc_marked": "うごかす",
+      "vi_du": "機械を動かす。(Vận hành máy móc.) 人の心を動かす。(Lay động lòng người.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "操作する",
+          "doc": "そうさする",
+          "nghia": "thao tác; điều khiển"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "止める",
+          "doc": "とめる",
+          "nghia": "dừng lại"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::その一方で",
+      "kanji": "その一方で",
+      "cautruc": null,
+      "doc": "そのいっぽうで",
+      "han_viet": "",
+      "nghia": "mặt khác",
+      "doc_marked": "そのいっぽうで",
+      "vi_du": "便利になった。その一方で問題も増えた。(Tiện hơn. Mặt khác vấn đề cũng tăng.) 収入は増えた。その一方で忙しい。(Thu nhập tăng. Nhưng mặt khác lại bận.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "反面",
+          "doc": "はんめん",
+          "nghia": "mặt khác"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::血を分けた",
+      "kanji": "血を分けた",
+      "cautruc": null,
+      "doc": "ちをわけた",
+      "han_viet": "",
+      "nghia": "cùng huyết thống",
+      "doc_marked": "ちをわけた",
+      "vi_du": "血を分けた兄弟だ。(Là anh em ruột thịt.) 血を分けた親子でも意見は違う。(Cha con ruột cũng có ý khác nhau.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "血のつながった",
+          "doc": "ちのつながった",
+          "nghia": "có quan hệ huyết thống"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "赤の他人",
+          "doc": "あかのたにん",
+          "nghia": "người dưng nước lã"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::～からすると",
+      "kanji": "～からすると",
+      "cautruc": null,
+      "doc": "～からすると",
+      "han_viet": "",
+      "nghia": "từ góc độ ...; xét từ ...",
+      "doc_marked": "～からすると",
+      "vi_du": "医者からすると危険な行為だ。(Với bác sĩ thì đó là hành vi nguy hiểm.) 経験からすると難しい。(Theo kinh nghiệm thì khó.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～から見ると",
+          "doc": "～からみると",
+          "nghia": "nhìn từ ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::割り切る",
+      "kanji": "割り切る",
+      "cautruc": null,
+      "doc": "わりきる",
+      "han_viet": "",
+      "nghia": "dứt khoát; rạch ròi",
+      "doc_marked": "わりきる",
+      "vi_du": "仕事と割り切って考える。(Nghĩ dứt khoát đó chỉ là công việc.) 感情を割り切るのは難しい。(Rạch ròi cảm xúc thật khó.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "割り切って考える",
+          "doc": "わりきってかんがえる",
+          "nghia": "suy nghĩ dứt khoát"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "悩む",
+          "doc": "なやむ",
+          "nghia": "băn khoăn; day dứt"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::～わけにはいかない",
+      "kanji": "～わけにはいかない",
+      "cautruc": null,
+      "doc": "～わけにはいかない",
+      "han_viet": "",
+      "nghia": "không thể ...",
+      "doc_marked": "～わけにはいかない",
+      "vi_du": "約束したので断るわけにはいかない。(Đã hứa nên không thể từ chối.) 今、休むわけにはいかない。(Giờ không thể nghỉ được.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～ことはできない",
+          "doc": "～ことはできない",
+          "nghia": "không thể ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::当然",
+      "kanji": "当然",
+      "cautruc": null,
+      "doc": "とうぜん",
+      "han_viet": "",
+      "nghia": "đương nhiên",
+      "doc_marked": "**とう**ぜん",
+      "vi_du": "努力すれば当然報われる。(Cố gắng thì đương nhiên được đền đáp.) 当然の結果だ。(Là kết quả tất yếu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "当たり前",
+          "doc": "あたりまえ",
+          "nghia": "lẽ đương nhiên"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "意外",
+          "doc": "いがい",
+          "nghia": "bất ngờ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::長期",
+      "kanji": "長期",
+      "cautruc": null,
+      "doc": "ちょうき",
+      "han_viet": "",
+      "nghia": "dài hạn",
+      "doc_marked": "**ちょう**き",
+      "vi_du": "長期の休みを取る。(Nghỉ dài ngày.) 長期的な計画を立てる。(Lập kế hoạch dài hạn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "長期間",
+          "doc": "ちょうきかん",
+          "nghia": "thời gian dài"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "短期",
+          "doc": "たんき",
+          "nghia": "ngắn hạn"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::看護",
+      "kanji": "看護",
+      "cautruc": null,
+      "doc": "かんご",
+      "han_viet": "",
+      "nghia": "chăm sóc (bệnh nhân)",
+      "doc_marked": "かんご",
+      "vi_du": "母を看護する。(Chăm sóc mẹ ốm.) 看護の仕事は大変だ。(Công việc điều dưỡng vất vả.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "介護",
+          "doc": "かいご",
+          "nghia": "chăm sóc; điều dưỡng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::人生",
+      "kanji": "人生",
+      "cautruc": null,
+      "doc": "じんせい",
+      "han_viet": "",
+      "nghia": "cuộc đời",
+      "doc_marked": "じん**せい**",
+      "vi_du": "人生を楽しむ。(Tận hưởng cuộc đời.) 人生で一番の思い出。(Kỉ niệm đẹp nhất đời.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "一生",
+          "doc": "いっしょう",
+          "nghia": "cả đời"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::もたらす",
+      "kanji": "もたらす",
+      "cautruc": null,
+      "doc": "もたらす",
+      "han_viet": "",
+      "nghia": "đem lại; mang tới",
+      "doc_marked": "もたらす",
+      "vi_du": "技術は便利さをもたらす。(Công nghệ đem lại sự tiện lợi.) 大雨が被害をもたらした。(Mưa lớn gây thiệt hại.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "引き起こす",
+          "doc": "ひきおこす",
+          "nghia": "gây ra"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::経済的な",
+      "kanji": "経済的な",
+      "cautruc": null,
+      "doc": "けいざいてきな",
+      "han_viet": "",
+      "nghia": "về kinh tế; tiết kiệm",
+      "doc_marked": "**けい**ざいてきな",
+      "vi_du": "経済的な負担が大きい。(Gánh nặng kinh tế lớn.) 経済的な生活を心がける。(Chú ý sống tiết kiệm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "金銭的な",
+          "doc": "きんせんてきな",
+          "nghia": "về tiền bạc"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::言うまでもない",
+      "kanji": "言うまでもない",
+      "cautruc": null,
+      "doc": "いうまでもない",
+      "han_viet": "",
+      "nghia": "khỏi phải nói",
+      "doc_marked": "いうまでもない",
+      "vi_du": "健康が大切なのは言うまでもない。(Khỏi phải nói sức khỏe quan trọng.) 準備が必要なのは言うまでもない。(Cần chuẩn bị là điều khỏi bàn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "もちろん",
+          "doc": "もちろん",
+          "nghia": "đương nhiên"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::先が見えない",
+      "kanji": "先が見えない",
+      "cautruc": null,
+      "doc": "さきがみえない",
+      "han_viet": "",
+      "nghia": "không thấy tương lai",
+      "doc_marked": "さきがみえない",
+      "vi_du": "不景気で先が見えない。(Kinh tế xấu, tương lai mờ mịt.) 治療の先が見えない。(Không thấy được lối ra của việc điều trị.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "見通しが立たない",
+          "doc": "みとおしがたたない",
+          "nghia": "không có triển vọng rõ ràng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "見通しが明るい",
+          "doc": "みとおしがあかるい",
+          "nghia": "tương lai sáng sủa"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-17::犠牲",
+      "kanji": "犠牲",
+      "cautruc": null,
+      "doc": "ぎせい",
+      "han_viet": "",
+      "nghia": "sự hi sinh",
+      "doc_marked": "ぎ**せい**",
+      "vi_du": "家族のために犠牲を払う。(Hi sinh vì gia đình.) 多くの犠牲が出た。(Có nhiều thương vong.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "いけにえ",
+          "doc": "いけにえ",
+          "nghia": "vật hiến tế; sự hi sinh"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-17::さらに",
+      "kanji": "さらに",
+      "cautruc": null,
+      "doc": "さらに",
+      "han_viet": "",
+      "nghia": "hơn nữa",
+      "doc_marked": "さらに",
+      "vi_du": "さらに努力が必要だ。(Cần cố gắng hơn nữa.) 事態はさらに悪化した。(Tình hình càng xấu thêm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "その上",
+          "doc": "そのうえ",
+          "nghia": "thêm vào đó"
+        }
+      ],
+      "trai_nghia": []
+    }
+  ]
+}

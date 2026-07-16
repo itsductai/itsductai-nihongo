@@ -1,0 +1,577 @@
+{
+  "id": "chukyu3-03",
+  "title": "Chukyu3 - Bài 3",
+  "type": "TUVUNG",
+  "series": "chukyu3",
+  "level": "N2",
+  "private": false,
+  "words": [
+    {
+      "_id": "chukyu3-03::画面",
+      "kanji": "画面",
+      "cautruc": null,
+      "doc": "がめん",
+      "han_viet": "",
+      "nghia": "màn hình",
+      "doc_marked": "がめん",
+      "vi_du": "スマホの画面が割れてしまった。(Màn hình điện thoại bị vỡ mất.) 画面が急に暗くなった。(Màn hình đột nhiên tối lại.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "スクリーン",
+          "doc": "すくりーん",
+          "nghia": "màn hình"
+        },
+        {
+          "kanji": "モニター",
+          "doc": "もにたー",
+          "nghia": "màn hình"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-03::目をやる",
+      "kanji": "目をやる",
+      "cautruc": null,
+      "doc": "めをやる",
+      "han_viet": "",
+      "nghia": "đưa mắt nhìn; liếc nhìn",
+      "doc_marked": "めをやる",
+      "vi_du": "時計に目をやると、もう12時だった。(Liếc nhìn đồng hồ thì đã 12 giờ.) 窓の外に目をやった。(Tôi đưa mắt nhìn ra ngoài cửa sổ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "目を向ける",
+          "doc": "めをむける",
+          "nghia": "hướng mắt tới"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "目をそらす",
+          "doc": "めをそらす",
+          "nghia": "nhìn tránh đi; ngoảnh mặt"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-03::ほっとする",
+      "kanji": "ほっとする",
+      "cautruc": null,
+      "doc": "ほっとする",
+      "han_viet": "",
+      "nghia": "thở phào; nhẹ nhõm",
+      "doc_marked": "ほっとする",
+      "vi_du": "無事に着いたと聞いてほっとした。(Nghe tin đến nơi an toàn, tôi thở phào.) 試験が終わってほっとしている。(Thi xong tôi thấy nhẹ nhõm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "安心する",
+          "doc": "あんしんする",
+          "nghia": "yên tâm"
+        },
+        {
+          "kanji": "一安心",
+          "doc": "ひとあんしん",
+          "nghia": "tạm yên lòng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "不安になる",
+          "doc": "ふあんになる",
+          "nghia": "trở nên bất an"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-03::すます",
+      "kanji": "すます",
+      "cautruc": null,
+      "doc": "すます",
+      "han_viet": "",
+      "nghia": "làm cho xong; giải quyết xong",
+      "doc_marked": "すます",
+      "vi_du": "昼食を軽くすませた。(Tôi ăn trưa qua loa cho xong.) 用事を済ましてから行きます。(Tôi làm xong việc rồi sẽ đi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "終える",
+          "doc": "おえる",
+          "nghia": "hoàn thành"
+        },
+        {
+          "kanji": "片付ける",
+          "doc": "かたづける",
+          "nghia": "giải quyết xong"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "残す",
+          "doc": "のこす",
+          "nghia": "để lại; chưa làm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-03::習い事",
+      "kanji": "習い事",
+      "cautruc": null,
+      "doc": "ならいごと",
+      "han_viet": "",
+      "nghia": "lớp học năng khiếu; việc học thêm",
+      "doc_marked": "ならいごと",
+      "vi_du": "子供に何か習い事をさせたい。(Tôi muốn cho con học một môn năng khiếu.) ピアノの習い事を続けている。(Tôi vẫn theo học lớp piano.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "おけいこ",
+          "doc": "おけいこ",
+          "nghia": "lớp học năng khiếu"
+        },
+        {
+          "kanji": "レッスン",
+          "doc": "れっすん",
+          "nghia": "buổi học"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-03::～うち",
+      "kanji": "～うち",
+      "cautruc": null,
+      "doc": "～うち",
+      "han_viet": "",
+      "nghia": "trong lúc; khi còn (đang ở trạng thái nào đó)",
+      "doc_marked": "～うち",
+      "vi_du": "若いうちにたくさん経験したほうがいい。(Nên trải nghiệm nhiều khi còn trẻ.) 熱いうちに召し上がってください。(Hãy dùng khi còn nóng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～間に",
+          "doc": "～あいだに",
+          "nghia": "trong lúc; trong khi"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-03::準備する",
+      "kanji": "準備する",
+      "cautruc": null,
+      "doc": "じゅんびする",
+      "han_viet": "",
+      "nghia": "chuẩn bị",
+      "doc_marked": "じゅんびする",
+      "vi_du": "旅行の準備をしている。(Tôi đang chuẩn bị cho chuyến đi.) 会議の資料を準備しておいた。(Tôi đã chuẩn bị sẵn tài liệu họp.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "用意する",
+          "doc": "よういする",
+          "nghia": "chuẩn bị; sắm sửa"
+        },
+        {
+          "kanji": "支度する",
+          "doc": "したくする",
+          "nghia": "sửa soạn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "後片付け",
+          "doc": "あとかたづけ",
+          "nghia": "dọn dẹp sau khi xong"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-03::温める",
+      "kanji": "温める",
+      "cautruc": null,
+      "doc": "あたためる",
+      "han_viet": "",
+      "nghia": "hâm nóng; làm ấm",
+      "doc_marked": "あたためる",
+      "vi_du": "冷めたスープを温める。(Hâm lại bát súp đã nguội.) 手をストーブで温めた。(Tôi hơ tay cho ấm bên lò sưởi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "熱する",
+          "doc": "ねっする",
+          "nghia": "đun nóng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "冷やす",
+          "doc": "ひやす",
+          "nghia": "làm lạnh"
+        },
+        {
+          "kanji": "冷ます",
+          "doc": "さます",
+          "nghia": "làm nguội"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-03::変わる",
+      "kanji": "変わる",
+      "cautruc": null,
+      "doc": "かわる",
+      "han_viet": "",
+      "nghia": "thay đổi (tự động từ)",
+      "doc_marked": "かわる",
+      "vi_du": "彼の態度が急に変わった。(Thái độ của anh ấy đột nhiên thay đổi.) 信号が青に変わった。(Đèn tín hiệu chuyển sang xanh.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "変化する",
+          "doc": "へんかする",
+          "nghia": "biến đổi"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "保つ",
+          "doc": "たもつ",
+          "nghia": "giữ nguyên; duy trì"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-03::変化する",
+      "kanji": "変化する",
+      "cautruc": null,
+      "doc": "へんかする",
+      "han_viet": "",
+      "nghia": "biến đổi; thay đổi",
+      "doc_marked": "へんかする",
+      "vi_du": "気温が急に変化した。(Nhiệt độ thay đổi đột ngột.) 社会は少しずつ変化している。(Xã hội đang biến đổi dần dần.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "変わる",
+          "doc": "かわる",
+          "nghia": "thay đổi"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "一定",
+          "doc": "いってい",
+          "nghia": "cố định; không đổi"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-03::風景",
+      "kanji": "風景",
+      "cautruc": null,
+      "doc": "ふうけい",
+      "han_viet": "",
+      "nghia": "phong cảnh",
+      "doc_marked": "**ふう****けい**",
+      "vi_du": "窓から美しい風景が見える。(Từ cửa sổ thấy phong cảnh đẹp.) 田舎の風景が好きだ。(Tôi thích phong cảnh vùng quê.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "景色",
+          "doc": "けしき",
+          "nghia": "cảnh sắc"
+        },
+        {
+          "kanji": "眺め",
+          "doc": "ながめ",
+          "nghia": "khung cảnh nhìn ra"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-03::声を上げる",
+      "kanji": "声を上げる",
+      "cautruc": null,
+      "doc": "こえをあげる",
+      "han_viet": "",
+      "nghia": "cất tiếng; kêu lên",
+      "doc_marked": "こえをあげる",
+      "vi_du": "驚いて思わず声を上げた。(Giật mình bất giác kêu lên.) 観客が声を上げて応援した。(Khán giả cất tiếng cổ vũ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "叫ぶ",
+          "doc": "さけぶ",
+          "nghia": "hét lên"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "黙る",
+          "doc": "だまる",
+          "nghia": "im lặng"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-03::姿",
+      "kanji": "姿",
+      "cautruc": null,
+      "doc": "すがた",
+      "han_viet": "",
+      "nghia": "hình dáng; bóng dáng",
+      "doc_marked": "すがた",
+      "vi_du": "彼の姿が見えなくなった。(Bóng dáng anh ấy khuất dần.) 着物姿の女性がきれいだ。(Người phụ nữ trong dáng kimono thật đẹp.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "格好",
+          "doc": "かっこう",
+          "nghia": "dáng vẻ"
+        },
+        {
+          "kanji": "姿形",
+          "doc": "すがたかたち",
+          "nghia": "hình dáng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-03::昔",
+      "kanji": "昔",
+      "cautruc": null,
+      "doc": "むかし",
+      "han_viet": "",
+      "nghia": "ngày xưa",
+      "doc_marked": "むかし",
+      "vi_du": "昔はこの辺に川があった。(Ngày xưa quanh đây có con sông.) 昔の友達に偶然会った。(Tôi tình cờ gặp bạn cũ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "以前",
+          "doc": "いぜん",
+          "nghia": "trước đây"
+        },
+        {
+          "kanji": "かつて",
+          "doc": "かつて",
+          "nghia": "đã từng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "今",
+          "doc": "いま",
+          "nghia": "bây giờ"
+        },
+        {
+          "kanji": "現在",
+          "doc": "げんざい",
+          "nghia": "hiện tại"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-03::遊び疲れる",
+      "kanji": "遊び疲れる",
+      "cautruc": null,
+      "doc": "あそびつかれる",
+      "han_viet": "",
+      "nghia": "chơi mệt",
+      "doc_marked": "あそびつかれる",
+      "vi_du": "子供は遊び疲れて眠ってしまった。(Bọn trẻ chơi mệt rồi ngủ mất.) 一日中遊び疲れた。(Chơi cả ngày nên mệt nhoài.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "くたびれる",
+          "doc": "くたびれる",
+          "nghia": "mệt lử"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-03::囲む",
+      "kanji": "囲む",
+      "cautruc": null,
+      "doc": "かこむ",
+      "han_viet": "",
+      "nghia": "vây quanh; quây quần",
+      "doc_marked": "かこむ",
+      "vi_du": "テーブルを囲んで食事をした。(Cả nhà quây quần quanh bàn ăn.) 家は木々に囲まれている。(Ngôi nhà được cây cối bao quanh.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "取り囲む",
+          "doc": "とりかこむ",
+          "nghia": "vây quanh"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "離れる",
+          "doc": "はなれる",
+          "nghia": "rời xa; tách ra"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-03::あふれる",
+      "kanji": "あふれる",
+      "cautruc": null,
+      "doc": "あふれる",
+      "han_viet": "",
+      "nghia": "tràn đầy; đầy ắp",
+      "doc_marked": "あふれる",
+      "vi_du": "川の水があふれそうだ。(Nước sông sắp tràn.) 会場は熱気にあふれていた。(Hội trường tràn ngập bầu không khí sôi động.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "満ちる",
+          "doc": "みちる",
+          "nghia": "tràn đầy"
+        },
+        {
+          "kanji": "いっぱいになる",
+          "doc": "いっぱいになる",
+          "nghia": "đầy ắp"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "不足する",
+          "doc": "ふそくする",
+          "nghia": "thiếu hụt"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-03::栄養",
+      "kanji": "栄養",
+      "cautruc": null,
+      "doc": "えいよう",
+      "han_viet": "",
+      "nghia": "dinh dưỡng",
+      "doc_marked": "**えい****よう**",
+      "vi_du": "栄養のある物を食べなさい。(Hãy ăn đồ có dinh dưỡng.) 野菜は栄養が豊富だ。(Rau củ giàu dinh dưỡng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "養分",
+          "doc": "ようぶん",
+          "nghia": "chất dinh dưỡng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-03::バランス",
+      "kanji": "バランス",
+      "cautruc": null,
+      "doc": "ばらんす",
+      "han_viet": "",
+      "nghia": "sự cân bằng",
+      "doc_marked": "ばらんす",
+      "vi_du": "栄養のバランスを考えて食べる。(Ăn uống cân nhắc cân bằng dinh dưỡng.) 仕事と生活のバランスが大切だ。(Cân bằng công việc và cuộc sống rất quan trọng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "均衡",
+          "doc": "きんこう",
+          "nghia": "sự cân bằng"
+        },
+        {
+          "kanji": "釣り合い",
+          "doc": "つりあい",
+          "nghia": "sự cân xứng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "偏り",
+          "doc": "かたより",
+          "nghia": "sự thiên lệch; mất cân đối"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-03::商品",
+      "kanji": "商品",
+      "cautruc": null,
+      "doc": "しょうひん",
+      "han_viet": "",
+      "nghia": "sản phẩm; hàng hóa",
+      "doc_marked": "**しょう**ひん",
+      "vi_du": "この商品は今、人気がある。(Sản phẩm này hiện đang được ưa chuộng.) 新しい商品を店に並べた。(Bày hàng mới lên kệ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "品物",
+          "doc": "しなもの",
+          "nghia": "hàng hóa"
+        },
+        {
+          "kanji": "製品",
+          "doc": "せいひん",
+          "nghia": "sản phẩm (chế tạo)"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-03::時間をかける",
+      "kanji": "時間をかける",
+      "cautruc": null,
+      "doc": "じかんをかける",
+      "han_viet": "",
+      "nghia": "dành/bỏ thời gian",
+      "doc_marked": "じかんをかける",
+      "vi_du": "時間をかけて丁寧に作る。(Bỏ thời gian làm tỉ mỉ.) この料理は時間をかけて煮込む。(Món này ninh lâu tốn thời gian.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "手間をかける",
+          "doc": "てまをかける",
+          "nghia": "bỏ công sức"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "急ぐ",
+          "doc": "いそぐ",
+          "nghia": "vội; gấp"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-03::なつかしい",
+      "kanji": "なつかしい",
+      "cautruc": null,
+      "doc": "なつかしい",
+      "han_viet": "",
+      "nghia": "thân thương; gợi nhớ; bồi hồi",
+      "doc_marked": "なつかしい",
+      "vi_du": "この歌を聞くとなつかしい気持ちになる。(Nghe bài này tôi thấy bồi hồi.) なつかしい故郷の写真を見た。(Tôi xem ảnh quê hương thân thương.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "恋しい",
+          "doc": "こいしい",
+          "nghia": "nhớ nhung"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "新鮮な",
+          "doc": "しんせんな",
+          "nghia": "mới mẻ"
+        }
+      ]
+    }
+  ]
+}

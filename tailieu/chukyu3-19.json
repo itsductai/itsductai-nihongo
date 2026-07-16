@@ -1,0 +1,1083 @@
+{
+  "id": "chukyu3-19",
+  "title": "Chukyu3 - Bài 19",
+  "type": "TUVUNG",
+  "series": "chukyu3",
+  "level": "N2",
+  "private": false,
+  "words": [
+    {
+      "_id": "chukyu3-19::交流",
+      "kanji": "交流",
+      "cautruc": null,
+      "doc": "こうりゅう",
+      "han_viet": "",
+      "nghia": "giao lưu",
+      "doc_marked": "**こう****りゅう**",
+      "vi_du": "国際交流のイベントに参加する。(Tham gia sự kiện giao lưu quốc tế.) 若者と交流する。(Giao lưu với giới trẻ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "ふれ合い",
+          "doc": "ふれあい",
+          "nghia": "sự gần gũi; giao lưu"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "断絶",
+          "doc": "だんぜつ",
+          "nghia": "đứt liên hệ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::自己",
+      "kanji": "自己",
+      "cautruc": null,
+      "doc": "じこ",
+      "han_viet": "",
+      "nghia": "bản thân; tự",
+      "doc_marked": "じこ",
+      "vi_du": "自己紹介をする。(Tự giới thiệu.) 自己を見つめ直す。(Nhìn lại chính mình.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "自分",
+          "doc": "じぶん",
+          "nghia": "bản thân"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "他者",
+          "doc": "たしゃ",
+          "nghia": "người khác"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::司会",
+      "kanji": "司会",
+      "cautruc": null,
+      "doc": "しかい",
+      "han_viet": "",
+      "nghia": "dẫn chương trình",
+      "doc_marked": "しかい",
+      "vi_du": "結婚式の司会を務める。(Đảm nhận MC lễ cưới.) 会議の司会をする。(Dẫn dắt cuộc họp.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "進行役",
+          "doc": "しんこうやく",
+          "nghia": "người điều phối"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::落ちる",
+      "kanji": "落ちる",
+      "cautruc": null,
+      "doc": "おちる",
+      "han_viet": "",
+      "nghia": "rơi; trượt",
+      "doc_marked": "おちる",
+      "vi_du": "木から葉が落ちる。(Lá rơi khỏi cây.) 試験に落ちる。(Trượt kì thi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "落下する",
+          "doc": "らっかする",
+          "nghia": "rơi xuống"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "受かる",
+          "doc": "うかる",
+          "nghia": "đỗ; đậu"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::具体的な",
+      "kanji": "具体的な",
+      "cautruc": null,
+      "doc": "ぐたいてきな",
+      "han_viet": "",
+      "nghia": "cụ thể",
+      "doc_marked": "ぐたいてきな",
+      "vi_du": "具体的な例を挙げる。(Nêu ví dụ cụ thể.) 具体的に説明する。(Giải thích cụ thể.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "明確な",
+          "doc": "めいかくな",
+          "nghia": "rõ ràng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "抽象的な",
+          "doc": "ちゅうしょうてきな",
+          "nghia": "trừu tượng"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::政治",
+      "kanji": "政治",
+      "cautruc": null,
+      "doc": "せいじ",
+      "han_viet": "",
+      "nghia": "chính trị",
+      "doc_marked": "**せい**じ",
+      "vi_du": "政治に関心を持つ。(Quan tâm đến chính trị.) 政治が国を動かす。(Chính trị vận hành đất nước.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "政",
+          "doc": "まつりごと",
+          "nghia": "việc trị nước"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::～はともかく",
+      "kanji": "～はともかく",
+      "cautruc": null,
+      "doc": "～はともかく",
+      "han_viet": "",
+      "nghia": "bỏ qua ...; không kể ...",
+      "doc_marked": "～はともかく",
+      "vi_du": "味はともかく、量は多い。(Vị thì chưa nói, nhưng lượng nhiều.) 結果はともかく、よく頑張った。(Kết quả để đó, đã cố gắng tốt.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～は別として",
+          "doc": "～はべつとして",
+          "nghia": "riêng ... để ra"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::語る",
+      "kanji": "語る",
+      "cautruc": null,
+      "doc": "かたる",
+      "han_viet": "",
+      "nghia": "kể; nói",
+      "doc_marked": "かたる",
+      "vi_du": "夢を語る。(Nói về ước mơ.) 体験を語る。(Kể lại trải nghiệm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "述べる",
+          "doc": "のべる",
+          "nghia": "trình bày"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "黙る",
+          "doc": "だまる",
+          "nghia": "im lặng"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::実現する",
+      "kanji": "実現する",
+      "cautruc": null,
+      "doc": "じつげんする",
+      "han_viet": "",
+      "nghia": "thực hiện; hiện thực hóa",
+      "doc_marked": "じつげんする",
+      "vi_du": "夢を実現する。(Hiện thực hóa ước mơ.) 計画がついに実現した。(Kế hoạch cuối cùng đã thành.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "かなえる",
+          "doc": "かなえる",
+          "nghia": "làm cho toại nguyện"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "頓挫する",
+          "doc": "とんざする",
+          "nghia": "đổ bể; dang dở"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::熱心な",
+      "kanji": "熱心な",
+      "cautruc": null,
+      "doc": "ねっしんな",
+      "han_viet": "",
+      "nghia": "nhiệt tình; chăm chú",
+      "doc_marked": "ねっしんな",
+      "vi_du": "熱心に勉強する。(Học tập chăm chỉ.) 熱心なファンだ。(Là người hâm mộ nhiệt thành.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "一生懸命な",
+          "doc": "いっしょうけんめいな",
+          "nghia": "hết mình"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "無関心な",
+          "doc": "むかんしんな",
+          "nghia": "thờ ơ"
+        },
+        {
+          "kanji": "冷淡な",
+          "doc": "れいたんな",
+          "nghia": "lãnh đạm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::～さえ～ば",
+      "kanji": "～さえ～ば",
+      "cautruc": null,
+      "doc": "～さえ～ば",
+      "han_viet": "",
+      "nghia": "chỉ cần ...",
+      "doc_marked": "～さえ～ば",
+      "vi_du": "君さえいれば幸せだ。(Chỉ cần có em là hạnh phúc.) 努力さえすれば報われる。(Chỉ cần cố gắng sẽ được đền đáp.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～だけ～ば",
+          "doc": "～だけ～ば",
+          "nghia": "chỉ cần ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::かなう",
+      "kanji": "かなう",
+      "cautruc": null,
+      "doc": "かなう",
+      "han_viet": "",
+      "nghia": "đạt được (ước nguyện)",
+      "doc_marked": "かなう",
+      "vi_du": "願いがかなう。(Ước nguyện thành hiện thực.) 長年の夢がかなった。(Giấc mơ bao năm đã thành.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "実現する",
+          "doc": "じつげんする",
+          "nghia": "trở thành hiện thực"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "あきらめる",
+          "doc": "あきらめる",
+          "nghia": "từ bỏ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::可能な",
+      "kanji": "可能な",
+      "cautruc": null,
+      "doc": "かのうな",
+      "han_viet": "",
+      "nghia": "có thể; khả thi",
+      "doc_marked": "か**のう**な",
+      "vi_du": "解決が可能な問題だ。(Vấn đề có thể giải quyết.) 可能な限り協力する。(Hợp tác trong khả năng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "実現可能な",
+          "doc": "じつげんかのうな",
+          "nghia": "khả thi"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "不可能な",
+          "doc": "ふかのうな",
+          "nghia": "bất khả thi"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::可能性",
+      "kanji": "可能性",
+      "cautruc": null,
+      "doc": "かのうせい",
+      "han_viet": "",
+      "nghia": "khả năng (xảy ra)",
+      "doc_marked": "か**のう****せい**",
+      "vi_du": "成功の可能性が高い。(Khả năng thành công cao.) 可能性を信じる。(Tin vào khả năng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "見込み",
+          "doc": "みこみ",
+          "nghia": "triển vọng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::計画",
+      "kanji": "計画",
+      "cautruc": null,
+      "doc": "けいかく",
+      "han_viet": "",
+      "nghia": "kế hoạch",
+      "doc_marked": "**けい**かく",
+      "vi_du": "旅行の計画を立てる。(Lập kế hoạch du lịch.) 計画通りに進む。(Tiến triển đúng kế hoạch.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "プラン",
+          "doc": "プラン",
+          "nghia": "kế hoạch"
+        },
+        {
+          "kanji": "企画",
+          "doc": "きかく",
+          "nghia": "dự án; hoạch định"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::選択肢",
+      "kanji": "選択肢",
+      "cautruc": null,
+      "doc": "せんたくし",
+      "han_viet": "",
+      "nghia": "lựa chọn",
+      "doc_marked": "せんたくし",
+      "vi_du": "選択肢が多くて迷う。(Nhiều lựa chọn nên phân vân.) 選択肢を広げる。(Mở rộng lựa chọn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "オプション",
+          "doc": "オプション",
+          "nghia": "phương án lựa chọn"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::施設",
+      "kanji": "施設",
+      "cautruc": null,
+      "doc": "しせつ",
+      "han_viet": "",
+      "nghia": "cơ sở (vật chất)",
+      "doc_marked": "しせつ",
+      "vi_du": "公共の施設を利用する。(Sử dụng cơ sở công cộng.) 福祉施設で働く。(Làm việc ở cơ sở phúc lợi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "設備",
+          "doc": "せつび",
+          "nghia": "trang thiết bị"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::～ことから",
+      "kanji": "～ことから",
+      "cautruc": null,
+      "doc": "～ことから",
+      "han_viet": "",
+      "nghia": "vì ...; do ...",
+      "doc_marked": "～ことから",
+      "vi_du": "雪が多いことから、この名がついた。(Vì nhiều tuyết nên có tên này.) 事故が起きたことから、対策を強めた。(Do tai nạn xảy ra nên siết biện pháp.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～ため",
+          "doc": "～ため",
+          "nghia": "vì; do"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::身内",
+      "kanji": "身内",
+      "cautruc": null,
+      "doc": "みうち",
+      "han_viet": "",
+      "nghia": "người nhà; người thân",
+      "doc_marked": "みうち",
+      "vi_du": "身内だけで式を挙げる。(Làm lễ chỉ với người thân.) 身内に不幸があった。(Có chuyện buồn trong nhà.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "親族",
+          "doc": "しんぞく",
+          "nghia": "thân tộc"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "他人",
+          "doc": "たにん",
+          "nghia": "người ngoài"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::働きづめ",
+      "kanji": "働きづめ",
+      "cautruc": null,
+      "doc": "はたらきづめ",
+      "han_viet": "",
+      "nghia": "làm việc không nghỉ",
+      "doc_marked": "はたらきづめ",
+      "vi_du": "一日中働きづめだった。(Làm việc cả ngày không ngơi.) 働きづめで体を壊す。(Làm quần quật đến kiệt sức.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "働き通し",
+          "doc": "はたらきどおし",
+          "nghia": "làm liên tục"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::貧しい",
+      "kanji": "貧しい",
+      "cautruc": null,
+      "doc": "まずしい",
+      "han_viet": "",
+      "nghia": "nghèo",
+      "doc_marked": "まずしい",
+      "vi_du": "貧しい家に育つ。(Lớn lên trong gia đình nghèo.) 貧しくても心は豊かだ。(Nghèo nhưng tâm hồn phong phú.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "貧乏な",
+          "doc": "びんぼうな",
+          "nghia": "nghèo túng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "豊かな",
+          "doc": "ゆたかな",
+          "nghia": "giàu có"
+        },
+        {
+          "kanji": "裕福な",
+          "doc": "ゆうふくな",
+          "nghia": "sung túc"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::抜け出す",
+      "kanji": "抜け出す",
+      "cautruc": null,
+      "doc": "ぬけだす",
+      "han_viet": "",
+      "nghia": "thoát ra khỏi",
+      "doc_marked": "ぬけだす",
+      "vi_du": "貧困から抜け出す。(Thoát khỏi nghèo đói.) こっそり会場を抜け出す。(Lẻn ra khỏi hội trường.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "脱出する",
+          "doc": "だっしゅつする",
+          "nghia": "thoát ra"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "陥る",
+          "doc": "おちいる",
+          "nghia": "rơi vào; sa vào"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::～よりほかはない",
+      "kanji": "～よりほかはない",
+      "cautruc": null,
+      "doc": "～よりほかはない",
+      "han_viet": "",
+      "nghia": "chỉ còn cách ...",
+      "doc_marked": "～よりほかはない",
+      "vi_du": "中止するよりほかはない。(Chỉ còn cách hủy.) 自分でやるよりほかはない。(Chỉ còn cách tự làm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～しかない",
+          "doc": "～しかない",
+          "nghia": "chỉ có cách ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::こそ",
+      "kanji": "こそ",
+      "cautruc": null,
+      "doc": "こそ",
+      "han_viet": "",
+      "nghia": "chính là (nhấn mạnh)",
+      "doc_marked": "こそ",
+      "vi_du": "今こそチャンスだ。(Bây giờ mới chính là cơ hội.) こちらこそよろしく。(Chính tôi mới phải nhờ vả.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "まさに",
+          "doc": "まさに",
+          "nghia": "đúng là; chính là"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::～ないものか",
+      "kanji": "～ないものか",
+      "cautruc": null,
+      "doc": "～ないものか",
+      "han_viet": "",
+      "nghia": "chẳng lẽ không thể ...?",
+      "doc_marked": "～ないものか",
+      "vi_du": "何とかならないものか。(Chẳng lẽ không có cách nào?) もっと安くならないものか。(Chẳng lẽ không rẻ hơn được?)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～できないだろうか",
+          "doc": "～できないだろうか",
+          "nghia": "liệu có thể ... không"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::教育",
+      "kanji": "教育",
+      "cautruc": null,
+      "doc": "きょういく",
+      "han_viet": "",
+      "nghia": "giáo dục",
+      "doc_marked": "**きょう**いく",
+      "vi_du": "子供の教育に力を入れる。(Chú trọng giáo dục con.) 教育を受ける権利。(Quyền được giáo dục.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "教え",
+          "doc": "おしえ",
+          "nghia": "sự dạy dỗ"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::すら",
+      "kanji": "すら",
+      "cautruc": null,
+      "doc": "すら",
+      "han_viet": "",
+      "nghia": "đến cả; ngay cả",
+      "doc_marked": "すら",
+      "vi_du": "名前すら知らない。(Đến cả tên cũng không biết.) 専門家ですら分からない。(Ngay cả chuyên gia cũng chịu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "さえ",
+          "doc": "さえ",
+          "nghia": "đến cả"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::満足な",
+      "kanji": "満足な",
+      "cautruc": null,
+      "doc": "まんぞくな",
+      "han_viet": "",
+      "nghia": "mãn nguyện; đầy đủ",
+      "doc_marked": "まんぞくな",
+      "vi_du": "満足な結果だ。(Kết quả mãn nguyện.) 満足な食事もできない。(Không có nổi bữa ăn tử tế.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "十分な",
+          "doc": "じゅうぶんな",
+          "nghia": "đầy đủ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "不満な",
+          "doc": "ふまんな",
+          "nghia": "bất mãn"
+        },
+        {
+          "kanji": "不十分な",
+          "doc": "ふじゅうぶんな",
+          "nghia": "chưa đủ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::環境",
+      "kanji": "環境",
+      "cautruc": null,
+      "doc": "かんきょう",
+      "han_viet": "",
+      "nghia": "môi trường",
+      "doc_marked": "かん**きょう**",
+      "vi_du": "環境を守る。(Bảo vệ môi trường.) 育った環境が人を作る。(Môi trường trưởng thành tạo nên con người.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "周囲",
+          "doc": "しゅうい",
+          "nghia": "xung quanh"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::差し伸べる",
+      "kanji": "差し伸べる",
+      "cautruc": null,
+      "doc": "さしのべる",
+      "han_viet": "",
+      "nghia": "chìa tay (giúp đỡ)",
+      "doc_marked": "さしのべる",
+      "vi_du": "困った人に手を差し伸べる。(Chìa tay giúp người khó khăn.) 救いの手を差し伸べる。(Đưa tay cứu giúp.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "手を貸す",
+          "doc": "てをかす",
+          "nghia": "ra tay giúp"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "突き放す",
+          "doc": "つきはなす",
+          "nghia": "hắt hủi; bỏ mặc"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::未来",
+      "kanji": "未来",
+      "cautruc": null,
+      "doc": "みらい",
+      "han_viet": "",
+      "nghia": "tương lai",
+      "doc_marked": "みらい",
+      "vi_du": "明るい未来を描く。(Vẽ nên tương lai tươi sáng.) 未来のために努力する。(Cố gắng vì tương lai.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "将来",
+          "doc": "しょうらい",
+          "nghia": "tương lai"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "過去",
+          "doc": "かこ",
+          "nghia": "quá khứ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::裏返し",
+      "kanji": "裏返し",
+      "cautruc": null,
+      "doc": "うらがえし",
+      "han_viet": "",
+      "nghia": "mặt trái; lộn ngược",
+      "doc_marked": "うらがえし",
+      "vi_du": "シャツを裏返しに着る。(Mặc áo lộn trái.) 不安の裏返しで強がる。(Tỏ ra mạnh mẽ là mặt trái của bất an.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "逆さ",
+          "doc": "さかさ",
+          "nghia": "ngược; đảo"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "表",
+          "doc": "おもて",
+          "nghia": "mặt phải; mặt ngoài"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::話し終える",
+      "kanji": "話し終える",
+      "cautruc": null,
+      "doc": "はなしおえる",
+      "han_viet": "",
+      "nghia": "nói xong",
+      "doc_marked": "はなしおえる",
+      "vi_du": "彼が話し終えるのを待つ。(Đợi anh ấy nói xong.) 一気に話し終えた。(Nói một mạch cho xong.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "話し終わる",
+          "doc": "はなしおわる",
+          "nghia": "kết thúc nói"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "話し始める",
+          "doc": "はなしはじめる",
+          "nghia": "bắt đầu nói"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::輝く",
+      "kanji": "輝く",
+      "cautruc": null,
+      "doc": "かがやく",
+      "han_viet": "",
+      "nghia": "tỏa sáng",
+      "doc_marked": "かがやく",
+      "vi_du": "星が輝く。(Sao lấp lánh.) 目を輝かせて聞く。(Nghe với ánh mắt sáng rực.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "光る",
+          "doc": "ひかる",
+          "nghia": "phát sáng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "くすむ",
+          "doc": "くすむ",
+          "nghia": "xỉn màu; tối màu"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::素直な",
+      "kanji": "素直な",
+      "cautruc": null,
+      "doc": "すなおな",
+      "han_viet": "",
+      "nghia": "thẳng thắn; ngoan ngoãn",
+      "doc_marked": "すなおな",
+      "vi_du": "素直に謝る。(Thành thật xin lỗi.) 素直な性格だ。(Tính tình thẳng thắn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "正直な",
+          "doc": "しょうじきな",
+          "nghia": "thật thà"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "ひねくれた",
+          "doc": "ひねくれた",
+          "nghia": "ương ngạnh; méo mó"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::笑顔",
+      "kanji": "笑顔",
+      "cautruc": null,
+      "doc": "えがお",
+      "han_viet": "",
+      "nghia": "nụ cười",
+      "doc_marked": "えがお",
+      "vi_du": "笑顔で迎える。(Đón bằng nụ cười.) 子供の笑顔がまぶしい。(Nụ cười trẻ thơ rạng rỡ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "微笑み",
+          "doc": "ほほえみ",
+          "nghia": "nụ cười mỉm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "泣き顔",
+          "doc": "なきがお",
+          "nghia": "mặt mếu; mặt khóc"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::物質的に",
+      "kanji": "物質的に",
+      "cautruc": null,
+      "doc": "ぶっしつてきに",
+      "han_viet": "",
+      "nghia": "về mặt vật chất",
+      "doc_marked": "ぶっしつてきに",
+      "vi_du": "物質的に恵まれる。(Đầy đủ về vật chất.) 物質的に豊かでも心は貧しい。(Giàu vật chất mà nghèo tâm hồn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "金銭的に",
+          "doc": "きんせんてきに",
+          "nghia": "về mặt tiền bạc"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "精神的に",
+          "doc": "せいしんてきに",
+          "nghia": "về mặt tinh thần"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::恵む",
+      "kanji": "恵む",
+      "cautruc": null,
+      "doc": "めぐむ",
+      "han_viet": "",
+      "nghia": "ban cho; bố thí",
+      "doc_marked": "めぐむ",
+      "vi_du": "貧しい人に食べ物を恵む。(Cho người nghèo thức ăn.) 自然の恵みに感謝する。(Biết ơn ân huệ của thiên nhiên.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "施す",
+          "doc": "ほどこす",
+          "nghia": "bố thí; ban"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "奪う",
+          "doc": "うばう",
+          "nghia": "cướp đi"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::満たす",
+      "kanji": "満たす",
+      "cautruc": null,
+      "doc": "みたす",
+      "han_viet": "",
+      "nghia": "làm đầy; thỏa mãn",
+      "doc_marked": "みたす",
+      "vi_du": "条件を満たす。(Đáp ứng điều kiện.) 心を満たす。(Làm thỏa mãn trong lòng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "満足させる",
+          "doc": "まんぞくさせる",
+          "nghia": "làm thỏa mãn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "欠く",
+          "doc": "かく",
+          "nghia": "thiếu"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::豊かな",
+      "kanji": "豊かな",
+      "cautruc": null,
+      "doc": "ゆたかな",
+      "han_viet": "",
+      "nghia": "giàu có; phong phú",
+      "doc_marked": "ゆたかな",
+      "vi_du": "豊かな自然。(Thiên nhiên trù phú.) 心が豊かになる。(Tâm hồn trở nên phong phú.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "裕福な",
+          "doc": "ゆうふくな",
+          "nghia": "sung túc"
+        },
+        {
+          "kanji": "豊富な",
+          "doc": "ほうふな",
+          "nghia": "dồi dào"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "貧しい",
+          "doc": "まずしい",
+          "nghia": "nghèo"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::表れる",
+      "kanji": "表れる",
+      "cautruc": null,
+      "doc": "あらわれる",
+      "han_viet": "",
+      "nghia": "biểu hiện ra",
+      "doc_marked": "あらわれる",
+      "vi_du": "気持ちが顔に表れる。(Cảm xúc lộ ra mặt.) 努力が結果に表れる。(Nỗ lực thể hiện qua kết quả.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "にじみ出る",
+          "doc": "にじみでる",
+          "nghia": "toát ra; hiện ra"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "隠れる",
+          "doc": "かくれる",
+          "nghia": "ẩn giấu"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::表面的な",
+      "kanji": "表面的な",
+      "cautruc": null,
+      "doc": "ひょうめんてきな",
+      "han_viet": "",
+      "nghia": "hời hợt; bề mặt",
+      "doc_marked": "**ひょう**めんてきな",
+      "vi_du": "表面的な理解にとどまる。(Chỉ hiểu ở bề mặt.) 表面的な付き合いだ。(Quan hệ xã giao hời hợt.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "うわべの",
+          "doc": "うわべの",
+          "nghia": "chỉ bề ngoài"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "本質的な",
+          "doc": "ほんしつてきな",
+          "nghia": "thuộc bản chất"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::本物",
+      "kanji": "本物",
+      "cautruc": null,
+      "doc": "ほんもの",
+      "han_viet": "",
+      "nghia": "hàng thật; đích thực",
+      "doc_marked": "ほんもの",
+      "vi_du": "本物の宝石だ。(Là đá quý thật.) 本物の実力を見せる。(Cho thấy thực lực thật sự.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "実物",
+          "doc": "じつぶつ",
+          "nghia": "vật thật"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "偽物",
+          "doc": "にせもの",
+          "nghia": "đồ giả"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::隠す",
+      "kanji": "隠す",
+      "cautruc": null,
+      "doc": "かくす",
+      "han_viet": "",
+      "nghia": "che giấu",
+      "doc_marked": "かくす",
+      "vi_du": "本音を隠す。(Giấu suy nghĩ thật.) 事実を隠してはいけない。(Không được che giấu sự thật.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "秘める",
+          "doc": "ひめる",
+          "nghia": "cất giấu; ẩn giữ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "見せる",
+          "doc": "みせる",
+          "nghia": "cho xem"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-19::訴え",
+      "kanji": "訴え",
+      "cautruc": null,
+      "doc": "うったえ",
+      "han_viet": "",
+      "nghia": "lời kêu gọi; sự khiếu nại",
+      "doc_marked": "うったえ",
+      "vi_du": "切実な訴えに耳を傾ける。(Lắng nghe lời kêu gọi thiết tha.) 訴えを起こす。(Đâm đơn kiện.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "主張",
+          "doc": "しゅちょう",
+          "nghia": "sự khẳng định"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-19::胸が痛む",
+      "kanji": "胸が痛む",
+      "cautruc": null,
+      "doc": "むねがいたむ",
+      "han_viet": "",
+      "nghia": "đau lòng",
+      "doc_marked": "むねがいたむ",
+      "vi_du": "子供の苦しみに胸が痛む。(Đau lòng trước nỗi khổ của trẻ.) その話を聞いて胸が痛んだ。(Nghe chuyện đó tôi thấy đau lòng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "心が痛む",
+          "doc": "こころがいたむ",
+          "nghia": "xót xa; đau lòng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "心が弾む",
+          "doc": "こころがはずむ",
+          "nghia": "nao nức; rộn ràng"
+        }
+      ]
+    }
+  ]
+}

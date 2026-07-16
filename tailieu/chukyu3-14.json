@@ -1,0 +1,1004 @@
+{
+  "id": "chukyu3-14",
+  "title": "Chukyu3 - Bài 14",
+  "type": "TUVUNG",
+  "series": "chukyu3",
+  "level": "N2",
+  "private": false,
+  "words": [
+    {
+      "_id": "chukyu3-14::予測する",
+      "kanji": "予測する",
+      "cautruc": null,
+      "doc": "よそくする",
+      "han_viet": "",
+      "nghia": "dự đoán; dự báo",
+      "doc_marked": "よそくする",
+      "vi_du": "天気を予測する。(Dự báo thời tiết.) 結果を予測するのは難しい。(Dự đoán kết quả rất khó.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "予想する",
+          "doc": "よそうする",
+          "nghia": "dự đoán"
+        },
+        {
+          "kanji": "見込む",
+          "doc": "みこむ",
+          "nghia": "ước lượng; tính trước"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::～る上で",
+      "kanji": "～る上で",
+      "cautruc": null,
+      "doc": "～るうえで",
+      "han_viet": "",
+      "nghia": "trong việc ...; khi ...",
+      "doc_marked": "～るうえで",
+      "vi_du": "仕事をする上で信頼が大切だ。(Trong công việc, tin tưởng rất quan trọng.) 生きていく上で欠かせない。(Không thể thiếu trong cuộc sống.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～に際して",
+          "doc": "～にさいして",
+          "nghia": "khi tiến hành ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::欠かせない",
+      "kanji": "欠かせない",
+      "cautruc": null,
+      "doc": "かかせない",
+      "han_viet": "",
+      "nghia": "không thể thiếu",
+      "doc_marked": "かかせない",
+      "vi_du": "水は生活に欠かせない。(Nước không thể thiếu trong sinh hoạt.) 彼はチームに欠かせない存在だ。(Anh ấy là người không thể thiếu của đội.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "不可欠な",
+          "doc": "ふかけつな",
+          "nghia": "tất yếu"
+        },
+        {
+          "kanji": "なくてはならない",
+          "doc": "なくてはならない",
+          "nghia": "không thể thiếu"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "不要な",
+          "doc": "ふような",
+          "nghia": "không cần thiết"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::いとなみ",
+      "kanji": "いとなみ",
+      "cautruc": null,
+      "doc": "いとなみ",
+      "han_viet": "",
+      "nghia": "hoạt động; nếp sinh hoạt",
+      "doc_marked": "いとなみ",
+      "vi_du": "日々のいとなみを大切にする。(Trân trọng nếp sinh hoạt hằng ngày.) 自然のいとなみを感じる。(Cảm nhận hoạt động của tự nhiên.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "活動",
+          "doc": "かつどう",
+          "nghia": "hoạt động"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::～次第",
+      "kanji": "～次第",
+      "cautruc": null,
+      "doc": "～しだい",
+      "han_viet": "",
+      "nghia": "tùy vào ...",
+      "doc_marked": "～しだい",
+      "vi_du": "成功はあなた次第だ。(Thành công tùy vào bạn.) 天気次第で中止する。(Tùy thời tiết mà hủy.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～による",
+          "doc": "～による",
+          "nghia": "tùy theo ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::収穫",
+      "kanji": "収穫",
+      "cautruc": null,
+      "doc": "しゅうかく",
+      "han_viet": "",
+      "nghia": "thu hoạch",
+      "doc_marked": "**しゅう**かく",
+      "vi_du": "秋は米の収穫の季節だ。(Thu là mùa gặt lúa.) 今年は収穫が多い。(Năm nay thu hoạch nhiều.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "取り入れ",
+          "doc": "とりいれ",
+          "nghia": "việc thu hoạch"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "種まき",
+          "doc": "たねまき",
+          "nghia": "gieo hạt"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::命",
+      "kanji": "命",
+      "cautruc": null,
+      "doc": "いのち",
+      "han_viet": "",
+      "nghia": "sinh mệnh; mạng sống",
+      "doc_marked": "いのち",
+      "vi_du": "命を大切にする。(Trân trọng sinh mệnh.) 命がけで助ける。(Liều mạng cứu giúp.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "生命",
+          "doc": "せいめい",
+          "nghia": "sinh mệnh"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "死",
+          "doc": "し",
+          "nghia": "cái chết"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::めずらしい",
+      "kanji": "めずらしい",
+      "cautruc": null,
+      "doc": "めずらしい",
+      "han_viet": "",
+      "nghia": "hiếm; ít gặp",
+      "doc_marked": "めずらしい",
+      "vi_du": "めずらしい鳥を見た。(Thấy loài chim hiếm.) 彼が遅刻とはめずらしい。(Hiếm khi anh ấy đi trễ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "まれな",
+          "doc": "まれな",
+          "nghia": "hiếm hoi"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "ありふれた",
+          "doc": "ありふれた",
+          "nghia": "thường gặp; nhan nhản"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::法則",
+      "kanji": "法則",
+      "cautruc": null,
+      "doc": "ほうそく",
+      "han_viet": "",
+      "nghia": "quy luật; định luật",
+      "doc_marked": "**ほう**そく",
+      "vi_du": "自然の法則に従う。(Tuân theo quy luật tự nhiên.) 万有引力の法則。(Định luật vạn vật hấp dẫn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "決まり",
+          "doc": "きまり",
+          "nghia": "quy tắc"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::流れ",
+      "kanji": "流れ",
+      "cautruc": null,
+      "doc": "ながれ",
+      "han_viet": "",
+      "nghia": "dòng chảy; xu thế",
+      "doc_marked": "ながれ",
+      "vi_du": "川の流れが速い。(Dòng sông chảy xiết.) 時代の流れに乗る。(Bắt kịp dòng chảy thời đại.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "動き",
+          "doc": "うごき",
+          "nghia": "chuyển động; xu hướng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "よどみ",
+          "doc": "よどみ",
+          "nghia": "sự ứ đọng"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::向き",
+      "kanji": "向き",
+      "cautruc": null,
+      "doc": "むき",
+      "han_viet": "",
+      "nghia": "hướng; sự phù hợp",
+      "doc_marked": "むき",
+      "vi_du": "風の向きが変わる。(Hướng gió đổi.) この本は子供向きだ。(Sách này hợp trẻ em.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "方向",
+          "doc": "ほうこう",
+          "nghia": "hướng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::観察する",
+      "kanji": "観察する",
+      "cautruc": null,
+      "doc": "かんさつする",
+      "han_viet": "",
+      "nghia": "quan sát",
+      "doc_marked": "かんさつする",
+      "vi_du": "昆虫を観察する。(Quan sát côn trùng.) 星を観察する。(Quan sát các vì sao.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "見守る",
+          "doc": "みまもる",
+          "nghia": "dõi theo"
+        },
+        {
+          "kanji": "観測する",
+          "doc": "かんそくする",
+          "nghia": "quan trắc"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::調和",
+      "kanji": "調和",
+      "cautruc": null,
+      "doc": "ちょうわ",
+      "han_viet": "",
+      "nghia": "sự hài hòa",
+      "doc_marked": "**ちょう**わ",
+      "vi_du": "色の調和がとれている。(Màu sắc hài hòa.) 自然との調和を大切にする。(Coi trọng hòa hợp với tự nhiên.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "釣り合い",
+          "doc": "つりあい",
+          "nghia": "sự cân đối"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "対立",
+          "doc": "たいりつ",
+          "nghia": "sự đối lập"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::各地",
+      "kanji": "各地",
+      "cautruc": null,
+      "doc": "かくち",
+      "han_viet": "",
+      "nghia": "các nơi",
+      "doc_marked": "かくち",
+      "vi_du": "各地で祭りが行われる。(Lễ hội diễn ra khắp nơi.) 全国各地を旅する。(Du lịch khắp cả nước.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "あちこち",
+          "doc": "あちこち",
+          "nghia": "khắp nơi"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "一か所",
+          "doc": "いっかしょ",
+          "nghia": "một nơi"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::夕焼け",
+      "kanji": "夕焼け",
+      "cautruc": null,
+      "doc": "ゆうやけ",
+      "han_viet": "",
+      "nghia": "ráng chiều",
+      "doc_marked": "**ゆう**やけ",
+      "vi_du": "夕焼けが空を赤く染める。(Ráng chiều nhuộm đỏ trời.) 美しい夕焼けを見た。(Ngắm ráng chiều đẹp.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "夕映え",
+          "doc": "ゆうばえ",
+          "nghia": "ráng chiều rực rỡ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "朝焼け",
+          "doc": "あさやけ",
+          "nghia": "ráng bình minh"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::とける",
+      "kanji": "とける",
+      "cautruc": null,
+      "doc": "とける",
+      "han_viet": "",
+      "nghia": "tan chảy",
+      "doc_marked": "とける",
+      "vi_du": "雪がとける。(Tuyết tan.) 砂糖が水にとける。(Đường tan trong nước.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "溶解する",
+          "doc": "ようかいする",
+          "nghia": "hòa tan"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "凍る",
+          "doc": "こおる",
+          "nghia": "đóng băng"
+        },
+        {
+          "kanji": "固まる",
+          "doc": "かたまる",
+          "nghia": "đông cứng lại"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::農作業",
+      "kanji": "農作業",
+      "cautruc": null,
+      "doc": "のうさぎょう",
+      "han_viet": "",
+      "nghia": "công việc nhà nông",
+      "doc_marked": "**のう**さ**ぎょう**",
+      "vi_du": "朝から農作業をする。(Làm việc đồng áng từ sáng.) 農作業は体力がいる。(Việc nhà nông cần thể lực.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "農仕事",
+          "doc": "のうしごと",
+          "nghia": "việc đồng áng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::言い伝え",
+      "kanji": "言い伝え",
+      "cautruc": null,
+      "doc": "いいつたえ",
+      "han_viet": "",
+      "nghia": "lời truyền; truyền thuyết",
+      "doc_marked": "いいつたえ",
+      "vi_du": "古い言い伝えが残る。(Còn lưu truyền lời xưa.) 村の言い伝えを聞く。(Nghe truyền thuyết của làng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "伝説",
+          "doc": "でんせつ",
+          "nghia": "truyền thuyết"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::当てになる",
+      "kanji": "当てになる",
+      "cautruc": null,
+      "doc": "あてになる",
+      "han_viet": "",
+      "nghia": "tin cậy được",
+      "doc_marked": "あてになる",
+      "vi_du": "彼の話は当てになる。(Lời anh ấy tin được.) 天気予報は当てにならないこともある。(Dự báo có khi không đáng tin.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "頼りになる",
+          "doc": "たよりになる",
+          "nghia": "đáng tin cậy"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "当てにならない",
+          "doc": "あてにならない",
+          "nghia": "không đáng tin"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::知恵",
+      "kanji": "知恵",
+      "cautruc": null,
+      "doc": "ちえ",
+      "han_viet": "",
+      "nghia": "trí tuệ; khôn ngoan",
+      "doc_marked": "ちえ",
+      "vi_du": "知恵を絞る。(Vắt óc suy nghĩ.) 昔の人の知恵に学ぶ。(Học sự khôn ngoan của người xưa.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "知性",
+          "doc": "ちせい",
+          "nghia": "trí tuệ"
+        },
+        {
+          "kanji": "分別",
+          "doc": "ふんべつ",
+          "nghia": "sự phân biệt phải trái"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::神",
+      "kanji": "神",
+      "cautruc": null,
+      "doc": "かみ",
+      "han_viet": "",
+      "nghia": "thần; thần linh",
+      "doc_marked": "かみ",
+      "vi_du": "神に祈る。(Cầu khấn thần linh.) 神を信じる。(Tin vào thần.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "神様",
+          "doc": "かみさま",
+          "nghia": "thần thánh"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::いのる",
+      "kanji": "いのる",
+      "cautruc": null,
+      "doc": "いのる",
+      "han_viet": "",
+      "nghia": "cầu nguyện",
+      "doc_marked": "いのる",
+      "vi_du": "無事を祈る。(Cầu bình an.) 合格を祈っています。(Cầu chúc bạn thi đỗ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "祈願する",
+          "doc": "きがんする",
+          "nghia": "cầu khấn"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::てるてるぼうず",
+      "kanji": "てるてるぼうず",
+      "cautruc": null,
+      "doc": "てるてるぼうず",
+      "han_viet": "",
+      "nghia": "búp bê cầu nắng",
+      "doc_marked": "てるてる**ぼう**ず",
+      "vi_du": "窓にてるてるぼうずをつるす。(Treo búp bê cầu nắng lên cửa sổ.) 明日晴れるようにてるてるぼうずを作る。(Làm teruteru để mai nắng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "晴れ乞い人形",
+          "doc": "はれごいにんぎょう",
+          "nghia": "búp bê cầu nắng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::～とともに",
+      "kanji": "～とともに",
+      "cautruc": null,
+      "doc": "～とともに",
+      "han_viet": "",
+      "nghia": "cùng với ...",
+      "doc_marked": "～とともに",
+      "vi_du": "時代とともに変化する。(Thay đổi cùng thời đại.) 家族とともに過ごす。(Sống cùng gia đình.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～と一緒に",
+          "doc": "～といっしょに",
+          "nghia": "cùng với ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::気象",
+      "kanji": "気象",
+      "cautruc": null,
+      "doc": "きしょう",
+      "han_viet": "",
+      "nghia": "khí tượng",
+      "doc_marked": "き**しょう**",
+      "vi_du": "気象の変化を調べる。(Khảo sát biến đổi khí tượng.) 気象情報を確認する。(Kiểm tra thông tin thời tiết.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "天候",
+          "doc": "てんこう",
+          "nghia": "thời tiết"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::観測",
+      "kanji": "観測",
+      "cautruc": null,
+      "doc": "かんそく",
+      "han_viet": "",
+      "nghia": "quan trắc",
+      "doc_marked": "かんそく",
+      "vi_du": "気温を観測する。(Quan trắc nhiệt độ.) 天体を観測する。(Quan trắc thiên thể.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "観察",
+          "doc": "かんさつ",
+          "nghia": "quan sát"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::進歩する",
+      "kanji": "進歩する",
+      "cautruc": null,
+      "doc": "しんぽする",
+      "han_viet": "",
+      "nghia": "tiến bộ",
+      "doc_marked": "しんぽする",
+      "vi_du": "技術が進歩する。(Kĩ thuật tiến bộ.) 医学は日々進歩している。(Y học tiến bộ từng ngày.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "発展する",
+          "doc": "はってんする",
+          "nghia": "phát triển"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "後退する",
+          "doc": "こうたいする",
+          "nghia": "thụt lùi"
+        },
+        {
+          "kanji": "退化する",
+          "doc": "たいかする",
+          "nghia": "thoái hóa"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::なくてはならない",
+      "kanji": "なくてはならない",
+      "cautruc": null,
+      "doc": "なくてはならない",
+      "han_viet": "",
+      "nghia": "không thể thiếu",
+      "doc_marked": "なくてはならない",
+      "vi_du": "塩は料理になくてはならない。(Muối không thể thiếu khi nấu ăn.) なくてはならない人材だ。(Là nhân tài không thể thiếu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "欠かせない",
+          "doc": "かかせない",
+          "nghia": "không thể thiếu"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "なくてもいい",
+          "doc": "なくてもいい",
+          "nghia": "không có cũng được"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::数時間",
+      "kanji": "数時間",
+      "cautruc": null,
+      "doc": "すうじかん",
+      "han_viet": "",
+      "nghia": "vài tiếng",
+      "doc_marked": "**すう**じかん",
+      "vi_du": "数時間かけて歩く。(Đi bộ mất vài tiếng.) 数時間で終わる作業だ。(Việc chỉ vài tiếng là xong.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "数時間ほど",
+          "doc": "すうじかんほど",
+          "nghia": "khoảng vài tiếng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::数時間後",
+      "kanji": "数時間後",
+      "cautruc": null,
+      "doc": "すうじかんご",
+      "han_viet": "",
+      "nghia": "sau vài tiếng",
+      "doc_marked": "**すう**じかんご",
+      "vi_du": "数時間後に返事が来た。(Vài tiếng sau có hồi âm.) 数時間後、雨がやんだ。(Vài tiếng sau, mưa tạnh.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "数時間たって",
+          "doc": "すうじかんたって",
+          "nghia": "sau vài tiếng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "数時間前",
+          "doc": "すうじかんまえ",
+          "nghia": "vài tiếng trước"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::時期",
+      "kanji": "時期",
+      "cautruc": null,
+      "doc": "じき",
+      "han_viet": "",
+      "nghia": "thời kì",
+      "doc_marked": "じき",
+      "vi_du": "今は忙しい時期だ。(Giờ là thời kì bận rộn.) 桜が咲く時期。(Thời kì hoa anh đào nở.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "時節",
+          "doc": "じせつ",
+          "nghia": "thời tiết; thời điểm"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::日取り",
+      "kanji": "日取り",
+      "cautruc": null,
+      "doc": "ひどり",
+      "han_viet": "",
+      "nghia": "việc chọn ngày; ngày ấn định",
+      "doc_marked": "ひどり",
+      "vi_du": "結婚式の日取りを決める。(Định ngày cưới.) 引っ越しの日取りが決まった。(Đã chốt ngày chuyển nhà.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "日程",
+          "doc": "にってい",
+          "nghia": "lịch trình"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::～にもかかわらず",
+      "kanji": "～にもかかわらず",
+      "cautruc": null,
+      "doc": "～にもかかわらず",
+      "han_viet": "",
+      "nghia": "mặc dù ...",
+      "doc_marked": "～にもかかわらず",
+      "vi_du": "雨にもかかわらず出かけた。(Mặc dù mưa vẫn đi.) 努力にもかかわらず失敗した。(Dù cố gắng vẫn thất bại.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～のに",
+          "doc": "～のに",
+          "nghia": "dù ... mà"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-14::異常な",
+      "kanji": "異常な",
+      "cautruc": null,
+      "doc": "いじょうな",
+      "han_viet": "",
+      "nghia": "bất thường",
+      "doc_marked": "い**じょう**な",
+      "vi_du": "異常な暑さが続く。(Cái nóng bất thường kéo dài.) 機械に異常な音がする。(Máy phát ra tiếng bất thường.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "異例の",
+          "doc": "いれいの",
+          "nghia": "hiếm thấy; khác thường"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "正常な",
+          "doc": "せいじょうな",
+          "nghia": "bình thường"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::洪水",
+      "kanji": "洪水",
+      "cautruc": null,
+      "doc": "こうずい",
+      "han_viet": "",
+      "nghia": "lũ lụt",
+      "doc_marked": "**こう**ずい",
+      "vi_du": "大雨で洪水が起きた。(Mưa lớn gây lũ lụt.) 洪水で家が流された。(Nhà bị lũ cuốn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "大水",
+          "doc": "おおみず",
+          "nghia": "nước lớn; lũ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "干ばつ",
+          "doc": "かんばつ",
+          "nghia": "hạn hán"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::引き起こす",
+      "kanji": "引き起こす",
+      "cautruc": null,
+      "doc": "ひきおこす",
+      "han_viet": "",
+      "nghia": "gây ra",
+      "doc_marked": "ひきおこす",
+      "vi_du": "事故を引き起こす。(Gây ra tai nạn.) 混乱を引き起こした。(Đã gây ra hỗn loạn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "招く",
+          "doc": "まねく",
+          "nghia": "chuốc lấy; gây ra"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "防ぐ",
+          "doc": "ふせぐ",
+          "nghia": "ngăn ngừa"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::かけがえのない",
+      "kanji": "かけがえのない",
+      "cautruc": null,
+      "doc": "かけがえのない",
+      "han_viet": "",
+      "nghia": "quý giá không gì thay thế",
+      "doc_marked": "かけがえのない",
+      "vi_du": "かけがえのない友人だ。(Người bạn không gì thay thế.) かけがえのない時間を過ごす。(Trải qua khoảng thời gian quý giá.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "貴重な",
+          "doc": "きちょうな",
+          "nghia": "quý báu"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "ありふれた",
+          "doc": "ありふれた",
+          "nghia": "tầm thường; đâu cũng có"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::うばう",
+      "kanji": "うばう",
+      "cautruc": null,
+      "doc": "うばう",
+      "han_viet": "",
+      "nghia": "cướp đi",
+      "doc_marked": "うばう",
+      "vi_du": "戦争が命をうばう。(Chiến tranh cướp đi mạng sống.) 美しさに心をうばわれる。(Bị vẻ đẹp làm mê hoặc.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "奪い取る",
+          "doc": "うばいとる",
+          "nghia": "cướp lấy"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "与える",
+          "doc": "あたえる",
+          "nghia": "cho; trao"
+        },
+        {
+          "kanji": "返す",
+          "doc": "かえす",
+          "nghia": "trả lại"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::よごす",
+      "kanji": "よごす",
+      "cautruc": null,
+      "doc": "よごす",
+      "han_viet": "",
+      "nghia": "làm bẩn",
+      "doc_marked": "よごす",
+      "vi_du": "服を泥でよごす。(Làm bẩn áo vì bùn.) 川をよごしてはいけない。(Không được làm ô nhiễm sông.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "汚染する",
+          "doc": "おせんする",
+          "nghia": "gây ô nhiễm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "きれいにする",
+          "doc": "きれいにする",
+          "nghia": "làm sạch"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::手におえない",
+      "kanji": "手におえない",
+      "cautruc": null,
+      "doc": "てにおえない",
+      "han_viet": "",
+      "nghia": "vượt tầm tay; không kham nổi",
+      "doc_marked": "てにおえない",
+      "vi_du": "この問題は手におえない。(Vấn đề này quá sức.) 手におえない子だ。(Đứa trẻ khó bảo.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "始末に困る",
+          "doc": "しまつにこまる",
+          "nghia": "không biết xử trí sao"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "扱いやすい",
+          "doc": "あつかいやすい",
+          "nghia": "dễ xử lí"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::あわてる",
+      "kanji": "あわてる",
+      "cautruc": null,
+      "doc": "あわてる",
+      "han_viet": "",
+      "nghia": "vội vàng; luống cuống",
+      "doc_marked": "あわてる",
+      "vi_du": "急な質問にあわてた。(Luống cuống trước câu hỏi bất ngờ.) あわてて家を出た。(Vội vã ra khỏi nhà.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "焦る",
+          "doc": "あせる",
+          "nghia": "sốt ruột; cuống"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "落ち着く",
+          "doc": "おちつく",
+          "nghia": "bình tĩnh"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::したがう",
+      "kanji": "したがう",
+      "cautruc": null,
+      "doc": "したがう",
+      "han_viet": "",
+      "nghia": "tuân theo",
+      "doc_marked": "したがう",
+      "vi_du": "規則にしたがう。(Tuân theo quy tắc.) 指示にしたがって動く。(Làm theo chỉ thị.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "従う",
+          "doc": "したがう",
+          "nghia": "tuân theo"
+        },
+        {
+          "kanji": "服従する",
+          "doc": "ふくじゅうする",
+          "nghia": "phục tùng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "逆らう",
+          "doc": "さからう",
+          "nghia": "chống lại"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-14::見直す",
+      "kanji": "見直す",
+      "cautruc": null,
+      "doc": "みなおす",
+      "han_viet": "",
+      "nghia": "xem xét lại; đánh giá lại",
+      "doc_marked": "みなおす",
+      "vi_du": "計画を見直す。(Xem lại kế hoạch.) 彼の実力を見直した。(Nhìn nhận lại thực lực anh ấy tốt hơn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "再検討する",
+          "doc": "さいけんとうする",
+          "nghia": "xem xét lại"
+        },
+        {
+          "kanji": "改める",
+          "doc": "あらためる",
+          "nghia": "sửa lại"
+        }
+      ],
+      "trai_nghia": []
+    }
+  ]
+}

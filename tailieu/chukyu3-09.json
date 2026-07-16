@@ -1,0 +1,966 @@
+{
+  "id": "chukyu3-09",
+  "title": "Chukyu3 - Bài 9",
+  "type": "TUVUNG",
+  "series": "chukyu3",
+  "level": "N2",
+  "private": false,
+  "words": [
+    {
+      "_id": "chukyu3-09::めったに～ない",
+      "kanji": "めったに～ない",
+      "cautruc": null,
+      "doc": "めったに～ない",
+      "han_viet": "",
+      "nghia": "hiếm khi ...",
+      "doc_marked": "めったに～ない",
+      "vi_du": "彼はめったに怒らない。(Anh ấy hiếm khi giận.) こんな機会はめったにない。(Cơ hội thế này hiếm lắm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "ほとんど～ない",
+          "doc": "ほとんど～ない",
+          "nghia": "hầu như không ..."
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "よく",
+          "doc": "よく",
+          "nghia": "hay; thường"
+        },
+        {
+          "kanji": "しょっちゅう",
+          "doc": "しょっちゅう",
+          "nghia": "suốt; luôn luôn"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::投資",
+      "kanji": "投資",
+      "cautruc": null,
+      "doc": "とうし",
+      "han_viet": "",
+      "nghia": "đầu tư",
+      "doc_marked": "**とう**し",
+      "vi_du": "株に投資する。(Đầu tư vào cổ phiếu.) 教育は将来への投資だ。(Giáo dục là đầu tư cho tương lai.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "出資",
+          "doc": "しゅっし",
+          "nghia": "góp vốn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "貯蓄",
+          "doc": "ちょちく",
+          "nghia": "tích lũy; gửi tiết kiệm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::投資先",
+      "kanji": "投資先",
+      "cautruc": null,
+      "doc": "とうしさき",
+      "han_viet": "",
+      "nghia": "nơi đầu tư",
+      "doc_marked": "**とう**しさき",
+      "vi_du": "有望な投資先を探す。(Tìm nơi đầu tư triển vọng.) 投資先を分散する。(Phân tán nơi đầu tư.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "投資対象",
+          "doc": "とうしたいしょう",
+          "nghia": "đối tượng đầu tư"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::墓",
+      "kanji": "墓",
+      "cautruc": null,
+      "doc": "はか",
+      "han_viet": "",
+      "nghia": "mộ; mồ mả",
+      "doc_marked": "はか",
+      "vi_du": "お盆に墓参りをする。(Đi tảo mộ dịp Obon.) 先祖の墓を守る。(Trông nom mộ tổ tiên.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "墓地",
+          "doc": "ぼち",
+          "nghia": "nghĩa địa"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::気分",
+      "kanji": "気分",
+      "cautruc": null,
+      "doc": "きぶん",
+      "han_viet": "",
+      "nghia": "tâm trạng; cảm giác",
+      "doc_marked": "きぶん",
+      "vi_du": "気分がいいので散歩する。(Tâm trạng tốt nên đi dạo.) 少し気分が悪い。(Hơi khó chịu trong người.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "気持ち",
+          "doc": "きもち",
+          "nghia": "tâm trạng; cảm giác"
+        },
+        {
+          "kanji": "機嫌",
+          "doc": "きげん",
+          "nghia": "tâm trạng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::はず",
+      "kanji": "はず",
+      "cautruc": null,
+      "doc": "はず",
+      "han_viet": "",
+      "nghia": "chắc chắn (là); lẽ ra",
+      "doc_marked": "はず",
+      "vi_du": "彼は来るはずだ。(Anh ấy chắc chắn sẽ đến.) ここにあるはずなのに、ない。(Lẽ ra phải ở đây mà lại không có.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～に違いない",
+          "doc": "～にちがいない",
+          "nghia": "chắc chắn là"
+        },
+        {
+          "kanji": "わけ",
+          "doc": "わけ",
+          "nghia": "lẽ"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::何らか",
+      "kanji": "何らか",
+      "cautruc": null,
+      "doc": "なんらか",
+      "han_viet": "",
+      "nghia": "nào đó",
+      "doc_marked": "なんらか",
+      "vi_du": "何らかの理由があるはずだ。(Chắc phải có lí do nào đó.) 何らかの対策が必要だ。(Cần biện pháp nào đó.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "何かしら",
+          "doc": "なにかしら",
+          "nghia": "gì đó"
+        },
+        {
+          "kanji": "いくらか",
+          "doc": "いくらか",
+          "nghia": "ít nhiều"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::方法",
+      "kanji": "方法",
+      "cautruc": null,
+      "doc": "ほうほう",
+      "han_viet": "",
+      "nghia": "phương pháp; cách",
+      "doc_marked": "**ほう****ほう**",
+      "vi_du": "もっといい方法がある。(Có cách tốt hơn.) 解決の方法を考える。(Nghĩ cách giải quyết.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "やり方",
+          "doc": "やりかた",
+          "nghia": "cách làm"
+        },
+        {
+          "kanji": "手段",
+          "doc": "しゅだん",
+          "nghia": "phương tiện; biện pháp"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::年齢",
+      "kanji": "年齢",
+      "cautruc": null,
+      "doc": "ねんれい",
+      "han_viet": "",
+      "nghia": "tuổi; độ tuổi",
+      "doc_marked": "ねん**れい**",
+      "vi_du": "年齢を問わず参加できる。(Ai ở tuổi nào cũng tham gia được.) 年齢とともに体力が落ちる。(Thể lực giảm theo tuổi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "年",
+          "doc": "とし",
+          "nghia": "tuổi"
+        },
+        {
+          "kanji": "年ごろ",
+          "doc": "としごろ",
+          "nghia": "độ tuổi"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::詳しい",
+      "kanji": "詳しい",
+      "cautruc": null,
+      "doc": "くわしい",
+      "han_viet": "",
+      "nghia": "chi tiết; rành rẽ",
+      "doc_marked": "くわしい",
+      "vi_du": "詳しい説明が欲しい。(Tôi muốn giải thích chi tiết.) 彼は歴史に詳しい。(Anh ấy rành lịch sử.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "細かい",
+          "doc": "こまかい",
+          "nghia": "tỉ mỉ"
+        },
+        {
+          "kanji": "精通した",
+          "doc": "せいつうした",
+          "nghia": "tinh thông"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "大まかな",
+          "doc": "おおまかな",
+          "nghia": "đại khái"
+        },
+        {
+          "kanji": "疎い",
+          "doc": "うとい",
+          "nghia": "kém hiểu biết (về)"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::情報",
+      "kanji": "情報",
+      "cautruc": null,
+      "doc": "じょうほう",
+      "han_viet": "",
+      "nghia": "thông tin",
+      "doc_marked": "**じょう****ほう**",
+      "vi_du": "最新の情報を集める。(Thu thập thông tin mới nhất.) 情報がもれるのを防ぐ。(Ngăn thông tin bị rò rỉ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "データ",
+          "doc": "データ",
+          "nghia": "dữ liệu"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::あるいは",
+      "kanji": "あるいは",
+      "cautruc": null,
+      "doc": "あるいは",
+      "han_viet": "",
+      "nghia": "hoặc là",
+      "doc_marked": "あるいは",
+      "vi_du": "電話、あるいはメールで連絡する。(Liên lạc bằng điện thoại hoặc email.) あるいは彼が正しいのかもしれない。(Hoặc có lẽ anh ấy đúng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "または",
+          "doc": "または",
+          "nghia": "hoặc"
+        },
+        {
+          "kanji": "もしくは",
+          "doc": "もしくは",
+          "nghia": "hoặc là"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::どちらにしても",
+      "kanji": "どちらにしても",
+      "cautruc": null,
+      "doc": "どちらにしても",
+      "han_viet": "",
+      "nghia": "đằng nào cũng",
+      "doc_marked": "どちらにしても",
+      "vi_du": "どちらにしても、行くしかない。(Đằng nào cũng phải đi.) 賛成でも反対でも、どちらにしても伝えて。(Tán thành hay phản đối, dù sao cũng nói ra.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "いずれにしても",
+          "doc": "いずれにしても",
+          "nghia": "dù thế nào đi nữa"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::のぞく",
+      "kanji": "のぞく",
+      "cautruc": null,
+      "doc": "のぞく",
+      "han_viet": "",
+      "nghia": "ngó; dòm; hé nhìn",
+      "doc_marked": "のぞく",
+      "vi_du": "窓から中をのぞく。(Ngó vào trong từ cửa sổ.) すき間からのぞいてみた。(Tôi thử dòm qua khe hở.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "覗き見る",
+          "doc": "のぞきみる",
+          "nghia": "nhìn lén"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::気味が悪い",
+      "kanji": "気味が悪い",
+      "cautruc": null,
+      "doc": "きみがわるい",
+      "han_viet": "",
+      "nghia": "đáng sợ; rờn rợn",
+      "doc_marked": "きみがわるい",
+      "vi_du": "夜の墓地は気味が悪い。(Nghĩa địa ban đêm rờn rợn.) 気味が悪い笑い方をする。(Cười một cách đáng sợ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "不気味な",
+          "doc": "ぶきみな",
+          "nghia": "rùng rợn"
+        },
+        {
+          "kanji": "怖い",
+          "doc": "こわい",
+          "nghia": "đáng sợ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "心地よい",
+          "doc": "ここちよい",
+          "nghia": "dễ chịu"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::ところで",
+      "kanji": "ところで",
+      "cautruc": null,
+      "doc": "ところで",
+      "han_viet": "",
+      "nghia": "nhân tiện; à mà",
+      "doc_marked": "ところで",
+      "vi_du": "ところで、あの件はどうなった。(À mà, vụ đó sao rồi?) ところで、話は変わるけど。(Nhân tiện, đổi chủ đề chút.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "さて",
+          "doc": "さて",
+          "nghia": "nào là; giờ thì"
+        },
+        {
+          "kanji": "それはそうと",
+          "doc": "それはそうと",
+          "nghia": "à mà nói vậy"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::個人",
+      "kanji": "個人",
+      "cautruc": null,
+      "doc": "こじん",
+      "han_viet": "",
+      "nghia": "cá nhân",
+      "doc_marked": "こじん",
+      "vi_du": "これは個人の意見だ。(Đây là ý kiến cá nhân.) 個人情報を守る。(Bảo vệ thông tin cá nhân.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "一個人",
+          "doc": "いちこじん",
+          "nghia": "một cá nhân"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "団体",
+          "doc": "だんたい",
+          "nghia": "tập thể; đoàn thể"
+        },
+        {
+          "kanji": "全体",
+          "doc": "ぜんたい",
+          "nghia": "toàn thể"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::他人",
+      "kanji": "他人",
+      "cautruc": null,
+      "doc": "たにん",
+      "han_viet": "",
+      "nghia": "người ngoài; người lạ",
+      "doc_marked": "たにん",
+      "vi_du": "他人のことに口を出すな。(Đừng xen vào chuyện người ngoài.) 他人に迷惑をかけない。(Không gây phiền cho người khác.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "赤の他人",
+          "doc": "あかのたにん",
+          "nghia": "người dưng"
+        },
+        {
+          "kanji": "第三者",
+          "doc": "だいさんしゃ",
+          "nghia": "bên thứ ba"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "身内",
+          "doc": "みうち",
+          "nghia": "người nhà"
+        },
+        {
+          "kanji": "自分",
+          "doc": "じぶん",
+          "nghia": "bản thân"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::財産",
+      "kanji": "財産",
+      "cautruc": null,
+      "doc": "ざいさん",
+      "han_viet": "",
+      "nghia": "tài sản",
+      "doc_marked": "ざいさん",
+      "vi_du": "財産を子に残す。(Để lại tài sản cho con.) 健康こそ最大の財産だ。(Sức khỏe mới là tài sản lớn nhất.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "資産",
+          "doc": "しさん",
+          "nghia": "tài sản"
+        },
+        {
+          "kanji": "富",
+          "doc": "とみ",
+          "nghia": "của cải"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "負債",
+          "doc": "ふさい",
+          "nghia": "nợ; khoản nợ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::戸籍",
+      "kanji": "戸籍",
+      "cautruc": null,
+      "doc": "こせき",
+      "han_viet": "",
+      "nghia": "hộ tịch",
+      "doc_marked": "こせき",
+      "vi_du": "戸籍を移す手続きをする。(Làm thủ tục chuyển hộ tịch.) 戸籍謄本を取り寄せる。(Xin bản sao hộ tịch.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "籍",
+          "doc": "せき",
+          "nghia": "tịch; hộ"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::思想",
+      "kanji": "思想",
+      "cautruc": null,
+      "doc": "しそう",
+      "han_viet": "",
+      "nghia": "tư tưởng",
+      "doc_marked": "し**そう**",
+      "vi_du": "彼の思想に影響を受けた。(Tôi chịu ảnh hưởng tư tưởng của anh ấy.) 思想の自由を守る。(Bảo vệ tự do tư tưởng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "考え",
+          "doc": "かんがえ",
+          "nghia": "suy nghĩ"
+        },
+        {
+          "kanji": "イデオロギー",
+          "doc": "イデオロギー",
+          "nghia": "hệ tư tưởng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::宗教",
+      "kanji": "宗教",
+      "cautruc": null,
+      "doc": "しゅうきょう",
+      "han_viet": "",
+      "nghia": "tôn giáo",
+      "doc_marked": "**しゅう****きょう**",
+      "vi_du": "宗教によって習慣が違う。(Tập quán khác nhau theo tôn giáo.) 宗教を信じる自由がある。(Có tự do tin theo tôn giáo.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "信仰",
+          "doc": "しんこう",
+          "nghia": "tín ngưỡng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "無宗教",
+          "doc": "むしゅうきょう",
+          "nghia": "vô thần; không tôn giáo"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::まさか",
+      "kanji": "まさか",
+      "cautruc": null,
+      "doc": "まさか",
+      "han_viet": "",
+      "nghia": "chẳng lẽ; không ngờ",
+      "doc_marked": "まさか",
+      "vi_du": "まさか彼が来るとは。(Không ngờ anh ấy lại tới.) まさか、そんなはずはない。(Chẳng lẽ lại thế.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "よもや",
+          "doc": "よもや",
+          "nghia": "chẳng lẽ nào"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::遺伝子",
+      "kanji": "遺伝子",
+      "cautruc": null,
+      "doc": "いでんし",
+      "han_viet": "",
+      "nghia": "gen; di truyền",
+      "doc_marked": "いでんし",
+      "vi_du": "遺伝子を研究する。(Nghiên cứu gen.) 遺伝子は親から受け継ぐ。(Gen được thừa hưởng từ cha mẹ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "DNA",
+          "doc": "ディーエヌエー",
+          "nghia": "ADN"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::～として",
+      "kanji": "～として",
+      "cautruc": null,
+      "doc": "～として",
+      "han_viet": "",
+      "nghia": "với tư cách là ...",
+      "doc_marked": "～として",
+      "vi_du": "医者として働く。(Làm việc với tư cách bác sĩ.) 記念として写真を撮る。(Chụp ảnh để làm kỉ niệm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～の立場で",
+          "doc": "～のたちばで",
+          "nghia": "ở vị trí là ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::安全な",
+      "kanji": "安全な",
+      "cautruc": null,
+      "doc": "あんぜんな",
+      "han_viet": "",
+      "nghia": "an toàn",
+      "doc_marked": "あんぜんな",
+      "vi_du": "安全な場所に避難する。(Sơ tán đến nơi an toàn.) この橋は安全ではない。(Cây cầu này không an toàn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "無事な",
+          "doc": "ぶじな",
+          "nghia": "bình an"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "危険な",
+          "doc": "きけんな",
+          "nghia": "nguy hiểm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::管理する",
+      "kanji": "管理する",
+      "cautruc": null,
+      "doc": "かんりする",
+      "han_viet": "",
+      "nghia": "quản lí",
+      "doc_marked": "かんりする",
+      "vi_du": "データを管理する。(Quản lí dữ liệu.) 健康を自分で管理する。(Tự quản lí sức khỏe.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "管轄する",
+          "doc": "かんかつする",
+          "nghia": "quản lí; phụ trách"
+        },
+        {
+          "kanji": "コントロールする",
+          "doc": "コントロールする",
+          "nghia": "kiểm soát"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "放置する",
+          "doc": "ほうちする",
+          "nghia": "bỏ mặc"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::もれる",
+      "kanji": "もれる",
+      "cautruc": null,
+      "doc": "もれる",
+      "han_viet": "",
+      "nghia": "rò rỉ; lộ ra",
+      "doc_marked": "もれる",
+      "vi_du": "秘密がもれる。(Bí mật bị lộ.) 水道からガスがもれている。(Ga rò từ đường ống.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "漏えいする",
+          "doc": "ろうえいする",
+          "nghia": "bị rò rỉ (thông tin)"
+        },
+        {
+          "kanji": "こぼれる",
+          "doc": "こぼれる",
+          "nghia": "tràn; rớt ra"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::預金",
+      "kanji": "預金",
+      "cautruc": null,
+      "doc": "よきん",
+      "han_viet": "",
+      "nghia": "tiền gửi (ngân hàng)",
+      "doc_marked": "よきん",
+      "vi_du": "毎月少しずつ預金する。(Mỗi tháng gửi một ít.) 預金を下ろす。(Rút tiền gửi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "貯金",
+          "doc": "ちょきん",
+          "nghia": "tiền tiết kiệm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "借金",
+          "doc": "しゃっきん",
+          "nghia": "nợ; tiền vay"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::引き出す",
+      "kanji": "引き出す",
+      "cautruc": null,
+      "doc": "ひきだす",
+      "han_viet": "",
+      "nghia": "rút (tiền); khơi ra",
+      "doc_marked": "ひきだす",
+      "vi_du": "銀行でお金を引き出す。(Rút tiền ở ngân hàng.) 子供の才能を引き出す。(Khơi dậy tài năng của trẻ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "下ろす",
+          "doc": "おろす",
+          "nghia": "rút (tiền)"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "預ける",
+          "doc": "あずける",
+          "nghia": "gửi; giao"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::悪用する",
+      "kanji": "悪用する",
+      "cautruc": null,
+      "doc": "あくようする",
+      "han_viet": "",
+      "nghia": "lợi dụng vào việc xấu",
+      "doc_marked": "あく**よう**する",
+      "vi_du": "個人情報を悪用する。(Lợi dụng thông tin cá nhân.) 制度を悪用してはいけない。(Không được lạm dụng chế độ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "乱用する",
+          "doc": "らんようする",
+          "nghia": "lạm dụng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "活用する",
+          "doc": "かつようする",
+          "nghia": "tận dụng (đúng đắn)"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::恐ろしい",
+      "kanji": "恐ろしい",
+      "cautruc": null,
+      "doc": "おそろしい",
+      "han_viet": "",
+      "nghia": "đáng sợ; ghê gớm",
+      "doc_marked": "おそろしい",
+      "vi_du": "恐ろしい事件が起きた。(Một vụ án đáng sợ đã xảy ra.) 恐ろしいスピードで走る。(Chạy với tốc độ ghê gớm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "怖い",
+          "doc": "こわい",
+          "nghia": "sợ; đáng sợ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "心強い",
+          "doc": "こころづよい",
+          "nghia": "yên tâm; vững dạ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::気がする",
+      "kanji": "気がする",
+      "cautruc": null,
+      "doc": "きがする",
+      "han_viet": "",
+      "nghia": "có cảm giác; thấy như",
+      "doc_marked": "きがする",
+      "vi_du": "誰かに見られている気がする。(Tôi có cảm giác bị ai đó nhìn.) うまくいく気がする。(Tôi thấy như sẽ suôn sẻ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～ように感じる",
+          "doc": "～ようにかんじる",
+          "nghia": "cảm thấy như là ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::やり取りする",
+      "kanji": "やり取りする",
+      "cautruc": null,
+      "doc": "やりとりする",
+      "han_viet": "",
+      "nghia": "trao đổi (qua lại)",
+      "doc_marked": "やりとりする",
+      "vi_du": "メールでやり取りする。(Trao đổi qua email.) 意見をやり取りする。(Trao đổi ý kiến.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "交換する",
+          "doc": "こうかんする",
+          "nghia": "trao đổi"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::より～",
+      "kanji": "より～",
+      "cautruc": null,
+      "doc": "より～",
+      "han_viet": "",
+      "nghia": "hơn; ... hơn",
+      "doc_marked": "より～",
+      "vi_du": "より安全な方法を選ぶ。(Chọn cách an toàn hơn.) より良い社会を目指す。(Hướng tới xã hội tốt đẹp hơn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "もっと",
+          "doc": "もっと",
+          "nghia": "hơn nữa"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::参考",
+      "kanji": "参考",
+      "cautruc": null,
+      "doc": "さんこう",
+      "han_viet": "",
+      "nghia": "tham khảo",
+      "doc_marked": "さん**こう**",
+      "vi_du": "この本を参考にする。(Tham khảo cuốn sách này.) 参考までに聞いておく。(Hỏi để tham khảo thôi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "参照",
+          "doc": "さんしょう",
+          "nghia": "tham chiếu"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::進む",
+      "kanji": "進む",
+      "cautruc": null,
+      "doc": "すすむ",
+      "han_viet": "",
+      "nghia": "tiến lên; tiến triển",
+      "doc_marked": "すすむ",
+      "vi_du": "工事が予定通り進む。(Công trình tiến đúng dự kiến.) 前へ進む。(Tiến về phía trước.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "前進する",
+          "doc": "ぜんしんする",
+          "nghia": "tiến lên"
+        },
+        {
+          "kanji": "進行する",
+          "doc": "しんこうする",
+          "nghia": "tiến hành"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "戻る",
+          "doc": "もどる",
+          "nghia": "quay lại"
+        },
+        {
+          "kanji": "後退する",
+          "doc": "こうたいする",
+          "nghia": "thụt lùi"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-09::～ば～ほど",
+      "kanji": "～ば～ほど",
+      "cautruc": null,
+      "doc": "～ば～ほど",
+      "han_viet": "",
+      "nghia": "càng ... càng ...",
+      "doc_marked": "～ば～ほど",
+      "vi_du": "考えれば考えるほど分からなくなる。(Càng nghĩ càng rối.) 練習すればするほど上手になる。(Càng luyện càng giỏi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～につれて",
+          "doc": "～につれて",
+          "nghia": "cùng với việc ... thì ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::～に対して",
+      "kanji": "～に対して",
+      "cautruc": null,
+      "doc": "～にたいして",
+      "han_viet": "",
+      "nghia": "đối với ...; trước ...",
+      "doc_marked": "～にたいして",
+      "vi_du": "目上の人に対して敬語を使う。(Dùng kính ngữ đối với người trên.) 質問に対して丁寧に答える。(Trả lời cẩn thận các câu hỏi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～について",
+          "doc": "～について",
+          "nghia": "về ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-09::責任",
+      "kanji": "責任",
+      "cautruc": null,
+      "doc": "せきにん",
+      "han_viet": "",
+      "nghia": "trách nhiệm",
+      "doc_marked": "せきにん",
+      "vi_du": "結果に責任を持つ。(Chịu trách nhiệm với kết quả.) 責任を果たす。(Hoàn thành trách nhiệm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "義務",
+          "doc": "ぎむ",
+          "nghia": "nghĩa vụ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "無責任",
+          "doc": "むせきにん",
+          "nghia": "vô trách nhiệm"
+        }
+      ]
+    }
+  ]
+}

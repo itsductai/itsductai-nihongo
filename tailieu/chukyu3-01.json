@@ -1,0 +1,527 @@
+{
+  "id": "chukyu3-01",
+  "title": "Chukyu3 - Bài 1",
+  "type": "TUVUNG",
+  "series": "chukyu3",
+  "level": "N2",
+  "private": false,
+  "words": [
+    {
+      "_id": "chukyu3-01::始める",
+      "kanji": "始める",
+      "cautruc": null,
+      "doc": "はじめる",
+      "han_viet": "",
+      "nghia": "bắt đầu (làm gì đó); khởi đầu",
+      "doc_marked": "はじめる",
+      "vi_du": "授業が終わったら、すぐに宿題を始めます。(Sau khi tan học, tôi sẽ bắt đầu làm bài tập ngay.) 彼は去年、新しい仕事を始めた。(Anh ấy đã bắt đầu công việc mới vào năm ngoái.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "開始する",
+          "doc": "かいしする",
+          "nghia": "khởi đầu; bắt đầu"
+        },
+        {
+          "kanji": "スタートする",
+          "doc": "すたーとする",
+          "nghia": "bắt đầu"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "終える",
+          "doc": "おえる",
+          "nghia": "kết thúc; làm xong"
+        },
+        {
+          "kanji": "やめる",
+          "doc": "やめる",
+          "nghia": "ngừng; thôi"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-01::心配する",
+      "kanji": "心配する",
+      "cautruc": null,
+      "doc": "しんぱいする",
+      "han_viet": "",
+      "nghia": "lo lắng; bận tâm",
+      "doc_marked": "しんぱいする",
+      "vi_du": "母は私の健康をいつも心配している。(Mẹ luôn lo lắng cho sức khỏe của tôi.) 試験の結果が心配で、眠れなかった。(Tôi lo về kết quả thi nên không ngủ được.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "気にする",
+          "doc": "きにする",
+          "nghia": "bận tâm; để ý"
+        },
+        {
+          "kanji": "案じる",
+          "doc": "あんじる",
+          "nghia": "lo lắng (văn viết)"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "安心する",
+          "doc": "あんしんする",
+          "nghia": "yên tâm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-01::それでも",
+      "kanji": "それでも",
+      "cautruc": null,
+      "doc": "それでも",
+      "han_viet": "",
+      "nghia": "cho dù vậy; dù thế vẫn",
+      "doc_marked": "それでも",
+      "vi_du": "何度も失敗した。それでも、彼はあきらめなかった。(Đã thất bại nhiều lần. Dù vậy, anh ấy vẫn không bỏ cuộc.) 雨だった。それでも試合は行われた。(Trời mưa. Dù vậy trận đấu vẫn diễn ra.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "それにもかかわらず",
+          "doc": "それにもかかわらず",
+          "nghia": "mặc dù vậy"
+        },
+        {
+          "kanji": "でも",
+          "doc": "でも",
+          "nghia": "nhưng mà"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "だから",
+          "doc": "だから",
+          "nghia": "vì vậy; do đó (liên từ chỉ kết quả)"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-01::親",
+      "kanji": "親",
+      "cautruc": null,
+      "doc": "おや",
+      "han_viet": "",
+      "nghia": "cha mẹ; bố mẹ",
+      "doc_marked": "おや",
+      "vi_du": "親の言うことをよく聞きなさい。(Hãy nghe lời cha mẹ nói.) 親になって、育てる大変さが分かった。(Làm cha mẹ rồi tôi mới hiểu sự vất vả của việc nuôi con.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "両親",
+          "doc": "りょうしん",
+          "nghia": "song thân; bố mẹ"
+        },
+        {
+          "kanji": "保護者",
+          "doc": "ほごしゃ",
+          "nghia": "người giám hộ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "子",
+          "doc": "こ",
+          "nghia": "con"
+        },
+        {
+          "kanji": "子供",
+          "doc": "こども",
+          "nghia": "con cái"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-01::口を出す",
+      "kanji": "口を出す",
+      "cautruc": null,
+      "doc": "くちをだす",
+      "han_viet": "",
+      "nghia": "xen vào; can thiệp (vào chuyện người khác)",
+      "doc_marked": "くちをだす",
+      "vi_du": "人のことに口を出さないでください。(Đừng xen vào chuyện của người khác.) 親が子供の進路にいちいち口を出す。(Cha mẹ can thiệp vào từng chút con đường của con.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "干渉する",
+          "doc": "かんしょうする",
+          "nghia": "can thiệp"
+        },
+        {
+          "kanji": "口を挟む",
+          "doc": "くちをはさむ",
+          "nghia": "chen lời"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "見守る",
+          "doc": "みまもる",
+          "nghia": "đứng ngoài dõi theo; để yên quan sát"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-01::いけない",
+      "kanji": "いけない",
+      "cautruc": null,
+      "doc": "いけない",
+      "han_viet": "",
+      "nghia": "không được; không nên",
+      "doc_marked": "いけない",
+      "vi_du": "ここでたばこを吸ってはいけない。(Không được hút thuốc ở đây.) 約束を忘れてはいけません。(Không được quên lời hứa.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "だめだ",
+          "doc": "だめだ",
+          "nghia": "không được"
+        },
+        {
+          "kanji": "ならない",
+          "doc": "ならない",
+          "nghia": "không được (～てはならない)"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "構わない",
+          "doc": "かまわない",
+          "nghia": "không sao; được"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-01::ある日",
+      "kanji": "ある日",
+      "cautruc": null,
+      "doc": "あるひ",
+      "han_viet": "",
+      "nghia": "một ngày (nọ)",
+      "doc_marked": "あるひ",
+      "vi_du": "ある日、突然彼から手紙が届いた。(Một ngày nọ, đột nhiên tôi nhận được thư của anh ấy.) ある日のこと、道で古い友人に会った。(Chuyện xảy ra vào một ngày nọ, tôi gặp người bạn cũ trên đường.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "ある時",
+          "doc": "あるとき",
+          "nghia": "một lúc nào đó"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "毎日",
+          "doc": "まいにち",
+          "nghia": "mỗi ngày; hằng ngày"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-01::～だって",
+      "kanji": "～だって",
+      "cautruc": null,
+      "doc": "～だって",
+      "han_viet": "",
+      "nghia": "nghe nói là; nghe bảo",
+      "doc_marked": "～だって",
+      "vi_du": "田中さん、今日は来ないんだって。(Nghe nói hôm nay anh Tanaka không đến.) この店のケーキ、おいしいんだって。(Nghe bảo bánh của quán này ngon lắm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～そうだ",
+          "doc": "～そうだ",
+          "nghia": "nghe nói là"
+        },
+        {
+          "kanji": "～らしい",
+          "doc": "～らしい",
+          "nghia": "hình như; nghe nói"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-01::なぞなぞ",
+      "kanji": "なぞなぞ",
+      "cautruc": null,
+      "doc": "なぞなぞ",
+      "han_viet": "",
+      "nghia": "câu đố",
+      "doc_marked": "なぞなぞ",
+      "vi_du": "子供になぞなぞを出して遊んだ。(Tôi ra câu đố cho bọn trẻ chơi.) このなぞなぞの答えが分からない。(Tôi không biết đáp án câu đố này.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "クイズ",
+          "doc": "くいず",
+          "nghia": "câu hỏi đố"
+        },
+        {
+          "kanji": "謎",
+          "doc": "なぞ",
+          "nghia": "điều bí ẩn"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-01::手を止める",
+      "kanji": "手を止める",
+      "cautruc": null,
+      "doc": "てをとめる",
+      "han_viet": "",
+      "nghia": "dừng tay (ngừng việc đang làm)",
+      "doc_marked": "てをとめる",
+      "vi_du": "電話が鳴ったので、作業の手を止めた。(Điện thoại reo nên tôi dừng tay công việc.) 彼女は手を止めて、こちらを見た。(Cô ấy dừng tay và nhìn về phía này.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "中断する",
+          "doc": "ちゅうだんする",
+          "nghia": "gián đoạn; tạm ngừng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "続ける",
+          "doc": "つづける",
+          "nghia": "tiếp tục"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-01::場面",
+      "kanji": "場面",
+      "cautruc": null,
+      "doc": "ばめん",
+      "han_viet": "",
+      "nghia": "cảnh; tình huống",
+      "doc_marked": "ばめん",
+      "vi_du": "映画のこの場面が一番感動的だ。(Cảnh này của phim cảm động nhất.) 緊張する場面では深呼吸をするといい。(Trong những tình huống căng thẳng, nên hít thở sâu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "シーン",
+          "doc": "しーん",
+          "nghia": "cảnh (phim)"
+        },
+        {
+          "kanji": "状況",
+          "doc": "じょうきょう",
+          "nghia": "tình huống"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-01::口々に",
+      "kanji": "口々に",
+      "cautruc": null,
+      "doc": "くちぐちに",
+      "han_viet": "",
+      "nghia": "đồng loạt lên tiếng; nhao nhao",
+      "doc_marked": "くちぐちに",
+      "vi_du": "観客は口々に選手をほめた。(Khán giả nhao nhao khen ngợi cầu thủ.) 子供たちは口々に「行きたい！」と叫んだ。(Bọn trẻ đồng loạt hét lên \"Con muốn đi!\".)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "一斉に",
+          "doc": "いっせいに",
+          "nghia": "đồng loạt; cùng lúc"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "静かに",
+          "doc": "しずかに",
+          "nghia": "lặng lẽ; im lặng"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-01::そこで",
+      "kanji": "そこで",
+      "cautruc": null,
+      "doc": "そこで",
+      "han_viet": "",
+      "nghia": "vì thế; do đó",
+      "doc_marked": "そこで",
+      "vi_du": "お金がなかった。そこで、アルバイトを始めた。(Tôi không có tiền. Vì thế tôi bắt đầu làm thêm.) 道に迷った。そこで、駅員に聞いた。(Tôi bị lạc. Do đó tôi hỏi nhân viên nhà ga.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "それで",
+          "doc": "それで",
+          "nghia": "thế là; vì thế"
+        },
+        {
+          "kanji": "だから",
+          "doc": "だから",
+          "nghia": "vì vậy"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "それでも",
+          "doc": "それでも",
+          "nghia": "dù vậy (nhượng bộ, trái với chỉ kết quả)"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-01::相手",
+      "kanji": "相手",
+      "cautruc": null,
+      "doc": "あいて",
+      "han_viet": "",
+      "nghia": "đối phương; đối tác; người kia",
+      "doc_marked": "あいて",
+      "vi_du": "相手の気持ちを考えて話しましょう。(Hãy nói chuyện có nghĩ đến cảm xúc của đối phương.) テニスの相手が見つからない。(Tôi không tìm được người chơi tennis cùng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "先方",
+          "doc": "せんぽう",
+          "nghia": "phía đối phương"
+        },
+        {
+          "kanji": "パートナー",
+          "doc": "ぱーとなー",
+          "nghia": "đối tác; bạn cặp"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "自分",
+          "doc": "じぶん",
+          "nghia": "bản thân; mình"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-01::文化",
+      "kanji": "文化",
+      "cautruc": null,
+      "doc": "ぶんか",
+      "han_viet": "",
+      "nghia": "văn hóa",
+      "doc_marked": "ぶんか",
+      "vi_du": "日本の文化に興味があります。(Tôi có hứng thú với văn hóa Nhật.) 国によって食事の文化が違う。(Văn hóa ăn uống khác nhau tùy nước.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "文明",
+          "doc": "ぶんめい",
+          "nghia": "văn minh"
+        },
+        {
+          "kanji": "カルチャー",
+          "doc": "かるちゃー",
+          "nghia": "văn hóa"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "自然",
+          "doc": "しぜん",
+          "nghia": "tự nhiên"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-01::学ぶ",
+      "kanji": "学ぶ",
+      "cautruc": null,
+      "doc": "まなぶ",
+      "han_viet": "",
+      "nghia": "học; học hỏi",
+      "doc_marked": "まなぶ",
+      "vi_du": "失敗から多くのことを学んだ。(Tôi đã học được nhiều điều từ thất bại.) 大学で経済学を学んでいる。(Tôi đang học kinh tế học ở đại học.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "習う",
+          "doc": "ならう",
+          "nghia": "học; luyện"
+        },
+        {
+          "kanji": "勉強する",
+          "doc": "べんきょうする",
+          "nghia": "học tập"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "教える",
+          "doc": "おしえる",
+          "nghia": "dạy"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-01::広げる",
+      "kanji": "広げる",
+      "cautruc": null,
+      "doc": "ひろげる",
+      "han_viet": "",
+      "nghia": "mở rộng; trải rộng (tha động từ)",
+      "doc_marked": "ひろげる",
+      "vi_du": "地図をテーブルの上に広げた。(Tôi trải rộng bản đồ lên bàn.) 会社は事業を海外に広げている。(Công ty đang mở rộng kinh doanh ra nước ngoài.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "拡大する",
+          "doc": "かくだいする",
+          "nghia": "mở rộng; khuếch đại"
+        },
+        {
+          "kanji": "広める",
+          "doc": "ひろめる",
+          "nghia": "phổ biến"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "狭める",
+          "doc": "せばめる",
+          "nghia": "thu hẹp"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-01::楽しみに(する)",
+      "kanji": "楽しみに(する)",
+      "cautruc": null,
+      "doc": "たのしみにする",
+      "han_viet": "",
+      "nghia": "mong chờ; trông đợi",
+      "doc_marked": "たのしみにする",
+      "vi_du": "夏休みの旅行を楽しみにしている。(Tôi đang mong chờ chuyến du lịch nghỉ hè.) 息子は運動会を楽しみにしていた。(Con trai tôi đã rất mong chờ hội thao.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "期待する",
+          "doc": "きたいする",
+          "nghia": "kỳ vọng; mong đợi"
+        },
+        {
+          "kanji": "待ち望む",
+          "doc": "まちのぞむ",
+          "nghia": "mong ngóng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "気が重い",
+          "doc": "きがおもい",
+          "nghia": "thấy nặng nề; ngại"
+        }
+      ]
+    }
+  ]
+}

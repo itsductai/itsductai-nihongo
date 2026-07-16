@@ -67721,6 +67721,5575 @@
           "nghia": "tất nhiên; đương nhiên"
         }
       ]
+    },
+    {
+      "id": "chukyu3-01",
+      "title": "Chukyu3 - Bài 1",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-01::始める",
+          "kanji": "始める",
+          "cautruc": null,
+          "doc": "はじめる",
+          "nghia": "bắt đầu (làm gì đó); khởi đầu"
+        },
+        {
+          "_id": "chukyu3-01::心配する",
+          "kanji": "心配する",
+          "cautruc": null,
+          "doc": "しんぱいする",
+          "nghia": "lo lắng; bận tâm"
+        },
+        {
+          "_id": "chukyu3-01::それでも",
+          "kanji": "それでも",
+          "cautruc": null,
+          "doc": "それでも",
+          "nghia": "cho dù vậy; dù thế vẫn"
+        },
+        {
+          "_id": "chukyu3-01::親",
+          "kanji": "親",
+          "cautruc": null,
+          "doc": "おや",
+          "nghia": "cha mẹ; bố mẹ"
+        },
+        {
+          "_id": "chukyu3-01::口を出す",
+          "kanji": "口を出す",
+          "cautruc": null,
+          "doc": "くちをだす",
+          "nghia": "xen vào; can thiệp (vào chuyện người khác)"
+        },
+        {
+          "_id": "chukyu3-01::いけない",
+          "kanji": "いけない",
+          "cautruc": null,
+          "doc": "いけない",
+          "nghia": "không được; không nên"
+        },
+        {
+          "_id": "chukyu3-01::ある日",
+          "kanji": "ある日",
+          "cautruc": null,
+          "doc": "あるひ",
+          "nghia": "một ngày (nọ)"
+        },
+        {
+          "_id": "chukyu3-01::～だって",
+          "kanji": "～だって",
+          "cautruc": null,
+          "doc": "～だって",
+          "nghia": "nghe nói là; nghe bảo"
+        },
+        {
+          "_id": "chukyu3-01::なぞなぞ",
+          "kanji": "なぞなぞ",
+          "cautruc": null,
+          "doc": "なぞなぞ",
+          "nghia": "câu đố"
+        },
+        {
+          "_id": "chukyu3-01::手を止める",
+          "kanji": "手を止める",
+          "cautruc": null,
+          "doc": "てをとめる",
+          "nghia": "dừng tay (ngừng việc đang làm)"
+        },
+        {
+          "_id": "chukyu3-01::場面",
+          "kanji": "場面",
+          "cautruc": null,
+          "doc": "ばめん",
+          "nghia": "cảnh; tình huống"
+        },
+        {
+          "_id": "chukyu3-01::口々に",
+          "kanji": "口々に",
+          "cautruc": null,
+          "doc": "くちぐちに",
+          "nghia": "đồng loạt lên tiếng; nhao nhao"
+        },
+        {
+          "_id": "chukyu3-01::そこで",
+          "kanji": "そこで",
+          "cautruc": null,
+          "doc": "そこで",
+          "nghia": "vì thế; do đó"
+        },
+        {
+          "_id": "chukyu3-01::相手",
+          "kanji": "相手",
+          "cautruc": null,
+          "doc": "あいて",
+          "nghia": "đối phương; đối tác; người kia"
+        },
+        {
+          "_id": "chukyu3-01::文化",
+          "kanji": "文化",
+          "cautruc": null,
+          "doc": "ぶんか",
+          "nghia": "văn hóa"
+        },
+        {
+          "_id": "chukyu3-01::学ぶ",
+          "kanji": "学ぶ",
+          "cautruc": null,
+          "doc": "まなぶ",
+          "nghia": "học; học hỏi"
+        },
+        {
+          "_id": "chukyu3-01::広げる",
+          "kanji": "広げる",
+          "cautruc": null,
+          "doc": "ひろげる",
+          "nghia": "mở rộng; trải rộng (tha động từ)"
+        },
+        {
+          "_id": "chukyu3-01::楽しみに(する)",
+          "kanji": "楽しみに(する)",
+          "cautruc": null,
+          "doc": "たのしみにする",
+          "nghia": "mong chờ; trông đợi"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-02",
+      "title": "Chukyu3 - Bài 2",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-02::交通機関",
+          "kanji": "交通機関",
+          "cautruc": null,
+          "doc": "こうつうきかん",
+          "nghia": "phương tiện giao thông"
+        },
+        {
+          "_id": "chukyu3-02::便利な",
+          "kanji": "便利な",
+          "cautruc": null,
+          "doc": "べんりな",
+          "nghia": "tiện lợi"
+        },
+        {
+          "_id": "chukyu3-02::おしゃべりする",
+          "kanji": "おしゃべりする",
+          "cautruc": null,
+          "doc": "おしゃべりする",
+          "nghia": "tán gẫu; nói chuyện phiếm"
+        },
+        {
+          "_id": "chukyu3-02::通う",
+          "kanji": "通う",
+          "cautruc": null,
+          "doc": "かよう",
+          "nghia": "đi lại thường xuyên (đi học/đi làm)"
+        },
+        {
+          "_id": "chukyu3-02::利用する",
+          "kanji": "利用する",
+          "cautruc": null,
+          "doc": "りようする",
+          "nghia": "sử dụng; tận dụng"
+        },
+        {
+          "_id": "chukyu3-02::この間",
+          "kanji": "この間",
+          "cautruc": null,
+          "doc": "このあいだ",
+          "nghia": "hôm nọ; dạo gần đây"
+        },
+        {
+          "_id": "chukyu3-02::先",
+          "kanji": "先",
+          "cautruc": null,
+          "doc": "さき",
+          "nghia": "phía trước; trước"
+        },
+        {
+          "_id": "chukyu3-02::動く",
+          "kanji": "動く",
+          "cautruc": null,
+          "doc": "うごく",
+          "nghia": "chuyển động; hoạt động (tự động từ)"
+        },
+        {
+          "_id": "chukyu3-02::耳に入る",
+          "kanji": "耳に入る",
+          "cautruc": null,
+          "doc": "みみにはいる",
+          "nghia": "lọt vào tai; tình cờ nghe được"
+        },
+        {
+          "_id": "chukyu3-02::～ことにする",
+          "kanji": "～ことにする",
+          "cautruc": null,
+          "doc": "～ことにする",
+          "nghia": "quyết định (tự mình) làm gì"
+        },
+        {
+          "_id": "chukyu3-02::方向",
+          "kanji": "方向",
+          "cautruc": null,
+          "doc": "ほうこう",
+          "nghia": "hướng"
+        },
+        {
+          "_id": "chukyu3-02::はっきりする",
+          "kanji": "はっきりする",
+          "cautruc": null,
+          "doc": "はっきりする",
+          "nghia": "rõ ràng; rành mạch"
+        },
+        {
+          "_id": "chukyu3-02::まよう",
+          "kanji": "まよう",
+          "cautruc": null,
+          "doc": "まよう",
+          "nghia": "lạc (đường); phân vân"
+        },
+        {
+          "_id": "chukyu3-02::見当をつける",
+          "kanji": "見当をつける",
+          "cautruc": null,
+          "doc": "けんとうをつける",
+          "nghia": "phỏng đoán; ước chừng"
+        },
+        {
+          "_id": "chukyu3-02::横",
+          "kanji": "横",
+          "cautruc": null,
+          "doc": "よこ",
+          "nghia": "bên cạnh; chiều ngang"
+        },
+        {
+          "_id": "chukyu3-02::見つける",
+          "kanji": "見つける",
+          "cautruc": null,
+          "doc": "みつける",
+          "nghia": "tìm thấy; phát hiện ra"
+        },
+        {
+          "_id": "chukyu3-02::宣伝する",
+          "kanji": "宣伝する",
+          "cautruc": null,
+          "doc": "せんでんする",
+          "nghia": "quảng cáo; tuyên truyền"
+        },
+        {
+          "_id": "chukyu3-02::ときどき",
+          "kanji": "ときどき",
+          "cautruc": null,
+          "doc": "ときどき",
+          "nghia": "thỉnh thoảng"
+        },
+        {
+          "_id": "chukyu3-02::にっこり",
+          "kanji": "にっこり",
+          "cautruc": null,
+          "doc": "にっこり",
+          "nghia": "mỉm cười (tươi)"
+        },
+        {
+          "_id": "chukyu3-02::会釈する",
+          "kanji": "会釈する",
+          "cautruc": null,
+          "doc": "えしゃくする",
+          "nghia": "khẽ cúi chào"
+        },
+        {
+          "_id": "chukyu3-02::気が進まない",
+          "kanji": "気が進まない",
+          "cautruc": null,
+          "doc": "きがすすまない",
+          "nghia": "không muốn; không hứng thú"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-03",
+      "title": "Chukyu3 - Bài 3",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-03::画面",
+          "kanji": "画面",
+          "cautruc": null,
+          "doc": "がめん",
+          "nghia": "màn hình"
+        },
+        {
+          "_id": "chukyu3-03::目をやる",
+          "kanji": "目をやる",
+          "cautruc": null,
+          "doc": "めをやる",
+          "nghia": "đưa mắt nhìn; liếc nhìn"
+        },
+        {
+          "_id": "chukyu3-03::ほっとする",
+          "kanji": "ほっとする",
+          "cautruc": null,
+          "doc": "ほっとする",
+          "nghia": "thở phào; nhẹ nhõm"
+        },
+        {
+          "_id": "chukyu3-03::すます",
+          "kanji": "すます",
+          "cautruc": null,
+          "doc": "すます",
+          "nghia": "làm cho xong; giải quyết xong"
+        },
+        {
+          "_id": "chukyu3-03::習い事",
+          "kanji": "習い事",
+          "cautruc": null,
+          "doc": "ならいごと",
+          "nghia": "lớp học năng khiếu; việc học thêm"
+        },
+        {
+          "_id": "chukyu3-03::～うち",
+          "kanji": "～うち",
+          "cautruc": null,
+          "doc": "～うち",
+          "nghia": "trong lúc; khi còn (đang ở trạng thái nào đó)"
+        },
+        {
+          "_id": "chukyu3-03::準備する",
+          "kanji": "準備する",
+          "cautruc": null,
+          "doc": "じゅんびする",
+          "nghia": "chuẩn bị"
+        },
+        {
+          "_id": "chukyu3-03::温める",
+          "kanji": "温める",
+          "cautruc": null,
+          "doc": "あたためる",
+          "nghia": "hâm nóng; làm ấm"
+        },
+        {
+          "_id": "chukyu3-03::変わる",
+          "kanji": "変わる",
+          "cautruc": null,
+          "doc": "かわる",
+          "nghia": "thay đổi (tự động từ)"
+        },
+        {
+          "_id": "chukyu3-03::変化する",
+          "kanji": "変化する",
+          "cautruc": null,
+          "doc": "へんかする",
+          "nghia": "biến đổi; thay đổi"
+        },
+        {
+          "_id": "chukyu3-03::風景",
+          "kanji": "風景",
+          "cautruc": null,
+          "doc": "ふうけい",
+          "nghia": "phong cảnh"
+        },
+        {
+          "_id": "chukyu3-03::声を上げる",
+          "kanji": "声を上げる",
+          "cautruc": null,
+          "doc": "こえをあげる",
+          "nghia": "cất tiếng; kêu lên"
+        },
+        {
+          "_id": "chukyu3-03::姿",
+          "kanji": "姿",
+          "cautruc": null,
+          "doc": "すがた",
+          "nghia": "hình dáng; bóng dáng"
+        },
+        {
+          "_id": "chukyu3-03::昔",
+          "kanji": "昔",
+          "cautruc": null,
+          "doc": "むかし",
+          "nghia": "ngày xưa"
+        },
+        {
+          "_id": "chukyu3-03::遊び疲れる",
+          "kanji": "遊び疲れる",
+          "cautruc": null,
+          "doc": "あそびつかれる",
+          "nghia": "chơi mệt"
+        },
+        {
+          "_id": "chukyu3-03::囲む",
+          "kanji": "囲む",
+          "cautruc": null,
+          "doc": "かこむ",
+          "nghia": "vây quanh; quây quần"
+        },
+        {
+          "_id": "chukyu3-03::あふれる",
+          "kanji": "あふれる",
+          "cautruc": null,
+          "doc": "あふれる",
+          "nghia": "tràn đầy; đầy ắp"
+        },
+        {
+          "_id": "chukyu3-03::栄養",
+          "kanji": "栄養",
+          "cautruc": null,
+          "doc": "えいよう",
+          "nghia": "dinh dưỡng"
+        },
+        {
+          "_id": "chukyu3-03::バランス",
+          "kanji": "バランス",
+          "cautruc": null,
+          "doc": "ばらんす",
+          "nghia": "sự cân bằng"
+        },
+        {
+          "_id": "chukyu3-03::商品",
+          "kanji": "商品",
+          "cautruc": null,
+          "doc": "しょうひん",
+          "nghia": "sản phẩm; hàng hóa"
+        },
+        {
+          "_id": "chukyu3-03::時間をかける",
+          "kanji": "時間をかける",
+          "cautruc": null,
+          "doc": "じかんをかける",
+          "nghia": "dành/bỏ thời gian"
+        },
+        {
+          "_id": "chukyu3-03::なつかしい",
+          "kanji": "なつかしい",
+          "cautruc": null,
+          "doc": "なつかしい",
+          "nghia": "thân thương; gợi nhớ; bồi hồi"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-04",
+      "title": "Chukyu3 - Bài 4",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-04::ことわざ",
+          "kanji": "ことわざ",
+          "cautruc": null,
+          "doc": "ことわざ",
+          "nghia": "tục ngữ; thành ngữ"
+        },
+        {
+          "_id": "chukyu3-04::目が回る",
+          "kanji": "目が回る",
+          "cautruc": null,
+          "doc": "めがまわる",
+          "nghia": "bận tối mắt; chóng mặt"
+        },
+        {
+          "_id": "chukyu3-04::手を借りる",
+          "kanji": "手を借りる",
+          "cautruc": null,
+          "doc": "てをかりる",
+          "nghia": "nhờ (ai) giúp đỡ"
+        },
+        {
+          "_id": "chukyu3-04::それほど～ない",
+          "kanji": "それほど～ない",
+          "cautruc": null,
+          "doc": "それほど～ない",
+          "nghia": "không ... đến thế"
+        },
+        {
+          "_id": "chukyu3-04::役に立つ",
+          "kanji": "役に立つ",
+          "cautruc": null,
+          "doc": "やくにたつ",
+          "nghia": "có ích; hữu ích"
+        },
+        {
+          "_id": "chukyu3-04::のんびり",
+          "kanji": "のんびり",
+          "cautruc": null,
+          "doc": "のんびり",
+          "nghia": "thong thả; thư thái"
+        },
+        {
+          "_id": "chukyu3-04::昼寝",
+          "kanji": "昼寝",
+          "cautruc": null,
+          "doc": "ひるね",
+          "nghia": "ngủ trưa"
+        },
+        {
+          "_id": "chukyu3-04::つい",
+          "kanji": "つい",
+          "cautruc": null,
+          "doc": "つい",
+          "nghia": "lỡ; vô tình; bất giác"
+        },
+        {
+          "_id": "chukyu3-04::口に出す",
+          "kanji": "口に出す",
+          "cautruc": null,
+          "doc": "くちにだす",
+          "nghia": "nói ra; thốt ra"
+        },
+        {
+          "_id": "chukyu3-04::また",
+          "kanji": "また",
+          "cautruc": null,
+          "doc": "また",
+          "nghia": "ngoài ra; hơn nữa; lại"
+        },
+        {
+          "_id": "chukyu3-04::額",
+          "kanji": "額",
+          "cautruc": null,
+          "doc": "ひたい",
+          "nghia": "trán"
+        },
+        {
+          "_id": "chukyu3-04::たとえる",
+          "kanji": "たとえる",
+          "cautruc": null,
+          "doc": "たとえる",
+          "nghia": "ví von; ví như"
+        },
+        {
+          "_id": "chukyu3-04::小判",
+          "kanji": "小判",
+          "cautruc": null,
+          "doc": "こばん",
+          "nghia": "đồng tiền vàng cổ (koban)"
+        },
+        {
+          "_id": "chukyu3-04::手にする",
+          "kanji": "手にする",
+          "cautruc": null,
+          "doc": "てにする",
+          "nghia": "có được; cầm trong tay"
+        },
+        {
+          "_id": "chukyu3-04::価値",
+          "kanji": "価値",
+          "cautruc": null,
+          "doc": "かち",
+          "nghia": "giá trị"
+        },
+        {
+          "_id": "chukyu3-04::手に入れる",
+          "kanji": "手に入れる",
+          "cautruc": null,
+          "doc": "てにいれる",
+          "nghia": "đạt được; có được"
+        },
+        {
+          "_id": "chukyu3-04::うまい",
+          "kanji": "うまい",
+          "cautruc": null,
+          "doc": "うまい",
+          "nghia": "giỏi; khéo; ngon"
+        },
+        {
+          "_id": "chukyu3-04::ずっと",
+          "kanji": "ずっと",
+          "cautruc": null,
+          "doc": "ずっと",
+          "nghia": "suốt; ... hơn nhiều"
+        },
+        {
+          "_id": "chukyu3-04::使い続ける",
+          "kanji": "使い続ける",
+          "cautruc": null,
+          "doc": "つかいつづける",
+          "nghia": "dùng liên tục; tiếp tục dùng"
+        },
+        {
+          "_id": "chukyu3-04::きっと",
+          "kanji": "きっと",
+          "cautruc": null,
+          "doc": "きっと",
+          "nghia": "chắc chắn; nhất định"
+        },
+        {
+          "_id": "chukyu3-04::ぜひ",
+          "kanji": "ぜひ",
+          "cautruc": null,
+          "doc": "ぜひ",
+          "nghia": "nhất định; rất mong"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-05",
+      "title": "Chukyu3 - Bài 5",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-05::難しさ",
+          "kanji": "難しさ",
+          "cautruc": null,
+          "doc": "むずかしさ",
+          "nghia": "độ khó; sự khó khăn"
+        },
+        {
+          "_id": "chukyu3-05::中でも",
+          "kanji": "中でも",
+          "cautruc": null,
+          "doc": "なかでも",
+          "nghia": "trong số đó; đặc biệt là"
+        },
+        {
+          "_id": "chukyu3-05::社会",
+          "kanji": "社会",
+          "cautruc": null,
+          "doc": "しゃかい",
+          "nghia": "xã hội"
+        },
+        {
+          "_id": "chukyu3-05::様子",
+          "kanji": "様子",
+          "cautruc": null,
+          "doc": "ようす",
+          "nghia": "tình hình; dáng vẻ"
+        },
+        {
+          "_id": "chukyu3-05::場所",
+          "kanji": "場所",
+          "cautruc": null,
+          "doc": "ばしょ",
+          "nghia": "địa điểm; nơi chốn"
+        },
+        {
+          "_id": "chukyu3-05::～たばかり",
+          "kanji": "～たばかり",
+          "cautruc": null,
+          "doc": "～たばかり",
+          "nghia": "vừa mới ..."
+        },
+        {
+          "_id": "chukyu3-05::ころ",
+          "kanji": "ころ",
+          "cautruc": null,
+          "doc": "ころ",
+          "nghia": "khoảng; hồi; dạo"
+        },
+        {
+          "_id": "chukyu3-05::満員",
+          "kanji": "満員",
+          "cautruc": null,
+          "doc": "まんいん",
+          "nghia": "chật kín người; hết chỗ"
+        },
+        {
+          "_id": "chukyu3-05::がまんする",
+          "kanji": "がまんする",
+          "cautruc": null,
+          "doc": "がまんする",
+          "nghia": "chịu đựng; nhịn"
+        },
+        {
+          "_id": "chukyu3-05::ふしぎな",
+          "kanji": "ふしぎな",
+          "cautruc": null,
+          "doc": "ふしぎな",
+          "nghia": "kì lạ; khó hiểu"
+        },
+        {
+          "_id": "chukyu3-05::～てたまらない",
+          "kanji": "～てたまらない",
+          "cautruc": null,
+          "doc": "～てたまらない",
+          "nghia": "... không chịu nổi"
+        },
+        {
+          "_id": "chukyu3-05::眠る",
+          "kanji": "眠る",
+          "cautruc": null,
+          "doc": "ねむる",
+          "nghia": "ngủ"
+        },
+        {
+          "_id": "chukyu3-05::会社員",
+          "kanji": "会社員",
+          "cautruc": null,
+          "doc": "かいしゃいん",
+          "nghia": "nhân viên công ty"
+        },
+        {
+          "_id": "chukyu3-05::この前",
+          "kanji": "この前",
+          "cautruc": null,
+          "doc": "このまえ",
+          "nghia": "hôm trước; lần trước"
+        },
+        {
+          "_id": "chukyu3-05::席を取る",
+          "kanji": "席を取る",
+          "cautruc": null,
+          "doc": "せきをとる",
+          "nghia": "giữ chỗ; lấy chỗ"
+        },
+        {
+          "_id": "chukyu3-05::取り出す",
+          "kanji": "取り出す",
+          "cautruc": null,
+          "doc": "とりだす",
+          "nghia": "lấy ra; rút ra"
+        },
+        {
+          "_id": "chukyu3-05::大声",
+          "kanji": "大声",
+          "cautruc": null,
+          "doc": "おおごえ",
+          "nghia": "giọng to; tiếng lớn"
+        },
+        {
+          "_id": "chukyu3-05::途中",
+          "kanji": "途中",
+          "cautruc": null,
+          "doc": "とちゅう",
+          "nghia": "giữa chừng; giữa đường"
+        },
+        {
+          "_id": "chukyu3-05::お年寄り",
+          "kanji": "お年寄り",
+          "cautruc": null,
+          "doc": "おとしより",
+          "nghia": "người già; người cao tuổi"
+        },
+        {
+          "_id": "chukyu3-05::夢中",
+          "kanji": "夢中",
+          "cautruc": null,
+          "doc": "むちゅう",
+          "nghia": "say mê; mải mê"
+        },
+        {
+          "_id": "chukyu3-05::礼儀正しい",
+          "kanji": "礼儀正しい",
+          "cautruc": null,
+          "doc": "れいぎただしい",
+          "nghia": "lễ phép; lịch sự"
+        },
+        {
+          "_id": "chukyu3-05::なんて",
+          "kanji": "なんて",
+          "cautruc": null,
+          "doc": "なんて",
+          "nghia": "nào ngờ ...; cái việc ... ấy"
+        },
+        {
+          "_id": "chukyu3-05::あきれる",
+          "kanji": "あきれる",
+          "cautruc": null,
+          "doc": "あきれる",
+          "nghia": "ngán ngẩm; chưng hửng"
+        },
+        {
+          "_id": "chukyu3-05::手を貸す",
+          "kanji": "手を貸す",
+          "cautruc": null,
+          "doc": "てをかす",
+          "nghia": "giúp đỡ; ra tay giúp"
+        },
+        {
+          "_id": "chukyu3-05::じっと",
+          "kanji": "じっと",
+          "cautruc": null,
+          "doc": "じっと",
+          "nghia": "chăm chú; im lìm; bất động"
+        },
+        {
+          "_id": "chukyu3-05::列",
+          "kanji": "列",
+          "cautruc": null,
+          "doc": "れつ",
+          "nghia": "hàng; dãy; hàng người"
+        },
+        {
+          "_id": "chukyu3-05::信じる",
+          "kanji": "信じる",
+          "cautruc": null,
+          "doc": "しんじる",
+          "nghia": "tin tưởng"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-06",
+      "title": "Chukyu3 - Bài 6",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-06::むし暑い",
+          "kanji": "むし暑い",
+          "cautruc": null,
+          "doc": "むしあつい",
+          "nghia": "nóng ẩm; oi bức"
+        },
+        {
+          "_id": "chukyu3-06::残業",
+          "kanji": "残業",
+          "cautruc": null,
+          "doc": "ざんぎょう",
+          "nghia": "làm thêm giờ; tăng ca"
+        },
+        {
+          "_id": "chukyu3-06::別",
+          "kanji": "別",
+          "cautruc": null,
+          "doc": "べつ",
+          "nghia": "riêng; khác"
+        },
+        {
+          "_id": "chukyu3-06::料金",
+          "kanji": "料金",
+          "cautruc": null,
+          "doc": "りょうきん",
+          "nghia": "phí; cước; tiền"
+        },
+        {
+          "_id": "chukyu3-06::特急",
+          "kanji": "特急",
+          "cautruc": null,
+          "doc": "とっきゅう",
+          "nghia": "tàu tốc hành; tàu nhanh"
+        },
+        {
+          "_id": "chukyu3-06::車内",
+          "kanji": "車内",
+          "cautruc": null,
+          "doc": "しゃない",
+          "nghia": "trong xe; trong tàu"
+        },
+        {
+          "_id": "chukyu3-06::乗車",
+          "kanji": "乗車",
+          "cautruc": null,
+          "doc": "じょうしゃ",
+          "nghia": "lên xe; lên tàu"
+        },
+        {
+          "_id": "chukyu3-06::券",
+          "kanji": "券",
+          "cautruc": null,
+          "doc": "けん",
+          "nghia": "vé; phiếu"
+        },
+        {
+          "_id": "chukyu3-06::必要な",
+          "kanji": "必要な",
+          "cautruc": null,
+          "doc": "ひつような",
+          "nghia": "cần thiết"
+        },
+        {
+          "_id": "chukyu3-06::間違う",
+          "kanji": "間違う",
+          "cautruc": null,
+          "doc": "まちがう",
+          "nghia": "nhầm; sai"
+        },
+        {
+          "_id": "chukyu3-06::アナウンス",
+          "kanji": "アナウンス",
+          "cautruc": null,
+          "doc": "アナウンス",
+          "nghia": "thông báo; phát thanh"
+        },
+        {
+          "_id": "chukyu3-06::ちょっとした～",
+          "kanji": "ちょっとした～",
+          "cautruc": null,
+          "doc": "ちょっとした～",
+          "nghia": "một chút; nhỏ; kha khá"
+        },
+        {
+          "_id": "chukyu3-06::気にかかる",
+          "kanji": "気にかかる",
+          "cautruc": null,
+          "doc": "きにかかる",
+          "nghia": "lo lắng; bận tâm"
+        },
+        {
+          "_id": "chukyu3-06::敬語",
+          "kanji": "敬語",
+          "cautruc": null,
+          "doc": "けいご",
+          "nghia": "kính ngữ"
+        },
+        {
+          "_id": "chukyu3-06::気に入る",
+          "kanji": "気に入る",
+          "cautruc": null,
+          "doc": "きにいる",
+          "nghia": "ưng; thích"
+        },
+        {
+          "_id": "chukyu3-06::感じる",
+          "kanji": "感じる",
+          "cautruc": null,
+          "doc": "かんじる",
+          "nghia": "cảm thấy; cảm nhận"
+        },
+        {
+          "_id": "chukyu3-06::～について",
+          "kanji": "～について",
+          "cautruc": null,
+          "doc": "～について",
+          "nghia": "về ..."
+        },
+        {
+          "_id": "chukyu3-06::投書",
+          "kanji": "投書",
+          "cautruc": null,
+          "doc": "とうしょ",
+          "nghia": "thư bạn đọc; thư góp ý"
+        },
+        {
+          "_id": "chukyu3-06::残す",
+          "kanji": "残す",
+          "cautruc": null,
+          "doc": "のこす",
+          "nghia": "để lại; chừa lại"
+        },
+        {
+          "_id": "chukyu3-06::～とか",
+          "kanji": "～とか",
+          "cautruc": null,
+          "doc": "～とか",
+          "nghia": "như là ...; kiểu ..."
+        },
+        {
+          "_id": "chukyu3-06::できるだけ",
+          "kanji": "できるだけ",
+          "cautruc": null,
+          "doc": "できるだけ",
+          "nghia": "càng ... càng tốt; hết mức có thể"
+        },
+        {
+          "_id": "chukyu3-06::離れる",
+          "kanji": "離れる",
+          "cautruc": null,
+          "doc": "はなれる",
+          "nghia": "rời xa; cách xa"
+        },
+        {
+          "_id": "chukyu3-06::命令",
+          "kanji": "命令",
+          "cautruc": null,
+          "doc": "めいれい",
+          "nghia": "mệnh lệnh"
+        },
+        {
+          "_id": "chukyu3-06::禁止",
+          "kanji": "禁止",
+          "cautruc": null,
+          "doc": "きんし",
+          "nghia": "cấm; sự cấm"
+        },
+        {
+          "_id": "chukyu3-06::うんざり",
+          "kanji": "うんざり",
+          "cautruc": null,
+          "doc": "うんざり",
+          "nghia": "chán ngán; ngán ngẩm"
+        },
+        {
+          "_id": "chukyu3-06::目にする",
+          "kanji": "目にする",
+          "cautruc": null,
+          "doc": "めにする",
+          "nghia": "nhìn thấy; bắt gặp"
+        },
+        {
+          "_id": "chukyu3-06::～といっても",
+          "kanji": "～といっても",
+          "cautruc": null,
+          "doc": "～といっても",
+          "nghia": "mặc dù nói là ..."
+        },
+        {
+          "_id": "chukyu3-06::思いやり",
+          "kanji": "思いやり",
+          "cautruc": null,
+          "doc": "おもいやり",
+          "nghia": "sự quan tâm; lòng thấu hiểu"
+        },
+        {
+          "_id": "chukyu3-06::伝わる",
+          "kanji": "伝わる",
+          "cautruc": null,
+          "doc": "つたわる",
+          "nghia": "được truyền đạt; lan tới"
+        },
+        {
+          "_id": "chukyu3-06::もの",
+          "kanji": "もの",
+          "cautruc": null,
+          "doc": "もの",
+          "nghia": "(việc/điều - dùng nhấn mạnh cảm thán/lẽ thường)"
+        },
+        {
+          "_id": "chukyu3-06::つもり",
+          "kanji": "つもり",
+          "cautruc": null,
+          "doc": "つもり",
+          "nghia": "định; dự định; ngỡ là"
+        },
+        {
+          "_id": "chukyu3-06::たしかに",
+          "kanji": "たしかに",
+          "cautruc": null,
+          "doc": "たしかに",
+          "nghia": "đúng là; quả thật"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-07",
+      "title": "Chukyu3 - Bài 7",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-07::外見",
+          "kanji": "外見",
+          "cautruc": null,
+          "doc": "がいけん",
+          "nghia": "vẻ ngoài; bề ngoài"
+        },
+        {
+          "_id": "chukyu3-07::中身",
+          "kanji": "中身",
+          "cautruc": null,
+          "doc": "なかみ",
+          "nghia": "bên trong; nội dung"
+        },
+        {
+          "_id": "chukyu3-07::判断する",
+          "kanji": "判断する",
+          "cautruc": null,
+          "doc": "はんだんする",
+          "nghia": "phán đoán; đánh giá"
+        },
+        {
+          "_id": "chukyu3-07::手術する",
+          "kanji": "手術する",
+          "cautruc": null,
+          "doc": "しゅじゅつする",
+          "nghia": "phẫu thuật"
+        },
+        {
+          "_id": "chukyu3-07::化粧",
+          "kanji": "化粧",
+          "cautruc": null,
+          "doc": "けしょう",
+          "nghia": "trang điểm"
+        },
+        {
+          "_id": "chukyu3-07::化粧品",
+          "kanji": "化粧品",
+          "cautruc": null,
+          "doc": "けしょうひん",
+          "nghia": "mỹ phẩm"
+        },
+        {
+          "_id": "chukyu3-07::売れる",
+          "kanji": "売れる",
+          "cautruc": null,
+          "doc": "うれる",
+          "nghia": "bán chạy"
+        },
+        {
+          "_id": "chukyu3-07::選挙",
+          "kanji": "選挙",
+          "cautruc": null,
+          "doc": "せんきょ",
+          "nghia": "bầu cử"
+        },
+        {
+          "_id": "chukyu3-07::ポスター",
+          "kanji": "ポスター",
+          "cautruc": null,
+          "doc": "ポスター",
+          "nghia": "áp phích"
+        },
+        {
+          "_id": "chukyu3-07::まるで",
+          "kanji": "まるで",
+          "cautruc": null,
+          "doc": "まるで",
+          "nghia": "y như; giống hệt"
+        },
+        {
+          "_id": "chukyu3-07::スター",
+          "kanji": "スター",
+          "cautruc": null,
+          "doc": "スター",
+          "nghia": "ngôi sao (người nổi tiếng)"
+        },
+        {
+          "_id": "chukyu3-07::首をかしげる",
+          "kanji": "首をかしげる",
+          "cautruc": null,
+          "doc": "くびをかしげる",
+          "nghia": "nghiêng đầu (ngờ vực; khó hiểu)"
+        },
+        {
+          "_id": "chukyu3-07::気にする",
+          "kanji": "気にする",
+          "cautruc": null,
+          "doc": "きにする",
+          "nghia": "để tâm; bận tâm"
+        },
+        {
+          "_id": "chukyu3-07::影響する",
+          "kanji": "影響する",
+          "cautruc": null,
+          "doc": "えいきょうする",
+          "nghia": "ảnh hưởng"
+        },
+        {
+          "_id": "chukyu3-07::表す",
+          "kanji": "表す",
+          "cautruc": null,
+          "doc": "あらわす",
+          "nghia": "biểu thị; thể hiện"
+        },
+        {
+          "_id": "chukyu3-07::制服",
+          "kanji": "制服",
+          "cautruc": null,
+          "doc": "せいふく",
+          "nghia": "đồng phục"
+        },
+        {
+          "_id": "chukyu3-07::地味な",
+          "kanji": "地味な",
+          "cautruc": null,
+          "doc": "じみな",
+          "nghia": "giản dị; trơn; kín đáo"
+        },
+        {
+          "_id": "chukyu3-07::話題",
+          "kanji": "話題",
+          "cautruc": null,
+          "doc": "わだい",
+          "nghia": "chủ đề; đề tài"
+        },
+        {
+          "_id": "chukyu3-07::進学する",
+          "kanji": "進学する",
+          "cautruc": null,
+          "doc": "しんがくする",
+          "nghia": "học lên (cấp trên)"
+        },
+        {
+          "_id": "chukyu3-07::決める",
+          "kanji": "決める",
+          "cautruc": null,
+          "doc": "きめる",
+          "nghia": "quyết định"
+        },
+        {
+          "_id": "chukyu3-07::理由",
+          "kanji": "理由",
+          "cautruc": null,
+          "doc": "りゆう",
+          "nghia": "lí do"
+        },
+        {
+          "_id": "chukyu3-07::名刺",
+          "kanji": "名刺",
+          "cautruc": null,
+          "doc": "めいし",
+          "nghia": "danh thiếp"
+        },
+        {
+          "_id": "chukyu3-07::会社名",
+          "kanji": "会社名",
+          "cautruc": null,
+          "doc": "かいしゃめい",
+          "nghia": "tên công ty"
+        },
+        {
+          "_id": "chukyu3-07::肩書",
+          "kanji": "肩書",
+          "cautruc": null,
+          "doc": "かたがき",
+          "nghia": "chức danh"
+        },
+        {
+          "_id": "chukyu3-07::～によって",
+          "kanji": "～によって",
+          "cautruc": null,
+          "doc": "～によって",
+          "nghia": "tùy vào; do; bằng"
+        },
+        {
+          "_id": "chukyu3-07::安心する",
+          "kanji": "安心する",
+          "cautruc": null,
+          "doc": "あんしんする",
+          "nghia": "an tâm; yên tâm"
+        },
+        {
+          "_id": "chukyu3-07::部長",
+          "kanji": "部長",
+          "cautruc": null,
+          "doc": "ぶちょう",
+          "nghia": "trưởng phòng"
+        },
+        {
+          "_id": "chukyu3-07::信頼",
+          "kanji": "信頼",
+          "cautruc": null,
+          "doc": "しんらい",
+          "nghia": "sự tin tưởng; tín nhiệm"
+        },
+        {
+          "_id": "chukyu3-07::もちろん",
+          "kanji": "もちろん",
+          "cautruc": null,
+          "doc": "もちろん",
+          "nghia": "đương nhiên; tất nhiên"
+        },
+        {
+          "_id": "chukyu3-07::とはいえ",
+          "kanji": "とはいえ",
+          "cautruc": null,
+          "doc": "とはいえ",
+          "nghia": "tuy vậy; dù nói thế"
+        },
+        {
+          "_id": "chukyu3-07::人間",
+          "kanji": "人間",
+          "cautruc": null,
+          "doc": "にんげん",
+          "nghia": "con người"
+        },
+        {
+          "_id": "chukyu3-07::突然",
+          "kanji": "突然",
+          "cautruc": null,
+          "doc": "とつぜん",
+          "nghia": "đột nhiên"
+        },
+        {
+          "_id": "chukyu3-07::無視する",
+          "kanji": "無視する",
+          "cautruc": null,
+          "doc": "むしする",
+          "nghia": "lờ đi; phớt lờ"
+        },
+        {
+          "_id": "chukyu3-07::など",
+          "kanji": "など",
+          "cautruc": null,
+          "doc": "など",
+          "nghia": "v.v.; chẳng hạn"
+        },
+        {
+          "_id": "chukyu3-07::理想",
+          "kanji": "理想",
+          "cautruc": null,
+          "doc": "りそう",
+          "nghia": "lí tưởng"
+        },
+        {
+          "_id": "chukyu3-07::せっかく",
+          "kanji": "せっかく",
+          "cautruc": null,
+          "doc": "せっかく",
+          "nghia": "đã cất công; hiếm có dịp"
+        },
+        {
+          "_id": "chukyu3-07::同時に",
+          "kanji": "同時に",
+          "cautruc": null,
+          "doc": "どうじに",
+          "nghia": "đồng thời; cùng lúc"
+        },
+        {
+          "_id": "chukyu3-07::努力",
+          "kanji": "努力",
+          "cautruc": null,
+          "doc": "どりょく",
+          "nghia": "nỗ lực; cố gắng"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-08",
+      "title": "Chukyu3 - Bài 8",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-08::娘",
+          "kanji": "娘",
+          "cautruc": null,
+          "doc": "むすめ",
+          "nghia": "con gái"
+        },
+        {
+          "_id": "chukyu3-08::許可",
+          "kanji": "許可",
+          "cautruc": null,
+          "doc": "きょか",
+          "nghia": "sự cho phép"
+        },
+        {
+          "_id": "chukyu3-08::求める",
+          "kanji": "求める",
+          "cautruc": null,
+          "doc": "もとめる",
+          "nghia": "tìm kiếm; yêu cầu"
+        },
+        {
+          "_id": "chukyu3-08::体つき",
+          "kanji": "体つき",
+          "cautruc": null,
+          "doc": "からだつき",
+          "nghia": "vóc dáng"
+        },
+        {
+          "_id": "chukyu3-08::共有する",
+          "kanji": "共有する",
+          "cautruc": null,
+          "doc": "きょうゆうする",
+          "nghia": "chia sẻ; dùng chung"
+        },
+        {
+          "_id": "chukyu3-08::区別",
+          "kanji": "区別",
+          "cautruc": null,
+          "doc": "くべつ",
+          "nghia": "sự phân biệt"
+        },
+        {
+          "_id": "chukyu3-08::男物",
+          "kanji": "男物",
+          "cautruc": null,
+          "doc": "おとこもの",
+          "nghia": "đồ nam"
+        },
+        {
+          "_id": "chukyu3-08::描く",
+          "kanji": "描く",
+          "cautruc": null,
+          "doc": "えがく",
+          "nghia": "vẽ; khắc họa"
+        },
+        {
+          "_id": "chukyu3-08::リボン",
+          "kanji": "リボン",
+          "cautruc": null,
+          "doc": "リボン",
+          "nghia": "ruy băng; nơ"
+        },
+        {
+          "_id": "chukyu3-08::いったい",
+          "kanji": "いったい",
+          "cautruc": null,
+          "doc": "いったい",
+          "nghia": "rốt cuộc (là gì/thế nào)"
+        },
+        {
+          "_id": "chukyu3-08::基準",
+          "kanji": "基準",
+          "cautruc": null,
+          "doc": "きじゅん",
+          "nghia": "tiêu chuẩn; chuẩn mực"
+        },
+        {
+          "_id": "chukyu3-08::いつの間にか",
+          "kanji": "いつの間にか",
+          "cautruc": null,
+          "doc": "いつのまにか",
+          "nghia": "tự lúc nào không hay"
+        },
+        {
+          "_id": "chukyu3-08::身につく",
+          "kanji": "身につく",
+          "cautruc": null,
+          "doc": "みにつく",
+          "nghia": "thấm; thành thạo (kĩ năng)"
+        },
+        {
+          "_id": "chukyu3-08::～ようがない",
+          "kanji": "～ようがない",
+          "cautruc": null,
+          "doc": "～ようがない",
+          "nghia": "không có cách nào để ..."
+        },
+        {
+          "_id": "chukyu3-08::年代",
+          "kanji": "年代",
+          "cautruc": null,
+          "doc": "ねんだい",
+          "nghia": "thế hệ; niên đại"
+        },
+        {
+          "_id": "chukyu3-08::～にとって",
+          "kanji": "～にとって",
+          "cautruc": null,
+          "doc": "～にとって",
+          "nghia": "đối với ..."
+        },
+        {
+          "_id": "chukyu3-08::とても～ない",
+          "kanji": "とても～ない",
+          "cautruc": null,
+          "doc": "とても～ない",
+          "nghia": "không thể nào ..."
+        },
+        {
+          "_id": "chukyu3-08::理解する",
+          "kanji": "理解する",
+          "cautruc": null,
+          "doc": "りかいする",
+          "nghia": "hiểu"
+        },
+        {
+          "_id": "chukyu3-08::全員",
+          "kanji": "全員",
+          "cautruc": null,
+          "doc": "ぜんいん",
+          "nghia": "toàn thể; tất cả mọi người"
+        },
+        {
+          "_id": "chukyu3-08::顔をそろえる",
+          "kanji": "顔をそろえる",
+          "cautruc": null,
+          "doc": "かおをそろえる",
+          "nghia": "tề tựu đông đủ"
+        },
+        {
+          "_id": "chukyu3-08::口癖",
+          "kanji": "口癖",
+          "cautruc": null,
+          "doc": "くちぐせ",
+          "nghia": "câu cửa miệng"
+        },
+        {
+          "_id": "chukyu3-08::時には",
+          "kanji": "時には",
+          "cautruc": null,
+          "doc": "ときには",
+          "nghia": "đôi khi; có lúc"
+        },
+        {
+          "_id": "chukyu3-08::長男",
+          "kanji": "長男",
+          "cautruc": null,
+          "doc": "ちょうなん",
+          "nghia": "con trai cả"
+        },
+        {
+          "_id": "chukyu3-08::決まる",
+          "kanji": "決まる",
+          "cautruc": null,
+          "doc": "きまる",
+          "nghia": "được quyết định; định đoạt"
+        },
+        {
+          "_id": "chukyu3-08::首を長くする",
+          "kanji": "首を長くする",
+          "cautruc": null,
+          "doc": "くびをながくする",
+          "nghia": "mòn mỏi trông chờ"
+        },
+        {
+          "_id": "chukyu3-08::わけ",
+          "kanji": "わけ",
+          "cautruc": null,
+          "doc": "わけ",
+          "nghia": "lí do; lẽ"
+        },
+        {
+          "_id": "chukyu3-08::とうとう",
+          "kanji": "とうとう",
+          "cautruc": null,
+          "doc": "とうとう",
+          "nghia": "cuối cùng; rốt cuộc"
+        },
+        {
+          "_id": "chukyu3-08::聞かずじまい",
+          "kanji": "聞かずじまい",
+          "cautruc": null,
+          "doc": "きかずじまい",
+          "nghia": "rốt cuộc không hỏi được"
+        },
+        {
+          "_id": "chukyu3-08::何となく",
+          "kanji": "何となく",
+          "cautruc": null,
+          "doc": "なんとなく",
+          "nghia": "không hiểu sao; mơ hồ"
+        },
+        {
+          "_id": "chukyu3-08::納得する",
+          "kanji": "納得する",
+          "cautruc": null,
+          "doc": "なっとくする",
+          "nghia": "thông; chấp nhận"
+        },
+        {
+          "_id": "chukyu3-08::派手な",
+          "kanji": "派手な",
+          "cautruc": null,
+          "doc": "はでな",
+          "nghia": "sặc sỡ; hào nhoáng"
+        },
+        {
+          "_id": "chukyu3-08::身につける",
+          "kanji": "身につける",
+          "cautruc": null,
+          "doc": "みにつける",
+          "nghia": "mặc lên người; học được"
+        },
+        {
+          "_id": "chukyu3-08::～たところ",
+          "kanji": "～たところ",
+          "cautruc": null,
+          "doc": "～たところ",
+          "nghia": "khi (vừa) ...; kết quả là"
+        },
+        {
+          "_id": "chukyu3-08::くせに",
+          "kanji": "くせに",
+          "cautruc": null,
+          "doc": "くせに",
+          "nghia": "thế mà; vậy mà (chê trách)"
+        },
+        {
+          "_id": "chukyu3-08::仲間",
+          "kanji": "仲間",
+          "cautruc": null,
+          "doc": "なかま",
+          "nghia": "bạn; đồng đội"
+        },
+        {
+          "_id": "chukyu3-08::からかう",
+          "kanji": "からかう",
+          "cautruc": null,
+          "doc": "からかう",
+          "nghia": "trêu chọc; ghẹo"
+        },
+        {
+          "_id": "chukyu3-08::経験",
+          "kanji": "経験",
+          "cautruc": null,
+          "doc": "けいけん",
+          "nghia": "kinh nghiệm; trải nghiệm"
+        },
+        {
+          "_id": "chukyu3-08::ちゃんと",
+          "kanji": "ちゃんと",
+          "cautruc": null,
+          "doc": "ちゃんと",
+          "nghia": "tử tế; đàng hoàng; đầy đủ"
+        },
+        {
+          "_id": "chukyu3-08::男性用",
+          "kanji": "男性用",
+          "cautruc": null,
+          "doc": "だんせいよう",
+          "nghia": "dành cho nam giới"
+        },
+        {
+          "_id": "chukyu3-08::個性",
+          "kanji": "個性",
+          "cautruc": null,
+          "doc": "こせい",
+          "nghia": "cá tính"
+        },
+        {
+          "_id": "chukyu3-08::なるほど",
+          "kanji": "なるほど",
+          "cautruc": null,
+          "doc": "なるほど",
+          "nghia": "quả thật; ra vậy"
+        },
+        {
+          "_id": "chukyu3-08::知らず知らずのうちに",
+          "kanji": "知らず知らずのうちに",
+          "cautruc": null,
+          "doc": "しらずしらずのうちに",
+          "nghia": "một cách vô thức"
+        },
+        {
+          "_id": "chukyu3-08::当たり前",
+          "kanji": "当たり前",
+          "cautruc": null,
+          "doc": "あたりまえ",
+          "nghia": "đương nhiên; lẽ thường"
+        },
+        {
+          "_id": "chukyu3-08::思い込む",
+          "kanji": "思い込む",
+          "cautruc": null,
+          "doc": "おもいこむ",
+          "nghia": "đinh ninh; ngỡ là"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-09",
+      "title": "Chukyu3 - Bài 9",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-09::めったに～ない",
+          "kanji": "めったに～ない",
+          "cautruc": null,
+          "doc": "めったに～ない",
+          "nghia": "hiếm khi ..."
+        },
+        {
+          "_id": "chukyu3-09::投資",
+          "kanji": "投資",
+          "cautruc": null,
+          "doc": "とうし",
+          "nghia": "đầu tư"
+        },
+        {
+          "_id": "chukyu3-09::投資先",
+          "kanji": "投資先",
+          "cautruc": null,
+          "doc": "とうしさき",
+          "nghia": "nơi đầu tư"
+        },
+        {
+          "_id": "chukyu3-09::墓",
+          "kanji": "墓",
+          "cautruc": null,
+          "doc": "はか",
+          "nghia": "mộ; mồ mả"
+        },
+        {
+          "_id": "chukyu3-09::気分",
+          "kanji": "気分",
+          "cautruc": null,
+          "doc": "きぶん",
+          "nghia": "tâm trạng; cảm giác"
+        },
+        {
+          "_id": "chukyu3-09::はず",
+          "kanji": "はず",
+          "cautruc": null,
+          "doc": "はず",
+          "nghia": "chắc chắn (là); lẽ ra"
+        },
+        {
+          "_id": "chukyu3-09::何らか",
+          "kanji": "何らか",
+          "cautruc": null,
+          "doc": "なんらか",
+          "nghia": "nào đó"
+        },
+        {
+          "_id": "chukyu3-09::方法",
+          "kanji": "方法",
+          "cautruc": null,
+          "doc": "ほうほう",
+          "nghia": "phương pháp; cách"
+        },
+        {
+          "_id": "chukyu3-09::年齢",
+          "kanji": "年齢",
+          "cautruc": null,
+          "doc": "ねんれい",
+          "nghia": "tuổi; độ tuổi"
+        },
+        {
+          "_id": "chukyu3-09::詳しい",
+          "kanji": "詳しい",
+          "cautruc": null,
+          "doc": "くわしい",
+          "nghia": "chi tiết; rành rẽ"
+        },
+        {
+          "_id": "chukyu3-09::情報",
+          "kanji": "情報",
+          "cautruc": null,
+          "doc": "じょうほう",
+          "nghia": "thông tin"
+        },
+        {
+          "_id": "chukyu3-09::あるいは",
+          "kanji": "あるいは",
+          "cautruc": null,
+          "doc": "あるいは",
+          "nghia": "hoặc là"
+        },
+        {
+          "_id": "chukyu3-09::どちらにしても",
+          "kanji": "どちらにしても",
+          "cautruc": null,
+          "doc": "どちらにしても",
+          "nghia": "đằng nào cũng"
+        },
+        {
+          "_id": "chukyu3-09::のぞく",
+          "kanji": "のぞく",
+          "cautruc": null,
+          "doc": "のぞく",
+          "nghia": "ngó; dòm; hé nhìn"
+        },
+        {
+          "_id": "chukyu3-09::気味が悪い",
+          "kanji": "気味が悪い",
+          "cautruc": null,
+          "doc": "きみがわるい",
+          "nghia": "đáng sợ; rờn rợn"
+        },
+        {
+          "_id": "chukyu3-09::ところで",
+          "kanji": "ところで",
+          "cautruc": null,
+          "doc": "ところで",
+          "nghia": "nhân tiện; à mà"
+        },
+        {
+          "_id": "chukyu3-09::個人",
+          "kanji": "個人",
+          "cautruc": null,
+          "doc": "こじん",
+          "nghia": "cá nhân"
+        },
+        {
+          "_id": "chukyu3-09::他人",
+          "kanji": "他人",
+          "cautruc": null,
+          "doc": "たにん",
+          "nghia": "người ngoài; người lạ"
+        },
+        {
+          "_id": "chukyu3-09::財産",
+          "kanji": "財産",
+          "cautruc": null,
+          "doc": "ざいさん",
+          "nghia": "tài sản"
+        },
+        {
+          "_id": "chukyu3-09::戸籍",
+          "kanji": "戸籍",
+          "cautruc": null,
+          "doc": "こせき",
+          "nghia": "hộ tịch"
+        },
+        {
+          "_id": "chukyu3-09::思想",
+          "kanji": "思想",
+          "cautruc": null,
+          "doc": "しそう",
+          "nghia": "tư tưởng"
+        },
+        {
+          "_id": "chukyu3-09::宗教",
+          "kanji": "宗教",
+          "cautruc": null,
+          "doc": "しゅうきょう",
+          "nghia": "tôn giáo"
+        },
+        {
+          "_id": "chukyu3-09::まさか",
+          "kanji": "まさか",
+          "cautruc": null,
+          "doc": "まさか",
+          "nghia": "chẳng lẽ; không ngờ"
+        },
+        {
+          "_id": "chukyu3-09::遺伝子",
+          "kanji": "遺伝子",
+          "cautruc": null,
+          "doc": "いでんし",
+          "nghia": "gen; di truyền"
+        },
+        {
+          "_id": "chukyu3-09::～として",
+          "kanji": "～として",
+          "cautruc": null,
+          "doc": "～として",
+          "nghia": "với tư cách là ..."
+        },
+        {
+          "_id": "chukyu3-09::安全な",
+          "kanji": "安全な",
+          "cautruc": null,
+          "doc": "あんぜんな",
+          "nghia": "an toàn"
+        },
+        {
+          "_id": "chukyu3-09::管理する",
+          "kanji": "管理する",
+          "cautruc": null,
+          "doc": "かんりする",
+          "nghia": "quản lí"
+        },
+        {
+          "_id": "chukyu3-09::もれる",
+          "kanji": "もれる",
+          "cautruc": null,
+          "doc": "もれる",
+          "nghia": "rò rỉ; lộ ra"
+        },
+        {
+          "_id": "chukyu3-09::預金",
+          "kanji": "預金",
+          "cautruc": null,
+          "doc": "よきん",
+          "nghia": "tiền gửi (ngân hàng)"
+        },
+        {
+          "_id": "chukyu3-09::引き出す",
+          "kanji": "引き出す",
+          "cautruc": null,
+          "doc": "ひきだす",
+          "nghia": "rút (tiền); khơi ra"
+        },
+        {
+          "_id": "chukyu3-09::悪用する",
+          "kanji": "悪用する",
+          "cautruc": null,
+          "doc": "あくようする",
+          "nghia": "lợi dụng vào việc xấu"
+        },
+        {
+          "_id": "chukyu3-09::恐ろしい",
+          "kanji": "恐ろしい",
+          "cautruc": null,
+          "doc": "おそろしい",
+          "nghia": "đáng sợ; ghê gớm"
+        },
+        {
+          "_id": "chukyu3-09::気がする",
+          "kanji": "気がする",
+          "cautruc": null,
+          "doc": "きがする",
+          "nghia": "có cảm giác; thấy như"
+        },
+        {
+          "_id": "chukyu3-09::やり取りする",
+          "kanji": "やり取りする",
+          "cautruc": null,
+          "doc": "やりとりする",
+          "nghia": "trao đổi (qua lại)"
+        },
+        {
+          "_id": "chukyu3-09::より～",
+          "kanji": "より～",
+          "cautruc": null,
+          "doc": "より～",
+          "nghia": "hơn; ... hơn"
+        },
+        {
+          "_id": "chukyu3-09::参考",
+          "kanji": "参考",
+          "cautruc": null,
+          "doc": "さんこう",
+          "nghia": "tham khảo"
+        },
+        {
+          "_id": "chukyu3-09::進む",
+          "kanji": "進む",
+          "cautruc": null,
+          "doc": "すすむ",
+          "nghia": "tiến lên; tiến triển"
+        },
+        {
+          "_id": "chukyu3-09::～ば～ほど",
+          "kanji": "～ば～ほど",
+          "cautruc": null,
+          "doc": "～ば～ほど",
+          "nghia": "càng ... càng ..."
+        },
+        {
+          "_id": "chukyu3-09::～に対して",
+          "kanji": "～に対して",
+          "cautruc": null,
+          "doc": "～にたいして",
+          "nghia": "đối với ...; trước ..."
+        },
+        {
+          "_id": "chukyu3-09::責任",
+          "kanji": "責任",
+          "cautruc": null,
+          "doc": "せきにん",
+          "nghia": "trách nhiệm"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-10",
+      "title": "Chukyu3 - Bài 10",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-10::海外",
+          "kanji": "海外",
+          "cautruc": null,
+          "doc": "かいがい",
+          "nghia": "nước ngoài; hải ngoại"
+        },
+        {
+          "_id": "chukyu3-10::出張",
+          "kanji": "出張",
+          "cautruc": null,
+          "doc": "しゅっちょう",
+          "nghia": "đi công tác"
+        },
+        {
+          "_id": "chukyu3-10::原因",
+          "kanji": "原因",
+          "cautruc": null,
+          "doc": "げんいん",
+          "nghia": "nguyên nhân"
+        },
+        {
+          "_id": "chukyu3-10::不明な",
+          "kanji": "不明な",
+          "cautruc": null,
+          "doc": "ふめいな",
+          "nghia": "không rõ; bất minh"
+        },
+        {
+          "_id": "chukyu3-10::もうすぐ",
+          "kanji": "もうすぐ",
+          "cautruc": null,
+          "doc": "もうすぐ",
+          "nghia": "sắp; sắp sửa"
+        },
+        {
+          "_id": "chukyu3-10::口数",
+          "kanji": "口数",
+          "cautruc": null,
+          "doc": "くちかず",
+          "nghia": "số lời (nói nhiều/ít)"
+        },
+        {
+          "_id": "chukyu3-10::定年",
+          "kanji": "定年",
+          "cautruc": null,
+          "doc": "ていねん",
+          "nghia": "tuổi về hưu"
+        },
+        {
+          "_id": "chukyu3-10::引っ込む",
+          "kanji": "引っ込む",
+          "cautruc": null,
+          "doc": "ひっこむ",
+          "nghia": "lui về; thụt vào; ẩn dật"
+        },
+        {
+          "_id": "chukyu3-10::縁",
+          "kanji": "縁",
+          "cautruc": null,
+          "doc": "えん",
+          "nghia": "duyên; mối liên hệ"
+        },
+        {
+          "_id": "chukyu3-10::耳に残る",
+          "kanji": "耳に残る",
+          "cautruc": null,
+          "doc": "みみにのこる",
+          "nghia": "còn văng vẳng bên tai"
+        },
+        {
+          "_id": "chukyu3-10::追う",
+          "kanji": "追う",
+          "cautruc": null,
+          "doc": "おう",
+          "nghia": "đuổi theo; theo đuổi"
+        },
+        {
+          "_id": "chukyu3-10::きらう",
+          "kanji": "きらう",
+          "cautruc": null,
+          "doc": "きらう",
+          "nghia": "ghét"
+        },
+        {
+          "_id": "chukyu3-10::思い出",
+          "kanji": "思い出",
+          "cautruc": null,
+          "doc": "おもいで",
+          "nghia": "kỉ niệm"
+        },
+        {
+          "_id": "chukyu3-10::唯一",
+          "kanji": "唯一",
+          "cautruc": null,
+          "doc": "ゆいいつ",
+          "nghia": "duy nhất"
+        },
+        {
+          "_id": "chukyu3-10::亡くす",
+          "kanji": "亡くす",
+          "cautruc": null,
+          "doc": "なくす",
+          "nghia": "mất (người thân)"
+        },
+        {
+          "_id": "chukyu3-10::しばらく",
+          "kanji": "しばらく",
+          "cautruc": null,
+          "doc": "しばらく",
+          "nghia": "tạm thời; một lúc"
+        },
+        {
+          "_id": "chukyu3-10::外出する",
+          "kanji": "外出する",
+          "cautruc": null,
+          "doc": "がいしゅつする",
+          "nghia": "ra ngoài; đi ra ngoài"
+        },
+        {
+          "_id": "chukyu3-10::不便な",
+          "kanji": "不便な",
+          "cautruc": null,
+          "doc": "ふべんな",
+          "nghia": "bất tiện"
+        },
+        {
+          "_id": "chukyu3-10::時間が経つ",
+          "kanji": "時間が経つ",
+          "cautruc": null,
+          "doc": "じかんがたつ",
+          "nghia": "thời gian trôi qua"
+        },
+        {
+          "_id": "chukyu3-10::～につれて",
+          "kanji": "～につれて",
+          "cautruc": null,
+          "doc": "～につれて",
+          "nghia": "cùng với việc ..."
+        },
+        {
+          "_id": "chukyu3-10::～どころか",
+          "kanji": "～どころか",
+          "cautruc": null,
+          "doc": "～どころか",
+          "nghia": "đâu chỉ ...; nào có ..."
+        },
+        {
+          "_id": "chukyu3-10::かえって",
+          "kanji": "かえって",
+          "cautruc": null,
+          "doc": "かえって",
+          "nghia": "trái lại; ngược lại"
+        },
+        {
+          "_id": "chukyu3-10::余裕",
+          "kanji": "余裕",
+          "cautruc": null,
+          "doc": "よゆう",
+          "nghia": "dư dả; thư thả"
+        },
+        {
+          "_id": "chukyu3-10::だいじょうぶ",
+          "kanji": "だいじょうぶ",
+          "cautruc": null,
+          "doc": "だいじょうぶ",
+          "nghia": "ổn; không sao"
+        },
+        {
+          "_id": "chukyu3-10::間に合う",
+          "kanji": "間に合う",
+          "cautruc": null,
+          "doc": "まにあう",
+          "nghia": "kịp; đủ dùng"
+        },
+        {
+          "_id": "chukyu3-10::いらいらする",
+          "kanji": "いらいらする",
+          "cautruc": null,
+          "doc": "いらいらする",
+          "nghia": "bực bội; sốt ruột"
+        },
+        {
+          "_id": "chukyu3-10::すっかり",
+          "kanji": "すっかり",
+          "cautruc": null,
+          "doc": "すっかり",
+          "nghia": "hoàn toàn; hẳn"
+        },
+        {
+          "_id": "chukyu3-10::～ことに",
+          "kanji": "～ことに",
+          "cautruc": null,
+          "doc": "～ことに",
+          "nghia": "(điều đáng ...) là"
+        },
+        {
+          "_id": "chukyu3-10::～からといって",
+          "kanji": "～からといって",
+          "cautruc": null,
+          "doc": "～からといって",
+          "nghia": "chỉ vì ... mà"
+        },
+        {
+          "_id": "chukyu3-10::意識する",
+          "kanji": "意識する",
+          "cautruc": null,
+          "doc": "いしきする",
+          "nghia": "ý thức; để tâm"
+        },
+        {
+          "_id": "chukyu3-10::～わけではない",
+          "kanji": "～わけではない",
+          "cautruc": null,
+          "doc": "～わけではない",
+          "nghia": "không hẳn là ..."
+        },
+        {
+          "_id": "chukyu3-10::外れる",
+          "kanji": "外れる",
+          "cautruc": null,
+          "doc": "はずれる",
+          "nghia": "trật; sai; tuột"
+        },
+        {
+          "_id": "chukyu3-10::以前",
+          "kanji": "以前",
+          "cautruc": null,
+          "doc": "いぜん",
+          "nghia": "trước đây"
+        },
+        {
+          "_id": "chukyu3-10::～たびに",
+          "kanji": "～たびに",
+          "cautruc": null,
+          "doc": "～たびに",
+          "nghia": "mỗi lần ..."
+        },
+        {
+          "_id": "chukyu3-10::腰を上げる",
+          "kanji": "腰を上げる",
+          "cautruc": null,
+          "doc": "こしをあげる",
+          "nghia": "đứng dậy; bắt tay vào việc"
+        },
+        {
+          "_id": "chukyu3-10::取りかかる",
+          "kanji": "取りかかる",
+          "cautruc": null,
+          "doc": "とりかかる",
+          "nghia": "bắt tay vào"
+        },
+        {
+          "_id": "chukyu3-10::調子",
+          "kanji": "調子",
+          "cautruc": null,
+          "doc": "ちょうし",
+          "nghia": "tình trạng; phong độ; nhịp"
+        },
+        {
+          "_id": "chukyu3-10::起こる",
+          "kanji": "起こる",
+          "cautruc": null,
+          "doc": "おこる",
+          "nghia": "xảy ra"
+        },
+        {
+          "_id": "chukyu3-10::振り回す",
+          "kanji": "振り回す",
+          "cautruc": null,
+          "doc": "ふりまわす",
+          "nghia": "vung; điều khiển/lôi kéo"
+        },
+        {
+          "_id": "chukyu3-10::語りかける",
+          "kanji": "語りかける",
+          "cautruc": null,
+          "doc": "かたりかける",
+          "nghia": "bắt chuyện; nói với"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-11",
+      "title": "Chukyu3 - Bài 11",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-11::厳しい",
+          "kanji": "厳しい",
+          "cautruc": null,
+          "doc": "きびしい",
+          "nghia": "nghiêm khắc; khắc nghiệt"
+        },
+        {
+          "_id": "chukyu3-11::取り立てる",
+          "kanji": "取り立てる",
+          "cautruc": null,
+          "doc": "とりたてる",
+          "nghia": "đề bạt; xem trọng đặc biệt; đòi (nợ)"
+        },
+        {
+          "_id": "chukyu3-11::上下",
+          "kanji": "上下",
+          "cautruc": null,
+          "doc": "じょうげ",
+          "nghia": "trên dưới; thứ bậc"
+        },
+        {
+          "_id": "chukyu3-11::影をひそめる",
+          "kanji": "影をひそめる",
+          "cautruc": null,
+          "doc": "かげをひそめる",
+          "nghia": "lu mờ; biến mất"
+        },
+        {
+          "_id": "chukyu3-11::平等な",
+          "kanji": "平等な",
+          "cautruc": null,
+          "doc": "びょうどうな",
+          "nghia": "bình đẳng"
+        },
+        {
+          "_id": "chukyu3-11::～ざるを得ない",
+          "kanji": "～ざるを得ない",
+          "cautruc": null,
+          "doc": "～ざるをえない",
+          "nghia": "buộc phải ..."
+        },
+        {
+          "_id": "chukyu3-11::身分",
+          "kanji": "身分",
+          "cautruc": null,
+          "doc": "みぶん",
+          "nghia": "thân phận; địa vị"
+        },
+        {
+          "_id": "chukyu3-11::気安い",
+          "kanji": "気安い",
+          "cautruc": null,
+          "doc": "きやすい",
+          "nghia": "dễ gần; thoải mái"
+        },
+        {
+          "_id": "chukyu3-11::口を利く",
+          "kanji": "口を利く",
+          "cautruc": null,
+          "doc": "くちをきく",
+          "nghia": "nói chuyện; mở lời"
+        },
+        {
+          "_id": "chukyu3-11::さえ",
+          "kanji": "さえ",
+          "cautruc": null,
+          "doc": "さえ",
+          "nghia": "đến cả; ngay cả"
+        },
+        {
+          "_id": "chukyu3-11::場",
+          "kanji": "場",
+          "cautruc": null,
+          "doc": "ば",
+          "nghia": "tình huống; chỗ; nơi"
+        },
+        {
+          "_id": "chukyu3-11::反発を買う",
+          "kanji": "反発を買う",
+          "cautruc": null,
+          "doc": "はんぱつをかう",
+          "nghia": "bị phản đối"
+        },
+        {
+          "_id": "chukyu3-11::扱う",
+          "kanji": "扱う",
+          "cautruc": null,
+          "doc": "あつかう",
+          "nghia": "đối xử; xử lí; kinh doanh"
+        },
+        {
+          "_id": "chukyu3-11::縦",
+          "kanji": "縦",
+          "cautruc": null,
+          "doc": "たて",
+          "nghia": "chiều dọc"
+        },
+        {
+          "_id": "chukyu3-11::制度",
+          "kanji": "制度",
+          "cautruc": null,
+          "doc": "せいど",
+          "nghia": "chế độ"
+        },
+        {
+          "_id": "chukyu3-11::廃止する",
+          "kanji": "廃止する",
+          "cautruc": null,
+          "doc": "はいしする",
+          "nghia": "bãi bỏ"
+        },
+        {
+          "_id": "chukyu3-11::反映する",
+          "kanji": "反映する",
+          "cautruc": null,
+          "doc": "はんえいする",
+          "nghia": "phản ánh"
+        },
+        {
+          "_id": "chukyu3-11::ふさわしい",
+          "kanji": "ふさわしい",
+          "cautruc": null,
+          "doc": "ふさわしい",
+          "nghia": "phù hợp; xứng đáng"
+        },
+        {
+          "_id": "chukyu3-11::自然な",
+          "kanji": "自然な",
+          "cautruc": null,
+          "doc": "しぜんな",
+          "nghia": "tự nhiên"
+        },
+        {
+          "_id": "chukyu3-11::つながる",
+          "kanji": "つながる",
+          "cautruc": null,
+          "doc": "つながる",
+          "nghia": "kết nối; liên quan"
+        },
+        {
+          "_id": "chukyu3-11::確認する",
+          "kanji": "確認する",
+          "cautruc": null,
+          "doc": "かくにんする",
+          "nghia": "xác nhận"
+        },
+        {
+          "_id": "chukyu3-11::無責任な",
+          "kanji": "無責任な",
+          "cautruc": null,
+          "doc": "むせきにんな",
+          "nghia": "vô trách nhiệm"
+        },
+        {
+          "_id": "chukyu3-11::息がつまる",
+          "kanji": "息がつまる",
+          "cautruc": null,
+          "doc": "いきがつまる",
+          "nghia": "ngột ngạt; căng thẳng"
+        },
+        {
+          "_id": "chukyu3-11::上司",
+          "kanji": "上司",
+          "cautruc": null,
+          "doc": "じょうし",
+          "nghia": "cấp trên"
+        },
+        {
+          "_id": "chukyu3-11::～にしろ～にしろ",
+          "kanji": "～にしろ～にしろ",
+          "cautruc": null,
+          "doc": "～にしろ～にしろ",
+          "nghia": "dù ... hay ..."
+        },
+        {
+          "_id": "chukyu3-11::上に立つ",
+          "kanji": "上に立つ",
+          "cautruc": null,
+          "doc": "うえにたつ",
+          "nghia": "đứng đầu; lãnh đạo"
+        },
+        {
+          "_id": "chukyu3-11::明確な",
+          "kanji": "明確な",
+          "cautruc": null,
+          "doc": "めいかくな",
+          "nghia": "rõ ràng; minh bạch"
+        },
+        {
+          "_id": "chukyu3-11::役割",
+          "kanji": "役割",
+          "cautruc": null,
+          "doc": "やくわり",
+          "nghia": "vai trò"
+        },
+        {
+          "_id": "chukyu3-11::存在する",
+          "kanji": "存在する",
+          "cautruc": null,
+          "doc": "そんざいする",
+          "nghia": "tồn tại"
+        },
+        {
+          "_id": "chukyu3-11::部下",
+          "kanji": "部下",
+          "cautruc": null,
+          "doc": "ぶか",
+          "nghia": "cấp dưới"
+        },
+        {
+          "_id": "chukyu3-11::一人前",
+          "kanji": "一人前",
+          "cautruc": null,
+          "doc": "いちにんまえ",
+          "nghia": "trưởng thành; thành nghề"
+        },
+        {
+          "_id": "chukyu3-11::育てる",
+          "kanji": "育てる",
+          "cautruc": null,
+          "doc": "そだてる",
+          "nghia": "nuôi dạy; đào tạo"
+        },
+        {
+          "_id": "chukyu3-11::～た上で",
+          "kanji": "～た上で",
+          "cautruc": null,
+          "doc": "～たうえで",
+          "nghia": "sau khi ...; trên cơ sở ..."
+        },
+        {
+          "_id": "chukyu3-11::受け入れる",
+          "kanji": "受け入れる",
+          "cautruc": null,
+          "doc": "うけいれる",
+          "nghia": "chấp nhận; tiếp nhận"
+        },
+        {
+          "_id": "chukyu3-11::結果",
+          "kanji": "結果",
+          "cautruc": null,
+          "doc": "けっか",
+          "nghia": "kết quả"
+        },
+        {
+          "_id": "chukyu3-11::お互い",
+          "kanji": "お互い",
+          "cautruc": null,
+          "doc": "おたがい",
+          "nghia": "lẫn nhau"
+        },
+        {
+          "_id": "chukyu3-11::築く",
+          "kanji": "築く",
+          "cautruc": null,
+          "doc": "きずく",
+          "nghia": "xây dựng (quan hệ, sự nghiệp)"
+        },
+        {
+          "_id": "chukyu3-11::交わす",
+          "kanji": "交わす",
+          "cautruc": null,
+          "doc": "かわす",
+          "nghia": "trao đổi (lời, ánh mắt...)"
+        },
+        {
+          "_id": "chukyu3-11::歓迎する",
+          "kanji": "歓迎する",
+          "cautruc": null,
+          "doc": "かんげいする",
+          "nghia": "hoan nghênh; chào đón"
+        },
+        {
+          "_id": "chukyu3-11::気楽な",
+          "kanji": "気楽な",
+          "cautruc": null,
+          "doc": "きらくな",
+          "nghia": "thoải mái; nhẹ nhõm"
+        },
+        {
+          "_id": "chukyu3-11::生み出す",
+          "kanji": "生み出す",
+          "cautruc": null,
+          "doc": "うみだす",
+          "nghia": "tạo ra; sinh ra"
+        },
+        {
+          "_id": "chukyu3-11::失う",
+          "kanji": "失う",
+          "cautruc": null,
+          "doc": "うしなう",
+          "nghia": "đánh mất"
+        },
+        {
+          "_id": "chukyu3-11::～つつある",
+          "kanji": "～つつある",
+          "cautruc": null,
+          "doc": "～つつある",
+          "nghia": "đang (dần) ..."
+        },
+        {
+          "_id": "chukyu3-11::真剣な",
+          "kanji": "真剣な",
+          "cautruc": null,
+          "doc": "しんけんな",
+          "nghia": "nghiêm túc; thực sự"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-12",
+      "title": "Chukyu3 - Bài 12",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-12::～通り",
+          "kanji": "～通り",
+          "cautruc": null,
+          "doc": "～とおり",
+          "nghia": "đúng như ..."
+        },
+        {
+          "_id": "chukyu3-12::性格",
+          "kanji": "性格",
+          "cautruc": null,
+          "doc": "せいかく",
+          "nghia": "tính cách"
+        },
+        {
+          "_id": "chukyu3-12::タイプ",
+          "kanji": "タイプ",
+          "cautruc": null,
+          "doc": "タイプ",
+          "nghia": "kiểu; loại; gu"
+        },
+        {
+          "_id": "chukyu3-12::分ける",
+          "kanji": "分ける",
+          "cautruc": null,
+          "doc": "わける",
+          "nghia": "chia; phân loại"
+        },
+        {
+          "_id": "chukyu3-12::血液",
+          "kanji": "血液",
+          "cautruc": null,
+          "doc": "けつえき",
+          "nghia": "máu"
+        },
+        {
+          "_id": "chukyu3-12::意外な",
+          "kanji": "意外な",
+          "cautruc": null,
+          "doc": "いがいな",
+          "nghia": "bất ngờ; không ngờ"
+        },
+        {
+          "_id": "chukyu3-12::人気",
+          "kanji": "人気",
+          "cautruc": null,
+          "doc": "にんき",
+          "nghia": "sự nổi tiếng; được ưa thích"
+        },
+        {
+          "_id": "chukyu3-12::こる",
+          "kanji": "こる",
+          "cautruc": null,
+          "doc": "こる",
+          "nghia": "mê; đam mê; (bị mỏi)"
+        },
+        {
+          "_id": "chukyu3-12::というのも",
+          "kanji": "というのも",
+          "cautruc": null,
+          "doc": "というのも",
+          "nghia": "(sở dĩ vậy là) vì"
+        },
+        {
+          "_id": "chukyu3-12::あいさつ代わりに",
+          "kanji": "あいさつ代わりに",
+          "cautruc": null,
+          "doc": "あいさつがわりに",
+          "nghia": "thay cho lời chào"
+        },
+        {
+          "_id": "chukyu3-12::ルール",
+          "kanji": "ルール",
+          "cautruc": null,
+          "doc": "ルール",
+          "nghia": "quy tắc; luật"
+        },
+        {
+          "_id": "chukyu3-12::重んじる",
+          "kanji": "重んじる",
+          "cautruc": null,
+          "doc": "おもんじる",
+          "nghia": "coi trọng"
+        },
+        {
+          "_id": "chukyu3-12::何事",
+          "kanji": "何事",
+          "cautruc": null,
+          "doc": "なにごと",
+          "nghia": "mọi việc; chuyện gì"
+        },
+        {
+          "_id": "chukyu3-12::慎重な",
+          "kanji": "慎重な",
+          "cautruc": null,
+          "doc": "しんちょうな",
+          "nghia": "thận trọng"
+        },
+        {
+          "_id": "chukyu3-12::行動する",
+          "kanji": "行動する",
+          "cautruc": null,
+          "doc": "こうどうする",
+          "nghia": "hành động"
+        },
+        {
+          "_id": "chukyu3-12::傾向",
+          "kanji": "傾向",
+          "cautruc": null,
+          "doc": "けいこう",
+          "nghia": "khuynh hướng; xu hướng"
+        },
+        {
+          "_id": "chukyu3-12::対照的な",
+          "kanji": "対照的な",
+          "cautruc": null,
+          "doc": "たいしょうてきな",
+          "nghia": "đối lập; tương phản"
+        },
+        {
+          "_id": "chukyu3-12::楽天的な",
+          "kanji": "楽天的な",
+          "cautruc": null,
+          "doc": "らくてんてきな",
+          "nghia": "lạc quan"
+        },
+        {
+          "_id": "chukyu3-12::気まぐれな",
+          "kanji": "気まぐれな",
+          "cautruc": null,
+          "doc": "きまぐれな",
+          "nghia": "thất thường; đồng bóng"
+        },
+        {
+          "_id": "chukyu3-12::印象",
+          "kanji": "印象",
+          "cautruc": null,
+          "doc": "いんしょう",
+          "nghia": "ấn tượng"
+        },
+        {
+          "_id": "chukyu3-12::与える",
+          "kanji": "与える",
+          "cautruc": null,
+          "doc": "あたえる",
+          "nghia": "trao; gây (ấn tượng, ảnh hưởng)"
+        },
+        {
+          "_id": "chukyu3-12::～はというと",
+          "kanji": "～はというと",
+          "cautruc": null,
+          "doc": "～はというと",
+          "nghia": "còn về ..."
+        },
+        {
+          "_id": "chukyu3-12::実は",
+          "kanji": "実は",
+          "cautruc": null,
+          "doc": "じつは",
+          "nghia": "thực ra"
+        },
+        {
+          "_id": "chukyu3-12::典型的な",
+          "kanji": "典型的な",
+          "cautruc": null,
+          "doc": "てんけいてきな",
+          "nghia": "điển hình"
+        },
+        {
+          "_id": "chukyu3-12::リーダーシップ",
+          "kanji": "リーダーシップ",
+          "cautruc": null,
+          "doc": "リーダーシップ",
+          "nghia": "tố chất lãnh đạo"
+        },
+        {
+          "_id": "chukyu3-12::一見",
+          "kanji": "一見",
+          "cautruc": null,
+          "doc": "いっけん",
+          "nghia": "nhìn qua thì"
+        },
+        {
+          "_id": "chukyu3-12::のんきな",
+          "kanji": "のんきな",
+          "cautruc": null,
+          "doc": "のんきな",
+          "nghia": "vô tư; thong dong"
+        },
+        {
+          "_id": "chukyu3-12::気が強い",
+          "kanji": "気が強い",
+          "cautruc": null,
+          "doc": "きがつよい",
+          "nghia": "mạnh mẽ; cứng cỏi"
+        },
+        {
+          "_id": "chukyu3-12::わがままな",
+          "kanji": "わがままな",
+          "cautruc": null,
+          "doc": "わがままな",
+          "nghia": "ích kỉ; đỏng đảnh"
+        },
+        {
+          "_id": "chukyu3-12::冷静な",
+          "kanji": "冷静な",
+          "cautruc": null,
+          "doc": "れいせいな",
+          "nghia": "bình tĩnh"
+        },
+        {
+          "_id": "chukyu3-12::物事",
+          "kanji": "物事",
+          "cautruc": null,
+          "doc": "ものごと",
+          "nghia": "mọi việc; sự vật"
+        },
+        {
+          "_id": "chukyu3-12::全体",
+          "kanji": "全体",
+          "cautruc": null,
+          "doc": "ぜんたい",
+          "nghia": "toàn thể; toàn bộ"
+        },
+        {
+          "_id": "chukyu3-12::客観的な",
+          "kanji": "客観的な",
+          "cautruc": null,
+          "doc": "きゃっかんてきな",
+          "nghia": "khách quan"
+        },
+        {
+          "_id": "chukyu3-12::様々な",
+          "kanji": "様々な",
+          "cautruc": null,
+          "doc": "さまざまな",
+          "nghia": "đa dạng; nhiều loại"
+        },
+        {
+          "_id": "chukyu3-12::口にする",
+          "kanji": "口にする",
+          "cautruc": null,
+          "doc": "くちにする",
+          "nghia": "nói ra; ăn"
+        },
+        {
+          "_id": "chukyu3-12::科学的な",
+          "kanji": "科学的な",
+          "cautruc": null,
+          "doc": "かがくてきな",
+          "nghia": "khoa học"
+        },
+        {
+          "_id": "chukyu3-12::根拠",
+          "kanji": "根拠",
+          "cautruc": null,
+          "doc": "こんきょ",
+          "nghia": "căn cứ; cơ sở"
+        },
+        {
+          "_id": "chukyu3-12::いいかげんな",
+          "kanji": "いいかげんな",
+          "cautruc": null,
+          "doc": "いいかげんな",
+          "nghia": "qua loa; không đáng tin"
+        },
+        {
+          "_id": "chukyu3-12::反論する",
+          "kanji": "反論する",
+          "cautruc": null,
+          "doc": "はんろんする",
+          "nghia": "phản bác"
+        },
+        {
+          "_id": "chukyu3-12::付き合う",
+          "kanji": "付き合う",
+          "cautruc": null,
+          "doc": "つきあう",
+          "nghia": "giao tiếp; hẹn hò; đi cùng"
+        },
+        {
+          "_id": "chukyu3-12::ストレス",
+          "kanji": "ストレス",
+          "cautruc": null,
+          "doc": "ストレス",
+          "nghia": "áp lực; căng thẳng"
+        },
+        {
+          "_id": "chukyu3-12::和らげる",
+          "kanji": "和らげる",
+          "cautruc": null,
+          "doc": "やわらげる",
+          "nghia": "làm dịu; xoa dịu"
+        },
+        {
+          "_id": "chukyu3-12::対策",
+          "kanji": "対策",
+          "cautruc": null,
+          "doc": "たいさく",
+          "nghia": "đối sách; biện pháp"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-13",
+      "title": "Chukyu3 - Bài 13",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-13::思い出す",
+          "kanji": "思い出す",
+          "cautruc": null,
+          "doc": "おもいだす",
+          "nghia": "nhớ ra"
+        },
+        {
+          "_id": "chukyu3-13::連想する",
+          "kanji": "連想する",
+          "cautruc": null,
+          "doc": "れんそうする",
+          "nghia": "liên tưởng"
+        },
+        {
+          "_id": "chukyu3-13::帰宅する",
+          "kanji": "帰宅する",
+          "cautruc": null,
+          "doc": "きたくする",
+          "nghia": "về nhà"
+        },
+        {
+          "_id": "chukyu3-13::呼び出す",
+          "kanji": "呼び出す",
+          "cautruc": null,
+          "doc": "よびだす",
+          "nghia": "gọi ra; triệu tập"
+        },
+        {
+          "_id": "chukyu3-13::ふうに",
+          "kanji": "ふうに",
+          "cautruc": null,
+          "doc": "ふうに",
+          "nghia": "kiểu như; theo cách"
+        },
+        {
+          "_id": "chukyu3-13::指示する",
+          "kanji": "指示する",
+          "cautruc": null,
+          "doc": "しじする",
+          "nghia": "chỉ thị; ra lệnh"
+        },
+        {
+          "_id": "chukyu3-13::～ままに",
+          "kanji": "～ままに",
+          "cautruc": null,
+          "doc": "～ままに",
+          "nghia": "theo (nguyên trạng/ý)"
+        },
+        {
+          "_id": "chukyu3-13::汗まみれ",
+          "kanji": "汗まみれ",
+          "cautruc": null,
+          "doc": "あせまみれ",
+          "nghia": "đầm đìa mồ hôi"
+        },
+        {
+          "_id": "chukyu3-13::抜く",
+          "kanji": "抜く",
+          "cautruc": null,
+          "doc": "ぬく",
+          "nghia": "rút ra; bỏ; vượt"
+        },
+        {
+          "_id": "chukyu3-13::声がする",
+          "kanji": "声がする",
+          "cautruc": null,
+          "doc": "こえがする",
+          "nghia": "nghe thấy tiếng (nói)"
+        },
+        {
+          "_id": "chukyu3-13::正確な",
+          "kanji": "正確な",
+          "cautruc": null,
+          "doc": "せいかくな",
+          "nghia": "chính xác"
+        },
+        {
+          "_id": "chukyu3-13::～べき",
+          "kanji": "～べき",
+          "cautruc": null,
+          "doc": "～べき",
+          "nghia": "nên; cần"
+        },
+        {
+          "_id": "chukyu3-13::陽",
+          "kanji": "陽",
+          "cautruc": null,
+          "doc": "ひ",
+          "nghia": "ánh nắng; mặt trời"
+        },
+        {
+          "_id": "chukyu3-13::得る",
+          "kanji": "得る",
+          "cautruc": null,
+          "doc": "える",
+          "nghia": "có được; đạt được"
+        },
+        {
+          "_id": "chukyu3-13::生き返る",
+          "kanji": "生き返る",
+          "cautruc": null,
+          "doc": "いきかえる",
+          "nghia": "sống lại; hồi sinh"
+        },
+        {
+          "_id": "chukyu3-13::それとも",
+          "kanji": "それとも",
+          "cautruc": null,
+          "doc": "それとも",
+          "nghia": "hay là"
+        },
+        {
+          "_id": "chukyu3-13::乾き切る",
+          "kanji": "乾き切る",
+          "cautruc": null,
+          "doc": "かわききる",
+          "nghia": "khô hẳn; khô cong"
+        },
+        {
+          "_id": "chukyu3-13::ごくごくと",
+          "kanji": "ごくごくと",
+          "cautruc": null,
+          "doc": "ごくごくと",
+          "nghia": "ừng ực (uống)"
+        },
+        {
+          "_id": "chukyu3-13::のどを鳴らす",
+          "kanji": "のどを鳴らす",
+          "cautruc": null,
+          "doc": "のどをならす",
+          "nghia": "kêu ực trong cổ họng"
+        },
+        {
+          "_id": "chukyu3-13::ようやく",
+          "kanji": "ようやく",
+          "cautruc": null,
+          "doc": "ようやく",
+          "nghia": "cuối cùng; mãi mới"
+        },
+        {
+          "_id": "chukyu3-13::解放する",
+          "kanji": "解放する",
+          "cautruc": null,
+          "doc": "かいほうする",
+          "nghia": "giải phóng; giải thoát"
+        },
+        {
+          "_id": "chukyu3-13::見合わせる",
+          "kanji": "見合わせる",
+          "cautruc": null,
+          "doc": "みあわせる",
+          "nghia": "nhìn nhau; tạm hoãn"
+        },
+        {
+          "_id": "chukyu3-13::うなずく",
+          "kanji": "うなずく",
+          "cautruc": null,
+          "doc": "うなずく",
+          "nghia": "gật đầu"
+        },
+        {
+          "_id": "chukyu3-13::夕涼み",
+          "kanji": "夕涼み",
+          "cautruc": null,
+          "doc": "ゆうすずみ",
+          "nghia": "hóng mát buổi chiều"
+        },
+        {
+          "_id": "chukyu3-13::～がてら",
+          "kanji": "～がてら",
+          "cautruc": null,
+          "doc": "～がてら",
+          "nghia": "nhân tiện ..."
+        },
+        {
+          "_id": "chukyu3-13::機嫌がいい",
+          "kanji": "機嫌がいい",
+          "cautruc": null,
+          "doc": "きげんがいい",
+          "nghia": "tâm trạng tốt"
+        },
+        {
+          "_id": "chukyu3-13::連れ出す",
+          "kanji": "連れ出す",
+          "cautruc": null,
+          "doc": "つれだす",
+          "nghia": "dẫn ra ngoài"
+        },
+        {
+          "_id": "chukyu3-13::花火",
+          "kanji": "花火",
+          "cautruc": null,
+          "doc": "はなび",
+          "nghia": "pháo hoa"
+        },
+        {
+          "_id": "chukyu3-13::もっとも",
+          "kanji": "もっとも",
+          "cautruc": null,
+          "doc": "もっとも",
+          "nghia": "tuy nhiên; có điều"
+        },
+        {
+          "_id": "chukyu3-13::当時",
+          "kanji": "当時",
+          "cautruc": null,
+          "doc": "とうじ",
+          "nghia": "lúc đó; hồi đó"
+        },
+        {
+          "_id": "chukyu3-13::～のことだから",
+          "kanji": "～のことだから",
+          "cautruc": null,
+          "doc": "～のことだから",
+          "nghia": "vì là ...(nên)"
+        },
+        {
+          "_id": "chukyu3-13::打ち上げ",
+          "kanji": "打ち上げ",
+          "cautruc": null,
+          "doc": "うちあげ",
+          "nghia": "bắn (pháo hoa); phóng; tiệc mừng"
+        },
+        {
+          "_id": "chukyu3-13::通りがかり",
+          "kanji": "通りがかり",
+          "cautruc": null,
+          "doc": "とおりがかり",
+          "nghia": "lúc đi ngang qua"
+        },
+        {
+          "_id": "chukyu3-13::ゆかた",
+          "kanji": "ゆかた",
+          "cautruc": null,
+          "doc": "ゆかた",
+          "nghia": "yukata (kimono mùa hè)"
+        },
+        {
+          "_id": "chukyu3-13::ゆったりと",
+          "kanji": "ゆったりと",
+          "cautruc": null,
+          "doc": "ゆったりと",
+          "nghia": "thư thái; rộng rãi"
+        },
+        {
+          "_id": "chukyu3-13::腰を下ろす",
+          "kanji": "腰を下ろす",
+          "cautruc": null,
+          "doc": "こしをおろす",
+          "nghia": "ngồi xuống"
+        },
+        {
+          "_id": "chukyu3-13::見つめる",
+          "kanji": "見つめる",
+          "cautruc": null,
+          "doc": "みつめる",
+          "nghia": "nhìn chằm chằm"
+        },
+        {
+          "_id": "chukyu3-13::一瞬",
+          "kanji": "一瞬",
+          "cautruc": null,
+          "doc": "いっしゅん",
+          "nghia": "trong khoảnh khắc"
+        },
+        {
+          "_id": "chukyu3-13::辺り",
+          "kanji": "辺り",
+          "cautruc": null,
+          "doc": "あたり",
+          "nghia": "xung quanh; vùng lân cận"
+        },
+        {
+          "_id": "chukyu3-13::暗やみ",
+          "kanji": "暗やみ",
+          "cautruc": null,
+          "doc": "くらやみ",
+          "nghia": "bóng tối"
+        },
+        {
+          "_id": "chukyu3-13::瞬間",
+          "kanji": "瞬間",
+          "cautruc": null,
+          "doc": "しゅんかん",
+          "nghia": "khoảnh khắc"
+        },
+        {
+          "_id": "chukyu3-13::きっかけ",
+          "kanji": "きっかけ",
+          "cautruc": null,
+          "doc": "きっかけ",
+          "nghia": "cơ hội; nguyên cớ"
+        },
+        {
+          "_id": "chukyu3-13::ふと",
+          "kanji": "ふと",
+          "cautruc": null,
+          "doc": "ふと",
+          "nghia": "chợt; vô tình"
+        },
+        {
+          "_id": "chukyu3-13::10年余り",
+          "kanji": "10年余り",
+          "cautruc": null,
+          "doc": "じゅうねんあまり",
+          "nghia": "hơn 10 năm"
+        },
+        {
+          "_id": "chukyu3-13::ねだる",
+          "kanji": "ねだる",
+          "cautruc": null,
+          "doc": "ねだる",
+          "nghia": "nài nỉ; vòi"
+        },
+        {
+          "_id": "chukyu3-13::眺める",
+          "kanji": "眺める",
+          "cautruc": null,
+          "doc": "ながめる",
+          "nghia": "ngắm nhìn"
+        },
+        {
+          "_id": "chukyu3-13::～つつ",
+          "kanji": "～つつ",
+          "cautruc": null,
+          "doc": "～つつ",
+          "nghia": "vừa ... vừa"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-14",
+      "title": "Chukyu3 - Bài 14",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-14::予測する",
+          "kanji": "予測する",
+          "cautruc": null,
+          "doc": "よそくする",
+          "nghia": "dự đoán; dự báo"
+        },
+        {
+          "_id": "chukyu3-14::～る上で",
+          "kanji": "～る上で",
+          "cautruc": null,
+          "doc": "～るうえで",
+          "nghia": "trong việc ...; khi ..."
+        },
+        {
+          "_id": "chukyu3-14::欠かせない",
+          "kanji": "欠かせない",
+          "cautruc": null,
+          "doc": "かかせない",
+          "nghia": "không thể thiếu"
+        },
+        {
+          "_id": "chukyu3-14::いとなみ",
+          "kanji": "いとなみ",
+          "cautruc": null,
+          "doc": "いとなみ",
+          "nghia": "hoạt động; nếp sinh hoạt"
+        },
+        {
+          "_id": "chukyu3-14::～次第",
+          "kanji": "～次第",
+          "cautruc": null,
+          "doc": "～しだい",
+          "nghia": "tùy vào ..."
+        },
+        {
+          "_id": "chukyu3-14::収穫",
+          "kanji": "収穫",
+          "cautruc": null,
+          "doc": "しゅうかく",
+          "nghia": "thu hoạch"
+        },
+        {
+          "_id": "chukyu3-14::命",
+          "kanji": "命",
+          "cautruc": null,
+          "doc": "いのち",
+          "nghia": "sinh mệnh; mạng sống"
+        },
+        {
+          "_id": "chukyu3-14::めずらしい",
+          "kanji": "めずらしい",
+          "cautruc": null,
+          "doc": "めずらしい",
+          "nghia": "hiếm; ít gặp"
+        },
+        {
+          "_id": "chukyu3-14::法則",
+          "kanji": "法則",
+          "cautruc": null,
+          "doc": "ほうそく",
+          "nghia": "quy luật; định luật"
+        },
+        {
+          "_id": "chukyu3-14::流れ",
+          "kanji": "流れ",
+          "cautruc": null,
+          "doc": "ながれ",
+          "nghia": "dòng chảy; xu thế"
+        },
+        {
+          "_id": "chukyu3-14::向き",
+          "kanji": "向き",
+          "cautruc": null,
+          "doc": "むき",
+          "nghia": "hướng; sự phù hợp"
+        },
+        {
+          "_id": "chukyu3-14::観察する",
+          "kanji": "観察する",
+          "cautruc": null,
+          "doc": "かんさつする",
+          "nghia": "quan sát"
+        },
+        {
+          "_id": "chukyu3-14::調和",
+          "kanji": "調和",
+          "cautruc": null,
+          "doc": "ちょうわ",
+          "nghia": "sự hài hòa"
+        },
+        {
+          "_id": "chukyu3-14::各地",
+          "kanji": "各地",
+          "cautruc": null,
+          "doc": "かくち",
+          "nghia": "các nơi"
+        },
+        {
+          "_id": "chukyu3-14::夕焼け",
+          "kanji": "夕焼け",
+          "cautruc": null,
+          "doc": "ゆうやけ",
+          "nghia": "ráng chiều"
+        },
+        {
+          "_id": "chukyu3-14::とける",
+          "kanji": "とける",
+          "cautruc": null,
+          "doc": "とける",
+          "nghia": "tan chảy"
+        },
+        {
+          "_id": "chukyu3-14::農作業",
+          "kanji": "農作業",
+          "cautruc": null,
+          "doc": "のうさぎょう",
+          "nghia": "công việc nhà nông"
+        },
+        {
+          "_id": "chukyu3-14::言い伝え",
+          "kanji": "言い伝え",
+          "cautruc": null,
+          "doc": "いいつたえ",
+          "nghia": "lời truyền; truyền thuyết"
+        },
+        {
+          "_id": "chukyu3-14::当てになる",
+          "kanji": "当てになる",
+          "cautruc": null,
+          "doc": "あてになる",
+          "nghia": "tin cậy được"
+        },
+        {
+          "_id": "chukyu3-14::知恵",
+          "kanji": "知恵",
+          "cautruc": null,
+          "doc": "ちえ",
+          "nghia": "trí tuệ; khôn ngoan"
+        },
+        {
+          "_id": "chukyu3-14::神",
+          "kanji": "神",
+          "cautruc": null,
+          "doc": "かみ",
+          "nghia": "thần; thần linh"
+        },
+        {
+          "_id": "chukyu3-14::いのる",
+          "kanji": "いのる",
+          "cautruc": null,
+          "doc": "いのる",
+          "nghia": "cầu nguyện"
+        },
+        {
+          "_id": "chukyu3-14::てるてるぼうず",
+          "kanji": "てるてるぼうず",
+          "cautruc": null,
+          "doc": "てるてるぼうず",
+          "nghia": "búp bê cầu nắng"
+        },
+        {
+          "_id": "chukyu3-14::～とともに",
+          "kanji": "～とともに",
+          "cautruc": null,
+          "doc": "～とともに",
+          "nghia": "cùng với ..."
+        },
+        {
+          "_id": "chukyu3-14::気象",
+          "kanji": "気象",
+          "cautruc": null,
+          "doc": "きしょう",
+          "nghia": "khí tượng"
+        },
+        {
+          "_id": "chukyu3-14::観測",
+          "kanji": "観測",
+          "cautruc": null,
+          "doc": "かんそく",
+          "nghia": "quan trắc"
+        },
+        {
+          "_id": "chukyu3-14::進歩する",
+          "kanji": "進歩する",
+          "cautruc": null,
+          "doc": "しんぽする",
+          "nghia": "tiến bộ"
+        },
+        {
+          "_id": "chukyu3-14::なくてはならない",
+          "kanji": "なくてはならない",
+          "cautruc": null,
+          "doc": "なくてはならない",
+          "nghia": "không thể thiếu"
+        },
+        {
+          "_id": "chukyu3-14::数時間",
+          "kanji": "数時間",
+          "cautruc": null,
+          "doc": "すうじかん",
+          "nghia": "vài tiếng"
+        },
+        {
+          "_id": "chukyu3-14::数時間後",
+          "kanji": "数時間後",
+          "cautruc": null,
+          "doc": "すうじかんご",
+          "nghia": "sau vài tiếng"
+        },
+        {
+          "_id": "chukyu3-14::時期",
+          "kanji": "時期",
+          "cautruc": null,
+          "doc": "じき",
+          "nghia": "thời kì"
+        },
+        {
+          "_id": "chukyu3-14::日取り",
+          "kanji": "日取り",
+          "cautruc": null,
+          "doc": "ひどり",
+          "nghia": "việc chọn ngày; ngày ấn định"
+        },
+        {
+          "_id": "chukyu3-14::～にもかかわらず",
+          "kanji": "～にもかかわらず",
+          "cautruc": null,
+          "doc": "～にもかかわらず",
+          "nghia": "mặc dù ..."
+        },
+        {
+          "_id": "chukyu3-14::異常な",
+          "kanji": "異常な",
+          "cautruc": null,
+          "doc": "いじょうな",
+          "nghia": "bất thường"
+        },
+        {
+          "_id": "chukyu3-14::洪水",
+          "kanji": "洪水",
+          "cautruc": null,
+          "doc": "こうずい",
+          "nghia": "lũ lụt"
+        },
+        {
+          "_id": "chukyu3-14::引き起こす",
+          "kanji": "引き起こす",
+          "cautruc": null,
+          "doc": "ひきおこす",
+          "nghia": "gây ra"
+        },
+        {
+          "_id": "chukyu3-14::かけがえのない",
+          "kanji": "かけがえのない",
+          "cautruc": null,
+          "doc": "かけがえのない",
+          "nghia": "quý giá không gì thay thế"
+        },
+        {
+          "_id": "chukyu3-14::うばう",
+          "kanji": "うばう",
+          "cautruc": null,
+          "doc": "うばう",
+          "nghia": "cướp đi"
+        },
+        {
+          "_id": "chukyu3-14::よごす",
+          "kanji": "よごす",
+          "cautruc": null,
+          "doc": "よごす",
+          "nghia": "làm bẩn"
+        },
+        {
+          "_id": "chukyu3-14::手におえない",
+          "kanji": "手におえない",
+          "cautruc": null,
+          "doc": "てにおえない",
+          "nghia": "vượt tầm tay; không kham nổi"
+        },
+        {
+          "_id": "chukyu3-14::あわてる",
+          "kanji": "あわてる",
+          "cautruc": null,
+          "doc": "あわてる",
+          "nghia": "vội vàng; luống cuống"
+        },
+        {
+          "_id": "chukyu3-14::したがう",
+          "kanji": "したがう",
+          "cautruc": null,
+          "doc": "したがう",
+          "nghia": "tuân theo"
+        },
+        {
+          "_id": "chukyu3-14::見直す",
+          "kanji": "見直す",
+          "cautruc": null,
+          "doc": "みなおす",
+          "nghia": "xem xét lại; đánh giá lại"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-15",
+      "title": "Chukyu3 - Bài 15",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-15::問いかけ",
+          "kanji": "問いかけ",
+          "cautruc": null,
+          "doc": "といかけ",
+          "nghia": "câu hỏi; sự nêu vấn đề"
+        },
+        {
+          "_id": "chukyu3-15::一言",
+          "kanji": "一言",
+          "cautruc": null,
+          "doc": "ひとこと",
+          "nghia": "một lời"
+        },
+        {
+          "_id": "chukyu3-15::変える",
+          "kanji": "変える",
+          "cautruc": null,
+          "doc": "かえる",
+          "nghia": "thay đổi (tha động từ)"
+        },
+        {
+          "_id": "chukyu3-15::講演",
+          "kanji": "講演",
+          "cautruc": null,
+          "doc": "こうえん",
+          "nghia": "buổi diễn thuyết"
+        },
+        {
+          "_id": "chukyu3-15::講演者",
+          "kanji": "講演者",
+          "cautruc": null,
+          "doc": "こうえんしゃ",
+          "nghia": "diễn giả"
+        },
+        {
+          "_id": "chukyu3-15::耳を傾ける",
+          "kanji": "耳を傾ける",
+          "cautruc": null,
+          "doc": "みみをかたむける",
+          "nghia": "lắng nghe"
+        },
+        {
+          "_id": "chukyu3-15::ベストセラー",
+          "kanji": "ベストセラー",
+          "cautruc": null,
+          "doc": "ベストセラー",
+          "nghia": "sách bán chạy nhất"
+        },
+        {
+          "_id": "chukyu3-15::ふれ合い",
+          "kanji": "ふれ合い",
+          "cautruc": null,
+          "doc": "ふれあい",
+          "nghia": "sự giao lưu, gần gũi"
+        },
+        {
+          "_id": "chukyu3-15::旅",
+          "kanji": "旅",
+          "cautruc": null,
+          "doc": "たび",
+          "nghia": "chuyến đi; du lịch"
+        },
+        {
+          "_id": "chukyu3-15::著者",
+          "kanji": "著者",
+          "cautruc": null,
+          "doc": "ちょしゃ",
+          "nghia": "tác giả"
+        },
+        {
+          "_id": "chukyu3-15::依頼する",
+          "kanji": "依頼する",
+          "cautruc": null,
+          "doc": "いらいする",
+          "nghia": "nhờ; ủy thác"
+        },
+        {
+          "_id": "chukyu3-15::若者",
+          "kanji": "若者",
+          "cautruc": null,
+          "doc": "わかもの",
+          "nghia": "người trẻ; giới trẻ"
+        },
+        {
+          "_id": "chukyu3-15::何気ない",
+          "kanji": "何気ない",
+          "cautruc": null,
+          "doc": "なにげない",
+          "nghia": "vô tình; không chủ ý"
+        },
+        {
+          "_id": "chukyu3-15::思わず",
+          "kanji": "思わず",
+          "cautruc": null,
+          "doc": "おもわず",
+          "nghia": "bất giác; buột"
+        },
+        {
+          "_id": "chukyu3-15::知らぬ間に",
+          "kanji": "知らぬ間に",
+          "cautruc": null,
+          "doc": "しらぬまに",
+          "nghia": "lúc nào không hay"
+        },
+        {
+          "_id": "chukyu3-15::いい気になる",
+          "kanji": "いい気になる",
+          "cautruc": null,
+          "doc": "いいきになる",
+          "nghia": "tự đắc; lên mặt"
+        },
+        {
+          "_id": "chukyu3-15::出会い",
+          "kanji": "出会い",
+          "cautruc": null,
+          "doc": "であい",
+          "nghia": "cuộc gặp gỡ"
+        },
+        {
+          "_id": "chukyu3-15::気が合う",
+          "kanji": "気が合う",
+          "cautruc": null,
+          "doc": "きがあう",
+          "nghia": "hợp nhau"
+        },
+        {
+          "_id": "chukyu3-15::～をはじめ",
+          "kanji": "～をはじめ",
+          "cautruc": null,
+          "doc": "～をはじめ",
+          "nghia": "tiêu biểu là ...; kể cả ..."
+        },
+        {
+          "_id": "chukyu3-15::歩き回る",
+          "kanji": "歩き回る",
+          "cautruc": null,
+          "doc": "あるきまわる",
+          "nghia": "đi vòng quanh"
+        },
+        {
+          "_id": "chukyu3-15::体験",
+          "kanji": "体験",
+          "cautruc": null,
+          "doc": "たいけん",
+          "nghia": "trải nghiệm"
+        },
+        {
+          "_id": "chukyu3-15::重ねる",
+          "kanji": "重ねる",
+          "cautruc": null,
+          "doc": "かさねる",
+          "nghia": "chồng lên; tích lũy"
+        },
+        {
+          "_id": "chukyu3-15::さすがに",
+          "kanji": "さすがに",
+          "cautruc": null,
+          "doc": "さすがに",
+          "nghia": "quả đúng là; ngay cả ... cũng"
+        },
+        {
+          "_id": "chukyu3-15::感心する",
+          "kanji": "感心する",
+          "cautruc": null,
+          "doc": "かんしんする",
+          "nghia": "thán phục; nể"
+        },
+        {
+          "_id": "chukyu3-15::表情",
+          "kanji": "表情",
+          "cautruc": null,
+          "doc": "ひょうじょう",
+          "nghia": "biểu cảm; nét mặt"
+        },
+        {
+          "_id": "chukyu3-15::調子に乗る",
+          "kanji": "調子に乗る",
+          "cautruc": null,
+          "doc": "ちょうしにのる",
+          "nghia": "được đà; tự mãn"
+        },
+        {
+          "_id": "chukyu3-15::独特な",
+          "kanji": "独特な",
+          "cautruc": null,
+          "doc": "どくとくな",
+          "nghia": "độc đáo; riêng biệt"
+        },
+        {
+          "_id": "chukyu3-15::自慢",
+          "kanji": "自慢",
+          "cautruc": null,
+          "doc": "じまん",
+          "nghia": "tự hào; khoe khoang"
+        },
+        {
+          "_id": "chukyu3-15::自慢気な",
+          "kanji": "自慢気な",
+          "cautruc": null,
+          "doc": "じまんげな",
+          "nghia": "ra vẻ đắc chí"
+        },
+        {
+          "_id": "chukyu3-15::そういえば",
+          "kanji": "そういえば",
+          "cautruc": null,
+          "doc": "そういえば",
+          "nghia": "nói mới nhớ"
+        },
+        {
+          "_id": "chukyu3-15::話を合わせる",
+          "kanji": "話を合わせる",
+          "cautruc": null,
+          "doc": "はなしをあわせる",
+          "nghia": "hùa theo; phụ họa"
+        },
+        {
+          "_id": "chukyu3-15::黙り込む",
+          "kanji": "黙り込む",
+          "cautruc": null,
+          "doc": "だまりこむ",
+          "nghia": "im bặt"
+        },
+        {
+          "_id": "chukyu3-15::清潔な",
+          "kanji": "清潔な",
+          "cautruc": null,
+          "doc": "せいけつな",
+          "nghia": "sạch sẽ"
+        },
+        {
+          "_id": "chukyu3-15::～わけがない",
+          "kanji": "～わけがない",
+          "cautruc": null,
+          "doc": "～わけがない",
+          "nghia": "không thể nào ..."
+        },
+        {
+          "_id": "chukyu3-15::～だけに",
+          "kanji": "～だけに",
+          "cautruc": null,
+          "doc": "～だけに",
+          "nghia": "chính vì ... nên"
+        },
+        {
+          "_id": "chukyu3-15::ショックな",
+          "kanji": "ショックな",
+          "cautruc": null,
+          "doc": "ショックな",
+          "nghia": "sốc; choáng"
+        },
+        {
+          "_id": "chukyu3-15::気がつく",
+          "kanji": "気がつく",
+          "cautruc": null,
+          "doc": "きがつく",
+          "nghia": "nhận ra; để ý thấy"
+        },
+        {
+          "_id": "chukyu3-15::おかしい",
+          "kanji": "おかしい",
+          "cautruc": null,
+          "doc": "おかしい",
+          "nghia": "lạ; buồn cười"
+        },
+        {
+          "_id": "chukyu3-15::恥ずかしい",
+          "kanji": "恥ずかしい",
+          "cautruc": null,
+          "doc": "はずかしい",
+          "nghia": "xấu hổ; ngượng"
+        },
+        {
+          "_id": "chukyu3-15::ものが見える",
+          "kanji": "ものが見える",
+          "cautruc": null,
+          "doc": "ものがみえる",
+          "nghia": "nhìn ra bản chất"
+        },
+        {
+          "_id": "chukyu3-15::冒頭",
+          "kanji": "冒頭",
+          "cautruc": null,
+          "doc": "ぼうとう",
+          "nghia": "phần mở đầu"
+        },
+        {
+          "_id": "chukyu3-15::詰める",
+          "kanji": "詰める",
+          "cautruc": null,
+          "doc": "つめる",
+          "nghia": "nhồi; ép; thu hẹp"
+        },
+        {
+          "_id": "chukyu3-15::まとめる",
+          "kanji": "まとめる",
+          "cautruc": null,
+          "doc": "まとめる",
+          "nghia": "tóm lại; tổng hợp"
+        },
+        {
+          "_id": "chukyu3-15::テーマ",
+          "kanji": "テーマ",
+          "cautruc": null,
+          "doc": "テーマ",
+          "nghia": "chủ đề; đề tài"
+        },
+        {
+          "_id": "chukyu3-15::願う",
+          "kanji": "願う",
+          "cautruc": null,
+          "doc": "ねがう",
+          "nghia": "mong; cầu mong"
+        },
+        {
+          "_id": "chukyu3-15::添える",
+          "kanji": "添える",
+          "cautruc": null,
+          "doc": "そえる",
+          "nghia": "kèm theo"
+        },
+        {
+          "_id": "chukyu3-15::和む",
+          "kanji": "和む",
+          "cautruc": null,
+          "doc": "なごむ",
+          "nghia": "dịu lại; thư thái"
+        },
+        {
+          "_id": "chukyu3-15::拍手",
+          "kanji": "拍手",
+          "cautruc": null,
+          "doc": "はくしゅ",
+          "nghia": "vỗ tay"
+        },
+        {
+          "_id": "chukyu3-15::締めくくる",
+          "kanji": "締めくくる",
+          "cautruc": null,
+          "doc": "しめくくる",
+          "nghia": "khép lại; kết thúc"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-16",
+      "title": "Chukyu3 - Bài 16",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-16::なじむ",
+          "kanji": "なじむ",
+          "cautruc": null,
+          "doc": "なじむ",
+          "nghia": "quen với; hòa nhập"
+        },
+        {
+          "_id": "chukyu3-16::送別",
+          "kanji": "送別",
+          "cautruc": null,
+          "doc": "そうべつ",
+          "nghia": "tiễn biệt"
+        },
+        {
+          "_id": "chukyu3-16::特別な",
+          "kanji": "特別な",
+          "cautruc": null,
+          "doc": "とくべつな",
+          "nghia": "đặc biệt"
+        },
+        {
+          "_id": "chukyu3-16::誘う",
+          "kanji": "誘う",
+          "cautruc": null,
+          "doc": "さそう",
+          "nghia": "rủ; mời"
+        },
+        {
+          "_id": "chukyu3-16::立場",
+          "kanji": "立場",
+          "cautruc": null,
+          "doc": "たちば",
+          "nghia": "lập trường; vị thế"
+        },
+        {
+          "_id": "chukyu3-16::立場上",
+          "kanji": "立場上",
+          "cautruc": null,
+          "doc": "たちばじょう",
+          "nghia": "trên cương vị"
+        },
+        {
+          "_id": "chukyu3-16::参加する",
+          "kanji": "参加する",
+          "cautruc": null,
+          "doc": "さんかする",
+          "nghia": "tham gia"
+        },
+        {
+          "_id": "chukyu3-16::生まれつき",
+          "kanji": "生まれつき",
+          "cautruc": null,
+          "doc": "うまれつき",
+          "nghia": "bẩm sinh"
+        },
+        {
+          "_id": "chukyu3-16::苦手な",
+          "kanji": "苦手な",
+          "cautruc": null,
+          "doc": "にがてな",
+          "nghia": "kém; ngại; không giỏi"
+        },
+        {
+          "_id": "chukyu3-16::～ものだから",
+          "kanji": "～ものだから",
+          "cautruc": null,
+          "doc": "～ものだから",
+          "nghia": "vì; tại vì"
+        },
+        {
+          "_id": "chukyu3-16::耐える",
+          "kanji": "耐える",
+          "cautruc": null,
+          "doc": "たえる",
+          "nghia": "chịu đựng"
+        },
+        {
+          "_id": "chukyu3-16::耐え難い",
+          "kanji": "耐え難い",
+          "cautruc": null,
+          "doc": "たえがたい",
+          "nghia": "khó chịu đựng"
+        },
+        {
+          "_id": "chukyu3-16::どうしても",
+          "kanji": "どうしても",
+          "cautruc": null,
+          "doc": "どうしても",
+          "nghia": "dù thế nào; bằng được"
+        },
+        {
+          "_id": "chukyu3-16::童謡",
+          "kanji": "童謡",
+          "cautruc": null,
+          "doc": "どうよう",
+          "nghia": "đồng dao; bài hát trẻ em"
+        },
+        {
+          "_id": "chukyu3-16::力",
+          "kanji": "力",
+          "cautruc": null,
+          "doc": "ちから",
+          "nghia": "sức mạnh; năng lực"
+        },
+        {
+          "_id": "chukyu3-16::頼り",
+          "kanji": "頼り",
+          "cautruc": null,
+          "doc": "たより",
+          "nghia": "chỗ dựa"
+        },
+        {
+          "_id": "chukyu3-16::～かねる",
+          "kanji": "～かねる",
+          "cautruc": null,
+          "doc": "～かねる",
+          "nghia": "không thể ..."
+        },
+        {
+          "_id": "chukyu3-16::白ける",
+          "kanji": "白ける",
+          "cautruc": null,
+          "doc": "しらける",
+          "nghia": "mất hứng; nguội đi (không khí)"
+        },
+        {
+          "_id": "chukyu3-16::向ける",
+          "kanji": "向ける",
+          "cautruc": null,
+          "doc": "むける",
+          "nghia": "hướng về"
+        },
+        {
+          "_id": "chukyu3-16::浮かぶ",
+          "kanji": "浮かぶ",
+          "cautruc": null,
+          "doc": "うかぶ",
+          "nghia": "nổi; hiện lên"
+        },
+        {
+          "_id": "chukyu3-16::よそ",
+          "kanji": "よそ",
+          "cautruc": null,
+          "doc": "よそ",
+          "nghia": "nơi khác"
+        },
+        {
+          "_id": "chukyu3-16::自信",
+          "kanji": "自信",
+          "cautruc": null,
+          "doc": "じしん",
+          "nghia": "sự tự tin"
+        },
+        {
+          "_id": "chukyu3-16::～ところ",
+          "kanji": "～ところ",
+          "cautruc": null,
+          "doc": "～ところ",
+          "nghia": "lúc; đang ..."
+        },
+        {
+          "_id": "chukyu3-16::えんりょ",
+          "kanji": "えんりょ",
+          "cautruc": null,
+          "doc": "えんりょ",
+          "nghia": "khách sáo; kiêng dè"
+        },
+        {
+          "_id": "chukyu3-16::えんりょがちな",
+          "kanji": "えんりょがちな",
+          "cautruc": null,
+          "doc": "えんりょがちな",
+          "nghia": "rụt rè; ái ngại"
+        },
+        {
+          "_id": "chukyu3-16::勇気",
+          "kanji": "勇気",
+          "cautruc": null,
+          "doc": "ゆうき",
+          "nghia": "dũng khí"
+        },
+        {
+          "_id": "chukyu3-16::勇気づける",
+          "kanji": "勇気づける",
+          "cautruc": null,
+          "doc": "ゆうきづける",
+          "nghia": "động viên; tiếp thêm dũng khí"
+        },
+        {
+          "_id": "chukyu3-16::声をそろえる",
+          "kanji": "声をそろえる",
+          "cautruc": null,
+          "doc": "こえをそろえる",
+          "nghia": "đồng thanh"
+        },
+        {
+          "_id": "chukyu3-16::間がある",
+          "kanji": "間がある",
+          "cautruc": null,
+          "doc": "まがある",
+          "nghia": "có khoảng trống; có thời gian trống"
+        },
+        {
+          "_id": "chukyu3-16::見知らぬ",
+          "kanji": "見知らぬ",
+          "cautruc": null,
+          "doc": "みしらぬ",
+          "nghia": "xa lạ; không quen"
+        },
+        {
+          "_id": "chukyu3-16::想像する",
+          "kanji": "想像する",
+          "cautruc": null,
+          "doc": "そうぞうする",
+          "nghia": "tưởng tượng"
+        },
+        {
+          "_id": "chukyu3-16::夢",
+          "kanji": "夢",
+          "cautruc": null,
+          "doc": "ゆめ",
+          "nghia": "ước mơ; giấc mơ"
+        },
+        {
+          "_id": "chukyu3-16::～なりに",
+          "kanji": "～なりに",
+          "cautruc": null,
+          "doc": "～なりに",
+          "nghia": "theo cách của riêng ..."
+        },
+        {
+          "_id": "chukyu3-16::それぞれ",
+          "kanji": "それぞれ",
+          "cautruc": null,
+          "doc": "それぞれ",
+          "nghia": "mỗi; từng"
+        },
+        {
+          "_id": "chukyu3-16::声を合わせる",
+          "kanji": "声を合わせる",
+          "cautruc": null,
+          "doc": "こえをあわせる",
+          "nghia": "hòa giọng; đồng thanh"
+        },
+        {
+          "_id": "chukyu3-16::祝い",
+          "kanji": "祝い",
+          "cautruc": null,
+          "doc": "いわい",
+          "nghia": "lời chúc mừng; sự chúc mừng"
+        },
+        {
+          "_id": "chukyu3-16::分かち合う",
+          "kanji": "分かち合う",
+          "cautruc": null,
+          "doc": "わかちあう",
+          "nghia": "cùng chia sẻ"
+        },
+        {
+          "_id": "chukyu3-16::田植",
+          "kanji": "田植",
+          "cautruc": null,
+          "doc": "たうえ",
+          "nghia": "cấy lúa"
+        },
+        {
+          "_id": "chukyu3-16::摘む",
+          "kanji": "摘む",
+          "cautruc": null,
+          "doc": "つむ",
+          "nghia": "hái; ngắt"
+        },
+        {
+          "_id": "chukyu3-16::網",
+          "kanji": "網",
+          "cautruc": null,
+          "doc": "あみ",
+          "nghia": "lưới"
+        },
+        {
+          "_id": "chukyu3-16::浜",
+          "kanji": "浜",
+          "cautruc": null,
+          "doc": "はま",
+          "nghia": "bãi biển"
+        },
+        {
+          "_id": "chukyu3-16::はげます",
+          "kanji": "はげます",
+          "cautruc": null,
+          "doc": "はげます",
+          "nghia": "cổ vũ; động viên"
+        },
+        {
+          "_id": "chukyu3-16::汗を流す",
+          "kanji": "汗を流す",
+          "cautruc": null,
+          "doc": "あせをながす",
+          "nghia": "đổ mồ hôi; làm việc vất vả"
+        },
+        {
+          "_id": "chukyu3-16::～ては",
+          "kanji": "～ては",
+          "cautruc": null,
+          "doc": "～ては",
+          "nghia": "cứ ... thì; ... rồi lại ..."
+        },
+        {
+          "_id": "chukyu3-16::がんばる",
+          "kanji": "がんばる",
+          "cautruc": null,
+          "doc": "がんばる",
+          "nghia": "cố gắng; gắng sức"
+        },
+        {
+          "_id": "chukyu3-16::気づく",
+          "kanji": "気づく",
+          "cautruc": null,
+          "doc": "きづく",
+          "nghia": "nhận ra; để ý thấy"
+        },
+        {
+          "_id": "chukyu3-16::楽しむ",
+          "kanji": "楽しむ",
+          "cautruc": null,
+          "doc": "たのしむ",
+          "nghia": "tận hưởng"
+        },
+        {
+          "_id": "chukyu3-16::～に違いない",
+          "kanji": "～に違いない",
+          "cautruc": null,
+          "doc": "～にちがいない",
+          "nghia": "chắc chắn là ..."
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-17",
+      "title": "Chukyu3 - Bài 17",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-17::長生き",
+          "kanji": "長生き",
+          "cautruc": null,
+          "doc": "ながいき",
+          "nghia": "sống lâu"
+        },
+        {
+          "_id": "chukyu3-17::かなえる",
+          "kanji": "かなえる",
+          "cautruc": null,
+          "doc": "かなえる",
+          "nghia": "thực hiện (ước mơ)"
+        },
+        {
+          "_id": "chukyu3-17::医療",
+          "kanji": "医療",
+          "cautruc": null,
+          "doc": "いりょう",
+          "nghia": "y tế"
+        },
+        {
+          "_id": "chukyu3-17::目覚ましい",
+          "kanji": "目覚ましい",
+          "cautruc": null,
+          "doc": "めざましい",
+          "nghia": "đáng chú ý; đột phá"
+        },
+        {
+          "_id": "chukyu3-17::遂げる",
+          "kanji": "遂げる",
+          "cautruc": null,
+          "doc": "とげる",
+          "nghia": "đạt được (thành tựu)"
+        },
+        {
+          "_id": "chukyu3-17::救う",
+          "kanji": "救う",
+          "cautruc": null,
+          "doc": "すくう",
+          "nghia": "cứu"
+        },
+        {
+          "_id": "chukyu3-17::助かる",
+          "kanji": "助かる",
+          "cautruc": null,
+          "doc": "たすかる",
+          "nghia": "được cứu; đỡ đần"
+        },
+        {
+          "_id": "chukyu3-17::治す",
+          "kanji": "治す",
+          "cautruc": null,
+          "doc": "なおす",
+          "nghia": "chữa (bệnh)"
+        },
+        {
+          "_id": "chukyu3-17::平均",
+          "kanji": "平均",
+          "cautruc": null,
+          "doc": "へいきん",
+          "nghia": "trung bình"
+        },
+        {
+          "_id": "chukyu3-17::寿命",
+          "kanji": "寿命",
+          "cautruc": null,
+          "doc": "じゅみょう",
+          "nghia": "tuổi thọ"
+        },
+        {
+          "_id": "chukyu3-17::伸び",
+          "kanji": "伸び",
+          "cautruc": null,
+          "doc": "のび",
+          "nghia": "sự tăng trưởng; kéo dài"
+        },
+        {
+          "_id": "chukyu3-17::明らかな",
+          "kanji": "明らかな",
+          "cautruc": null,
+          "doc": "あきらかな",
+          "nghia": "rõ ràng; hiển nhiên"
+        },
+        {
+          "_id": "chukyu3-17::高齢",
+          "kanji": "高齢",
+          "cautruc": null,
+          "doc": "こうれい",
+          "nghia": "cao tuổi"
+        },
+        {
+          "_id": "chukyu3-17::高齢化",
+          "kanji": "高齢化",
+          "cautruc": null,
+          "doc": "こうれいか",
+          "nghia": "già hóa (dân số)"
+        },
+        {
+          "_id": "chukyu3-17::生きる",
+          "kanji": "生きる",
+          "cautruc": null,
+          "doc": "いきる",
+          "nghia": "sống"
+        },
+        {
+          "_id": "chukyu3-17::問う",
+          "kanji": "問う",
+          "cautruc": null,
+          "doc": "とう",
+          "nghia": "hỏi; truy vấn"
+        },
+        {
+          "_id": "chukyu3-17::状況",
+          "kanji": "状況",
+          "cautruc": null,
+          "doc": "じょうきょう",
+          "nghia": "tình hình"
+        },
+        {
+          "_id": "chukyu3-17::本来",
+          "kanji": "本来",
+          "cautruc": null,
+          "doc": "ほんらい",
+          "nghia": "vốn dĩ"
+        },
+        {
+          "_id": "chukyu3-17::患者",
+          "kanji": "患者",
+          "cautruc": null,
+          "doc": "かんじゃ",
+          "nghia": "bệnh nhân"
+        },
+        {
+          "_id": "chukyu3-17::苦しみ",
+          "kanji": "苦しみ",
+          "cautruc": null,
+          "doc": "くるしみ",
+          "nghia": "nỗi đau khổ"
+        },
+        {
+          "_id": "chukyu3-17::健康な",
+          "kanji": "健康な",
+          "cautruc": null,
+          "doc": "けんこうな",
+          "nghia": "khỏe mạnh"
+        },
+        {
+          "_id": "chukyu3-17::元",
+          "kanji": "元",
+          "cautruc": null,
+          "doc": "もと",
+          "nghia": "nguyên; gốc; trước kia"
+        },
+        {
+          "_id": "chukyu3-17::目指す",
+          "kanji": "目指す",
+          "cautruc": null,
+          "doc": "めざす",
+          "nghia": "hướng đến; nhắm tới"
+        },
+        {
+          "_id": "chukyu3-17::いわゆる",
+          "kanji": "いわゆる",
+          "cautruc": null,
+          "doc": "いわゆる",
+          "nghia": "cái gọi là"
+        },
+        {
+          "_id": "chukyu3-17::状態",
+          "kanji": "状態",
+          "cautruc": null,
+          "doc": "じょうたい",
+          "nghia": "trạng thái"
+        },
+        {
+          "_id": "chukyu3-17::治療",
+          "kanji": "治療",
+          "cautruc": null,
+          "doc": "ちりょう",
+          "nghia": "trị liệu"
+        },
+        {
+          "_id": "chukyu3-17::生かす",
+          "kanji": "生かす",
+          "cautruc": null,
+          "doc": "いかす",
+          "nghia": "kéo dài sự sống; vận dụng"
+        },
+        {
+          "_id": "chukyu3-17::無理な",
+          "kanji": "無理な",
+          "cautruc": null,
+          "doc": "むりな",
+          "nghia": "vô lí; quá sức"
+        },
+        {
+          "_id": "chukyu3-17::器具",
+          "kanji": "器具",
+          "cautruc": null,
+          "doc": "きぐ",
+          "nghia": "dụng cụ; thiết bị"
+        },
+        {
+          "_id": "chukyu3-17::いかに",
+          "kanji": "いかに",
+          "cautruc": null,
+          "doc": "いかに",
+          "nghia": "đến thế nào; ra sao"
+        },
+        {
+          "_id": "chukyu3-17::重要な",
+          "kanji": "重要な",
+          "cautruc": null,
+          "doc": "じゅうような",
+          "nghia": "quan trọng"
+        },
+        {
+          "_id": "chukyu3-17::～たきり",
+          "kanji": "～たきり",
+          "cautruc": null,
+          "doc": "～たきり",
+          "nghia": "... suốt (giữ nguyên trạng)"
+        },
+        {
+          "_id": "chukyu3-17::意思",
+          "kanji": "意思",
+          "cautruc": null,
+          "doc": "いし",
+          "nghia": "ý chí; ý muốn"
+        },
+        {
+          "_id": "chukyu3-17::動かす",
+          "kanji": "動かす",
+          "cautruc": null,
+          "doc": "うごかす",
+          "nghia": "làm chuyển động; điều khiển"
+        },
+        {
+          "_id": "chukyu3-17::その一方で",
+          "kanji": "その一方で",
+          "cautruc": null,
+          "doc": "そのいっぽうで",
+          "nghia": "mặt khác"
+        },
+        {
+          "_id": "chukyu3-17::血を分けた",
+          "kanji": "血を分けた",
+          "cautruc": null,
+          "doc": "ちをわけた",
+          "nghia": "cùng huyết thống"
+        },
+        {
+          "_id": "chukyu3-17::～からすると",
+          "kanji": "～からすると",
+          "cautruc": null,
+          "doc": "～からすると",
+          "nghia": "từ góc độ ...; xét từ ..."
+        },
+        {
+          "_id": "chukyu3-17::割り切る",
+          "kanji": "割り切る",
+          "cautruc": null,
+          "doc": "わりきる",
+          "nghia": "dứt khoát; rạch ròi"
+        },
+        {
+          "_id": "chukyu3-17::～わけにはいかない",
+          "kanji": "～わけにはいかない",
+          "cautruc": null,
+          "doc": "～わけにはいかない",
+          "nghia": "không thể ..."
+        },
+        {
+          "_id": "chukyu3-17::当然",
+          "kanji": "当然",
+          "cautruc": null,
+          "doc": "とうぜん",
+          "nghia": "đương nhiên"
+        },
+        {
+          "_id": "chukyu3-17::長期",
+          "kanji": "長期",
+          "cautruc": null,
+          "doc": "ちょうき",
+          "nghia": "dài hạn"
+        },
+        {
+          "_id": "chukyu3-17::看護",
+          "kanji": "看護",
+          "cautruc": null,
+          "doc": "かんご",
+          "nghia": "chăm sóc (bệnh nhân)"
+        },
+        {
+          "_id": "chukyu3-17::人生",
+          "kanji": "人生",
+          "cautruc": null,
+          "doc": "じんせい",
+          "nghia": "cuộc đời"
+        },
+        {
+          "_id": "chukyu3-17::もたらす",
+          "kanji": "もたらす",
+          "cautruc": null,
+          "doc": "もたらす",
+          "nghia": "đem lại; mang tới"
+        },
+        {
+          "_id": "chukyu3-17::経済的な",
+          "kanji": "経済的な",
+          "cautruc": null,
+          "doc": "けいざいてきな",
+          "nghia": "về kinh tế; tiết kiệm"
+        },
+        {
+          "_id": "chukyu3-17::言うまでもない",
+          "kanji": "言うまでもない",
+          "cautruc": null,
+          "doc": "いうまでもない",
+          "nghia": "khỏi phải nói"
+        },
+        {
+          "_id": "chukyu3-17::先が見えない",
+          "kanji": "先が見えない",
+          "cautruc": null,
+          "doc": "さきがみえない",
+          "nghia": "không thấy tương lai"
+        },
+        {
+          "_id": "chukyu3-17::犠牲",
+          "kanji": "犠牲",
+          "cautruc": null,
+          "doc": "ぎせい",
+          "nghia": "sự hi sinh"
+        },
+        {
+          "_id": "chukyu3-17::さらに",
+          "kanji": "さらに",
+          "cautruc": null,
+          "doc": "さらに",
+          "nghia": "hơn nữa"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-18",
+      "title": "Chukyu3 - Bài 18",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-18::漁村",
+          "kanji": "漁村",
+          "cautruc": null,
+          "doc": "ぎょそん",
+          "nghia": "làng chài"
+        },
+        {
+          "_id": "chukyu3-18::促す",
+          "kanji": "促す",
+          "cautruc": null,
+          "doc": "うながす",
+          "nghia": "thúc đẩy; giục"
+        },
+        {
+          "_id": "chukyu3-18::夕陽",
+          "kanji": "夕陽",
+          "cautruc": null,
+          "doc": "ゆうひ",
+          "nghia": "mặt trời chiều"
+        },
+        {
+          "_id": "chukyu3-18::染まる",
+          "kanji": "染まる",
+          "cautruc": null,
+          "doc": "そまる",
+          "nghia": "nhuộm màu; bị ảnh hưởng"
+        },
+        {
+          "_id": "chukyu3-18::口が重い",
+          "kanji": "口が重い",
+          "cautruc": null,
+          "doc": "くちがおもい",
+          "nghia": "ít nói; kiệm lời"
+        },
+        {
+          "_id": "chukyu3-18::かせぐ",
+          "kanji": "かせぐ",
+          "cautruc": null,
+          "doc": "かせぐ",
+          "nghia": "kiếm tiền"
+        },
+        {
+          "_id": "chukyu3-18::勢い",
+          "kanji": "勢い",
+          "cautruc": null,
+          "doc": "いきおい",
+          "nghia": "khí thế; đà"
+        },
+        {
+          "_id": "chukyu3-18::先のこと",
+          "kanji": "先のこと",
+          "cautruc": null,
+          "doc": "さきのこと",
+          "nghia": "chuyện tương lai"
+        },
+        {
+          "_id": "chukyu3-18::～たばかりに",
+          "kanji": "～たばかりに",
+          "cautruc": null,
+          "doc": "～たばかりに",
+          "nghia": "chỉ vì ..."
+        },
+        {
+          "_id": "chukyu3-18::水平な",
+          "kanji": "水平な",
+          "cautruc": null,
+          "doc": "すいへいな",
+          "nghia": "nằm ngang"
+        },
+        {
+          "_id": "chukyu3-18::姿を消す",
+          "kanji": "姿を消す",
+          "cautruc": null,
+          "doc": "すがたをけす",
+          "nghia": "biến mất"
+        },
+        {
+          "_id": "chukyu3-18::何もかも",
+          "kanji": "何もかも",
+          "cautruc": null,
+          "doc": "なにもかも",
+          "nghia": "tất cả mọi thứ"
+        },
+        {
+          "_id": "chukyu3-18::ぽつりと",
+          "kanji": "ぽつりと",
+          "cautruc": null,
+          "doc": "ぽつりと",
+          "nghia": "lặng lẽ; lác đác"
+        },
+        {
+          "_id": "chukyu3-18::農村",
+          "kanji": "農村",
+          "cautruc": null,
+          "doc": "のうそん",
+          "nghia": "làng nông; nông thôn"
+        },
+        {
+          "_id": "chukyu3-18::事情",
+          "kanji": "事情",
+          "cautruc": null,
+          "doc": "じじょう",
+          "nghia": "tình hình; hoàn cảnh"
+        },
+        {
+          "_id": "chukyu3-18::減る",
+          "kanji": "減る",
+          "cautruc": null,
+          "doc": "へる",
+          "nghia": "giảm"
+        },
+        {
+          "_id": "chukyu3-18::ふるさと",
+          "kanji": "ふるさと",
+          "cautruc": null,
+          "doc": "ふるさと",
+          "nghia": "quê hương"
+        },
+        {
+          "_id": "chukyu3-18::足を運ぶ",
+          "kanji": "足を運ぶ",
+          "cautruc": null,
+          "doc": "あしをはこぶ",
+          "nghia": "đích thân đến"
+        },
+        {
+          "_id": "chukyu3-18::近所",
+          "kanji": "近所",
+          "cautruc": null,
+          "doc": "きんじょ",
+          "nghia": "hàng xóm; lân cận"
+        },
+        {
+          "_id": "chukyu3-18::～てならない",
+          "kanji": "～てならない",
+          "cautruc": null,
+          "doc": "～てならない",
+          "nghia": "rất ...; ... không thôi"
+        },
+        {
+          "_id": "chukyu3-18::過疎",
+          "kanji": "過疎",
+          "cautruc": null,
+          "doc": "かそ",
+          "nghia": "thưa dân; giảm dân"
+        },
+        {
+          "_id": "chukyu3-18::活性化する",
+          "kanji": "活性化する",
+          "cautruc": null,
+          "doc": "かっせいかする",
+          "nghia": "làm sôi động; vực dậy"
+        },
+        {
+          "_id": "chukyu3-18::地方",
+          "kanji": "地方",
+          "cautruc": null,
+          "doc": "ちほう",
+          "nghia": "địa phương; vùng"
+        },
+        {
+          "_id": "chukyu3-18::自治体",
+          "kanji": "自治体",
+          "cautruc": null,
+          "doc": "じちたい",
+          "nghia": "chính quyền địa phương"
+        },
+        {
+          "_id": "chukyu3-18::支援",
+          "kanji": "支援",
+          "cautruc": null,
+          "doc": "しえん",
+          "nghia": "hỗ trợ"
+        },
+        {
+          "_id": "chukyu3-18::力を入れる",
+          "kanji": "力を入れる",
+          "cautruc": null,
+          "doc": "ちからをいれる",
+          "nghia": "dồn sức vào"
+        },
+        {
+          "_id": "chukyu3-18::現状",
+          "kanji": "現状",
+          "cautruc": null,
+          "doc": "げんじょう",
+          "nghia": "hiện trạng"
+        },
+        {
+          "_id": "chukyu3-18::調査",
+          "kanji": "調査",
+          "cautruc": null,
+          "doc": "ちょうさ",
+          "nghia": "điều tra; khảo sát"
+        },
+        {
+          "_id": "chukyu3-18::呼び戻す",
+          "kanji": "呼び戻す",
+          "cautruc": null,
+          "doc": "よびもどす",
+          "nghia": "gọi về"
+        },
+        {
+          "_id": "chukyu3-18::呼びかける",
+          "kanji": "呼びかける",
+          "cautruc": null,
+          "doc": "よびかける",
+          "nghia": "kêu gọi"
+        },
+        {
+          "_id": "chukyu3-18::あこがれる",
+          "kanji": "あこがれる",
+          "cautruc": null,
+          "doc": "あこがれる",
+          "nghia": "ngưỡng mộ; khao khát"
+        },
+        {
+          "_id": "chukyu3-18::退職",
+          "kanji": "退職",
+          "cautruc": null,
+          "doc": "たいしょく",
+          "nghia": "nghỉ việc; nghỉ hưu"
+        },
+        {
+          "_id": "chukyu3-18::住まい",
+          "kanji": "住まい",
+          "cautruc": null,
+          "doc": "すまい",
+          "nghia": "nơi ở"
+        },
+        {
+          "_id": "chukyu3-18::就職",
+          "kanji": "就職",
+          "cautruc": null,
+          "doc": "しゅうしょく",
+          "nghia": "xin việc; đi làm"
+        },
+        {
+          "_id": "chukyu3-18::いったん",
+          "kanji": "いったん",
+          "cautruc": null,
+          "doc": "いったん",
+          "nghia": "một khi; tạm thời"
+        },
+        {
+          "_id": "chukyu3-18::～としても",
+          "kanji": "～としても",
+          "cautruc": null,
+          "doc": "～としても",
+          "nghia": "dù ..."
+        },
+        {
+          "_id": "chukyu3-18::地域",
+          "kanji": "地域",
+          "cautruc": null,
+          "doc": "ちいき",
+          "nghia": "khu vực; cộng đồng"
+        },
+        {
+          "_id": "chukyu3-18::根づく",
+          "kanji": "根づく",
+          "cautruc": null,
+          "doc": "ねづく",
+          "nghia": "bén rễ; ăn sâu"
+        },
+        {
+          "_id": "chukyu3-18::伝統",
+          "kanji": "伝統",
+          "cautruc": null,
+          "doc": "でんとう",
+          "nghia": "truyền thống"
+        },
+        {
+          "_id": "chukyu3-18::少子高齢化",
+          "kanji": "少子高齢化",
+          "cautruc": null,
+          "doc": "しょうしこうれいか",
+          "nghia": "già hóa và ít trẻ em"
+        },
+        {
+          "_id": "chukyu3-18::波",
+          "kanji": "波",
+          "cautruc": null,
+          "doc": "なみ",
+          "nghia": "sóng; làn sóng"
+        },
+        {
+          "_id": "chukyu3-18::例外",
+          "kanji": "例外",
+          "cautruc": null,
+          "doc": "れいがい",
+          "nghia": "ngoại lệ"
+        },
+        {
+          "_id": "chukyu3-18::押し寄せる",
+          "kanji": "押し寄せる",
+          "cautruc": null,
+          "doc": "おしよせる",
+          "nghia": "ập đến; đổ dồn"
+        },
+        {
+          "_id": "chukyu3-18::手遅れ",
+          "kanji": "手遅れ",
+          "cautruc": null,
+          "doc": "ておくれ",
+          "nghia": "muộn màng"
+        },
+        {
+          "_id": "chukyu3-18::恐れ",
+          "kanji": "恐れ",
+          "cautruc": null,
+          "doc": "おそれ",
+          "nghia": "nỗi sợ; nguy cơ"
+        },
+        {
+          "_id": "chukyu3-18::手を打つ",
+          "kanji": "手を打つ",
+          "cautruc": null,
+          "doc": "てをうつ",
+          "nghia": "ra tay đối phó; xử trí"
+        },
+        {
+          "_id": "chukyu3-18::～ないことには",
+          "kanji": "～ないことには",
+          "cautruc": null,
+          "doc": "～ないことには",
+          "nghia": "nếu không ... thì"
+        },
+        {
+          "_id": "chukyu3-18::片ときも～ない",
+          "kanji": "片ときも～ない",
+          "cautruc": null,
+          "doc": "かたときも～ない",
+          "nghia": "không lúc nào ..."
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-19",
+      "title": "Chukyu3 - Bài 19",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-19::交流",
+          "kanji": "交流",
+          "cautruc": null,
+          "doc": "こうりゅう",
+          "nghia": "giao lưu"
+        },
+        {
+          "_id": "chukyu3-19::自己",
+          "kanji": "自己",
+          "cautruc": null,
+          "doc": "じこ",
+          "nghia": "bản thân; tự"
+        },
+        {
+          "_id": "chukyu3-19::司会",
+          "kanji": "司会",
+          "cautruc": null,
+          "doc": "しかい",
+          "nghia": "dẫn chương trình"
+        },
+        {
+          "_id": "chukyu3-19::落ちる",
+          "kanji": "落ちる",
+          "cautruc": null,
+          "doc": "おちる",
+          "nghia": "rơi; trượt"
+        },
+        {
+          "_id": "chukyu3-19::具体的な",
+          "kanji": "具体的な",
+          "cautruc": null,
+          "doc": "ぐたいてきな",
+          "nghia": "cụ thể"
+        },
+        {
+          "_id": "chukyu3-19::政治",
+          "kanji": "政治",
+          "cautruc": null,
+          "doc": "せいじ",
+          "nghia": "chính trị"
+        },
+        {
+          "_id": "chukyu3-19::～はともかく",
+          "kanji": "～はともかく",
+          "cautruc": null,
+          "doc": "～はともかく",
+          "nghia": "bỏ qua ...; không kể ..."
+        },
+        {
+          "_id": "chukyu3-19::語る",
+          "kanji": "語る",
+          "cautruc": null,
+          "doc": "かたる",
+          "nghia": "kể; nói"
+        },
+        {
+          "_id": "chukyu3-19::実現する",
+          "kanji": "実現する",
+          "cautruc": null,
+          "doc": "じつげんする",
+          "nghia": "thực hiện; hiện thực hóa"
+        },
+        {
+          "_id": "chukyu3-19::熱心な",
+          "kanji": "熱心な",
+          "cautruc": null,
+          "doc": "ねっしんな",
+          "nghia": "nhiệt tình; chăm chú"
+        },
+        {
+          "_id": "chukyu3-19::～さえ～ば",
+          "kanji": "～さえ～ば",
+          "cautruc": null,
+          "doc": "～さえ～ば",
+          "nghia": "chỉ cần ..."
+        },
+        {
+          "_id": "chukyu3-19::かなう",
+          "kanji": "かなう",
+          "cautruc": null,
+          "doc": "かなう",
+          "nghia": "đạt được (ước nguyện)"
+        },
+        {
+          "_id": "chukyu3-19::可能な",
+          "kanji": "可能な",
+          "cautruc": null,
+          "doc": "かのうな",
+          "nghia": "có thể; khả thi"
+        },
+        {
+          "_id": "chukyu3-19::可能性",
+          "kanji": "可能性",
+          "cautruc": null,
+          "doc": "かのうせい",
+          "nghia": "khả năng (xảy ra)"
+        },
+        {
+          "_id": "chukyu3-19::計画",
+          "kanji": "計画",
+          "cautruc": null,
+          "doc": "けいかく",
+          "nghia": "kế hoạch"
+        },
+        {
+          "_id": "chukyu3-19::選択肢",
+          "kanji": "選択肢",
+          "cautruc": null,
+          "doc": "せんたくし",
+          "nghia": "lựa chọn"
+        },
+        {
+          "_id": "chukyu3-19::施設",
+          "kanji": "施設",
+          "cautruc": null,
+          "doc": "しせつ",
+          "nghia": "cơ sở (vật chất)"
+        },
+        {
+          "_id": "chukyu3-19::～ことから",
+          "kanji": "～ことから",
+          "cautruc": null,
+          "doc": "～ことから",
+          "nghia": "vì ...; do ..."
+        },
+        {
+          "_id": "chukyu3-19::身内",
+          "kanji": "身内",
+          "cautruc": null,
+          "doc": "みうち",
+          "nghia": "người nhà; người thân"
+        },
+        {
+          "_id": "chukyu3-19::働きづめ",
+          "kanji": "働きづめ",
+          "cautruc": null,
+          "doc": "はたらきづめ",
+          "nghia": "làm việc không nghỉ"
+        },
+        {
+          "_id": "chukyu3-19::貧しい",
+          "kanji": "貧しい",
+          "cautruc": null,
+          "doc": "まずしい",
+          "nghia": "nghèo"
+        },
+        {
+          "_id": "chukyu3-19::抜け出す",
+          "kanji": "抜け出す",
+          "cautruc": null,
+          "doc": "ぬけだす",
+          "nghia": "thoát ra khỏi"
+        },
+        {
+          "_id": "chukyu3-19::～よりほかはない",
+          "kanji": "～よりほかはない",
+          "cautruc": null,
+          "doc": "～よりほかはない",
+          "nghia": "chỉ còn cách ..."
+        },
+        {
+          "_id": "chukyu3-19::こそ",
+          "kanji": "こそ",
+          "cautruc": null,
+          "doc": "こそ",
+          "nghia": "chính là (nhấn mạnh)"
+        },
+        {
+          "_id": "chukyu3-19::～ないものか",
+          "kanji": "～ないものか",
+          "cautruc": null,
+          "doc": "～ないものか",
+          "nghia": "chẳng lẽ không thể ...?"
+        },
+        {
+          "_id": "chukyu3-19::教育",
+          "kanji": "教育",
+          "cautruc": null,
+          "doc": "きょういく",
+          "nghia": "giáo dục"
+        },
+        {
+          "_id": "chukyu3-19::すら",
+          "kanji": "すら",
+          "cautruc": null,
+          "doc": "すら",
+          "nghia": "đến cả; ngay cả"
+        },
+        {
+          "_id": "chukyu3-19::満足な",
+          "kanji": "満足な",
+          "cautruc": null,
+          "doc": "まんぞくな",
+          "nghia": "mãn nguyện; đầy đủ"
+        },
+        {
+          "_id": "chukyu3-19::環境",
+          "kanji": "環境",
+          "cautruc": null,
+          "doc": "かんきょう",
+          "nghia": "môi trường"
+        },
+        {
+          "_id": "chukyu3-19::差し伸べる",
+          "kanji": "差し伸べる",
+          "cautruc": null,
+          "doc": "さしのべる",
+          "nghia": "chìa tay (giúp đỡ)"
+        },
+        {
+          "_id": "chukyu3-19::未来",
+          "kanji": "未来",
+          "cautruc": null,
+          "doc": "みらい",
+          "nghia": "tương lai"
+        },
+        {
+          "_id": "chukyu3-19::裏返し",
+          "kanji": "裏返し",
+          "cautruc": null,
+          "doc": "うらがえし",
+          "nghia": "mặt trái; lộn ngược"
+        },
+        {
+          "_id": "chukyu3-19::話し終える",
+          "kanji": "話し終える",
+          "cautruc": null,
+          "doc": "はなしおえる",
+          "nghia": "nói xong"
+        },
+        {
+          "_id": "chukyu3-19::輝く",
+          "kanji": "輝く",
+          "cautruc": null,
+          "doc": "かがやく",
+          "nghia": "tỏa sáng"
+        },
+        {
+          "_id": "chukyu3-19::素直な",
+          "kanji": "素直な",
+          "cautruc": null,
+          "doc": "すなおな",
+          "nghia": "thẳng thắn; ngoan ngoãn"
+        },
+        {
+          "_id": "chukyu3-19::笑顔",
+          "kanji": "笑顔",
+          "cautruc": null,
+          "doc": "えがお",
+          "nghia": "nụ cười"
+        },
+        {
+          "_id": "chukyu3-19::物質的に",
+          "kanji": "物質的に",
+          "cautruc": null,
+          "doc": "ぶっしつてきに",
+          "nghia": "về mặt vật chất"
+        },
+        {
+          "_id": "chukyu3-19::恵む",
+          "kanji": "恵む",
+          "cautruc": null,
+          "doc": "めぐむ",
+          "nghia": "ban cho; bố thí"
+        },
+        {
+          "_id": "chukyu3-19::満たす",
+          "kanji": "満たす",
+          "cautruc": null,
+          "doc": "みたす",
+          "nghia": "làm đầy; thỏa mãn"
+        },
+        {
+          "_id": "chukyu3-19::豊かな",
+          "kanji": "豊かな",
+          "cautruc": null,
+          "doc": "ゆたかな",
+          "nghia": "giàu có; phong phú"
+        },
+        {
+          "_id": "chukyu3-19::表れる",
+          "kanji": "表れる",
+          "cautruc": null,
+          "doc": "あらわれる",
+          "nghia": "biểu hiện ra"
+        },
+        {
+          "_id": "chukyu3-19::表面的な",
+          "kanji": "表面的な",
+          "cautruc": null,
+          "doc": "ひょうめんてきな",
+          "nghia": "hời hợt; bề mặt"
+        },
+        {
+          "_id": "chukyu3-19::本物",
+          "kanji": "本物",
+          "cautruc": null,
+          "doc": "ほんもの",
+          "nghia": "hàng thật; đích thực"
+        },
+        {
+          "_id": "chukyu3-19::隠す",
+          "kanji": "隠す",
+          "cautruc": null,
+          "doc": "かくす",
+          "nghia": "che giấu"
+        },
+        {
+          "_id": "chukyu3-19::訴え",
+          "kanji": "訴え",
+          "cautruc": null,
+          "doc": "うったえ",
+          "nghia": "lời kêu gọi; sự khiếu nại"
+        },
+        {
+          "_id": "chukyu3-19::胸が痛む",
+          "kanji": "胸が痛む",
+          "cautruc": null,
+          "doc": "むねがいたむ",
+          "nghia": "đau lòng"
+        }
+      ]
+    },
+    {
+      "id": "chukyu3-20",
+      "title": "Chukyu3 - Bài 20",
+      "type": "TUVUNG",
+      "series": "chukyu3",
+      "level": "N2",
+      "private": false,
+      "words": [
+        {
+          "_id": "chukyu3-20::衛生",
+          "kanji": "衛生",
+          "cautruc": null,
+          "doc": "えいせい",
+          "nghia": "vệ sinh"
+        },
+        {
+          "_id": "chukyu3-20::義務",
+          "kanji": "義務",
+          "cautruc": null,
+          "doc": "ぎむ",
+          "nghia": "nghĩa vụ"
+        },
+        {
+          "_id": "chukyu3-20::握る",
+          "kanji": "握る",
+          "cautruc": null,
+          "doc": "にぎる",
+          "nghia": "nắm; cầm"
+        },
+        {
+          "_id": "chukyu3-20::固い",
+          "kanji": "固い",
+          "cautruc": null,
+          "doc": "かたい",
+          "nghia": "cứng; chắc"
+        },
+        {
+          "_id": "chukyu3-20::口当たり",
+          "kanji": "口当たり",
+          "cautruc": null,
+          "doc": "くちあたり",
+          "nghia": "cảm giác khi ăn/uống"
+        },
+        {
+          "_id": "chukyu3-20::素手",
+          "kanji": "素手",
+          "cautruc": null,
+          "doc": "すで",
+          "nghia": "tay không; tay trần"
+        },
+        {
+          "_id": "chukyu3-20::～割には",
+          "kanji": "～割には",
+          "cautruc": null,
+          "doc": "～わりには",
+          "nghia": "so với ...; mặc dù ..."
+        },
+        {
+          "_id": "chukyu3-20::すんなりと",
+          "kanji": "すんなりと",
+          "cautruc": null,
+          "doc": "すんなりと",
+          "nghia": "suôn sẻ; dễ dàng"
+        },
+        {
+          "_id": "chukyu3-20::認める",
+          "kanji": "認める",
+          "cautruc": null,
+          "doc": "みとめる",
+          "nghia": "thừa nhận; công nhận"
+        },
+        {
+          "_id": "chukyu3-20::まな板",
+          "kanji": "まな板",
+          "cautruc": null,
+          "doc": "まないた",
+          "nghia": "cái thớt"
+        },
+        {
+          "_id": "chukyu3-20::見どころがある",
+          "kanji": "見どころがある",
+          "cautruc": null,
+          "doc": "みどころがある",
+          "nghia": "có triển vọng"
+        },
+        {
+          "_id": "chukyu3-20::雇う",
+          "kanji": "雇う",
+          "cautruc": null,
+          "doc": "やとう",
+          "nghia": "thuê (nhân công)"
+        },
+        {
+          "_id": "chukyu3-20::～にあたって",
+          "kanji": "～にあたって",
+          "cautruc": null,
+          "doc": "～にあたって",
+          "nghia": "khi ...; nhân dịp ..."
+        },
+        {
+          "_id": "chukyu3-20::見習い",
+          "kanji": "見習い",
+          "cautruc": null,
+          "doc": "みならい",
+          "nghia": "học việc"
+        },
+        {
+          "_id": "chukyu3-20::条件",
+          "kanji": "条件",
+          "cautruc": null,
+          "doc": "じょうけん",
+          "nghia": "điều kiện"
+        },
+        {
+          "_id": "chukyu3-20::包丁",
+          "kanji": "包丁",
+          "cautruc": null,
+          "doc": "ほうちょう",
+          "nghia": "con dao (bếp)"
+        },
+        {
+          "_id": "chukyu3-20::研ぎ",
+          "kanji": "研ぎ",
+          "cautruc": null,
+          "doc": "とぎ",
+          "nghia": "việc mài (dao)"
+        },
+        {
+          "_id": "chukyu3-20::刃先",
+          "kanji": "刃先",
+          "cautruc": null,
+          "doc": "はさき",
+          "nghia": "lưỡi dao; đầu lưỡi"
+        },
+        {
+          "_id": "chukyu3-20::触る",
+          "kanji": "触る",
+          "cautruc": null,
+          "doc": "さわる",
+          "nghia": "sờ; chạm"
+        },
+        {
+          "_id": "chukyu3-20::そこそこ",
+          "kanji": "そこそこ",
+          "cautruc": null,
+          "doc": "そこそこ",
+          "nghia": "kha khá; tàm tạm"
+        },
+        {
+          "_id": "chukyu3-20::ものになる",
+          "kanji": "ものになる",
+          "cautruc": null,
+          "doc": "ものになる",
+          "nghia": "thành nghề; nên chuyện"
+        },
+        {
+          "_id": "chukyu3-20::頭が固い",
+          "kanji": "頭が固い",
+          "cautruc": null,
+          "doc": "あたまがかたい",
+          "nghia": "bảo thủ; cứng nhắc"
+        },
+        {
+          "_id": "chukyu3-20::職人",
+          "kanji": "職人",
+          "cautruc": null,
+          "doc": "しょくにん",
+          "nghia": "người thợ; nghệ nhân"
+        },
+        {
+          "_id": "chukyu3-20::意地悪な",
+          "kanji": "意地悪な",
+          "cautruc": null,
+          "doc": "いじわるな",
+          "nghia": "xấu tính; ác ý"
+        },
+        {
+          "_id": "chukyu3-20::仕方がない",
+          "kanji": "仕方がない",
+          "cautruc": null,
+          "doc": "しかたがない",
+          "nghia": "không còn cách nào; đành"
+        },
+        {
+          "_id": "chukyu3-20::取り合わせ",
+          "kanji": "取り合わせ",
+          "cautruc": null,
+          "doc": "とりあわせ",
+          "nghia": "sự kết hợp"
+        },
+        {
+          "_id": "chukyu3-20::だし",
+          "kanji": "だし",
+          "cautruc": null,
+          "doc": "だし",
+          "nghia": "nước dùng (dashi)"
+        },
+        {
+          "_id": "chukyu3-20::加減",
+          "kanji": "加減",
+          "cautruc": null,
+          "doc": "かげん",
+          "nghia": "độ (nêm nếm); mức độ"
+        },
+        {
+          "_id": "chukyu3-20::舌触り",
+          "kanji": "舌触り",
+          "cautruc": null,
+          "doc": "したざわり",
+          "nghia": "cảm giác của lưỡi"
+        },
+        {
+          "_id": "chukyu3-20::あれやこれや",
+          "kanji": "あれやこれや",
+          "cautruc": null,
+          "doc": "あれやこれや",
+          "nghia": "này nọ; đủ thứ"
+        },
+        {
+          "_id": "chukyu3-20::工夫をこらす",
+          "kanji": "工夫をこらす",
+          "cautruc": null,
+          "doc": "くふうをこらす",
+          "nghia": "dồn công tìm tòi"
+        },
+        {
+          "_id": "chukyu3-20::胸を張る",
+          "kanji": "胸を張る",
+          "cautruc": null,
+          "doc": "むねをはる",
+          "nghia": "ưỡn ngực; tự hào"
+        },
+        {
+          "_id": "chukyu3-20::～に限らず",
+          "kanji": "～に限らず",
+          "cautruc": null,
+          "doc": "～にかぎらず",
+          "nghia": "không chỉ ..."
+        },
+        {
+          "_id": "chukyu3-20::色合い",
+          "kanji": "色合い",
+          "cautruc": null,
+          "doc": "いろあい",
+          "nghia": "sắc màu; tông màu"
+        },
+        {
+          "_id": "chukyu3-20::染物",
+          "kanji": "染物",
+          "cautruc": null,
+          "doc": "そめもの",
+          "nghia": "đồ nhuộm"
+        },
+        {
+          "_id": "chukyu3-20::具合",
+          "kanji": "具合",
+          "cautruc": null,
+          "doc": "ぐあい",
+          "nghia": "tình trạng; mức độ"
+        },
+        {
+          "_id": "chukyu3-20::なめらかな",
+          "kanji": "なめらかな",
+          "cautruc": null,
+          "doc": "なめらかな",
+          "nghia": "mịn màng; trơn tru"
+        },
+        {
+          "_id": "chukyu3-20::削る",
+          "kanji": "削る",
+          "cautruc": null,
+          "doc": "けずる",
+          "nghia": "đẽo; gọt; cắt giảm"
+        },
+        {
+          "_id": "chukyu3-20::削り上げる",
+          "kanji": "削り上げる",
+          "cautruc": null,
+          "doc": "けずりあげる",
+          "nghia": "đẽo/gọt xong"
+        },
+        {
+          "_id": "chukyu3-20::大工",
+          "kanji": "大工",
+          "cautruc": null,
+          "doc": "だいく",
+          "nghia": "thợ mộc"
+        },
+        {
+          "_id": "chukyu3-20::わざ",
+          "kanji": "わざ",
+          "cautruc": null,
+          "doc": "わざ",
+          "nghia": "kĩ thuật; bí quyết"
+        },
+        {
+          "_id": "chukyu3-20::～にかけては",
+          "kanji": "～にかけては",
+          "cautruc": null,
+          "doc": "～にかけては",
+          "nghia": "nói về khoản ...; xét về ..."
+        },
+        {
+          "_id": "chukyu3-20::引けを取る",
+          "kanji": "引けを取る",
+          "cautruc": null,
+          "doc": "ひけをとる",
+          "nghia": "thua kém"
+        },
+        {
+          "_id": "chukyu3-20::こつ",
+          "kanji": "こつ",
+          "cautruc": null,
+          "doc": "こつ",
+          "nghia": "bí quyết; mẹo"
+        },
+        {
+          "_id": "chukyu3-20::ものづくり",
+          "kanji": "ものづくり",
+          "cautruc": null,
+          "doc": "ものづくり",
+          "nghia": "việc chế tạo; nghề thủ công"
+        },
+        {
+          "_id": "chukyu3-20::お家芸",
+          "kanji": "お家芸",
+          "cautruc": null,
+          "doc": "おいえげい",
+          "nghia": "sở trường; nghề gia truyền"
+        },
+        {
+          "_id": "chukyu3-20::なめる",
+          "kanji": "なめる",
+          "cautruc": null,
+          "doc": "なめる",
+          "nghia": "liếm; xem thường"
+        }
+      ]
     }
   ]
 }

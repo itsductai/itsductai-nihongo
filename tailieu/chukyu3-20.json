@@ -1,0 +1,1017 @@
+{
+  "id": "chukyu3-20",
+  "title": "Chukyu3 - Bài 20",
+  "type": "TUVUNG",
+  "series": "chukyu3",
+  "level": "N2",
+  "private": false,
+  "words": [
+    {
+      "_id": "chukyu3-20::衛生",
+      "kanji": "衛生",
+      "cautruc": null,
+      "doc": "えいせい",
+      "han_viet": "",
+      "nghia": "vệ sinh",
+      "doc_marked": "**えい****せい**",
+      "vi_du": "衛生に気をつける。(Chú ý vệ sinh.) 食品衛生を守る。(Giữ vệ sinh thực phẩm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "清潔",
+          "doc": "せいけつ",
+          "nghia": "sạch sẽ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "不衛生",
+          "doc": "ふえいせい",
+          "nghia": "mất vệ sinh"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::義務",
+      "kanji": "義務",
+      "cautruc": null,
+      "doc": "ぎむ",
+      "han_viet": "",
+      "nghia": "nghĩa vụ",
+      "doc_marked": "ぎむ",
+      "vi_du": "納税は国民の義務だ。(Nộp thuế là nghĩa vụ công dân.) 義務を果たす。(Làm tròn nghĩa vụ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "務め",
+          "doc": "つとめ",
+          "nghia": "bổn phận"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "権利",
+          "doc": "けんり",
+          "nghia": "quyền lợi"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::握る",
+      "kanji": "握る",
+      "cautruc": null,
+      "doc": "にぎる",
+      "han_viet": "",
+      "nghia": "nắm; cầm",
+      "doc_marked": "にぎる",
+      "vi_du": "手をしっかり握る。(Nắm chặt tay.) すしを握る。(Nắm sushi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "つかむ",
+          "doc": "つかむ",
+          "nghia": "túm; nắm lấy"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "放す",
+          "doc": "はなす",
+          "nghia": "buông ra"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::固い",
+      "kanji": "固い",
+      "cautruc": null,
+      "doc": "かたい",
+      "han_viet": "",
+      "nghia": "cứng; chắc",
+      "doc_marked": "かたい",
+      "vi_du": "固いパンをかむ。(Nhai bánh mì cứng.) 固い決意を持つ。(Có quyết tâm vững chắc.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "硬い",
+          "doc": "かたい",
+          "nghia": "cứng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "柔らかい",
+          "doc": "やわらかい",
+          "nghia": "mềm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::口当たり",
+      "kanji": "口当たり",
+      "cautruc": null,
+      "doc": "くちあたり",
+      "han_viet": "",
+      "nghia": "cảm giác khi ăn/uống",
+      "doc_marked": "くちあたり",
+      "vi_du": "口当たりのいいワイン。(Rượu vang dễ uống.) なめらかな口当たりだ。(Cảm giác mềm mượt khi ăn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "食感",
+          "doc": "しょっかん",
+          "nghia": "cảm giác khi ăn"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::素手",
+      "kanji": "素手",
+      "cautruc": null,
+      "doc": "すで",
+      "han_viet": "",
+      "nghia": "tay không; tay trần",
+      "doc_marked": "すで",
+      "vi_du": "素手で魚をつかむ。(Bắt cá bằng tay không.) 素手で触らないで。(Đừng sờ bằng tay trần.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "生身の手",
+          "doc": "なまみのて",
+          "nghia": "tay trần"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "手袋",
+          "doc": "てぶくろ",
+          "nghia": "găng tay"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::～割には",
+      "kanji": "～割には",
+      "cautruc": null,
+      "doc": "～わりには",
+      "han_viet": "",
+      "nghia": "so với ...; mặc dù ...",
+      "doc_marked": "～わりには",
+      "vi_du": "値段の割にはおいしい。(So với giá thì ngon.) 若い割にはしっかりしている。(Trẻ mà chững chạc.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～にしては",
+          "doc": "～にしては",
+          "nghia": "so với ... thì"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::すんなりと",
+      "kanji": "すんなりと",
+      "cautruc": null,
+      "doc": "すんなりと",
+      "han_viet": "",
+      "nghia": "suôn sẻ; dễ dàng",
+      "doc_marked": "すんなりと",
+      "vi_du": "話がすんなりとまとまった。(Câu chuyện chốt suôn sẻ.) すんなりと合格した。(Đỗ một cách dễ dàng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "スムーズに",
+          "doc": "スムーズに",
+          "nghia": "trơn tru"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "手こずって",
+          "doc": "てこずって",
+          "nghia": "chật vật; vất vả"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::認める",
+      "kanji": "認める",
+      "cautruc": null,
+      "doc": "みとめる",
+      "han_viet": "",
+      "nghia": "thừa nhận; công nhận",
+      "doc_marked": "みとめる",
+      "vi_du": "自分の非を認める。(Thừa nhận cái sai của mình.) 実力を認められる。(Được công nhận thực lực.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "承認する",
+          "doc": "しょうにんする",
+          "nghia": "phê chuẩn; công nhận"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "否定する",
+          "doc": "ひていする",
+          "nghia": "phủ định"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::まな板",
+      "kanji": "まな板",
+      "cautruc": null,
+      "doc": "まないた",
+      "han_viet": "",
+      "nghia": "cái thớt",
+      "doc_marked": "まないた",
+      "vi_du": "まな板で野菜を切る。(Thái rau trên thớt.) まな板を清潔に保つ。(Giữ thớt sạch sẽ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "調理板",
+          "doc": "ちょうりばん",
+          "nghia": "tấm thớt"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::見どころがある",
+      "kanji": "見どころがある",
+      "cautruc": null,
+      "doc": "みどころがある",
+      "han_viet": "",
+      "nghia": "có triển vọng",
+      "doc_marked": "みどころがある",
+      "vi_du": "この新人は見どころがある。(Người mới này có triển vọng.) 見どころのある選手だ。(Là cầu thủ có tiềm năng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "有望な",
+          "doc": "ゆうぼうな",
+          "nghia": "đầy triển vọng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "見込みがない",
+          "doc": "みこみがない",
+          "nghia": "vô vọng"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::雇う",
+      "kanji": "雇う",
+      "cautruc": null,
+      "doc": "やとう",
+      "han_viet": "",
+      "nghia": "thuê (nhân công)",
+      "doc_marked": "やとう",
+      "vi_du": "アルバイトを雇う。(Thuê người làm thêm.) 職人を雇って修理する。(Thuê thợ đến sửa.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "採用する",
+          "doc": "さいようする",
+          "nghia": "tuyển dụng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "解雇する",
+          "doc": "かいこする",
+          "nghia": "sa thải"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::～にあたって",
+      "kanji": "～にあたって",
+      "cautruc": null,
+      "doc": "～にあたって",
+      "han_viet": "",
+      "nghia": "khi ...; nhân dịp ...",
+      "doc_marked": "～にあたって",
+      "vi_du": "開店にあたって準備する。(Chuẩn bị khi khai trương.) 出発にあたって注意する。(Lưu ý khi khởi hành.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～に際して",
+          "doc": "～にさいして",
+          "nghia": "khi tiến hành ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::見習い",
+      "kanji": "見習い",
+      "cautruc": null,
+      "doc": "みならい",
+      "han_viet": "",
+      "nghia": "học việc",
+      "doc_marked": "みならい",
+      "vi_du": "見習いとして働く。(Làm việc với tư cách học việc.) 見習いから始める。(Bắt đầu từ học việc.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "研修生",
+          "doc": "けんしゅうせい",
+          "nghia": "thực tập sinh"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "熟練者",
+          "doc": "じゅくれんしゃ",
+          "nghia": "người lành nghề"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::条件",
+      "kanji": "条件",
+      "cautruc": null,
+      "doc": "じょうけん",
+      "han_viet": "",
+      "nghia": "điều kiện",
+      "doc_marked": "**じょう**けん",
+      "vi_du": "条件を満たす。(Đáp ứng điều kiện.) いい条件で働く。(Làm việc với điều kiện tốt.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "要件",
+          "doc": "ようけん",
+          "nghia": "yêu cầu; điều kiện"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::包丁",
+      "kanji": "包丁",
+      "cautruc": null,
+      "doc": "ほうちょう",
+      "han_viet": "",
+      "nghia": "con dao (bếp)",
+      "doc_marked": "**ほう****ちょう**",
+      "vi_du": "包丁で肉を切る。(Thái thịt bằng dao.) 包丁を研ぐ。(Mài dao.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "ナイフ",
+          "doc": "ナイフ",
+          "nghia": "dao"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::研ぎ",
+      "kanji": "研ぎ",
+      "cautruc": null,
+      "doc": "とぎ",
+      "han_viet": "",
+      "nghia": "việc mài (dao)",
+      "doc_marked": "とぎ",
+      "vi_du": "包丁の研ぎを頼む。(Nhờ mài dao.) 研ぎが甘い。(Mài chưa sắc.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "研磨",
+          "doc": "けんま",
+          "nghia": "sự mài giũa"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::刃先",
+      "kanji": "刃先",
+      "cautruc": null,
+      "doc": "はさき",
+      "han_viet": "",
+      "nghia": "lưỡi dao; đầu lưỡi",
+      "doc_marked": "はさき",
+      "vi_du": "刃先が鋭い。(Lưỡi dao sắc.) 刃先で指を切った。(Đứt tay vì lưỡi dao.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "切っ先",
+          "doc": "きっさき",
+          "nghia": "mũi dao"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::触る",
+      "kanji": "触る",
+      "cautruc": null,
+      "doc": "さわる",
+      "han_viet": "",
+      "nghia": "sờ; chạm",
+      "doc_marked": "さわる",
+      "vi_du": "展示品に触らないで。(Đừng chạm vào hiện vật.) 猫の背中に触る。(Vuốt lưng con mèo.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "触れる",
+          "doc": "ふれる",
+          "nghia": "chạm; đụng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::そこそこ",
+      "kanji": "そこそこ",
+      "cautruc": null,
+      "doc": "そこそこ",
+      "han_viet": "",
+      "nghia": "kha khá; tàm tạm",
+      "doc_marked": "そこそこ",
+      "vi_du": "そこそこの成績を取る。(Đạt kết quả tàm tạm.) 値段はそこそこだ。(Giá cả tạm được.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "まあまあ",
+          "doc": "まあまあ",
+          "nghia": "tạm được"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::ものになる",
+      "kanji": "ものになる",
+      "cautruc": null,
+      "doc": "ものになる",
+      "han_viet": "",
+      "nghia": "thành nghề; nên chuyện",
+      "doc_marked": "ものになる",
+      "vi_du": "努力すればものになる。(Cố gắng thì sẽ nên.) 練習を重ねてやっとものになった。(Luyện mãi cuối cùng cũng thành.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "一人前になる",
+          "doc": "いちにんまえになる",
+          "nghia": "thành người/thành nghề"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "ものにならない",
+          "doc": "ものにならない",
+          "nghia": "không nên trò trống gì"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::頭が固い",
+      "kanji": "頭が固い",
+      "cautruc": null,
+      "doc": "あたまがかたい",
+      "han_viet": "",
+      "nghia": "bảo thủ; cứng nhắc",
+      "doc_marked": "あたまがかたい",
+      "vi_du": "頭が固くて融通がきかない。(Cứng nhắc, không linh hoạt.) 頭が固い上司。(Cấp trên bảo thủ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "頑固な",
+          "doc": "がんこな",
+          "nghia": "cứng đầu; cố chấp"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "頭が柔らかい",
+          "doc": "あたまがやわらかい",
+          "nghia": "đầu óc linh hoạt"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::職人",
+      "kanji": "職人",
+      "cautruc": null,
+      "doc": "しょくにん",
+      "han_viet": "",
+      "nghia": "người thợ; nghệ nhân",
+      "doc_marked": "しょくにん",
+      "vi_du": "腕のいい職人だ。(Người thợ tay nghề giỏi.) 職人が丁寧に作る。(Nghệ nhân làm tỉ mỉ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "匠",
+          "doc": "たくみ",
+          "nghia": "bậc thầy; nghệ nhân"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "素人",
+          "doc": "しろうと",
+          "nghia": "người tay ngang"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::意地悪な",
+      "kanji": "意地悪な",
+      "cautruc": null,
+      "doc": "いじわるな",
+      "han_viet": "",
+      "nghia": "xấu tính; ác ý",
+      "doc_marked": "いじわるな",
+      "vi_du": "意地悪なことを言う。(Nói lời cay độc.) 意地悪な質問をする。(Đặt câu hỏi ác ý.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "冷たい",
+          "doc": "つめたい",
+          "nghia": "lạnh lùng; nhẫn tâm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "親切な",
+          "doc": "しんせつな",
+          "nghia": "tử tế"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::仕方がない",
+      "kanji": "仕方がない",
+      "cautruc": null,
+      "doc": "しかたがない",
+      "han_viet": "",
+      "nghia": "không còn cách nào; đành",
+      "doc_marked": "しかたがない",
+      "vi_du": "雨だから仕方がない。(Mưa nên đành chịu.) 今さら悔やんでも仕方がない。(Giờ hối cũng vô ích.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "やむを得ない",
+          "doc": "やむをえない",
+          "nghia": "bất khả kháng; đành vậy"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::取り合わせ",
+      "kanji": "取り合わせ",
+      "cautruc": null,
+      "doc": "とりあわせ",
+      "han_viet": "",
+      "nghia": "sự kết hợp",
+      "doc_marked": "とりあわせ",
+      "vi_du": "色の取り合わせがいい。(Sự phối màu đẹp.) 料理の取り合わせを考える。(Cân nhắc kết hợp món ăn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "組み合わせ",
+          "doc": "くみあわせ",
+          "nghia": "sự phối hợp"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::だし",
+      "kanji": "だし",
+      "cautruc": null,
+      "doc": "だし",
+      "han_viet": "",
+      "nghia": "nước dùng (dashi)",
+      "doc_marked": "だし",
+      "vi_du": "こんぶでだしを取る。(Nấu nước dùng từ tảo bẹ.) だしがきいたスープ。(Súp đậm vị dashi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "出汁",
+          "doc": "だし",
+          "nghia": "nước dùng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::加減",
+      "kanji": "加減",
+      "cautruc": null,
+      "doc": "かげん",
+      "han_viet": "",
+      "nghia": "độ (nêm nếm); mức độ",
+      "doc_marked": "かげん",
+      "vi_du": "塩加減がちょうどいい。(Độ mặn vừa vặn.) 力の加減が難しい。(Khó điều tiết lực.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "調節",
+          "doc": "ちょうせつ",
+          "nghia": "sự điều chỉnh"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::舌触り",
+      "kanji": "舌触り",
+      "cautruc": null,
+      "doc": "したざわり",
+      "han_viet": "",
+      "nghia": "cảm giác của lưỡi",
+      "doc_marked": "したざわり",
+      "vi_du": "なめらかな舌触り。(Cảm giác mượt trên lưỡi.) 舌触りのいいプリン。(Bánh pudding mượt lưỡi.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "口当たり",
+          "doc": "くちあたり",
+          "nghia": "cảm giác khi ăn"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::あれやこれや",
+      "kanji": "あれやこれや",
+      "cautruc": null,
+      "doc": "あれやこれや",
+      "han_viet": "",
+      "nghia": "này nọ; đủ thứ",
+      "doc_marked": "あれやこれや",
+      "vi_du": "あれやこれやと悩む。(Lo lắng đủ thứ.) あれやこれや口を出す。(Xen vào đủ chuyện.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "なんだかんだ",
+          "doc": "なんだかんだ",
+          "nghia": "nọ kia; thế này thế nọ"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::工夫をこらす",
+      "kanji": "工夫をこらす",
+      "cautruc": null,
+      "doc": "くふうをこらす",
+      "han_viet": "",
+      "nghia": "dồn công tìm tòi",
+      "doc_marked": "くふうをこらす",
+      "vi_du": "盛り付けに工夫をこらす。(Dồn công bày biện món ăn.) 見せ方に工夫をこらす。(Tìm tòi cách trình bày.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "知恵を絞る",
+          "doc": "ちえをしぼる",
+          "nghia": "vắt óc nghĩ cách"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::胸を張る",
+      "kanji": "胸を張る",
+      "cautruc": null,
+      "doc": "むねをはる",
+      "han_viet": "",
+      "nghia": "ưỡn ngực; tự hào",
+      "doc_marked": "むねをはる",
+      "vi_du": "胸を張って発表する。(Trình bày đầy tự tin.) 胸を張れる仕事をする。(Làm công việc đáng tự hào.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "誇る",
+          "doc": "ほこる",
+          "nghia": "tự hào"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "肩を落とす",
+          "doc": "かたをおとす",
+          "nghia": "rũ vai chán nản"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::～に限らず",
+      "kanji": "～に限らず",
+      "cautruc": null,
+      "doc": "～にかぎらず",
+      "han_viet": "",
+      "nghia": "không chỉ ...",
+      "doc_marked": "～にかぎらず",
+      "vi_du": "子供に限らず大人も楽しめる。(Không chỉ trẻ, người lớn cũng thích.) 日本に限らず海外でも人気だ。(Không chỉ ở Nhật, nước ngoài cũng chuộng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～だけでなく",
+          "doc": "～だけでなく",
+          "nghia": "không chỉ ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::色合い",
+      "kanji": "色合い",
+      "cautruc": null,
+      "doc": "いろあい",
+      "han_viet": "",
+      "nghia": "sắc màu; tông màu",
+      "doc_marked": "いろあい",
+      "vi_du": "やわらかい色合いの服。(Bộ đồ tông màu dịu.) 秋らしい色合いだ。(Sắc màu đượm thu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "色調",
+          "doc": "しきちょう",
+          "nghia": "tông màu"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::染物",
+      "kanji": "染物",
+      "cautruc": null,
+      "doc": "そめもの",
+      "han_viet": "",
+      "nghia": "đồ nhuộm",
+      "doc_marked": "そめもの",
+      "vi_du": "伝統的な染物を作る。(Làm đồ nhuộm truyền thống.) 染物の技術を学ぶ。(Học kĩ thuật nhuộm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "染色品",
+          "doc": "せんしょくひん",
+          "nghia": "sản phẩm nhuộm"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::具合",
+      "kanji": "具合",
+      "cautruc": null,
+      "doc": "ぐあい",
+      "han_viet": "",
+      "nghia": "tình trạng; mức độ",
+      "doc_marked": "ぐあい",
+      "vi_du": "体の具合が悪い。(Trong người không khỏe.) 火加減の具合を見る。(Xem mức lửa thế nào.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "調子",
+          "doc": "ちょうし",
+          "nghia": "tình trạng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::なめらかな",
+      "kanji": "なめらかな",
+      "cautruc": null,
+      "doc": "なめらかな",
+      "han_viet": "",
+      "nghia": "mịn màng; trơn tru",
+      "doc_marked": "なめらかな",
+      "vi_du": "なめらかな肌。(Làn da mịn màng.) 会話がなめらかに進む。(Cuộc trò chuyện diễn ra trôi chảy.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "すべすべした",
+          "doc": "すべすべした",
+          "nghia": "trơn láng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "ざらざらした",
+          "doc": "ざらざらした",
+          "nghia": "thô ráp"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::削る",
+      "kanji": "削る",
+      "cautruc": null,
+      "doc": "けずる",
+      "han_viet": "",
+      "nghia": "đẽo; gọt; cắt giảm",
+      "doc_marked": "けずる",
+      "vi_du": "鉛筆を削る。(Gọt bút chì.) 予算を削る。(Cắt giảm ngân sách.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "削り取る",
+          "doc": "けずりとる",
+          "nghia": "đẽo bỏ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "加える",
+          "doc": "くわえる",
+          "nghia": "thêm vào"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::削り上げる",
+      "kanji": "削り上げる",
+      "cautruc": null,
+      "doc": "けずりあげる",
+      "han_viet": "",
+      "nghia": "đẽo/gọt xong",
+      "doc_marked": "けずりあげる",
+      "vi_du": "丁寧に削り上げる。(Gọt giũa hoàn thiện tỉ mỉ.) 木を美しく削り上げた。(Đẽo gỗ thành phẩm đẹp.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "仕上げる",
+          "doc": "しあげる",
+          "nghia": "hoàn thiện"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::大工",
+      "kanji": "大工",
+      "cautruc": null,
+      "doc": "だいく",
+      "han_viet": "",
+      "nghia": "thợ mộc",
+      "doc_marked": "だいく",
+      "vi_du": "大工が家を建てる。(Thợ mộc dựng nhà.) 父は大工だ。(Bố tôi là thợ mộc.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "木工職人",
+          "doc": "もっこうしょくにん",
+          "nghia": "thợ làm mộc"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::わざ",
+      "kanji": "わざ",
+      "cautruc": null,
+      "doc": "わざ",
+      "han_viet": "",
+      "nghia": "kĩ thuật; bí quyết",
+      "doc_marked": "わざ",
+      "vi_du": "職人のわざに感心する。(Thán phục kĩ nghệ của nghệ nhân.) わざを磨く。(Trau dồi tay nghề.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "技術",
+          "doc": "ぎじゅつ",
+          "nghia": "kĩ thuật"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::～にかけては",
+      "kanji": "～にかけては",
+      "cautruc": null,
+      "doc": "～にかけては",
+      "han_viet": "",
+      "nghia": "nói về khoản ...; xét về ...",
+      "doc_marked": "～にかけては",
+      "vi_du": "料理にかけては彼が一番だ。(Về nấu ăn thì anh ấy nhất.) 記憶力にかけては自信がある。(Về trí nhớ thì tôi tự tin.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～に関しては",
+          "doc": "～にかんしては",
+          "nghia": "về khoản ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::引けを取る",
+      "kanji": "引けを取る",
+      "cautruc": null,
+      "doc": "ひけをとる",
+      "han_viet": "",
+      "nghia": "thua kém",
+      "doc_marked": "ひけをとる",
+      "vi_du": "誰にも引けを取らない。(Không thua kém ai.) 味では引けを取らない店だ。(Quán không kém về vị.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "劣る",
+          "doc": "おとる",
+          "nghia": "kém hơn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "勝る",
+          "doc": "まさる",
+          "nghia": "vượt trội"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-20::こつ",
+      "kanji": "こつ",
+      "cautruc": null,
+      "doc": "こつ",
+      "han_viet": "",
+      "nghia": "bí quyết; mẹo",
+      "doc_marked": "こつ",
+      "vi_du": "上達のこつをつかむ。(Nắm được bí quyết tiến bộ.) 料理にはこつがある。(Nấu ăn có mẹo riêng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "要領",
+          "doc": "ようりょう",
+          "nghia": "bí quyết; mẹo"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::ものづくり",
+      "kanji": "ものづくり",
+      "cautruc": null,
+      "doc": "ものづくり",
+      "han_viet": "",
+      "nghia": "việc chế tạo; nghề thủ công",
+      "doc_marked": "ものづくり",
+      "vi_du": "日本のものづくりは有名だ。(Nghề chế tạo của Nhật nổi tiếng.) ものづくりに誇りを持つ。(Tự hào về nghề chế tạo.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "製造",
+          "doc": "せいぞう",
+          "nghia": "sản xuất; chế tạo"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::お家芸",
+      "kanji": "お家芸",
+      "cautruc": null,
+      "doc": "おいえげい",
+      "han_viet": "",
+      "nghia": "sở trường; nghề gia truyền",
+      "doc_marked": "おいえ**げい**",
+      "vi_du": "逆転勝ちはこのチームのお家芸だ。(Lội ngược dòng là sở trường của đội này.) 染物はこの町のお家芸だ。(Nhuộm vải là nghề tủ của thị trấn này.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "十八番",
+          "doc": "おはこ",
+          "nghia": "tủ; sở trường"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-20::なめる",
+      "kanji": "なめる",
+      "cautruc": null,
+      "doc": "なめる",
+      "han_viet": "",
+      "nghia": "liếm; xem thường",
+      "doc_marked": "なめる",
+      "vi_du": "飴をなめる。(Ngậm/liếm kẹo.) 相手をなめてはいけない。(Đừng xem thường đối thủ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "見くびる",
+          "doc": "みくびる",
+          "nghia": "coi thường; đánh giá thấp"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "敬う",
+          "doc": "うやまう",
+          "nghia": "kính trọng"
+        }
+      ]
+    }
+  ]
+}

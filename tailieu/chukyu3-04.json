@@ -1,0 +1,568 @@
+{
+  "id": "chukyu3-04",
+  "title": "Chukyu3 - Bài 4",
+  "type": "TUVUNG",
+  "series": "chukyu3",
+  "level": "N2",
+  "private": false,
+  "words": [
+    {
+      "_id": "chukyu3-04::ことわざ",
+      "kanji": "ことわざ",
+      "cautruc": null,
+      "doc": "ことわざ",
+      "han_viet": "",
+      "nghia": "tục ngữ; thành ngữ",
+      "doc_marked": "ことわざ",
+      "vi_du": "「時は金なり」は有名なことわざだ。(\"Thời gian là vàng\" là câu tục ngữ nổi tiếng.) 祖母はよくことわざを使って話す。(Bà tôi hay dùng tục ngữ khi nói chuyện.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "格言",
+          "doc": "かくげん",
+          "nghia": "cách ngôn"
+        },
+        {
+          "kanji": "慣用句",
+          "doc": "かんようく",
+          "nghia": "thành ngữ"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-04::目が回る",
+      "kanji": "目が回る",
+      "cautruc": null,
+      "doc": "めがまわる",
+      "han_viet": "",
+      "nghia": "bận tối mắt; chóng mặt",
+      "doc_marked": "めがまわる",
+      "vi_du": "仕事が多すぎて目が回るほど忙しい。(Việc quá nhiều, bận đến tối mắt.) 高い所に立つと目が回る。(Đứng chỗ cao là tôi chóng mặt.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "てんてこ舞い",
+          "doc": "てんてこまい",
+          "nghia": "bận tối tăm mặt mũi"
+        },
+        {
+          "kanji": "多忙な",
+          "doc": "たぼうな",
+          "nghia": "bận rộn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "暇な",
+          "doc": "ひまな",
+          "nghia": "rảnh rỗi"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-04::手を借りる",
+      "kanji": "手を借りる",
+      "cautruc": null,
+      "doc": "てをかりる",
+      "han_viet": "",
+      "nghia": "nhờ (ai) giúp đỡ",
+      "doc_marked": "てをかりる",
+      "vi_du": "引っ越しのとき、友達の手を借りた。(Khi chuyển nhà, tôi đã nhờ bạn giúp.) 一人では無理なので、手を借りたい。(Một mình không nổi nên tôi muốn nhờ giúp.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "助けてもらう",
+          "doc": "たすけてもらう",
+          "nghia": "được giúp"
+        },
+        {
+          "kanji": "力を借りる",
+          "doc": "ちからをかりる",
+          "nghia": "nhờ giúp sức"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "手を貸す",
+          "doc": "てをかす",
+          "nghia": "ra tay giúp (người khác)"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-04::それほど～ない",
+      "kanji": "それほど～ない",
+      "cautruc": null,
+      "doc": "それほど～ない",
+      "han_viet": "",
+      "nghia": "không ... đến thế",
+      "doc_marked": "それほど～ない",
+      "vi_du": "今日はそれほど寒くない。(Hôm nay không lạnh đến thế.) その映画はそれほど面白くなかった。(Bộ phim đó không hay đến thế.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "あまり～ない",
+          "doc": "あまり～ない",
+          "nghia": "không ... lắm"
+        },
+        {
+          "kanji": "さほど～ない",
+          "doc": "さほど～ない",
+          "nghia": "không ... mấy"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "とても",
+          "doc": "とても",
+          "nghia": "rất"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-04::役に立つ",
+      "kanji": "役に立つ",
+      "cautruc": null,
+      "doc": "やくにたつ",
+      "han_viet": "",
+      "nghia": "có ích; hữu ích",
+      "doc_marked": "やくにたつ",
+      "vi_du": "この辞書はとても役に立つ。(Cuốn từ điển này rất hữu ích.) 留学の経験が仕事で役に立っている。(Kinh nghiệm du học đang có ích cho công việc.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "有用な",
+          "doc": "ゆうような",
+          "nghia": "hữu dụng"
+        },
+        {
+          "kanji": "使える",
+          "doc": "つかえる",
+          "nghia": "dùng được"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "無駄な",
+          "doc": "むだな",
+          "nghia": "vô ích; uổng phí"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-04::のんびり",
+      "kanji": "のんびり",
+      "cautruc": null,
+      "doc": "のんびり",
+      "han_viet": "",
+      "nghia": "thong thả; thư thái",
+      "doc_marked": "のんびり",
+      "vi_du": "休みの日は家でのんびり過ごす。(Ngày nghỉ tôi thư thả ở nhà.) 温泉でのんびりしたい。(Tôi muốn thư giãn thong thả ở suối nước nóng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "ゆっくり",
+          "doc": "ゆっくり",
+          "nghia": "thong thả"
+        },
+        {
+          "kanji": "くつろぐ",
+          "doc": "くつろぐ",
+          "nghia": "thư giãn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "あくせく",
+          "doc": "あくせく",
+          "nghia": "tất bật; vất vả"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-04::昼寝",
+      "kanji": "昼寝",
+      "cautruc": null,
+      "doc": "ひるね",
+      "han_viet": "",
+      "nghia": "ngủ trưa",
+      "doc_marked": "ひるね",
+      "vi_du": "昼ご飯の後、少し昼寝をした。(Sau bữa trưa tôi ngủ trưa một chút.) 子供に昼寝をさせる。(Cho con ngủ trưa.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "仮眠",
+          "doc": "かみん",
+          "nghia": "ngủ chợp; chợp mắt"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-04::つい",
+      "kanji": "つい",
+      "cautruc": null,
+      "doc": "つい",
+      "han_viet": "",
+      "nghia": "lỡ; vô tình; bất giác",
+      "doc_marked": "つい",
+      "vi_du": "つい甘い物を食べすぎてしまう。(Tôi cứ vô tình ăn quá nhiều đồ ngọt.) 忙しくて、つい返事を忘れた。(Bận quá nên tôi lỡ quên trả lời.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "思わず",
+          "doc": "おもわず",
+          "nghia": "bất giác"
+        },
+        {
+          "kanji": "うっかり",
+          "doc": "うっかり",
+          "nghia": "sơ ý"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "わざと",
+          "doc": "わざと",
+          "nghia": "cố ý"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-04::口に出す",
+      "kanji": "口に出す",
+      "cautruc": null,
+      "doc": "くちにだす",
+      "han_viet": "",
+      "nghia": "nói ra; thốt ra",
+      "doc_marked": "くちにだす",
+      "vi_du": "思ったことをすぐ口に出す。(Nghĩ gì là nói ra ngay.) 不満を口に出さないほうがいい。(Không nên nói ra sự bất mãn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "言葉にする",
+          "doc": "ことばにする",
+          "nghia": "diễn thành lời"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "黙る",
+          "doc": "だまる",
+          "nghia": "im lặng"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-04::また",
+      "kanji": "また",
+      "cautruc": null,
+      "doc": "また",
+      "han_viet": "",
+      "nghia": "ngoài ra; hơn nữa; lại",
+      "doc_marked": "また",
+      "vi_du": "彼は医者であり、また作家でもある。(Anh ấy là bác sĩ, ngoài ra còn là nhà văn.) 詳細はまた後で説明します。(Chi tiết tôi sẽ giải thích lại sau.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "さらに",
+          "doc": "さらに",
+          "nghia": "thêm nữa"
+        },
+        {
+          "kanji": "その上",
+          "doc": "そのうえ",
+          "nghia": "hơn nữa"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-04::額",
+      "kanji": "額",
+      "cautruc": null,
+      "doc": "ひたい",
+      "han_viet": "",
+      "nghia": "trán",
+      "doc_marked": "ひたい",
+      "vi_du": "額に汗をかいて働く。(Làm việc đến toát mồ hôi trán.) 熱があるか額に手を当てた。(Tôi đặt tay lên trán xem có sốt không.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "おでこ",
+          "doc": "おでこ",
+          "nghia": "cái trán (khẩu ngữ)"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-04::たとえる",
+      "kanji": "たとえる",
+      "cautruc": null,
+      "doc": "たとえる",
+      "han_viet": "",
+      "nghia": "ví von; ví như",
+      "doc_marked": "たとえる",
+      "vi_du": "人生を旅にたとえる。(Ví cuộc đời như một chuyến đi.) 彼の速さをチーターにたとえた。(Ví tốc độ của anh ấy như báo.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "なぞらえる",
+          "doc": "なぞらえる",
+          "nghia": "ví như"
+        },
+        {
+          "kanji": "例える",
+          "doc": "たとえる",
+          "nghia": "ví dụ; so ví"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-04::小判",
+      "kanji": "小判",
+      "cautruc": null,
+      "doc": "こばん",
+      "han_viet": "",
+      "nghia": "đồng tiền vàng cổ (koban)",
+      "doc_marked": "こばん",
+      "vi_du": "昔の小判は今、高い価値がある。(Đồng koban xưa nay có giá trị cao.) 「猫に小判」ということわざがある。(Có câu tục ngữ \"koban cho mèo\" - đàn gảy tai trâu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "金貨",
+          "doc": "きんか",
+          "nghia": "tiền vàng"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-04::手にする",
+      "kanji": "手にする",
+      "cautruc": null,
+      "doc": "てにする",
+      "han_viet": "",
+      "nghia": "có được; cầm trong tay",
+      "doc_marked": "てにする",
+      "vi_du": "優勝トロフィーを手にした。(Anh ấy giành được cúp vô địch.) 大金を手にする。(Có được số tiền lớn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "手に入れる",
+          "doc": "てにいれる",
+          "nghia": "đạt được"
+        },
+        {
+          "kanji": "得る",
+          "doc": "える",
+          "nghia": "có được"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "手放す",
+          "doc": "てばなす",
+          "nghia": "buông bỏ; từ bỏ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-04::価値",
+      "kanji": "価値",
+      "cautruc": null,
+      "doc": "かち",
+      "han_viet": "",
+      "nghia": "giá trị",
+      "doc_marked": "かち",
+      "vi_du": "この絵には高い価値がある。(Bức tranh này có giá trị cao.) 見る価値のある映画だ。(Đây là bộ phim đáng xem.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "値打ち",
+          "doc": "ねうち",
+          "nghia": "giá trị"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "無価値",
+          "doc": "むかち",
+          "nghia": "vô giá trị"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-04::手に入れる",
+      "kanji": "手に入れる",
+      "cautruc": null,
+      "doc": "てにいれる",
+      "han_viet": "",
+      "nghia": "đạt được; có được",
+      "doc_marked": "てにいれる",
+      "vi_du": "苦労して自由を手に入れた。(Vất vả mới có được tự do.) 限定品をやっと手に入れた。(Cuối cùng cũng mua được hàng giới hạn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "入手する",
+          "doc": "にゅうしゅする",
+          "nghia": "có được; nhập tay"
+        },
+        {
+          "kanji": "獲得する",
+          "doc": "かくとくする",
+          "nghia": "giành được"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "手放す",
+          "doc": "てばなす",
+          "nghia": "buông bỏ; từ bỏ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-04::うまい",
+      "kanji": "うまい",
+      "cautruc": null,
+      "doc": "うまい",
+      "han_viet": "",
+      "nghia": "giỏi; khéo; ngon",
+      "doc_marked": "うまい",
+      "vi_du": "彼は絵がうまい。(Anh ấy vẽ giỏi.) この店のラーメンはうまい。(Ramen quán này ngon.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "上手な",
+          "doc": "じょうずな",
+          "nghia": "giỏi; khéo"
+        },
+        {
+          "kanji": "得意な",
+          "doc": "とくいな",
+          "nghia": "sở trường"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "下手な",
+          "doc": "へたな",
+          "nghia": "kém; dở"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-04::ずっと",
+      "kanji": "ずっと",
+      "cautruc": null,
+      "doc": "ずっと",
+      "han_viet": "",
+      "nghia": "suốt; ... hơn nhiều",
+      "doc_marked": "ずっと",
+      "vi_du": "朝からずっと雨が降っている。(Từ sáng mưa suốt.) こっちのほうがずっといい。(Cái này tốt hơn nhiều.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "終始",
+          "doc": "しゅうし",
+          "nghia": "từ đầu tới cuối"
+        },
+        {
+          "kanji": "はるかに",
+          "doc": "はるかに",
+          "nghia": "hơn hẳn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "一時的に",
+          "doc": "いちじてきに",
+          "nghia": "tạm thời"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-04::使い続ける",
+      "kanji": "使い続ける",
+      "cautruc": null,
+      "doc": "つかいつづける",
+      "han_viet": "",
+      "nghia": "dùng liên tục; tiếp tục dùng",
+      "doc_marked": "つかいつづける",
+      "vi_du": "この辞書を10年も使い続けている。(Tôi dùng cuốn từ điển này suốt 10 năm.) 同じ方法を使い続けるのは危険だ。(Cứ dùng mãi một cách là nguy hiểm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "愛用する",
+          "doc": "あいようする",
+          "nghia": "ưa dùng; dùng quen"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "使い捨てる",
+          "doc": "つかいすてる",
+          "nghia": "dùng một lần rồi bỏ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-04::きっと",
+      "kanji": "きっと",
+      "cautruc": null,
+      "doc": "きっと",
+      "han_viet": "",
+      "nghia": "chắc chắn; nhất định",
+      "doc_marked": "きっと",
+      "vi_du": "明日はきっと晴れるだろう。(Mai chắc chắn sẽ nắng.) 彼はきっと来る。(Anh ấy nhất định sẽ đến.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "必ず",
+          "doc": "かならず",
+          "nghia": "nhất định"
+        },
+        {
+          "kanji": "間違いなく",
+          "doc": "まちがいなく",
+          "nghia": "chắc chắn"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "もしかしたら",
+          "doc": "もしかしたら",
+          "nghia": "không chừng; có thể"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-04::ぜひ",
+      "kanji": "ぜひ",
+      "cautruc": null,
+      "doc": "ぜひ",
+      "han_viet": "",
+      "nghia": "nhất định; rất mong",
+      "doc_marked": "ぜひ",
+      "vi_du": "ぜひ一度遊びに来てください。(Nhất định hãy ghé chơi một lần.) その映画はぜひ見たい。(Tôi rất muốn xem bộ phim đó.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "どうしても",
+          "doc": "どうしても",
+          "nghia": "bằng được"
+        },
+        {
+          "kanji": "何としても",
+          "doc": "なんとしても",
+          "nghia": "bằng mọi giá"
+        }
+      ],
+      "trai_nghia": []
+    }
+  ]
+}

@@ -1,0 +1,819 @@
+{
+  "id": "chukyu3-06",
+  "title": "Chukyu3 - Bài 6",
+  "type": "TUVUNG",
+  "series": "chukyu3",
+  "level": "N2",
+  "private": false,
+  "words": [
+    {
+      "_id": "chukyu3-06::むし暑い",
+      "kanji": "むし暑い",
+      "cautruc": null,
+      "doc": "むしあつい",
+      "han_viet": "",
+      "nghia": "nóng ẩm; oi bức",
+      "doc_marked": "むしあつい",
+      "vi_du": "今日はむし暑くて、汗が止まらない。(Hôm nay oi bức, mồ hôi không ngừng.) 梅雨はむし暑い日が続く。(Mùa mưa những ngày oi bức kéo dài.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "暑苦しい",
+          "doc": "あつくるしい",
+          "nghia": "nóng ngột ngạt"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "涼しい",
+          "doc": "すずしい",
+          "nghia": "mát mẻ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::残業",
+      "kanji": "残業",
+      "cautruc": null,
+      "doc": "ざんぎょう",
+      "han_viet": "",
+      "nghia": "làm thêm giờ; tăng ca",
+      "doc_marked": "ざん**ぎょう**",
+      "vi_du": "今日は残業で遅くなる。(Hôm nay tăng ca nên về muộn.) 残業が多くて疲れる。(Tăng ca nhiều nên mệt.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "時間外労働",
+          "doc": "じかんがいろうどう",
+          "nghia": "làm ngoài giờ"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "定時",
+          "doc": "ていじ",
+          "nghia": "đúng giờ (tan làm)"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::別",
+      "kanji": "別",
+      "cautruc": null,
+      "doc": "べつ",
+      "han_viet": "",
+      "nghia": "riêng; khác",
+      "doc_marked": "べつ",
+      "vi_du": "それとこれは別の問題だ。(Cái đó với cái này là vấn đề khác.) 送料は別にかかります。(Phí ship tính riêng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "別々",
+          "doc": "べつべつ",
+          "nghia": "riêng rẽ"
+        },
+        {
+          "kanji": "異なる",
+          "doc": "ことなる",
+          "nghia": "khác biệt"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "同じ",
+          "doc": "おなじ",
+          "nghia": "giống nhau"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::料金",
+      "kanji": "料金",
+      "cautruc": null,
+      "doc": "りょうきん",
+      "han_viet": "",
+      "nghia": "phí; cước; tiền",
+      "doc_marked": "**りょう**きん",
+      "vi_du": "バスの料金は200円だ。(Cước xe buýt là 200 yên.) 電気料金が上がった。(Tiền điện tăng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "費用",
+          "doc": "ひよう",
+          "nghia": "chi phí"
+        },
+        {
+          "kanji": "代金",
+          "doc": "だいきん",
+          "nghia": "tiền hàng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "無料",
+          "doc": "むりょう",
+          "nghia": "miễn phí"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::特急",
+      "kanji": "特急",
+      "cautruc": null,
+      "doc": "とっきゅう",
+      "han_viet": "",
+      "nghia": "tàu tốc hành; tàu nhanh",
+      "doc_marked": "とっ**きゅう**",
+      "vi_du": "特急に乗れば1時間で着く。(Đi tàu tốc hành thì 1 tiếng là tới.) 特急券が必要です。(Cần vé tàu tốc hành.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "急行",
+          "doc": "きゅうこう",
+          "nghia": "tàu nhanh"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "各駅停車",
+          "doc": "かくえきていしゃ",
+          "nghia": "tàu thường (dừng mọi ga)"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::車内",
+      "kanji": "車内",
+      "cautruc": null,
+      "doc": "しゃない",
+      "han_viet": "",
+      "nghia": "trong xe; trong tàu",
+      "doc_marked": "しゃない",
+      "vi_du": "車内では静かにしてください。(Trong tàu xin giữ yên lặng.) 車内アナウンスが流れた。(Thông báo trong tàu vang lên.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "車中",
+          "doc": "しゃちゅう",
+          "nghia": "trong xe"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "車外",
+          "doc": "しゃがい",
+          "nghia": "bên ngoài xe"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::乗車",
+      "kanji": "乗車",
+      "cautruc": null,
+      "doc": "じょうしゃ",
+      "han_viet": "",
+      "nghia": "lên xe; lên tàu",
+      "doc_marked": "**じょう**しゃ",
+      "vi_du": "乗車の際は足元にご注意ください。(Khi lên tàu xin chú ý bước chân.) 乗車券を拝見します。(Cho tôi xem vé lên tàu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "乗る",
+          "doc": "のる",
+          "nghia": "lên; đi (xe)"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "降車",
+          "doc": "こうしゃ",
+          "nghia": "xuống xe"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::券",
+      "kanji": "券",
+      "cautruc": null,
+      "doc": "けん",
+      "han_viet": "",
+      "nghia": "vé; phiếu",
+      "doc_marked": "けん",
+      "vi_du": "コンサートの券を2枚買った。(Tôi mua 2 vé buổi hòa nhạc.) 割引券を使う。(Dùng phiếu giảm giá.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "チケット",
+          "doc": "ちけっと",
+          "nghia": "vé"
+        },
+        {
+          "kanji": "切符",
+          "doc": "きっぷ",
+          "nghia": "vé (tàu)"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-06::必要な",
+      "kanji": "必要な",
+      "cautruc": null,
+      "doc": "ひつような",
+      "han_viet": "",
+      "nghia": "cần thiết",
+      "doc_marked": "ひつ**よう**な",
+      "vi_du": "申し込みに必要な書類を集める。(Thu thập giấy tờ cần cho việc đăng ký.) この仕事に経験は必要ない。(Việc này không cần kinh nghiệm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "不可欠な",
+          "doc": "ふかけつな",
+          "nghia": "không thể thiếu"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "不要な",
+          "doc": "ふような",
+          "nghia": "không cần thiết"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::間違う",
+      "kanji": "間違う",
+      "cautruc": null,
+      "doc": "まちがう",
+      "han_viet": "",
+      "nghia": "nhầm; sai",
+      "doc_marked": "まちがう",
+      "vi_du": "電話番号を間違った。(Tôi nhầm số điện thoại.) 道を間違えて遅れた。(Tôi nhầm đường nên trễ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "誤る",
+          "doc": "あやまる",
+          "nghia": "sai lầm"
+        },
+        {
+          "kanji": "ミスする",
+          "doc": "みすする",
+          "nghia": "phạm lỗi"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "合う",
+          "doc": "あう",
+          "nghia": "đúng; khớp"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::アナウンス",
+      "kanji": "アナウンス",
+      "cautruc": null,
+      "doc": "アナウンス",
+      "han_viet": "",
+      "nghia": "thông báo; phát thanh",
+      "doc_marked": "アナウンス",
+      "vi_du": "駅のアナウンスが聞こえた。(Nghe thấy thông báo ở ga.) 遅延のアナウンスがあった。(Có thông báo trễ tàu.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "放送",
+          "doc": "ほうそう",
+          "nghia": "phát thanh"
+        },
+        {
+          "kanji": "案内",
+          "doc": "あんない",
+          "nghia": "hướng dẫn; thông báo"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-06::ちょっとした～",
+      "kanji": "ちょっとした～",
+      "cautruc": null,
+      "doc": "ちょっとした～",
+      "han_viet": "",
+      "nghia": "một chút; nhỏ; kha khá",
+      "doc_marked": "ちょっとした～",
+      "vi_du": "ちょっとしたミスが大事故になる。(Một sơ suất nhỏ thành tai nạn lớn.) ちょっとしたお土産を買った。(Tôi mua chút quà nhỏ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "些細な",
+          "doc": "ささいな",
+          "nghia": "vụn vặt; nhỏ nhặt"
+        },
+        {
+          "kanji": "わずかな",
+          "doc": "わずかな",
+          "nghia": "ít ỏi"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "大した",
+          "doc": "たいした",
+          "nghia": "đáng kể; ghê gớm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::気にかかる",
+      "kanji": "気にかかる",
+      "cautruc": null,
+      "doc": "きにかかる",
+      "han_viet": "",
+      "nghia": "lo lắng; bận tâm",
+      "doc_marked": "きにかかる",
+      "vi_du": "彼の一言がずっと気にかかる。(Câu nói của anh ấy cứ khiến tôi bận tâm mãi.) 試験の結果が気にかかって眠れない。(Lo về kết quả thi nên không ngủ được.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "気になる",
+          "doc": "きになる",
+          "nghia": "bận tâm"
+        },
+        {
+          "kanji": "心配する",
+          "doc": "しんぱいする",
+          "nghia": "lo lắng"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "安心する",
+          "doc": "あんしんする",
+          "nghia": "yên tâm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::敬語",
+      "kanji": "敬語",
+      "cautruc": null,
+      "doc": "けいご",
+      "han_viet": "",
+      "nghia": "kính ngữ",
+      "doc_marked": "**けい**ご",
+      "vi_du": "目上の人には敬語を使う。(Với bề trên thì dùng kính ngữ.) 敬語は外国人には難しい。(Kính ngữ khó với người nước ngoài.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "丁寧語",
+          "doc": "ていねいご",
+          "nghia": "thể lịch sự"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "タメ口",
+          "doc": "タメぐち",
+          "nghia": "nói trống không; ngang hàng"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::気に入る",
+      "kanji": "気に入る",
+      "cautruc": null,
+      "doc": "きにいる",
+      "han_viet": "",
+      "nghia": "ưng; thích",
+      "doc_marked": "きにいる",
+      "vi_du": "このデザインが気に入った。(Tôi ưng thiết kế này.) 気に入った服を買う。(Mua bộ đồ mình thích.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "好む",
+          "doc": "このむ",
+          "nghia": "ưa thích"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "嫌う",
+          "doc": "きらう",
+          "nghia": "ghét"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::感じる",
+      "kanji": "感じる",
+      "cautruc": null,
+      "doc": "かんじる",
+      "han_viet": "",
+      "nghia": "cảm thấy; cảm nhận",
+      "doc_marked": "かんじる",
+      "vi_du": "春の訪れを感じる。(Cảm nhận xuân đang về.) 責任を感じている。(Tôi cảm thấy có trách nhiệm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "覚える",
+          "doc": "おぼえる",
+          "nghia": "cảm thấy (寒さを覚える)"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-06::～について",
+      "kanji": "～について",
+      "cautruc": null,
+      "doc": "～について",
+      "han_viet": "",
+      "nghia": "về ...",
+      "doc_marked": "～について",
+      "vi_du": "環境問題について話し合う。(Thảo luận về vấn đề môi trường.) 日本の文化について研究する。(Nghiên cứu về văn hóa Nhật.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～に関して",
+          "doc": "～にかんして",
+          "nghia": "liên quan đến ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-06::投書",
+      "kanji": "投書",
+      "cautruc": null,
+      "doc": "とうしょ",
+      "han_viet": "",
+      "nghia": "thư bạn đọc; thư góp ý",
+      "doc_marked": "**とう**しょ",
+      "vi_du": "新聞に投書する。(Gửi thư cho báo.) 読者からの投書が載った。(Đăng thư của độc giả.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "投稿",
+          "doc": "とうこう",
+          "nghia": "đăng bài; gửi bài"
+        },
+        {
+          "kanji": "寄稿",
+          "doc": "きこう",
+          "nghia": "gửi bài viết"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-06::残す",
+      "kanji": "残す",
+      "cautruc": null,
+      "doc": "のこす",
+      "han_viet": "",
+      "nghia": "để lại; chừa lại",
+      "doc_marked": "のこす",
+      "vi_du": "メモを残しておく。(Để lại lời nhắn.) ご飯を残さないで食べる。(Ăn không chừa lại cơm.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "とっておく",
+          "doc": "とっておく",
+          "nghia": "giữ lại"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "捨てる",
+          "doc": "すてる",
+          "nghia": "vứt bỏ"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::～とか",
+      "kanji": "～とか",
+      "cautruc": null,
+      "doc": "～とか",
+      "han_viet": "",
+      "nghia": "như là ...; kiểu ...",
+      "doc_marked": "～とか",
+      "vi_du": "週末は掃除とか洗濯とかで忙しい。(Cuối tuần bận nào là dọn dẹp, giặt giũ.) お茶とか飲みませんか。(Uống trà hay gì đó không?)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～や",
+          "doc": "～や",
+          "nghia": "và; nào là"
+        },
+        {
+          "kanji": "～など",
+          "doc": "～など",
+          "nghia": "v.v."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-06::できるだけ",
+      "kanji": "できるだけ",
+      "cautruc": null,
+      "doc": "できるだけ",
+      "han_viet": "",
+      "nghia": "càng ... càng tốt; hết mức có thể",
+      "doc_marked": "できるだけ",
+      "vi_du": "できるだけ早く来てください。(Hãy đến sớm nhất có thể.) できるだけ野菜を食べるようにする。(Cố ăn rau nhiều nhất có thể.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "なるべく",
+          "doc": "なるべく",
+          "nghia": "càng ... càng tốt"
+        },
+        {
+          "kanji": "極力",
+          "doc": "きょくりょく",
+          "nghia": "hết sức"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-06::離れる",
+      "kanji": "離れる",
+      "cautruc": null,
+      "doc": "はなれる",
+      "han_viet": "",
+      "nghia": "rời xa; cách xa",
+      "doc_marked": "はなれる",
+      "vi_du": "故郷を離れて東京に住む。(Rời quê lên sống ở Tokyo.) 席を離れないでください。(Xin đừng rời khỏi chỗ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "遠ざかる",
+          "doc": "とおざかる",
+          "nghia": "xa dần"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "近づく",
+          "doc": "ちかづく",
+          "nghia": "đến gần"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::命令",
+      "kanji": "命令",
+      "cautruc": null,
+      "doc": "めいれい",
+      "han_viet": "",
+      "nghia": "mệnh lệnh",
+      "doc_marked": "**めい****れい**",
+      "vi_du": "上司の命令に従う。(Tuân theo mệnh lệnh cấp trên.) 命令口調で話す。(Nói giọng ra lệnh.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "指示",
+          "doc": "しじ",
+          "nghia": "chỉ thị"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "お願い",
+          "doc": "おねがい",
+          "nghia": "nhờ vả (nói mềm)"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::禁止",
+      "kanji": "禁止",
+      "cautruc": null,
+      "doc": "きんし",
+      "han_viet": "",
+      "nghia": "cấm; sự cấm",
+      "doc_marked": "きんし",
+      "vi_du": "ここは駐車禁止だ。(Chỗ này cấm đỗ xe.) 立ち入りを禁止する。(Cấm vào.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "禁じる",
+          "doc": "きんじる",
+          "nghia": "cấm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "許可",
+          "doc": "きょか",
+          "nghia": "cho phép"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::うんざり",
+      "kanji": "うんざり",
+      "cautruc": null,
+      "doc": "うんざり",
+      "han_viet": "",
+      "nghia": "chán ngán; ngán ngẩm",
+      "doc_marked": "うんざり",
+      "vi_du": "毎日同じ仕事でうんざりする。(Ngày nào cũng việc đó, chán ngán.) 彼の自慢話にうんざりだ。(Ngán ngẩm chuyện khoe khoang của anh ta.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "飽きる",
+          "doc": "あきる",
+          "nghia": "chán"
+        },
+        {
+          "kanji": "嫌気がさす",
+          "doc": "いやけがさす",
+          "nghia": "phát ngán"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "わくわく",
+          "doc": "わくわく",
+          "nghia": "háo hức"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::目にする",
+      "kanji": "目にする",
+      "cautruc": null,
+      "doc": "めにする",
+      "han_viet": "",
+      "nghia": "nhìn thấy; bắt gặp",
+      "doc_marked": "めにする",
+      "vi_du": "最近よく目にする言葉だ。(Là từ dạo này hay thấy.) 事故の現場を目にした。(Tôi tận mắt thấy hiện trường tai nạn.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "見かける",
+          "doc": "みかける",
+          "nghia": "bắt gặp"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "見逃す",
+          "doc": "みのがす",
+          "nghia": "bỏ sót; không thấy"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::～といっても",
+      "kanji": "～といっても",
+      "cautruc": null,
+      "doc": "～といっても",
+      "han_viet": "",
+      "nghia": "mặc dù nói là ...",
+      "doc_marked": "～といっても",
+      "vi_du": "料理といっても、卵を焼くだけだ。(Nói là nấu ăn chứ chỉ rán trứng thôi.) 近いといっても、歩いて30分かかる。(Nói là gần chứ đi bộ mất 30 phút.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "～とはいえ",
+          "doc": "～とはいえ",
+          "nghia": "tuy nói là ..."
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-06::思いやり",
+      "kanji": "思いやり",
+      "cautruc": null,
+      "doc": "おもいやり",
+      "han_viet": "",
+      "nghia": "sự quan tâm; lòng thấu hiểu",
+      "doc_marked": "おもいやり",
+      "vi_du": "思いやりのある人になりたい。(Tôi muốn thành người biết quan tâm.) 相手への思いやりが大切だ。(Sự quan tâm đến người khác rất quan trọng.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "気遣い",
+          "doc": "きづかい",
+          "nghia": "sự để tâm"
+        },
+        {
+          "kanji": "配慮",
+          "doc": "はいりょ",
+          "nghia": "sự lưu tâm"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "無関心",
+          "doc": "むかんしん",
+          "nghia": "thờ ơ; vô tâm"
+        }
+      ]
+    },
+    {
+      "_id": "chukyu3-06::伝わる",
+      "kanji": "伝わる",
+      "cautruc": null,
+      "doc": "つたわる",
+      "han_viet": "",
+      "nghia": "được truyền đạt; lan tới",
+      "doc_marked": "つたわる",
+      "vi_du": "気持ちが相手に伝わった。(Tình cảm đã truyền tới đối phương.) うわさはすぐに伝わる。(Tin đồn lan nhanh.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "広まる",
+          "doc": "ひろまる",
+          "nghia": "lan ra"
+        },
+        {
+          "kanji": "届く",
+          "doc": "とどく",
+          "nghia": "tới; đến nơi"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-06::もの",
+      "kanji": "もの",
+      "cautruc": null,
+      "doc": "もの",
+      "han_viet": "",
+      "nghia": "(việc/điều - dùng nhấn mạnh cảm thán/lẽ thường)",
+      "doc_marked": "もの",
+      "vi_du": "昔はよく遊んだものだ。(Ngày xưa tôi hay chơi lắm.) 人の意見は聞くものだ。(Nên lắng nghe ý kiến người khác chứ.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "こと",
+          "doc": "こと",
+          "nghia": "(việc - dùng nhấn mạnh)"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-06::つもり",
+      "kanji": "つもり",
+      "cautruc": null,
+      "doc": "つもり",
+      "han_viet": "",
+      "nghia": "định; dự định; ngỡ là",
+      "doc_marked": "つもり",
+      "vi_du": "来年、留学するつもりだ。(Năm sau tôi định đi du học.) そんなつもりで言ったのではない。(Tôi không có ý định nói vậy.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "予定",
+          "doc": "よてい",
+          "nghia": "dự định"
+        },
+        {
+          "kanji": "意図",
+          "doc": "いと",
+          "nghia": "ý định"
+        }
+      ],
+      "trai_nghia": []
+    },
+    {
+      "_id": "chukyu3-06::たしかに",
+      "kanji": "たしかに",
+      "cautruc": null,
+      "doc": "たしかに",
+      "han_viet": "",
+      "nghia": "đúng là; quả thật",
+      "doc_marked": "たしかに",
+      "vi_du": "たしかに彼の言う通りだ。(Đúng là như anh ấy nói.) たしかにここに置いたはずだ。(Rõ ràng tôi đã để ở đây mà.)",
+      "vi_du_ruby": "",
+      "dong_nghia": [
+        {
+          "kanji": "間違いなく",
+          "doc": "まちがいなく",
+          "nghia": "chắc chắn"
+        },
+        {
+          "kanji": "なるほど",
+          "doc": "なるほど",
+          "nghia": "quả vậy"
+        }
+      ],
+      "trai_nghia": [
+        {
+          "kanji": "たぶん",
+          "doc": "たぶん",
+          "nghia": "có lẽ; chắc là"
+        }
+      ]
+    }
+  ]
+}
