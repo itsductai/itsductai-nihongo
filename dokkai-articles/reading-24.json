@@ -1,0 +1,167 @@
+{
+  "id": "reading-24",
+  "title": "外国人ITエンジニアの給与事情——日本は選ばれるか",
+  "titleVi": "Chuyện lương kỹ sư IT nước ngoài — Nhật có được chọn?",
+  "level": "N1",
+  "category": "経済",
+  "date": "2026-07-16",
+  "source": "ai",
+  "private": true,
+  "sourceNote": "Bài viết gốc do AI soạn về xu hướng tuyển kỹ sư IT nước ngoài và mặt bằng lương ở Nhật (visa nhân lực trình độ cao, so sánh với Âu-Mỹ). Không dựa trên nguồn cụ thể; các mức lương chỉ mang tính minh hoạ tương đối.",
+  "paragraphs": [
+    "{{IT|あいてぃー}}{{業界|ぎょうかい|ngành nghề, giới}}の{{人材不足|じんざいぶそく|thiếu nhân tài}}は、いまや{{一国|いっこく}}にとどまらない{{世界|せかい}}{{共通|きょうつう}}の{{課題|かだい}}である。{{日本企業|にほんきぎょう}}も{{例外|れいがい}}ではなく、{{国内|こくない}}だけでは{{技術者|ぎじゅつしゃ|kỹ sư, kỹ thuật viên}}を{{確保|かくほ|đảm bảo (số lượng)}}しきれず、{{海外|かいがい}}からの{{採用|さいよう|tuyển dụng}}に{{力|ちから}}を{{入|い}}れる{{企業|きぎょう}}が{{増|ふ}}えている。とりわけ、{{高度|こうど}}な{{専門知識|せんもんちしき}}を{{持|も}}つ{{人材|じんざい}}には「{{高度専門職|こうどせんもんしょく|nghề chuyên môn trình độ cao}}」という{{在留資格|ざいりゅうしかく}}が{{用意|ようい}}され、{{ポイント|ぽいんと}}が{{一定|いってい}}に{{達|たっ}}すれば{{永住|えいじゅう|định cư vĩnh viễn}}などで{{優遇|ゆうぐう|ưu đãi}}される{{仕組|しく}}みもある。",
+    "もっとも、{{気|き}}になるのは{{給与|きゅうよ|lương, mức lương}}の{{水準|すいじゅん|mặt bằng, mức}}だろう。{{日本|にほん}}の{{IT|あいてぃー}}{{技術者|ぎじゅつしゃ}}の{{給与|きゅうよ}}は、{{欧米|おうべい}}の{{大手|おおて}}{{企業|きぎょう}}と{{比|くら}}べると{{相対的|そうたいてき}}に{{低|ひく}}いと{{言|い}}われることが{{多|おお}}い。しかし、それは{{あくまで}}{{平均|へいきん}}の{{話|はなし}}であって、{{外資系|がいしけい|công ty vốn nước ngoài}}や{{スタートアップ|すたーとあっぷ|công ty khởi nghiệp}}、{{経験|けいけん}}の{{豊富|ほうふ}}な{{技術者|ぎじゅつしゃ}}であれば、{{待遇|たいぐう}}は{{大|おお}}きく{{変|か}}わる。{{未経験|みけいけん}}か{{経験者|けいけんしゃ}}か、どの{{技術|ぎじゅつ}}{{分野|ぶんや}}か、{{勤務地|きんむち}}はどこかによって、{{年収|ねんしゅう|thu nhập năm}}の{{幅|はば|khoảng, biên độ}}はかなり{{広|ひろ}}い。「{{日本|にほん}}のITは{{安|やす}}い」と{{一括|ひとくく}}りにするのは{{正確|せいかく}}ではない。",
+    "{{外国人|がいこくじん}}にとって{{壁|かべ}}になりやすいのが{{言語|げんご}}である。かつては{{高|たか}}い{{日本語能力|にほんごのうりょく}}が{{必須|ひっす|bắt buộc, tất yếu}}とされたが、{{近年|きんねん}}は{{社内|しゃない}}{{公用語|こうようご}}を{{英語|えいご}}とし、{{英語|えいご}}だけでも{{働|はたら}}ける{{企業|きぎょう}}が{{着実|ちゃくじつ|vững chắc, đều đặn}}に{{増|ふ}}えてきた。{{一方|いっぽう}}で、{{手取|ても}}りを{{考|かんが}}える{{際|さい}}には、{{額面|がくめん|lương danh nghĩa (gross)}}の{{年収|ねんしゅう}}だけを{{見|み}}てはいけない。{{所得税|しょとくぜい|thuế thu nhập}}や{{社会保険料|しゃかいほけんりょう|phí bảo hiểm xã hội}}が{{差|さ}}し{{引|ひ}}かれるため、{{実際|じっさい}}に{{手元|てもと}}に{{残|のこ}}る{{金額|きんがく}}は、{{額面|がくめん}}よりかなり{{少|すく}}なくなるからだ。{{住|す}}む{{地域|ちいき}}によって{{生活費|せいかつひ}}も{{大|おお}}きく{{異|こと}}なる。",
+    "とはいえ、{{仕事|しごと}}を{{選|えら}}ぶ{{基準|きじゅん}}は{{給与|きゅうよ}}だけではない。{{治安|ちあん|an ninh}}のよさ、{{充実|じゅうじつ}}した{{社会保障|しゃかいほしょう|an sinh xã hội}}、{{長期的|ちょうきてき}}な{{雇用|こよう|việc làm, tuyển dụng}}の{{安定|あんてい}}といった、{{お金|かね}}に{{換|か}}えにくい{{魅力|みりょく}}に{{価値|かち}}を{{見|み}}いだす{{技術者|ぎじゅつしゃ}}も{{少|すく}}なくない。{{世界|せかい}}の{{優秀|ゆうしゅう}}な{{人材|じんざい}}を{{呼|よ}}び{{込|こ}}むために、{{給与|きゅうよ}}{{水準|すいじゅん}}を{{引|ひ}}き{{上|あ}}げようとする{{動|うご}}きも{{出|で}}ている。{{結局|けっきょく}}のところ、{{日本|にほん}}で{{働|はたら}}くかどうかは、{{給与|きゅうよ}}の{{数字|すうじ}}だけでなく、{{生活|せいかつ}}{{全体|ぜんたい}}の{{質|しつ}}を{{含|ふく}}めて{{総合的|そうごうてき}}に{{判断|はんだん}}すべきものなのである。"
+  ],
+  "paragraphsVi": [
+    "Thiếu nhân lực ngành IT giờ không còn gói trong một nước mà là bài toán chung của thế giới. Doanh nghiệp Nhật cũng không ngoại lệ: chỉ trong nước không đủ kỹ sư, ngày càng nhiều công ty dồn sức tuyển từ nước ngoài. Đặc biệt với nhân lực có chuyên môn trình độ cao, có tư cách lưu trú \"nghề chuyên môn trình độ cao\", và nếu đạt đủ điểm còn được ưu đãi như định cư vĩnh viễn.",
+    "Tất nhiên điều đáng quan tâm là mặt bằng lương. Lương kỹ sư IT Nhật thường bị nói là tương đối thấp so với các đại công ty Âu-Mỹ. Nhưng đó chỉ là chuyện trung bình; với công ty vốn nước ngoài, startup, hay kỹ sư nhiều kinh nghiệm thì đãi ngộ khác hẳn. Chưa kinh nghiệm hay có kinh nghiệm, lĩnh vực kỹ thuật nào, nơi làm ở đâu — biên độ thu nhập năm khá rộng. Gộp chung \"IT Nhật rẻ\" là không chính xác.",
+    "Rào cản dễ gặp với người nước ngoài là ngôn ngữ. Trước đây năng lực tiếng Nhật cao bị coi là bắt buộc, nhưng gần đây số công ty lấy tiếng Anh làm ngôn ngữ nội bộ, chỉ tiếng Anh cũng làm được, tăng đều. Mặt khác, khi tính tiền thực nhận, đừng chỉ nhìn thu nhập danh nghĩa. Do bị trừ thuế thu nhập và phí bảo hiểm xã hội, số thực sự còn lại ít hơn khá nhiều so với lương gross. Chi phí sinh hoạt cũng khác nhiều tuỳ nơi ở.",
+    "Dù vậy, tiêu chí chọn việc không chỉ là lương. Không ít kỹ sư thấy giá trị ở những sức hút khó quy ra tiền như an ninh tốt, an sinh xã hội đầy đủ, sự ổn định việc làm dài hạn. Để thu hút nhân tài giỏi của thế giới, cũng đang có động thái nâng mặt bằng lương. Rốt cuộc, có làm ở Nhật hay không nên được đánh giá tổng hợp, bao gồm cả chất lượng cuộc sống nói chung, chứ không chỉ con số lương."
+  ],
+  "questions": [
+    {
+      "difficulty": 2,
+      "type": "reason",
+      "q": "日本企業が海外からの採用に力を入れているのはなぜか。",
+      "options": [
+        "海外の人材は日本語を話す必要がないから",
+        "外国人の賃金は日本人より必ず安いから",
+        "国内だけでは技術者を確保しきれないから",
+        "国が海外採用を法律で義務づけたから"
+      ],
+      "answer": 2
+    },
+    {
+      "difficulty": 3,
+      "type": "referent",
+      "q": "「それはあくまで平均の話であって」の「それ」が指す内容はどれか。",
+      "options": [
+        "日本のIT技術者の給与が相対的に低いということ",
+        "外資系企業の給与が非常に高いということ",
+        "未経験者のほうが給与が高いということ",
+        "海外の給与水準が年々下がっていること"
+      ],
+      "answer": 0
+    },
+    {
+      "difficulty": 3,
+      "type": "reason",
+      "q": "手取りを考える際に額面の年収だけを見てはいけないのはなぜか。",
+      "options": [
+        "額面を見ると給与が実際より低く出るから",
+        "額面の年収は企業が自由に書き換えられるから",
+        "額面には必ず住居費が含まれているから",
+        "税や社会保険料が差し引かれて手元に残る額が減るから"
+      ],
+      "answer": 3
+    },
+    {
+      "difficulty": 4,
+      "type": "main_idea",
+      "q": "筆者がこの文章で最も言いたいことは何か。",
+      "options": [
+        "給与の数字だけで働く国を決めるのが最も賢明だ",
+        "日本で働くかは生活全体を含め総合的に判断すべきだ",
+        "日本のITは安いので外国人は来ないほうがよい",
+        "言語の壁があるため英語だけでは絶対に働けない"
+      ],
+      "answer": 1
+    }
+  ],
+  "n2VocabList": [
+    {
+      "kanji": "人材不足",
+      "hanviet": "NHÂN TÀI BẤT TÚC",
+      "reading": "じんざいぶそく",
+      "meaning": "thiếu hụt nhân tài",
+      "colorTag": "yellow"
+    },
+    {
+      "kanji": "確保",
+      "hanviet": "XÁC BẢO",
+      "reading": "かくほ",
+      "meaning": "đảm bảo, giữ được (số lượng)",
+      "colorTag": "yellow"
+    },
+    {
+      "kanji": "高度専門職",
+      "hanviet": "CAO ĐỘ CHUYÊN MÔN CHỨC",
+      "reading": "こうどせんもんしょく",
+      "meaning": "[社会] visa nghề chuyên môn trình độ cao",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "給与",
+      "hanviet": "CẤP DỮ",
+      "reading": "きゅうよ",
+      "meaning": "[経済] lương, tiền lương",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "水準",
+      "hanviet": "THUỶ CHUẨN",
+      "reading": "すいじゅん",
+      "meaning": "mặt bằng, mức độ",
+      "colorTag": "yellow"
+    },
+    {
+      "kanji": "外資系",
+      "hanviet": "NGOẠI TƯ HỆ",
+      "reading": "がいしけい",
+      "meaning": "[経済] (công ty) vốn nước ngoài",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "年収",
+      "hanviet": "NIÊN THU",
+      "reading": "ねんしゅう",
+      "meaning": "[経済] thu nhập một năm",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "額面",
+      "hanviet": "NGẠCH DIỆN",
+      "reading": "がくめん",
+      "meaning": "[経済] lương danh nghĩa (gross), mệnh giá",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "社会保険料",
+      "hanviet": "XÃ HỘI BẢO HIỂM LIỆU",
+      "reading": "しゃかいほけんりょう",
+      "meaning": "[社会] phí bảo hiểm xã hội",
+      "colorTag": "blue"
+    },
+    {
+      "kanji": "雇用",
+      "hanviet": "CỐ DỤNG",
+      "reading": "こよう",
+      "meaning": "[経済] việc làm, sự tuyển dụng",
+      "colorTag": "blue"
+    }
+  ],
+  "grammarList": [
+    {
+      "pattern": "〜にとどまらない",
+      "meaning": "không dừng lại ở..., không chỉ"
+    },
+    {
+      "pattern": "あくまで",
+      "meaning": "chỉ là, hoàn toàn chỉ (nhấn mạnh giới hạn)"
+    },
+    {
+      "pattern": "〜際（に）",
+      "meaning": "khi, vào lúc"
+    },
+    {
+      "pattern": "〜からだ",
+      "meaning": "là bởi vì (chỉ lý do)"
+    },
+    {
+      "pattern": "結局のところ",
+      "meaning": "rốt cuộc thì, xét cho cùng"
+    }
+  ]
+}
