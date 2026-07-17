@@ -133,6 +133,16 @@ async function ensureDeckLoaded(deckId) {
   return promise;
 }
 
+// Nạp TẦNG ĐẦY ĐỦ cho TẤT CẢ bộ (chỉ 1 lần/phiên, cache ở App.allDecksThickLoaded).
+// Dùng cho tìm-kiếm-sâu: muốn dò trong câu ví dụ / đồng-trái nghĩa thì các field nặng
+// đó phải có mặt sẵn trên mọi bộ (bình thường chỉ tải khi mở từng bộ). ensureDeckLoaded()
+// đã idempotent + cache nên gọi song song an toàn.
+async function ensureAllDecksLoaded() {
+  if (App.allDecksThickLoaded) return;
+  await Promise.all(App.decks.map((d) => ensureDeckLoaded(d.id)));
+  App.allDecksThickLoaded = true;
+}
+
 async function loadExams() {
   try {
     const res = await fetch("dethi/index.json");
@@ -445,29 +455,88 @@ function performGlobalSearch(query) {
   const q = query.trim().toLowerCase();
   if (!q) { resultsBox.classList.add("hidden"); resultsBox.innerHTML = ""; return; }
 
-  const results = [];
-  for (const deck of App.decks) {
-    const keys = deck.type === "NGUPHAP" ? ["cautruc", "nghia", "muc_do"] : ["kanji", "doc", "han_viet", "nghia"];
-    for (const w of deck.words) {
-      const haystack = keys.map((k) => w[k] || "").join(" ").toLowerCase();
-      if (haystack.includes(q)) {
-        results.push({ deck, w });
-        if (results.length >= 30) break;
-      }
-    }
-    if (results.length >= 30) break;
+  // Tìm sâu cần dữ liệu nặng (vi_du / đồng-trái nghĩa) của MỌI bộ. Nếu chưa nạp đủ,
+  // nạp 1 lần rồi chạy lại — trong lúc chờ hiện thông báo, và chỉ render nếu ô tìm
+  // vẫn đang là đúng query này (tránh kết quả cũ đè lên khi người dùng gõ tiếp).
+  if (!App.allDecksThickLoaded) {
+    resultsBox.innerHTML = `<div class="search-result-empty">Đang tải dữ liệu để tìm sâu…</div>`;
+    resultsBox.classList.remove("hidden");
+    ensureAllDecksLoaded().then(() => {
+      const cur = (document.getElementById("globalSearchInput").value || "").trim().toLowerCase();
+      if (cur === q) performGlobalSearch(query);
+    });
+    return;
   }
 
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const hl = (s) => {
+    const str = String(s || ""); const i = str.toLowerCase().indexOf(q);
+    if (i < 0) return esc(str);
+    return esc(str.slice(0, i)) + "<mark>" + esc(str.slice(i, i + q.length)) + "</mark>" + esc(str.slice(i + q.length));
+  };
+  // Tìm đúng phần tử đồng/trái nghĩa khớp (mảng object {kanji, doc, nghia})
+  const findItem = (arr) => {
+    for (const it of arr || []) {
+      if ([(it.kanji || ""), (it.doc || ""), (it.nghia || "")].join(" ").toLowerCase().includes(q)) return it;
+    }
+    return null;
+  };
+  // Đoạn ngữ cảnh quanh chỗ khớp trong câu ví dụ (cắt gọn hai đầu)
+  const snippet = (text) => {
+    const t = String(text || ""); const i = t.toLowerCase().indexOf(q);
+    if (i < 0) return esc(t.slice(0, 70));
+    const a = Math.max(0, i - 22), b = Math.min(t.length, i + q.length + 34);
+    return (a > 0 ? "…" : "") + hl(t.slice(a, b)) + (b < t.length ? "…" : "");
+  };
+
+  // Phân loại VỊ TRÍ khớp theo thứ tự ưu tiên: từ vựng (0) > đồng nghĩa (1) >
+  // trái nghĩa (2) > câu ví dụ (3). Trả về match đầu tiên trúng (ưu tiên cao nhất).
+  const classify = (deck, w) => {
+    const keys = deck.type === "NGUPHAP" ? ["cautruc", "nghia", "muc_do"] : ["kanji", "doc", "han_viet", "nghia"];
+    // 0) chính từ vựng (bao gồm doc = hiragana -> gõ hira cũng ra)
+    if (keys.map((k) => w[k] || "").join(" ").toLowerCase().includes(q))
+      return { type: "main", prio: 0, label: "từ vựng", cls: "main", ctx: "" };
+    // 1) đồng nghĩa
+    const syn = findItem(w.dong_nghia);
+    if (syn) return { type: "syn", prio: 1, label: "đồng nghĩa", cls: "syn",
+      ctx: `${hl(syn.kanji || "")}${syn.doc ? "（" + hl(syn.doc) + "）" : ""} — ${hl(syn.nghia || "")}` };
+    // 2) trái nghĩa
+    const ant = findItem(w.trai_nghia);
+    if (ant) return { type: "ant", prio: 2, label: "trái nghĩa", cls: "ant",
+      ctx: `${hl(ant.kanji || "")}${ant.doc ? "（" + hl(ant.doc) + "）" : ""} — ${hl(ant.nghia || "")}` };
+    // 3) câu ví dụ
+    if (w.vi_du && w.vi_du.toLowerCase().includes(q))
+      return { type: "ex", prio: 3, label: "ví dụ", cls: "ex", ctx: snippet(w.vi_du) };
+    return null;
+  };
+
+  const results = [];
+  for (const deck of App.decks) {
+    for (const w of deck.words) {
+      const m = classify(deck, w);
+      if (m) results.push({ deck, w, m });
+    }
+  }
+  // Xếp theo vị trí khớp (từ vựng trước, ví dụ sau) — giữ nguyên thứ tự bộ trong cùng bậc.
+  results.sort((a, b) => a.m.prio - b.m.prio);
+
   if (!results.length) {
-    resultsBox.innerHTML = `<div class="search-result-empty">Không tìm thấy "${query}"</div>`;
+    resultsBox.innerHTML = `<div class="search-result-empty">Không tìm thấy "${esc(query)}"</div>`;
   } else {
-    resultsBox.innerHTML = results.slice(0, 10).map(({ deck, w }) => {
+    resultsBox.innerHTML = results.slice(0, 14).map(({ deck, w, m }) => {
       const display = w.kanji || w.cautruc || "";
+      const nghiaHtml = m.type === "main" ? hl(w.nghia || "") : esc(w.nghia || "");
       return `
         <button class="search-result-row" data-jump-deck="${deck.id}" data-jump-word="${w._id}">
-          <span class="search-result-kanji">${display}</span>
-          <span class="search-result-nghia">${w.nghia || ""}</span>
-          <span class="search-result-deck">${deck.title}</span>
+          <span class="search-result-kanji">${esc(display)}</span>
+          <span class="search-result-main">
+            <span class="search-result-line1">
+              <span class="search-result-nghia">${nghiaHtml}</span>
+              <span class="search-result-loc loc-${m.cls}">${m.label}</span>
+            </span>
+            ${m.ctx ? `<span class="search-result-context">${m.ctx}</span>` : ""}
+          </span>
+          <span class="search-result-deck">${esc(deck.title)}</span>
         </button>`;
     }).join("");
     resultsBox.querySelectorAll("[data-jump-word]").forEach((btn) => {
