@@ -262,3 +262,34 @@
   .dokkai-read-body { font-size: 15px; line-height: 2; }
   .dokkai-quiz-question { font-size: 14px; }
 }
+
+/* ============ TIẾN TRÌNH ĐỌC: màng nước dâng + sóng, thanh %, nút toggle ============ */
+.dokkai-article-card { position: relative; overflow: hidden; }
+/* nội dung thẻ nổi trên màng nước */
+.dokkai-article-card > *:not(.dokkai-water) { position: relative; z-index: 1; }
+/* màng nước dâng theo % đọc */
+.dokkai-water {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 0; pointer-events: none;
+  background: linear-gradient(to top, rgba(77,171,247,.30), rgba(77,171,247,.12));
+  transition: height .6s cubic-bezier(.4,0,.2,1);
+}
+.dokkai-wave {
+  position: absolute; bottom: 100%; left: 0; width: 200%; height: 14px; margin-bottom: -1px;
+  fill: rgba(77,171,247,.32); animation: dokkaiWaveMove 6s linear infinite;
+}
+.dokkai-wave2 { height: 18px; fill: rgba(77,171,247,.18); animation: dokkaiWaveMove 9s linear infinite reverse; }
+@keyframes dokkaiWaveMove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+/* nút đánh dấu đã/chưa đọc ở góc thẻ */
+.dokkai-unread-toggle {
+  position: absolute; top: 8px; right: 8px; z-index: 3; width: 26px; height: 26px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-size: 14px; line-height: 1;
+  background: var(--bg-3, rgba(255,255,255,.08)); color: var(--text-2, #9aa); cursor: pointer;
+  border: 1px solid rgba(255,255,255,.12); transition: all .15s;
+}
+.dokkai-unread-toggle:hover { background: #4dabf7; color: #fff; transform: scale(1.1); }
+.dokkai-progress-mini { font-size: 10px; color: #4dabf7; font-weight: 800; }
+/* thanh tiến trình trong trang đọc */
+.dokkai-read-progress { display: flex; align-items: center; gap: 8px; width: 100%; margin-top: 8px; }
+.drp-bar { flex: 1; height: 7px; border-radius: 999px; background: var(--bg-3, rgba(255,255,255,.1)); overflow: hidden; }
+.drp-fill { height: 100%; background: linear-gradient(90deg, #4dabf7, #20bf9f); border-radius: 999px; transition: width .5s ease; }
+.drp-label { font-size: 11.5px; color: var(--text-2, #9aa); white-space: nowrap; font-variant-numeric: tabular-nums; }
