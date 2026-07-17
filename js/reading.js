@@ -145,6 +145,7 @@ function getDokkaiCategoryIcon(category, articleId) {
 }
 
 function initReadingMode() {
+  stopDokkaiTimer();
   App.reading = null;
   App.dokkaiCategoryFilter = App.dokkaiCategoryFilter || "all";
   document.querySelectorAll(".dokkai-phase").forEach((p) => p.classList.add("hidden"));
@@ -178,6 +179,91 @@ function markDokkaiArticleRead(articleId) {
   localStorage.setItem(DOKKAI_HISTORY_KEY, JSON.stringify(hist));
 }
 
+// ============ TIẾN TRÌNH ĐỌC (thời gian đọc thực + % theo độ dài bài) ============
+// Lưu riêng khỏi lịch sử đọc. Shape: { [id]: { sec, done, last } }
+//  - sec  : tổng số GIÂY đã đọc thực (chỉ đếm khi tab đang mở + đang ở trang bài đó)
+//  - done : đã đạt 100% (tự bật) hoặc người dùng tự đánh dấu
+//  - last : mốc thời gian cập nhật gần nhất (dùng khi merge nhập dữ liệu)
+const DOKKAI_PROGRESS_KEY = "n2vocab_reading_progress";
+// Tốc độ đọc "chill" ~50 chữ/phút (đọc kỹ + tra từ + đọc lại) -> 100% = (số chữ / 50)
+// phút. Bài ~600–700 chữ ≈ 12–14 phút cho 100%. Chỉnh số này để 100% lâu/nhanh hơn
+// (thấp hơn = cần đọc lâu hơn mới đạt 100%).
+const DOKKAI_READ_CPM = 50;
+function loadDokkaiProgress() {
+  try { return JSON.parse(localStorage.getItem(DOKKAI_PROGRESS_KEY)) || {}; } catch (e) { return {}; }
+}
+function saveDokkaiProgress(p) { localStorage.setItem(DOKKAI_PROGRESS_KEY, JSON.stringify(p)); }
+// Đếm số chữ thực hiển thị (bỏ cú pháp gloss {{từ|đọc|nghĩa}} -> chỉ giữ "từ")
+function dokkaiPlainText(article) {
+  return (article.paragraphs || []).join("").replace(/\{\{([^|}]+)\|[^}]*\}\}/g, "$1");
+}
+function dokkaiTargetSec(article) {
+  const chars = dokkaiPlainText(article).length;
+  return Math.max(120, Math.round((chars / DOKKAI_READ_CPM) * 60)); // tối thiểu 2 phút
+}
+function dokkaiProgressPct(article) {
+  const p = loadDokkaiProgress()[article.id];
+  if (!p) return 0;
+  return Math.min(100, Math.round(((p.sec || 0) / dokkaiTargetSec(article)) * 100));
+}
+function fmtReadSec(s) {
+  s = Math.max(0, Math.round(s));
+  return Math.floor(s / 60) + ":" + String(s % 60).padStart(2, "0");
+}
+
+// --- Bộ đếm giờ đọc: mỗi giây +1 khi (tab đang hiện) VÀ (đang ở đúng trang bài) ---
+function startDokkaiTimer(articleId) {
+  stopDokkaiTimer();
+  App.dokkaiTimer = { id: articleId, handle: setInterval(() => dokkaiTick(articleId), 1000) };
+}
+function stopDokkaiTimer() {
+  if (App.dokkaiTimer) { clearInterval(App.dokkaiTimer.handle); App.dokkaiTimer = null; }
+}
+function dokkaiTick(articleId) {
+  if (document.visibilityState !== "visible") return; // chuyển tab/khoá máy -> tạm dừng
+  const readPhase = document.getElementById("dokkaiPhaseRead");
+  // offsetParent === null nghĩa là bài đang bị ẩn (rời tab đọc / chuyển mode khác) -> dừng đếm
+  if (!readPhase || readPhase.offsetParent === null) return;
+  if (!App.reading || !App.reading.article || App.reading.article.id !== articleId) return;
+  const prog = loadDokkaiProgress();
+  const e = prog[articleId] || { sec: 0, done: false, last: 0 };
+  e.sec = (e.sec || 0) + 1;
+  e.last = Date.now();
+  if (e.sec >= dokkaiTargetSec(App.reading.article)) e.done = true; // tự đánh dấu xong khi đạt 100%
+  prog[articleId] = e;
+  saveDokkaiProgress(prog);
+  updateDokkaiReaderProgress(App.reading.article);
+}
+// Thanh tiến trình + đồng hồ hiển thị ngay trong trang đọc
+function updateDokkaiReaderProgress(article) {
+  const head = document.querySelector("#dokkaiPhaseRead .dokkai-read-head");
+  if (!head) return;
+  let el = document.getElementById("dokkaiReadProgress");
+  if (!el) { el = document.createElement("div"); el.id = "dokkaiReadProgress"; el.className = "dokkai-read-progress"; head.appendChild(el); }
+  const prog = loadDokkaiProgress()[article.id] || { sec: 0 };
+  const target = dokkaiTargetSec(article);
+  const pct = Math.min(100, Math.round(((prog.sec || 0) / target) * 100));
+  el.innerHTML = `<div class="drp-bar"><div class="drp-fill" style="width:${pct}%"></div></div>` +
+    `<span class="drp-label">⏱ ${fmtReadSec(prog.sec || 0)} / ~${fmtReadSec(target)} · ${pct}%${pct >= 100 ? " ✓" : ""}</span>`;
+}
+// Bật/tắt trạng thái "đã đọc / chưa đọc" (không đụng tới thời gian đã đọc)
+function toggleDokkaiRead(articleId) {
+  const hist = loadDokkaiHistory();
+  if (hist[articleId]) delete hist[articleId];
+  else hist[articleId] = { readAt: Date.now() };
+  localStorage.setItem(DOKKAI_HISTORY_KEY, JSON.stringify(hist));
+  renderDokkaiPicker();
+}
+// SVG sóng nước (chu kỳ 60 trên viewBox rộng 120 -> dịch -50% là liền mạch)
+const DOKKAI_WAVE_PATH = "M0 10 C10 4 20 4 30 10 C40 16 50 16 60 10 C70 4 80 4 90 10 C100 16 110 16 120 10 V20 H0 Z";
+function dokkaiWaterHtml(pct) {
+  if (pct <= 0) return "";
+  return `<div class="dokkai-water" style="height:${pct}%">` +
+    `<svg class="dokkai-wave" viewBox="0 0 120 20" preserveAspectRatio="none"><path d="${DOKKAI_WAVE_PATH}"/></svg>` +
+    `<svg class="dokkai-wave dokkai-wave2" viewBox="0 0 120 20" preserveAspectRatio="none"><path d="${DOKKAI_WAVE_PATH}"/></svg>` +
+    `</div>`;
+}
+
 function renderDokkaiPicker() {
   const grid = document.getElementById("dokkaiArticleGrid");
   const filter = App.dokkaiCategoryFilter || "all";
@@ -197,8 +283,11 @@ function renderDokkaiPicker() {
     const isRead = !!history[a.id];
     const daysSince = a.date ? (Date.now() - new Date(a.date).getTime()) / 86400000 : 999;
     const isNew = daysSince <= 7;
+    const pct = dokkaiProgressPct(a); // % đọc theo thời gian tích luỹ
     return `
       <button class="dokkai-article-card${isRead ? " is-read" : ""}" data-article-id="${a.id}">
+        ${dokkaiWaterHtml(pct)}
+        <span class="dokkai-unread-toggle" data-toggle-read="${a.id}" title="${isRead ? "Đánh dấu CHƯA đọc" : "Đánh dấu ĐÃ đọc"}">${isRead ? "✓" : "○"}</span>
         ${isNew ? `<span class="dokkai-new-badge">NEW</span>` : ""}
         <div class="dokkai-article-card-illust">${getDokkaiCategoryIcon(a.category, a.id)}</div>
         <div class="dokkai-article-card-head">
@@ -208,7 +297,7 @@ function renderDokkaiPicker() {
         </div>
         <div class="dokkai-article-card-title">${a.title}</div>
         <div class="dokkai-article-card-sub">${a.titleVi || ""}</div>
-        <div class="dokkai-article-card-date">${a.date || ""}</div>
+        <div class="dokkai-article-card-date">${a.date || ""}${pct > 0 ? ` <span class="dokkai-progress-mini">${pct >= 100 ? "✓ 100%" : "📖 " + pct + "%"}</span>` : ""}</div>
         ${isRead ? `<div class="dokkai-read-badge">✓ Đã đọc lúc ${new Date(history[a.id].readAt).toLocaleString("vi-VN")}</div>` : ""}
       </button>`;
   }
@@ -220,6 +309,10 @@ function renderDokkaiPicker() {
   grid.querySelectorAll("[data-article-id]").forEach((btn) => {
     btn.addEventListener("click", () => startReadingArticle(btn.dataset.articleId));
   });
+  // Nút đánh dấu đã/chưa đọc — chặn nổi bọt để KHÔNG mở bài khi bấm nút này
+  grid.querySelectorAll("[data-toggle-read]").forEach((tg) => {
+    tg.addEventListener("click", (e) => { e.stopPropagation(); toggleDokkaiRead(tg.dataset.toggleRead); });
+  });
 }
 
 function startReadingArticle(articleId) {
@@ -228,6 +321,8 @@ function startReadingArticle(articleId) {
   App.reading = { article, answers: {} }; // answers: qIndex -> {chosenIdx, correct}
   App.dokkaiTranslateMode = "none";
   markDokkaiArticleRead(articleId); // đánh dấu đã đọc NGAY khi mở bài (không cần đọc xong quiz)
+  startDokkaiTimer(articleId);      // bắt đầu đếm giờ đọc thực
+  setTimeout(() => updateDokkaiReaderProgress(article), 0); // hiện thanh tiến trình ngay
 
   document.getElementById("dokkaiPhasePicker").classList.add("hidden");
   document.getElementById("dokkaiPhaseRead").classList.remove("hidden");
@@ -718,6 +813,7 @@ function showDokkaiInlineSummary() {
 }
 
 function backToDokkaiPicker() {
+  stopDokkaiTimer(); // dừng đếm giờ khi rời trang đọc
   if (dokkaiIsReading) { window.speechSynthesis.cancel(); dokkaiIsReading = false; }
   App.reading = null;
   initReadingMode();

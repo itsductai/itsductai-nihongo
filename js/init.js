@@ -880,6 +880,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       gameAchievements: loadGameAchievements(),
       dailyActivity: loadDailyActivity(),
       dokkaiHistory: loadDokkaiHistory(),
+      dokkaiProgress: loadDokkaiProgress(),
       dokkaiNotebook: loadDokkaiNotebook(),
     };
     const blob = new Blob([JSON.stringify(exportPayload, null, 2)], { type: "application/json" });
@@ -1114,6 +1115,22 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
           });
           localStorage.setItem(DOKKAI_HISTORY_KEY, JSON.stringify(currentHistory));
+        }
+        // Tiến trình đọc — KHÔNG cộng dồn thời gian (tránh lỗi: cũ 3ph + đt đọc 1ph = 4ph,
+        // xuất từ đt nhập lại lap sẽ thành 7ph). Lấy MAX(sec) để giữ đúng 4ph; done = a||b;
+        // last = mốc mới nhất. Merge theo từng bài.
+        if (data.dokkaiProgress) {
+          const curProg = loadDokkaiProgress();
+          Object.keys(data.dokkaiProgress).forEach((id) => {
+            const inc = data.dokkaiProgress[id] || {};
+            const ex = curProg[id] || { sec: 0, done: false, last: 0 };
+            curProg[id] = {
+              sec: Math.max(ex.sec || 0, inc.sec || 0),
+              done: !!(ex.done || inc.done),
+              last: Math.max(ex.last || 0, inc.last || 0),
+            };
+          });
+          saveDokkaiProgress(curProg);
         }
         // Sổ tay từ vựng — nối thêm, không trùng (so theo kanji+fromArticle+addedAt)
         if (data.dokkaiNotebook) {
